@@ -1,0 +1,398 @@
+@startuml CirclePage.png
+
+package "Xamarin.Forms" {
+    class ContentPage
+    class MenuItem
+}
+
+package "Extension.Wearable" {
+    class RotaryEventHandler
+    class RotaryEventArgs {
+        IsClockwise: bool
+    }
+    interface IRotaryEventConsumer {
+        --events--
+        Rotated : RotaryEventHandler
+    }
+    class CirclePage {
+        --BindableProperty--
+        {static} +RotaryEventConsumerProperty
+        --Property--
+        +IRotaryEventConsumer RotaryEventConsumer
+        +IList<CircleButtonsItem> ButtonItems
+        +IList<ICircleSurfaceItem> CircleSurfaceItems
+    }
+
+    class CircleButtonsItem {
+        --Property--
+        +Direction: CircleButtonsItemDirection
+    }
+
+    enum CircleButtonsItemDirection {
+        Left,
+        Right,
+        Bottom
+    }
+
+    interface ICircleSurfaceItem {
+        IsVisible: bool
+        IsEnabled: bool
+    }
+
+    CirclePage -u-|> ContentPage
+    CirclePage *-d- IRotaryEventConsumer
+    CirclePage *-d- CircleButtonsItem
+    CircleButtonsItem *-d- CircleButtonsItemDirection
+    CirclePage *-d- ICircleSurfaceItem
+    IRotaryEventConsumer *-- RotaryEventHandler
+    RotaryEventHandler *-- RotaryEventArgs
+    CircleButtonsItem -u-|> MenuItem
+}
+
+package "Extension.Wearable.Renderer" {
+    class CirclePageRenderer
+    CirclePageRenderer .l. CirclePage
+}
+
+package "ElmSharp.Wearable" {
+    class CircleSurface
+    CirclePageRenderer *.. CircleSurface
+}
+
+package "ElmSharp" {
+
+    class Layout
+
+    CirclePageRenderer *.. Layout
+}
+
+@enduml
+
+@startuml CircleDateTimeSelector.png
+
+package "Xamarin.Forms" {
+    class View
+}
+
+package "Extension.Wearable" {
+    interface IRotaryEventConsumer
+    class CircleDateTimeSelector {
+        --BindableProperty--
+        {static} +ColorProperty
+        {static} +ValueTypeProperty
+        {static} +DateTimeProperty
+        {static} +MaximumDateProperty
+        {static} +MinimumDateProperty
+        --Property--
+        +Color: Color
+        +ValueType: DateTimeType
+        +DateTime: DateTime
+        +MaximumDate: DateTime
+        +MinimumDate: DateTime
+    }
+    enum DateTimeType {
+        Time,
+        Date
+    }
+
+    CircleDateTimeSelector -u-|> View
+    CircleDateTimeSelector -u-|> IRotaryEventConsumer
+    CircleDateTimeSelector -u-|> DateTimeType
+}
+
+package "Extension.Wearable.Renderer" {
+    class CircleDateTimeSelectorRenderer
+    CircleDateTimeSelectorRenderer .u. CircleDateTimeSelector
+}
+
+package "ElmSharp.Wearable" {
+    class CircleDatetimeSelector
+    CircleDateTimeSelectorRenderer *.d. CircleDatetimeSelector
+}
+@enduml
+
+@startuml CircleDateTimeSelector_SceneGraph.png
+!include CirclePage_SceneGraph.wsd
+
+node CircleDatetimeSelector #87ceeb [
+    CircleDatetimeSelector
+    "datepicker/circle" or "timepicker/circle"
+]
+
+ContentArea --> CircleDatetimeSelector
+CircleSurface --> CircleDatetimeSelector
+
+@enduml
+
+@startuml CircleListView.png
+
+package "Xamarin.Forms" {
+    class ListView
+}
+
+package "Extension.Wearable" {
+    interface IRotaryEventConsumer
+    class CircleListView
+
+    CircleListView -u-|> ListView
+    CircleListView -u-|> IRotaryEventConsumer
+}
+
+package "Extension.Wearable.Renderer" {
+    class CircleListViewRenderer
+    CircleListViewRenderer .u. CircleListView
+}
+
+package "ElmSharp.Wearable" {
+    class CircleGenList
+    CircleListViewRenderer *.d. CircleGenList
+}
+@enduml
+
+@startuml CircleListView_SceneGraph.png
+
+!include CirclePage_SceneGraph.wsd
+
+node CircleGenList #87ceeb [
+    CircleGenList
+]
+ContentArea --> CircleGenList
+CircleSurface --> CircleGenList
+
+@enduml
+
+@startuml CircleProgressBarSurfaceItem.png
+
+package "Extension.Wearable" {
+    interface ICircleSurfaceItem {
+        IsVisible: bool
+    }
+    class CircleProgressBarSurfaceItem {
+        --BindableProperty--
+        +BackgroundAngleProperty
+        +BackgroundAngleOffsetProperty
+        +BackgroundColorProperty
+        +BackgroundLineWidthProperty
+        +BackgroundRadiusProperty
+
+        +BarAngleProperty
+        +BarAngleOffsetProperty
+        +BarAngleMaximumProperty
+        +BarAngleMinimumProperty
+        +BarColorProperty
+        +BarLineWidthProperty
+        +BarRadiusProperty
+
+        +IsVisibleProperty
+        +ValueProperty
+        +IsEnabledProperty
+
+        --Property--
+        +BackgroundAngle: double
+        +BackgroundAngleOffset: double
+        +BackgroundColor: Color
+        +BackgroundLineWidth: int
+        +BackgroundRadius: double
+
+        +BarAngle: double
+        +BarAngleOffset: double
+        +BarAngleMaximum: double
+        +BarAngleMinimum: double
+        +BarColor: Color
+        +BarLineWidth: int
+        +BarRadius: double
+
+        +IsVisible: bool
+        +Value: double
+        +IsEnabled: bool
+    }
+
+    CircleProgressBarSurfaceItem -u-|> ICircleSurfaceItem
+}
+
+package "Extension.Wearable.Renderer" {
+    class CircleProgressBarSurfaceItemRenderer
+
+    CircleProgressBarSurfaceItemRenderer .l. CircleProgressBarSurfaceItem
+}
+
+package "ElmSharp.Wearable" {
+    class CircleProgressBar
+
+    CircleProgressBar <|-u- CircleProgressBarSurfaceItemRenderer
+}
+@enduml
+
+@startuml CircleProgressBarSurfaceItem_SceneGraph.png
+
+!include CirclePage_SceneGraph.wsd
+
+node CircleProgressBar #87ceeb [
+    CircleProgressBar
+]
+CircleSurface --> CircleProgressBar
+
+@enduml
+
+@startuml CircleScrollView.png
+package "Xamarin.Forms" {
+    class ScrollView
+}
+
+package "Extension.Wearable" {
+    interface IRotaryEventConsumer
+    class CircleScrollView
+
+    CircleScrollView -u-|> ScrollView
+    CircleScrollView -u-|> IRotaryEventConsumer
+}
+
+package "Extension.Wearable.Renderer" {
+    class CircleScrollViewRenderer
+    CircleScrollViewRenderer .u. CircleScrollView
+}
+
+package "ElmSharp.Wearable" {
+    class CircleScroller
+    CircleScrollViewRenderer *.d. CircleScroller
+}
+@enduml
+
+@startuml CircleScrollView_SceneGraph.png
+
+!include CirclePage_SceneGraph.wsd
+
+node CircleScroller #87ceeb [
+    CircleScroller
+]
+ContentArea --> CircleScroller
+CircleSurface --> CircleScroller
+
+@enduml
+
+@startuml CircleSliderSurfaceItem.png
+
+package "Extension.Wearable" {
+    interface IRotaryEventConsumer
+    interface ICircleSurfaceItem {
+        IsVisible: bool
+    }
+    class CircleSliderSurfaceItem {
+        --BindableProperty--
+        +BackgroundAngleProperty
+        +BackgroundAngleOffsetProperty
+        +BackgroundColorProperty
+        +BackgroundLineWidthProperty
+        +BackgroundRadiusProperty
+
+        +BarAngleProperty
+        +BarAngleOffsetProperty
+        +BarAngleMaximumProperty
+        +BarAngleMinimumProperty
+        +BarColorProperty
+        +BarLineWidthProperty
+        +BarRadiusProperty
+
+        +MinimumProperty
+        +MaximumProperty
+
+        +ValueProperty
+
+        +IsVisibleProperty
+        +IsEnabledProperty
+
+        --Property--
+        +BackgroundAngle: double
+        +BackgroundAngleOffset: double
+        +BackgroundColor: Color
+        +BackgroundLineWidth: int
+        +BackgroundRadius: double
+
+        +BarAngle: double
+        +BarAngleOffset: double
+        +BarAngleMaximum: double
+        +BarAngleMinimum: double
+        +BarColor: Color
+        +BarLineWidth: int
+        +BarRadius: double
+
+        +Minimum: double
+        +Maximum: double
+
+        +Value: double
+        +IsVisible: bool
+        +IsEnabled: bool
+    }
+
+    CircleSliderSurfaceItem -u-|> ICircleSurfaceItem
+    CircleSliderSurfaceItem -u-|> IRotaryEventConsumer
+}
+
+package "Extension.Wearable.Renderer" {
+    class CircleSliderSurfaceItemRenderer
+
+    CircleSliderSurfaceItemRenderer .l. CircleSliderSurfaceItem
+}
+
+package "ElmSharp.Wearable" {
+    class CircleSlider
+
+    CircleSlider <|-u- CircleSliderSurfaceItemRenderer
+}
+@enduml
+
+@startuml CircleSliderSurfaceItem_SceneGraph.png
+
+!include CirclePage_SceneGraph.wsd
+
+node CircleSlider #87ceeb [
+    CircleSlider
+]
+CircleSurface --> CircleSlider
+
+@enduml
+
+@startuml CircleStepper.png
+
+package "Xamarin.Forms" {
+    class Stepper
+}
+
+package "Extension.Wearable" {
+    interface IRotaryEventConsumer
+    class CircleStepper {
+        --BindableProperty--
+        {static} +RatioProperty
+        {static} +ColorProperty
+
+        --Property--
+        +Ratio: double
+        +Color: Color
+    }
+
+    CircleStepper -u-|> Stepper
+    CircleStepper -u-|> IRotaryEventConsumer
+}
+
+package "Extension.Wearable.Renderer" {
+    class CircleStepperRenderer
+    CircleStepperRenderer .u. CircleStepper
+}
+
+package "ElmSharp.Wearable" {
+    class CircleSpinner
+    CircleStepperRenderer *.d. CircleSpinner
+}
+@enduml
+
+@startuml CircleStepper_SceneGraph.png
+
+!include CirclePage_SceneGraph.wsd
+
+node CircleSpinner #87ceeb [
+    CircleSpinner
+]
+ContentArea --> CircleSpinner
+CircleSurface --> CircleSpinner
+
+@enduml

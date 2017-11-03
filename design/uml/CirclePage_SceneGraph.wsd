@@ -1,0 +1,51 @@
+@startuml CirclePage_SceneGraph.png
+node BaseLayout [
+    Layout
+    "layout/application/default" 
+]
+
+node BottomButtonLayout [
+    Layout
+    "layout/bottom_button/default"
+]
+
+node OverLayout [
+    Layout
+    "layout/application/default"
+]
+
+node SideButtonLayout [
+    Layout
+    "layout/popup/content/circle/buttons2"
+]
+
+node MoreOption [
+    MoreOption
+]
+
+node SurfaceLayout [
+    Layout
+]
+
+node CircleSurface [
+    CircleSurface
+]
+
+() LeftButtonArea
+() RightButtonArea
+() ContentArea
+() BottomButtonArea
+
+BaseLayout --> BottomButtonLayout : "elm.swallow.bg"
+
+BottomButtonLayout --> SideButtonLayout : "default"
+SideButtonLayout --> LeftButtonArea : "button1"
+SideButtonLayout --> RightButtonArea : "button2"
+SideButtonLayout --> ContentArea : "elm.swallow.content"
+BottomButtonLayout --> BottomButtonArea : "elm.swallow.button"
+BaseLayout --> OverLayout : "elm.swallow.content"
+OverLayout --> MoreOption : "elm.swallow.content"
+OverLayout --> SurfaceLayout : "elm.swallow.bg"
+MoreOption -[Hidden]l->SurfaceLayout
+SurfaceLayout --> CircleSurface
+@enduml
