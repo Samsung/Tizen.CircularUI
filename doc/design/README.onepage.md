@@ -331,3 +331,129 @@ public class CircleSliderSurfaceItem : ICircleSurfaceItem
 
 ![CircleStepper Scene Graph](uml/CircleStepper_SceneGraph.png)
 
+# ContextPopup
+
+`ContextPopup`는 `ElmSharp.ContextPopup`을 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
+
+`ContextPopup`의 `Items`에 추가되는 `ContextItem`은 1개 혹은 2개 값을 가지며, 그 이상의  `ContextItem`은 화면에 표시 않는다.(초과된 item은 하단에 숨겨져 있으며. Scroll up시 화면에 표시 가능하다)
+
+item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서 표시 된다(아래 이미지 참조)
+
+
+![ContextPopup Design](data/ContextPopup.png)
+
+`ContextPopup`의 Class Diagram은 아래와 같다.
+
+![ContextPopup Class Diagram](uml/ContextPopup.png)
+
+위 Class 중 Xamarin interface 부분은 다음과 같이 Code로 표현된다.
+
+ ```C#
+ public class ContextPopup : BindableObject
+ {
+     public static readonly BindableProperty IsAutoHidingEnabledProperty;
+     public static readonly BindableProperty SelectedIndexProperty;
+     public static readonly BindableProperty SelectedItemProperty;
+
+     public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
+     public event EventHandler Dismissed;
+
+     public bool IsAutoHidingEnabled  { get; set; }
+     public int SelectedIndex { get; set; }
+     public ContextPopupItem SelectedItem { get; set; }
+     public IList<ContextPopupItem> Items { get; }
+
+     public void Show(View anchor);
+     public void Show(View anchor, int xOffset, int yOffset);
+     public void Dismiss();
+ }
+
+ public class ContextPopupItem
+ {
+    public string Label
+ }
+
+ ```
+
+# Index
+
+`Index`는 `ElmSharp.Index`를 표현하는 View로 Xamarin의 `View`를 확장한다.
+
+`View`로 동작 하므로 `Layout`영역을 차지 한다. 따라서 Index를 상단 맨위에 배치할 경우 그 아래 Index를 적용하고자 하는 View를 위치시킨다.
+
+ `Xamarin Scrollview`의 경우`page scroll` 기능이 미지원하므로, `ScrollX`,`ScrollY` 좌표를 이용하며 index를 select해야 한다.
+
+ `IndexItem`이 추가되면 horizental center 위치에 item이 추가되며, 이후 추가되는 item 개수에 따라 양옆으로 item이 각각 추가된다.
+
+![Index Design](data/Index.png)
+
+`Index`의 Class Diagram은 아래와 같다.
+
+![Index Class Diagram](uml/Index.png)
+
+위 Class 중 Xamarin interface 부분은 다음과 같이 Code로 표현된다.
+
+ ```C#
+ public class Index : View
+ {
+     public static readonly BindableProperty IsAutoHidingEnabledProperty;
+     public static readonly BindableProperty SelectedIndexProperty;
+     public static readonly BindableProperty SelectedItemProperty;
+     public static readonly BindableProperty DisplayStyleProperty;
+
+     public event EventHandler SelectedIndexChanged;
+
+     public bool IsAutoHidingEnabled  { get; set; }
+     public int SelectedIndex { get; set; }
+     public IndexItem SelectedItem { get; set; }
+     public IndexDisplayStyle DisplayStyle { get;  set; }
+     public IList<IndexItem> Items { get; }
+ }
+
+ public class IndexItem
+ {
+    public string Label
+ }
+
+ public enum IndexDisplayStyle
+ {
+      Thumnail,
+      Circle
+ }
+
+ ```
+ 
+
+# Check
+
+`Check`는 `ElmSharp.Check`를 표현하는 View로 Xamarin의 `Switch`를 확장한다.
+
+ `Xamarin Switch`에서는 on&off 형태의 Check만을 제공하므로,
+ Tizen Wearable의 Check GUI 지원을 위하여 이를 확장하여 API를 제공한다. 
+
+
+![Check Design](data/Check.png)
+
+`Check`의 Class Diagram은 아래와 같다.
+
+![Check Class Diagram](uml/Check.png)
+
+위 Class 중 Xamarin interface 부분은 다음과 같이 Code로 표현된다.
+
+ ```C#
+ public class Check : Switch
+ {
+     public static readonly BindableProperty DisplayStyleProperty;
+
+     public CheckDisplayStyle DisplayStyle { get;  set; }
+ }
+
+ public enum CheckDisplayStyle
+ {
+      Default,
+      Onoff,
+      Small,
+      Popup
+ }
+
+ ```

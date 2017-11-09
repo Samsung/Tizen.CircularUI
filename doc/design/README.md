@@ -9,3 +9,6 @@ Design files for Circular UI on Xamarin Forms
 * [CircleScrollView](part5.CircleScrollView.md)
 * [CircleSliderSurfaceItem](part6.CircleSliderSurfaceItem.md)
 * [CircleStepper](part7.CircleStepper.md)
+* [ContextPopup](part8.ContextPopup.md)
+* [Index](part9.Index.md)
+* [Check](part10.Check.md)

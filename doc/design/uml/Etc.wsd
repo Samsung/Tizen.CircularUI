@@ -1,0 +1,137 @@
+@startuml ContextPopup.png
+
+package "Extension.Wearable" {
+
+    class ContextPopup {
+        --BindableProperty--
+        {static} +IsAutoHidingEnabledProperty
+        {static} +SelectedIndexProperty
+        {static} +SelectedItemProperty
+        --Property--
+        +bool IsAutoHidingEnabled
+        +int SelectedIndex
+        +ContextPopupItem SelectedItem
+        +IList<ContextPopupItem> Items
+        --Method--
+        +void Show(View anchor)
+        +void Show(View anchor, int xOffset, int yOffset)
+        +void Dismiss()
+    }
+
+    class ContextPopupItem {
+        --Property--
+        +Label: string
+    }
+
+    ContextPopup *-- ContextPopupItem
+}
+
+package "Extension.Wearable.Renderer" {
+    class ContextPopupImplemetation
+    ContextPopupImplemetation .l. ContextPopup
+}
+
+package "ElmSharp" {
+    class ContextPopup
+}
+
+ContextPopupImplemetation *.. ElmSharp.ContextPopup
+@enduml
+
+@startuml Index.png
+
+package "Xamarin.Forms" {
+    class View
+}
+
+
+package "Extension.Wearable" {
+   class Index {
+        --BindableProperty--
+        {static} +IsAutoHidingEnabledProperty
+        {static} +SelectedIndexProperty
+        {static} +SelectedItemProperty
+        {static} +DisplayStyleProperty
+        --Property--
+        +bool IsAutoHidingEnabled
+        +int SelectedIndex
+        +IndexItem SelectedItem
+        +IndexDisplayStyle DisplayStyle
+        +IList<IndexItem> Items
+    }
+
+    class IndexItem {
+        --Property--
+        +Label: string
+    }
+
+    enum IndexDisplayStyle {
+      Thumnail,
+      Circle
+    }
+
+    Index --|> View
+    Index *-- IndexItem
+    Index *-d- IndexDisplayStyle
+}
+
+
+package "Extension.Wearable.Renderer" { 
+    class IndexRenderer
+    IndexRenderer .l. Index
+}
+
+package "ElmSharp" {
+    class Index
+    class IndexItem
+}
+
+IndexRenderer *.. ElmSharp.Index
+IndexRenderer *.. ElmSharp.IndexItem
+@enduml
+
+@startuml Check.png
+
+package "Xamarin.Forms" {
+    class Switch{
+        --BindableProperty--
+        {static} +IsToggledProperty
+        --Property--
+        +bool IsToggled
+        --Event--
+        +Toggled
+    }
+}
+
+package "Extension.Wearable" {
+   class Check {
+        --BindableProperty--
+        {static} +DisplayStyleProperty
+        --Property--
+        +IndexDisplayStyle DisplayStyle
+    }
+
+    enum CheckDisplayStyle {
+      Default,
+      Onoff,
+      Small,
+      Popup
+    }
+
+    Check *-d- CheckDisplayStyle
+    Check --|> Switch
+}
+
+
+
+package "Extension.Wearable.Renderer" { 
+    class CheckRenderer
+    CheckRenderer .l. Check
+}
+
+package "ElmSharp" {
+    class Check
+}
+
+CheckRenderer *.. ElmSharp.Check
+@enduml
