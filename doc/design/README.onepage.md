@@ -94,6 +94,9 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
      public DateTime DateTime { get; set; }
      public DateTime MaximumDate { get; set; }
      public DateTime MinimumDate { get; set; }
+
+     public void SetFieldLimit(DateTimeFieldType type, int minimum, int maximum);
+     public void SetFieldVisibility(DateTimeFieldType type, bool visible);
  }
 
  public enum DateTimeType
@@ -101,6 +104,17 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
      Time,
      Date
  }
+
+ public enum DateTimeFieldType
+ {
+     Year,
+     Month,
+     Date,
+     Hour,
+     Minute,
+     AmPm
+ }
+
  ```
 
 `CircleDateTimeSelector`는 Marker의 색을 바꾸기 위한 `Color` Property를 가지고 있으며,
@@ -417,19 +431,18 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
 
  public enum IndexDisplayStyle
  {
-      Thumnail,
+      Thumbnail,
       Circle
  }
 
  ```
- 
 
 # Check
 
 `Check`는 `ElmSharp.Check`를 표현하는 View로 Xamarin의 `Switch`를 확장한다.
 
  `Xamarin Switch`에서는 on&off 형태의 Check만을 제공하므로,
- Tizen Wearable의 Check GUI 지원을 위하여 이를 확장하여 API를 제공한다. 
+ Tizen Wearable의 Check GUI 지원을 위하여 이를 확장하여 API를 제공한다.
 
 
 ![Check Design](data/Check.png)

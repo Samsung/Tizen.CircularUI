@@ -40,7 +40,7 @@
 
  public enum IndexDisplayStyle
  {
-      Thumnail,
+      Thumbnail,
       Circle
  }
 

@@ -30,6 +30,9 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
      public DateTime DateTime { get; set; }
      public DateTime MaximumDate { get; set; }
      public DateTime MinimumDate { get; set; }
+
+     public void SetFieldLimit(DateTimeFieldType type, int minimum, int maximum);
+     public void SetFieldVisibility(DateTimeFieldType type, bool visible);
  }
 
  public enum DateTimeType
@@ -37,6 +40,17 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
      Time,
      Date
  }
+
+ public enum DateTimeFieldType
+ {
+     Year,
+     Month,
+     Date,
+     Hour,
+     Minute,
+     AmPm
+ }
+
  ```
 
 `CircleDateTimeSelector`는 Marker의 색을 바꾸기 위한 `Color` Property를 가지고 있으며,

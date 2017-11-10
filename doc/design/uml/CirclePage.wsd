@@ -89,15 +89,28 @@ package "Extension.Wearable" {
         +DateTime: DateTime
         +MaximumDate: DateTime
         +MinimumDate: DateTime
+        --Method--
+        + SetFieldLimit(DateTimeFieldType type, int minimum, int maximum)
+        + SetFieldVisibility(DateTimeFieldType type, bool visible)
     }
     enum DateTimeType {
         Time,
         Date
     }
 
+    enum DateTimeFieldType {
+        Year,
+        Month,
+        Date,
+        Hour,
+        Minute,
+        AmPm
+    }
+
     CircleDateTimeSelector -u-|> View
     CircleDateTimeSelector -u-|> IRotaryEventConsumer
-    CircleDateTimeSelector -u-|> DateTimeType
+    CircleDateTimeSelector *-d- DateTimeType
+    CircleDateTimeSelector *-d- DateTimeFieldType
 }
 
 package "Extension.Wearable.Renderer" {
