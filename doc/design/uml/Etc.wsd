@@ -38,10 +38,10 @@ package "ElmSharp" {
 ContextPopupImplemetation *.. ElmSharp.ContextPopup
 @enduml
 
-@startuml Index.png
+@startuml IndexPage.png
 
 package "Xamarin.Forms" {
-    class View
+    class ContentPage
 }
 
 
@@ -50,28 +50,21 @@ package "Extension.Wearable" {
         --BindableProperty--
         {static} +IsAutoHidingEnabledProperty
         {static} +SelectedIndexProperty
-        {static} +SelectedItemProperty
         {static} +DisplayStyleProperty
+        {static} +ItemCountProperty
         --Property--
         +bool IsAutoHidingEnabled
         +int SelectedIndex
-        +IndexItem SelectedItem
         +IndexDisplayStyle DisplayStyle
-        +IList<IndexItem> Items
-    }
-
-    class IndexItem {
-        --Property--
-        +Label: string
+        +int ItemCount
     }
 
     enum IndexDisplayStyle {
-      Thumnail,
+      Thumbnail,
       Circle
     }
 
-    Index --|> View
-    Index *-- IndexItem
+    Index --|> ContentPage
     Index *-d- IndexDisplayStyle
 }
 
@@ -84,10 +77,10 @@ package "Extension.Wearable.Renderer" {
 package "ElmSharp" {
     class Index
     class IndexItem
+
+    IndexRenderer *.. ElmSharp.Index
 }
 
-IndexRenderer *.. ElmSharp.Index
-IndexRenderer *.. ElmSharp.IndexItem
 @enduml
 
 @startuml Check.png
@@ -108,7 +101,7 @@ package "Extension.Wearable" {
         --BindableProperty--
         {static} +DisplayStyleProperty
         --Property--
-        +IndexDisplayStyle DisplayStyle
+        +CheckDisplayStyle DisplayStyle
     }
 
     enum CheckDisplayStyle {

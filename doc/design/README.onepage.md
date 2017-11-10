@@ -62,6 +62,7 @@ Design files for Circular UI on Xamarin Forms
 
 ![CirclePage Scene Graph](uml/CirclePage_SceneGraph.png)
 
+
 # CircleDateTimeSelector
 
 `CircleDateTimeSelector`는 `ElmSharp.Wearable.CircleDatetimeSelector` 의 두가지 style "datepicker/circle", "timepicker/circle"를 표현하는 View로 Style별로 각기 "년:달:일", "시:분:AM/PM" 의 각 항목을 touch하여 Bezel Action으로 값을 변경할 수 있는 View이다.  
@@ -389,44 +390,38 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
 
  ```
 
-# Index
+# IndexPage
 
-`Index`는 `ElmSharp.Index`를 표현하는 View로 Xamarin의 `View`를 확장한다.
+`IndexPage`는 `ElmSharp.Index`를 표현하며,  `Xamarin.Forms`의 `ContentPage`를 확장한다.
 
-`View`로 동작 하므로 `Layout`영역을 차지 한다. 따라서 Index를 상단 맨위에 배치할 경우 그 아래 Index를 적용하고자 하는 View를 위치시킨다.
+`ContentPage`로 동작 하므로 `Content`영역에 `ScrollView`등을 등록할 수 있으며 `Index`의 위치는 고정되어 있다.
 
- `Xamarin Scrollview`의 경우`page scroll` 기능이 미지원하므로, `ScrollX`,`ScrollY` 좌표를 이용하며 index를 select해야 한다.
+ `Scrollview`의 경우`page scroll` 기능이 미지원하므로, `ScrollX`,`ScrollY` 좌표를 이용하며 index를 select해야 한다.
 
- `IndexItem`이 추가되면 horizental center 위치에 item이 추가되며, 이후 추가되는 item 개수에 따라 양옆으로 item이 각각 추가된다.
+ `ItemCount`값에 따라 index item이 추가된다. `ItemCount`값을 미지정하면 default 값으로 동작한다.
 
-![Index Design](data/Index.png)
+![IndexPage Design](data/IndexPage.png)
 
-`Index`의 Class Diagram은 아래와 같다.
+`IndexPage`의 Class Diagram은 아래와 같다.
 
-![Index Class Diagram](uml/Index.png)
+![IndexPage Class Diagram](uml/IndexPage.png)
 
 위 Class 중 Xamarin interface 부분은 다음과 같이 Code로 표현된다.
 
  ```C#
- public class Index : View
+ public class IndexPage : Xamarin.Forms.ContentPage
  {
      public static readonly BindableProperty IsAutoHidingEnabledProperty;
      public static readonly BindableProperty SelectedIndexProperty;
-     public static readonly BindableProperty SelectedItemProperty;
      public static readonly BindableProperty DisplayStyleProperty;
+     public static readonly BindableProperty ItemCountProperty;
 
      public event EventHandler SelectedIndexChanged;
 
      public bool IsAutoHidingEnabled  { get; set; }
      public int SelectedIndex { get; set; }
-     public IndexItem SelectedItem { get; set; }
      public IndexDisplayStyle DisplayStyle { get;  set; }
-     public IList<IndexItem> Items { get; }
- }
-
- public class IndexItem
- {
-    public string Label
+     public int ItemCount { get; set;}
  }
 
  public enum IndexDisplayStyle
