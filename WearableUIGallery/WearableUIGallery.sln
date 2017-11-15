@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery", "WearableUIGallery\WearableUIGallery\WearableUIGallery.csproj", "{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery.Tizen.Wearable", "WearableUIGallery\WearableUIGallery.Tizen.Wearable\WearableUIGallery.Tizen.Wearable.csproj", "{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.CircularUI", "..\Xamarin.Forms.CircularUI\Xamarin.Forms.CircularUI.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.CircularUI.Renderer", "..\Xamarin.Forms.CircularUI.Renderer\Xamarin.Forms.CircularUI.Renderer.csproj", "{0A00329D-37E9-4B18-BF30-5E5597826B29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3736C77A-08ED-442D-ADE1-5779254463ED}
+	EndGlobalSection
+EndGlobal
