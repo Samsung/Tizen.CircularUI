@@ -7,7 +7,7 @@ Design files for Circular UI on Xamarin Forms
 ![CircpePage design](data/CirclePage.png)
 
 `CirclePage`는 `CircleSurface`가 필요한 View들을 넣을 수 있는 `ContentPage`와 흡사하며, `ToolbarItems`를 `MoreOption`으로 보여줄 수 있다. 
-또한 Left, Right, Bottom 3개 영역에 `ButtonItems`을 사용해 Button을 보여준다.
+또한 ActionButton 을 가지고 있고, `MenuItem` type으로 text, icon, command등을 사용할 수 있다.
 `ICircleSurfaceItem`으로 View는 아니지만 CircleSurface에 표현되는 object들을 `CircleSurface`를 통해 표현한다.
 
 ![CirclePage Class Diagram](uml/CirclePage.png)
@@ -17,11 +17,12 @@ Design files for Circular UI on Xamarin Forms
  ```C#
  public class CirclePage : Xamarin.Forms.ContentPage
  {
-     public static readonly BindableProperty RotaryEventCunsumerProperty; 
+     public static readonly BindableProperty RotaryEventCunsumerProperty;
 
-     public IRotaryEventConsumer RotaryEventConsumer { get; set; }
-     public IList<CircleButtonsItem> ButtonItems { get; }
      public IList<ICircleSurfaceItem> CircleSurfaceItems { get; }
+     public MenuItem ActionButton { get; set; }
+     public string RotaryFocusTargetName { get; set; }
+     public IRotaryFocusable RotaryFocusObject { get; set; }
  }
 
  public interface ICircleSurfaceItem
@@ -29,7 +30,7 @@ Design files for Circular UI on Xamarin Forms
      public bool IsVisible { get; set; }
  }
 
- public interface IRotaryEventConsumer
+ public interface IRotaryFocusable
  {
      event RotaryEventHandler Rotated;
  }
@@ -41,27 +42,29 @@ Design files for Circular UI on Xamarin Forms
      public bool IsClockwise { get; set; }
  }
 
- public CircleButtonsItem : Xamarin.Forms.MenuItem
- {
-     public CircleButtonsItemDirection Direction { get; set; }
- }
-
- public enum CircleButtonsItemDirection
- {
-     Left,
-     Right,
-     Bottom
- }
  ```
- 이미 Page에 속성으로 있는 `ToolbarItems`과 `Content` Property를 사용하며,  
-**현재 Page에서 Bezel Action을 받을 (Rotary Event를 가져갈) 단 하나의 Consumer를 `RotaryEventConsumer` property에 등록할 수 있다.  
- Page가 제거되거나, Hide 될때, `RotaryEventConsumer`는 동작을 중단하며, 만약 Hide에서 Show 될때,
- `RotaryEventConsumer`에 등록된 Child가 있다면, Rotary Event를 가져가게 된다.**
+ 이미 Page에 속성으로 있는 `Content` Property를 사용하며,  
+**현재 Page에서 Bezel Action을 받을 (Rotary Event를 가져갈) 단 하나의 Consumer를 `RotaryFocusObject` property에 등록할 수 있다.  
+ Page가 제거되거나, Hide 될때, `RotaryFocusObject`는 동작을 중단하며, 만약 Hide에서 Show 될때,
+ `RotaryFocusObject`에 등록된 Child가 있다면, Rotary Event를 가져가게 된다.**
 
- ElmSharp level에서의 Scene Graph는 다음과 같이 표현된다.
+ 또한 `RotaryFocusTargetName` Property를 사용해 Xaml상의 이름으로 RotaryFocusObject를 정할 수 있다.
+
+ Example:
+ ```xml
+<w:CirclePage BackgroundColor="Blue" RotaryFocusTargetName="DateSelector">
+<w:CirclePage.Content>
+    <StackLayout>
+        <w:CircleDateTimeSelector x:Name="DateSelector"/>
+        <w:Button Text="OK"/>
+    </StackLayout>
+</w:CirclePage.Content>
+</w:CirclePage>
+ ```
+
+CirclePage의 ElmSharp level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![CirclePage Scene Graph](uml/CirclePage_SceneGraph.png)
-
 
 # CircleDateTimeSelector
 
@@ -465,3 +468,30 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
  }
 
  ```
+
+# TwoButtonPage
+
+![TwoButtonPage design](data/TwoButtonPage.png)
+
+TwoButtonPage는 Circle 에 내접하는 사각형 영역을 Contents 영역으로 가지고 있는 Page이다.
+또한 2개의 버튼과 Title 영역을 가지고 있다.
+
+![TwoButtonPage Diagram](uml/TwoButtonPage.png)
+
+TwoButtonPage의 Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
+
+```C#
+public class TwoButtonPage : ContentPage
+{
+    public static readonly BindableProperty TitleProperty;
+
+    public MenuItem FirstButton { get; set; }
+    public MenuItem SecondButton { get; set; }
+}
+```
+
+ElmSharp의 Popup을 사용하지 않으며, Layout이므로 Parent가 존재한다.
+
+ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
+
+![TwoButtonPage Scene Graph](uml/TwoButtonPage_SceneGraph.png)

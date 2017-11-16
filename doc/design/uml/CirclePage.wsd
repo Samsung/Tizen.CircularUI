@@ -2,7 +2,6 @@
 
 package "Xamarin.Forms" {
     class ContentPage
-    class MenuItem
 }
 
 package "Extension.Wearable" {
@@ -10,43 +9,31 @@ package "Extension.Wearable" {
     class RotaryEventArgs {
         IsClockwise: bool
     }
-    interface IRotaryEventConsumer {
+    interface IRotaryFocusable {
         --events--
         Rotated : RotaryEventHandler
     }
     class CirclePage {
         --BindableProperty--
-        {static} +RotaryEventConsumerProperty
+        {static} +ActionButtonProperty
+        {static} +RotaryFocusTargetNameProperty
+        {static} +RotaryFocusObjectProperty
         --Property--
-        +IRotaryEventConsumer RotaryEventConsumer
-        +IList<CircleButtonsItem> ButtonItems
-        +IList<ICircleSurfaceItem> CircleSurfaceItems
+        +RotaryFocusTargetName: string
+        +RotaryFocusObject: IRotaryFocusable
+        +CircleSurfaceItems: IList<ICircleSurfaceItem>
+        +ActionButton: MenuItem
     }
-
-    class CircleButtonsItem {
-        --Property--
-        +Direction: CircleButtonsItemDirection
-    }
-
-    enum CircleButtonsItemDirection {
-        Left,
-        Right,
-        Bottom
-    }
-
     interface ICircleSurfaceItem {
         IsVisible: bool
         IsEnabled: bool
     }
 
     CirclePage -u-|> ContentPage
-    CirclePage *-d- IRotaryEventConsumer
-    CirclePage *-d- CircleButtonsItem
-    CircleButtonsItem *-d- CircleButtonsItemDirection
+    CirclePage *-d- IRotaryFocusable
     CirclePage *-d- ICircleSurfaceItem
-    IRotaryEventConsumer *-- RotaryEventHandler
+    IRotaryFocusable *-- RotaryEventHandler
     RotaryEventHandler *-- RotaryEventArgs
-    CircleButtonsItem -u-|> MenuItem
 }
 
 package "Extension.Wearable.Renderer" {
@@ -75,7 +62,7 @@ package "Xamarin.Forms" {
 }
 
 package "Extension.Wearable" {
-    interface IRotaryEventConsumer
+    interface IRotaryFocusable
     class CircleDateTimeSelector {
         --BindableProperty--
         {static} +ColorProperty
@@ -108,7 +95,7 @@ package "Extension.Wearable" {
     }
 
     CircleDateTimeSelector -u-|> View
-    CircleDateTimeSelector -u-|> IRotaryEventConsumer
+    CircleDateTimeSelector -u-|> IRotaryFocusable
     CircleDateTimeSelector *-d- DateTimeType
     CircleDateTimeSelector *-d- DateTimeFieldType
 }
@@ -144,11 +131,11 @@ package "Xamarin.Forms" {
 }
 
 package "Extension.Wearable" {
-    interface IRotaryEventConsumer
+    interface IRotaryFocusable
     class CircleListView
 
     CircleListView -u-|> ListView
-    CircleListView -u-|> IRotaryEventConsumer
+    CircleListView -u-|> IRotaryFocusable
 }
 
 package "Extension.Wearable.Renderer" {
@@ -253,11 +240,11 @@ package "Xamarin.Forms" {
 }
 
 package "Extension.Wearable" {
-    interface IRotaryEventConsumer
+    interface IRotaryFocusable
     class CircleScrollView
 
     CircleScrollView -u-|> ScrollView
-    CircleScrollView -u-|> IRotaryEventConsumer
+    CircleScrollView -u-|> IRotaryFocusable
 }
 
 package "Extension.Wearable.Renderer" {
@@ -286,7 +273,7 @@ CircleSurface --> CircleScroller
 @startuml CircleSliderSurfaceItem.png
 
 package "Extension.Wearable" {
-    interface IRotaryEventConsumer
+    interface IRotaryFocusable
     interface ICircleSurfaceItem {
         IsVisible: bool
     }
@@ -338,7 +325,7 @@ package "Extension.Wearable" {
     }
 
     CircleSliderSurfaceItem -u-|> ICircleSurfaceItem
-    CircleSliderSurfaceItem -u-|> IRotaryEventConsumer
+    CircleSliderSurfaceItem -u-|> IRotaryFocusable
 }
 
 package "Extension.Wearable.Renderer" {
@@ -372,7 +359,7 @@ package "Xamarin.Forms" {
 }
 
 package "Extension.Wearable" {
-    interface IRotaryEventConsumer
+    interface IRotaryFocusable
     class CircleStepper {
         --BindableProperty--
         {static} +RatioProperty
@@ -384,7 +371,7 @@ package "Extension.Wearable" {
     }
 
     CircleStepper -u-|> Stepper
-    CircleStepper -u-|> IRotaryEventConsumer
+    CircleStepper -u-|> IRotaryFocusable
 }
 
 package "Extension.Wearable.Renderer" {
@@ -408,4 +395,73 @@ node CircleSpinner #87ceeb [
 ContentArea --> CircleSpinner
 CircleSurface --> CircleSpinner
 
+@enduml
+
+@startuml TwoButtonPage.png
+
+package "Xamarin.Forms" {
+    class ContentPage
+}
+
+package "Extension.Wearable" {
+    class TwoButtonPage {
+        --BindableProperty--
+        {static} +TitleProperty
+        --Property--
+        FirstButton: MenuItem
+        SecondButton: MenuItem
+    }
+
+    TwoButtonPage -u-|> ContentPage 
+}
+
+package "Extension.Wearable.Renderer" {
+    class TwoButtonPageRenderer
+
+    TwoButtonPageRenderer .l. TwoButtonPage
+}
+
+package "ElmSharp" {
+    class Layout
+    TwoButtonPageRenderer *.. Layout
+}
+
+@enduml
+
+@startuml TwoButtonPage_SceneGraph.png
+
+node TwoButtonPage [
+    Layout
+    "layout/popup/content/circle/buttons2"
+]
+
+node FirstButton [
+    Button
+    "popup/circle/left"
+]
+
+node SecondButton [
+    Button
+    "popup/circle/right"
+]
+
+interface FirstButtonImage [
+    Image
+]
+
+interface SecondButtonImage [
+    Image
+]
+
+() ContentArea
+() TitleArea
+
+
+TwoButtonPage --> FirstButton : "button1"
+TwoButtonPage --> ContentArea : "elm.swallow.content"
+TwoButtonPage --> TitleArea : "elm.text.title"
+TwoButtonPage --> SecondButton : "button2"
+
+FirstButton ..> FirstButtonImage : "elm.swallow.content"
+SecondButton ..> SecondButtonImage : "elm.swallow.content"
 @enduml
