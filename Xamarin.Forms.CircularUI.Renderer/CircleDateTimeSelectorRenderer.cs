@@ -27,7 +27,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
         {
             if (Control == null)
             {
-                var surface = GetSurface();
+                var surface = this.GetSurface();
                 if (null != surface)
                 {
                     Console.WriteLine($"Circle Surface hash = {surface.GetHashCode()}");
@@ -39,6 +39,10 @@ namespace Xamarin.Forms.CircularUI.Renderer
                         Console.WriteLine($"CircleDateTimeSelector.MinimumWidth = {NativeView.MinimumWidth}");
                         Console.WriteLine($"CircleDateTimeSelector.MinimumHeight = {NativeView.MinimumHeight}");
                     });
+                }
+                else
+                {
+                    throw new CirclePageNotFoundException();
                 }
             }
             base.OnElementChanged(e);
@@ -52,28 +56,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
         protected override ElmSharp.Size Measure(int availableWidth, int availableHeight)
         {
             return new ElmSharp.Size(300, 290);
-        }
-
-        ElmSharp.Wearable.CircleSurface GetSurface()
-        {
-            if (null != Element)
-            {
-                Element element = Element;
-                while (!(element is CirclePage))
-                {
-                    element = element.Parent;
-                }
-                if (element != null)
-                {
-                    var renderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(element) as CirclePageRenderer;
-                    if (null != renderer)
-                    {
-                        return renderer.CircleSurface;
-                    }
-                }
-            }
-
-            return null;
         }
 
         void UpdateMinimum(bool initialize)

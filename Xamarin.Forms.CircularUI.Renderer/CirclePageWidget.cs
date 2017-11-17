@@ -205,6 +205,8 @@ namespace Xamarin.Forms.CircularUI.Renderer
 
         void PrepareToolbarItems(IList items)
         {
+            if (items == null || items.Count <= 0) return;
+
             if (_moreOption == null)
             {
                 initToolbar();
