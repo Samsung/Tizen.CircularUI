@@ -34,11 +34,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
 
         private ElmSharp.Size _layoutBound;
 
-        public IndexPageRenderer()
-        {
-            RegisterPropertyHandler(IndexPage.SelectedIndexProperty, UpdateSelectedIndex);
-        }
-
         protected override void OnElementChanged(ElementChangedEventArgs<IndexPage> e)
         {
             if (NativeView == null)
@@ -147,10 +142,10 @@ namespace Xamarin.Forms.CircularUI.Renderer
 
             if (previousIndex != _pageIndex)
             {
-                Element.SelectedIndex = _pageIndex;
-                (Element.CurrentPage as IPageController)?.SendDisappearing();
+                (Element.Children[previousIndex] as IPageController)?.SendDisappearing();
                 Element.CurrentPage = Element.Children[_pageIndex];
                 (Element.CurrentPage as IPageController)?.SendAppearing();
+                _items[_pageIndex].Select(true);
             }
             _changedByScroll--;
         }
@@ -188,11 +183,11 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 _pageIndex = Element.Children.IndexOf(Element.CurrentPage);
                 if (previousPageIndex != _pageIndex)
                 {
-                    Element.SelectedIndex = _pageIndex;
                     // notify disappearing/appearing pages and scroll to the requested page
                     (Element.Children[previousPageIndex] as IPageController)?.SendDisappearing();
                     _scroller.ScrollTo(_pageIndex, 0, false);
                     (Element.CurrentPage as IPageController)?.SendAppearing();
+                    _items[_pageIndex].Select(true);
                 }
             }
         }
@@ -215,19 +210,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
             }
             _pageIndex = Element.Children.IndexOf(Element.CurrentPage);
             _scroller.ScrollTo(_pageIndex, 0, false);
-        }
-
-        private void UpdateSelectedIndex(bool initialize)
-        {
-            if (initialize || _items.Count == 0) return;
-
-            var selectedIndex = Element.SelectedIndex;
-            if (selectedIndex >= _items.Count)
-            {
-                selectedIndex = _items.Count - 1;
-            }
-            _pageIndex = selectedIndex;
-            _items[_pageIndex]?.Select(true);
         }
 
         private void UpdateIndexItem()
@@ -266,6 +248,5 @@ namespace Xamarin.Forms.CircularUI.Renderer
             }
             return returnValue;
         }
-
     }
 }
