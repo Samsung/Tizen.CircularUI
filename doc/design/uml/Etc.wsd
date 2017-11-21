@@ -41,44 +41,36 @@ ContextPopupImplemetation *.. ElmSharp.ContextPopup
 @startuml IndexPage.png
 
 package "Xamarin.Forms" {
-    class ContentPage
+    class MultiPage{
+        --Property--
+        +IList<T> Children
+        +T CurrentPage
+        +IEnumerable ItemsSource
+        +DataTemplate ItemTemplate
+        +Object SelectedItem
+        --Event--
+        +CurrentPageChanged
+        +PagesChanged
+    }
 }
 
-
 package "Extension.Wearable" {
-   class Index {
-        --BindableProperty--
-        {static} +IsAutoHidingEnabledProperty
-        {static} +SelectedIndexProperty
-        {static} +DisplayStyleProperty
-        {static} +ItemCountProperty
-        --Property--
-        +bool IsAutoHidingEnabled
-        +int SelectedIndex
-        +IndexDisplayStyle DisplayStyle
-        +int ItemCount
+   class IndexPage {
     }
 
-    enum IndexDisplayStyle {
-      Thumbnail,
-      Circle
-    }
-
-    Index --|> ContentPage
-    Index *-d- IndexDisplayStyle
+    IndexPage --|> MultiPage
 }
 
 
 package "Extension.Wearable.Renderer" { 
     class IndexRenderer
-    IndexRenderer .l. Index
+    IndexRenderer .l. IndexPage
 }
 
 package "ElmSharp" {
-    class Index
-    class IndexItem
-
-    IndexRenderer *.. ElmSharp.Index
+    IndexRenderer ... ElmSharp.Index
+    IndexRenderer *.. ElmSharp.IndexItem
+    IndexRenderer ... ElmSharp.Scroller
 }
 
 @enduml

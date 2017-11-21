@@ -395,13 +395,15 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
 
 # IndexPage
 
-`IndexPage`는 `ElmSharp.Index`를 표현하며,  `Xamarin.Forms`의 `ContentPage`를 확장한다.
+`IndexPage`는 `ElmSharp.Index`를 표현하며, `Xamarin.Forms`의 `MultiPage`를 확장한다.
 
-`ContentPage`로 동작 하므로 `Content`영역에 `ScrollView`등을 등록할 수 있으며 `Index`의 위치는 고정되어 있다.
+`Page`를 `MultiPage`의 `Chidren`으로 `Add`하거나 `Remove`하면 `Index item`이 `Page`개수에 따라 자동으로 추가 및 삭제된다.
 
- `Scrollview`의 경우`page scroll` 기능이 미지원하므로, `ScrollX`,`ScrollY` 좌표를 이용하며 index를 select해야 한다.
+ `Xamarin.Forms`의 `CarouselPage`과 동작이 유사하며, `Index`가 추가된 형태이다. 
+ 
+ `Page`를 scroll하면 `Index`가 내부적으로 select 동작한다.
 
- `ItemCount`값에 따라 index item이 추가된다. `ItemCount`값을 미지정하면 default 값으로 동작한다.
+ 현재 선택된 `Page`와 `Index` 값은 `CurrentPage`값을 통해 알 수 있으며, `Page(Index)` 변경은 `CurrentPageChanged` 이벤트로 전달 받을 수 있다.
 
 ![IndexPage Design](data/IndexPage.png)
 
@@ -412,28 +414,15 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
 위 Class 중 Xamarin interface 부분은 다음과 같이 Code로 표현된다.
 
  ```C#
- public class IndexPage : Xamarin.Forms.ContentPage
+ public class IndexPage : Xamarin.Forms.MultiPage<ContentPage>
  {
-     public static readonly BindableProperty IsAutoHidingEnabledProperty;
-     public static readonly BindableProperty SelectedIndexProperty;
-     public static readonly BindableProperty DisplayStyleProperty;
-     public static readonly BindableProperty ItemCountProperty;
-
-     public event EventHandler SelectedIndexChanged;
-
-     public bool IsAutoHidingEnabled  { get; set; }
-     public int SelectedIndex { get; set; }
-     public IndexDisplayStyle DisplayStyle { get;  set; }
-     public int ItemCount { get; set;}
  }
-
- public enum IndexDisplayStyle
- {
-      Thumbnail,
-      Circle
- }
-
  ```
+
+ ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
+
+![IndexPage Scene Graph](uml/IndexPage_SceneGraph.png)
+
 
 # Check
 
