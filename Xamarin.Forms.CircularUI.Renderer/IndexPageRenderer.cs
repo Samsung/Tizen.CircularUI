@@ -20,6 +20,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
 
     public class IndexPageRenderer : VisualElementRenderer<IndexPage>
     {
+        const int ItemMaxCount = 20;
         const int OddMiddleItem = 10;
         const int EvenMiddleItem = 11;
         private int _pageIndex = 0;
@@ -126,7 +127,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
 
             //Below code is workaround code. 
             //there is no way to call after Platform.GetRenderer(page) is ready.
-            if (!_isUpdateContent)
+            if (!_isUpdateContent && _innerContainer.MinimumWidth == _layoutBound.Width)
             {
                 UpdateCarouselContent();
                 UpdateIndexItem();
@@ -145,7 +146,10 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 (Element.Children[previousIndex] as IPageController)?.SendDisappearing();
                 Element.CurrentPage = Element.Children[_pageIndex];
                 (Element.CurrentPage as IPageController)?.SendAppearing();
-                _items[_pageIndex].Select(true);
+                var selectIndex = _pageIndex;
+                if (selectIndex >= ItemMaxCount) selectIndex = ItemMaxCount - 1;
+                Console.WriteLine($"selectIndex->{selectIndex} ,_items.Count ->{_items.Count}");
+                _items[selectIndex].Select(true);
             }
             _changedByScroll--;
         }
@@ -187,7 +191,9 @@ namespace Xamarin.Forms.CircularUI.Renderer
                     (Element.Children[previousPageIndex] as IPageController)?.SendDisappearing();
                     _scroller.ScrollTo(_pageIndex, 0, false);
                     (Element.CurrentPage as IPageController)?.SendAppearing();
-                    _items[_pageIndex].Select(true);
+                    var selectIndex = _pageIndex;
+                    if (selectIndex >= ItemMaxCount) selectIndex = ItemMaxCount - 1;
+                    _items[selectIndex].Select(true);
                 }
             }
         }
@@ -218,6 +224,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
             _items.Clear();
 
             var indexCount = Element.Children.Count;
+            if (indexCount > ItemMaxCount) indexCount = ItemMaxCount;
             for (int i = 0; i < indexCount; i++)
             {
                 var item = _index.Append(null);
@@ -225,7 +232,9 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 _items.Add(item);
             }
             _index.Update(0);
-            _items[_pageIndex].Select(true);
+            var selectIndex = _pageIndex;
+            if (selectIndex >= ItemMaxCount) selectIndex = ItemMaxCount - 1;
+            _items[selectIndex].Select(true);
         }
 
         string getItemStyle(int itemCount, int offset)
