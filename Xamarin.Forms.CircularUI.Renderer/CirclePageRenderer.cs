@@ -100,14 +100,21 @@ namespace Xamarin.Forms.CircularUI.Renderer
             if (consumer != null)
             {
                 var consumerRenderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(consumer);
+                IRotaryActionWidget rotaryWidget = null;
                 if (consumerRenderer != null)
                 {
                     var nativeView = consumerRenderer.NativeView;
-                    var rotaryWidget = nativeView as ElmSharp.Wearable.IRotaryActionWidget;
-                    if (rotaryWidget != null)
-                    {
-                        return rotaryWidget;
-                    }
+                    rotaryWidget = nativeView as ElmSharp.Wearable.IRotaryActionWidget;
+                }
+                else if (consumer is Xamarin.Forms.CircularUI.CircleSliderSurfaceItem)
+                {
+                    ICircleSurfaceItem item = consumer as ICircleSurfaceItem;
+                    rotaryWidget = _widget.GetCircleWidget(item) as IRotaryActionWidget;
+                }
+
+                if (rotaryWidget != null)
+                {
+                    return rotaryWidget;
                 }
             }
             return null;

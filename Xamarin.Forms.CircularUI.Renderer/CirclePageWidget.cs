@@ -203,6 +203,16 @@ namespace Xamarin.Forms.CircularUI.Renderer
             }
         }
 
+        public ICircleWidget GetCircleWidget(ICircleSurfaceItem item)
+        {
+            ElmSharp.Wearable.ICircleWidget widget;
+            if (_circleSurfaceItems.TryGetValue(item, out widget))
+            {
+                return widget;
+            }
+            return null;
+        }
+
         void PrepareToolbarItems(IList items)
         {
             if (items == null || items.Count <= 0) return;
