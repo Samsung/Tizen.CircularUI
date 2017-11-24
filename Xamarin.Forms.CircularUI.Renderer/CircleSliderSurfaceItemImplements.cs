@@ -39,37 +39,12 @@ namespace Xamarin.Forms.CircularUI.Renderer
             Value = item.Value;
             IsEnabled = item.IsEnabled;
 
-            Console.WriteLine($"Visibility = {item.IsVisible}");
-
             if (item.IsVisible) Show();
             else Hide();
-
-
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BackgroundAngle = {BackgroundAngle}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BackgroundAngleOffset = {BackgroundAngleOffset}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BackgroundColor = {BackgroundColor}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BackgroundLineWidth = {BackgroundLineWidth}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BackgroundRadius = {BackgroundRadius}");
-
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarAngle = {BarAngle}, item.BarAngle={item.BarAngle}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarAngleOffset = {BarAngleOffset}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarAngleMaximum = {BarAngleMaximum}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarAngleMinimum = {BarAngleMinimum}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarColor = {BarColor}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarLineWidth = {BarLineWidth}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.BarRadius = {BarRadius}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.Value = {Value} , item.Value ={item.Value}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.IsEnabled = {IsEnabled}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.IsVisible = {IsVisible}");
-
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.Maximum = {Maximum}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.Minimum = {Minimum}");
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.Step = {Step}");
         }
 
         void ItemPropertyChanged(object sender, PropertyChangedEventArgs args)
         {
-            Console.WriteLine($"CircleSliderSurfaceItemImplements.ItemPropertyChanged    args.PropertyName= {args.PropertyName}");
             if (args.PropertyName == CircleSliderSurfaceItem.BackgroundAngleProperty.PropertyName)
             {
                 BackgroundAngle = _item.BackgroundAngle;

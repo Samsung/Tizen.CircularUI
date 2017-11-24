@@ -32,13 +32,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 {
                     Console.WriteLine($"Circle Surface hash = {surface.GetHashCode()}");
                     SetNativeControl(new ElmSharp.Wearable.CircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, surface));
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        Console.WriteLine($"CircleDateTimeSelector.Geometry = {NativeView.Geometry.ToString()}");
-                        Console.WriteLine($"CircleDateTimeSelector.IsVisible = {NativeView.IsVisible}");
-                        Console.WriteLine($"CircleDateTimeSelector.MinimumWidth = {NativeView.MinimumWidth}");
-                        Console.WriteLine($"CircleDateTimeSelector.MinimumHeight = {NativeView.MinimumHeight}");
-                    });
                 }
                 else
                 {

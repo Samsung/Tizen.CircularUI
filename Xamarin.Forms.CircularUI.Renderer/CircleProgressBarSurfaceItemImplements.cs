@@ -39,35 +39,12 @@ namespace Xamarin.Forms.CircularUI.Renderer
             Value = item.Value;
             IsEnabled = item.IsEnabled;
 
-            Console.WriteLine($"Visibility = {item.IsVisible}");
-
             if (item.IsVisible) Show();
             else Hide();
-
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BackgroundAngle = {BackgroundAngle}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BackgroundAngleOffset = {BackgroundAngleOffset}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BackgroundColor = {BackgroundColor}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BackgroundLineWidth = {BackgroundLineWidth}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BackgroundRadius = {BackgroundRadius}");
-
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarAngle = {BarAngle}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarAngleOffset = {BarAngleOffset}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarAngleMaximum = {BarAngleMaximum}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarAngleMinimum = {BarAngleMinimum}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarColor = {BarColor}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarLineWidth = {BarLineWidth}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.BarRadius = {BarRadius}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.Value = {Value}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.IsEnabled = {BackgroundAngle}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.IsVisible = {IsVisible}");
-
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.Maximum = {Maximum}");
-            Console.WriteLine($"CircleProgressBarSurfaceItemImplements.Minimum = {Minimum}");
         }
 
         void ItemPropertyChanged(object sender, PropertyChangedEventArgs args)
         {
-            Console.WriteLine($"CircleProgressbarItem Property Changed => {args.PropertyName}");
             if (args.PropertyName == CircleProgressBarSurfaceItem.BackgroundAngleProperty.PropertyName)
             {
                 BackgroundAngle = _item.BackgroundAngle;
