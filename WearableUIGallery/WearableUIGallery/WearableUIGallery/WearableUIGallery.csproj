@@ -4,10 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <!-- Include Nuget Package for Xamarin building -->
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.4.0.18342" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.77107" />
   </ItemGroup>
+
+  <!-- Include Nuget Package for Xamarin building -->
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin.Forms.CircularUI\Xamarin.Forms.CircularUI.csproj" />
   </ItemGroup>

@@ -40,7 +40,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
             if (NativeView == null)
             {
                 Initialize();
-                SetNativeControl(_outterLayout);
+                SetNativeView(_outterLayout);
             }
 
             if (e.OldElement != null)

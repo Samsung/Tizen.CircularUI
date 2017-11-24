@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+              xmlns:local="clr-namespace:WearableUIGallery"
+              x:Class="WearableUIGallery.TC.TCCircleScroller"
+              RotaryFocusTargetName="myscroller">
+    <w:CirclePage.Content>
+        <w:CircleScrollView Orientation="Vertical" x:Name="myscroller">
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Text="Label #1" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                <Label Text="Label #2" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #3" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #4" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #5" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #6" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #7" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #8" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #9" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #10" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #11" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #12" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #13" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #14" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #15" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #16" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #17" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #18" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #19" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #20" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #21" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #22" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #23" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #24" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #26" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #27" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #28" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #29" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #30" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #31" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #32" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #33" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #34" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #35" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #36" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #37" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #38" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #39" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Label #40" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </w:CircleScrollView>
+    </w:CirclePage.Content>
+</w:CirclePage>
