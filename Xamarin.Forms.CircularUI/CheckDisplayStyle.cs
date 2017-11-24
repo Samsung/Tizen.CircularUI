@@ -25,11 +25,6 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// The small checkbox style. this style is only for circular devices 
         /// </summary>
-        Small,
-
-        /// <summary>
-        /// The small checkbox style. this style is only for rectangular devices.
-        /// </summary>
-        Popup
+        Small
     }
 }

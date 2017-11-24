@@ -15,7 +15,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
         public const string Default = "default";
         public const string Onoff = "on&off";
         public const string Small = "small";
-        public const string Popup = "popup";
     }
 
     public class CheckRenderer : SwitchRenderer
@@ -61,9 +60,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
                     break;
                 case CheckDisplayStyle.Small:
                     Control.Style = CheckStyle.Small;
-                    break;
-                case CheckDisplayStyle.Popup:
-                    Control.Style = CheckStyle.Popup;
                     break;
                 case CheckDisplayStyle.Default:
                 default:
