@@ -7,12 +7,12 @@
     <Application.MainPage>
         <NavigationPage x:Name="MainNavigation">
             <x:Arguments>
-                <w:CirclePage NavigationPage.HasNavigationBar="False">
+                <w:CirclePage NavigationPage.HasNavigationBar="False" RotaryFocusTargetName="MainList">
                     <w:CirclePage.BindingContext>
                         <local:AppViewModel/>
                     </w:CirclePage.BindingContext>
                     <w:CirclePage.Content>
-                        <w:CircleListView ItemsSource="{Binding TCs}" ItemSelected="OnItemSelected">
+                        <w:CircleListView ItemsSource="{Binding TCs}" ItemTapped="OnItemTapped" x:Name="MainList">
                             <w:CircleListView.ItemTemplate>
                                 <DataTemplate>
                                     <TextCell Text="{Binding Title}"/>

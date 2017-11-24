@@ -16,19 +16,15 @@ namespace WearableUIGallery
         {
             Datas = new ObservableCollection<TCDescribe>();
             InitializeComponent();
-
-            Navigation = MainNavigation;
         }
-
-        public static NavigationPage Navigation  { get; private set; }
 
         public ObservableCollection<TCDescribe> Datas { get; private set; }
 
-        public void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        public void OnItemTapped(object sender, ItemTappedEventArgs args)
         {
-            if (args.SelectedItem == null) return;
+            if (args.Item == null) return;
 
-            var desc = args.SelectedItem as TCDescribe;
+            var desc = args.Item as TCDescribe;
             if (desc != null && desc.Class != null)
             {
                 Type pageType = desc.Class;
