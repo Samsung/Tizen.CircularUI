@@ -17,6 +17,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
             TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPage) });
             TCs.Add(new TCDescribe { Title = "Check", Class = typeof(TCCheck) });
+            TCs.Add(new TCDescribe { Title = "ContextPopup", Class = typeof(TCContextPopup) });
             TCs.Add(new TCDescribe { Title = "", Class = null }); // for bottom padding
         }
 
