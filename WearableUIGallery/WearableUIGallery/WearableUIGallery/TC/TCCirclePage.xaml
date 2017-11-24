@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+              xmlns:local="clr-namespace:WearableUIGallery"
+              x:Class="WearableUIGallery.TC.TCCirclePage"
+              RotaryFocusTargetName="DateSelector">
+    <w:CirclePage.BindingContext>
+        <local:TCCirclePageViewModel/>
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <w:CircleDateTimeSelector
+                    x:Name="DateSelector"
+                    ValueType="Date"
+                    MinimumDate="1/12/2015"
+                    MaximumDate="1/1/2018"/>
+        </StackLayout>
+    </w:CirclePage.Content>
+    <w:CirclePage.CircleSurfaceItems>
+        <w:CircleProgressBarSurfaceItem x:Name="progress1" Value="{Binding Progress}"/>
+        <w:CircleProgressBarSurfaceItem IsVisible="{Binding ProgressBarVisibility}" BackgroundRadius="90" BarRadius="90" BackgroundColor="Green" BackgroundLineWidth="20" BarColor="Red" BarLineWidth="15" Value="0.5"/>
+    </w:CirclePage.CircleSurfaceItems>
+    <w:CirclePage.ActionButton>
+        <MenuItem Text="OK" Command="{Binding ProgressBarVisibleCommand}"/>
+    </w:CirclePage.ActionButton>
+    <w:CirclePage.ToolbarItems>
+        <w:CircleToolbarItem Text="{Binding Play.Text}" SubText="{Binding Play.SubText}" Icon="{Binding Play.Icon}" Command="{Binding Play.Action}"/>
+        <w:CircleToolbarItem Text="{Binding Stop.Text}" SubText="{Binding Stop.SubText}" Icon="{Binding Stop.Icon}" Command="{Binding Stop.Action}"/>
+        <w:CircleToolbarItem Text="{Binding Repeat.Text}" SubText="{Binding Repeat.SubText}" Icon="{Binding Repeat.Icon}" Command="{Binding Repeat.Action}"/>
+        <w:CircleToolbarItem Text="{Binding Shuffle.Text}" SubText="{Binding Shuffle.SubText}" Icon="{Binding Shuffle.Icon}" Command="{Binding Shuffle.Action}"/>
+    </w:CirclePage.ToolbarItems>
+</w:CirclePage>

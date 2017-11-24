@@ -35,7 +35,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 _widget.ToolbarOpened += OnToolbarOpened;
                 _widget.ToolbarClosed += OnToolbarClosed;
                 _widget.Show();
-                SetNativeControl(_widget);
+                SetNativeView(_widget);
             }
             base.OnElementChanged(args);
         }
