@@ -8,11 +8,21 @@ using Xamarin.Forms;
 
 namespace WearableUIGallery
 {
+    internal static class WidgetName
+    {
+        public const string DateSelector = "DateSelector";
+        public const string Alert = "AlertSlider";
+        public const string Ringtone = "RingtoneSlider";
+    }
+
     public class TCCirclePageViewModel : INotifyPropertyChanged
     {
         Random _random = new Random();
         double _progress;
         bool _progressBarVisibility;
+        bool _alertSliderVisibility;
+        bool _ringtoneSliderVisibility;
+        string _rotaryFocusName = WidgetName.DateSelector;
 
         public double Progress
         {
@@ -36,12 +46,47 @@ namespace WearableUIGallery
             }
         }
 
+        public bool AlertSliderVisibility
+        {
+            get => _alertSliderVisibility;
+            set
+            {
+                if (_alertSliderVisibility == value) return;
+                _alertSliderVisibility = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool RingtoneSliderVisibility
+        {
+            get => _ringtoneSliderVisibility;
+            set
+            {
+                if (_ringtoneSliderVisibility == value) return;
+                _ringtoneSliderVisibility = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string RotaryFocusName
+        {
+            get => _rotaryFocusName;
+            set
+            {
+                if (_rotaryFocusName == value) return;
+                _rotaryFocusName = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand ProgressBarVisibleCommand { get; private set; }
 
         public ProgressCommand Play { get; private set; }
         public ProgressCommand Stop { get; private set; }
         public ProgressCommand Repeat { get; private set; }
         public ProgressCommand Shuffle { get; private set; }
+        public ProgressCommand Alert { get; private set; }
+        public ProgressCommand Ringtone { get; private set; }
 
         public bool Playing { get; set; }
         public bool KeepGoing { get; set; }
@@ -52,10 +97,18 @@ namespace WearableUIGallery
             Stop = new ProgressCommand { Text = "Stop", SubText = "Stop and reset", Icon = "image/music_controller_btn_stop.png", Action = new Command(DoStop) };
             Repeat = new ProgressCommand { Text = "Repeat", SubText = "Keep playing", Icon = "image/music_controller_btn_repeat_all.png", Action = new Command(DoRepeat) };
             Shuffle = new ProgressCommand { Text = "Shuffle", SubText = "Carry on Random", Icon = "image/music_controller_btn_shuffle_on.png", Action = new Command(DoShuffle) };
+            Alert = new ProgressCommand { Text = "Alert", SubText = "Alert volume", Icon = "image/icon_alert_sound.png", Action = new Command(DoAlertVolume) };
+            Ringtone = new ProgressCommand { Text = "Ringtone", SubText = "Ringtone volume", Icon = "image/icon_ringtone_sound.png", Action = new Command(DoRingtoneVolume) };
             Playing = false;
             KeepGoing = false;
 
-            ProgressBarVisibleCommand = new Command(() => ProgressBarVisibility = !ProgressBarVisibility);
+            ProgressBarVisibleCommand = new Command(() =>
+            {
+                ProgressBarVisibility = !ProgressBarVisibility;
+                RotaryFocusName = WidgetName.DateSelector;
+                AlertSliderVisibility = false;
+                RingtoneSliderVisibility = false;
+            });
         }
 
         void DoPlay()
@@ -90,6 +143,20 @@ namespace WearableUIGallery
             KeepGoing = true;
             Progress = 0;
             Device.StartTimer(TimeSpan.FromMilliseconds(1000 / 60), UpdateShuffleProgress);
+        }
+
+        void DoAlertVolume(object obj)
+        {
+            Console.WriteLine("DoAlertVolume!!");
+            AlertSliderVisibility = true;
+            RotaryFocusName = WidgetName.Alert;
+        }
+
+        void DoRingtoneVolume(object obj)
+        {
+            Console.WriteLine("DoRingtoneVolume!!");
+            RingtoneSliderVisibility = true;
+            RotaryFocusName = WidgetName.Ringtone;
         }
 
         bool UpdateProgress()
