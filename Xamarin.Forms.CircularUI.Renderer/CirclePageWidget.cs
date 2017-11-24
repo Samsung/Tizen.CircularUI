@@ -70,15 +70,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
             PrepareCircleSurfaceItems(surfaceItems);
 
             _page = element;
-
-            Device.BeginInvokeOnMainThread((Action)(() =>
-            {
-                Console.WriteLine($"CirclePage Root Layout -> {Geometry.ToString()}");
-                Console.WriteLine($"Bottom button Layout -> {_actionButtonLayout.Geometry.ToString()}");
-                Console.WriteLine($"Circle Option Layout -> {_circleOptionLayout.Geometry.ToString()}");
-                Console.WriteLine($"Circle Layout -> {_circleLayout.Geometry.ToString()}");
-                Console.WriteLine($"content Layout -> {_content.Geometry.ToString()}");
-            }));
         }
 
         public event EventHandler<LayoutEventArgs> LayoutUpdated

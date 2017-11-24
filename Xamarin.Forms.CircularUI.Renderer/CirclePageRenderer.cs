@@ -34,10 +34,29 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 _widget.LayoutUpdated += OnLayoutUpdated;
                 _widget.ToolbarOpened += OnToolbarOpened;
                 _widget.ToolbarClosed += OnToolbarClosed;
-                _widget.Show();
                 SetNativeView(_widget);
             }
+            if (args.NewElement != null)
+            {
+                args.NewElement.Appearing += OnCirclePageAppearing;
+                args.NewElement.Disappearing += OnCirclePageDisappearing;
+            }
+            if (args.OldElement != null)
+            {
+                args.OldElement.Appearing -= OnCirclePageAppearing;
+                args.OldElement.Disappearing -= OnCirclePageDisappearing;
+            }
             base.OnElementChanged(args);
+        }
+
+        protected void OnCirclePageAppearing(object sender, EventArgs e)
+        {
+            GetRotaryWidget(Element?.RotaryFocusObject)?.Activate();
+        }
+
+        protected void OnCirclePageDisappearing(object sender, EventArgs e)
+        {
+            GetRotaryWidget(Element?.RotaryFocusObject)?.Deactivate();
         }
 
         protected override void UpdateBackgroundColor(bool initialize)
@@ -52,36 +71,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
             {
                 _widget.BackgroundColor = Element.BackgroundColor.ToNative();
             }
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
-            _currentRotaryFocusObject = null;
-            base.Dispose(disposing);
-        }
-
-        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            base.OnElementPropertyChanged(sender, e);
-
-            if (e.PropertyName == VisualElement.IsVisibleProperty.PropertyName)
-            {
-                if (Element.IsVisible)
-                {
-                    GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
-                }
-                else
-                {
-                    GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
-                }
-            }
-        }
-
-        protected override void OnElementReady()
-        {
-            base.OnElementReady();
-            GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
         }
 
         void OnToolbarClosed(object sender, EventArgs e)
