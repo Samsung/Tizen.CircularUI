@@ -17,9 +17,6 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets display style of Check.
         /// </summary>
-        /// <remarks>
-        /// Small style is only supported at circular devices, and Popup style is only supported at rectangular devices.
-        /// </remarks>
         public CheckDisplayStyle DisplayStyle
         {
             get { return (CheckDisplayStyle)GetValue(DisplayStyleProperty); }
