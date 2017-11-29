@@ -109,8 +109,9 @@ namespace Xamarin.Forms.CircularUI.Renderer
             };
             if (image != null)
             {
+                var path = ResourcePath.GetPath(image);
                 var buttonImage = new ElmSharp.Image(_actionButton);
-                buttonImage.LoadAsync(image);
+                buttonImage.LoadAsync(path);
                 buttonImage.Show();
                 _actionButton.SetPartContent("elm.swallow.content", buttonImage);
             }
