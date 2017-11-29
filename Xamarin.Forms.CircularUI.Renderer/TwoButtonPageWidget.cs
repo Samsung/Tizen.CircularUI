@@ -91,7 +91,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
             if (!string.IsNullOrEmpty(image))
             {
                 var path = ResourcePath.GetPath(image);
-                Console.WriteLine($"button {id} image = {path}");
                 var buttonImage = new ElmSharp.Image(_buttons[id]);
                 buttonImage.LoadAsync(path);
                 buttonImage.Show();
