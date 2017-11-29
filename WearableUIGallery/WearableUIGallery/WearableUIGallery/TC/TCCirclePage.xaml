@@ -3,7 +3,7 @@
     x:Class="WearableUIGallery.TC.TCCirclePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
     RotaryFocusTargetName="{Binding RotaryFocusName}">
     <w:CirclePage.BindingContext>
