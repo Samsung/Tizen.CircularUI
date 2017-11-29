@@ -23,7 +23,6 @@ namespace WearableUIGallery.TC
             _popup.Items.Add(item1);
             _popup.Items.Add(item2);
 
-            new Thickness(0, 0, 0, 0);
             _popup.ItemSelected += (s, e) =>
             {
                 Console.WriteLine($"{_popup.SelectedItem?.Label} is selected");

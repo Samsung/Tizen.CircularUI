@@ -79,7 +79,5 @@ namespace Xamarin.Forms.CircularUI
             get { return (double)GetValue(IncrementProperty); }
             set { SetValue(IncrementProperty, value); }
         }
-
-        public event RotaryEventHandler Rotated;
     }
 }
