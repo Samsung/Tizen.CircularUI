@@ -235,10 +235,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
                         moreOptionItem.SubText = subText;
                     }
                 }
-                if (item.Command != null)
-                {
-                    moreOptionItem.Action = () => item.Activate();
-                }
+                moreOptionItem.Action = () => item.Activate();
                 _moreOption.Items.Add(moreOptionItem);
                 _toolbarItemMap[item] = moreOptionItem;
             }
