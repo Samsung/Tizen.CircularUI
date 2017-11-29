@@ -9,7 +9,11 @@ namespace Xamarin.Forms.CircularUI
     public class CirclePage : ContentPage
     {
         public static readonly BindableProperty ActionButtonProperty = BindableProperty.Create(nameof(ActionButton), typeof(MenuItem), typeof(CirclePage), null,
-            propertyChanged:(b, o, n) => ((Element)n).Parent = (Element)b);
+            propertyChanged: (b, o, n) =>
+            {
+                if (n != null)
+                    ((Element)n).Parent = (Element)b;
+            });
         public static readonly BindableProperty RotaryFocusTargetNameProperty = BindableProperty.Create(nameof(RotaryFocusTargetName), typeof(string), typeof(CirclePage), null,
             propertyChanged: RotaryFocusTargetNameChanged);
 

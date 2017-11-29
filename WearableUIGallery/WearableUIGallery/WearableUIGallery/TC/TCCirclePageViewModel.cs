@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace WearableUIGallery
+namespace WearableUIGallery.TC
 {
     internal static class WidgetName
     {
