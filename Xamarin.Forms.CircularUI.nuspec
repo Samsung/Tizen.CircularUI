@@ -12,6 +12,9 @@
     <description>Circular UI components for Xamarin.Forms</description>
     <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
     <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="Xamarin.Forms" version="2.5.0.77107" />
+      </group>
       <group targetFramework="tizen40">
         <dependency id="Xamarin.Forms" version="2.5.0.77107" />
         <dependency id="Xamarin.Forms.Platform.Tizen" version="2.5.0.77107" />
