@@ -26,8 +26,7 @@
  {
       Default,
       Onoff,
-      Small,
-      Popup
+      Small
  }
 
  ```

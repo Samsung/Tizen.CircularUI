@@ -297,6 +297,7 @@ package "Extension.Wearable" {
         +MaximumProperty
 
         +ValueProperty
+        +IncrementProperty
 
         +IsVisibleProperty
         +IsEnabledProperty
@@ -320,6 +321,7 @@ package "Extension.Wearable" {
         +Maximum: double
 
         +Value: double
+        +Increment: double
         +IsVisible: bool
         +IsEnabled: bool
     }

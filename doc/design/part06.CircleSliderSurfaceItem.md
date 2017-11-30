@@ -53,6 +53,7 @@ public class CircleSliderSurfaceItem : ICircleSurfaceItem
     public double Minimum { get; set; }
     public double Maximum { get; set; }
     public double Value { get; set; }
+    public double Increment { get; set; }
     public bool IsVisible { get; set; }
     public bool IsEnabled { get; set; }
 }

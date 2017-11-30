@@ -18,20 +18,19 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
  ```C#
  public class ContextPopup : BindableObject
  {
-     public static readonly BindableProperty IsAutoHidingEnabledProperty;
      public static readonly BindableProperty SelectedIndexProperty;
      public static readonly BindableProperty SelectedItemProperty;
 
      public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
      public event EventHandler Dismissed;
 
-     public bool IsAutoHidingEnabled  { get; set; }
      public int SelectedIndex { get; set; }
      public ContextPopupItem SelectedItem { get; set; }
      public IList<ContextPopupItem> Items { get; }
 
      public void Show(View anchor);
      public void Show(View anchor, int xOffset, int yOffset);
+     public void Show(View anchor, double xOffset, double yOffset);
      public void Dismiss();
  }
 

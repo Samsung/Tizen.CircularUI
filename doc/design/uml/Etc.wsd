@@ -4,17 +4,16 @@ package "Extension.Wearable" {
 
     class ContextPopup {
         --BindableProperty--
-        {static} +IsAutoHidingEnabledProperty
         {static} +SelectedIndexProperty
         {static} +SelectedItemProperty
         --Property--
-        +bool IsAutoHidingEnabled
         +int SelectedIndex
         +ContextPopupItem SelectedItem
         +IList<ContextPopupItem> Items
         --Method--
         +void Show(View anchor)
         +void Show(View anchor, int xOffset, int yOffset)
+        +void Show(View anchor, double xOffset, double yOffset)
         +void Dismiss()
     }
 
@@ -99,8 +98,7 @@ package "Extension.Wearable" {
     enum CheckDisplayStyle {
       Default,
       Onoff,
-      Small,
-      Popup
+      Small
     }
 
     Check *-d- CheckDisplayStyle
