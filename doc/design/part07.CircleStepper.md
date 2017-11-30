@@ -14,14 +14,14 @@
  ```C#
  public class CircleStepper : Xamarin.Forms.Stepper, IRotaryEventConsumer
  {
-     public static readonly BindableProperty ColorProperty;
+     public static readonly BindableProperty MarkerColorProperty;
 
-     public Color Color { get; set; }
+     public Color MarkerColor { get; set; }
  }
  ```
 기존 `Stepper`에 Marker color만 추가되었습니다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
 
-* Color : Bezel Action시에 움직이는 Marker의 색
+* MarkerColor : Bezel Action시에 움직이는 Marker의 색
 
 `CircleStepper`는 ElmSharp Level에서 다음과 같은 Scene Graph로 표현된다.
 

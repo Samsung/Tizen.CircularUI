@@ -2,9 +2,9 @@
 {
     public class CircleStepper : Xamarin.Forms.Stepper, IRotaryFocusable
     {
-        public static readonly BindableProperty ColorProperty = BindableProperty.Create(nameof(Color), typeof(Color), typeof(CircleStepper), Color.Default);
+        public static readonly BindableProperty MarkerColorProperty = BindableProperty.Create(nameof(MarkerColor), typeof(Color), typeof(CircleStepper), Color.Default);
 
-        public Color Color { get => (Color)GetValue(ColorProperty); set => SetValue(ColorProperty, value); }
+        public Color MarkerColor { get => (Color)GetValue(MarkerColorProperty); set => SetValue(MarkerColorProperty, value); }
 
         public event RotaryEventHandler Rotated;
     }

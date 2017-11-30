@@ -12,7 +12,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
     {
         public CircleStepperRenderer()
         {
-            RegisterPropertyHandler(CircleStepper.ColorProperty, UpdateColor);
+            RegisterPropertyHandler(CircleStepper.MarkerColorProperty, UpdateMarkerColor);
             RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
@@ -89,11 +89,11 @@ namespace Xamarin.Forms.CircularUI.Renderer
             return new ESize(360, 110);
         }
 
-        void UpdateColor(bool initialize)
+        void UpdateMarkerColor(bool initialize)
         {
-            if (null != Control && null != Element && Element.Color != Color.Default)
+            if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
-                Control.MarkerColor = Element.Color.ToNative();
+                Control.MarkerColor = Element.MarkerColor.ToNative();
                 Console.WriteLine($"CircleStepper.MarkerColor = {Control.MarkerColor}");
             }
         }

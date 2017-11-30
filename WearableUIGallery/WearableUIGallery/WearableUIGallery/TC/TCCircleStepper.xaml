@@ -65,9 +65,9 @@
                 Grid.Column="0"
                 Focused="OnFocusedHr"
                 HorizontalOptions="Center"
+                MarkerColor="Coral"
                 Maximum="23"
                 Minimum="0"
-                Color="Coral"
                 Value="0" />
             <Label
                 Grid.Row="1"
@@ -81,9 +81,9 @@
                 Grid.Column="2"
                 Focused="OnFocusedMm"
                 HorizontalOptions="Center"
+                MarkerColor="Blue"
                 Maximum="59"
                 Minimum="0"
-                Color="Blue"
                 Value="0" />
             <Label
                 Grid.Row="1"
@@ -97,9 +97,9 @@
                 Grid.Column="4"
                 Focused="OnFocusedSec"
                 HorizontalOptions="Center"
+                MarkerColor="DarkRed"
                 Maximum="59"
                 Minimum="0"
-                Color="DarkRed"
                 Value="0" />
         </Grid>
     </w:CirclePage.Content>

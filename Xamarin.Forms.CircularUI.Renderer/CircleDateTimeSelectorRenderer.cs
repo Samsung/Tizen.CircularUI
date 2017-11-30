@@ -16,7 +16,7 @@ namespace Xamarin.Forms.CircularUI.Renderer
     {
         public CircleDateTimeSelectorRenderer()
         {
-            RegisterPropertyHandler(CircleDateTimeSelector.ColorProperty, UpdateColor);
+            RegisterPropertyHandler(CircleDateTimeSelector.MarkerColorProperty, UpdateMarkerColor);
             RegisterPropertyHandler(CircleDateTimeSelector.ValueTypeProperty, UpdateValueType);
             RegisterPropertyHandler(CircleDateTimeSelector.DateTimeProperty, UpdateDateTime);
             RegisterPropertyHandler(CircleDateTimeSelector.MaximumDateProperty, UpdateMaximum);
@@ -94,11 +94,11 @@ namespace Xamarin.Forms.CircularUI.Renderer
             }
         }
 
-        void UpdateColor(bool initialize)
+        void UpdateMarkerColor(bool initialize)
         {
-            if (null != Control && null != Element && Element.Color != Color.Default)
+            if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
-                Control.MarkerColor = Element.Color.ToNative();
+                Control.MarkerColor = Element.MarkerColor.ToNative();
                 Console.WriteLine($"CircleDateTimeSelector.MarkerColor = {Control.MarkerColor}");
             }
         }

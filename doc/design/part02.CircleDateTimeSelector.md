@@ -19,13 +19,13 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
  ```C#
  public class CircleDateTimeSelector : Xamarin.Forms.View, IRotaryEventConsumer
  {
-     public static readonly BindableProperty ColorProperty; 
-     public static readonly BindableProperty ValueTypeProperty; 
+     public static readonly BindableProperty MarkerColorProperty;
+     public static readonly BindableProperty ValueTypeProperty;
      public static readonly BindableProperty DateTimeProperty;
      public static readonly BindableProperty MaximumDateProperty;
      public static readonly BindableProperty MinimumDateProperty;
 
-     public Color Color { get; set; }
+     public Color MarkerColor { get; set; }
      public DateTimeType ValueType { get; set; }
      public DateTime DateTime { get; set; }
      public DateTime MaximumDate { get; set; }
@@ -57,7 +57,7 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
 `ValueType` Property를 변경하여 원하는 값을 선택할 수 있다.
 `CirclePage`의 `RotaryEventConsumer` property에 Set되면 Bezel Action에 반응할 수 있게 된다.
 
-* Color : `CircleSurface` 상에서 값을 선택하기 위한 Marker의 색을 변경한다.
+* MarkerColor : `CircleSurface` 상에서 값을 선택하기 위한 Marker의 색을 변경한다.
 * ValueType : Time이면 UI가 시간 선택이 가능하게, Date라면 날짜 선택이 가능하게 변경된다.
 * DateTime : 날짜/시간을 가져오거나, 설정한다.
 * MaximumDate : ValueType이 Date일때, 최대 날짜를 가져오거나 설정한다.

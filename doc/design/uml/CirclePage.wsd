@@ -65,13 +65,13 @@ package "Extension.Wearable" {
     interface IRotaryFocusable
     class CircleDateTimeSelector {
         --BindableProperty--
-        {static} +ColorProperty
+        {static} +MarkerColorProperty
         {static} +ValueTypeProperty
         {static} +DateTimeProperty
         {static} +MaximumDateProperty
         {static} +MinimumDateProperty
         --Property--
-        +Color: Color
+        +MarkerColor: Color
         +ValueType: DateTimeType
         +DateTime: DateTime
         +MaximumDate: DateTime
@@ -364,10 +364,10 @@ package "Extension.Wearable" {
     interface IRotaryFocusable
     class CircleStepper {
         --BindableProperty--
-        {static} +ColorProperty
+        {static} +MarkerColorProperty
 
         --Property--
-        +Color: Color
+        +MarkerColor: Color
     }
 
     CircleStepper -u-|> Stepper
