@@ -6,7 +6,6 @@
 
     public interface IRotaryEventReceiver : IRotaryFocusable
     {
-        event RotaryEventHandler Rotated;
         void Rotate(RotaryEventArgs args);
     }
 }

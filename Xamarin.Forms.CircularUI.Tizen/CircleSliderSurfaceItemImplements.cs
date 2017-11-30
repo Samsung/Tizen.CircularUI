@@ -8,7 +8,7 @@ using System.Text;
 using Xamarin.Forms.CircularUI;
 using Xamarin.Forms.Platform.Tizen;
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class CircleSliderSurfaceItemImplements : ElmSharp.Wearable.CircleSlider
     {

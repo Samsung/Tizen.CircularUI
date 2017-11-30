@@ -3,10 +3,10 @@ using ESpinner = ElmSharp.Wearable.CircleSpinner;
 using ESize = ElmSharp.Size;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleStepper), typeof(Xamarin.Forms.CircularUI.Renderer.CircleStepperRenderer))]
+[assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleStepper), typeof(Xamarin.Forms.CircularUI.Tizen.CircleStepperRenderer))]
 
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class CircleStepperRenderer : ViewRenderer<CircleStepper, ESpinner>
     {

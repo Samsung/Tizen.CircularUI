@@ -8,7 +8,7 @@ using Xamarin.Forms.CircularUI;
 
 using Xamarin.Forms.Platform.Tizen;
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     class CircleProgressBarSurfaceItemImplements : ElmSharp.Wearable.CircleProgressBar
     {

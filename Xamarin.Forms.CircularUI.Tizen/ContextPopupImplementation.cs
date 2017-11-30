@@ -11,8 +11,8 @@ using XForms = Xamarin.Forms;
 using XFPlatformTizen = Xamarin.Forms.Platform.Tizen;
 
 
-[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Renderer.ContextPopupImplementation))]
-namespace Xamarin.Forms.CircularUI.Renderer
+[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Tizen.ContextPopupImplementation))]
+namespace Xamarin.Forms.CircularUI.Tizen
 {
 
     internal class ContextPopupImplementation : IContextPopup, INotifyPropertyChanged, IDisposable

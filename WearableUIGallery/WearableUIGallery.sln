@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery.Tizen.Wea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.CircularUI", "..\Xamarin.Forms.CircularUI\Xamarin.Forms.CircularUI.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.CircularUI.Renderer", "..\Xamarin.Forms.CircularUI.Renderer\Xamarin.Forms.CircularUI.Renderer.csproj", "{0A00329D-37E9-4B18-BF30-5E5597826B29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.CircularUI.Tizen", "..\Xamarin.Forms.CircularUI.Tizen\Xamarin.Forms.CircularUI.Tizen.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A00329D-37E9-4B18-BF30-5E5597826B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

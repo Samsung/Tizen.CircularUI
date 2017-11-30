@@ -8,9 +8,9 @@ using System.Text;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleListView), typeof(Xamarin.Forms.CircularUI.Renderer.CircleListViewRenderer))]
+[assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleListView), typeof(Xamarin.Forms.CircularUI.Tizen.CircleListViewRenderer))]
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     using GroupList = TemplatedItemsList<ItemsView<Cell>, Cell>;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms.CircularUI;
-using Xamarin.Forms.CircularUI.Renderer;
+using Xamarin.Forms.CircularUI.Tizen;
 using Xamarin.Forms.Platform.Tizen;
 using ElmSharp;
 using TForms = Xamarin.Forms.Platform.Tizen.Forms;
@@ -10,7 +10,7 @@ using System.Collections.Specialized;
 
 [assembly: ExportRenderer(typeof(IndexPage), typeof(IndexPageRenderer))]
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     internal static class IndexStyle
     {

@@ -4,7 +4,7 @@ using ElmSharp;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Internals;
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public static class ListViewCache
     {

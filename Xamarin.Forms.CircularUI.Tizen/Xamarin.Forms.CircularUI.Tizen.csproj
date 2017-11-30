@@ -10,7 +10,9 @@
 
   <ItemGroup>
     <PackageReference Include="Tizen.NET" Version="4.0.0" />
-    <PackageReference Include="Xamarin.Forms.Platform.Tizen" Version="2.5.0.77107" />
+    <Reference Include="Xamarin.Forms.Platform.Tizen">
+      <HintPath>..\..\Xamarin.Forms\Xamarin.Forms.Platform.Tizen\bin\Debug\tizen40\Xamarin.Forms.Platform.Tizen.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
