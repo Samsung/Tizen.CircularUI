@@ -333,16 +333,13 @@ public class CircleSliderSurfaceItem : ICircleSurfaceItem
  ```C#
  public class CircleStepper : Xamarin.Forms.Stepper, IRotaryEventConsumer
  {
-     public static readonly BindableProperty RatioProperty;
      public static readonly BindableProperty ColorProperty;
 
-     public double Ratio { get; set; }
      public Color Color { get; set; }
  }
  ```
-기존 `Stepper`와 거의 흡사하나, `Ratio` Property를 통해 각 Step마다 `CircleSurface`에서 몇도씩 움직일지 정할 수 있다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
+기존 `Stepper`에 Marker color만 추가되었습니다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
 
-* Ratio : 각 Step/Increment 마다 움직이는 각도에 대한 비율
 * Color : Bezel Action시에 움직이는 Marker의 색
 
 `CircleStepper`는 ElmSharp Level에서 다음과 같은 Scene Graph로 표현된다.
@@ -399,7 +396,7 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
 
 `Page`를 `MultiPage`의 `Chidren`으로 `Add`하거나 `Remove`하면 `Index item`이 `Page`개수에 따라 자동으로 추가 및 삭제된다.
 
- `Xamarin.Forms`의 `CarouselPage`과 동작이 유사하며, `Index`가 추가된 형태이다. 
+ `Xamarin.Forms`의 `CarouselPage`과 동작이 유사하며, `Index`가 추가된 형태이다.
  
  `Page`를 scroll하면 `Index`가 내부적으로 select 동작한다.
 
@@ -422,7 +419,6 @@ item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서
  ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![IndexPage Scene Graph](uml/IndexPage_SceneGraph.png)
-
 
 # Check
 

@@ -362,11 +362,9 @@ package "Extension.Wearable" {
     interface IRotaryFocusable
     class CircleStepper {
         --BindableProperty--
-        {static} +RatioProperty
         {static} +ColorProperty
 
         --Property--
-        +Ratio: double
         +Color: Color
     }
 

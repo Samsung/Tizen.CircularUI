@@ -14,16 +14,13 @@
  ```C#
  public class CircleStepper : Xamarin.Forms.Stepper, IRotaryEventConsumer
  {
-     public static readonly BindableProperty RatioProperty;
      public static readonly BindableProperty ColorProperty;
 
-     public double Ratio { get; set; }
      public Color Color { get; set; }
  }
  ```
-기존 `Stepper`와 거의 흡사하나, `Ratio` Property를 통해 각 Step마다 `CircleSurface`에서 몇도씩 움직일지 정할 수 있다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
+기존 `Stepper`에 Marker color만 추가되었습니다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
 
-* Ratio : 각 Step/Increment 마다 움직이는 각도에 대한 비율
 * Color : Bezel Action시에 움직이는 Marker의 색
 
 `CircleStepper`는 ElmSharp Level에서 다음과 같은 Scene Graph로 표현된다.

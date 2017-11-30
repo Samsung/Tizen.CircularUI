@@ -13,7 +13,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
         public CircleStepperRenderer()
         {
             RegisterPropertyHandler(CircleStepper.ColorProperty, UpdateColor);
-            RegisterPropertyHandler(CircleStepper.RatioProperty, UpdateRatio);
             RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
@@ -88,20 +87,6 @@ namespace Xamarin.Forms.CircularUI.Renderer
         protected override ESize Measure(int availableWidth, int availableHeight)
         {
             return new ESize(360, 110);
-        }
-        
-        void UpdateRatio(bool initialize)
-        {
-            if (null != Control && null != Element)
-            {
-                var ratio = Element.Ratio;
-
-                if (ratio != -1.0)
-                {
-                    Control.AngleRatio = ratio;
-                    Console.WriteLine($"CircleStepper.AngleRatio = {Control.AngleRatio}");
-                }
-            }
         }
 
         void UpdateColor(bool initialize)
