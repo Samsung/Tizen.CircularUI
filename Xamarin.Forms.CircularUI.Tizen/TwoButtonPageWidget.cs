@@ -6,7 +6,7 @@ using System.Text;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class TwoButtonPageWidget : Background, IContainable<EvasObject>
     {

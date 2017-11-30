@@ -8,9 +8,9 @@ using Xamarin.Forms.CircularUI;
 using Xamarin.Forms.Platform.Tizen;
 using System.ComponentModel;
 
-[assembly: ExportRenderer(typeof(CirclePage), typeof(Xamarin.Forms.CircularUI.Renderer.CirclePageRenderer))]
+[assembly: ExportRenderer(typeof(CirclePage), typeof(Xamarin.Forms.CircularUI.Tizen.CirclePageRenderer))]
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class CirclePageRenderer : VisualElementRenderer<CirclePage>
     {
@@ -51,12 +51,12 @@ namespace Xamarin.Forms.CircularUI.Renderer
 
         protected void OnCirclePageAppearing(object sender, EventArgs e)
         {
-            GetRotaryWidget(Element?.RotaryFocusObject)?.Activate();
+            ActivateRotaryWidget();
         }
 
         protected void OnCirclePageDisappearing(object sender, EventArgs e)
         {
-            GetRotaryWidget(Element?.RotaryFocusObject)?.Deactivate();
+            DeactivateRotaryWidget();
         }
 
         protected override void UpdateBackgroundColor(bool initialize)
@@ -72,50 +72,80 @@ namespace Xamarin.Forms.CircularUI.Renderer
                 _widget.BackgroundColor = Element.BackgroundColor.ToNative();
             }
         }
-
-        void OnToolbarClosed(object sender, EventArgs e)
-        {
-            GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
-        }
-
-        void OnToolbarOpened(object sender, EventArgs e)
-        {
-            GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
-        }
-
         IRotaryActionWidget GetRotaryWidget(IRotaryFocusable focusable)
         {
             var consumer = focusable as BindableObject;
+            IRotaryActionWidget rotaryWidget = null;
             if (consumer != null)
             {
-                var consumerRenderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(consumer);
-                IRotaryActionWidget rotaryWidget = null;
-                if (consumerRenderer != null)
-                {
-                    var nativeView = consumerRenderer.NativeView;
-                    rotaryWidget = nativeView as ElmSharp.Wearable.IRotaryActionWidget;
-                }
-                else if (consumer is Xamarin.Forms.CircularUI.CircleSliderSurfaceItem)
+                if (consumer is CircleSliderSurfaceItem)
                 {
                     ICircleSurfaceItem item = consumer as ICircleSurfaceItem;
                     rotaryWidget = _widget.GetCircleWidget(item) as IRotaryActionWidget;
                 }
-
-                if (rotaryWidget != null)
+                else
                 {
-                    return rotaryWidget;
+                    var consumerRenderer = Platform.Tizen.Platform.GetRenderer(consumer);
+                    rotaryWidget = consumerRenderer?.NativeView as IRotaryActionWidget;
                 }
             }
-            return null;
+            return rotaryWidget;
+        }
+
+        void ActivateRotaryWidget()
+        {
+            if (_currentRotaryFocusObject is IRotaryEventReceiver)
+            {
+                RotaryEventManager.Rotated += OnRotaryEventChanged;
+            }
+            else if (_currentRotaryFocusObject is IRotaryFocusable)
+            {
+                GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
+            }
+        }
+
+        void DeactivateRotaryWidget()
+        {
+            if (_currentRotaryFocusObject is IRotaryEventReceiver)
+            {
+                RotaryEventManager.Rotated -= OnRotaryEventChanged;
+            }
+            else if (_currentRotaryFocusObject is IRotaryFocusable)
+            {
+                GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
+            }
+        }
+
+        void OnRotaryEventChanged(ElmSharp.Wearable.RotaryEventArgs args)
+        {
+            if (_currentRotaryFocusObject is IRotaryEventReceiver)
+            {
+                var receiver = _currentRotaryFocusObject as IRotaryEventReceiver;
+                receiver.Rotate(new RotaryEventArgs { IsClockwise = args.IsClockwise });
+            }
+        }
+
+        void OnToolbarClosed(object sender, EventArgs e)
+        {
+            ActivateRotaryWidget();
+        }
+
+        void OnToolbarOpened(object sender, EventArgs e)
+        {
+            DeactivateRotaryWidget();
         }
 
         void UpdateRotaryFocusObject(bool initialize)
         {
             if (!initialize)
-                GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
+            {
+                DeactivateRotaryWidget();
+            }
             _currentRotaryFocusObject = Element.RotaryFocusObject;
             if (!initialize)
-                GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
+            {
+                ActivateRotaryWidget();
+            }
         }
 
         void OnLayoutUpdated(object sender, Platform.Tizen.Native.LayoutEventArgs args)

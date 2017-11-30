@@ -1,5 +1,5 @@
 ﻿
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public static class CircularUI
     {

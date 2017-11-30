@@ -1,14 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 using Xamarin.Forms.CircularUI;
-using Xamarin.Forms.CircularUI.Renderer;
+using Xamarin.Forms.CircularUI.Tizen;
 using Xamarin.Forms.Platform.Tizen;
 using ECheck = ElmSharp.Check;
 using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 
 [assembly: ExportRenderer(typeof(Check), typeof(CheckRenderer))]
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     internal static class CheckStyle
     {

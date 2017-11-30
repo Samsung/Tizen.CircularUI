@@ -7,10 +7,10 @@ using Xamarin.Forms.CircularUI;
 using Xamarin.Forms.Platform.Tizen;
 using ElmSharp;
 
-[assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleDateTimeSelector), typeof(Xamarin.Forms.CircularUI.Renderer.CircleDateTimeSelectorRenderer))]
+[assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleDateTimeSelector), typeof(Xamarin.Forms.CircularUI.Tizen.CircleDateTimeSelectorRenderer))]
 
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class CircleDateTimeSelectorRenderer : ViewRenderer<CircleDateTimeSelector, ElmSharp.Wearable.CircleDateTimeSelector>
     {

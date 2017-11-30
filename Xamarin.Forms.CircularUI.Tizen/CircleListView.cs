@@ -9,7 +9,7 @@ using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Internals;
 using System.ComponentModel;
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     using GroupList = TemplatedItemsList<ItemsView<Cell>, Cell>;
 

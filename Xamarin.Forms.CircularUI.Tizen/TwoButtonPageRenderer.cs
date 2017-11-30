@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElmSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -6,10 +7,10 @@ using System.Text;
 using Xamarin.Forms.CircularUI;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: ExportRenderer(typeof(TwoButtonPage), typeof(Xamarin.Forms.CircularUI.Renderer.TwoButtonPageRenderer))]
+[assembly: ExportRenderer(typeof(TwoButtonPage), typeof(Xamarin.Forms.CircularUI.Tizen.TwoButtonPageRenderer))]
 
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class TwoButtonPageRenderer : VisualElementRenderer<TwoButtonPage>
     {

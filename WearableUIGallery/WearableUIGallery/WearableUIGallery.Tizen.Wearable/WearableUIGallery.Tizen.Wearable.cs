@@ -14,7 +14,7 @@ namespace WearableUIGallery.Tizen.Wearable
         {
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
-            Xamarin.Forms.CircularUI.Renderer.CircularUI.Init();
+            Xamarin.Forms.CircularUI.Tizen.CircularUI.Init();
             app.Run(args);
         }
     }

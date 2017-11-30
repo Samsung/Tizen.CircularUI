@@ -4,9 +4,10 @@
               xmlns:local="clr-namespace:WearableUIGallery"
               xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
               xmlns:sys="clr-namespace:System;assembly=netstandard"
-              x:Class="WearableUIGallery.TC.TCCircleListView">
+              x:Class="WearableUIGallery.TC.TCCircleListView"
+              RotaryFocusTargetName="mylist">
     <w:CirclePage.Content>
-        <w:CircleListView>
+        <w:CircleListView x:Name="mylist">
             <w:CircleListView.ItemsSource>
                 <x:Array Type="{x:Type sys:String}" x:Key="array">
                     <x:String>Item 1</x:String>

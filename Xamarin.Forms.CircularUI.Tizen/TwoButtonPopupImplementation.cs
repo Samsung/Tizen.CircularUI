@@ -3,9 +3,9 @@ using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 using XForms = Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Renderer.TwoButtonPopupImplementation))]
+[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Tizen.TwoButtonPopupImplementation))]
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     public class TwoButtonPopupImplementation : IPopup, IDisposable
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms.Platform.Tizen;
 
-namespace Xamarin.Forms.CircularUI.Renderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
     static class CircleWidgetRendererExtension
     {

@@ -21,7 +21,7 @@
   
   <!-- If solution already has PCL project, will reference -->
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xamarin.Forms.CircularUI.Renderer\Xamarin.Forms.CircularUI.Renderer.csproj" />
+    <ProjectReference Include="..\..\..\Xamarin.Forms.CircularUI.Tizen\Xamarin.Forms.CircularUI.Tizen.csproj" />
     <ProjectReference Include="..\WearableUIGallery\WearableUIGallery.csproj" />
   </ItemGroup>
   
@@ -32,7 +32,11 @@
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Tizen.NET.Sdk" Version="1.0.0" />
-    <PackageReference Include="Xamarin.Forms.Platform.Tizen" Version="2.5.0.77107" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Platform.Tizen">
+      <HintPath>..\..\..\..\Xamarin.Forms\Xamarin.Forms.Platform.Tizen\bin\Debug\tizen40\Xamarin.Forms.Platform.Tizen.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
