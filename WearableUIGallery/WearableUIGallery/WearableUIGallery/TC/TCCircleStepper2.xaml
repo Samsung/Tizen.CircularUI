@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleStepper2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+    RotaryFocusTargetName="StepperHr2">
+    <w:CirclePage.Content>
+        <AbsoluteLayout BackgroundColor="#B878B8">
+            <Label
+                AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="AbsoluteLayout"
+                TextColor="Black" />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.25, 0.5, 0.25, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                HorizontalOptions="Start"
+                Text="Hr"
+                TextColor="Black" />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.25, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                HorizontalOptions="Center"
+                Text="Mm"
+                TextColor="Black" />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.8, 0.5, 0.25, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="White"
+                HorizontalOptions="End"
+                Text="Sec"
+                TextColor="Black" />
+            <w:CircleStepper
+                x:Name="StepperHr2"
+                AbsoluteLayout.LayoutBounds="0.1, 0.6, 0.25, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                Focused="OnFocusedHr"
+                HorizontalOptions="Start"
+                MarkerColor="Coral"
+                Maximum="23"
+                Minimum="0"
+                Value="0" />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.35, 0.6, 0.1, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text=":"
+                TextColor="White" />
+            <w:CircleStepper
+                x:Name="StepperMm2"
+                AbsoluteLayout.LayoutBounds="0.5, 0.6, 0.25, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                Focused="OnFocusedMm"
+                HorizontalOptions="Center"
+                MarkerColor="Blue"
+                Maximum="59"
+                Minimum="0"
+                Value="0" />
+            <Label
+                AbsoluteLayout.LayoutBounds="0.65, 0.6, 0.1, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text=":"
+                TextColor="White" />
+            <w:CircleStepper
+                x:Name="StepperSec2"
+                AbsoluteLayout.LayoutBounds="0.9, 0.6, 0.25, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
+                Focused="OnFocusedSec"
+                HorizontalOptions="End"
+                MarkerColor="DarkRed"
+                Maximum="59"
+                Minimum="0"
+                Value="0" />
+        </AbsoluteLayout>
+    </w:CirclePage.Content>
+</w:CirclePage>

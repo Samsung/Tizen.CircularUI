@@ -9,10 +9,11 @@
     <w:CirclePage.Content>
         <Grid
             BackgroundColor="BlueViolet"
-            HeightRequest="150"
+            HeightRequest="200"
             VerticalOptions="Center"
             WidthRequest="300">
             <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
@@ -26,33 +27,42 @@
             <Label
                 Grid.Row="0"
                 Grid.Column="0"
+                Grid.ColumnSpan="5"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                Text="Grid"
+                TextColor="White" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
                 FontSize="Medium"
                 HorizontalOptions="Center"
                 Text="Hr"
                 TextColor="White" />
             <Label
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="1"
                 FontSize="Medium"
                 HorizontalOptions="Center"
                 Text=""
                 TextColor="White" />
             <Label
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="2"
                 FontSize="Medium"
                 HorizontalOptions="Center"
                 Text="Mm"
                 TextColor="White" />
             <Label
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="3"
                 FontSize="Medium"
                 HorizontalOptions="Center"
                 Text=""
                 TextColor="White" />
             <Label
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="4"
                 FontSize="Medium"
                 FormattedText=""
@@ -61,7 +71,7 @@
                 TextColor="White" />
             <w:CircleStepper
                 x:Name="StepperHr"
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="0"
                 Focused="OnFocusedHr"
                 HorizontalOptions="Center"
@@ -70,14 +80,14 @@
                 Minimum="0"
                 Value="0" />
             <Label
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="1"
                 FontSize="Large"
                 HorizontalOptions="Center"
                 Text=":" />
             <w:CircleStepper
                 x:Name="StepperMm"
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="2"
                 Focused="OnFocusedMm"
                 HorizontalOptions="Center"
@@ -86,14 +96,14 @@
                 Minimum="0"
                 Value="0" />
             <Label
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="3"
                 FontSize="Large"
                 HorizontalOptions="Center"
                 Text=":" />
             <w:CircleStepper
                 x:Name="StepperSec"
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="4"
                 Focused="OnFocusedSec"
                 HorizontalOptions="Center"
