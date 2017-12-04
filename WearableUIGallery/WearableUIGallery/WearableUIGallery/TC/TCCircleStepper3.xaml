@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleStepper3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+    RotaryFocusTargetName="StepperHr3">
+    <w:CirclePage.Content>
+        <StackLayout
+            Padding="20,50,20,5"
+            BackgroundColor="#B878B8"
+            Orientation="Vertical">
+            <Label
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="StackLayout"
+                TextColor="Black" />
+            <StackLayout
+                Padding="30,50,30,0"
+                Orientation="Horizontal"
+                VerticalOptions="End">
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="Hr"
+                    TextColor="Black"
+                    WidthRequest="70" />
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="Mm"
+                    TextColor="Black"
+                    WidthRequest="100" />
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="Sec"
+                    TextColor="Black"
+                    WidthRequest="70" />
+            </StackLayout>
+            <StackLayout
+                Padding="30,0,30,0"
+                HeightRequest="80"
+                Orientation="Horizontal"
+                VerticalOptions="Start">
+                <w:CircleStepper
+                    x:Name="StepperHr3"
+                    Focused="OnFocusedHr"
+                    HorizontalOptions="Start"
+                    MarkerColor="Coral"
+                    Maximum="23"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text=":"
+                    TextColor="White"
+                    WidthRequest="20" />
+                <w:CircleStepper
+                    x:Name="StepperMm3"
+                    Focused="OnFocusedMm"
+                    HorizontalOptions="Center"
+                    MarkerColor="Blue"
+                    Maximum="59"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text=":"
+                    TextColor="White"
+                    WidthRequest="30" />
+                <w:CircleStepper
+                    x:Name="StepperSec3"
+                    Focused="OnFocusedSec"
+                    HorizontalOptions="End"
+                    MarkerColor="DarkRed"
+                    Maximum="59"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+            </StackLayout>
+        </StackLayout>
+    </w:CirclePage.Content>
+</w:CirclePage>
