@@ -30,7 +30,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    Console.WriteLine($"Circle Surface hash = {surface.GetHashCode()}");
                     SetNativeControl(new ElmSharp.Wearable.CircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, surface));
                 }
                 else
@@ -56,7 +55,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.MinimumDateTime = Element.MinimumDate;
-                Console.WriteLine($"CircleDateTimeSelector.MinimumDateTime = {Control.MinimumDateTime}");
             }   
         }
 
@@ -65,7 +63,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.MaximumDateTime = Element.MaximumDate;
-                Console.WriteLine($"CircleDateTimeSelector.MaximumDateTime = {Control.MaximumDateTime}");
             }   
         }
 
@@ -74,7 +71,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.DateTime = Element.DateTime;
-                Console.WriteLine($"CircleDateTimeSelector.DateTime = {Control.DateTime}");
             }
         }
 
@@ -90,7 +86,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 {
                     Control.Style = "timepicker/circle";
                 }
-                Console.WriteLine($"CircleDateTimeSelector.Style = {Control.Style}");
             }
         }
 
@@ -99,7 +94,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
-                Console.WriteLine($"CircleDateTimeSelector.MarkerColor = {Control.MarkerColor}");
             }
         }
     }

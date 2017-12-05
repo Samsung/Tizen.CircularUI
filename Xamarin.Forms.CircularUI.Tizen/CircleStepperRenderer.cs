@@ -13,6 +13,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         public CircleStepperRenderer()
         {
             RegisterPropertyHandler(CircleStepper.MarkerColorProperty, UpdateMarkerColor);
+            RegisterPropertyHandler(CircleStepper.MarkerLineWidthProperty, UpdateMarkerLineWidth);
             RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
@@ -26,7 +27,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    Console.WriteLine($"Circle Surface hash = {surface.GetHashCode()}");
                     var spinner = new ESpinner(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, surface);
                     spinner.Style = "circle";
                     SetNativeControl(spinner);
@@ -94,7 +94,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
-                Console.WriteLine($"CircleStepper.MarkerColor = {Control.MarkerColor}");
+            }
+        }
+
+        void UpdateMarkerLineWidth(bool initialize)
+        {
+            if (null != Control && null != Element)
+            {
+                Control.MarkerLineWidth = Element.MarkerLineWidth;
             }
         }
 
@@ -103,7 +110,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.Value = Element.Value;
-                Console.WriteLine($"CircleStepper.Value = {Control.Value}");
             }
         }
 
@@ -112,7 +118,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.Maximum = Element.Maximum;
-                Console.WriteLine($"CircleStepper.Maximum = {Control.Maximum}");
             }
         }
 
@@ -121,7 +126,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.Minimum = Element.Minimum;
-                Console.WriteLine($"CircleStepper.Minimum = {Control.Minimum}");
             }
         }
 
@@ -130,7 +134,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.Step = Element.Increment;
-                Console.WriteLine($"CircleStepper.Step = {Control.Step}");
             }
         }
     }

@@ -41,6 +41,7 @@
                 Focused="OnFocusedHr"
                 HorizontalOptions="Start"
                 MarkerColor="Coral"
+                MarkerLineWidth="60"
                 Maximum="23"
                 Minimum="0"
                 Value="0" />
@@ -58,6 +59,7 @@
                 Focused="OnFocusedMm"
                 HorizontalOptions="Center"
                 MarkerColor="Blue"
+                MarkerLineWidth="40"
                 Maximum="59"
                 Minimum="0"
                 Value="0" />
