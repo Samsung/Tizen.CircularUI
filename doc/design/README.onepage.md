@@ -338,10 +338,12 @@ public class CircleSliderSurfaceItem : ICircleSurfaceItem
      public static readonly BindableProperty MarkerLineWidthProperty;
 
      public Color MarkerColor { get; set; }
-     public Color MarkerLineWidth { get; set; }
+     public int MarkerLineWidth { get; set; }
  }
  ```
 기존 `Stepper`에 Marker color와 MarkerLineWidth만 추가되었습니다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
+
+![CircleSliderSurfaceItem Properties](data/CircleSpinner_property.png)
 
 * MarkerColor : Bezel Action시에 움직이는 Marker의 색
 * MarkerLineWidth : Bezel Action시에 움직이는 Marker의 길이
