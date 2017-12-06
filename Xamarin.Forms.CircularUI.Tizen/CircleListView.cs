@@ -188,7 +188,31 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             base.OnRealized();
             Initialize();
+
+            ItemRealized += OnItemAppear;
+            ItemUnrealized += OnItemDisappear;
         }
+
+        void OnItemDisappear(object sender, GenListItemEventArgs e)
+        {
+            ListViewItemContext ctx = e?.Item?.Data as ListViewItemContext;
+            if (ctx?.Cell != null)
+            {
+                ctx.Cell.SendDisappearing();
+                var renderer = ListViewCache.Get(ctx.Cell);
+                renderer.SendUnrealizedCell(ctx.Cell);
+            }
+        }
+
+        void OnItemAppear(object sender, GenListItemEventArgs e)
+        {
+            ListViewItemContext ctx = e?.Item?.Data as ListViewItemContext;
+            if (ctx?.Cell != null)
+            {
+                ctx.Cell.SendAppearing();
+            }
+        }
+
         void Initialize()
         {
             UpdateHeader();
