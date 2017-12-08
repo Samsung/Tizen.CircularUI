@@ -14,9 +14,9 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             RegisterPropertyHandler(CircleStepper.MarkerColorProperty, UpdateMarkerColor);
             RegisterPropertyHandler(CircleStepper.MarkerLineWidthProperty, UpdateMarkerLineWidth);
-            RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
+            RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.IncrementProperty, UpdateIncrement);
         }
 
@@ -37,6 +37,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     throw new CirclePageNotFoundException();
                 }
             }
+
             base.OnElementChanged(e);
         }
 
