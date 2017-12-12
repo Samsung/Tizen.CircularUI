@@ -14,17 +14,22 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
             TCs.Add(new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) });
             TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
-            TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepper) });
-            TCs.Add(new TCDescribe { Title = "CircleStepper2", Class = typeof(TCCircleStepper2) });
-            TCs.Add(new TCDescribe { Title = "CircleStepper3", Class = typeof(TCCircleStepper3) });
+            TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
             TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPage) });
             TCs.Add(new TCDescribe { Title = "Check", Class = typeof(TCCheck) });
             TCs.Add(new TCDescribe { Title = "ContextPopup", Class = typeof(TCContextPopup) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) });
             TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
+
+            // CircleStepper TCs
+            CircleStepperTCs = new ObservableCollection<TCDescribe>();
+            CircleStepperTCs.Add(new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) });
+            CircleStepperTCs.Add(new TCDescribe { Title = "AbsoluteLayout", Class = typeof(TCCircleStepper2) });
+            CircleStepperTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCCircleStepper3) });
         }
 
         public IList<TCDescribe> TCs { get; private set; }
+        public IList<TCDescribe> CircleStepperTCs { get; private set; }
     }
 }
