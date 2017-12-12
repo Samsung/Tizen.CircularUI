@@ -13,6 +13,7 @@ TwoButtonPage의 Diagram은 위와 같으며, 다음과 같이 코드로 표현�
 public class TwoButtonPage : ContentPage
 {
     public static readonly BindableProperty TitleProperty;
+    public static readonly BindableProperty ContentProperty;
 
     public MenuItem FirstButton { get; set; }
     public MenuItem SecondButton { get; set; }

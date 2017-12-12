@@ -409,7 +409,10 @@ package "Extension.Wearable" {
     class TwoButtonPage {
         --BindableProperty--
         {static} +TitleProperty
+        {static} +ContentProperty
         --Property--
+        Title: string
+        Content: View
         FirstButton: MenuItem
         SecondButton: MenuItem
     }
@@ -432,7 +435,17 @@ package "ElmSharp" {
 
 @startuml TwoButtonPage_SceneGraph.png
 
-node TwoButtonPage [
+node BaseLayout [
+    Layout
+    "popup/base/circle"
+]
+
+node ButtonLayout [
+    Layout
+    "popup/buttons2/popup/circle"
+]
+
+node ContentLayout [
     Layout
     "layout/popup/content/circle/buttons2"
 ]
@@ -458,11 +471,87 @@ interface SecondButtonImage [
 () ContentArea
 () TitleArea
 
+BaseLayout --> ButtonLayout : "elm.swallow.action_area"
+BaseLayout --> ContentLayout : "elm.swallow.content"
+ButtonLayout --> FirstButton : "actionbtn1"
+ButtonLayout --> SecondButton : "actionbtn2"
+ContentLayout --> ContentArea : "elm.swallow.content"
+ContentLayout --> TitleArea : "elm.text.title"
 
-TwoButtonPage --> FirstButton : "button1"
-TwoButtonPage --> ContentArea : "elm.swallow.content"
-TwoButtonPage --> TitleArea : "elm.text.title"
-TwoButtonPage --> SecondButton : "button2"
+
+FirstButton ..> FirstButtonImage : "elm.swallow.content"
+SecondButton ..> SecondButtonImage : "elm.swallow.content"
+@enduml
+
+@startuml TwoButtonPopup.png
+
+package "Extension.Wearable" {
+    class TwoButtonPopup {
+        --BindableProperty--
+        {static} +TitleProperty
+        {static} +ContentProperty
+        {static} +TextProperty
+        --Property--
+        Title: string
+        Content: View
+        Text: string
+        FirstButton: MenuItem
+        SecondButton: MenuItem
+        --Event--
+        +BackButtonPressed
+    }
+}
+
+package "Extension.Wearable.Renderer" {
+    class TwoButtonPopupImplementation
+
+    TwoButtonPopupImplementation .l. TwoButtonPopup
+}
+
+package "ElmSharp" {
+    class Popup
+    TwoButtonPopupImplementation *.. Popup
+}
+
+@enduml
+
+@startuml TwoButtonPopup_SceneGraph.png
+
+node TwoButtonPopup [
+    Popup
+]
+
+node BaseLayout [
+    Layout
+    "layout/popup/content/circle/buttons2"
+]
+
+node FirstButton [
+    Button
+    "popup/circle/left"
+]
+
+node SecondButton [
+    Button
+    "popup/circle/right"
+]
+
+interface FirstButtonImage [
+    Image
+]
+
+interface SecondButtonImage [
+    Image
+]
+
+() ContentArea
+() TitleArea
+
+TwoButtonPopup --> BaseLayout :  "elm.swallow.content"
+BaseLayout --> ContentArea : "elm.swallow.content"
+BaseLayout --> TitleArea : "elm.text.title"
+BaseLayout --> FirstButton : "button1"
+BaseLayout --> SecondButton : "button2"
 
 FirstButton ..> FirstButtonImage : "elm.swallow.content"
 SecondButton ..> SecondButtonImage : "elm.swallow.content"

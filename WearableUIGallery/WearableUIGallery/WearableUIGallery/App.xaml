@@ -1,21 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
-             xmlns:local="clr-namespace:WearableUIGallery"
-             x:Class="WearableUIGallery.App">
+<Application
+    x:Class="WearableUIGallery.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI">
     <Application.MainPage>
         <NavigationPage x:Name="MainNavigation">
             <x:Arguments>
-                <w:CirclePage NavigationPage.HasNavigationBar="False" RotaryFocusTargetName="MainList">
+                <w:CirclePage
+                    Title="Wearable UI"
+                    NavigationPage.HasNavigationBar="True"
+                    RotaryFocusTargetName="MainList">
                     <w:CirclePage.BindingContext>
-                        <local:AppViewModel/>
+                        <local:AppViewModel />
                     </w:CirclePage.BindingContext>
                     <w:CirclePage.Content>
-                        <w:CircleListView ItemsSource="{Binding TCs}" ItemTapped="OnItemTapped" x:Name="MainList">
+                        <w:CircleListView
+                            x:Name="MainList"
+                            ItemTapped="OnItemTapped"
+                            ItemsSource="{Binding TCs}">
                             <w:CircleListView.ItemTemplate>
                                 <DataTemplate>
-                                    <TextCell Text="{Binding Title}"/>
+                                    <TextCell Text="{Binding Title}" />
                                 </DataTemplate>
                             </w:CircleListView.ItemTemplate>
                         </w:CircleListView>
