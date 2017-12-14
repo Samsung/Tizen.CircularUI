@@ -15,7 +15,6 @@ namespace WearableUIGallery.TC
     {
         TwoButtonPopup _popUp1 = null;
         TwoButtonPopup _popUp2 = null;
-        TwoButtonPopup _popUp3 = null;
         public TCTwoButtonPopup()
 		{
             InitializeComponent();
@@ -135,19 +134,6 @@ height. This has two button in action area and title text in title area";
             _popUp1.FirstButton.Clicked += (s, e) => Console.WriteLine("First(share) button clicked!");
             _popUp1.SecondButton.Clicked += (s, e) => Console.WriteLine("Second(delete) button clicked!");
 
-            // Toast case
-            _popUp3 = new TwoButtonPopup();
-            _popUp3.Title = "Popup title";
-            _popUp3.Text = @"This is scrollable popup text.
-This part is made by adding long text in popup. Popup internally added
-scroller to this layout when size of text is greater than total popup
-height. This has two button in action area and title text in title area";
-
-            _popUp3.BackButtonPressed += (s, e) =>
-            {
-                _popUp3.Dismiss();
-                label1.Text = "Toast is dismissed";
-            };
         }
 
 
@@ -159,11 +145,6 @@ height. This has two button in action area and title text in title area";
         private void OnButton2Clicked(object sender, EventArgs e)
         {
             _popUp2.Show();
-        }
-
-        private void OnButton3Clicked(object sender, EventArgs e)
-        {
-            _popUp3.Show();
         }
     }
 }

@@ -28,14 +28,6 @@
                 Text="Show2"
                 VerticalOptions="CenterAndExpand"
                 WidthRequest="200" />
-            <Button
-                x:Name="button3"
-                Clicked="OnButton3Clicked"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="Toast"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="200" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
