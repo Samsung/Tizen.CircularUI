@@ -8,10 +8,7 @@
     <Application.MainPage>
         <NavigationPage x:Name="MainNavigation">
             <x:Arguments>
-                <w:CirclePage
-                    Title="Wearable UI"
-                    NavigationPage.HasNavigationBar="True"
-                    RotaryFocusTargetName="MainList">
+                <w:CirclePage NavigationPage.HasNavigationBar="False" RotaryFocusTargetName="MainList">
                     <w:CirclePage.BindingContext>
                         <local:AppViewModel />
                     </w:CirclePage.BindingContext>

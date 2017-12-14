@@ -38,7 +38,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             _actionButtonLayout = new ElmSharp.Layout(this);
             _actionButtonLayout.SetTheme("layout", "bottom_button", "default");
             _actionButtonLayout.Show();
-            SetContent(_actionButtonLayout);
+            SetPartContent("elm.swallow.bg", _actionButtonLayout);
 
             _content = new Xamarin.Forms.Platform.Tizen.Native.Page(_actionButtonLayout);
             _actionButtonLayout.SetContent(_content);
@@ -47,7 +47,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             _circleOptionLayout = new ElmSharp.Layout(this);
             _circleOptionLayout.SetTheme("layout", "application", "default");
             _circleOptionLayout.Show();
-            _circleOptionLayout.Geometry = new Rect(0, 0, 360, 360);
+            SetPartContent("elm.swallow.content", _circleOptionLayout);
 
             _circleLayout = new ElmSharp.Layout(_circleOptionLayout);
             _circleLayout.Show();
