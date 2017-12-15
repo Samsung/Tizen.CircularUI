@@ -485,6 +485,7 @@ ElmSharp의 Popup을 사용하지 않으며, Layout이므로 Parent가 존재한
 ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![TwoButtonPage Scene Graph](uml/TwoButtonPage_SceneGraph.png)
+
 # TwoButtonPopup
 
 ![TwoButtonPopup design](data/TwoButtonPopup.png)
@@ -518,3 +519,28 @@ ElmSharp의 Popup을 사용하며, Layout이 아니므로 Parent가 존재하지
 ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![TwoButtonPopup Scene Graph](uml/TwoButtonPopup_SceneGraph.png)
+
+# Radio
+
+![Radio design](data/Radio.png)
+
+`Radio`는 `ElmSharp`의 `Radio` `widget`을 표현한다.
+
+
+![Radio Diagram](uml/Radio.png)
+
+Radio Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
+
+```C#
+public class Radio : View
+{
+    public static readonly BindableProperty IsSelectedProperty;
+    public static readonly BindableProperty GroupNameProperty;
+
+    public event EventHandler Selected;
+
+    public bool IsSelected { get; set; }
+    public string GroupName { get; set; }
+}
+```
+

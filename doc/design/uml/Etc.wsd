@@ -118,3 +118,31 @@ package "ElmSharp" {
 
 CheckRenderer *.. ElmSharp.Check
 @enduml
+
+@startuml Radio.png
+
+package "Extension.Wearable" {
+   class Radio {
+        --BindableProperty--
+        {static} +IsSelectedProperty
+        {static} +GroupNameProperty
+        --Property--
+        +bool IsSelected
+        +string GroupName
+        --Event--
+        +Selected
+    }
+}
+
+
+package "Extension.Wearable.Renderer" { 
+    class RadioRenderer
+    RadioRenderer .l. Radio
+}
+
+package "ElmSharp" {
+    class Radio
+}
+
+RadioRenderer *.. ElmSharp.Radio
+@enduml
