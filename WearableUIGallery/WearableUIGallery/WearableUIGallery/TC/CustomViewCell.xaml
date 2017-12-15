@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WearableUIGallery.TC.CustomViewCell">
+    <ViewCell.View>
+        <RelativeLayout HeightRequest="90" WidthRequest="360">
+            <Label WidthRequest="279"
+                   HeightRequest="42"
+                   TextColor="White"
+                   BackgroundColor="Yellow"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   x:Name="MainText"
+                   Text="{Binding .}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Constant=0}"/>
+            <Label WidthRequest="150"
+                   HeightRequest="33"
+                   TextColor="Cyan"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   x:Name="DateText"
+                   Text="Date..."
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MainText, Property=X, Factor=1, Constant=5}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MainText, Property=Y, Factor=1, Constant=42}"/>
+            <Label WidthRequest="100"
+                   HeightRequest="33"
+                   TextColor="Cyan"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   x:Name="DurationText"
+                   Text="Duration..."
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=DateText, Property=X, Factor=1, Constant=155}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=DateText, Property=Y, Factor=1, Constant=0}"/>
+            <Image Source="image/voicerecorder_icon_stt_off.png"
+                   WidthRequest="76"
+                   HeightRequest="76"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MainText, Property=Width, Factor=1, Constant=5}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MainText, Property=Y, Factor=1, Constant=0}"/>
+        </RelativeLayout>
+    </ViewCell.View>
+</ViewCell>

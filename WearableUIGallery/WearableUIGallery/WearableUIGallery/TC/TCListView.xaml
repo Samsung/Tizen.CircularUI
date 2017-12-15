@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:tc="clr-namespace:WearableUIGallery.TC"
+             x:Class="WearableUIGallery.TC.TCListView">
+    <ContentPage.Content>
+        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type sys:String}" x:Key="array">
+                    <x:String>Item 1</x:String>
+                    <x:String>Item 2</x:String>
+                    <x:String>Item 3</x:String>
+                    <x:String>Item 4</x:String>
+                    <x:String>Item 5</x:String>
+                    <x:String>Item 6</x:String>
+                    <x:String>Item 7</x:String>
+                    <x:String>Item 8</x:String>
+                    <x:String>Item 9</x:String>
+                    <x:String>Item 10</x:String>
+                    <x:String>Item 11</x:String>
+                    <x:String>Item 12</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.Header>
+                <x:String>Header</x:String>
+            </ListView.Header>
+            <ListView.Footer>
+                <x:String>Footer</x:String>
+            </ListView.Footer>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--
+                    <ViewCell>
+                        <Label Text="{Binding .}"/>
+                    </ViewCell>
+                    -->
+                    <tc:CustomViewCell/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center"/>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center"/>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

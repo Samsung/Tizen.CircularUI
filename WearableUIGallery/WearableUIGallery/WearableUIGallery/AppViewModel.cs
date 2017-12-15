@@ -13,6 +13,8 @@ namespace WearableUIGallery
             TCs = new ObservableCollection<TCDescribe>();
             TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
             TCs.Add(new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) });
+            TCs.Add(new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) });
+            TCs.Add(new TCDescribe { Title = "ListViewNormal", Class = typeof(TCListView) });
             TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
             TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
             TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPage) });

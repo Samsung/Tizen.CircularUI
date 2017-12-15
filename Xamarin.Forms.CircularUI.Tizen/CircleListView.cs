@@ -71,6 +71,8 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     AddItem(data as Cell, null);
                 }
             }
+            UpdateHeader();
+            UpdateFooter();
         }
         public void AddSource(IEnumerable source, Cell before)
         {
@@ -137,7 +139,16 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             CellRenderer renderer = ListViewCache.Get(cell);
             GenListItem groupItem = group == null ? null : _itemContexts.GetValueOrDefault(group.HeaderContent);
-            var item = InsertBefore(renderer.Class, new ListViewItemContext(cell, group), LastItem, GenListItemType.Normal, groupItem);
+            GenListItem item = null;
+            var lastCtx = LastItem?.Data as TypedItemContext;
+            if (lastCtx != null && (lastCtx.Type == ItemType.Footer || lastCtx.Type == ItemType.BottomPadding))
+            {
+                item = InsertBefore(renderer.Class, new ListViewItemContext(cell, group), LastItem, GenListItemType.Normal, groupItem);
+            }
+            else
+            {
+                item = Append(renderer.Class, new ListViewItemContext(cell, group), GenListItemType.Normal, groupItem);
+            }
             RegisterItem(cell, item);
         }
         public void InsertItem(Cell cell, Cell before, GroupList group)
@@ -151,7 +162,16 @@ namespace Xamarin.Forms.CircularUI.Tizen
         public void AddGroup(GroupList group)
         {
             CellRenderer renderer = ListViewCache.Get(group.HeaderContent);
-            var item = InsertBefore(renderer.Class, new ListViewItemContext(group), LastItem, GenListItemType.Group);
+            var lastCtx = LastItem?.Data as TypedItemContext;
+            GenListItem item = null;
+            if (lastCtx != null && (lastCtx.Type == ItemType.Footer || lastCtx.Type == ItemType.BottomPadding))
+            {
+                item = InsertBefore(renderer.Class, new ListViewItemContext(group), LastItem, GenListItemType.Group);
+            }
+            else
+            {
+                item = Append(renderer.Class, new ListViewItemContext(group), GenListItemType.Group);
+            }
             RegisterItem(group.HeaderContent, item, true);
         }
         public void InsertGroup(GroupList group, Cell before)
@@ -181,13 +201,11 @@ namespace Xamarin.Forms.CircularUI.Tizen
         public new void Clear()
         {
             base.Clear();
-            Initialize();
         }
 
         protected override void OnRealized()
         {
             base.OnRealized();
-            Initialize();
 
             ItemRealized += OnItemAppear;
             ItemUnrealized += OnItemDisappear;
@@ -213,49 +231,58 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
         }
 
-        void Initialize()
-        {
-            UpdateHeader();
-            UpdateFooter();
-        }
         void UpdateHeader()
         {
-            GenItemClass cls = Header == null ? ListViewCache.PaddingItemClass : ListViewCache.InformalItemClass;
-            if (FirstItem == null)
+            GenItemClass cls = null;
+            ItemType type = ItemType.TopPadding;
+            var ctx = FirstItem?.Data as TypedItemContext;
+            if (Header == null)
             {
-                Append(cls, new TypedItemContext(Header, ItemType.TopPadding));
+                cls = ListViewCache.PaddingItemClass;
             }
             else
             {
-                var ctx = FirstItem.Data as TypedItemContext;
-                if (ctx != null && (ctx.Type == ItemType.TopPadding || ctx.Type == ItemType.Header))
+                cls = ListViewCache.InformalItemClass;
+                type = ItemType.Header;
+            }
+
+            if (FirstItem == null)
+            {
+                Append(cls, new TypedItemContext(Header, type));
+            }
+            else
+            {
+                if (ctx == null || ctx.Type == ItemType.Footer || ctx.Type == ItemType.BottomPadding)
                 {
-                    FirstItem.UpdateItemClass(cls, new TypedItemContext(Header, Header == null ? ItemType.TopPadding : ItemType.Header));
+                    InsertBefore(cls, new TypedItemContext(Header, type), FirstItem);
                 }
                 else
                 {
-                    InsertBefore(cls, new TypedItemContext(Header, Header == null ? ItemType.TopPadding : ItemType.Header), FirstItem);
+                    FirstItem.UpdateItemClass(cls, new TypedItemContext(Header, type));
                 }
             }
         }
         void UpdateFooter()
         {
-            GenItemClass cls = Footer == null ? ListViewCache.PaddingItemClass : ListViewCache.InformalItemClass;
-            if (LastItem == null)
+            GenItemClass cls = null;
+            ItemType type = ItemType.BottomPadding;
+            var ctx = LastItem?.Data as TypedItemContext;
+            if (Footer == null)
             {
-                Append(cls, new TypedItemContext(Footer, ItemType.BottomPadding));
+                cls = ListViewCache.PaddingItemClass;
             }
             else
             {
-                var ctx = LastItem.Data as TypedItemContext;
-                if (ctx != null && (ctx.Type == ItemType.BottomPadding || ctx.Type == ItemType.Footer))
-                {
-                    LastItem.UpdateItemClass(cls, new TypedItemContext(Footer, Footer == null ? ItemType.BottomPadding : ItemType.Footer));
-                }
-                else
-                {
-                    Append(cls, new TypedItemContext(Footer, Footer == null ? ItemType.BottomPadding : ItemType.Footer));
-                }
+                cls = ListViewCache.InformalItemClass;
+                type = ItemType.Footer;
+            }
+            if (ctx == null || ctx.Type == ItemType.Header || ctx.Type == ItemType.TopPadding)
+            {
+                Append(cls, new TypedItemContext(Footer, type));
+            }
+            else
+            {
+                LastItem.UpdateItemClass(ListViewCache.InformalItemClass, new TypedItemContext(Footer, ItemType.Footer));
             }
         }
         void RegisterItem(Cell cell, GenListItem item, bool IsGroup = false)
