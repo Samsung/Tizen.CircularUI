@@ -29,7 +29,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (_widget == null)
             {
                 _widget = new TwoButtonPageWidget(Platform.Tizen.Forms.Context.MainWindow);
-                _widget.LayoutUpdated += OnLayoutUpdated;
+                _widget.Canvas.LayoutUpdated += OnLayoutUpdated;
                 SetNativeView(_widget);
             }
 
@@ -42,7 +42,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             {
                 if (_widget != null)
                 {
-                    _widget.LayoutUpdated -= OnLayoutUpdated;
+                    _widget.Canvas.LayoutUpdated -= OnLayoutUpdated;
                 }
             }
             base.Dispose(disposing);
@@ -66,11 +66,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
         }
 
+        public override Rect GetNativeContentGeometry()
+        {
+            return _widget.Canvas.Geometry;
+        }
+
         void OnLayoutUpdated(object sender, Platform.Tizen.Native.LayoutEventArgs e)
         {
-            //DoLayout(e);
-            //Element.Layout(_widget.Canvas.Geometry.ToDP());
-            Element.Content.Layout(_widget.Canvas.Geometry.ToDP());
+            DoLayout(e);
         }
 
         void UpdateBackgroundImage(bool initialize)
