@@ -200,6 +200,11 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             var context = e.Item?.Data as ListViewItemContext;
 
+            if (context == null)
+            {
+                return;
+            }
+
             if (_selectedItemChanging != 0 || context.IsGroupItem)
             {
                 return;

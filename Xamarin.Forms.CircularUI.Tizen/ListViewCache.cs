@@ -69,6 +69,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 {
                     renderer.NativeView.MinimumHeight = ToPx(element.MinimumHeightRequest);
                 }
+                //Console.WriteLine($"{ctx.Type.ToString()} / renderer.NativeView.MinimumHeight = {renderer.NativeView.MinimumHeight}");
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 return renderer.NativeView;
             }
