@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCRadioGroup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+    RotaryFocusTargetName="mylist">
+    <w:CirclePage.BindingContext>
+        <local:RadioGroupViewModel />
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <w:CircleListView
+            x:Name="mylist"
+            HasUnevenRows="True"
+            ItemsSource="{Binding SampleData}">
+            <w:CircleListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HeightRequest="120" Orientation="Horizontal">
+                            <Label
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding Text}"
+                                VerticalOptions="Center" />
+                            <w:Radio
+                                GroupName="{Binding GroupName}"
+                                HorizontalOptions="End"
+                                IsSelected="{Binding IsSelected, Mode=TwoWay}"
+                                Selected="OnSelected"
+                                VerticalOptions="Center"
+                                Value="{Binding Value}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </w:CircleListView.ItemTemplate>
+            <w:CircleListView.Header>
+                <x:String>Screen timeout</x:String>
+            </w:CircleListView.Header>
+            <w:CircleListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HeightRequest="120"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="#0FB4EF" />
+                </DataTemplate>
+            </w:CircleListView.HeaderTemplate>
+        </w:CircleListView>
+    </w:CirclePage.Content>
+</w:CirclePage>

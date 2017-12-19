@@ -23,7 +23,8 @@
                         GroupName="SoundMode"
                         HorizontalOptions="End"
                         IsSelected="True"
-                        Selected="OnSoundSelected" />
+                        Selected="OnSelected"
+                        Value="Sound" />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
@@ -34,7 +35,8 @@
                     <w:Radio
                         GroupName="SoundMode"
                         HorizontalOptions="End"
-                        Selected="OnVibrateSelected" />
+                        Selected="OnSelected"
+                        Value="Vibrate" />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
@@ -45,7 +47,8 @@
                     <w:Radio
                         GroupName="SoundMode"
                         HorizontalOptions="End"
-                        Selected="OnMuteSelected" />
+                        Selected="OnSelected"
+                        Value="Mute" />
                 </StackLayout>
             </StackLayout>
         </w:CircleScrollView>

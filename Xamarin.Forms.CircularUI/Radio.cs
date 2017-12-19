@@ -8,6 +8,11 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// BindableProperty. Identifies the IsSelected bindable property.
         /// </summary>
+        public static readonly BindableProperty ValueProperty = BindableProperty.Create("Value", typeof(string), typeof(Radio), default(string));
+
+        /// <summary>
+        /// BindableProperty. Identifies the IsSelected bindable property.
+        /// </summary>
         public static readonly BindableProperty IsSelectedProperty = BindableProperty.Create("IsSelected", typeof(bool), typeof(Radio), false,
              propertyChanged: IsSelectedPropertyChanged);
 
@@ -16,8 +21,19 @@ namespace Xamarin.Forms.CircularUI
         /// </summary>
         public static readonly BindableProperty GroupNameProperty = BindableProperty.Create("GroupName", typeof(string), typeof(Radio), default(string));
 
+
         /// <summary>
-        /// Gets or sets the name that specifies which RadioButton controls are mutually exclusive.
+        /// Gets or sets the value of the Radio.
+        /// This is a bindable property.
+        /// </summary>
+        public string Value
+        {
+            get { return (string)GetValue(ValueProperty); }
+            set { SetValue(ValueProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the name that specifies which Radio controls are mutually exclusive.
         /// It can be set to null.
         /// </summary>
         public string GroupName
@@ -27,7 +43,7 @@ namespace Xamarin.Forms.CircularUI
         }
 
         /// <summary>
-        /// Gets or sets a boolean value that indicates whether this RadioButton is selected.
+        /// Gets or sets a boolean value that indicates whether this Radio is selected.
         /// </summary>
         public bool IsSelected
         {
@@ -36,7 +52,7 @@ namespace Xamarin.Forms.CircularUI
         }
 
         /// <summary>
-        /// Occurs when the RadioButton selection was changed.
+        /// Occurs when the Radio selection was changed.
         /// </summary>
         public event EventHandler<SelectedEventArgs> Selected;
 

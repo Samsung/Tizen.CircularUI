@@ -23,16 +23,22 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) });
             TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
-            TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadio) });
+            TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadioList) });
 
             // CircleStepper TCs
             CircleStepperTCs = new ObservableCollection<TCDescribe>();
             CircleStepperTCs.Add(new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) });
             CircleStepperTCs.Add(new TCDescribe { Title = "AbsoluteLayout", Class = typeof(TCCircleStepper2) });
             CircleStepperTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCCircleStepper3) });
+
+            // Radio TCs
+            RadioTCs = new ObservableCollection<TCDescribe>();
+            RadioTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCRadio) });
+            RadioTCs.Add(new TCDescribe { Title = "ListView", Class = typeof(TCRadioGroup) });
         }
 
         public IList<TCDescribe> TCs { get; private set; }
         public IList<TCDescribe> CircleStepperTCs { get; private set; }
+        public IList<TCDescribe> RadioTCs { get; private set; }
     }
 }

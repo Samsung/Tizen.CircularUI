@@ -12,22 +12,14 @@ namespace WearableUIGallery.TC
             InitializeComponent();
         }
 
-        public void OnSoundSelected(object sender, SelectedEventArgs args)
+        public void OnSelected(object sender, SelectedEventArgs args)
         {
             Console.WriteLine($"OnSoundSelected!! value:{args.Value}");
-            if(args.Value)label.Text = "Selected : Sound";
-        }
-
-        public void OnVibrateSelected(object sender, SelectedEventArgs args)
-        {
-            Console.WriteLine($"OnVibrateSelected!! value:{args.Value}");
-            if (args.Value) label.Text = "Selected : Vibrate";
-        }
-
-        public void OnMuteSelected(object sender, SelectedEventArgs args)
-        {
-            Console.WriteLine($"OnMuteSelected!! value:{args.Value}");
-            if (args.Value) label.Text = "Selected : Mute";
+            Radio radio = sender as Radio;
+            if (radio != null)
+            {
+                if (args.Value) label.Text = "Selected : " + radio.Value;
+            }
         }
     }
 }
