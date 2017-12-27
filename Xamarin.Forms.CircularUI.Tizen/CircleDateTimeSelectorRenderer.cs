@@ -31,6 +31,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 if (null != surface)
                 {
                     SetNativeControl(new ElmSharp.Wearable.CircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, surface));
+                    Control.DateTimeChanged += OnDateTimeChanged;
                 }
                 else
                 {
@@ -68,7 +69,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         void UpdateDateTime(bool initialize)
         {
-            if (null != Control && null != Element)
+            if (null != Control && null != Element && Element.DateTime != Control.DateTime)
             {
                 Control.DateTime = Element.DateTime;
             }
@@ -85,6 +86,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 else if (Element.ValueType == DateTimeType.Time)
                 {
                     Control.Style = "timepicker/circle";
+                    Control.Format = "%d/%b/%Y%I:%M%p";
                 }
             }
         }
@@ -94,6 +96,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
+            }
+        }
+
+        void OnDateTimeChanged(object sender, EventArgs e)
+        {
+            if (null != Control && null != Element)
+            {
+                Element.DateTime = Control.DateTime;
             }
         }
     }
