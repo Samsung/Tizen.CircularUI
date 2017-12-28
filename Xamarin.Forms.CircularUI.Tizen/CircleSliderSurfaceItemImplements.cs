@@ -18,6 +18,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             _item = item;
             item.PropertyChanged += ItemPropertyChanged;
+            ValueChanged += OnValueChanged;
 
             BackgroundAngle = item.BackgroundAngle;
             BackgroundAngleOffset = item.BackgroundAngleOffset;
@@ -100,7 +101,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
             else if (args.PropertyName == CircleSliderSurfaceItem.ValueProperty.PropertyName)
             {
-                Value = _item.Value;
+                if (_item.Value != Value) Value = _item.Value;
             }
             else if (args.PropertyName == CircleSliderSurfaceItem.IsEnabledProperty.PropertyName)
             {
@@ -118,6 +119,11 @@ namespace Xamarin.Forms.CircularUI.Tizen
             {
                 Step = _item.Increment;
             }
+        }
+
+        private void OnValueChanged(object sender, EventArgs e)
+        {
+            if (_item.Value != Value) _item.Value = Value;
         }
     }
 }
