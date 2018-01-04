@@ -161,7 +161,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         }
         public void AddGroup(GroupList group)
         {
-            CellRenderer renderer = ListViewCache.Get(group.HeaderContent);
+            CellRenderer renderer = ListViewCache.Get(group.HeaderContent, true);
             var lastCtx = LastItem?.Data as TypedItemContext;
             GenListItem item = null;
             if (lastCtx != null && (lastCtx.Type == ItemType.Footer || lastCtx.Type == ItemType.BottomPadding))
@@ -176,7 +176,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         }
         public void InsertGroup(GroupList group, Cell before)
         {
-            CellRenderer renderer = ListViewCache.Get(group.HeaderContent);
+            CellRenderer renderer = ListViewCache.Get(group.HeaderContent, true);
             GenListItem beforeItem = _itemContexts.GetValueOrDefault(before);
             var item = InsertBefore(renderer.Class, new ListViewItemContext(group), beforeItem, GenListItemType.Group);
             RegisterItem(group.HeaderContent, item, true);
@@ -369,7 +369,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
         }
 
-        public ListViewItemContext(GroupList group) : this(null, group, true)
+        public ListViewItemContext(GroupList group) : this(group.HeaderContent, group, true)
         {
         }
 

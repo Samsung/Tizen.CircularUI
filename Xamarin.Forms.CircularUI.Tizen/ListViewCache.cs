@@ -11,9 +11,19 @@ namespace Xamarin.Forms.CircularUI.Tizen
         static readonly Dictionary<Type, CellRenderer> _cellRendererCache = new Dictionary<Type, CellRenderer>();
         static GenItemClass _informalItemClass;
         static GenItemClass _paddingItemClass;
+        static GroupTextCellRenderer _groupCache;
 
         public static CellRenderer Get(Cell cell, bool IsGroupHeader = false)
         {
+            if (IsGroupHeader)
+            {
+                if (_groupCache == null)
+                {
+                    _groupCache = new GroupTextCellRenderer();
+                }
+                return _groupCache;
+            }
+
             Type type = cell.GetType();
             CellRenderer renderer;
             if (_cellRendererCache.TryGetValue(type, out renderer))
@@ -22,14 +32,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
             else
             {
-                if (IsGroupHeader)
-                {
-                    renderer = new GroupTextCellRenderer();
-                }
-                else
-                {
-                    renderer = Registrar.Registered.GetHandler<CellRenderer>(type);
-                }
+                renderer = Registrar.Registered.GetHandler<CellRenderer>(type);
                 if (renderer == null)
                 {
                     throw new ArgumentNullException("Unsupported cell type");
