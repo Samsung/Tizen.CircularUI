@@ -16,17 +16,20 @@
  {
      public static readonly BindableProperty MarkerColorProperty;
      public static readonly BindableProperty MarkerLineWidthProperty;
+     public static readonly BindableProperty LabelFormatProperty;
 
      public Color MarkerColor { get; set; }
      public int MarkerLineWidth { get; set; }
+     public string LabelFormat { get; set; }
  }
  ```
-기존 `Stepper`에 Marker color와 MarkerLineWidth만 추가되었습니다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
+기존 `Stepper`에 Marker color, MarkerLineWidth, LabelFormat이 추가되었습니다. 이 View의 Value를 변경하기 위해 Bezel Action을 하기 위해서는 `CirclePage`의 `RotaryEventConsumer` property에 set 되어야 한다.
 
 ![CircleSliderSurfaceItem Properties](data/CircleSpinner_property.png)
 
 * MarkerColor : Bezel Action시에 움직이는 Marker의 색
 * MarkerLineWidth : Bezel Action시에 움직이는 Marker의 길이
+* LabelFormat : Value가 보여지는 형식
 
 `CircleStepper`는 ElmSharp Level에서 다음과 같은 Scene Graph로 표현된다.
 

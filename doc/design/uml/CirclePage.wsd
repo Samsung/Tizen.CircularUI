@@ -366,10 +366,12 @@ package "Extension.Wearable" {
         --BindableProperty--
         {static} +MarkerColorProperty
         {static} +MarkerLineWidthProperty
+        {static} +LabelFormatProperty
 
         --Property--
         +MarkerColor: Color
         +MarkerLineWidth: int
+        +LabelFormat: string
     }
 
     CircleStepper -u-|> Stepper
