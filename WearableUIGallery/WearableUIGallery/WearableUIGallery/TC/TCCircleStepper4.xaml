@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleStepper4"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+    RotaryFocusTargetName="StepperUnit">
+    <w:CirclePage.Content>
+        <StackLayout
+            Padding="20,50,20,5"
+            BackgroundColor="#B878B8"
+            Orientation="Vertical">
+            <Label
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="LabelFormat"
+                TextColor="Black" />
+            <StackLayout Padding="30,50,30,0" Orientation="Vertical">
+                <Label
+                    HorizontalTextAlignment="Center"
+                    Text="Unit"
+                    TextColor="Black"
+                    WidthRequest="70" />
+                <w:CircleStepper
+                    x:Name="StepperUnit"
+                    Focused="OnFocusedUnit"
+                    HorizontalOptions="Center"
+                    Increment="5"
+                    LabelFormat="%1.1f"
+                    MarkerColor="Coral"
+                    Maximum="100"
+                    Minimum="0"
+                    WidthRequest="130"
+                    Value="0" />
+            </StackLayout>
+        </StackLayout>
+    </w:CirclePage.Content>
+</w:CirclePage>
