@@ -15,3 +15,4 @@ Design files for Circular UI on Xamarin Forms
 * [TwoButtonPage](part11.TwoButtonPage.md)
 * [TwoButtonPopup](part12.TwoButtonPopup.md)
 * [Radio](part13.Radio.md)
+* [ConfirmPopupEffect](part14.ConfirmPopupEffect.md)

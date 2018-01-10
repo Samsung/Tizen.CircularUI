@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI"
+              x:Class="WearableUIGallery.TC.TCConfirm"
+              x:Name="mypage">
+    <ContentPage.Content>
+        <StackLayout>
+            <w:Check x:Name="confirm3"
+                     IsToggled="False"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                     w:ConfirmPopupEffect.AcceptText="Yes"
+                     w:ConfirmPopupEffect.CancelText="No"
+                     w:ConfirmPopupEffect.ConfirmVisibility="{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}"
+                     w:ConfirmPopupEffect.AcceptCommand="{Binding AcceptedCommand, Source={x:Reference mypage}}"
+                     w:ConfirmPopupEffect.CancelCommand="{Binding CancelCommand, Source={x:Reference mypage}}"
+                     w:ConfirmPopupEffect.PositionOption="CenterOfWindow">
+                <w:Check.Effects>
+                    <w:ConfirmPopupEffect/>
+                </w:Check.Effects>
+            </w:Check>
+        </StackLayout>
+    </ContentPage.Content>
+</w:CirclePage>
