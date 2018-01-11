@@ -28,7 +28,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             if (Control == null)
             {
-                SetNativeControl(new ECheck(TForms.Context.MainWindow)
+                SetNativeControl(new ECheck(TForms.NativeParent)
                 {
                     PropagateEvents = false,
                     Style = CheckStyle.Default

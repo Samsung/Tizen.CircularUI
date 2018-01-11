@@ -50,7 +50,7 @@ namespace Xamarin.Forms.CircularUI
     public enum PositionOption
     {
         BottomOfView,
-        CenterOfWindow,
+        CenterOfParent,
         Absolute,
         Relative
     }

@@ -15,7 +15,7 @@
                      w:ConfirmPopupEffect.ConfirmVisibility="{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}"
                      w:ConfirmPopupEffect.AcceptCommand="{Binding AcceptedCommand, Source={x:Reference mypage}}"
                      w:ConfirmPopupEffect.CancelCommand="{Binding CancelCommand, Source={x:Reference mypage}}"
-                     w:ConfirmPopupEffect.PositionOption="CenterOfWindow">
+                     w:ConfirmPopupEffect.PositionOption="CenterOfParent">
                 <w:Check.Effects>
                     <w:ConfirmPopupEffect/>
                 </w:Check.Effects>

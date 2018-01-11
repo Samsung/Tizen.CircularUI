@@ -28,7 +28,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    var spinner = new ESpinner(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, surface);
+                    var spinner = new ESpinner(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface);
                     spinner.Style = "circle";
                     SetNativeControl(spinner);
                     Control.ValueChanged += OnValueChanged;
@@ -82,7 +82,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
             base.Dispose(disposing);
         }
-        
+
         protected override Size MinimumSize()
         {
             // This width and height are values taken from SPINNER_LAYOUT_CONTENT_AREA_SIZE of elm-theme-tizen-wearable module

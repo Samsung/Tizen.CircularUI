@@ -28,7 +28,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         public TwoButtonPopupImplementation()
         {
-            _popUp = new ElmSharp.Popup(TForms.Context.MainWindow);
+            _popUp = new ElmSharp.Popup(TForms.NativeParent);
             _popUp.Style = "circle";
 
             _layout = new ElmSharp.Layout(_popUp);
@@ -174,7 +174,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
                 var renderer = Xamarin.Forms.Platform.Tizen.Platform.GetOrCreateRenderer(_contentView);
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
-                var sizeRequest = _contentView.Measure(TForms.Context.MainWindow.ScreenSize.Width, TForms.Context.MainWindow.ScreenSize.Height).Request.ToPixel();
+                var sizeRequest = _contentView.Measure(TForms.NativeParent.Geometry.Width, TForms.NativeParent.Geometry.Height).Request.ToPixel();
 
                 //Console.WriteLine($"_contentView.Platform ->{_contentView?.Platform}, renderer->{renderer?.ToString()}");
                 _nativeContent = renderer.NativeView;

@@ -60,7 +60,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         private void Initialize()
         {
-            _outterLayout = new ElmSharp.Layout(TForms.Context.MainWindow)
+            _outterLayout = new ElmSharp.Layout(TForms.NativeParent)
             {
                 AlignmentX = -1,
                 AlignmentY = -1,
@@ -125,7 +125,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 _scroller.ScrollTo(_pageIndex, 0, false);
             }
 
-            //Below code is workaround code. 
+            //Below code is workaround code.
             //there is no way to call after Platform.GetRenderer(page) is ready.
             if (!_isUpdateContent && _innerContainer.MinimumWidth == _layoutBound.Width)
             {

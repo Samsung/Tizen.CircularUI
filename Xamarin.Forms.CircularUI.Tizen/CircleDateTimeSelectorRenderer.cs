@@ -30,7 +30,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    SetNativeControl(new ElmSharp.Wearable.CircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, surface));
+                    SetNativeControl(new ElmSharp.Wearable.CircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
                     Control.DateTimeChanged += OnDateTimeChanged;
                 }
                 else
@@ -56,7 +56,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.MinimumDateTime = Element.MinimumDate;
-            }   
+            }
         }
 
         void UpdateMaximum(bool initialize)
@@ -64,7 +64,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Control.MaximumDateTime = Element.MaximumDate;
-            }   
+            }
         }
 
         void UpdateDateTime(bool initialize)

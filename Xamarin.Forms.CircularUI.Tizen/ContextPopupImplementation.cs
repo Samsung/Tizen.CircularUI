@@ -25,12 +25,11 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         public ContextPopupImplementation()
         {
-            _layout = new ELayout(TForms.Context.MainWindow)
+            _layout = new ELayout(TForms.NativeParent)
             {
                 WeightX = 1.0, // Expand
                 WeightY = 1.0  // Expand
             };
-            TForms.Context.MainWindow.AddResizeObject(_layout);
             _layout.SetTheme("layout", "select_mode", "default");
             _layout.Show();
 

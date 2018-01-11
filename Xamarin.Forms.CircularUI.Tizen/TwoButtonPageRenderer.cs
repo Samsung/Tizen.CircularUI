@@ -28,7 +28,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             if (_widget == null)
             {
-                _widget = new TwoButtonPageWidget(Platform.Tizen.Forms.Context.MainWindow);
+                _widget = new TwoButtonPageWidget(Platform.Tizen.Forms.NativeParent);
                 _widget.Canvas.LayoutUpdated += OnLayoutUpdated;
                 SetNativeView(_widget);
             }

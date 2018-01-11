@@ -33,7 +33,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (Control == null)
             {
                 var surface = this.GetSurface();
-                SetNativeControl(new CircleListView(Platform.Tizen.Forms.Context.MainWindow, surface));
+                SetNativeControl(new CircleListView(Platform.Tizen.Forms.NativeParent, surface));
 
                 Control.ItemSelected += OnListViewItemSelected;
             }

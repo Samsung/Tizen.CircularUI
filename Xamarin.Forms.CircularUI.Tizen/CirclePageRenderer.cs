@@ -30,7 +30,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             if (null == _widget)
             {
-                _widget = new CirclePageWidget(Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow, Element);
+                _widget = new CirclePageWidget(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, Element);
                 _widget.LayoutUpdated += OnLayoutUpdated;
                 _widget.ToolbarOpened += OnToolbarOpened;
                 _widget.ToolbarClosed += OnToolbarClosed;

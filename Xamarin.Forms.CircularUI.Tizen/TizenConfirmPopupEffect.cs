@@ -60,7 +60,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
             if (parent == null)
             {
-                parent = Platform.Tizen.Forms.Context.MainWindow;
+                parent = Platform.Tizen.Forms.NativeParent;
             }
 
             var ctx = new SelectContextPopup(parent);
@@ -117,14 +117,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     x = rect.X + rect.Width / 2 + (int)offset.X;
                     y = rect.Y + rect.Height / 2 + (int)offset.Y;
                     break;
-                case PositionOption.CenterOfWindow:
-                    rect = Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow.Geometry;
+                case PositionOption.CenterOfParent:
+                    rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
                     var ctxRect = ctx.Geometry;
                     x = rect.Width / 2 + (int)offset.X;
                     y = rect.Height / 2 - ctxRect.Height / 2 + (int)offset.Y;
                     break;
                 case PositionOption.Relative:
-                    rect = Xamarin.Forms.Platform.Tizen.Forms.Context.MainWindow.Geometry;
+                    rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
                     x = (int)(rect.Width * offset.X);
                     y = (int)(rect.Height * offset.Y);
                     break;

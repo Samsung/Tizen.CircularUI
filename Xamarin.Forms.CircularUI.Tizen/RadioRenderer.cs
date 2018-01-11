@@ -28,7 +28,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             if (Control == null)
             {
-                var radio = new ERadio(TForms.Context.MainWindow) { StateValue = 1 };
+                var radio = new ERadio(TForms.NativeParent) { StateValue = 1 };
                 SetNativeControl(radio);
                 Control.ValueChanged += ChangedEventHandler;
             }
