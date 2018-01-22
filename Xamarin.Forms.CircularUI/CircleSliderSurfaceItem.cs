@@ -5,6 +5,9 @@ using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The CircleSliderSurfaceItem displays circular slider at CirclePage.
+    /// </summary>
     public class CircleSliderSurfaceItem : CircleSurfaceItem, IRotaryFocusable
     {
         /// <summary>
@@ -28,7 +31,7 @@ namespace Xamarin.Forms.CircularUI
         });
 
         /// <summary>
-        /// BindableProperty. Identifies the Step bindable property.
+        /// BindableProperty. Identifies the Increment bindable property.
         /// </summary>
         public static readonly BindableProperty IncrementProperty = BindableProperty.Create(nameof(Increment), typeof(double), typeof(CircleSliderSurfaceItem), 1d, coerceValue: (bindable, value) =>
         {
@@ -72,7 +75,7 @@ namespace Xamarin.Forms.CircularUI
 
         /// <summary>
         /// Gets or sets the Increment value.
-        /// The value of the slider increase/decreased by the step value.
+        /// The value of the slider is increased/decreased by the Increment value.
         /// </summary>
         public double Increment
         {

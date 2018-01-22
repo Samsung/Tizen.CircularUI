@@ -2,6 +2,47 @@
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The TwoButtonPopup describe pop-up which has circular two button, title, text, and content area.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// var leftButton = new MenuItem()
+    /// {
+    ///     Text = "Save",
+    ///     Icon = new FileImageSource{ File = "icon_save.png", },
+    ///     Command = new Command(() => { ... })
+    /// };
+    ///
+    /// var rightButton = new MenuItem()
+    /// {
+    ///     Text = "Delete",
+    ///     Icon = new FileImageSource{ File = "icon_delete.png", },
+    ///     Command = new Command(() => { ... })
+    /// };
+    ///
+    /// var popup = new TwoButtonPopup();
+    /// popup.FirstButton = leftButton;
+    /// popup.SecondButton = rightButton;
+    /// popup.Title = "Popup title";
+    /// popup.Content = new StackLayout()
+    /// {
+    ///     HorizontalOptions = LayoutOptions.FillAndExpand,
+    ///     Children =
+    ///     {
+    ///        new Label
+    ///        {
+    ///            Text = "Will be saved",
+    ///        },
+    ///     }
+    /// };
+    ///
+    /// popup.BackButtonPressed += (s, e) =>
+    /// {
+    ///     popup.Dismiss();
+    /// };
+    /// </code>
+    /// </example>
     public class TwoButtonPopup : BindableObject
     {
         /// <summary>

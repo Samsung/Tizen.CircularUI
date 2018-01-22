@@ -3,6 +3,36 @@ using Xamarin.Forms;
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The Radio is a widget that allows one or more options to be displayed and have the user choose only one of them.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// var radio1 = new Radio
+    /// {
+    ///     GroupName = "SoundMode",
+    ///     IsSelected = true,
+    ///     Value = "sound"
+    /// }
+    ///
+    /// var radio2 = new Radio
+    /// {
+    ///     GroupName = "SoundMode",
+    ///     IsSelected = false,
+    ///     Value = "vibrate"
+    /// }
+    ///
+    /// radio1.Selected += (s,e) =>
+    /// {
+    ///     Console.WriteLine($"radio1 selected! value:{e.Value}");
+    /// };
+    ///
+    /// radio2.Selected += (s,e) =>
+    /// {
+    ///      Console.WriteLine($"radio2 selected! value:{e.Value}");
+    /// };
+    /// </code>
+    /// </example>
     public class Radio : View
     {
         /// <summary>

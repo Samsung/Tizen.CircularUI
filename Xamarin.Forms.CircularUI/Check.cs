@@ -7,6 +7,20 @@ using Xamarin.Forms;
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The check widget allows for toggling a value between true and false.
+    /// The check is extension of Xamarin.Forms.Switch.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// var check = new Check
+    /// {
+    ///     HorizontalOptions = LayoutOptions.Center,
+    ///     VerticalOptions = LayoutOptions.Center,
+    ///     DisplayStyle = "Onoff"
+    /// }
+    /// </code>
+    /// </example>
     public class Check : Switch
     {
         /// <summary>

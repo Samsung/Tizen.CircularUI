@@ -3,6 +3,9 @@ using System.Runtime.CompilerServices;
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The class for the items in a ContextPopup.
+    /// </summary>
     public class ContextPopupItem : INotifyPropertyChanged
     {
         string _label;

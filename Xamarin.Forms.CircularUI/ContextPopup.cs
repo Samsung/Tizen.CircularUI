@@ -7,6 +7,24 @@ using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The ContextPopup class allows a contextual popup to be anchored at a view.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// var popup = new ContextPopup();
+    /// var item1 = new ContextPopupItem("item 1");
+    /// var item2 = new ContextPopupItem("item 2");
+    ///
+    /// popup.Items.Add(item1);
+    /// popup.Items.Add(item2);
+    ///
+    /// popup.ItemSelected += (s, e) =>
+    /// {
+    ///     Console.WriteLine($"{popup.SelectedItem?.Label} is selected");
+    /// }
+    /// </code>
+    /// </example>
     public class ContextPopup : BindableObject
     {
         IContextPopup _contextPopup;
