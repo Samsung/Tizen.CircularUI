@@ -8,7 +8,7 @@ namespace Xamarin.Forms.CircularUI
 {
     public class CirclePage : ContentPage
     {
-        public static readonly BindableProperty ActionButtonProperty = BindableProperty.Create(nameof(ActionButton), typeof(MenuItem), typeof(CirclePage), null,
+        public static readonly BindableProperty ActionButtonProperty = BindableProperty.Create(nameof(ActionButton), typeof(ActionButtonItem), typeof(CirclePage), null,
             propertyChanged: (b, o, n) =>
             {
                 if (n != null)
@@ -43,9 +43,9 @@ namespace Xamarin.Forms.CircularUI
 
         public IList<ICircleSurfaceItem> CircleSurfaceItems { get; }
 
-        public MenuItem ActionButton
+        public ActionButtonItem ActionButton
         {
-            get => (MenuItem)GetValue(ActionButtonProperty);
+            get => (ActionButtonItem)GetValue(ActionButtonProperty);
             set => SetValue(ActionButtonProperty, value);
         }
 
