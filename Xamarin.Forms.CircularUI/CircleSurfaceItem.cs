@@ -5,6 +5,9 @@ using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.CircularUI
 {
+    /// <summary>
+    /// The class that controls the items represented in the CircleSurface.
+    /// </summary>
     public class CircleSurfaceItem : Element, ICircleSurfaceItem
     {
         /// <summary>

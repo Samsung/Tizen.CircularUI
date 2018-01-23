@@ -77,6 +77,9 @@ namespace Xamarin.Forms.CircularUI
         /// </summary>
         public event EventHandler BackButtonPressed;
 
+        /// <summary>
+        /// Creates and initializes a new instance of the TwoButtonPopup class.
+        /// </summary>
         public TwoButtonPopup()
         {
             _popUp = DependencyService.Get<IPopup>(DependencyFetchTarget.NewInstance);
