@@ -55,7 +55,7 @@
             Value="8" />
     </w:CirclePage.CircleSurfaceItems>
     <w:CirclePage.ActionButton>
-        <MenuItem Command="{Binding ProgressBarVisibleCommand}" Text="OK" />
+        <w:ActionButtonItem Command="{Binding ProgressBarVisibleCommand}" Text="OK" />
     </w:CirclePage.ActionButton>
     <w:CirclePage.ToolbarItems>
         <w:CircleToolbarItem
