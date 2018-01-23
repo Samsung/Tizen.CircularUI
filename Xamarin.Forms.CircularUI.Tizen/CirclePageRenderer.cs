@@ -122,17 +122,15 @@ namespace Xamarin.Forms.CircularUI.Tizen
             };
             _actionButton.Clicked += OnActionButtonClicked;
 
-            _moreOption = new ElmSharp.Wearable.MoreOption(_box);
+            _moreOption = new ElmSharp.Wearable.MoreOption(_box)
+            {
+                Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry
+            };
             _moreOption.Clicked += OnMoreOptionClicked;
             _moreOption.Opened += ToolbarOpened;
             _moreOption.Closed += ToolbarClosed;
             _toolbarItemMap = new Dictionary<ToolbarItem, ElmSharp.Wearable.MoreOptionItem>();
             _circleSurfaceItems = new Dictionary<ICircleSurfaceItem, ICircleWidget>();
-
-            var btnRect = _actionButton.Geometry;
-            var btnX = (rect.Width - btnRect.Width) / 2;
-            var btnY = rect.Height - btnRect.Height;
-            _actionButton.Move(btnX, btnY);
 
             _box.PackEnd(_bgColorObject);
             _box.PackEnd(_bgImageObject);
@@ -143,8 +141,13 @@ namespace Xamarin.Forms.CircularUI.Tizen
             _bgColorObject.Show();
             _bgImageObject.Hide();
             _surfaceLayout.Show();
-            _actionButton.Hide();
-            _moreOption.Hide();
+
+            foreach (var item in Element.ToolbarItems)
+            {
+                AddToolbarItem(item);
+            }
+            if (Element.ToolbarItems.Count > 0) _moreOption.Show();
+            else _moreOption.Hide();
 
             SetNativeView(_box);
         }
@@ -167,6 +170,13 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
             _surfaceLayout.Geometry = rect;
             _surfaceLayout.StackAbove(prev);
+
+            var btnRect = _actionButton.Geometry;
+            var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
+            var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
+            var btnX = (rect.Width - btnW) / 2;
+            var btnY = rect.Height - btnH;
+            _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
 
             _actionButton.StackAbove(_surfaceLayout);
 
