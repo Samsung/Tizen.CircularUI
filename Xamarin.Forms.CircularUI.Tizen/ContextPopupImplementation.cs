@@ -18,22 +18,13 @@ namespace Xamarin.Forms.CircularUI.Tizen
     internal class ContextPopupImplementation : IContextPopup, INotifyPropertyChanged, IDisposable
     {
         EContextPopup _popup;
-        ELayout _layout;
         IDictionary<ContextPopupItem, EContextPopupItem> _items;
         ContextPopupItem _selectedItem = null;
         bool _isDisposed;
 
         public ContextPopupImplementation()
         {
-            _layout = new ELayout(TForms.NativeParent)
-            {
-                WeightX = 1.0, // Expand
-                WeightY = 1.0  // Expand
-            };
-            _layout.SetTheme("layout", "select_mode", "default");
-            _layout.Show();
-
-            _popup = new EContextPopup(_layout)
+            _popup = new EContextPopup(TForms.NativeParent)
             {
                 Style = "select_mode",
             };
