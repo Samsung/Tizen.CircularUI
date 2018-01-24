@@ -7,7 +7,7 @@ namespace Xamarin.Forms.CircularUI
     /// <summary>
     /// a widget interface that when shown, pops up a list of items
     /// </summary>
-    public interface IContextPopup
+    internal interface IContextPopup
     {
         /// <summary>
         /// It will be triggered when the item of ContextPopup is selected.

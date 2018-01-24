@@ -10,13 +10,13 @@ using Xamarin.Forms.CircularUI;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCTwoButtonPopup : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCTwoButtonPopup : ContentPage
     {
         TwoButtonPopup _popUp1 = null;
         TwoButtonPopup _popUp2 = null;
         public TCTwoButtonPopup()
-		{
+        {
             InitializeComponent();
 
             var leftButton = new MenuItem()

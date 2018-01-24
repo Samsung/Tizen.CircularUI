@@ -7,7 +7,7 @@ namespace Xamarin.Forms.CircularUI
     /// <summary>
     /// Interface for describe pop-up which has circular two button, title, text, and content area
     /// </summary>
-    public interface IPopup
+    internal interface IPopup
     {
         /// <summary>
         /// It will be triggered when the Back button is pressed.
