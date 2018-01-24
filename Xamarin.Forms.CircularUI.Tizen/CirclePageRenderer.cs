@@ -122,10 +122,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             };
             _actionButton.Clicked += OnActionButtonClicked;
 
-            _moreOption = new ElmSharp.Wearable.MoreOption(_box)
-            {
-                Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry
-            };
+            _moreOption = new ElmSharp.Wearable.MoreOption(_box);
             _moreOption.Clicked += OnMoreOptionClicked;
             _moreOption.Opened += ToolbarOpened;
             _moreOption.Closed += ToolbarClosed;
@@ -180,6 +177,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
             _actionButton.StackAbove(_surfaceLayout);
 
+            _moreOption.Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
             _moreOption.StackAbove(_actionButton);
         }
 
