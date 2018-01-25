@@ -5,46 +5,55 @@ using Xamarin.Forms;
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// Interface for describe pop-up which has circular two button, title, text, and content area
+    /// The IPopup is an interface to describe pop-up which has circular two button, title, text, and content area
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     internal interface IPopup
     {
         /// <summary>
-        /// It will be triggered when the Back button is pressed.
+        /// Occurs when the Back button is pressed.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         event EventHandler BackButtonPressed;
 
         /// <summary>
-        /// Gets or sets the Content
+        /// Gets or sets content view of the Popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         View Content { get; set; }
 
         /// <summary>
-        /// Gets or sets the left button of popup
+        /// Gets or sets left button of the Popup
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         MenuItem FirstButton { get; set; }
         /// <summary>
-        /// Gets or sets the right button of popup
+        /// Gets or sets right button of the Popup
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         MenuItem SecondButton { get; set; }
 
         /// <summary>
-        /// Gets or sets the title of popup
+        /// Gets or sets title of the Popup
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the body text of popup
+        /// Gets or sets text of the Popup
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         string Text { get; set; }
 
         /// <summary>
-        /// show popup
+        /// Shows the Popup
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         void Show();
         /// <summary>
-        /// Dismiss popup
+        /// Dismisses the Popup
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         void Dismiss();
     }
 }

@@ -5,6 +5,7 @@ namespace Xamarin.Forms.CircularUI
     /// <summary>
     /// The TwoButtonPopup describe pop-up which has circular two button, title, text, and content area.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
     /// var leftButton = new MenuItem()
@@ -48,26 +49,31 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// BindableProperty. Identifies the content bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the first button bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the second button bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
 
         IPopup _popUp = null;
@@ -75,11 +81,13 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Occurs when the device's back button is pressed.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public event EventHandler BackButtonPressed;
 
         /// <summary>
         /// Creates and initializes a new instance of the TwoButtonPopup class.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public TwoButtonPopup()
         {
             _popUp = DependencyService.Get<IPopup>(DependencyFetchTarget.NewInstance);
@@ -103,6 +111,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets content view of the Popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public View Content
         {
             get { return (View)GetValue(ContentProperty); }
@@ -112,6 +121,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets title of the Popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public string Title
         {
             get { return (string)GetValue(TitleProperty); }
@@ -121,6 +131,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets text of the Popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
@@ -130,6 +141,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets left button of the Popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public MenuItem FirstButton
         {
             get { return (MenuItem)GetValue(FirstButtonProperty); }
@@ -139,6 +151,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets right button of the Popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public MenuItem SecondButton
         {
             get { return (MenuItem)GetValue(SecondButtonProperty); }
@@ -146,16 +159,18 @@ namespace Xamarin.Forms.CircularUI
         }
 
         /// <summary>
-        /// Shows the Popup.
+        /// Shows the TwoButtonPopup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public void Show()
         {
             _popUp.Show();
         }
 
         /// <summary>
-        /// Dismiss the Popup.
+        /// Dismisses the TwoButtonPopup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public void Dismiss()
         {
             _popUp.Dismiss();

@@ -5,13 +5,15 @@ using System.Text;
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// It is a page that has a rectangular area inside the circle as contents area. It also has two buttons and a Title area.
+    /// The TwoButtonPage is a page that has a rectangular area inside the circle as contents area. It also has two buttons and a Title area.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class TwoButtonPage : ContentPage
     {
         /// <summary>
-        /// BindableProperty type of FirstButton
+        /// BindableProperty. Identifies the FirstButton bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(TwoButtonPage),
             propertyChanged: (b, o, n) =>
             {
@@ -19,8 +21,9 @@ namespace Xamarin.Forms.CircularUI
                     ((Element)n).Parent = (Element)b;
             });
         /// <summary>
-        /// BindableProperty type of SecondButton
+        /// BindableProperty. Identifies the SecondButton bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(TwoButtonPage),
             propertyChanged: (b, o, n) =>
             {
@@ -31,6 +34,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets left button of TwoButtonPage
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public MenuItem FirstButton
         {
             get => (MenuItem)GetValue(FirstButtonProperty);
@@ -39,6 +43,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets right button of TwoButtonPage
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public MenuItem SecondButton
         {
             get => (MenuItem)GetValue(SecondButtonProperty);

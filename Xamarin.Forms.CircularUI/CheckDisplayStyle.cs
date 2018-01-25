@@ -10,6 +10,7 @@ namespace Xamarin.Forms.CircularUI
     /// <summary>
     /// Enumeration for the style of the Check.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public enum CheckDisplayStyle 
     {
         /// <summary>

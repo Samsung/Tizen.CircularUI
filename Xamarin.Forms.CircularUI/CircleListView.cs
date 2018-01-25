@@ -5,9 +5,10 @@ using System.Text;
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// View that represents ElmSharp.Wearable.CircleGenList.
-    /// Same as the existing ListView, but the Scroller is rendered to the CircleSurface. You can also move the List to a Bezel Action.
+    /// The CircleListView is a view that represents Xamarin.Forms.ListView on Circular UI.
+    /// You can move the list through bezel action.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class CircleListView : ListView, IRotaryFocusable
     {
     }

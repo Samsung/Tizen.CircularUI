@@ -1,22 +1,26 @@
 ﻿namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// presents a menu item and associates it with a command
+    /// The ActionButtonItem is a class that presents a menu item and associates it with a command
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class ActionButtonItem : MenuItem
     {
         /// <summary>
-        /// BindableProperty type of IsEnable
+        /// BindableProperty. Identifies the IsEnable bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty IsEnableProperty = BindableProperty.Create(nameof(IsEnable), typeof(bool), typeof(ActionButtonItem), true);
         /// <summary>
-        /// BindableProperty type of IsVisible
+        /// BindableProperty. Identifies the IsVisible bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty IsVisibleProperty = BindableProperty.Create(nameof(IsVisible), typeof(bool), typeof(ActionButtonItem), true);
 
         /// <summary>
         /// Gets or sets a boolean value that indicates whether this ActionButtonItem is enabled.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public bool IsEnable
         {
             get => (bool)GetValue(IsEnableProperty);
@@ -26,6 +30,7 @@
         /// <summary>
         /// Gets or sets a boolean value that indicates whether this ActionButtonItem is visible.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public bool IsVisible
         {
             get => (bool)GetValue(IsVisibleProperty);

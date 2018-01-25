@@ -1,17 +1,21 @@
 ﻿namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// An item in a toolbar or displayed on a Xamarin.Forms.Page for Circle UI.
+    /// The CircleToolbarItem is a class that extends Xamarin.Forms.ToolbarItem for Circular UI.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class CircleToolbarItem : ToolbarItem
     {
         /// <summary>
-        /// BindableProperty type of Subtext to display on the menu item
+        /// BindableProperty. Identifies the Subtext bindable property to display on the menu item.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SubTextProperty = BindableProperty.Create(nameof(SubText), typeof(string), typeof(CircleToolbarItem), null);
+
         /// <summary>
         /// Gets or sets Subtext to display on the menu item
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public string SubText
         {
             get => (string)GetValue(SubTextProperty);

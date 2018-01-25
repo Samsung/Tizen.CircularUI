@@ -7,26 +7,16 @@ using System.ComponentModel;
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// CircleSurface is similar to ContentPage, which allows you to put in views that you need, and you can show ToolbarItems with MoreOption.
+    /// The CirclePage is a ContentPage, which allows you to insert views that require CircleSurface, and you can show ToolbarItems with MoreOption.
     /// It has an ActionButton, and can use the MenuItem type as text, icon, command, and so on.
     /// </summary>
-    /// <example>
-    /// <code>
-    /// <w:CirclePage BackgroundColor="Blue" RotaryFocusTargetName="DateSelector">
-    /// <w:CirclePage.Content>
-    ///   <StackLayout>
-    ///     <w:CircleDateTimeSelector x:Name="DateSelector"/>
-    ///     <w:Button Text = "OK" />
-    ///   </ StackLayout >
-    /// </ w:CirclePage.Content>
-    /// </w:CirclePage>
-    /// </code>
-    /// </example>
+    /// <since_tizen> 4 </since_tizen>
     public class CirclePage : ContentPage
     {
         /// <summary>
-        /// BindableProperty type of Action button
+        /// BindableProperty. Identifies the ActionButton bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ActionButtonProperty = BindableProperty.Create(nameof(ActionButton), typeof(ActionButtonItem), typeof(CirclePage), null,
             propertyChanged: (b, o, n) =>
             {
@@ -34,17 +24,20 @@ namespace Xamarin.Forms.CircularUI
                     ((Element)n).Parent = (Element)b;
             });
         /// <summary>
-        /// BindableProperty type of RotaryFocusTargetName
+        /// BindableProperty. Identifies the RotaryFocusTargetName bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty RotaryFocusTargetNameProperty = BindableProperty.Create(nameof(RotaryFocusTargetName), typeof(string), typeof(CirclePage), null,
             propertyChanged: RotaryFocusTargetNameChanged);
         /// <summary>
-        /// BindableProperty type of RotaryFocusObjectPropertyKey
+        /// BindablePropertyKey. Identifies the RotaryFocusObject bindable property Key.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         static readonly BindablePropertyKey RotaryFocusObjectPropertyKey = BindableProperty.CreateReadOnly(nameof(RotaryFocusObject), typeof(IRotaryFocusable), typeof(CirclePage), null);
         /// <summary>
-        /// BindableProperty type of RotaryFocusObject
+        /// BindableProperty. Identifies the RotaryFocusObject bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty RotaryFocusObjectProperty = RotaryFocusObjectPropertyKey.BindableProperty;
 
         static void RotaryFocusTargetNameChanged(BindableObject bindable, object oldValue, object newValue)
@@ -63,6 +56,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Creates and initializes a new instance of the CirclePage class.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public CirclePage()
         {
             var surfaceItems = new ObservableCollection<ICircleSurfaceItem>();
@@ -70,21 +64,24 @@ namespace Xamarin.Forms.CircularUI
             CircleSurfaceItems = surfaceItems;
         }
         /// <summary>
-        /// Objects represented in CircleSurface are represented through CircleSurface.
+        /// Gets a list of CircleSurfaceItems represented through CircleSurface.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public IList<ICircleSurfaceItem> CircleSurfaceItems { get; }
 
         /// <summary>
-        /// presents a menu item and associates it with a command
+        /// Gets or sets ActionButton that presents a menu item and associates it with a command
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public ActionButtonItem ActionButton
         {
             get => (ActionButtonItem)GetValue(ActionButtonProperty);
             set => SetValue(ActionButtonProperty, value);
         }
         /// <summary>
-        /// register only one Consumer in the RotaryFocusObject property to receive a Bezel Action (take a Rotary Event) from the current page.
+        /// Gets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public IRotaryFocusable RotaryFocusObject
         {
             get => (IRotaryFocusable)GetValue(RotaryFocusObjectProperty);
@@ -92,8 +89,10 @@ namespace Xamarin.Forms.CircularUI
         }
 
         /// <summary>
-        /// specify a RotaryFocusObject by name on Xaml.
+        /// Gets or sets target name of RotaryFocusObject.
+        /// If RotaryFocusTargetName is set, it registers only a consumer in the RotaryFocusObject property to receive bezel action (take a rotary event) from the current page
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public string RotaryFocusTargetName
         {
             get => (string)GetValue(RotaryFocusTargetNameProperty);

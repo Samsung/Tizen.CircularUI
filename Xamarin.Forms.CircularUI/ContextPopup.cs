@@ -10,6 +10,7 @@ namespace Xamarin.Forms.CircularUI
     /// <summary>
     /// The ContextPopup class allows a contextual popup to be anchored at a view.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
     /// var popup = new ContextPopup();
@@ -34,12 +35,14 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// BindableProperty. Identifies the SelectedIndex bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SelectedIndexProperty = BindableProperty.Create(nameof(SelectedIndex), typeof(int), typeof(ContextPopup), defaultValue: -1,
             propertyChanged: OnSelectedIndexChanged, coerceValue: CoerceSelectedIndex);
 
         /// <summary>
         /// BindableProperty. Identifies the SelectedItem bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SelectedItemProperty = BindableProperty.Create(nameof(SelectedItem), typeof(object), typeof(ContextPopup), null,
             propertyChanged: OnSelectedItemChanged);
 
@@ -47,6 +50,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// The constructor, which creates a new ContextPopup instance.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public ContextPopup()
         {
             _contextPopup = DependencyService.Get<IContextPopup>(DependencyFetchTarget.NewInstance);
@@ -67,17 +71,20 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Occurs when the ContextPopup is dismissed.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public event EventHandler Dismissed;
 
         /// <summary>
         /// Occurs when a ContextPopupItem is selected.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
 
         /// <summary>
         /// Gets or sets the index of the selected item of the ContextPopup.
         /// It is -1 when no item is selected.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public int SelectedIndex
         {
             get { return (int)GetValue(SelectedIndexProperty); }
@@ -87,6 +94,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets or sets the selected item of the ContextPopup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public ContextPopupItem SelectedItem
         {
             get { return (ContextPopupItem)GetValue(SelectedItemProperty); }
@@ -96,6 +104,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Gets the list of items in the ContextPopup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public IList<ContextPopupItem> Items
         {
             get
@@ -108,6 +117,7 @@ namespace Xamarin.Forms.CircularUI
         /// Shows the ContextPopup. The ContextPopup is positioned at the horizontal and the vertical position of a specific anchor.
         /// </summary>
         /// <param name="anchor">The view to which the popup should be anchored.</param>
+        /// <since_tizen> 4 </since_tizen>
         public void Show(View anchor)
         {
             Show(anchor, 0, 0);
@@ -119,6 +129,7 @@ namespace Xamarin.Forms.CircularUI
         /// <param name="anchor">The view to which the popup should be anchored.</param>
         /// <param name="xOffset">The horizontal offset from the anchor.</param>
         /// <param name="yOffset">The vertical offset from the anchor.</param>
+        /// <since_tizen> 4 </since_tizen>
         public void Show(View anchor, int xOffset, int yOffset)
         {
             _contextPopup.Show(anchor, xOffset, yOffset);
@@ -130,6 +141,7 @@ namespace Xamarin.Forms.CircularUI
         /// <param name="anchor">The view to which the popup should be anchored.</param>
         /// <param name="xOffset">The horizontal offset from the anchor.</param>
         /// <param name="yOffset">The vertical offset from the anchor.</param>
+        /// <since_tizen> 4 </since_tizen>
         public void Show(View anchor, double xOffset, double yOffset)
         {
             Show(anchor, (int)xOffset, (int)yOffset);
@@ -138,6 +150,7 @@ namespace Xamarin.Forms.CircularUI
         /// <summary>
         /// Dismisses the ContextPopup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public void Dismiss()
         {
             _contextPopup.Dismiss();

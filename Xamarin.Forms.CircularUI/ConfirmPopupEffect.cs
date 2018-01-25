@@ -6,174 +6,204 @@ using System.Windows.Input;
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// A popup that is proportional to a particular widget or has one or two buttons anywhere on the screen
+    /// The ConfirmPopupEffect is an effect that is proportional to a particular widget or has one or two buttons anywhere on the screen
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class ConfirmPopupEffect : RoutingEffect
     {
         /// <summary>
-        /// BindableProperty type of AcceptText. AcceptText is to use as Accept button
+        /// BindableProperty. Identifies the AcceptText bindable property. AcceptText is to use as Accept button
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty AcceptTextProperty = BindableProperty.CreateAttached("AcceptText", typeof(string), typeof(ConfirmPopupEffect), null);
         /// <summary>
-        /// BindableProperty type of AcceptCommand. AcceptCommand is to be executed when Accept
+        /// BindableProperty. Identifies the AcceptCommand bindable property. AcceptCommand is executed when the Accept button is pressed.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty AcceptCommandProperty = BindableProperty.CreateAttached("AcceptCommand", typeof(ICommand), typeof(ConfirmPopupEffect), null);
         /// <summary>
-        /// BindableProperty type of AcceptCommandParameter
+        /// BindableProperty. Identifies the AcceptCommandParameter bindable property.
         /// </summary>
-        public static BindableProperty AcceptCommandParameterProperty = BindableProperty.CreateAttached("AcceptCommand", typeof(object), typeof(ConfirmPopupEffect), null);
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty AcceptCommandParameterProperty = BindableProperty.CreateAttached("AcceptCommandParameter", typeof(object), typeof(ConfirmPopupEffect), null);
 
         /// <summary>
-        /// BindableProperty type of CancelText. CancelText is to use as Cancel button
+        /// BindableProperty. Identifies the CancelText bindable property. CancelText is to use as Cancel button
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty CancelTextProperty = BindableProperty.CreateAttached("CancelText", typeof(string), typeof(ConfirmPopupEffect), null);
         /// <summary>
-        /// BindableProperty type of CancelCommand. CancelCommand is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
+        /// BindableProperty. Identifies the CancelCommand bindable property. CancelCommand is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty CancelCommandProperty = BindableProperty.CreateAttached("CancelCommand", typeof(ICommand), typeof(ConfirmPopupEffect), null);
         /// <summary>
-        /// BindableProperty type of CancelCommandParameter
+        /// BindableProperty. Identifies the CancelCommandParameter bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty CancelCommandParameterProperty = BindableProperty.CreateAttached("CancelCommandParameter", typeof(object), typeof(ConfirmPopupEffect), null);
 
         /// <summary>
-        /// BindableProperty type of ConfirmVisibility. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
+        /// BindableProperty. Identifies the ConfirmVisibility bindable property. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty ConfirmVisibilityProperty = BindableProperty.CreateAttached("ConfirmVisibility", typeof(bool), typeof(ConfirmPopupEffect), false);
 
         /// <summary>
-        /// BindableProperty type of PositionOption
+        /// BindableProperty. Identifies the PositionOption bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty PositionOptionProperty = BindableProperty.CreateAttached("PositionOption", typeof(PositionOption), typeof(ConfirmPopupEffect), PositionOption.BottomOfView);
         /// <summary>
-        /// BindableProperty type of Offset. Offset is a value applied according to PositionOption. 0,0 The start position is the tip of the popup
+        /// BindableProperty. Identifies the Offset bindable property. Offset is a value of how far to move from the base tap position represented by the PositionOption type. If it isn't set, it returns 0,0.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static BindableProperty OffsetProperty = BindableProperty.CreateAttached("Offset", typeof(Point), typeof(ConfirmPopupEffect), default(Point));
 
         /// <summary>
-        /// Get Accept Text
+        /// Gets text of Accept button
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Text of Accept button</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static string GetAcceptText(BindableObject obj) => (string)obj.GetValue(AcceptTextProperty);
         /// <summary>
-        /// Set Accept Text
+        /// Sets text of Accept button
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">Accept Text</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Text of Accept button</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetAcceptText(BindableObject obj, string value) => obj.SetValue(AcceptTextProperty, value);
         /// <summary>
-        /// Get AcceptCommand. AcceptCommand is to be executed when Accept
+        /// Gets command that is executed when the Accept button is pressed.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Command of Accept button</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static ICommand GetAcceptCommand(BindableObject obj) => (ICommand)obj.GetValue(AcceptCommandProperty);
         /// <summary>
-        /// Set AcceptCommand. AcceptCommand is to be executed when Accept
+        /// Sets command that is executed when the Accept button is pressed.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">AcceptCommand</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Command of Accept button</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetAcceptCommand(BindableObject obj, ICommand value) => obj.SetValue(AcceptCommandProperty, value);
         /// <summary>
-        /// Get AcceptCommand Parameter
+        /// Gets command paramter that is executed when the Accept button is pressed.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Command parameter of Accept button</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static object GetAcceptCommandParameter(BindableObject obj) => obj.GetValue(AcceptCommandParameterProperty);
         /// <summary>
-        /// Set AcceptCommand Parameter
+        /// Sets command parameter that is executed when the Accept button is pressed.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">AcceptCommand Parameter</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Command parameter of Accept button</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetAcceptCommandParameter(BindableObject obj, object value) => obj.SetValue(AcceptCommandParameterProperty, value);
 
         /// <summary>
-        /// Get CancelText
+        /// Gets text of Cancel button
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Text of Cancel button</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static string GetCancelText(BindableObject obj) => (string)obj.GetValue(CancelTextProperty);
         /// <summary>
-        /// Set CancelText
+        /// Sets text of Cancel button
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">CancelText</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Text of Cancel button</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetCancelText(BindableObject obj, string value) => obj.SetValue(CancelTextProperty, value);
         /// <summary>
-        /// Get CancelCommand. CancelCommand is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
+        /// Gets command that is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Command of Cancel button</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static ICommand GetCancelCommand(BindableObject obj) => (ICommand)obj.GetValue(CancelCommandProperty);
         /// <summary>
-        /// Set CancelCommand. CancelCommand is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
+        /// Sets command that is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">CancelCommand</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Command of Cancel button</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetCancelCommand(BindableObject obj, ICommand value) => obj.SetValue(CancelCommandProperty, value);
         /// <summary>
-        /// Get CancelCommandParameter
+        /// Gets command paramter that is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Command parameter of Cancel button</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static object GetCancelCommandParameter(BindableObject obj) => obj.GetValue(CancelCommandParameterProperty);
         /// <summary>
-        /// Set CancelCommandParameter
+        /// Sets command paramter that is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">CancelCommandParameter</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Command parameter of Cancel button</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetCancelCommandParameter(BindableObject obj, object value) => obj.SetValue(CancelCommandParameterProperty, value);
 
         /// <summary>
-        /// Get visibility of Confirmation popup. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
+        /// Gets visibility of Confirmation popup. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Visibility of Confirmation popup</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static bool GetConfirmVisibility(BindableObject obj) => (bool)obj.GetValue(ConfirmVisibilityProperty);
         /// <summary>
-        /// Set visibility of Confirmation popup. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
+        /// Sets visibility of Confirmation popup. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">visibility</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Visibility of Confirmation popup</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetConfirmVisibility(BindableObject obj, bool value) => obj.SetValue(ConfirmVisibilityProperty, value);
 
         /// <summary>
-        /// Get Position type of popup
+        /// Gets position type of popup
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>Position type of popup</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static PositionOption GetPositionOption(BindableObject obj) => (PositionOption)obj.GetValue(PositionOptionProperty);
         /// <summary>
-        /// Set Position type of popup
+        /// Sets position type of popup
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">Position type</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">Position type of popup</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetPositionOption(BindableObject obj, PositionOption value) => obj.SetValue(PositionOptionProperty, value);
 
         /// <summary>
-        /// Get offset. Offset is a value applied according to PositionOption. 0,0 The start position is the tip of the popup
+        /// Gets offset. Offset is a value of how far to move from the base tap position represented by the PositionOption type. If it isn't set, it returns 0,0.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <returns></returns>
+        /// <param name="obj">Binded object</param>
+        /// <returns>A value of how far to move from the base tap position represented by the PositionOption type</returns>
+        /// <since_tizen> 4 </since_tizen>
         public static Point GetOffset(BindableObject obj) => (Point)obj.GetValue(OffsetProperty);
         /// <summary>
-        /// Set offset. Offset is a value applied according to PositionOption. 0,0 The start position is the tip of the popup
+        /// Sets offset. Offset is a value of how far to move from the base tap position represented by the PositionOption type.
         /// </summary>
-        /// <param name="obj">binded object</param>
-        /// <param name="value">offset</param>
+        /// <param name="obj">Binded object</param>
+        /// <param name="value">A value of how far to move from the base tap position represented by the PositionOption type</param>
+        /// <since_tizen> 4 </since_tizen>
         public static void SetOffset(BindableObject obj, Point value) => obj.SetValue(OffsetProperty, value);
 
         /// <summary>
         /// Creates and initializes a new instance of the ConfirmPopupEffect class
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public ConfirmPopupEffect() : base("CircleUI.ConfirmPopupEffect")
         {
         }
     }
 
     /// <summary>
-    /// Position type of popup
+    /// Enumeration for position type of popup
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public enum PositionOption
     {
         /// <summary>
@@ -189,7 +219,7 @@ namespace Xamarin.Forms.CircularUI
         /// </summary>
         Absolute,
         /// <summary>
-        /// set Offset.X * Window.Width, Offset.Y * Window.Height.
+        /// Set Offset.X * Window.Width, Offset.Y * Window.Height.
         /// </summary>
         Relative
     }

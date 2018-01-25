@@ -1,34 +1,41 @@
 ﻿namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// Extend Xamarin's Stepper with a View that represents the ElmSharp.Wearable.CircleSpinner.
+    /// The CircleStepper is a class that extends Xamarin.Forms.Stepper for Circular UI.
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class CircleStepper : Xamarin.Forms.Stepper, IRotaryFocusable
     {
         /// <summary>
-        /// BindableProperty type of Marker color moving in Bezel Action
+        /// BindableProperty. Identifies the MarkerColor bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty MarkerColorProperty = BindableProperty.Create(nameof(MarkerColor), typeof(Color), typeof(CircleStepper), Color.Default);
         /// <summary>
-        /// BindableProperty type of Marker's length moving in Bezel Action
+        /// BindableProperty. Identifies the MarkerLineWidth bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty MarkerLineWidthProperty = BindableProperty.Create(nameof(MarkerLineWidth), typeof(int), typeof(CircleStepper), 23);
         /// <summary>
-        /// BindableProperty type of the format in which the Value is shown
+        /// BindableProperty. Identifies the LabelFormat bindable property.
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty LabelFormatProperty = BindableProperty.Create(nameof(LabelFormat), typeof(string), typeof(CircleStepper), null);
 
         /// <summary>
-        /// Gets or sets Marker color moving in Bezel Action
+        /// Gets or sets Marker color
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public Color MarkerColor { get => (Color)GetValue(MarkerColorProperty); set => SetValue(MarkerColorProperty, value); }
         /// <summary>
-        /// Gets or sets length of the Marker moving in Bezel Action
+        /// Gets or sets length of Marker
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public int MarkerLineWidth { get => (int)GetValue(MarkerLineWidthProperty); set => SetValue(MarkerLineWidthProperty, value); }
         /// <summary>
         /// Gets or sets format in which Value is shown
         /// </summary>
+        /// <since_tizen> 4 </since_tizen>
         public string LabelFormat { get => (string)GetValue(LabelFormatProperty); set => SetValue(LabelFormatProperty, value); }
     }
 }

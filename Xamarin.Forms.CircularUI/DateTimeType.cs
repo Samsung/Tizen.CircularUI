@@ -1,16 +1,17 @@
 ﻿namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// style type of CircleDateTimeSelector
+    /// Enumeration for style type of CircleDateTimeSelector
     /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public enum DateTimeType
     {
         /// <summary>
-        /// style type of "timepicker/circle"
+        /// Style type of "timepicker/circle"
         /// </summary>
         Time,
         /// <summary>
-        /// style type of "datepicker/circle"
+        /// Style type of "datepicker/circle"
         /// </summary>
         Date
     }
