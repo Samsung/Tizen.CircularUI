@@ -9,7 +9,7 @@
     }
 
     /// <summary>
-    /// IRotaryEventReceiver is an interface to take Rotary Events
+    /// The IRotaryEventReceiver is a receiver interface to take Rotary Events
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
     public interface IRotaryEventReceiver : IRotaryFocusable

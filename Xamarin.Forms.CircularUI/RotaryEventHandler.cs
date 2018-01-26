@@ -3,7 +3,7 @@
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// Represents a triggering rotary event
+    /// Delegate for a triggering rotary event
     /// </summary>
     /// <param name="args">Rotated direction of Rotary device</param>
     /// <since_tizen> 4 </since_tizen>
