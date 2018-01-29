@@ -171,20 +171,19 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 prev = obj;
             }
 
-            _surfaceLayout.Geometry = rect;
-            _surfaceLayout.StackAbove(prev);
-
             var btnRect = _actionButton.Geometry;
             var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
             var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
             var btnX = (rect.Width - btnW) / 2;
             var btnY = rect.Height - btnH;
             _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
+            _actionButton.StackAbove(prev);
 
-            _actionButton.StackAbove(_surfaceLayout);
+            _surfaceLayout.Geometry = rect;
+            _surfaceLayout.StackAbove(_actionButton);
 
             _moreOption.Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
-            _moreOption.StackAbove(_actionButton);
+            _moreOption.StackAbove(_surfaceLayout);
         }
 
         void UpdateBackground()
