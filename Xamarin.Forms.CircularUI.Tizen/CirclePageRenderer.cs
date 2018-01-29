@@ -57,7 +57,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     toolbarItems.CollectionChanged += OnToolbarItemChanged;
                 var circleSurfaceItems = e.NewElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
                 if (circleSurfaceItems != null)
+                {
                     circleSurfaceItems.CollectionChanged += OnCircleSurfaceItemsChanged;
+
+                    foreach (var item in circleSurfaceItems)
+                    {
+                        AddCircleSurfaceItem(item);
+                    }
+                }
             }
             if (e.OldElement != null)
             {
@@ -111,7 +118,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
             _bgColorObject = new ElmSharp.Rectangle(_box)
             {
                 Color = ElmSharp.Color.Transparent
-                //Color = new ElmSharp.Color(0xff, 0, 0, 0xa0)
             };
             _bgImageObject = new EvasImage(_box);
             _surfaceLayout = new ElmSharp.Layout(_box);
@@ -201,6 +207,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
                 _actionButton.Text = Element.ActionButton.Text;
                 _actionButton.IsEnabled = Element.ActionButton.IsEnable;
+                if (Element.ActionButton.Icon != null)
+                {
+                    var path = ResourcePath.GetPath(Element.ActionButton.Icon);
+                    var buttonImage = new ElmSharp.Image(_actionButton);
+                    buttonImage.LoadAsync(path);
+                    buttonImage.Show();
+                    _actionButton.SetPartContent("elm.swallow.content", buttonImage);
+                }
                 if (Element.ActionButton.IsVisible)
                     _actionButton.Show();
                 else
@@ -233,7 +247,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             if (Element.ActionButton != null)
             {
-                Element.ActionButton.Command.Execute(Element.ActionButton.CommandParameter);
+                Element.ActionButton.Activate();
             }
         }
         void OnToolbarItemChanged(object sender, NotifyCollectionChangedEventArgs e)

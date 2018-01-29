@@ -73,7 +73,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         void OnLayoutUpdated(object sender, Platform.Tizen.Native.LayoutEventArgs e)
         {
-            DoLayout(e);
+            Element.Layout(e.Geometry.ToDP());
         }
 
         void UpdateBackgroundImage(bool initialize)
