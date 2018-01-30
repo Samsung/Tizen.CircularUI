@@ -55,6 +55,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         public void AddSource(IEnumerable source)
         {
+            UpdateHeader();
             foreach (var data in source)
             {
                 var groupList = data as GroupList;
@@ -71,7 +72,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     AddItem(data as Cell, null);
                 }
             }
-            UpdateHeader();
             UpdateFooter();
         }
         public void AddSource(IEnumerable source, Cell before)
