@@ -122,35 +122,27 @@ namespace Xamarin.Forms.CircularUI.Tizen
             _bgImageObject = new EvasImage(_box);
             _surfaceLayout = new ElmSharp.Layout(_box);
             _surface = new ElmSharp.Wearable.CircleSurface(_surfaceLayout);
-            _actionButton = new ElmSharp.Button(_box)
-            {
-                Style = "bottom"
-            };
-            _actionButton.Clicked += OnActionButtonClicked;
 
-            _moreOption = new ElmSharp.Wearable.MoreOption(_box);
-            _moreOption.Clicked += OnMoreOptionClicked;
-            _moreOption.Opened += ToolbarOpened;
-            _moreOption.Closed += ToolbarClosed;
+
             _toolbarItemMap = new Dictionary<ToolbarItem, ElmSharp.Wearable.MoreOptionItem>();
             _circleSurfaceItems = new Dictionary<ICircleSurfaceItem, ICircleWidget>();
 
             _box.PackEnd(_bgColorObject);
             _box.PackEnd(_bgImageObject);
-            _box.PackEnd(_actionButton);
             _box.PackEnd(_surfaceLayout);
-            _box.PackEnd(_moreOption);
 
             _bgColorObject.Show();
             _bgImageObject.Hide();
             _surfaceLayout.Show();
 
-            foreach (var item in Element.ToolbarItems)
+            if (Element.ToolbarItems.Count > 0)
             {
-                AddToolbarItem(item);
+                SetVisibleMoreOption(true);
+                foreach (var item in Element.ToolbarItems)
+                {
+                    AddToolbarItem(item);
+                }
             }
-            if (Element.ToolbarItems.Count > 0) _moreOption.Show();
-            else _moreOption.Hide();
 
             SetNativeView(_box);
         }
@@ -171,19 +163,27 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 prev = obj;
             }
 
-            var btnRect = _actionButton.Geometry;
-            var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
-            var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
-            var btnX = (rect.Width - btnW) / 2;
-            var btnY = rect.Height - btnH;
-            _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
-            _actionButton.StackAbove(prev);
+            if (_actionButton != null)
+            {
+                var btnRect = _actionButton.Geometry;
+                var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
+                var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
+                var btnX = (rect.Width - btnW) / 2;
+                var btnY = rect.Height - btnH;
+                _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
+                _actionButton.StackAbove(prev);
+                prev = _actionButton;
+            }
 
             _surfaceLayout.Geometry = rect;
-            _surfaceLayout.StackAbove(_actionButton);
+            _surfaceLayout.StackAbove(prev);
+            prev = _surfaceLayout;
 
-            _moreOption.Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
-            _moreOption.StackAbove(_surfaceLayout);
+            if (_moreOption != null)
+            {
+                _moreOption.Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+                _moreOption.StackAbove(prev);
+            }
         }
 
         void UpdateBackground()
@@ -203,6 +203,8 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
             if (Element.ActionButton != null)
             {
+                SetVisibleActionButton(Element.ActionButton.IsVisible);
+
                 Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
                 _actionButton.Text = Element.ActionButton.Text;
                 _actionButton.IsEnabled = Element.ActionButton.IsEnable;
@@ -214,10 +216,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     buttonImage.Show();
                     _actionButton.SetPartContent("elm.swallow.content", buttonImage);
                 }
-                if (Element.ActionButton.IsVisible)
-                    _actionButton.Show();
-                else
-                    _actionButton.Hide();
             }
         }
         void OnActionButtonItemChanged(object sender, PropertyChangedEventArgs e)
@@ -232,14 +230,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
             else if (e.PropertyName == ActionButtonItem.IsVisibleProperty.PropertyName)
             {
-                if (Element.ActionButton.IsVisible)
-                {
-                    _actionButton.Show();
-                }
-                else
-                {
-                    _actionButton.Hide();
-                }
+                SetVisibleActionButton(Element.ActionButton.IsVisible);
             }
         }
         void OnActionButtonClicked(object sender, EventArgs e)
@@ -251,6 +242,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
         }
         void OnToolbarItemChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
+            SetVisibleMoreOption(Element.ToolbarItems.Count > 0);
             if (e.Action == NotifyCollectionChangedAction.Add ||
                 e.Action == NotifyCollectionChangedAction.Replace)
             {
@@ -260,14 +252,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 e.Action == NotifyCollectionChangedAction.Replace)
             {
                 foreach (ToolbarItem item in e.OldItems) RemoveToolbarITem(item);
-            }
-            if (Element.ToolbarItems.Count > 0)
-            {
-                _moreOption.Show();
-            }
-            else
-            {
-                _moreOption.Hide();
             }
         }
         void AddToolbarItem(ToolbarItem item)
@@ -434,7 +418,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             return rotaryWidget;
         }
 
-        public ICircleWidget GetCircleWidget(ICircleSurfaceItem item)
+        ICircleWidget GetCircleWidget(ICircleSurfaceItem item)
         {
             ElmSharp.Wearable.ICircleWidget widget;
             if (_circleSurfaceItems.TryGetValue(item, out widget))
@@ -442,6 +426,35 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 return widget;
             }
             return null;
+        }
+
+        void SetVisibleActionButton(bool visible)
+        {
+            if (_actionButton == null)
+            {
+                _actionButton = new ElmSharp.Button(_box)
+                {
+                    Style = "bottom"
+                };
+                _actionButton.Clicked += OnActionButtonClicked;
+                _box.PackEnd(_actionButton);
+            }
+            if (visible) _actionButton.Show();
+            else _actionButton.Hide();
+        }
+
+        void SetVisibleMoreOption(bool visible)
+        {
+            if (_moreOption == null)
+            {
+                _moreOption = new ElmSharp.Wearable.MoreOption(_box);
+                _moreOption.Clicked += OnMoreOptionClicked;
+                _moreOption.Opened += ToolbarOpened;
+                _moreOption.Closed += ToolbarClosed;
+                _box.PackEnd(_moreOption);
+            }
+            if (visible) _moreOption.Show();
+            else _moreOption.Hide();
         }
 
         class NBox : ElmSharp.Box, IContainable<EvasObject>
