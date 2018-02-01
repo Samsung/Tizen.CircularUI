@@ -30,7 +30,6 @@
             <Label
                 AbsoluteLayout.LayoutBounds="0.8, 0.5, 0.25, 0.25"
                 AbsoluteLayout.LayoutFlags="All"
-                BackgroundColor="White"
                 HorizontalOptions="End"
                 Text="T3"
                 TextColor="Black" />

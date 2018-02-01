@@ -24,31 +24,30 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
      public static readonly BindableProperty DateTimeProperty;
      public static readonly BindableProperty MaximumDateProperty;
      public static readonly BindableProperty MinimumDateProperty;
+     public static readonly BindableProperty IsVisibleOfYearProperty;
+     public static readonly BindableProperty IsVisibleOfMonthProperty;
+     public static readonly BindableProperty IsVisibleOfDateProperty;
+     public static readonly BindableProperty IsVisibleOfHourProperty;
+     public static readonly BindableProperty IsVisibleOfMinuteProperty;
+     public static readonly BindableProperty IsVisibleOfAmPmProperty;
 
      public Color MarkerColor { get; set; }
      public DateTimeType ValueType { get; set; }
      public DateTime DateTime { get; set; }
      public DateTime MaximumDate { get; set; }
      public DateTime MinimumDate { get; set; }
-
-     public void SetFieldLimit(DateTimeFieldType type, int minimum, int maximum);
-     public void SetFieldVisibility(DateTimeFieldType type, bool visible);
+     public bool IsVisibleOfYear { get; set; }
+     public bool IsVisibleOfMonth { get; set; }
+     public bool IsVisibleOfDate { get; set; }
+     public bool IsVisibleOfHour { get; set; }
+     public bool IsVisibleOfMinute { get; set; }
+     public bool IsVisibleOfAmPm { get; set; }
  }
 
  public enum DateTimeType
  {
      Time,
      Date
- }
-
- public enum DateTimeFieldType
- {
-     Year,
-     Month,
-     Date,
-     Hour,
-     Minute,
-     AmPm
  }
 
  ```
@@ -62,6 +61,12 @@ CircleDatePicker와 `CircleTimePicker`의 Class Diagram은 아래와 같다.
 * DateTime : 날짜/시간을 가져오거나, 설정한다.
 * MaximumDate : ValueType이 Date일때, 최대 날짜를 가져오거나 설정한다.
 * MimimumDate : ValueType이 Date일때, 최소 날짜를 가져오거나 설정한다.
+* IsVisibleOfYear : 년도항목이 보여질지 여부를 설정한다.
+* IsVisibleOfMonth : 날짜의 월항목이 보여질지 여부를 설정한다.
+* IsVisibleOfDate : 날짜의 일자항목이 보여질지 여부를 설정한다.
+* IsVisibleOfHour : 시간의 시항목이 보여질지 여부를 설정한다.
+* IsVisibleOfMinute : 시간의 분항목이 보여질지 여부를 설정한다.
+* IsVisibleOfAmPm : 시간의 AM/PM항목이 보여질지 여부를 설정한다.
 
 각 Picker는 다음과 같은 Scene Graph를 가진다.
 

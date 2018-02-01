@@ -6,13 +6,15 @@ using System.Text;
 using Xamarin.Forms.CircularUI;
 using Xamarin.Forms.Platform.Tizen;
 using ElmSharp;
+using EDateTimeFieldType = ElmSharp.DateTimeFieldType;
+using ECircleDateTimeSelector = ElmSharp.Wearable.CircleDateTimeSelector;
 
 [assembly: ExportRenderer(typeof(Xamarin.Forms.CircularUI.CircleDateTimeSelector), typeof(Xamarin.Forms.CircularUI.Tizen.CircleDateTimeSelectorRenderer))]
 
 
 namespace Xamarin.Forms.CircularUI.Tizen
 {
-    public class CircleDateTimeSelectorRenderer : ViewRenderer<CircleDateTimeSelector, ElmSharp.Wearable.CircleDateTimeSelector>
+    public class CircleDateTimeSelectorRenderer : ViewRenderer<CircleDateTimeSelector, ECircleDateTimeSelector>
     {
         public CircleDateTimeSelectorRenderer()
         {
@@ -21,6 +23,13 @@ namespace Xamarin.Forms.CircularUI.Tizen
             RegisterPropertyHandler(CircleDateTimeSelector.DateTimeProperty, UpdateDateTime);
             RegisterPropertyHandler(CircleDateTimeSelector.MaximumDateProperty, UpdateMaximum);
             RegisterPropertyHandler(CircleDateTimeSelector.MinimumDateProperty, UpdateMinimum);
+
+            RegisterPropertyHandler(CircleDateTimeSelector.IsVisibleOfYearProperty, UpdateFieldVisibilityOfYear);
+            RegisterPropertyHandler(CircleDateTimeSelector.IsVisibleOfMonthProperty, UpdateFieldVisibilityOfMonth);
+            RegisterPropertyHandler(CircleDateTimeSelector.IsVisibleOfDateProperty, UpdateFieldVisibilityOfDate);
+            RegisterPropertyHandler(CircleDateTimeSelector.IsVisibleOfHourProperty, UpdateFieldVisibilityOfHour);
+            RegisterPropertyHandler(CircleDateTimeSelector.IsVisibleOfMinuteProperty, UpdateFieldVisibilityOfMinute);
+            RegisterPropertyHandler(CircleDateTimeSelector.IsVisibleOfAmPmProperty, UpdateFieldVisibilityOfAmPm);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircleDateTimeSelector> e)
@@ -30,7 +39,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    SetNativeControl(new ElmSharp.Wearable.CircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
+                    SetNativeControl(new ECircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
                     Control.DateTimeChanged += OnDateTimeChanged;
                 }
                 else
@@ -51,7 +60,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             return new ElmSharp.Size(300, 290);
         }
 
-        void UpdateMinimum(bool initialize)
+        void UpdateMinimum()
         {
             if (null != Control && null != Element)
             {
@@ -59,7 +68,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
         }
 
-        void UpdateMaximum(bool initialize)
+        void UpdateMaximum()
         {
             if (null != Control && null != Element)
             {
@@ -67,7 +76,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
         }
 
-        void UpdateDateTime(bool initialize)
+        void UpdateDateTime()
         {
             if (null != Control && null != Element && Element.DateTime != Control.DateTime)
             {
@@ -75,7 +84,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
         }
 
-        void UpdateValueType(bool initializej)
+        void UpdateValueType()
         {
             if (null != Control && null != Element)
             {
@@ -91,7 +100,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
         }
 
-        void UpdateMarkerColor(bool initialize)
+        void UpdateMarkerColor()
         {
             if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
@@ -104,6 +113,54 @@ namespace Xamarin.Forms.CircularUI.Tizen
             if (null != Control && null != Element)
             {
                 Element.DateTime = Control.DateTime;
+            }
+        }
+
+        void UpdateFieldVisibilityOfYear()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetFieldVisible(EDateTimeFieldType.Year, Element.IsVisibleOfYear);
+            }
+        }
+
+        void UpdateFieldVisibilityOfMonth()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetFieldVisible(EDateTimeFieldType.Month, Element.IsVisibleOfMonth);
+            }
+        }
+
+        void UpdateFieldVisibilityOfDate()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetFieldVisible(EDateTimeFieldType.Date, Element.IsVisibleOfDate);
+            }
+        }
+
+        void UpdateFieldVisibilityOfHour()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetFieldVisible(EDateTimeFieldType.Hour, Element.IsVisibleOfHour);
+            }
+        }
+
+        void UpdateFieldVisibilityOfMinute()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetFieldVisible(EDateTimeFieldType.Minute, Element.IsVisibleOfMinute);
+            }
+        }
+
+        void UpdateFieldVisibilityOfAmPm()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetFieldVisible(EDateTimeFieldType.AmPm, Element.IsVisibleOfAmPm);
             }
         }
     }

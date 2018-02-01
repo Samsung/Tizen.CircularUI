@@ -70,34 +70,34 @@ package "Extension.Wearable" {
         {static} +DateTimeProperty
         {static} +MaximumDateProperty
         {static} +MinimumDateProperty
+        {static} +IsVisibleOfYearProperty
+        {static} +IsVisibleOfMonthProperty
+        {static} +IsVisibleOfDateProperty
+        {static} +IsVisibleOfHourProperty
+        {static} +IsVisibleOfMinuteProperty
+        {static} +IsVisibleOfAmPmProperty
+
         --Property--
         +MarkerColor: Color
         +ValueType: DateTimeType
         +DateTime: DateTime
         +MaximumDate: DateTime
         +MinimumDate: DateTime
-        --Method--
-        + SetFieldLimit(DateTimeFieldType type, int minimum, int maximum)
-        + SetFieldVisibility(DateTimeFieldType type, bool visible)
+        +IsVisibleOfYear: bool
+        +IsVisibleOfMonth: bool
+        +IsVisibleOfDate: bool
+        +IsVisibleOfHour: bool
+        +IsVisibleOfMinute: bool
+        +IsVisibleOfAmPm: bool
     }
     enum DateTimeType {
         Time,
         Date
     }
 
-    enum DateTimeFieldType {
-        Year,
-        Month,
-        Date,
-        Hour,
-        Minute,
-        AmPm
-    }
-
     CircleDateTimeSelector -u-|> View
     CircleDateTimeSelector -u-|> IRotaryFocusable
     CircleDateTimeSelector *-d- DateTimeType
-    CircleDateTimeSelector *-d- DateTimeFieldType
 }
 
 package "Extension.Wearable.Renderer" {

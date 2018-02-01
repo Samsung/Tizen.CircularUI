@@ -37,6 +37,37 @@ namespace Xamarin.Forms.CircularUI
         public static readonly BindableProperty MinimumDateProperty = BindableProperty.Create(nameof(MinimumDate), typeof(DateTime), typeof(CircleDateTimeSelector), new DateTime(1900, 1, 1));
 
         /// <summary>
+        /// BindableProperty. Identifies the IsVisibleOfYear bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty IsVisibleOfYearProperty = BindableProperty.Create(nameof(IsVisibleOfYear), typeof(bool), typeof(CircleDateTimeSelector), true);
+        /// <summary>
+        /// BindableProperty. Identifies the IsVisibleOfMonth bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty IsVisibleOfMonthProperty = BindableProperty.Create(nameof(IsVisibleOfMonth), typeof(bool), typeof(CircleDateTimeSelector), true);
+        /// <summary>
+        /// BindableProperty. Identifies the IsVisibleOfDate bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty IsVisibleOfDateProperty = BindableProperty.Create(nameof(IsVisibleOfDate), typeof(bool), typeof(CircleDateTimeSelector), true);
+        /// <summary>
+        /// BindableProperty. Identifies the IsVisibleOfHour bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty IsVisibleOfHourProperty = BindableProperty.Create(nameof(IsVisibleOfHour), typeof(bool), typeof(CircleDateTimeSelector), true);
+        /// <summary>
+        /// BindableProperty. Identifies the IsVisibleOfMinute bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty IsVisibleOfMinuteProperty = BindableProperty.Create(nameof(IsVisibleOfMinute), typeof(bool), typeof(CircleDateTimeSelector), true);
+        /// <summary>
+        /// BindableProperty. Identifies the IsVisibleOfAmPm bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static BindableProperty IsVisibleOfAmPmProperty = BindableProperty.Create(nameof(IsVisibleOfAmPm), typeof(bool), typeof(CircleDateTimeSelector), true);
+
+        /// <summary>
         /// Gets or sets Marker color
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -61,5 +92,60 @@ namespace Xamarin.Forms.CircularUI
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public DateTime MinimumDate { get => (DateTime)GetValue(MinimumDateProperty); set => SetValue(MinimumDateProperty, value); }
+
+        /// <summary>
+        /// Gets or sets a boolean value that indicates whether the year field type is visible.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsVisibleOfYear
+        {
+            get => (bool)GetValue(IsVisibleOfYearProperty);
+            set => SetValue(IsVisibleOfYearProperty, value);
+        }
+        /// <summary>
+        /// Gets or sets a boolean value that indicates whether the month field type is visible.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsVisibleOfMonth
+        {
+            get => (bool)GetValue(IsVisibleOfMonthProperty);
+            set => SetValue(IsVisibleOfMonthProperty, value);
+        }
+        /// <summary>
+        /// Gets or sets a boolean value that indicates whether the date field type is visible.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsVisibleOfDate
+        {
+            get => (bool)GetValue(IsVisibleOfDateProperty);
+            set => SetValue(IsVisibleOfDateProperty, value);
+        }
+        /// <summary>
+        /// Gets or sets a boolean value that indicates whether the hour field type is visible.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsVisibleOfHour
+        {
+            get => (bool)GetValue(IsVisibleOfHourProperty);
+            set => SetValue(IsVisibleOfHourProperty, value);
+        }
+        /// <summary>
+        /// Gets or sets a boolean value that indicates whether the minute field type is visible.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsVisibleOfMinute
+        {
+            get => (bool)GetValue(IsVisibleOfMinuteProperty);
+            set => SetValue(IsVisibleOfMinuteProperty, value);
+        }
+        /// <summary>
+        /// Gets or sets a boolean value that indicates whether the AmPm field type is visible.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsVisibleOfAmPm
+        {
+            get => (bool)GetValue(IsVisibleOfAmPmProperty);
+            set => SetValue(IsVisibleOfAmPmProperty, value);
+        }
     }
 }
