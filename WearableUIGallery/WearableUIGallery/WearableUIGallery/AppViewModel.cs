@@ -27,6 +27,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
             TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadioList) });
             TCs.Add(new TCDescribe { Title = "Toast", Class = typeof(TCToast) });
+            TCs.Add(new TCDescribe { Title = "Performance", Class = typeof(TCPerformance) });
 
             // CircleStepper TCs
             CircleStepperTCs = new ObservableCollection<TCDescribe>();
