@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleTextWatchface.WatchfaceApplication"
+             xmlns:local="clr-namespace:SimpleTextWatchface">
+    <Application.MainPage>
+        <ContentPage BackgroundColor="Blue">
+            <ContentPage.Content>
+                <StackLayout BackgroundColor="Red">
+                    <BoxView Color="White" MinimumHeightRequest="50" MinimumWidthRequest="50"/>
+                    <Label Text="Watch!!!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{Binding Time, StringFormat='{0:hh\\:mm}'}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+                    <Button Text="Button!"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <BoxView Color="Green" MinimumHeightRequest="50" MinimumWidthRequest="50"/>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </Application.MainPage>
+</Application>
