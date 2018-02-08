@@ -17,7 +17,7 @@
             VerticalOptions="FillAndExpand">
             <w:CircleDateTimeSelector
                 x:Name="DateSelector"
-                IsVisibleOfDate="False"
+                IsVisibleOfDate="{Binding DateVisiblity}"
                 MaximumDate="1/1/2020"
                 MinimumDate="1/12/2015"
                 ValueType="Date" />
@@ -89,5 +89,10 @@
             Icon="{Binding Ringtone.Icon}"
             SubText="{Binding Ringtone.SubText}"
             Text="{Binding Ringtone.Text}" />
+        <w:CircleToolbarItem
+            Command="{Binding InVisible.Action}"
+            Icon="{Binding InVisible.Icon}"
+            SubText="{Binding InVisible.SubText}"
+            Text="{Binding InVisible.Text}" />
     </w:CirclePage.ToolbarItems>
 </w:CirclePage>

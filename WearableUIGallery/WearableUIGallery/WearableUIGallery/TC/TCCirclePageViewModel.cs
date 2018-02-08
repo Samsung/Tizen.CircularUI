@@ -22,6 +22,7 @@ namespace WearableUIGallery.TC
         bool _progressBarVisibility;
         bool _alertSliderVisibility;
         bool _ringtoneSliderVisibility;
+        bool _dateVisibility = true;
         string _rotaryFocusName = WidgetName.DateSelector;
 
         public double Progress
@@ -57,6 +58,17 @@ namespace WearableUIGallery.TC
             }
         }
 
+        public bool DateVisiblity
+        {
+            get => _dateVisibility;
+            set
+            {
+                if (_dateVisibility == value) return;
+                _dateVisibility = value;
+                OnPropertyChanged();
+            }
+        }
+
         public bool RingtoneSliderVisibility
         {
             get => _ringtoneSliderVisibility;
@@ -87,6 +99,7 @@ namespace WearableUIGallery.TC
         public ProgressCommand Shuffle { get; private set; }
         public ProgressCommand Alert { get; private set; }
         public ProgressCommand Ringtone { get; private set; }
+        public ProgressCommand InVisible { get; private set; }
 
         public bool Playing { get; set; }
         public bool KeepGoing { get; set; }
@@ -99,6 +112,7 @@ namespace WearableUIGallery.TC
             Shuffle = new ProgressCommand { Text = "Shuffle", SubText = "Carry on Random", Icon = "image/music_controller_btn_shuffle_on.png", Action = new Command(DoShuffle) };
             Alert = new ProgressCommand { Text = "Alert", SubText = "Alert volume", Icon = "image/icon_alert_sound.png", Action = new Command(DoAlertVolume) };
             Ringtone = new ProgressCommand { Text = "Ringtone", SubText = "Ringtone volume", Icon = "image/icon_ringtone_sound.png", Action = new Command(DoRingtoneVolume) };
+            InVisible = new ProgressCommand { Text = "InVisible", SubText = "InVisible DateSelector", Icon = "image/tw_ic_popup_btn_delete.png", Action = new Command(DoInVisibleDateSelector) };
             Playing = false;
             KeepGoing = false;
 
@@ -108,6 +122,7 @@ namespace WearableUIGallery.TC
                 RotaryFocusName = WidgetName.DateSelector;
                 AlertSliderVisibility = false;
                 RingtoneSliderVisibility = false;
+                DateVisiblity = true;
             });
         }
 
@@ -157,6 +172,13 @@ namespace WearableUIGallery.TC
             Console.WriteLine("DoRingtoneVolume!!");
             RingtoneSliderVisibility = true;
             RotaryFocusName = WidgetName.Ringtone;
+        }
+
+        void DoInVisibleDateSelector(object obj)
+        {
+            Console.WriteLine("DoInVisibleDateSelector!!");
+            DateVisiblity = !DateVisiblity;
+            RotaryFocusName = WidgetName.DateSelector;
         }
 
         bool UpdateProgress()
