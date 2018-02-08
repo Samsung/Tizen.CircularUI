@@ -113,7 +113,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
         {
             _box = new NBox(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
             _box.SetLayoutCallback(OnLayout);
-            var rect = _box.Geometry;
 
             _bgColorObject = new ElmSharp.Rectangle(_box)
             {

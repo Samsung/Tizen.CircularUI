@@ -14,7 +14,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
     public class RadioRenderer : ViewRenderer<Radio, ERadio>
     {
-        readonly Span _span = new Span();
         static Lazy<RadioGroupManager> s_GroupManager = new Lazy<RadioGroupManager>();
         int _changedCallbackDepth = 0;
 

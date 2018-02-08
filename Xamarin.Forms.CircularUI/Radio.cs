@@ -37,7 +37,7 @@ namespace Xamarin.Forms.CircularUI
     public class Radio : View
     {
         /// <summary>
-        /// BindableProperty. Identifies the IsSelected bindable property.
+        /// BindableProperty. Identifies the Value bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ValueProperty = BindableProperty.Create("Value", typeof(string), typeof(Radio), default(string));
