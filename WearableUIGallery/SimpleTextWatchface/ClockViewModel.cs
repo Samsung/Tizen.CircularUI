@@ -16,7 +16,7 @@ namespace SimpleTextWatchface
             get => _time;
             set
             {
-                if (_time != value) return;
+                if (_time == value) return;
                 _time = value;
                 OnPropertyChanged();
             }
