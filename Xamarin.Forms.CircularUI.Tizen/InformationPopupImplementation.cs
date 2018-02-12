@@ -205,16 +205,18 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     Style = "bottom"
                 };
 
-                string text = BottomButton.Text;
-                if (!string.IsNullOrEmpty(text))_bottomButton.Text = text;
+                if (!string.IsNullOrEmpty(BottomButton.Text))_bottomButton.Text = BottomButton.Text;
 
-                var iconPath = BottomButton.Icon.File;
-                if (!string.IsNullOrEmpty(iconPath))
+                if (BottomButton.Icon != null)
                 {
-                    var buttonImage = new ElmSharp.Image(_bottomButton);
-                    buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
-                    buttonImage.Show();
-                    _bottomButton.SetPartContent("elm.swallow.content", buttonImage);
+                    var iconPath = BottomButton.Icon.File;
+                    if (!string.IsNullOrEmpty(iconPath))
+                    {
+                        var buttonImage = new ElmSharp.Image(_bottomButton);
+                        buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
+                        buttonImage.Show();
+                        _bottomButton.SetPartContent("elm.swallow.content", buttonImage);
+                    }
                 }
 
                 _bottomButton.Clicked += (s, e) =>

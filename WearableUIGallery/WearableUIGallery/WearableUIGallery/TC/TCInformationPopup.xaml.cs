@@ -32,13 +32,11 @@ namespace WearableUIGallery.TC
 
             var bottomButton = new MenuItem()
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_check.png",
-                },
+                Text = "OK",
                 Command = new Command(() =>
                 {
                     Console.WriteLine("bottom button Command!!");
+                    _textButtonPopUp.Dismiss();
                 })
             };
 

@@ -21,7 +21,6 @@ namespace WearableUIGallery.TC
 
             var leftButton = new MenuItem()
             {
-                Text = "Share",
                 Icon = new FileImageSource
                 {
                     File = "image/b_option_list_icon_share.png",
@@ -29,12 +28,12 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("left button1 Command!!");
+                    _popUp1.Dismiss();
                 })
             };
 
             var rightButton = new MenuItem()
             {
-                Text = "Delete",
                 Icon = new FileImageSource
                 {
                     File = "image/b_option_list_icon_delete.png",
@@ -42,6 +41,7 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("right button1 Command!!");
+                    _popUp1.Dismiss();
                 })
             };
 
@@ -92,7 +92,6 @@ namespace WearableUIGallery.TC
 
             var leftButton2 = new MenuItem()
             {
-                Text = "OK",
                 Icon = new FileImageSource
                 {
                     File = "image/tw_ic_popup_btn_check.png",
@@ -100,12 +99,12 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("left button2 Command!!");
+                    _popUp2.Dismiss();
                 })
             };
 
             var rightButton2 = new MenuItem()
             {
-                Text = "Cancle",
                 Icon = new FileImageSource
                 {
                     File = "image/tw_ic_popup_btn_delete.png",
@@ -113,6 +112,7 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("right button2 Command!!");
+                    _popUp2.Dismiss();
                 })
             };
 

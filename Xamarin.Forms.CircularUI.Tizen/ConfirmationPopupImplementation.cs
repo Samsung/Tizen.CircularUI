@@ -199,13 +199,18 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     Style = "popup/circle/left"
                 };
 
-                var iconPath = FirstButton.Icon.File;
-                if (!string.IsNullOrEmpty(iconPath))
+                if (!string.IsNullOrEmpty(FirstButton.Text)) _firstButton.Text = FirstButton.Text;
+
+                if (FirstButton.Icon != null)
                 {
-                    var buttonImage = new ElmSharp.Image(_firstButton);
-                    buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
-                    buttonImage.Show();
-                    _firstButton.SetPartContent("elm.swallow.content", buttonImage);
+                    var iconPath = FirstButton.Icon.File;
+                    if (!string.IsNullOrEmpty(iconPath))
+                    {
+                        var buttonImage = new ElmSharp.Image(_firstButton);
+                        buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
+                        buttonImage.Show();
+                        _firstButton.SetPartContent("elm.swallow.content", buttonImage);
+                    }
                 }
 
                 _firstButton.Clicked += (s, e) =>
@@ -234,13 +239,18 @@ namespace Xamarin.Forms.CircularUI.Tizen
                     Style = "popup/circle/right"
                 };
 
-                var iconPath = SecondButton.Icon.File;
-                if (!string.IsNullOrEmpty(iconPath))
+                if (!string.IsNullOrEmpty(SecondButton.Text)) _secondButton.Text = SecondButton.Text;
+
+                if (FirstButton.Icon != null)
                 {
-                    var buttonImage = new ElmSharp.Image(_secondButton);
-                    buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
-                    buttonImage.Show();
-                    _secondButton.SetPartContent("elm.swallow.content", buttonImage);
+                    var iconPath = SecondButton.Icon.File;
+                    if (!string.IsNullOrEmpty(iconPath))
+                    {
+                        var buttonImage = new ElmSharp.Image(_secondButton);
+                        buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
+                        buttonImage.Show();
+                        _secondButton.SetPartContent("elm.swallow.content", buttonImage);
+                    }
                 }
 
                 _secondButton.Clicked += (s, e) =>
