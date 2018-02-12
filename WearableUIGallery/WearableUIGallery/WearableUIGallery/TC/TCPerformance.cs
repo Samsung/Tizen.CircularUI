@@ -24,6 +24,8 @@ namespace WearableUIGallery.TC
             }
         }
 
+        InformationPopup _popUp = null;
+
         IList<Data> _testData = new List<Data>();
         RenderCircleListView _listView;
         IGlobalScrollConfig GlobalScrollConfig = null;
@@ -83,6 +85,12 @@ namespace WearableUIGallery.TC
                 }),
             };
 
+            _popUp = new InformationPopup();
+            _popUp.BackButtonPressed += (s, e) =>
+            {
+                _popUp.Dismiss();
+            };
+
             // start performance check
             _listView.Changed += OnStartCalculator;
             _listView.ScrollStarted += OnStartCheckFps;
@@ -107,11 +115,8 @@ namespace WearableUIGallery.TC
 
             GlobalScrollConfig.BringInScrollFriction = _frameSet;
 
-            InformationPopup popup = new InformationPopup()
-            {
-                Text = string.Format("<span color=#FFFFFF , font_size=27> Entering Speed : {0:f1} msec<br>Animator FPS : {1:f1} fps<br>Evas FPS : {2:f1} fps</span>", _enteringSpeed, animatorFPS, frameFPS),
-            };
-            popup.Show();
+            _popUp.Text = string.Format("<span color=#FFFFFF , font_size=27> Entering Speed : {0:f1} msec<br>Animator FPS : {1:f1} fps<br>Evas FPS : {2:f1} fps</span>", _enteringSpeed, animatorFPS, frameFPS);
+            _popUp.Show();
         }
 
         private void OnStartCheckFps(object sender, EventArgs e)

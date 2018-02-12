@@ -63,7 +63,7 @@ namespace WearableUIGallery.TC
             _progressPopUp = new InformationPopup();
             _progressPopUp.Title = "Popup title";
             _progressPopUp.Text = "This is progress test";
-            _progressPopUp.IsProgressRuning = true;
+            _progressPopUp.IsProgressRunning = true;
 
             _progressPopUp.BackButtonPressed += (s, e) =>
             {

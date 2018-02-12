@@ -7,10 +7,10 @@ namespace Xamarin.Forms.CircularUI
     public class InformationPopup : BindableObject
     {
         /// <summary>
-        /// BindableProperty. Identifies the IsProgressRuning bindable property.
+        /// BindableProperty. Identifies the IsProgressRunning bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty IsProgressRuningProperty = BindableProperty.Create(nameof(IsProgressRuning), typeof(bool), typeof(InformationPopup), false);
+        public static readonly BindableProperty IsProgressRunningProperty = BindableProperty.Create(nameof(IsProgressRunning), typeof(bool), typeof(InformationPopup), false);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
@@ -51,7 +51,7 @@ namespace Xamarin.Forms.CircularUI
                 BackButtonPressed?.Invoke(this, EventArgs.Empty);
             };
 
-            SetBinding(IsProgressRuningProperty, new Binding(nameof(IsProgressRuning), mode: BindingMode.OneWayToSource, source: _popUp));
+            SetBinding(IsProgressRunningProperty, new Binding(nameof(IsProgressRunning), mode: BindingMode.OneWayToSource, source: _popUp));
             SetBinding(BottomButtonProperty, new Binding(nameof(BottomButton), mode: BindingMode.OneWayToSource, source: _popUp));
             SetBinding(TitleProperty, new Binding(nameof(Title), mode: BindingMode.OneWayToSource, source: _popUp));
             SetBinding(TextProperty, new Binding(nameof(Text), mode: BindingMode.OneWayToSource, source: _popUp));
@@ -61,10 +61,10 @@ namespace Xamarin.Forms.CircularUI
         /// Gets or sets progress visibility of the Popup.
         /// If this value is true. Popup displays circular progress and hides Title automatically.
         /// </summary>
-        public bool IsProgressRuning
+        public bool IsProgressRunning
         {
-            get { return (bool)GetValue(IsProgressRuningProperty); }
-            set { SetValue(IsProgressRuningProperty, value); }
+            get { return (bool)GetValue(IsProgressRunningProperty); }
+            set { SetValue(IsProgressRunningProperty, value); }
         }
 
         /// <summary>

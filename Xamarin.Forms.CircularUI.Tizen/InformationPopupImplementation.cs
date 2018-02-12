@@ -97,7 +97,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             BackButtonPressed?.Invoke(this, EventArgs.Empty);
         }
 
-        public bool IsProgressRuning
+        public bool IsProgressRunning
         {
             get
             {

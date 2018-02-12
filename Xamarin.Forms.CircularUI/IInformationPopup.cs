@@ -18,7 +18,7 @@ namespace Xamarin.Forms.CircularUI
         /// Gets or sets progress visibility of the Popup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        bool IsProgressRuning { get; set; }
+        bool IsProgressRunning { get; set; }
 
         /// <summary>
         /// Gets or sets bottom button of the Popup
