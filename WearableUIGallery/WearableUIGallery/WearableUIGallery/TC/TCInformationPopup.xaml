@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WearableUIGallery.TC.TCInformationPopup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Xamarin.Forms.CircularUI;assembly=Xamarin.Forms.CircularUI">
+    <ContentPage.Content>
+        <StackLayout Padding="0,30,0,0">
+            <Label
+                x:Name="label1"
+                HorizontalOptions="CenterAndExpand"
+                Text="Popup is not shown"
+                VerticalOptions="Start" />
+            <Button
+                x:Name="button1"
+                Clicked="OnButton1Clicked"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="text"
+                VerticalOptions="StartAndExpand"
+                WidthRequest="200" />
+            <Button
+                x:Name="button2"
+                Clicked="OnButton2Clicked"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="text button"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="200" />
+            <Button
+                x:Name="button3"
+                Clicked="OnButton3Clicked"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="process text"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="200" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

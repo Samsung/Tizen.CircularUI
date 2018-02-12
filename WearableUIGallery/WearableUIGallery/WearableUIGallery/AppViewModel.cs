@@ -20,13 +20,14 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
             TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
             TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPage) });
-            TCs.Add(new TCDescribe { Title = "Check", Class = typeof(TCCheck) });
-            TCs.Add(new TCDescribe { Title = "ContextPopup", Class = typeof(TCContextPopup) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
-            TCs.Add(new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) });
-            TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
-            TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadioList) });
+            TCs.Add(new TCDescribe { Title = "ContextPopup", Class = typeof(TCContextPopup) });
+            TCs.Add(new TCDescribe { Title = "ConfirmationPopup", Class = typeof(TCConfirmationPopup) });
+            TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
             TCs.Add(new TCDescribe { Title = "Toast", Class = typeof(TCToast) });
+            TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
+            TCs.Add(new TCDescribe { Title = "Check", Class = typeof(TCCheck) });
+            TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadioList) });
             TCs.Add(new TCDescribe { Title = "Performance", Class = typeof(TCPerformance) });
 
             // CircleStepper TCs

@@ -107,7 +107,7 @@ namespace WearableUIGallery.TC
 
             GlobalScrollConfig.BringInScrollFriction = _frameSet;
 
-            DefaultPopup popup = new DefaultPopup()
+            InformationPopup popup = new InformationPopup()
             {
                 Text = string.Format("<span color=#FFFFFF , font_size=27> Entering Speed : {0:f1} msec<br>Animator FPS : {1:f1} fps<br>Evas FPS : {2:f1} fps</span>", _enteringSpeed, animatorFPS, frameFPS),
             };

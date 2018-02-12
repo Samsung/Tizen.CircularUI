@@ -3,7 +3,7 @@
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// The TwoButtonPopup describe pop-up which has circular two button, title, text, and content area.
+    /// The ConfirmationPopup describe pop-up which has circular two button, title, text, and content area.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
     /// <example>
@@ -22,7 +22,7 @@ namespace Xamarin.Forms.CircularUI
     ///     Command = new Command(() => { ... })
     /// };
     ///
-    /// var popup = new TwoButtonPopup();
+    /// var popup = new ConfirmationPopup();
     /// popup.FirstButton = leftButton;
     /// popup.SecondButton = rightButton;
     /// popup.Title = "Popup title";
@@ -44,39 +44,39 @@ namespace Xamarin.Forms.CircularUI
     /// };
     /// </code>
     /// </example>
-    public class TwoButtonPopup : BindableObject
+    public class ConfirmationPopup : BindableObject
     {
         /// <summary>
         /// BindableProperty. Identifies the content bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(TwoButtonPopup), null);
+        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ConfirmationPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(TwoButtonPopup), null);
+        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(ConfirmationPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(TwoButtonPopup), null);
+        public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(ConfirmationPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the first button bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
+        public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(ConfirmationPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the second button bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
+        public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(ConfirmationPopup), null);
 
-        IPopup _popUp = null;
+        IConfirmationPopup _popUp = null;
 
         /// <summary>
         /// Occurs when the device's back button is pressed.
@@ -85,12 +85,12 @@ namespace Xamarin.Forms.CircularUI
         public event EventHandler BackButtonPressed;
 
         /// <summary>
-        /// Creates and initializes a new instance of the TwoButtonPopup class.
+        /// Creates and initializes a new instance of the ConfirmationPopup class.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public TwoButtonPopup()
+        public ConfirmationPopup()
         {
-            _popUp = DependencyService.Get<IPopup>(DependencyFetchTarget.NewInstance);
+            _popUp = DependencyService.Get<IConfirmationPopup>(DependencyFetchTarget.NewInstance);
             if (_popUp == null)
             {
                 throw new Exception("Object reference not set to an instance of a Popup.");
@@ -159,7 +159,7 @@ namespace Xamarin.Forms.CircularUI
         }
 
         /// <summary>
-        /// Shows the TwoButtonPopup.
+        /// Shows the ConfirmationPopup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public void Show()
@@ -168,7 +168,7 @@ namespace Xamarin.Forms.CircularUI
         }
 
         /// <summary>
-        /// Dismisses the TwoButtonPopup.
+        /// Dismisses the ConfirmationPopup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public void Dismiss()

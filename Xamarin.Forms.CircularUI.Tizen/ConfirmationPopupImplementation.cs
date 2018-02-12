@@ -3,11 +3,11 @@ using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 using XForms = Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Tizen.TwoButtonPopupImplementation))]
+[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Tizen.ConfirmationPopupImplementation))]
 
 namespace Xamarin.Forms.CircularUI.Tizen
 {
-    public class TwoButtonPopupImplementation : IPopup, IDisposable
+    public class ConfirmationPopupImplementation : IConfirmationPopup, IDisposable
     {
         View _content;
         StackLayout _contentView;
@@ -26,7 +26,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         public event EventHandler BackButtonPressed;
 
-        public TwoButtonPopupImplementation()
+        public ConfirmationPopupImplementation()
         {
             _popUp = new ElmSharp.Popup(TForms.NativeParent);
             _popUp.Style = "circle";
@@ -40,7 +40,7 @@ namespace Xamarin.Forms.CircularUI.Tizen
             _contentView = new StackLayout();
         }
 
-        ~TwoButtonPopupImplementation()
+        ~ConfirmationPopupImplementation()
         {
             Dispose(false);
         }
@@ -53,7 +53,6 @@ namespace Xamarin.Forms.CircularUI.Tizen
 
         protected virtual void Dispose(bool disposing)
         {
-            //Console.WriteLine($"Dispose disposing->{disposing}, _isDisposed->{_isDisposed}, _firstButton->{_firstButton.ToString()}, _popUp->{_popUp.ToString()}");
             if (_isDisposed)
                 return;
 
@@ -176,12 +175,10 @@ namespace Xamarin.Forms.CircularUI.Tizen
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 var sizeRequest = _contentView.Measure(TForms.NativeParent.Geometry.Width, TForms.NativeParent.Geometry.Height).Request.ToPixel();
 
-                //Console.WriteLine($"_contentView.Platform ->{_contentView?.Platform}, renderer->{renderer?.ToString()}");
                 _nativeContent = renderer.NativeView;
                 _nativeContent.MinimumHeight = sizeRequest.Height;
 
                 _layout.SetPartContent("elm.swallow.content", _nativeContent, true);
-                //Console.WriteLine($"_nativeContent ->{_nativeContent}, sizeRequest->{sizeRequest.ToString()}");
             }
             else
             {

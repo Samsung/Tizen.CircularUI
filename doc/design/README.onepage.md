@@ -494,23 +494,25 @@ ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![TwoButtonPage Scene Graph](uml/TwoButtonPage_SceneGraph.png)
 
-# TwoButtonPopup
+# ConfirmationPopup
 
-![TwoButtonPopup design](data/TwoButtonPopup.png)
+![ConfirmationPopup design](data/ConfirmationPopup.png)
 
-`TwoButtonPopup`는 `ElmSharp.Popup`의 `two-button popup`형태를 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
+`ConfirmationPopup`는 `ElmSharp.Popup`의 `two-button popup`형태를 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
 
 
-![TwoButtonPopup Diagram](uml/TwoButtonPopup.png)
+![ConfirmationPopup Diagram](uml/ConfirmationPopup.png)
 
-TwoButtonPopup의 Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
+ConfirmationPopup Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
 
 ```C#
-public class TwoButtonPopup : BindableObject
+public class ConfirmationPopup : BindableObject
 {
     public static readonly BindableProperty TitleProperty;
     public static readonly BindableProperty TextProperty;
     public static readonly BindableProperty ContentProperty;
+    public static readonly BindableProperty FirstButtonProperty
+    public static readonly BindableProperty SecondButtonProperty
 
     public event EventHandler BackButtonPressed;
 
@@ -526,7 +528,7 @@ ElmSharp의 Popup을 사용하며, Layout이 아니므로 Parent가 존재하지
 
 ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
-![TwoButtonPopup Scene Graph](uml/TwoButtonPopup_SceneGraph.png)
+![ConfirmationPopup Scene Graph](uml/ConfirmationPopup_SceneGraph.png)
 
 # Radio
 
@@ -671,8 +673,6 @@ namespace Xamarin.Forms.CircularUI
   * `Absolute` : Offset의 값을 X, Y로 하여 popup이 화면에 배치됩니다.
   * `Relative` : Offset.X * Window.Width, Offset.Y * Window.Height 에 배치됩니다.
 * Offset : PositionOption에 따라 적용되는 값. 0,0 시작 위치는 popup 위의 꼭지 부분 입니다.
-
-
 # Toast
 
 `Toast`는  간단한 메세지와 icon 을 나타낼 수 있습니다.
@@ -697,3 +697,40 @@ duration 설정을 통해 'Toast' pop-up의 display 시간을 설정 가능하�
 
     Toast.DisplayIconText("Toast message", new FileImageSource { File = "icon_image.png" }, 3000);
  ```
+
+
+# InformationPopup
+
+![InformationPopup design](data/InformationPopup.png)
+
+`InformationPopup`는 `ElmSharp.Popup`의 여러가지 형태의 popup을 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
+IsProgressRuning이 true일 경우 `small circle progress`가 화면 중앙에 표시되며 pulse 동작을 한다. 이때 title의 text는 무시된다.
+
+
+![InformationPopup Diagram](uml/InformationPopup.png)
+
+InformationPopup Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
+
+```C#
+public class InformationPopup : BindableObject
+{
+    public static readonly BindableProperty IsProgressRuningProperty
+    public static readonly BindableProperty TitleProperty;
+    public static readonly BindableProperty TextProperty;
+    public static readonly BindableProperty BottomButtonProperty;
+
+    public event EventHandler BackButtonPressed;
+
+    public bool IsProgressRuning { get; set; }
+    public string Title { get; set; }
+    public string Text { get; set; }
+    public MenuItem BottomButton { get; set; }
+}
+```
+
+ElmSharp의 Popup을 사용하며, Layout이 아니므로 Parent가 존재하지 않는다(Xaml을 사용하여 Layouting 불가).
+
+ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
+
+![InformationPopup Scene Graph](uml/InformationPopup_SceneGraph.png)
+

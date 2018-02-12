@@ -11,11 +11,11 @@ using Xamarin.Forms.CircularUI;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCTwoButtonPopup : ContentPage
+    public partial class TCConfirmationPopup : ContentPage
     {
-        TwoButtonPopup _popUp1 = null;
-        TwoButtonPopup _popUp2 = null;
-        public TCTwoButtonPopup()
+        ConfirmationPopup _popUp1 = null;
+        ConfirmationPopup _popUp2 = null;
+        public TCConfirmationPopup()
         {
             InitializeComponent();
 
@@ -55,7 +55,7 @@ namespace WearableUIGallery.TC
                 Console.WriteLine($"checkbox toggled. checkbox.IsToggled:{checkbox.IsToggled}");
             };
 
-            _popUp1 = new TwoButtonPopup();
+            _popUp1 = new ConfirmationPopup();
             _popUp1.FirstButton = leftButton;
             _popUp1.SecondButton = rightButton;
             _popUp1.Title = "Popup title";
@@ -116,7 +116,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _popUp2 = new TwoButtonPopup();
+            _popUp2 = new ConfirmationPopup();
             _popUp2.FirstButton = leftButton2;
             _popUp2.SecondButton = rightButton2;
             _popUp2.Title = "Popup title";

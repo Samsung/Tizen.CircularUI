@@ -5,10 +5,10 @@ using Xamarin.Forms;
 namespace Xamarin.Forms.CircularUI
 {
     /// <summary>
-    /// The IPopup is an interface to describe pop-up which has circular two button, title, text, and content area
+    /// The IConfirmationPopup is an interface to describe confirmation pop-up which has circular two button, title, text, and content area
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    internal interface IPopup
+    internal interface IConfirmationPopup
     {
         /// <summary>
         /// Occurs when the Back button is pressed.

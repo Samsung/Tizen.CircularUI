@@ -2,30 +2,31 @@
 using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 using TPlatform = Xamarin.Forms.Platform.Tizen.Platform;
 using XForms = Xamarin.Forms;
-using WearableUIGallery.Extensions;
-using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: XForms.Dependency(typeof(WearableUIGallery.Tizen.Wearable.CustomRenderer.DefaultPopupImplementation))]
+[assembly: XForms.Dependency(typeof(Xamarin.Forms.CircularUI.Tizen.InformationPopupImplementation))]
 
-namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
+namespace Xamarin.Forms.CircularUI.Tizen
 {
-    public class DefaultPopupImplementation : IPopup, IDisposable
+    public class InformationPopupImplementation : IInformationPopup, IDisposable
     {
-        View _content;
-        StackLayout _contentView;
         MenuItem _bottomMenuItem;
 
         ElmSharp.Popup _popUp;
+        ElmSharp.ProgressBar _progress;
         ElmSharp.Layout _layout;
         ElmSharp.Button _bottomButton;
-        ElmSharp.EvasObject _nativeContent;
+        ElmSharp.Box _box;
+        ElmSharp.Label _progressLabel;
 
         string _title;
         string _text;
+        bool _isProgressRunning = false;
         bool _isDisposed = false;
 
-        public DefaultPopupImplementation()
+        public event EventHandler BackButtonPressed;
+
+        public InformationPopupImplementation()
         {
             _popUp = new ElmSharp.Popup(TForms.NativeParent);
             _popUp.Style = "circle";
@@ -34,12 +35,10 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
             _layout.SetTheme("layout", "popup", "content/circle");
             _popUp.SetContent(_layout);
 
-            _popUp.BackButtonPressed += (s, e) => _popUp.Dismiss();
-
-            _contentView = new StackLayout();
+            _popUp.BackButtonPressed += BackButtonPressedHandler;
         }
 
-        ~DefaultPopupImplementation()
+        ~InformationPopupImplementation()
         {
             Dispose(false);
         }
@@ -63,10 +62,22 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
                     _bottomButton = null;
                 }
 
-                if (_nativeContent != null)
+                if (_box != null)
                 {
-                    _nativeContent.Unrealize();
-                    _nativeContent = null;
+                    _box.Unrealize();
+                    _box = null;
+                }
+
+                if(_progress != null)
+                {
+                    _progress.Unrealize();
+                    _progress = null;
+                }
+
+                if (_progressLabel != null)
+                {
+                    _progressLabel.Unrealize();
+                    _progressLabel = null;
                 }
 
                 if (_popUp != null)
@@ -81,16 +92,21 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
             _isDisposed = true;
         }
 
-        public View Content
+        void BackButtonPressedHandler(object sender, EventArgs e)
+        {
+            BackButtonPressed?.Invoke(this, EventArgs.Empty);
+        }
+
+        public bool IsProgressRuning
         {
             get
             {
-                return _content;
+                return _isProgressRunning;
             }
             set
             {
-                _content = value;
-                UpdateContent();
+                _isProgressRunning = value;
+                UpdateProcessVisibility();
             }
         }
 
@@ -136,25 +152,39 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
             }
         }
 
-        void UpdateContent()
+        void UpdateProcessVisibility()
         {
             if (Application.Current.Platform == null)
                 return;
 
-            _contentView.Children.Clear();
-            if (Content != null)
+            if (_isProgressRunning)
             {
-                _contentView.Children.Add(Content);
-                _contentView.Platform = Application.Current.Platform;
+                _box = new ElmSharp.Box(TForms.NativeParent);
+                _box.Show();
 
-                var renderer = TPlatform.GetOrCreateRenderer(_contentView);
-                (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
-                var sizeRequest = _contentView.Measure(TForms.NativeParent.Geometry.Width, TForms.NativeParent.Geometry.Height).Request.ToPixel();
+                _progress = new ElmSharp.ProgressBar(TForms.NativeParent)
+                {
+                    Style = "process/popup/small",
+                };
+                _progress.Show();
+                _progress.PlayPulse();
+                _box.PackEnd(_progress);
 
-                _nativeContent = renderer.NativeView;
-                _nativeContent.MinimumHeight = sizeRequest.Height;
+                if (!string.IsNullOrEmpty(_text))
+                {
+                    var progressLabel = new ElmSharp.Label(TForms.NativeParent)
+                    {
+                        TextStyle = "DEFAULT = 'align=center'",
+                    };
+                    progressLabel.Text = _text;
+                    progressLabel.Show();
+                    _box.PackEnd(progressLabel);
+                }
 
-                _layout.SetPartContent("elm.swallow.content", _nativeContent, true);
+                _layout.SetPartContent("elm.swallow.content", _box, true);
+
+                UpdateTitle();
+                UpdateText();
             }
             else
             {
@@ -178,6 +208,15 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
                 string text = BottomButton.Text;
                 if (!string.IsNullOrEmpty(text))_bottomButton.Text = text;
 
+                var iconPath = BottomButton.Icon.File;
+                if (!string.IsNullOrEmpty(iconPath))
+                {
+                    var buttonImage = new ElmSharp.Image(_bottomButton);
+                    buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
+                    buttonImage.Show();
+                    _bottomButton.SetPartContent("elm.swallow.content", buttonImage);
+                }
+
                 _bottomButton.Clicked += (s, e) =>
                 {
                     BottomButton.Activate();
@@ -193,12 +232,26 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
 
         void UpdateTitle()
         {
-            _layout.SetPartText("elm.text.title", _title);
+            if (!_isProgressRunning)
+            {
+                _layout.SetPartText("elm.text.title", _title);
+            }
+            else
+            {
+                _layout.SetPartText("elm.text.title", null);
+            }
         }
 
         void UpdateText()
         {
-            _layout.SetPartText("elm.text", _text);
+            if (!_isProgressRunning)
+            {
+                _layout.SetPartText("elm.text", _text);
+            }
+            else
+            {
+                _layout.SetPartText("elm.text", null);
+            }
         }
 
         public void Show()
@@ -207,10 +260,7 @@ namespace WearableUIGallery.Tizen.Wearable.CustomRenderer
             {
                 throw new Exception("When the Application's Platform is null, can not show the Dialog.");
             }
-            if (_contentView.Platform == null)
-            {
-                UpdateContent();
-            }
+
             _popUp.Show();
         }
 

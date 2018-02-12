@@ -485,14 +485,16 @@ FirstButton ..> FirstButtonImage : "elm.swallow.content"
 SecondButton ..> SecondButtonImage : "elm.swallow.content"
 @enduml
 
-@startuml TwoButtonPopup.png
+@startuml ConfirmationPopup.png
 
 package "Extension.Wearable" {
-    class TwoButtonPopup {
+    class ConfirmationPopup {
         --BindableProperty--
         {static} +TitleProperty
         {static} +ContentProperty
         {static} +TextProperty
+        {static} +FirstButtonProperty
+        {static} +SecondButtonProperty
         --Property--
         Title: string
         Content: View
@@ -505,21 +507,21 @@ package "Extension.Wearable" {
 }
 
 package "Extension.Wearable.Renderer" {
-    class TwoButtonPopupImplementation
+    class ConfirmationPopupImplementation
 
-    TwoButtonPopupImplementation .l. TwoButtonPopup
+    ConfirmationPopupImplementation .l. ConfirmationPopup
 }
 
 package "ElmSharp" {
     class Popup
-    TwoButtonPopupImplementation *.. Popup
+    ConfirmationPopupImplementation *.. Popup
 }
 
 @enduml
 
-@startuml TwoButtonPopup_SceneGraph.png
+@startuml ConfirmationPopup_SceneGraph.png
 
-node TwoButtonPopup [
+node ConfirmationPopup [
     Popup
 ]
 
@@ -548,13 +550,81 @@ interface SecondButtonImage [
 
 () ContentArea
 () TitleArea
+() TextArea
 
-TwoButtonPopup --> BaseLayout :  "elm.swallow.content"
+ConfirmationPopup --> BaseLayout :  "elm.swallow.content"
 BaseLayout --> ContentArea : "elm.swallow.content"
 BaseLayout --> TitleArea : "elm.text.title"
+BaseLayout --> TextArea : "elm.text.text"
 BaseLayout --> FirstButton : "button1"
 BaseLayout --> SecondButton : "button2"
 
 FirstButton ..> FirstButtonImage : "elm.swallow.content"
 SecondButton ..> SecondButtonImage : "elm.swallow.content"
+@enduml
+
+@startuml InformationPopup.png
+
+package "Extension.Wearable" {
+    class InformationPopup {
+        --BindableProperty--
+        {static} +IsProgressRunningProperty
+        {static} +TitleProperty
+        {static} +TextProperty
+        {static} +BottomButtonButtonProperty
+        --Property--
+        IsProgressRunning: bool
+        Title: string
+        Text: string
+        BottomButton: MenuItem
+        --Event--
+        +BackButtonPressed
+    }
+}
+
+package "Extension.Wearable.Renderer" {
+    class InformationPopupImplementation
+
+    InformationPopupImplementation .l. InformationPopup
+}
+
+package "ElmSharp" {
+    class Popup
+    InformationPopupImplementation *.. Popup
+}
+
+@enduml
+
+@startuml InformationPopup_SceneGraph.png
+
+node InformationPopup [
+    Popup
+]
+
+node BaseLayout [
+    Layout
+    "layout/popup/content/circle"
+]
+
+node BottomButton [
+    Button
+    "bottom"
+]
+
+
+interface BottomButtonImage [
+    Image
+]
+
+() ProgressArea
+() TitleArea
+() TextArea
+
+InformationPopup --> BaseLayout :  "elm.swallow.content"
+BaseLayout --> ProgressArea : "elm.swallow.content"
+BaseLayout --> TitleArea : "elm.text.title"
+BaseLayout --> TextArea : "elm.text.text"
+BaseLayout --> BottomButton : "button1"
+
+BottomButton ..> BottomButtonImage : "elm.swallow.content"
 @enduml
