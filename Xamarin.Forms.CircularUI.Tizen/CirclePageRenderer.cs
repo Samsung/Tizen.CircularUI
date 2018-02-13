@@ -111,9 +111,21 @@ namespace Xamarin.Forms.CircularUI.Tizen
         }
         protected override void Dispose(bool disposing)
         {
-            if (Element.ActionButton != null)
+            if (Element != null)
             {
-                Element.ActionButton.PropertyChanged -= OnActionButtonItemChanged;
+                Element.Appearing -= OnPageAppearing;
+                Element.Disappearing -= OnPageDisappearing;
+                if (Element.ActionButton != null)
+                {
+                    Element.ActionButton.PropertyChanged -= OnActionButtonItemChanged;
+                }
+                var toolbarItems = Element.ToolbarItems as ObservableCollection<ToolbarItem>;
+                if (toolbarItems != null)
+                    toolbarItems.CollectionChanged -= OnToolbarItemChanged;
+
+                var circleSurfaceItems = Element.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
+                if (circleSurfaceItems != null)
+                    circleSurfaceItems.CollectionChanged -= OnCircleSurfaceItemsChanged;
             }
             base.Dispose(disposing);
         }
