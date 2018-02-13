@@ -109,6 +109,14 @@ namespace Xamarin.Forms.CircularUI.Tizen
             }
             UpdateBackground();
         }
+        protected override void Dispose(bool disposing)
+        {
+            if (Element.ActionButton != null)
+            {
+                Element.ActionButton.PropertyChanged -= OnActionButtonItemChanged;
+            }
+            base.Dispose(disposing);
+        }
         void OnRealized()
         {
             _box = new NBox(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
