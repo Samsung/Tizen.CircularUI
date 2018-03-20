@@ -11,6 +11,7 @@ namespace WearableUIGallery
         public AppViewModel()
         {
             TCs = new ObservableCollection<TCDescribe>();
+            TCs.Add(new TCDescribe { Title = "CircleStackLayout", Class = typeof(TCCircleStackLayout) });
             TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
             TCs.Add(new TCDescribe { Title = "ConfirmEffect", Class = typeof(TCConfirm) });
             TCs.Add(new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) });

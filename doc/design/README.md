@@ -18,3 +18,4 @@ Design files for Circular UI on Xamarin Forms
 * [ConfirmPopupEffect](part14.ConfirmPopupEffect.md)
 * [Toast](part15.Toast.md)
 * [InformationPopup](part16.InformationPopup.md)
+* [CircleStackLayout](part17.CircleStackLayout.md)
