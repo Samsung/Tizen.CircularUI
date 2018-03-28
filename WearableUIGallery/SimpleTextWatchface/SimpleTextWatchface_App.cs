@@ -26,6 +26,34 @@ namespace SimpleTextWatchface
             }
         }
 
+        protected override void OnAmbientChanged(AmbientEventArgs mode)
+        {
+            base.OnAmbientChanged(mode);
+            if (_viewModel != null)
+            {
+                if (mode.Enabled)
+                {
+                    _viewModel.Mode = "Ambient";
+                    _viewModel.IsNormalMode = false;
+                }
+                else
+                {
+                    _viewModel.Mode = "Watch";
+                    _viewModel.IsNormalMode = true;
+                }
+            }
+        }
+
+
+        protected override void OnAmbientTick(TimeEventArgs time)
+        {
+            base.OnAmbientTick(time);
+            if (_viewModel != null)
+            {
+                _viewModel.Time = time.Time.UtcTimestamp;
+            }
+        }
+
         static void Main(string[] args)
         {
             App app = new App();

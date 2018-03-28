@@ -10,6 +10,8 @@ namespace SimpleTextWatchface
     public class ClockViewModel : INotifyPropertyChanged
     {
         DateTime _time;
+        String _mode = "Watch";
+        bool _isNormalMode = true;
 
         public DateTime Time
         {
@@ -18,6 +20,28 @@ namespace SimpleTextWatchface
             {
                 if (_time == value) return;
                 _time = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public String Mode
+        {
+            get => _mode;
+            set
+            {
+                if (_mode == value) return;
+                _mode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsNormalMode
+        {
+            get => _isNormalMode;
+            set
+            {
+                if (_isNormalMode == value) return;
+                _isNormalMode = value;
                 OnPropertyChanged();
             }
         }
