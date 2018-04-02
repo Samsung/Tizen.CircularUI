@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="SimpleTextWatchface.WatchfaceApplication"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.MainPage>
+        <ContentPage>
+            <ContentPage.Content>
+                <StackLayout>
+                    <BoxView
+                        IsVisible="{Binding IsNormalMode}"
+                        MinimumHeightRequest="50"
+                        MinimumWidthRequest="50"
+                        Color="White" />
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <Label
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{Binding Mode}"
+                            VerticalOptions="CenterAndExpand" />
+                        <Label
+                            x:Name="TimeLabel"
+                            FontSize="Large"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{Binding Time, StringFormat='{0:hh\\:mm\\:ss}'}"
+                            VerticalOptions="CenterAndExpand" />
+                        <Button
+                            HorizontalOptions="CenterAndExpand"
+                            IsVisible="{Binding IsNormalMode}"
+                            Text="Button!"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="200" />
+                    </StackLayout>
+                    <BoxView
+                        IsVisible="{Binding IsNormalMode}"
+                        MinimumHeightRequest="50"
+                        MinimumWidthRequest="50"
+                        Color="Green" />
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </Application.MainPage>
+</Application>

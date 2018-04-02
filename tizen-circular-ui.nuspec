@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>tizen-circular-ui</id>
+    <version>$version$</version>
+    <authors>Samsung Electronics</authors>
+    <owners>Samsung Electronics</owners>
+    <tags>xamarin forms xamarinforms xamarin.forms circular circularui wearable gear tizen</tags>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <iconUrl>http://xamarin.com/content/images/nuget/xamarin.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Circular UI components for Xamarin.Forms</description>
+    <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="Xamarin.Forms" version="2.5.0.77107" />
+      </group>
+      <group targetFramework="tizen40">
+        <dependency id="Xamarin.Forms" version="2.5.0.77107" />
+        <dependency id="Xamarin.Forms.Platform.Tizen" version="2.5.0.77107" />
+        <dependency id="Tizen.NET" version="4.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Xamarin.Forms.CircularUI\bin\$configuration$\netstandard2.0\Xamarin.Forms.CircularUI.dll" target="lib\netstandard2.0" />
+    <file src="Xamarin.Forms.CircularUI.Tizen\bin\$configuration$\tizen40\Xamarin.Forms.CircularUI.dll" target="lib\tizen40" />
+    <file src="Xamarin.Forms.CircularUI.Tizen\bin\$configuration$\tizen40\Xamarin.Forms.CircularUI.Tizen.dll" target="lib\tizen40" />
+  </files>
+</package>
