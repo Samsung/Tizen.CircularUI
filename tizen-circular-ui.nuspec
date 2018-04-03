@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>tizen-circular-ui</id>
+    <id>Tizen.CircularUI</id>
     <version>$version$</version>
     <authors>Samsung Electronics</authors>
     <owners>Samsung Electronics</owners>
@@ -13,18 +13,17 @@
     <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
-        <dependency id="Xamarin.Forms" version="2.5.0.77107" />
+        <dependency Id="Xamarin.Forms" Version="3.0.0.296286-pre2" />
       </group>
       <group targetFramework="tizen40">
-        <dependency id="Xamarin.Forms" version="2.5.0.77107" />
-        <dependency id="Xamarin.Forms.Platform.Tizen" version="2.5.0.77107" />
+        <dependency Id="Xamarin.Forms" Version="3.0.0.296286-pre2" />
         <dependency id="Tizen.NET" version="4.0.0" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="Xamarin.Forms.CircularUI\bin\$configuration$\netstandard2.0\Xamarin.Forms.CircularUI.dll" target="lib\netstandard2.0" />
-    <file src="Xamarin.Forms.CircularUI.Tizen\bin\$configuration$\tizen40\Xamarin.Forms.CircularUI.dll" target="lib\tizen40" />
-    <file src="Xamarin.Forms.CircularUI.Tizen\bin\$configuration$\tizen40\Xamarin.Forms.CircularUI.Tizen.dll" target="lib\tizen40" />
+    <file src="src\CircularUI\bin\$configuration$\netstandard2.0\CircularUI.dll" target="lib\netstandard2.0" />
+    <file src="src\CircularUI.Tizen\bin\$configuration$\tizen40\CircularUI.dll" target="lib\tizen40" />
+    <file src="src\CircularUI.Tizen\bin\$configuration$\tizen40\CircularUI.Tizen.dll" target="lib\tizen40" />
   </files>
 </package>
