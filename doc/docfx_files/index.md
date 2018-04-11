@@ -17,7 +17,7 @@ The banaries are available via NuGet (package name CircularUI) with the source a
 | [](xref:CircularUI.CircleStackLayout)            | A container to layout children linear in the circular area. |
 | [](xref:CircularUI.IndexPage)                    | A subclass of multiple page that can slide child page horizontal and has dots on top of the screen for the number of child pages. |
 | [](xref:CircularUI.Check)                        | A subclass of Xamarin.Forms.Switch control with some different styles. |
-| [](xref:CircularUI.RotationReceiver)             | A event receiver for using the bezel action. |
+| [](xref:CircularUI.IRotaryEventReceiver )        | A event receiver for using the bezel action. |
 | [](xref:CircularUI.Radio)                        | A radio control fits in the circular screen. |
 | [](xref:CircularUI.Toast)                        | A popup for simple feedback. |
 | [](xref:CircularUI.TwoButtonPage)                | A subclass of Xamarin.Forms.Page has two button in left and right side of the circular screen. |
