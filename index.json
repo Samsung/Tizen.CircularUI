@@ -1,12 +1,12 @@
 {
-  "api/index.html": {
-    "href": "api/index.html",
-    "title": "Tizen CircularUI",
-    "keywords": "Tizen CircularUI This document is the API Specification for the Tizen CircularUI. Namespace Description Provide the classes for the Circular screen with Tizen wearable devices. Contains the renderer classes on tizen platform for CircularUI. Provide the classes for creating the Watchface on Tizen wearable devices."
-  },
   "index.html": {
     "href": "index.html",
     "title": "Tizen CircularUI",
     "keywords": "Tizen CircularUI The Tizen CircularUI is a set of helpful extensions to the Xamarin Forms framework on the Samsung Gear device. The banaries are available via NuGet (package name CircularUI) with the source available at here. Controls Name Description A subclass of Xamarin.Forms.Page that can shows Circular ProgressBar and Circular Slider and the button on bottom of screen. it can also show MenuItems on the circular menu.(MoreOption) A subclass of Xamarin.Forms.ListView control fits in the circular screen. A control fits in the circular screen. it can be shown in CirclePage only. A Slider control that responds to the bezel action and fits in the circular screen. A subclass of Xamarin.Forms.ScrollView that can be scrolled by the bezel action. A control to select date or time fits in the circular screen. A control to select a number of steps fits in the circular screen. A container to layout children linear in the circular area. A subclass of multiple page that can slide child page horizontal and has dots on top of the screen for the number of child pages. A subclass of Xamarin.Forms.Switch control with some different styles. A event receiver for using the bezel action. A radio control fits in the circular screen. A popup for simple feedback. A subclass of Xamarin.Forms.Page has two button in left and right side of the circular screen. A context popup fits in the circular screen. A popup has two button in left and right side of the circular screen. the effect to show a small popup has one or two button sticky with any control. A popup has a control to show progress and one button in bottom side of circular screen."
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "Tizen CircularUI",
+    "keywords": "Tizen CircularUI This document is the API Specification for the Tizen CircularUI. Namespace Description Provide the classes for the Circular screen with Tizen wearable devices. Contains the renderer classes on tizen platform for CircularUI. Provide the classes for creating the Watchface on Tizen wearable devices."
   }
 }
