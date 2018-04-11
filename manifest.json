@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/TeamCity/buildAgent/work/70d5f4b41f6ffd1f/doc/docfx_files",
+  "source_base_path": "C:/TeamCity/buildAgent/work/88e8348ed16b1c56/doc/docfx_files",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.ActionButtonItem.html",
-          "hash": "3Won40YeKUrSzW+1nnkRkg=="
+          "hash": "Q2KZCmRUPxghqRADjUE9xA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Check.html",
-          "hash": "aJlFdQ62Nn03jXYlcHHL2g=="
+          "hash": "SQn+LkEkYxl/DvI2GxhYPA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CheckDisplayStyle.html",
-          "hash": "mThrl9/2B3nT7rIyJZnnlQ=="
+          "hash": "w9oq3aJmDen1+XEPZPneHA=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleDateTimeSelector.html",
-          "hash": "DpNRP3Hzl2VF/C/hTKF4/Q=="
+          "hash": "zo9paMmn55bhE515Cj4MUA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleListView.html",
-          "hash": "gR00v20RJF/Y7EyGYOdCEA=="
+          "hash": "sMndbqqbYX/h05au2pnSNg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CirclePage.html",
-          "hash": "UruX7G8x+p8lJC9ayR5E/g=="
+          "hash": "ncUh2QeBUGdlh7kQ15OyZg=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CirclePageNotFoundException.html",
-          "hash": "rz6DVDLJBeAWJ0VU5Lo4ng=="
+          "hash": "kCQiXcj2opyQfDRXttntLA=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleProgressBarSurfaceItem.html",
-          "hash": "GBv0YN2H0xro9IIqUIkfpQ=="
+          "hash": "SJ44Rgb5VgLAf2u+bvH4ig=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleScrollView.html",
-          "hash": "yWNg/7Lc7pBDb6LSj7a1TQ=="
+          "hash": "tYdM9CMGY9uqCfeAbxrapg=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleSliderSurfaceItem.html",
-          "hash": "mnHrG5I2OlzbUFvPSwwk0Q=="
+          "hash": "49EdtNIv4pl2WnX7Lg6kTA=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleStackLayout.html",
-          "hash": "STl9CEOooxIXWBhJ0izYhg=="
+          "hash": "oWXex2ZY+WQ307To1TXDmQ=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleStepper.html",
-          "hash": "7eVBGsT8jNCgcm0UalhWtQ=="
+          "hash": "gDsl1AfffIsB5t6eTS4LVQ=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleSurfaceItem.html",
-          "hash": "w9hWoNAXiqLO9AW/yvzzJg=="
+          "hash": "ZeH/hU0V1QrWwlMxirSu0w=="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.CircleToolbarItem.html",
-          "hash": "RJ6CgPl7LkByyssV23Fj2A=="
+          "hash": "s1efhVNwIK2gmb/Hj/znWQ=="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.ConfirmPopupEffect.html",
-          "hash": "rJ+Ub2ldJeS0qNc+g770JQ=="
+          "hash": "512iUd2Q72S9MIRvz6AL9g=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.ConfirmationPopup.html",
-          "hash": "t518FaK2AofRtEn3z/vrqQ=="
+          "hash": "TGe/IFxxyQ/Jo3lwnlzpVA=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.ContextPopup.html",
-          "hash": "87E02GUeohzFmlzrZPE8wg=="
+          "hash": "MZXispoaAvnvBFh2DeAwWQ=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.ContextPopupItem.html",
-          "hash": "nPk+LJjjM4s0MfxqOUW8pg=="
+          "hash": "ie8pdsBwg1qTZ0WpFg9xzg=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.DateTimeType.html",
-          "hash": "wqkS0dQMqbTBFkEbbHyn3Q=="
+          "hash": "AamGGT0anqaBAewnx1XlWA=="
         }
       },
       "is_incremental": false,
@@ -342,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.IndexPage.html",
-          "hash": "7CtziwVlMRL7p0j5sCmpBw=="
+          "hash": "eQOjpYJChBywjxFRIC6ywg=="
         }
       },
       "is_incremental": false,
@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.InformationPopup.html",
-          "hash": "2ADZJDweaFezkGBqfurxow=="
+          "hash": "9jKkxTTvQZPRBrkJY1q0bQ=="
         }
       },
       "is_incremental": false,
@@ -366,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.PositionOption.html",
-          "hash": "tlXlL8IojTR1ap7s/Jh90Q=="
+          "hash": "oajN4FxWXabBdJXRJfK+VQ=="
         }
       },
       "is_incremental": false,
@@ -378,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Radio.html",
-          "hash": "l/QV8uaPDvlg073FOswyGw=="
+          "hash": "N0TPMALEwoIaGL0mb1m68Q=="
         }
       },
       "is_incremental": false,
@@ -390,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.RotaryEventArgs.html",
-          "hash": "jxZ3Bt4xQLq2Wtia9B8q+A=="
+          "hash": "gtozo2Cz43SjZqAWPlBEOQ=="
         }
       },
       "is_incremental": false,
@@ -414,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.SelectedEventArgs.html",
-          "hash": "+3B8k9Vm5sDE+/+lBBCkfA=="
+          "hash": "1+TVWyV1BUIffNPBG0DmKw=="
         }
       },
       "is_incremental": false,
@@ -426,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CheckRenderer.html",
-          "hash": "7/Jm4Kz/J0e8Wp3ugKr7Yg=="
+          "hash": "9J+IMGUbdQY9XiVEImIu2w=="
         }
       },
       "is_incremental": false,
@@ -438,7 +438,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CircleDateTimeSelectorRenderer.html",
-          "hash": "AK5nzwClxo8j/BlZlupl1Q=="
+          "hash": "RIO/g6vkaaLODi1V7IEw8A=="
         }
       },
       "is_incremental": false,
@@ -450,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CircleListView.html",
-          "hash": "4ZE7KRlO8B0D20FN99Bx1Q=="
+          "hash": "Ykz1V70rXhRTI734wD8pqQ=="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CircleListViewRenderer.html",
-          "hash": "x8PGb+AYXQgq7g7Kj7v5pg=="
+          "hash": "caqPn5vFM5FHfffdSGCDzw=="
         }
       },
       "is_incremental": false,
@@ -474,7 +474,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CirclePageRenderer.html",
-          "hash": "L1TinoBAfQX2B84ycCHivw=="
+          "hash": "y/bC5zVQ5mgl1MRNA/kJ3w=="
         }
       },
       "is_incremental": false,
@@ -486,7 +486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CircleSliderSurfaceItemImplements.html",
-          "hash": "frdWbOuKGvqXy8bB/dZ0qA=="
+          "hash": "uX3ZjckYNdMA0F+qKPXB6A=="
         }
       },
       "is_incremental": false,
@@ -498,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CircleStepperRenderer.html",
-          "hash": "BYHdRZmL/PFQ31meC2llhw=="
+          "hash": "MN4+7bQ0V55DOcedk0MuBw=="
         }
       },
       "is_incremental": false,
@@ -510,7 +510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.CircularUI.html",
-          "hash": "2O3BvUeoTZTXMLeYAQnKyw=="
+          "hash": "ooDgwNNcsYA6mE/RWSws9g=="
         }
       },
       "is_incremental": false,
@@ -522,7 +522,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.ConfirmationPopupImplementation.html",
-          "hash": "n9PQISI0oWIsIDIJy+nM+g=="
+          "hash": "cFQ2v2H8g9l50GsmXj5GeQ=="
         }
       },
       "is_incremental": false,
@@ -534,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.HeaderOrFooterItemClass.html",
-          "hash": "hHl5GQH4trW/vZ0vvg/Fcw=="
+          "hash": "NEpiSRpwgd6bPJwMWbmdeQ=="
         }
       },
       "is_incremental": false,
@@ -546,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.IndexPageRenderer.html",
-          "hash": "2nZn73LOvqSs/mOGPQ02xA=="
+          "hash": "yJH5KiIr0P5Zomy76nSiiw=="
         }
       },
       "is_incremental": false,
@@ -558,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.InformationPopupImplementation.html",
-          "hash": "OEsiiHfdWakJX0sl/i3Tvw=="
+          "hash": "pW1NG9eSyWFu0tz8azH1oQ=="
         }
       },
       "is_incremental": false,
@@ -570,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.ListViewCache.html",
-          "hash": "rCbQcgTc0nu4E8IeG0UpVA=="
+          "hash": "YywM39kfalUGEFIrH0IMBw=="
         }
       },
       "is_incremental": false,
@@ -582,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.PaddingItemClass.html",
-          "hash": "hJvsxp4wZkU8A6hfWZugsQ=="
+          "hash": "J5n5iwmLp/pWW2BL35NaMA=="
         }
       },
       "is_incremental": false,
@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.RadioRenderer.html",
-          "hash": "d3ngrgxEaqO+aphIZrwtqw=="
+          "hash": "RRVFay4mPUWX94l5To+2Ew=="
         }
       },
       "is_incremental": false,
@@ -606,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.TizenConfirmPopupEffect.html",
-          "hash": "5ft6CqSuVdHHK06a3XGwRA=="
+          "hash": "srP6CawAydRbHwH6YWQifQ=="
         }
       },
       "is_incremental": false,
@@ -618,7 +618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.TwoButtonPageRenderer.html",
-          "hash": "hW0+h5Mo5DGCfW6n9rjNqw=="
+          "hash": "MEfGP6Te8QHKTNTh6DxxLw=="
         }
       },
       "is_incremental": false,
@@ -630,7 +630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.TwoButtonPageWidget.html",
-          "hash": "PlQL8zeDms6IroJ7784AHw=="
+          "hash": "Z4U5xK2y1k7d+3nnikLPhA=="
         }
       },
       "is_incremental": false,
@@ -642,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Tizen.Watchface.FormsWatchface.html",
-          "hash": "/NztR9bCxO9GR+WmlgLV9Q=="
+          "hash": "BAcG4YFwtdCgI2Fe9Ube+Q=="
         }
       },
       "is_incremental": false,
@@ -678,7 +678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.Toast.html",
-          "hash": "dND2m/6369jH/EICrk6ebg=="
+          "hash": "L035swQSwJDgH62gEYTjIw=="
         }
       },
       "is_incremental": false,
@@ -690,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CircularUI.TwoButtonPage.html",
-          "hash": "g0nSpUqAeWoZyxvo7wKhCw=="
+          "hash": "JIZC5htbYtRThQPYtfOLeQ=="
         }
       },
       "is_incremental": false,
@@ -736,7 +736,8 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build"
       },
       "processors": {
@@ -751,11 +752,11 @@
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

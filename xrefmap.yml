@@ -1141,11 +1141,11 @@ references:
   commentId: F:CircularUI.ConfirmPopupEffect.ConfirmVisibilityProperty
   fullName: CircularUI.ConfirmPopupEffect.ConfirmVisibilityProperty
   nameWithType: ConfirmPopupEffect.ConfirmVisibilityProperty
-- uid: CircularUI.ConfirmPopupEffect.GetAcceptCommand(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetAcceptCommand(Xamarin.Forms.BindableObject)
   name: GetAcceptCommand(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetAcceptCommand_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetAcceptCommand(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetAcceptCommand(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetAcceptCommand_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetAcceptCommand(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetAcceptCommand(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetAcceptCommand(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetAcceptCommand*
   name: GetAcceptCommand
@@ -1154,11 +1154,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetAcceptCommand
   nameWithType: ConfirmPopupEffect.GetAcceptCommand
-- uid: CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter(Xamarin.Forms.BindableObject)
   name: GetAcceptCommandParameter(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetAcceptCommandParameter_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetAcceptCommandParameter_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetAcceptCommandParameter(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter*
   name: GetAcceptCommandParameter
@@ -1167,11 +1167,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetAcceptCommandParameter
   nameWithType: ConfirmPopupEffect.GetAcceptCommandParameter
-- uid: CircularUI.ConfirmPopupEffect.GetAcceptText(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetAcceptText(Xamarin.Forms.BindableObject)
   name: GetAcceptText(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetAcceptText_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetAcceptText(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetAcceptText(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetAcceptText_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetAcceptText(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetAcceptText(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetAcceptText(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetAcceptText*
   name: GetAcceptText
@@ -1180,11 +1180,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetAcceptText
   nameWithType: ConfirmPopupEffect.GetAcceptText
-- uid: CircularUI.ConfirmPopupEffect.GetCancelCommand(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetCancelCommand(Xamarin.Forms.BindableObject)
   name: GetCancelCommand(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetCancelCommand_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetCancelCommand(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetCancelCommand(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetCancelCommand_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetCancelCommand(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetCancelCommand(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetCancelCommand(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetCancelCommand*
   name: GetCancelCommand
@@ -1193,11 +1193,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetCancelCommand
   nameWithType: ConfirmPopupEffect.GetCancelCommand
-- uid: CircularUI.ConfirmPopupEffect.GetCancelCommandParameter(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetCancelCommandParameter(Xamarin.Forms.BindableObject)
   name: GetCancelCommandParameter(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetCancelCommandParameter_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetCancelCommandParameter(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetCancelCommandParameter(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetCancelCommandParameter_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetCancelCommandParameter(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetCancelCommandParameter(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetCancelCommandParameter(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetCancelCommandParameter*
   name: GetCancelCommandParameter
@@ -1206,11 +1206,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetCancelCommandParameter
   nameWithType: ConfirmPopupEffect.GetCancelCommandParameter
-- uid: CircularUI.ConfirmPopupEffect.GetCancelText(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetCancelText(Xamarin.Forms.BindableObject)
   name: GetCancelText(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetCancelText_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetCancelText(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetCancelText(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetCancelText_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetCancelText(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetCancelText(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetCancelText(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetCancelText*
   name: GetCancelText
@@ -1219,11 +1219,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetCancelText
   nameWithType: ConfirmPopupEffect.GetCancelText
-- uid: CircularUI.ConfirmPopupEffect.GetConfirmVisibility(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetConfirmVisibility(Xamarin.Forms.BindableObject)
   name: GetConfirmVisibility(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetConfirmVisibility_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetConfirmVisibility(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetConfirmVisibility(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetConfirmVisibility_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetConfirmVisibility(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetConfirmVisibility(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetConfirmVisibility(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetConfirmVisibility*
   name: GetConfirmVisibility
@@ -1232,11 +1232,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetConfirmVisibility
   nameWithType: ConfirmPopupEffect.GetConfirmVisibility
-- uid: CircularUI.ConfirmPopupEffect.GetOffset(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetOffset(Xamarin.Forms.BindableObject)
   name: GetOffset(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetOffset_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetOffset(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetOffset(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetOffset_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetOffset(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetOffset(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetOffset(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetOffset*
   name: GetOffset
@@ -1245,11 +1245,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.GetOffset
   nameWithType: ConfirmPopupEffect.GetOffset
-- uid: CircularUI.ConfirmPopupEffect.GetPositionOption(BindableObject)
+- uid: CircularUI.ConfirmPopupEffect.GetPositionOption(Xamarin.Forms.BindableObject)
   name: GetPositionOption(BindableObject)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetPositionOption_BindableObject_
-  commentId: M:CircularUI.ConfirmPopupEffect.GetPositionOption(BindableObject)
-  fullName: CircularUI.ConfirmPopupEffect.GetPositionOption(BindableObject)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_GetPositionOption_Xamarin_Forms_BindableObject_
+  commentId: M:CircularUI.ConfirmPopupEffect.GetPositionOption(Xamarin.Forms.BindableObject)
+  fullName: CircularUI.ConfirmPopupEffect.GetPositionOption(Xamarin.Forms.BindableObject)
   nameWithType: ConfirmPopupEffect.GetPositionOption(BindableObject)
 - uid: CircularUI.ConfirmPopupEffect.GetPositionOption*
   name: GetPositionOption
@@ -1270,11 +1270,11 @@ references:
   commentId: F:CircularUI.ConfirmPopupEffect.PositionOptionProperty
   fullName: CircularUI.ConfirmPopupEffect.PositionOptionProperty
   nameWithType: ConfirmPopupEffect.PositionOptionProperty
-- uid: CircularUI.ConfirmPopupEffect.SetAcceptCommand(BindableObject,ICommand)
+- uid: CircularUI.ConfirmPopupEffect.SetAcceptCommand(Xamarin.Forms.BindableObject,System.Windows.Input.ICommand)
   name: SetAcceptCommand(BindableObject, ICommand)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetAcceptCommand_BindableObject_ICommand_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetAcceptCommand(BindableObject,ICommand)
-  fullName: CircularUI.ConfirmPopupEffect.SetAcceptCommand(BindableObject, ICommand)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetAcceptCommand_Xamarin_Forms_BindableObject_System_Windows_Input_ICommand_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetAcceptCommand(Xamarin.Forms.BindableObject,System.Windows.Input.ICommand)
+  fullName: CircularUI.ConfirmPopupEffect.SetAcceptCommand(Xamarin.Forms.BindableObject, System.Windows.Input.ICommand)
   nameWithType: ConfirmPopupEffect.SetAcceptCommand(BindableObject, ICommand)
 - uid: CircularUI.ConfirmPopupEffect.SetAcceptCommand*
   name: SetAcceptCommand
@@ -1283,11 +1283,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetAcceptCommand
   nameWithType: ConfirmPopupEffect.SetAcceptCommand
-- uid: CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter(BindableObject,System.Object)
+- uid: CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter(Xamarin.Forms.BindableObject,System.Object)
   name: SetAcceptCommandParameter(BindableObject, Object)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetAcceptCommandParameter_BindableObject_System_Object_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter(BindableObject,System.Object)
-  fullName: CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter(BindableObject, System.Object)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetAcceptCommandParameter_Xamarin_Forms_BindableObject_System_Object_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter(Xamarin.Forms.BindableObject,System.Object)
+  fullName: CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter(Xamarin.Forms.BindableObject, System.Object)
   nameWithType: ConfirmPopupEffect.SetAcceptCommandParameter(BindableObject, Object)
 - uid: CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter*
   name: SetAcceptCommandParameter
@@ -1296,11 +1296,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetAcceptCommandParameter
   nameWithType: ConfirmPopupEffect.SetAcceptCommandParameter
-- uid: CircularUI.ConfirmPopupEffect.SetAcceptText(BindableObject,System.String)
+- uid: CircularUI.ConfirmPopupEffect.SetAcceptText(Xamarin.Forms.BindableObject,System.String)
   name: SetAcceptText(BindableObject, String)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetAcceptText_BindableObject_System_String_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetAcceptText(BindableObject,System.String)
-  fullName: CircularUI.ConfirmPopupEffect.SetAcceptText(BindableObject, System.String)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetAcceptText_Xamarin_Forms_BindableObject_System_String_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetAcceptText(Xamarin.Forms.BindableObject,System.String)
+  fullName: CircularUI.ConfirmPopupEffect.SetAcceptText(Xamarin.Forms.BindableObject, System.String)
   nameWithType: ConfirmPopupEffect.SetAcceptText(BindableObject, String)
 - uid: CircularUI.ConfirmPopupEffect.SetAcceptText*
   name: SetAcceptText
@@ -1309,11 +1309,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetAcceptText
   nameWithType: ConfirmPopupEffect.SetAcceptText
-- uid: CircularUI.ConfirmPopupEffect.SetCancelCommand(BindableObject,ICommand)
+- uid: CircularUI.ConfirmPopupEffect.SetCancelCommand(Xamarin.Forms.BindableObject,System.Windows.Input.ICommand)
   name: SetCancelCommand(BindableObject, ICommand)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetCancelCommand_BindableObject_ICommand_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetCancelCommand(BindableObject,ICommand)
-  fullName: CircularUI.ConfirmPopupEffect.SetCancelCommand(BindableObject, ICommand)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetCancelCommand_Xamarin_Forms_BindableObject_System_Windows_Input_ICommand_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetCancelCommand(Xamarin.Forms.BindableObject,System.Windows.Input.ICommand)
+  fullName: CircularUI.ConfirmPopupEffect.SetCancelCommand(Xamarin.Forms.BindableObject, System.Windows.Input.ICommand)
   nameWithType: ConfirmPopupEffect.SetCancelCommand(BindableObject, ICommand)
 - uid: CircularUI.ConfirmPopupEffect.SetCancelCommand*
   name: SetCancelCommand
@@ -1322,11 +1322,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetCancelCommand
   nameWithType: ConfirmPopupEffect.SetCancelCommand
-- uid: CircularUI.ConfirmPopupEffect.SetCancelCommandParameter(BindableObject,System.Object)
+- uid: CircularUI.ConfirmPopupEffect.SetCancelCommandParameter(Xamarin.Forms.BindableObject,System.Object)
   name: SetCancelCommandParameter(BindableObject, Object)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetCancelCommandParameter_BindableObject_System_Object_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetCancelCommandParameter(BindableObject,System.Object)
-  fullName: CircularUI.ConfirmPopupEffect.SetCancelCommandParameter(BindableObject, System.Object)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetCancelCommandParameter_Xamarin_Forms_BindableObject_System_Object_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetCancelCommandParameter(Xamarin.Forms.BindableObject,System.Object)
+  fullName: CircularUI.ConfirmPopupEffect.SetCancelCommandParameter(Xamarin.Forms.BindableObject, System.Object)
   nameWithType: ConfirmPopupEffect.SetCancelCommandParameter(BindableObject, Object)
 - uid: CircularUI.ConfirmPopupEffect.SetCancelCommandParameter*
   name: SetCancelCommandParameter
@@ -1335,11 +1335,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetCancelCommandParameter
   nameWithType: ConfirmPopupEffect.SetCancelCommandParameter
-- uid: CircularUI.ConfirmPopupEffect.SetCancelText(BindableObject,System.String)
+- uid: CircularUI.ConfirmPopupEffect.SetCancelText(Xamarin.Forms.BindableObject,System.String)
   name: SetCancelText(BindableObject, String)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetCancelText_BindableObject_System_String_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetCancelText(BindableObject,System.String)
-  fullName: CircularUI.ConfirmPopupEffect.SetCancelText(BindableObject, System.String)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetCancelText_Xamarin_Forms_BindableObject_System_String_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetCancelText(Xamarin.Forms.BindableObject,System.String)
+  fullName: CircularUI.ConfirmPopupEffect.SetCancelText(Xamarin.Forms.BindableObject, System.String)
   nameWithType: ConfirmPopupEffect.SetCancelText(BindableObject, String)
 - uid: CircularUI.ConfirmPopupEffect.SetCancelText*
   name: SetCancelText
@@ -1348,11 +1348,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetCancelText
   nameWithType: ConfirmPopupEffect.SetCancelText
-- uid: CircularUI.ConfirmPopupEffect.SetConfirmVisibility(BindableObject,System.Boolean)
+- uid: CircularUI.ConfirmPopupEffect.SetConfirmVisibility(Xamarin.Forms.BindableObject,System.Boolean)
   name: SetConfirmVisibility(BindableObject, Boolean)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetConfirmVisibility_BindableObject_System_Boolean_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetConfirmVisibility(BindableObject,System.Boolean)
-  fullName: CircularUI.ConfirmPopupEffect.SetConfirmVisibility(BindableObject, System.Boolean)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetConfirmVisibility_Xamarin_Forms_BindableObject_System_Boolean_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetConfirmVisibility(Xamarin.Forms.BindableObject,System.Boolean)
+  fullName: CircularUI.ConfirmPopupEffect.SetConfirmVisibility(Xamarin.Forms.BindableObject, System.Boolean)
   nameWithType: ConfirmPopupEffect.SetConfirmVisibility(BindableObject, Boolean)
 - uid: CircularUI.ConfirmPopupEffect.SetConfirmVisibility*
   name: SetConfirmVisibility
@@ -1361,11 +1361,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetConfirmVisibility
   nameWithType: ConfirmPopupEffect.SetConfirmVisibility
-- uid: CircularUI.ConfirmPopupEffect.SetOffset(BindableObject,Point)
+- uid: CircularUI.ConfirmPopupEffect.SetOffset(Xamarin.Forms.BindableObject,Xamarin.Forms.Point)
   name: SetOffset(BindableObject, Point)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetOffset_BindableObject_Point_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetOffset(BindableObject,Point)
-  fullName: CircularUI.ConfirmPopupEffect.SetOffset(BindableObject, Point)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetOffset_Xamarin_Forms_BindableObject_Xamarin_Forms_Point_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetOffset(Xamarin.Forms.BindableObject,Xamarin.Forms.Point)
+  fullName: CircularUI.ConfirmPopupEffect.SetOffset(Xamarin.Forms.BindableObject, Xamarin.Forms.Point)
   nameWithType: ConfirmPopupEffect.SetOffset(BindableObject, Point)
 - uid: CircularUI.ConfirmPopupEffect.SetOffset*
   name: SetOffset
@@ -1374,11 +1374,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.ConfirmPopupEffect.SetOffset
   nameWithType: ConfirmPopupEffect.SetOffset
-- uid: CircularUI.ConfirmPopupEffect.SetPositionOption(BindableObject,CircularUI.PositionOption)
+- uid: CircularUI.ConfirmPopupEffect.SetPositionOption(Xamarin.Forms.BindableObject,CircularUI.PositionOption)
   name: SetPositionOption(BindableObject, PositionOption)
-  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetPositionOption_BindableObject_CircularUI_PositionOption_
-  commentId: M:CircularUI.ConfirmPopupEffect.SetPositionOption(BindableObject,CircularUI.PositionOption)
-  fullName: CircularUI.ConfirmPopupEffect.SetPositionOption(BindableObject, CircularUI.PositionOption)
+  href: api/CircularUI.ConfirmPopupEffect.html#CircularUI_ConfirmPopupEffect_SetPositionOption_Xamarin_Forms_BindableObject_CircularUI_PositionOption_
+  commentId: M:CircularUI.ConfirmPopupEffect.SetPositionOption(Xamarin.Forms.BindableObject,CircularUI.PositionOption)
+  fullName: CircularUI.ConfirmPopupEffect.SetPositionOption(Xamarin.Forms.BindableObject, CircularUI.PositionOption)
   nameWithType: ConfirmPopupEffect.SetPositionOption(BindableObject, PositionOption)
 - uid: CircularUI.ConfirmPopupEffect.SetPositionOption*
   name: SetPositionOption
@@ -1482,23 +1482,23 @@ references:
   commentId: F:CircularUI.ContextPopup.SelectedItemProperty
   fullName: CircularUI.ContextPopup.SelectedItemProperty
   nameWithType: ContextPopup.SelectedItemProperty
-- uid: CircularUI.ContextPopup.Show(View)
+- uid: CircularUI.ContextPopup.Show(Xamarin.Forms.View)
   name: Show(View)
-  href: api/CircularUI.ContextPopup.html#CircularUI_ContextPopup_Show_View_
-  commentId: M:CircularUI.ContextPopup.Show(View)
-  fullName: CircularUI.ContextPopup.Show(View)
+  href: api/CircularUI.ContextPopup.html#CircularUI_ContextPopup_Show_Xamarin_Forms_View_
+  commentId: M:CircularUI.ContextPopup.Show(Xamarin.Forms.View)
+  fullName: CircularUI.ContextPopup.Show(Xamarin.Forms.View)
   nameWithType: ContextPopup.Show(View)
-- uid: CircularUI.ContextPopup.Show(View,System.Double,System.Double)
+- uid: CircularUI.ContextPopup.Show(Xamarin.Forms.View,System.Double,System.Double)
   name: Show(View, Double, Double)
-  href: api/CircularUI.ContextPopup.html#CircularUI_ContextPopup_Show_View_System_Double_System_Double_
-  commentId: M:CircularUI.ContextPopup.Show(View,System.Double,System.Double)
-  fullName: CircularUI.ContextPopup.Show(View, System.Double, System.Double)
+  href: api/CircularUI.ContextPopup.html#CircularUI_ContextPopup_Show_Xamarin_Forms_View_System_Double_System_Double_
+  commentId: M:CircularUI.ContextPopup.Show(Xamarin.Forms.View,System.Double,System.Double)
+  fullName: CircularUI.ContextPopup.Show(Xamarin.Forms.View, System.Double, System.Double)
   nameWithType: ContextPopup.Show(View, Double, Double)
-- uid: CircularUI.ContextPopup.Show(View,System.Int32,System.Int32)
+- uid: CircularUI.ContextPopup.Show(Xamarin.Forms.View,System.Int32,System.Int32)
   name: Show(View, Int32, Int32)
-  href: api/CircularUI.ContextPopup.html#CircularUI_ContextPopup_Show_View_System_Int32_System_Int32_
-  commentId: M:CircularUI.ContextPopup.Show(View,System.Int32,System.Int32)
-  fullName: CircularUI.ContextPopup.Show(View, System.Int32, System.Int32)
+  href: api/CircularUI.ContextPopup.html#CircularUI_ContextPopup_Show_Xamarin_Forms_View_System_Int32_System_Int32_
+  commentId: M:CircularUI.ContextPopup.Show(Xamarin.Forms.View,System.Int32,System.Int32)
+  fullName: CircularUI.ContextPopup.Show(Xamarin.Forms.View, System.Int32, System.Int32)
   nameWithType: ContextPopup.Show(View, Int32, Int32)
 - uid: CircularUI.ContextPopup.Show*
   name: Show
@@ -1960,13 +1960,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CheckRenderer.Dispose
   nameWithType: CheckRenderer.Dispose
-- uid: CircularUI.Tizen.CheckRenderer.OnElementChanged(ElementChangedEventArgs{Switch})
+- uid: CircularUI.Tizen.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Switch})
   name: OnElementChanged(ElementChangedEventArgs<Switch>)
-  href: api/CircularUI.Tizen.CheckRenderer.html#CircularUI_Tizen_CheckRenderer_OnElementChanged_ElementChangedEventArgs_Switch__
-  commentId: M:CircularUI.Tizen.CheckRenderer.OnElementChanged(ElementChangedEventArgs{Switch})
+  href: api/CircularUI.Tizen.CheckRenderer.html#CircularUI_Tizen_CheckRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Xamarin_Forms_Switch__
+  commentId: M:CircularUI.Tizen.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Switch})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of Switch))
-  fullName: CircularUI.Tizen.CheckRenderer.OnElementChanged(ElementChangedEventArgs<Switch>)
-  fullName.vb: CircularUI.Tizen.CheckRenderer.OnElementChanged(ElementChangedEventArgs(Of Switch))
+  fullName: CircularUI.Tizen.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Xamarin.Forms.Switch>)
+  fullName.vb: CircularUI.Tizen.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Xamarin.Forms.Switch))
   nameWithType: CheckRenderer.OnElementChanged(ElementChangedEventArgs<Switch>)
   nameWithType.vb: CheckRenderer.OnElementChanged(ElementChangedEventArgs(Of Switch))
 - uid: CircularUI.Tizen.CheckRenderer.OnElementChanged*
@@ -2021,13 +2021,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleDateTimeSelectorRenderer.MinimumSize
   nameWithType: CircleDateTimeSelectorRenderer.MinimumSize
-- uid: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CircleDateTimeSelector})
+- uid: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CircleDateTimeSelector})
   name: OnElementChanged(ElementChangedEventArgs<CircleDateTimeSelector>)
-  href: api/CircularUI.Tizen.CircleDateTimeSelectorRenderer.html#CircularUI_Tizen_CircleDateTimeSelectorRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_CircleDateTimeSelector__
-  commentId: M:CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CircleDateTimeSelector})
+  href: api/CircularUI.Tizen.CircleDateTimeSelectorRenderer.html#CircularUI_Tizen_CircleDateTimeSelectorRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_CircleDateTimeSelector__
+  commentId: M:CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CircleDateTimeSelector})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleDateTimeSelector))
-  fullName: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.CircleDateTimeSelector>)
-  fullName.vb: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.CircleDateTimeSelector))
+  fullName: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.CircleDateTimeSelector>)
+  fullName.vb: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.CircleDateTimeSelector))
   nameWithType: CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs<CircleDateTimeSelector>)
   nameWithType.vb: CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleDateTimeSelector))
 - uid: CircularUI.Tizen.CircleDateTimeSelectorRenderer.OnElementChanged*
@@ -2043,11 +2043,11 @@ references:
   commentId: T:CircularUI.Tizen.CircleListView
   fullName: CircularUI.Tizen.CircleListView
   nameWithType: CircleListView
-- uid: CircularUI.Tizen.CircleListView.#ctor(EvasObject,CircleSurface)
+- uid: CircularUI.Tizen.CircleListView.#ctor(ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
   name: CircleListView(EvasObject, CircleSurface)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView__ctor_EvasObject_CircleSurface_
-  commentId: M:CircularUI.Tizen.CircleListView.#ctor(EvasObject,CircleSurface)
-  fullName: CircularUI.Tizen.CircleListView.CircleListView(EvasObject, CircleSurface)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView__ctor_ElmSharp_EvasObject_ElmSharp_Wearable_CircleSurface_
+  commentId: M:CircularUI.Tizen.CircleListView.#ctor(ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
+  fullName: CircularUI.Tizen.CircleListView.CircleListView(ElmSharp.EvasObject, ElmSharp.Wearable.CircleSurface)
   nameWithType: CircleListView.CircleListView(EvasObject, CircleSurface)
 - uid: CircularUI.Tizen.CircleListView.#ctor*
   name: CircleListView
@@ -2056,13 +2056,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.CircleListView
   nameWithType: CircleListView.CircleListView
-- uid: CircularUI.Tizen.CircleListView.AddGroup(TemplatedItemsList{ItemsView{Cell},Cell})
+- uid: CircularUI.Tizen.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name: AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddGroup_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:CircularUI.Tizen.CircleListView.AddGroup(TemplatedItemsList{ItemsView{Cell},Cell})
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:CircularUI.Tizen.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name.vb: AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: CircularUI.Tizen.CircleListView.AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: CircularUI.Tizen.CircleListView.AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: CircularUI.Tizen.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: CircularUI.Tizen.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
   nameWithType: CircleListView.AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: CircularUI.Tizen.CircleListView.AddGroup*
@@ -2072,13 +2072,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.AddGroup
   nameWithType: CircleListView.AddGroup
-- uid: CircularUI.Tizen.CircleListView.AddItem(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
+- uid: CircularUI.Tizen.CircleListView.AddItem(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name: AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddItem_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:CircularUI.Tizen.CircleListView.AddItem(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddItem_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:CircularUI.Tizen.CircleListView.AddItem(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name.vb: AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: CircularUI.Tizen.CircleListView.AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: CircularUI.Tizen.CircleListView.AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: CircularUI.Tizen.CircleListView.AddItem(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: CircularUI.Tizen.CircleListView.AddItem(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
   nameWithType: CircleListView.AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: CircularUI.Tizen.CircleListView.AddItem*
@@ -2088,34 +2088,34 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.AddItem
   nameWithType: CircleListView.AddItem
-- uid: CircularUI.Tizen.CircleListView.AddSource(IEnumerable)
+- uid: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable)
   name: AddSource(IEnumerable)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_IEnumerable_
-  commentId: M:CircularUI.Tizen.CircleListView.AddSource(IEnumerable)
-  fullName: CircularUI.Tizen.CircleListView.AddSource(IEnumerable)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_System_Collections_IEnumerable_
+  commentId: M:CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable)
+  fullName: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable)
   nameWithType: CircleListView.AddSource(IEnumerable)
-- uid: CircularUI.Tizen.CircleListView.AddSource(IEnumerable,Cell)
+- uid: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Cell)
   name: AddSource(IEnumerable, Cell)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_IEnumerable_Cell_
-  commentId: M:CircularUI.Tizen.CircleListView.AddSource(IEnumerable,Cell)
-  fullName: CircularUI.Tizen.CircleListView.AddSource(IEnumerable, Cell)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_System_Collections_IEnumerable_Xamarin_Forms_Cell_
+  commentId: M:CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Cell)
+  fullName: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Cell)
   nameWithType: CircleListView.AddSource(IEnumerable, Cell)
-- uid: CircularUI.Tizen.CircleListView.AddSource(IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell})
+- uid: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name: AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_IEnumerable_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:CircularUI.Tizen.CircleListView.AddSource(IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell})
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_System_Collections_IEnumerable_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name.vb: AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: CircularUI.Tizen.CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: CircularUI.Tizen.CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
   nameWithType: CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: CircularUI.Tizen.CircleListView.AddSource(IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell},Cell)
+- uid: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
   name: AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_IEnumerable_TemplatedItemsList_ItemsView_Cell__Cell__Cell_
-  commentId: M:CircularUI.Tizen.CircleListView.AddSource(IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell},Cell)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_AddSource_System_Collections_IEnumerable_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__Xamarin_Forms_Cell_
+  commentId: M:CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
   name.vb: AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  fullName: CircularUI.Tizen.CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  fullName.vb: CircularUI.Tizen.CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
+  fullName: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>, Xamarin.Forms.Cell)
+  fullName.vb: CircularUI.Tizen.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell), Xamarin.Forms.Cell)
   nameWithType: CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
   nameWithType.vb: CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
 - uid: CircularUI.Tizen.CircleListView.AddSource*
@@ -2125,12 +2125,12 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.AddSource
   nameWithType: CircleListView.AddSource
-- uid: CircularUI.Tizen.CircleListView.ApplyScrollTo(Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
-  name: ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, Boolean)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ApplyScrollTo_Cell_Xamarin_Forms_ScrollToPosition_System_Boolean_
-  commentId: M:CircularUI.Tizen.CircleListView.ApplyScrollTo(Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
-  fullName: CircularUI.Tizen.CircleListView.ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, System.Boolean)
-  nameWithType: CircleListView.ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, Boolean)
+- uid: CircularUI.Tizen.CircleListView.ApplyScrollTo(Xamarin.Forms.Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
+  name: ApplyScrollTo(Cell, ScrollToPosition, Boolean)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ApplyScrollTo_Xamarin_Forms_Cell_Xamarin_Forms_ScrollToPosition_System_Boolean_
+  commentId: M:CircularUI.Tizen.CircleListView.ApplyScrollTo(Xamarin.Forms.Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
+  fullName: CircularUI.Tizen.CircleListView.ApplyScrollTo(Xamarin.Forms.Cell, Xamarin.Forms.ScrollToPosition, System.Boolean)
+  nameWithType: CircleListView.ApplyScrollTo(Cell, ScrollToPosition, Boolean)
 - uid: CircularUI.Tizen.CircleListView.ApplyScrollTo*
   name: ApplyScrollTo
   href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ApplyScrollTo_
@@ -2138,11 +2138,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.ApplyScrollTo
   nameWithType: CircleListView.ApplyScrollTo
-- uid: CircularUI.Tizen.CircleListView.ApplySelectedItem(Cell)
+- uid: CircularUI.Tizen.CircleListView.ApplySelectedItem(Xamarin.Forms.Cell)
   name: ApplySelectedItem(Cell)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ApplySelectedItem_Cell_
-  commentId: M:CircularUI.Tizen.CircleListView.ApplySelectedItem(Cell)
-  fullName: CircularUI.Tizen.CircleListView.ApplySelectedItem(Cell)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ApplySelectedItem_Xamarin_Forms_Cell_
+  commentId: M:CircularUI.Tizen.CircleListView.ApplySelectedItem(Xamarin.Forms.Cell)
+  fullName: CircularUI.Tizen.CircleListView.ApplySelectedItem(Xamarin.Forms.Cell)
   nameWithType: CircleListView.ApplySelectedItem(Cell)
 - uid: CircularUI.Tizen.CircleListView.ApplySelectedItem*
   name: ApplySelectedItem
@@ -2190,13 +2190,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.Header
   nameWithType: CircleListView.Header
-- uid: CircularUI.Tizen.CircleListView.InsertGroup(TemplatedItemsList{ItemsView{Cell},Cell},Cell)
+- uid: CircularUI.Tizen.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
   name: InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_InsertGroup_TemplatedItemsList_ItemsView_Cell__Cell__Cell_
-  commentId: M:CircularUI.Tizen.CircleListView.InsertGroup(TemplatedItemsList{ItemsView{Cell},Cell},Cell)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_InsertGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__Xamarin_Forms_Cell_
+  commentId: M:CircularUI.Tizen.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
   name.vb: InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  fullName: CircularUI.Tizen.CircleListView.InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  fullName.vb: CircularUI.Tizen.CircleListView.InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
+  fullName: CircularUI.Tizen.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>, Xamarin.Forms.Cell)
+  fullName.vb: CircularUI.Tizen.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell), Xamarin.Forms.Cell)
   nameWithType: CircleListView.InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
   nameWithType.vb: CircleListView.InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
 - uid: CircularUI.Tizen.CircleListView.InsertGroup*
@@ -2206,13 +2206,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.InsertGroup
   nameWithType: CircleListView.InsertGroup
-- uid: CircularUI.Tizen.CircleListView.InsertItem(Cell,Cell,TemplatedItemsList{ItemsView{Cell},Cell})
+- uid: CircularUI.Tizen.CircleListView.InsertItem(Xamarin.Forms.Cell,Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name: InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_InsertItem_Cell_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:CircularUI.Tizen.CircleListView.InsertItem(Cell,Cell,TemplatedItemsList{ItemsView{Cell},Cell})
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_InsertItem_Xamarin_Forms_Cell_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:CircularUI.Tizen.CircleListView.InsertItem(Xamarin.Forms.Cell,Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name.vb: InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: CircularUI.Tizen.CircleListView.InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: CircularUI.Tizen.CircleListView.InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: CircularUI.Tizen.CircleListView.InsertItem(Xamarin.Forms.Cell, Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: CircularUI.Tizen.CircleListView.InsertItem(Xamarin.Forms.Cell, Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
   nameWithType: CircleListView.InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: CircularUI.Tizen.CircleListView.InsertItem*
@@ -2235,19 +2235,19 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.OnRealized
   nameWithType: CircleListView.OnRealized
-- uid: CircularUI.Tizen.CircleListView.Remove(Cell)
+- uid: CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Cell)
   name: Remove(Cell)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_Remove_Cell_
-  commentId: M:CircularUI.Tizen.CircleListView.Remove(Cell)
-  fullName: CircularUI.Tizen.CircleListView.Remove(Cell)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_Remove_Xamarin_Forms_Cell_
+  commentId: M:CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Cell)
+  fullName: CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Cell)
   nameWithType: CircleListView.Remove(Cell)
-- uid: CircularUI.Tizen.CircleListView.Remove(TemplatedItemsList{ItemsView{Cell},Cell})
+- uid: CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name: Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_Remove_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:CircularUI.Tizen.CircleListView.Remove(TemplatedItemsList{ItemsView{Cell},Cell})
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_Remove_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name.vb: Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: CircularUI.Tizen.CircleListView.Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: CircularUI.Tizen.CircleListView.Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: CircularUI.Tizen.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
   nameWithType: CircleListView.Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: CircularUI.Tizen.CircleListView.Remove*
@@ -2257,11 +2257,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.Remove
   nameWithType: CircleListView.Remove
-- uid: CircularUI.Tizen.CircleListView.RemoveSource(IEnumerable)
+- uid: CircularUI.Tizen.CircleListView.RemoveSource(System.Collections.IEnumerable)
   name: RemoveSource(IEnumerable)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_RemoveSource_IEnumerable_
-  commentId: M:CircularUI.Tizen.CircleListView.RemoveSource(IEnumerable)
-  fullName: CircularUI.Tizen.CircleListView.RemoveSource(IEnumerable)
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_RemoveSource_System_Collections_IEnumerable_
+  commentId: M:CircularUI.Tizen.CircleListView.RemoveSource(System.Collections.IEnumerable)
+  fullName: CircularUI.Tizen.CircleListView.RemoveSource(System.Collections.IEnumerable)
   nameWithType: CircleListView.RemoveSource(IEnumerable)
 - uid: CircularUI.Tizen.CircleListView.RemoveSource*
   name: RemoveSource
@@ -2270,13 +2270,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListView.RemoveSource
   nameWithType: CircleListView.RemoveSource
-- uid: CircularUI.Tizen.CircleListView.ResetGroup(TemplatedItemsList{ItemsView{Cell},Cell})
+- uid: CircularUI.Tizen.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name: ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ResetGroup_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:CircularUI.Tizen.CircleListView.ResetGroup(TemplatedItemsList{ItemsView{Cell},Cell})
+  href: api/CircularUI.Tizen.CircleListView.html#CircularUI_Tizen_CircleListView_ResetGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:CircularUI.Tizen.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
   name.vb: ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: CircularUI.Tizen.CircleListView.ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: CircularUI.Tizen.CircleListView.ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: CircularUI.Tizen.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: CircularUI.Tizen.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
   nameWithType: CircleListView.ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: CircularUI.Tizen.CircleListView.ResetGroup*
@@ -2318,13 +2318,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleListViewRenderer.Dispose
   nameWithType: CircleListViewRenderer.Dispose
-- uid: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CircleListView})
+- uid: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CircleListView})
   name: OnElementChanged(ElementChangedEventArgs<CircleListView>)
-  href: api/CircularUI.Tizen.CircleListViewRenderer.html#CircularUI_Tizen_CircleListViewRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_CircleListView__
-  commentId: M:CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CircleListView})
+  href: api/CircularUI.Tizen.CircleListViewRenderer.html#CircularUI_Tizen_CircleListViewRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_CircleListView__
+  commentId: M:CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CircleListView})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleListView))
-  fullName: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.CircleListView>)
-  fullName.vb: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.CircleListView))
+  fullName: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.CircleListView>)
+  fullName.vb: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.CircleListView))
   nameWithType: CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs<CircleListView>)
   nameWithType.vb: CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleListView))
 - uid: CircularUI.Tizen.CircleListViewRenderer.OnElementChanged*
@@ -2379,13 +2379,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CirclePageRenderer.Dispose
   nameWithType: CirclePageRenderer.Dispose
-- uid: CircularUI.Tizen.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CirclePage})
+- uid: CircularUI.Tizen.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CirclePage})
   name: OnElementChanged(ElementChangedEventArgs<CirclePage>)
-  href: api/CircularUI.Tizen.CirclePageRenderer.html#CircularUI_Tizen_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_CirclePage__
-  commentId: M:CircularUI.Tizen.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CirclePage})
+  href: api/CircularUI.Tizen.CirclePageRenderer.html#CircularUI_Tizen_CirclePageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_CirclePage__
+  commentId: M:CircularUI.Tizen.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CirclePage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CirclePage))
-  fullName: CircularUI.Tizen.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.CirclePage>)
-  fullName.vb: CircularUI.Tizen.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.CirclePage))
+  fullName: CircularUI.Tizen.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.CirclePage>)
+  fullName.vb: CircularUI.Tizen.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.CirclePage))
   nameWithType: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<CirclePage>)
   nameWithType.vb: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of CirclePage))
 - uid: CircularUI.Tizen.CirclePageRenderer.OnElementChanged*
@@ -2427,11 +2427,11 @@ references:
   commentId: T:CircularUI.Tizen.CircleSliderSurfaceItemImplements
   fullName: CircularUI.Tizen.CircleSliderSurfaceItemImplements
   nameWithType: CircleSliderSurfaceItemImplements
-- uid: CircularUI.Tizen.CircleSliderSurfaceItemImplements.#ctor(CircularUI.CircleSliderSurfaceItem,EvasObject,CircleSurface)
+- uid: CircularUI.Tizen.CircleSliderSurfaceItemImplements.#ctor(CircularUI.CircleSliderSurfaceItem,ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
   name: CircleSliderSurfaceItemImplements(CircleSliderSurfaceItem, EvasObject, CircleSurface)
-  href: api/CircularUI.Tizen.CircleSliderSurfaceItemImplements.html#CircularUI_Tizen_CircleSliderSurfaceItemImplements__ctor_CircularUI_CircleSliderSurfaceItem_EvasObject_CircleSurface_
-  commentId: M:CircularUI.Tizen.CircleSliderSurfaceItemImplements.#ctor(CircularUI.CircleSliderSurfaceItem,EvasObject,CircleSurface)
-  fullName: CircularUI.Tizen.CircleSliderSurfaceItemImplements.CircleSliderSurfaceItemImplements(CircularUI.CircleSliderSurfaceItem, EvasObject, CircleSurface)
+  href: api/CircularUI.Tizen.CircleSliderSurfaceItemImplements.html#CircularUI_Tizen_CircleSliderSurfaceItemImplements__ctor_CircularUI_CircleSliderSurfaceItem_ElmSharp_EvasObject_ElmSharp_Wearable_CircleSurface_
+  commentId: M:CircularUI.Tizen.CircleSliderSurfaceItemImplements.#ctor(CircularUI.CircleSliderSurfaceItem,ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
+  fullName: CircularUI.Tizen.CircleSliderSurfaceItemImplements.CircleSliderSurfaceItemImplements(CircularUI.CircleSliderSurfaceItem, ElmSharp.EvasObject, ElmSharp.Wearable.CircleSurface)
   nameWithType: CircleSliderSurfaceItemImplements.CircleSliderSurfaceItemImplements(CircleSliderSurfaceItem, EvasObject, CircleSurface)
 - uid: CircularUI.Tizen.CircleSliderSurfaceItemImplements.#ctor*
   name: CircleSliderSurfaceItemImplements
@@ -2498,13 +2498,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.CircleStepperRenderer.MinimumSize
   nameWithType: CircleStepperRenderer.MinimumSize
-- uid: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CircleStepper})
+- uid: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CircleStepper})
   name: OnElementChanged(ElementChangedEventArgs<CircleStepper>)
-  href: api/CircularUI.Tizen.CircleStepperRenderer.html#CircularUI_Tizen_CircleStepperRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_CircleStepper__
-  commentId: M:CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.CircleStepper})
+  href: api/CircularUI.Tizen.CircleStepperRenderer.html#CircularUI_Tizen_CircleStepperRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_CircleStepper__
+  commentId: M:CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.CircleStepper})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleStepper))
-  fullName: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.CircleStepper>)
-  fullName.vb: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.CircleStepper))
+  fullName: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.CircleStepper>)
+  fullName.vb: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.CircleStepper))
   nameWithType: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<CircleStepper>)
   nameWithType.vb: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleStepper))
 - uid: CircularUI.Tizen.CircleStepperRenderer.OnElementChanged*
@@ -2745,13 +2745,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.IndexPageRenderer.Dispose
   nameWithType: IndexPageRenderer.Dispose
-- uid: CircularUI.Tizen.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.IndexPage})
+- uid: CircularUI.Tizen.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.IndexPage})
   name: OnElementChanged(ElementChangedEventArgs<IndexPage>)
-  href: api/CircularUI.Tizen.IndexPageRenderer.html#CircularUI_Tizen_IndexPageRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_IndexPage__
-  commentId: M:CircularUI.Tizen.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.IndexPage})
+  href: api/CircularUI.Tizen.IndexPageRenderer.html#CircularUI_Tizen_IndexPageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_IndexPage__
+  commentId: M:CircularUI.Tizen.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.IndexPage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of IndexPage))
-  fullName: CircularUI.Tizen.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.IndexPage>)
-  fullName.vb: CircularUI.Tizen.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.IndexPage))
+  fullName: CircularUI.Tizen.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.IndexPage>)
+  fullName.vb: CircularUI.Tizen.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.IndexPage))
   nameWithType: IndexPageRenderer.OnElementChanged(ElementChangedEventArgs<IndexPage>)
   nameWithType.vb: IndexPageRenderer.OnElementChanged(ElementChangedEventArgs(Of IndexPage))
 - uid: CircularUI.Tizen.IndexPageRenderer.OnElementChanged*
@@ -2902,11 +2902,11 @@ references:
   commentId: T:CircularUI.Tizen.ListViewCache
   fullName: CircularUI.Tizen.ListViewCache
   nameWithType: ListViewCache
-- uid: CircularUI.Tizen.ListViewCache.Get(Cell,System.Boolean)
+- uid: CircularUI.Tizen.ListViewCache.Get(Xamarin.Forms.Cell,System.Boolean)
   name: Get(Cell, Boolean)
-  href: api/CircularUI.Tizen.ListViewCache.html#CircularUI_Tizen_ListViewCache_Get_Cell_System_Boolean_
-  commentId: M:CircularUI.Tizen.ListViewCache.Get(Cell,System.Boolean)
-  fullName: CircularUI.Tizen.ListViewCache.Get(Cell, System.Boolean)
+  href: api/CircularUI.Tizen.ListViewCache.html#CircularUI_Tizen_ListViewCache_Get_Xamarin_Forms_Cell_System_Boolean_
+  commentId: M:CircularUI.Tizen.ListViewCache.Get(Xamarin.Forms.Cell,System.Boolean)
+  fullName: CircularUI.Tizen.ListViewCache.Get(Xamarin.Forms.Cell, System.Boolean)
   nameWithType: ListViewCache.Get(Cell, Boolean)
 - uid: CircularUI.Tizen.ListViewCache.Get*
   name: Get
@@ -2992,13 +2992,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.RadioRenderer.Dispose
   nameWithType: RadioRenderer.Dispose
-- uid: CircularUI.Tizen.RadioRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.Radio})
+- uid: CircularUI.Tizen.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.Radio})
   name: OnElementChanged(ElementChangedEventArgs<Radio>)
-  href: api/CircularUI.Tizen.RadioRenderer.html#CircularUI_Tizen_RadioRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_Radio__
-  commentId: M:CircularUI.Tizen.RadioRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.Radio})
+  href: api/CircularUI.Tizen.RadioRenderer.html#CircularUI_Tizen_RadioRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_Radio__
+  commentId: M:CircularUI.Tizen.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.Radio})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of Radio))
-  fullName: CircularUI.Tizen.RadioRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.Radio>)
-  fullName.vb: CircularUI.Tizen.RadioRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.Radio))
+  fullName: CircularUI.Tizen.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.Radio>)
+  fullName.vb: CircularUI.Tizen.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.Radio))
   nameWithType: RadioRenderer.OnElementChanged(ElementChangedEventArgs<Radio>)
   nameWithType.vb: RadioRenderer.OnElementChanged(ElementChangedEventArgs(Of Radio))
 - uid: CircularUI.Tizen.RadioRenderer.OnElementChanged*
@@ -3040,11 +3040,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.TizenConfirmPopupEffect.OnDetached
   nameWithType: TizenConfirmPopupEffect.OnDetached
-- uid: CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged(PropertyChangedEventArgs)
+- uid: CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
   name: OnElementPropertyChanged(PropertyChangedEventArgs)
-  href: api/CircularUI.Tizen.TizenConfirmPopupEffect.html#CircularUI_Tizen_TizenConfirmPopupEffect_OnElementPropertyChanged_PropertyChangedEventArgs_
-  commentId: M:CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged(PropertyChangedEventArgs)
-  fullName: CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged(PropertyChangedEventArgs)
+  href: api/CircularUI.Tizen.TizenConfirmPopupEffect.html#CircularUI_Tizen_TizenConfirmPopupEffect_OnElementPropertyChanged_System_ComponentModel_PropertyChangedEventArgs_
+  commentId: M:CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
+  fullName: CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)
   nameWithType: TizenConfirmPopupEffect.OnElementPropertyChanged(PropertyChangedEventArgs)
 - uid: CircularUI.Tizen.TizenConfirmPopupEffect.OnElementPropertyChanged*
   name: OnElementPropertyChanged
@@ -3098,13 +3098,13 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.TwoButtonPageRenderer.GetNativeContentGeometry
   nameWithType: TwoButtonPageRenderer.GetNativeContentGeometry
-- uid: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.TwoButtonPage})
+- uid: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.TwoButtonPage})
   name: OnElementChanged(ElementChangedEventArgs<TwoButtonPage>)
-  href: api/CircularUI.Tizen.TwoButtonPageRenderer.html#CircularUI_Tizen_TwoButtonPageRenderer_OnElementChanged_ElementChangedEventArgs_CircularUI_TwoButtonPage__
-  commentId: M:CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs{CircularUI.TwoButtonPage})
+  href: api/CircularUI.Tizen.TwoButtonPageRenderer.html#CircularUI_Tizen_TwoButtonPageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_CircularUI_TwoButtonPage__
+  commentId: M:CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{CircularUI.TwoButtonPage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of TwoButtonPage))
-  fullName: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs<CircularUI.TwoButtonPage>)
-  fullName.vb: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs(Of CircularUI.TwoButtonPage))
+  fullName: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<CircularUI.TwoButtonPage>)
+  fullName.vb: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of CircularUI.TwoButtonPage))
   nameWithType: TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs<TwoButtonPage>)
   nameWithType.vb: TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs(Of TwoButtonPage))
 - uid: CircularUI.Tizen.TwoButtonPageRenderer.OnElementChanged*
@@ -3146,11 +3146,11 @@ references:
   commentId: T:CircularUI.Tizen.TwoButtonPageWidget
   fullName: CircularUI.Tizen.TwoButtonPageWidget
   nameWithType: TwoButtonPageWidget
-- uid: CircularUI.Tizen.TwoButtonPageWidget.#ctor(EvasObject)
+- uid: CircularUI.Tizen.TwoButtonPageWidget.#ctor(ElmSharp.EvasObject)
   name: TwoButtonPageWidget(EvasObject)
-  href: api/CircularUI.Tizen.TwoButtonPageWidget.html#CircularUI_Tizen_TwoButtonPageWidget__ctor_EvasObject_
-  commentId: M:CircularUI.Tizen.TwoButtonPageWidget.#ctor(EvasObject)
-  fullName: CircularUI.Tizen.TwoButtonPageWidget.TwoButtonPageWidget(EvasObject)
+  href: api/CircularUI.Tizen.TwoButtonPageWidget.html#CircularUI_Tizen_TwoButtonPageWidget__ctor_ElmSharp_EvasObject_
+  commentId: M:CircularUI.Tizen.TwoButtonPageWidget.#ctor(ElmSharp.EvasObject)
+  fullName: CircularUI.Tizen.TwoButtonPageWidget.TwoButtonPageWidget(ElmSharp.EvasObject)
   nameWithType: TwoButtonPageWidget.TwoButtonPageWidget(EvasObject)
 - uid: CircularUI.Tizen.TwoButtonPageWidget.#ctor*
   name: TwoButtonPageWidget
@@ -3230,11 +3230,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.TwoButtonPageWidget.OnUnrealize
   nameWithType: TwoButtonPageWidget.OnUnrealize
-- uid: CircularUI.Tizen.TwoButtonPageWidget.ShowButton1(System.String,System.String,Action)
+- uid: CircularUI.Tizen.TwoButtonPageWidget.ShowButton1(System.String,System.String,System.Action)
   name: ShowButton1(String, String, Action)
-  href: api/CircularUI.Tizen.TwoButtonPageWidget.html#CircularUI_Tizen_TwoButtonPageWidget_ShowButton1_System_String_System_String_Action_
-  commentId: M:CircularUI.Tizen.TwoButtonPageWidget.ShowButton1(System.String,System.String,Action)
-  fullName: CircularUI.Tizen.TwoButtonPageWidget.ShowButton1(System.String, System.String, Action)
+  href: api/CircularUI.Tizen.TwoButtonPageWidget.html#CircularUI_Tizen_TwoButtonPageWidget_ShowButton1_System_String_System_String_System_Action_
+  commentId: M:CircularUI.Tizen.TwoButtonPageWidget.ShowButton1(System.String,System.String,System.Action)
+  fullName: CircularUI.Tizen.TwoButtonPageWidget.ShowButton1(System.String, System.String, System.Action)
   nameWithType: TwoButtonPageWidget.ShowButton1(String, String, Action)
 - uid: CircularUI.Tizen.TwoButtonPageWidget.ShowButton1*
   name: ShowButton1
@@ -3243,11 +3243,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.TwoButtonPageWidget.ShowButton1
   nameWithType: TwoButtonPageWidget.ShowButton1
-- uid: CircularUI.Tizen.TwoButtonPageWidget.ShowButton2(System.String,System.String,Action)
+- uid: CircularUI.Tizen.TwoButtonPageWidget.ShowButton2(System.String,System.String,System.Action)
   name: ShowButton2(String, String, Action)
-  href: api/CircularUI.Tizen.TwoButtonPageWidget.html#CircularUI_Tizen_TwoButtonPageWidget_ShowButton2_System_String_System_String_Action_
-  commentId: M:CircularUI.Tizen.TwoButtonPageWidget.ShowButton2(System.String,System.String,Action)
-  fullName: CircularUI.Tizen.TwoButtonPageWidget.ShowButton2(System.String, System.String, Action)
+  href: api/CircularUI.Tizen.TwoButtonPageWidget.html#CircularUI_Tizen_TwoButtonPageWidget_ShowButton2_System_String_System_String_System_Action_
+  commentId: M:CircularUI.Tizen.TwoButtonPageWidget.ShowButton2(System.String,System.String,System.Action)
+  fullName: CircularUI.Tizen.TwoButtonPageWidget.ShowButton2(System.String, System.String, System.Action)
   nameWithType: TwoButtonPageWidget.ShowButton2(String, String, Action)
 - uid: CircularUI.Tizen.TwoButtonPageWidget.ShowButton2*
   name: ShowButton2
@@ -3295,11 +3295,11 @@ references:
   fullName: CircularUI.Tizen.Watchface.FormsWatchface.FormsWatchface
   nameWithType: FormsWatchface.FormsWatchface
 - uid: CircularUI.Tizen.Watchface.FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
-  name: LoadWatchface(Xamarin.Forms.Application)
+  name: LoadWatchface(Application)
   href: api/CircularUI.Tizen.Watchface.FormsWatchface.html#CircularUI_Tizen_Watchface_FormsWatchface_LoadWatchface_Xamarin_Forms_Application_
   commentId: M:CircularUI.Tizen.Watchface.FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
   fullName: CircularUI.Tizen.Watchface.FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
-  nameWithType: FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
+  nameWithType: FormsWatchface.LoadWatchface(Application)
 - uid: CircularUI.Tizen.Watchface.FormsWatchface.LoadWatchface*
   name: LoadWatchface
   href: api/CircularUI.Tizen.Watchface.FormsWatchface.html#CircularUI_Tizen_Watchface_FormsWatchface_LoadWatchface_
@@ -3307,11 +3307,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.Watchface.FormsWatchface.LoadWatchface
   nameWithType: FormsWatchface.LoadWatchface
-- uid: CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
+- uid: CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)
   name: OnAppControlReceived(AppControlReceivedEventArgs)
-  href: api/CircularUI.Tizen.Watchface.FormsWatchface.html#CircularUI_Tizen_Watchface_FormsWatchface_OnAppControlReceived_AppControlReceivedEventArgs_
-  commentId: M:CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
-  fullName: CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
+  href: api/CircularUI.Tizen.Watchface.FormsWatchface.html#CircularUI_Tizen_Watchface_FormsWatchface_OnAppControlReceived_Tizen_Applications_AppControlReceivedEventArgs_
+  commentId: M:CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)
+  fullName: CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)
   nameWithType: FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
 - uid: CircularUI.Tizen.Watchface.FormsWatchface.OnAppControlReceived*
   name: OnAppControlReceived
@@ -3359,11 +3359,11 @@ references:
   isSpec: "True"
   fullName: CircularUI.Tizen.Watchface.FormsWatchface.OnResume
   nameWithType: FormsWatchface.OnResume
-- uid: CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated(EvasObject)
+- uid: CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated(ElmSharp.EvasObject)
   name: OnRootViewUpdated(EvasObject)
-  href: api/CircularUI.Tizen.Watchface.FormsWatchface.html#CircularUI_Tizen_Watchface_FormsWatchface_OnRootViewUpdated_EvasObject_
-  commentId: M:CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated(EvasObject)
-  fullName: CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated(EvasObject)
+  href: api/CircularUI.Tizen.Watchface.FormsWatchface.html#CircularUI_Tizen_Watchface_FormsWatchface_OnRootViewUpdated_ElmSharp_EvasObject_
+  commentId: M:CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated(ElmSharp.EvasObject)
+  fullName: CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated(ElmSharp.EvasObject)
   nameWithType: FormsWatchface.OnRootViewUpdated(EvasObject)
 - uid: CircularUI.Tizen.Watchface.FormsWatchface.OnRootViewUpdated*
   name: OnRootViewUpdated
@@ -3404,11 +3404,11 @@ references:
   commentId: T:CircularUI.Toast
   fullName: CircularUI.Toast
   nameWithType: Toast
-- uid: CircularUI.Toast.DisplayIconText(System.String,FileImageSource,System.Int32)
+- uid: CircularUI.Toast.DisplayIconText(System.String,Xamarin.Forms.FileImageSource,System.Int32)
   name: DisplayIconText(String, FileImageSource, Int32)
-  href: api/CircularUI.Toast.html#CircularUI_Toast_DisplayIconText_System_String_FileImageSource_System_Int32_
-  commentId: M:CircularUI.Toast.DisplayIconText(System.String,FileImageSource,System.Int32)
-  fullName: CircularUI.Toast.DisplayIconText(System.String, FileImageSource, System.Int32)
+  href: api/CircularUI.Toast.html#CircularUI_Toast_DisplayIconText_System_String_Xamarin_Forms_FileImageSource_System_Int32_
+  commentId: M:CircularUI.Toast.DisplayIconText(System.String,Xamarin.Forms.FileImageSource,System.Int32)
+  fullName: CircularUI.Toast.DisplayIconText(System.String, Xamarin.Forms.FileImageSource, System.Int32)
   nameWithType: Toast.DisplayIconText(String, FileImageSource, Int32)
 - uid: CircularUI.Toast.DisplayIconText*
   name: DisplayIconText
