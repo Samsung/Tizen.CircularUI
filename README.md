@@ -1,8 +1,5 @@
 # Tizen CircularUI
 
-[![License](https://img.shields.io/badge/licence-Apache%202.0-brightgreen.svg?style=flat)](LICENSE)
-
-
 - [Introduction](#introduction)
 - [Controls](#controls)
 - [Prerequisite](#prerequisite)

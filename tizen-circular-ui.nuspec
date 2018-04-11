@@ -6,7 +6,7 @@
     <authors>Samsung Electronics</authors>
     <owners>Samsung Electronics</owners>
     <tags>xamarin forms xamarinforms xamarin.forms circular circularui wearable gear tizen</tags>
-    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <licenseUrl>http://floralicense.org/license/</licenseUrl>
     <iconUrl>http://xamarin.com/content/images/nuget/xamarin.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Circular UI components for Xamarin.Forms</description>
