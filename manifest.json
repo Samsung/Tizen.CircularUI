@@ -29,7 +29,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "WSF7e02AzrHx3rVgYfgjfw=="
+          "hash": "SyXHCKy6YUzmiQ7YzMC5qg=="
         }
       },
       "is_incremental": false,
@@ -73,6 +73,654 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.ActionButtonItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.ActionButtonItem.html",
+          "hash": "3Won40YeKUrSzW+1nnkRkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Check.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Check.html",
+          "hash": "aJlFdQ62Nn03jXYlcHHL2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CheckDisplayStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CheckDisplayStyle.html",
+          "hash": "mThrl9/2B3nT7rIyJZnnlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleDateTimeSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleDateTimeSelector.html",
+          "hash": "DpNRP3Hzl2VF/C/hTKF4/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleListView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleListView.html",
+          "hash": "gR00v20RJF/Y7EyGYOdCEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CirclePage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CirclePage.html",
+          "hash": "UruX7G8x+p8lJC9ayR5E/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CirclePageNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CirclePageNotFoundException.html",
+          "hash": "rz6DVDLJBeAWJ0VU5Lo4ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleProgressBarSurfaceItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleProgressBarSurfaceItem.html",
+          "hash": "GBv0YN2H0xro9IIqUIkfpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleScrollView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleScrollView.html",
+          "hash": "yWNg/7Lc7pBDb6LSj7a1TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleSliderSurfaceItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleSliderSurfaceItem.html",
+          "hash": "mnHrG5I2OlzbUFvPSwwk0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleStackLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleStackLayout.html",
+          "hash": "STl9CEOooxIXWBhJ0izYhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleStepper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleStepper.html",
+          "hash": "7eVBGsT8jNCgcm0UalhWtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleSurfaceItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleSurfaceItem.html",
+          "hash": "w9hWoNAXiqLO9AW/yvzzJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.CircleToolbarItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.CircleToolbarItem.html",
+          "hash": "RJ6CgPl7LkByyssV23Fj2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.ConfirmPopupEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.ConfirmPopupEffect.html",
+          "hash": "rJ+Ub2ldJeS0qNc+g770JQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.ConfirmationPopup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.ConfirmationPopup.html",
+          "hash": "t518FaK2AofRtEn3z/vrqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.ContextPopup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.ContextPopup.html",
+          "hash": "87E02GUeohzFmlzrZPE8wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.ContextPopupItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.ContextPopupItem.html",
+          "hash": "nPk+LJjjM4s0MfxqOUW8pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.DateTimeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.DateTimeType.html",
+          "hash": "wqkS0dQMqbTBFkEbbHyn3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.ICircleSurfaceItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.ICircleSurfaceItem.html",
+          "hash": "T9cKoHgbMUxoI81oPXG22g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.IRotaryEventReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.IRotaryEventReceiver.html",
+          "hash": "hxw7au+eiuxwbbb0+CIduQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.IRotaryFocusable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.IRotaryFocusable.html",
+          "hash": "TCtNcoHNe/gHQ5uJlmq6bA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.IndexPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.IndexPage.html",
+          "hash": "7CtziwVlMRL7p0j5sCmpBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.InformationPopup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.InformationPopup.html",
+          "hash": "2ADZJDweaFezkGBqfurxow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.PositionOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.PositionOption.html",
+          "hash": "tlXlL8IojTR1ap7s/Jh90Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Radio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Radio.html",
+          "hash": "l/QV8uaPDvlg073FOswyGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.RotaryEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.RotaryEventArgs.html",
+          "hash": "jxZ3Bt4xQLq2Wtia9B8q+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.RotaryEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.RotaryEventHandler.html",
+          "hash": "+IQgyIxdEuVo64V45xaOwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.SelectedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.SelectedEventArgs.html",
+          "hash": "+3B8k9Vm5sDE+/+lBBCkfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CheckRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CheckRenderer.html",
+          "hash": "7/Jm4Kz/J0e8Wp3ugKr7Yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CircleDateTimeSelectorRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CircleDateTimeSelectorRenderer.html",
+          "hash": "AK5nzwClxo8j/BlZlupl1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CircleListView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CircleListView.html",
+          "hash": "4ZE7KRlO8B0D20FN99Bx1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CircleListViewRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CircleListViewRenderer.html",
+          "hash": "x8PGb+AYXQgq7g7Kj7v5pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CirclePageRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CirclePageRenderer.html",
+          "hash": "L1TinoBAfQX2B84ycCHivw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CircleSliderSurfaceItemImplements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CircleSliderSurfaceItemImplements.html",
+          "hash": "frdWbOuKGvqXy8bB/dZ0qA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CircleStepperRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CircleStepperRenderer.html",
+          "hash": "BYHdRZmL/PFQ31meC2llhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.CircularUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.CircularUI.html",
+          "hash": "2O3BvUeoTZTXMLeYAQnKyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.ConfirmationPopupImplementation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.ConfirmationPopupImplementation.html",
+          "hash": "n9PQISI0oWIsIDIJy+nM+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.HeaderOrFooterItemClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.HeaderOrFooterItemClass.html",
+          "hash": "hHl5GQH4trW/vZ0vvg/Fcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.IndexPageRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.IndexPageRenderer.html",
+          "hash": "2nZn73LOvqSs/mOGPQ02xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.InformationPopupImplementation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.InformationPopupImplementation.html",
+          "hash": "OEsiiHfdWakJX0sl/i3Tvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.ListViewCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.ListViewCache.html",
+          "hash": "rCbQcgTc0nu4E8IeG0UpVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.PaddingItemClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.PaddingItemClass.html",
+          "hash": "hJvsxp4wZkU8A6hfWZugsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.RadioRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.RadioRenderer.html",
+          "hash": "d3ngrgxEaqO+aphIZrwtqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.TizenConfirmPopupEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.TizenConfirmPopupEffect.html",
+          "hash": "5ft6CqSuVdHHK06a3XGwRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.TwoButtonPageRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.TwoButtonPageRenderer.html",
+          "hash": "hW0+h5Mo5DGCfW6n9rjNqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.TwoButtonPageWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.TwoButtonPageWidget.html",
+          "hash": "PlQL8zeDms6IroJ7784AHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.Watchface.FormsWatchface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.Watchface.FormsWatchface.html",
+          "hash": "/NztR9bCxO9GR+WmlgLV9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.Watchface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.Watchface.html",
+          "hash": "yNDU/WaZKFUi47frcyqCXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Tizen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Tizen.html",
+          "hash": "vroz/7e7XP1hXlzF5hfL2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.Toast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.Toast.html",
+          "hash": "dND2m/6369jH/EICrk6ebg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.TwoButtonPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.TwoButtonPage.html",
+          "hash": "g0nSpUqAeWoZyxvo7wKhCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/CircularUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CircularUI.html",
+          "hash": "cxoG3WZ8HwgVWKiVRlNnSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "LVr7JJi/F6Oc18rtedYpAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
@@ -92,14 +740,19 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
