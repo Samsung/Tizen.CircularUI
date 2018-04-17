@@ -46,4 +46,4 @@ The Tizen CircularUI project provides you the following UI controls:
 ## How to use CircularUI
 - [How to make Tizen Wearable Xamarin Forms App with CircularUI](doc/guide/HOW_TO_MAKE_TIZEN_XAMARIN_FORMS_APP_WITH_CIRCULARUI.md)
 
-- The [API Reference](https://github.sec.samsung.net/pages/dotnet/apidoc/XamarinFormsCircularUI/api/index.html) is available on the web to browse.
+- The [API Reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui) is available on the web to browse.
