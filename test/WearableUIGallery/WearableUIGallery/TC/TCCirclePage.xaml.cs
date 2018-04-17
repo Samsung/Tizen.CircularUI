@@ -21,13 +21,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using CircularUI;
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCirclePage : CircularUI.CirclePage
+    public partial class TCCirclePage : CirclePage
     {
         public TCCirclePage()
         {

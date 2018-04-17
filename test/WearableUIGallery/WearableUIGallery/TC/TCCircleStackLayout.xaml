@@ -1,227 +1,244 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:IndexPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:w="clr-namespace:CircularUI;assembly=CircularUI"
-             xmlns:local="clr-namespace:WearableUIGallery"
-             x:Class="WearableUIGallery.TC.TCCircleStackLayout">
+<w:IndexPage
+    x:Class="WearableUIGallery.TC.TCCircleStackLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage>
         <w:CircleStackLayout>
-            <Label Text="Foooooooo" BackgroundColor="Red"/>
-            <Label Text="Abcd Efg wfefwefwe grererlkgjerlkgjre qdlkejlkewjf" BackgroundColor="Blue"/>
-            <Label Text="ofkwe;fjwelkjg wfefw" FontSize="20" BackgroundColor="Green"/>
-            <Label Text="wefwe grererlkre qdlkejlkewjf" BackgroundColor="Gray"/>
+            <Label BackgroundColor="Red" Text="Foooooooo" />
+            <Label BackgroundColor="Blue" Text="Abcd Efg wfefwefwe grererlkgjerlkgjre qdlkejlkewjf" />
+            <Label
+                BackgroundColor="Green"
+                FontSize="20"
+                Text="ofkwe;fjwelkjg wfefw" />
+            <Label BackgroundColor="Gray" Text="wefwe grererlkre qdlkejlkewjf" />
         </w:CircleStackLayout>
     </ContentPage>
     <ContentPage>
         <ScrollView>
             <w:CircleStackLayout>
-                <Label Text="Foooooooooooooooooo" BackgroundColor="Red"/>
-                <Label Text="Abcd Efg wfefwefwe grererlkgjerlkgjre qdlkejlkewjf" BackgroundColor="Blue"/>
-                <Label Text="ofkwe;fjwelkjg wfefw" FontSize="20" BackgroundColor="Green"/>
-                <Label Text="wefwe grererlkre qdlkejlkewjf" BackgroundColor="Gray"/>
+                <Label BackgroundColor="Red" Text="Foooooooooooooooooo" />
+                <Label BackgroundColor="Blue" Text="Abcd Efg wfefwefwe grererlkgjerlkgjre qdlkejlkewjf" />
+                <Label
+                    BackgroundColor="Green"
+                    FontSize="20"
+                    Text="ofkwe;fjwelkjg wfefw" />
+                <Label BackgroundColor="Gray" Text="wefwe grererlkre qdlkejlkewjf" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <ScrollView>
             <w:CircleStackLayout>
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <StackLayout>
-            <BoxView BackgroundColor="Red"/>
-            <BoxView BackgroundColor="Orange"/>
-            <BoxView BackgroundColor="Yellow"/>
-            <BoxView BackgroundColor="Green"/>
-            <BoxView BackgroundColor="Blue"/>
-            <BoxView BackgroundColor="Navy"/>
-            <BoxView BackgroundColor="Purple"/>
+            <BoxView BackgroundColor="Red" />
+            <BoxView BackgroundColor="Orange" />
+            <BoxView BackgroundColor="Yellow" />
+            <BoxView BackgroundColor="Green" />
+            <BoxView BackgroundColor="Blue" />
+            <BoxView BackgroundColor="Navy" />
+            <BoxView BackgroundColor="Purple" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
         <ScrollView>
             <w:CircleStackLayout Spacing="50">
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <ScrollView>
             <StackLayout Spacing="50">
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
             </StackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <ScrollView>
             <w:CircleStackLayout>
-                <BoxView BackgroundColor="Red" HeightRequest="120"/>
-                <BoxView BackgroundColor="Orange" HeightRequest="120"/>
-                <BoxView BackgroundColor="Yellow" HeightRequest="120"/>
+                <BoxView BackgroundColor="Red" HeightRequest="120" />
+                <BoxView BackgroundColor="Orange" HeightRequest="120" />
+                <BoxView BackgroundColor="Yellow" HeightRequest="120" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <StackLayout>
-            <BoxView BackgroundColor="Red" HeightRequest="120"/>
-            <BoxView BackgroundColor="Orange" HeightRequest="120"/>
-            <BoxView BackgroundColor="Yellow" HeightRequest="120"/>
+            <BoxView BackgroundColor="Red" HeightRequest="120" />
+            <BoxView BackgroundColor="Orange" HeightRequest="120" />
+            <BoxView BackgroundColor="Yellow" HeightRequest="120" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
         <ScrollView>
             <w:CircleStackLayout>
-                <BoxView BackgroundColor="Red" HeightRequest="120"/>
-                <BoxView BackgroundColor="Orange" HeightRequest="120"/>
-                <BoxView BackgroundColor="Yellow" HeightRequest="120"/>
-                <BoxView BackgroundColor="Green" HeightRequest="120"/>
+                <BoxView BackgroundColor="Red" HeightRequest="120" />
+                <BoxView BackgroundColor="Orange" HeightRequest="120" />
+                <BoxView BackgroundColor="Yellow" HeightRequest="120" />
+                <BoxView BackgroundColor="Green" HeightRequest="120" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <w:CircleStackLayout Orientation="Horizontal">
-            <BoxView BackgroundColor="Red"/>
-            <BoxView BackgroundColor="Orange"/>
-            <BoxView BackgroundColor="Yellow"/>
-            <BoxView BackgroundColor="Green"/>
-            <BoxView BackgroundColor="Blue"/>
-            <BoxView BackgroundColor="Navy"/>
-            <BoxView BackgroundColor="Purple"/>
+            <BoxView BackgroundColor="Red" />
+            <BoxView BackgroundColor="Orange" />
+            <BoxView BackgroundColor="Yellow" />
+            <BoxView BackgroundColor="Green" />
+            <BoxView BackgroundColor="Blue" />
+            <BoxView BackgroundColor="Navy" />
+            <BoxView BackgroundColor="Purple" />
         </w:CircleStackLayout>
     </ContentPage>
     <ContentPage>
         <ScrollView Orientation="Horizontal">
             <w:CircleStackLayout Orientation="Horizontal">
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <StackLayout Orientation="Horizontal">
-            <BoxView BackgroundColor="Red"/>
-            <BoxView BackgroundColor="Orange"/>
-            <BoxView BackgroundColor="Yellow"/>
-            <BoxView BackgroundColor="Green"/>
-            <BoxView BackgroundColor="Blue"/>
-            <BoxView BackgroundColor="Navy"/>
-            <BoxView BackgroundColor="Purple"/>
+            <BoxView BackgroundColor="Red" />
+            <BoxView BackgroundColor="Orange" />
+            <BoxView BackgroundColor="Yellow" />
+            <BoxView BackgroundColor="Green" />
+            <BoxView BackgroundColor="Blue" />
+            <BoxView BackgroundColor="Navy" />
+            <BoxView BackgroundColor="Purple" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
-        <w:CircleStackLayout Spacing="50" Orientation="Horizontal">
-            <BoxView BackgroundColor="Red"/>
-            <BoxView BackgroundColor="Orange"/>
-            <BoxView BackgroundColor="Yellow"/>
-            <BoxView BackgroundColor="Green"/>
-            <BoxView BackgroundColor="Blue"/>
-            <BoxView BackgroundColor="Navy"/>
-            <BoxView BackgroundColor="Purple"/>
+        <w:CircleStackLayout Orientation="Horizontal" Spacing="50">
+            <BoxView BackgroundColor="Red" />
+            <BoxView BackgroundColor="Orange" />
+            <BoxView BackgroundColor="Yellow" />
+            <BoxView BackgroundColor="Green" />
+            <BoxView BackgroundColor="Blue" />
+            <BoxView BackgroundColor="Navy" />
+            <BoxView BackgroundColor="Purple" />
         </w:CircleStackLayout>
     </ContentPage>
     <ContentPage>
-        <StackLayout Spacing="50" Orientation="Horizontal">
-            <BoxView BackgroundColor="Red"/>
-            <BoxView BackgroundColor="Orange"/>
-            <BoxView BackgroundColor="Yellow"/>
-            <BoxView BackgroundColor="Green"/>
-            <BoxView BackgroundColor="Blue"/>
-            <BoxView BackgroundColor="Navy"/>
-            <BoxView BackgroundColor="Purple"/>
+        <StackLayout Orientation="Horizontal" Spacing="50">
+            <BoxView BackgroundColor="Red" />
+            <BoxView BackgroundColor="Orange" />
+            <BoxView BackgroundColor="Yellow" />
+            <BoxView BackgroundColor="Green" />
+            <BoxView BackgroundColor="Blue" />
+            <BoxView BackgroundColor="Navy" />
+            <BoxView BackgroundColor="Purple" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
         <ScrollView Orientation="Horizontal">
             <w:CircleStackLayout Orientation="Horizontal">
-                <BoxView BackgroundColor="Red" WidthRequest="120"/>
-                <BoxView BackgroundColor="Orange" WidthRequest="120"/>
-                <BoxView BackgroundColor="Yellow" WidthRequest="120"/>
+                <BoxView BackgroundColor="Red" WidthRequest="120" />
+                <BoxView BackgroundColor="Orange" WidthRequest="120" />
+                <BoxView BackgroundColor="Yellow" WidthRequest="120" />
             </w:CircleStackLayout>
         </ScrollView>
     </ContentPage>
     <ContentPage>
         <StackLayout Orientation="Horizontal">
-            <BoxView BackgroundColor="Red" WidthRequest="120"/>
-            <BoxView BackgroundColor="Orange" WidthRequest="120"/>
-            <BoxView BackgroundColor="Yellow" WidthRequest="120"/>
+            <BoxView BackgroundColor="Red" WidthRequest="120" />
+            <BoxView BackgroundColor="Orange" WidthRequest="120" />
+            <BoxView BackgroundColor="Yellow" WidthRequest="120" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
-        <StackLayout Orientation="Horizontal" BackgroundColor="White">
-            <w:CircleStackLayout WidthRequest="180" HeightRequest="180" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="Gray">
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
+        <StackLayout BackgroundColor="White" Orientation="Horizontal">
+            <w:CircleStackLayout
+                BackgroundColor="Gray"
+                HeightRequest="180"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                WidthRequest="180">
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
             </w:CircleStackLayout>
         </StackLayout>
     </ContentPage>
     <ContentPage>
-        <StackLayout Orientation="Horizontal" BackgroundColor="White">
-            <StackLayout WidthRequest="180" HeightRequest="180" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="Gray">
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
-                <BoxView BackgroundColor="Red"/>
-                <BoxView BackgroundColor="Orange"/>
-                <BoxView BackgroundColor="Yellow"/>
-                <BoxView BackgroundColor="Green"/>
-                <BoxView BackgroundColor="Blue"/>
-                <BoxView BackgroundColor="Navy"/>
-                <BoxView BackgroundColor="Purple"/>
+        <StackLayout BackgroundColor="White" Orientation="Horizontal">
+            <StackLayout
+                BackgroundColor="Gray"
+                HeightRequest="180"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                WidthRequest="180">
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
+                <BoxView BackgroundColor="Red" />
+                <BoxView BackgroundColor="Orange" />
+                <BoxView BackgroundColor="Yellow" />
+                <BoxView BackgroundColor="Green" />
+                <BoxView BackgroundColor="Blue" />
+                <BoxView BackgroundColor="Navy" />
+                <BoxView BackgroundColor="Purple" />
             </StackLayout>
         </StackLayout>
     </ContentPage>

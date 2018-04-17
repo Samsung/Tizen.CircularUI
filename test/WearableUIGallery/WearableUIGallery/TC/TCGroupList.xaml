@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:w="clr-namespace:CircularUI;assembly=CircularUI"
-             xmlns:local="clr-namespace:WearableUIGallery.TC"
-             x:Class="WearableUIGallery.TC.TCGroupList">
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCGroupList"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <w:CirclePage.BindingContext>
-        <local:GroupModel/>
+        <local:GroupModel />
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
         <w:CircleListView

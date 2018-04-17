@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using WearableUIGallery.Extensions;
 using Xamarin.Forms;
-using CircularUI;
+using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {

@@ -1,25 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:IndexPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:w="clr-namespace:CircularUI;assembly=CircularUI"
-             xmlns:local="clr-namespace:WearableUIGallery"
-             x:Class="WearableUIGallery.TC.TCIndexPage">
+<w:IndexPage
+    x:Class="WearableUIGallery.TC.TCIndexPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage>
         <StackLayout>
-            <BoxView Color="Red" VerticalOptions="FillAndExpand"/>
-            <Label Text="Red" HorizontalOptions="CenterAndExpand"/>
+            <BoxView VerticalOptions="FillAndExpand" Color="Red" />
+            <Label HorizontalOptions="CenterAndExpand" Text="Red" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
         <StackLayout>
-            <BoxView Color="Green" VerticalOptions="FillAndExpand"/>
-            <Label Text="Green" HorizontalOptions="CenterAndExpand"/>
+            <BoxView VerticalOptions="FillAndExpand" Color="Green" />
+            <Label HorizontalOptions="CenterAndExpand" Text="Green" />
         </StackLayout>
     </ContentPage>
     <ContentPage>
         <StackLayout>
-            <BoxView Color="Blue" VerticalOptions="FillAndExpand"/>
-            <Label Text="Blue" HorizontalOptions="CenterAndExpand"/>
+            <BoxView VerticalOptions="FillAndExpand" Color="Blue" />
+            <Label HorizontalOptions="CenterAndExpand" Text="Blue" />
         </StackLayout>
     </ContentPage>
 </w:IndexPage>

@@ -16,7 +16,7 @@
 
 using Tizen.Applications;
 using ElmSharp;
-using CircularUI.Tizen.Watchface;
+using Tizen.Wearable.CircularUI.Forms.Renderer.Watchface;
 using System;
 
 namespace SimpleTextWatchface
@@ -74,7 +74,7 @@ namespace SimpleTextWatchface
         {
             App app = new App();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
-            CircularUI.Tizen.CircularUI.Init();
+            Tizen.Wearable.CircularUI.Forms.Renderer.CircularUI.Init();
             app.Run(args);
         }
     }

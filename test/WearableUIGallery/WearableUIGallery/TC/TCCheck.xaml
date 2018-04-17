@@ -3,7 +3,7 @@
     x:Class="WearableUIGallery.TC.TCCheck"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:w="clr-namespace:CircularUI;assembly=CircularUI">
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical">

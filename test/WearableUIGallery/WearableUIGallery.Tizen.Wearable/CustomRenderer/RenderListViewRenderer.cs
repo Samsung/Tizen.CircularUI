@@ -19,7 +19,7 @@ using WearableUIGallery.Extensions;
 using Tizen.Extension.Sample;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using CircularUI.Tizen;
+using Tizen.Wearable.CircularUI.Forms.Renderer;
 using ElmSharp;
 
 [assembly: ExportCell(typeof(RenderCircleListView), typeof(RenderListViewRenderer))]
@@ -30,7 +30,7 @@ namespace Tizen.Extension.Sample
     {
         new RenderCircleListView Element => base.Element as RenderCircleListView;
 
-        protected override void OnElementChanged(ElementChangedEventArgs<CircularUI.CircleListView> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleListView> e)
         {
             base.OnElementChanged(e);
 

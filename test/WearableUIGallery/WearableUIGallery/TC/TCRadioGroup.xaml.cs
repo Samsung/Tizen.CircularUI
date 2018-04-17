@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CircularUI;
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC

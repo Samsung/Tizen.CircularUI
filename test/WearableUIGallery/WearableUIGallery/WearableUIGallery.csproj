@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.373384-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.354232-pre3" />
   </ItemGroup>
 
   <!-- Include Nuget Package for Xamarin building -->
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\CircularUI\CircularUI.csproj" />
+    <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
   </ItemGroup>
 </Project>

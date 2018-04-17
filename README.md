@@ -1,4 +1,4 @@
-# Tizen CircularUI
+# Tizen Wearable CircularUI
 
 - [Introduction](#introduction)
 - [Controls](#controls)
@@ -6,15 +6,15 @@
 - [How to use CircularUI](#how-to-use-circularui)
 
 ## Introduction
-The Tizen CircularUI project is a set of helpful extensions of the Xamarin Forms framework.<br>
-The aim of the Tizen CircularUI project is to develop an open source software motivate software developer to creating Tizen Wearable Xamarin Forms app more easily and efficiently.<br> 
+The Tizen Wearable CircularUI project is a set of helpful extensions of the Xamarin Forms framework.<br>
+The aim of the Tizen Wearable CircularUI project is to develop an open source software motivate software developer to creating Tizen Wearable Xamarin Forms app more easily and efficiently.<br> 
 The binaries are available via NuGet (package name CircularUI)<br>
 
 _Xamarin Forms provides cross-platform APIs, but this project are only worked on the Samsung Gear device that support Tizen .NET._ 
 
 
 ## Controls
-The Tizen CircularUI project provides you the following UI controls:
+The Tizen Wearable CircularUI project provides you the following UI controls:
 
 - CirclePage : A subclass of Xamarin.Forms.Page that can show circular ProgressBar and circular Slider and Button on bottom of screen. it can also show MenuItems on the circular menu.(MoreOption)
 - CircleListView : A subclass of Xamarin.Forms.ListView control fits in the circular screen and have circular scroll bar.

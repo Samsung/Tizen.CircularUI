@@ -1,29 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:TwoButtonPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:local="clr-namespace:WearableUIGallery.TC"
-                 xmlns:w="clr-namespace:CircularUI;assembly=CircularUI"
-                 x:Class="WearableUIGallery.TC.TCTwoButtonPage"
-                 Title="{Binding Title}}">
+<w:TwoButtonPage
+    x:Class="WearableUIGallery.TC.TCTwoButtonPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    Title="{Binding Title}}">
     <w:TwoButtonPage.BindingContext>
-        <local:TCTwoButtonPageViewModel/>
+        <local:TCTwoButtonPageViewModel />
     </w:TwoButtonPage.BindingContext>
     <w:TwoButtonPage.Content>
         <ScrollView>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Label Text="{Binding Text}"
-                   HorizontalTextAlignment="Center"
-                   VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand" />
-                <Button Text="Remove 1" Clicked="OnRemove1"/>
-                <Button Text="Remove 2" Clicked="OnRemove2"/>
+                <Label
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Text}"
+                    VerticalOptions="FillAndExpand" />
+                <Button Clicked="OnRemove1" Text="Remove 1" />
+                <Button Clicked="OnRemove2" Text="Remove 2" />
             </StackLayout>
         </ScrollView>
     </w:TwoButtonPage.Content>
     <w:TwoButtonPage.FirstButton>
-        <MenuItem Icon="image/tw_ic_popup_btn_check.png" Command="{Binding Command1}"/>
+        <MenuItem Command="{Binding Command1}" Icon="image/tw_ic_popup_btn_check.png" />
     </w:TwoButtonPage.FirstButton>
     <w:TwoButtonPage.SecondButton>
-        <MenuItem Icon="image/tw_ic_popup_btn_delete.png" Command="{Binding Command2}"/>
+        <MenuItem Command="{Binding Command2}" Icon="image/tw_ic_popup_btn_delete.png" />
     </w:TwoButtonPage.SecondButton>
 </w:TwoButtonPage>

@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery", "Wearab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery.Tizen.Wearable", "WearableUIGallery\WearableUIGallery.Tizen.Wearable\WearableUIGallery.Tizen.Wearable.csproj", "{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularUI", "..\src\CircularUI\CircularUI.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularUI", "..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularUI.Tizen", "..\src\CircularUI.Tizen\CircularUI.Tizen.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularUI.Tizen", "..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTextWatchface", "SimpleTextWatchface\SimpleTextWatchface.csproj", "{1998035F-ECAF-493E-8226-E7EB33D0C982}"
 EndProject
