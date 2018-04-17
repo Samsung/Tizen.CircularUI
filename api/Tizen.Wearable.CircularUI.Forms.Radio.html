@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Radio
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Radio
+   ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Radio">
+  
+  
+  <h1 id="Tizen_Wearable_CircularUI_Forms_Radio" data-uid="Tizen.Wearable.CircularUI.Forms.Radio" class="text-break">Class Radio
+  </h1>
+  <div class="markdown level0 summary"><p>The Radio is a widget that allows one or more options to be displayed and have the user choose only one of them.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Radio</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
+  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_Radio_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Radio : View</code></pre>
+  </div>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_Radio_examples"><strong>Examples</strong></h5>
+  <pre><code>var radio1 = new Radio
+{
+    GroupName = &quot;SoundMode&quot;,
+    IsSelected = true,
+    Value = &quot;sound&quot;
+}
+
+var radio2 = new Radio
+{
+    GroupName = &quot;SoundMode&quot;,
+    IsSelected = false,
+    Value = &quot;vibrate&quot;
+}
+
+radio1.Selected += (s,e) =>
+{
+    Console.WriteLine($&quot;radio1 selected! value:{e.Value}&quot;);
+};
+
+radio2.Selected += (s,e) =>
+{
+     Console.WriteLine($&quot;radio2 selected! value:{e.Value}&quot;);
+};</code></pre>
+
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_GroupNameProperty" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.GroupNameProperty">GroupNameProperty</h4>
+  <div class="markdown level1 summary"><p>BindableProperty. Identifies the GroupName bindable property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly BindableProperty GroupNameProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_IsSelectedProperty" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.IsSelectedProperty">IsSelectedProperty</h4>
+  <div class="markdown level1 summary"><p>BindableProperty. Identifies the IsSelected bindable property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly BindableProperty IsSelectedProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_ValueProperty" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.ValueProperty">ValueProperty</h4>
+  <div class="markdown level1 summary"><p>BindableProperty. Identifies the Value bindable property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly BindableProperty ValueProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_Radio_GroupName_" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.GroupName*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_GroupName" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.GroupName">GroupName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name that specifies which Radio controls are mutually exclusive.
+It can be set to null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GroupName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_Radio_IsSelected_" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.IsSelected*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_IsSelected" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.IsSelected">IsSelected</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a boolean value that indicates whether this Radio is selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSelected { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_Radio_Value_" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.Value*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_Value" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.Value">Value</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value of the Radio.
+This is a bindable property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Radio_Selected" data-uid="Tizen.Wearable.CircularUI.Forms.Radio.Selected">Selected</h4>
+  <div class="markdown level1 summary"><p>Occurs when the Radio selection was changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;SelectedEventArgs&gt; Selected</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html">SelectedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
