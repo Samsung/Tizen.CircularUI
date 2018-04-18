@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-namespace Tizen.Wearable.CircularUI.Forms.Renderer
+namespace Tizen.Wearable.CircularUI
 {
-    public static class CircularUI
+    public static class FormsCircularUI
     {
         public static bool IsInitialized { get; private set; }
         public static void Init()

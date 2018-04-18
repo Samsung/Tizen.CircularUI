@@ -25,7 +25,7 @@
 - Insert code at App.xaml.cs 
 
 ```
-using CircularUI;
+using Tizen.Wearable.CircularUI.Forms;
 using System;
 
 using Xamarin.Forms;
@@ -66,7 +66,7 @@ namespace SampleCircleApp
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SimpleCircleApp"
-    xmlns:w="clr-namespace:CircularUI;assembly=CircularUI">
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <Application.MainPage>
         <NavigationPage x:Name="MainNavigation">
             <x:Arguments>
@@ -101,14 +101,17 @@ namespace SampleCircleApp
 
 
 
-- Insert `CircularUI.Init()` code in Main method at SampleCircleApp.Tizen.Wearable.cs
+- Insert `FormsCircularUI.Init()` code in Main method at SampleCircleApp.Tizen.Wearable.cs
 
 ```
+using Tizen.Wearable.CircularUI;
+
+
         static void Main(string[] args)
         {
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
-            CircularUI.Tizen.CircularUI.Init();  //must insert this initialize code
+            FormsCircularUI.Init();  //must insert this initialize code
             app.Run(args);
         }
 ```

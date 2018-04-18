@@ -15,7 +15,7 @@
  */
 
 using System;
-using CircularUIRenderer = Tizen.Wearable.CircularUI.Forms.Renderer;
+using Tizen.Wearable.CircularUI;
 
 namespace WearableUIGallery.Tizen.Wearable
 {
@@ -31,7 +31,7 @@ namespace WearableUIGallery.Tizen.Wearable
         {
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
-            CircularUIRenderer.CircularUI.Init();
+            FormsCircularUI.Init();
             app.Run(args);
         }
     }
