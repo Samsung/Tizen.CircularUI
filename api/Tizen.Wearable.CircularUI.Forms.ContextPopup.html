@@ -87,13 +87,96 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ContextPopup</span></div>
+    <div class="level1"><span class="xref">Xamarin.Forms.BindableObject</span></div>
+    <div class="level2"><span class="xref">ContextPopup</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnBindingContextChanged()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnPropertyChanging(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ContextPopup : BindableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class ContextPopup : BindableObject, INotifyPropertyChanged, IDynamicResourceHandler</code></pre>
   </div>
   <h5 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_examples"><strong>Examples</strong></h5>
   <pre><code>var popup = new ContextPopup();
@@ -139,7 +222,7 @@ popup.ItemSelected += (s, e) =>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableProperty</span></td>
+        <td><span class="xref">Xamarin.Forms.BindableProperty</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -162,7 +245,7 @@ popup.ItemSelected += (s, e) =>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableProperty</span></td>
+        <td><span class="xref">Xamarin.Forms.BindableProperty</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -188,7 +271,7 @@ popup.ItemSelected += (s, e) =>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IList</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.ContextPopupItem.html">ContextPopupItem</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.ContextPopupItem.html">ContextPopupItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -254,7 +337,7 @@ It is -1 when no item is selected.</p>
     <pre><code class="lang-csharp hljs">public void Dismiss()</code></pre>
   </div>
   <a id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_View_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show(View)">Show(View)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_Xamarin_Forms_View_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show(Xamarin.Forms.View)">Show(View)</h4>
   <div class="markdown level1 summary"><p>Shows the ContextPopup. The ContextPopup is positioned at the horizontal and the vertical position of a specific anchor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -273,7 +356,7 @@ It is -1 when no item is selected.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">View</span></td>
+        <td><span class="xref">Xamarin.Forms.View</span></td>
         <td><span class="parametername">anchor</span></td>
         <td><p>The view to which the popup should be anchored.</p>
 </td>
@@ -281,7 +364,7 @@ It is -1 when no item is selected.</p>
     </tbody>
   </table>
   <a id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_View_System_Double_System_Double_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show(View,System.Double,System.Double)">Show(View, Double, Double)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_Xamarin_Forms_View_System_Double_System_Double_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show(Xamarin.Forms.View,System.Double,System.Double)">Show(View, Double, Double)</h4>
   <div class="markdown level1 summary"><p>Shows the ContextPopup. The ContextPopup is positioned at the horizontal and the vertical position of a specific anchor with offsets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -300,7 +383,7 @@ It is -1 when no item is selected.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">View</span></td>
+        <td><span class="xref">Xamarin.Forms.View</span></td>
         <td><span class="parametername">anchor</span></td>
         <td><p>The view to which the popup should be anchored.</p>
 </td>
@@ -320,7 +403,7 @@ It is -1 when no item is selected.</p>
     </tbody>
   </table>
   <a id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_View_System_Int32_System_Int32_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show(View,System.Int32,System.Int32)">Show(View, Int32, Int32)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_ContextPopup_Show_Xamarin_Forms_View_System_Int32_System_Int32_" data-uid="Tizen.Wearable.CircularUI.Forms.ContextPopup.Show(Xamarin.Forms.View,System.Int32,System.Int32)">Show(View, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Shows the ContextPopup. The ContextPopup is positioned at the horizontal and the vertical position of a specific anchor with offsets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -339,7 +422,7 @@ It is -1 when no item is selected.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">View</span></td>
+        <td><span class="xref">Xamarin.Forms.View</span></td>
         <td><span class="parametername">anchor</span></td>
         <td><p>The view to which the popup should be anchored.</p>
 </td>
@@ -378,7 +461,7 @@ It is -1 when no item is selected.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EventHandler</span></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -401,11 +484,15 @@ It is -1 when no item is selected.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EventHandler</span>&lt;<span class="xref">SelectedItemChangedEventArgs</span>&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<span class="xref">Xamarin.Forms.SelectedItemChangedEventArgs</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
 </article>
           </div>
           
