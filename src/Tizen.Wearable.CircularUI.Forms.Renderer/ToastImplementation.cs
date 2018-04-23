@@ -43,12 +43,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 Style = DefaultStyle,
                 AllowEvents = true,
             };
+
             _control.BackButtonPressed += (s, e) => _control.Dismiss();
+            _control.TimedOut += (s, e) => _control.Dismiss();
+            _control.OutsideClicked += (s, e) => _control.Dismiss();
 
             UpdateIcon();
             UpdateText();
             UpdateDuration();
         }
+
 
         ~ToastImplementation()
         {
