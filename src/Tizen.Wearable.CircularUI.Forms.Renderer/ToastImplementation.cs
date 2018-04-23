@@ -53,7 +53,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             UpdateDuration();
         }
 
-
         ~ToastImplementation()
         {
             Dispose(false);

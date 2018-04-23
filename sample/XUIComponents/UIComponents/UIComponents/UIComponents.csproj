@@ -6,7 +6,7 @@
 
   <!-- Include Nuget Package for Xamarin building -->
   <ItemGroup>
-    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.0.0-pre1-00018" />
+    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.0.0-pre1-00021" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.354232-pre3" />
   </ItemGroup>
 

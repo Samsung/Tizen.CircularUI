@@ -104,7 +104,7 @@ namespace SampleCircleApp
 - Insert `FormsCircularUI.Init()` code in Main method at SampleCircleApp.Tizen.Wearable.cs
 
 ```
-using Tizen.Wearable.CircularUI;
+using Tizen.Wearable.CircularUI.Forms.Renderer;
 
 
         static void Main(string[] args)

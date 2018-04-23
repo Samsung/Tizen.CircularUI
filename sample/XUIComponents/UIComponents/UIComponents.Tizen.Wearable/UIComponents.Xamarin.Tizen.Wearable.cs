@@ -1,5 +1,5 @@
 using System;
-using Tizen.Wearable.CircularUI;
+using Tizen.Wearable.CircularUI.Forms.Renderer;
 
 namespace UIComponents.Tizen.Wearable
 {

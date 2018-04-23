@@ -74,7 +74,7 @@ namespace SimpleTextWatchface
         {
             App app = new App();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
-            Tizen.Wearable.CircularUI.FormsCircularUI.Init();
+            Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init();
             app.Run(args);
         }
     }

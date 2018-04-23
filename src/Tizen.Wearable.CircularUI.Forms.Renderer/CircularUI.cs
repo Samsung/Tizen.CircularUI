@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-namespace Tizen.Wearable.CircularUI
+namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public static class FormsCircularUI
     {
