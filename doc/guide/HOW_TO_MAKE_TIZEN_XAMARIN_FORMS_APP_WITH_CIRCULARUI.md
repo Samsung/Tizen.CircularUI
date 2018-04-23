@@ -10,12 +10,12 @@
 
 
 
-- Search Tizen.CircularUI nuget pakage at Nuget package manager.<br>
+- Search Tizen.Wearable.CircularUI nuget pakage at Nuget package manager.<br>
  ![nuget](data/nuget_package_manager_capture.png)
 
 
 
-- Install Tizen.CircularUI nuget at portable class library(PCL) project.<br>
+- Install Tizen.Wearable.CircularUI nuget at portable class library(PCL) project.<br>
   ![pcl](data/after_Install_nuget_package.png)
 
 

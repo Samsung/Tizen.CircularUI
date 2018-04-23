@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:UIComponents.Samples.CircleList"
+              xmlns:effect="clr-namespace:UIComponents.Extensions.Effects"
+              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+              x:Class="UIComponents.Samples.CircleList.StyleSelectMode" x:Name="Control">
+    <w:CirclePage.BindingContext>
+        <local:ListViewModel />
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <AbsoluteLayout>
+            <w:CircleListView ItemsSource="{Binding CheckableNames}" x:Name="MyList"
+                              AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                              AbsoluteLayout.LayoutFlags="All"
+                              effect:ItemLongPressEffect.Command="{Binding LongClickCommand, Source={x:Reference Control}}">
+                <w:CircleListView.Effects>
+                    <effect:ItemLongPressEffect />
+                </w:CircleListView.Effects>
+                <w:CircleListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <AbsoluteLayout HeightRequest="80">
+                                <Label Text="{Binding Name}"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="Large"
+                                       AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                       AbsoluteLayout.LayoutFlags="All"/>
+                                <w:Check DisplayStyle="Default" IsToggled="{Binding Checked, Mode=TwoWay}" IsEnabled="{Binding IsCheckable, Source={x:Reference Control}}"
+                                         AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+                                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                                         effect:TizenStyleEffect.Style="genlist/select_mode"
+                                         effect:TizenEventPropagationEffect.EnablePropagation="True">
+                                    <w:Check.Effects>
+                                        <effect:TizenStyleEffect/>
+                                        <effect:TizenEventPropagationEffect/>
+                                    </w:Check.Effects>
+                                </w:Check>
+                            </AbsoluteLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </w:CircleListView.ItemTemplate>
+            </w:CircleListView>
+            <Button x:Name="CheckedCounter"
+                    IsVisible="{Binding IsCheckable, Source={x:Reference Control}}"
+                    Text="{Binding CheckedNamesCount, StringFormat='{0:D2}'}"
+                    AbsoluteLayout.LayoutBounds="0.5, 10, AUtoSize, AutoSize"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    effect:TizenStyleEffect.Style="select_mode"
+                    Clicked="OnCheckedCounterClicked"
+                    w:ConfirmPopupEffect.AcceptText="{Binding SelectOptionMessage1, Mode=OneWay}"
+                    w:ConfirmPopupEffect.AcceptCommand="{Binding SelectCommand1, Mode=OneWay}"
+                    w:ConfirmPopupEffect.CancelText="{Binding SelectOptionMessage2, Mode=OneWay}"
+                    w:ConfirmPopupEffect.CancelCommand="{Binding SelectCommand2, Mode=OneWay}"
+                    w:ConfirmPopupEffect.ConfirmVisibility="{Binding PopupVisibility, Source={x:Reference Control}, Mode=TwoWay}">
+                <Button.Effects>
+                    <effect:TizenStyleEffect/>
+                    <w:ConfirmPopupEffect/>
+                </Button.Effects>
+            </Button>
+        </AbsoluteLayout>
+    </w:CirclePage.Content>
+</w:CirclePage>
