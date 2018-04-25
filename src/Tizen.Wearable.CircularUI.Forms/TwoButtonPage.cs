@@ -46,6 +46,21 @@ namespace Tizen.Wearable.CircularUI.Forms
             });
 
         /// <summary>
+        /// BindableProperty. Identifies the Overlap bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty OverlapProperty = BindableProperty.Create(nameof(Overlap), typeof(bool), typeof(TwoButtonPage), false);
+
+        /// <summary>
+        /// Gets or sets the overlap or not overlap the buttons and page display.
+        /// </summary>
+        public bool Overlap
+        {
+            get => (bool)GetValue(OverlapProperty);
+            set => SetValue(OverlapProperty, value);
+        }
+
+        /// <summary>
         /// Gets or sets left button of TwoButtonPage
         /// </summary>
         /// <since_tizen> 4 </since_tizen>

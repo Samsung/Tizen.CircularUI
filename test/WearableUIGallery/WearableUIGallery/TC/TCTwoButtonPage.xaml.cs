@@ -67,6 +67,13 @@ namespace WearableUIGallery.TC
                 btn.Text = "Remove 2";
             }
         }
+
+        void ToggleOverlap(object sender, EventArgs args)
+        {
+            var btn = sender as Button;
+            Overlap = !Overlap;
+            btn.Text = Overlap ? "Overlap" : "No Overlap";
+        }
     }
 
     public class TCTwoButtonPageViewModel : INotifyPropertyChanged

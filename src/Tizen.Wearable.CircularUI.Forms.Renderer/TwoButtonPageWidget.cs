@@ -17,6 +17,7 @@
 using ElmSharp;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms.Platform.Tizen;
@@ -26,12 +27,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class TwoButtonPageWidget : Background, IContainable<EvasObject>
     {
+        ObservableBox _outbox;
+
         ElmSharp.Layout _frame;
         ElmSharp.Layout _buttonLayer;
-        ElmSharp.Layout _contentLayer;
         ElmSharp.Button[] _buttons;
         Canvas _canvas;
-        string _title;
+
+        bool _overlap;
 
         public TwoButtonPageWidget(EvasObject parent) : base(parent)
         {
@@ -45,33 +48,46 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _frame.SetPartContent("elm.swallow.action_area", _buttonLayer);
             _buttonLayer.Show();
 
-            _contentLayer = new ElmSharp.Layout(_frame);
-            _contentLayer.SetTheme("layout", "popup", "content/circle/buttons2");
-            _frame.SetPartContent("elm.swallow.content", _contentLayer);
-            _contentLayer.Show();
+            _outbox = new ObservableBox(parent);
+            _outbox.SetAlignment(NamedHint.Fill, NamedHint.Fill);
+            _outbox.SetWeight(NamedHint.Expand, NamedHint.Expand);
+            _outbox.SetLayoutCallback(() => { });
 
-            _canvas = new Xamarin.Forms.Platform.Tizen.Native.Canvas(_contentLayer);
-            _contentLayer.SetPartContent("elm.swallow.content", _canvas);
+            _frame.SetPartContent("elm.swallow.content", _outbox);
+            _outbox.Show();
+
+            _canvas = new Canvas(_outbox);
+            EcoreMainloop.Post(() => _canvas.Geometry = _outbox.Geometry);
+            _outbox.PackEnd(_canvas);
             _canvas.Show();
 
             _buttons = new ElmSharp.Button[2];
+            _overlap = false;
+        }
+
+        public bool Overlap
+        {
+            get => _overlap;
+            set
+            {
+                if (_overlap != value)
+                {
+                    _overlap = value;
+                    if (_overlap)
+                    {
+                        OnLayout();
+                    }
+                    else
+                    {
+                        _canvas.Geometry = _outbox.Geometry;
+                    }
+                }
+            }
         }
 
         public Canvas Canvas => _canvas;
 
         public new IList<EvasObject> Children => _canvas.Children;
-
-        public string Title
-        {
-            get => _title;
-            set
-            {
-                if (_title == value) return;
-                _title = value;
-                _contentLayer.SetPartText("elm.text.title", _title);
-                _contentLayer.SignalEmit("", "load");
-            }
-        }
 
         public event EventHandler<LayoutEventArgs> LayoutUpdated
         {
@@ -82,7 +98,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         protected override void OnUnrealize()
         {
             _canvas.Unrealize();
-            _contentLayer.Unrealize();
             HideButton(0);
             HideButton(1);
             _buttonLayer.Unrealize();
@@ -94,6 +109,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public void HideButton1() => HideButton(0);
         public void ShowButton2(string text, string image = null, Action action = null) => ShowButton(1, "popup/circle/right", "actionbtn2", text, image, action);
         public void HideButton2() => HideButton(1);
+
+        void OnLayout()
+        {
+            var rect = _outbox.Geometry;
+            if (_buttons[0] != null)
+            {
+                var rect1 = _buttons[0].Geometry;
+                rect.X = rect1.Right;
+                rect.Width -= rect1.Width;
+            }
+            if (_buttons[1] != null)
+            {
+                var rect2 = _buttons[1].Geometry;
+                rect.Width -= rect2.Width;
+            }
+            Canvas.Geometry = rect;
+        }
 
         void ShowButton(int id, string style, string part, string text, string image = null, Action action = null)
         {
@@ -117,6 +149,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _buttons[id].Clicked += (s, e) => action();
             }
             _buttonLayer.SetPartContent(part, _buttons[id]);
+
+            if (_overlap) EcoreMainloop.Post(OnLayout);
         }
         void HideButton(int id)
         {
@@ -125,6 +159,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _buttons[id].Unrealize();
                 _buttons[id].SetPartContent("elm.swallow.button", null);
                 _buttons[id] = null;
+                if (_overlap) EcoreMainloop.Post(OnLayout);
             }
         }
     }

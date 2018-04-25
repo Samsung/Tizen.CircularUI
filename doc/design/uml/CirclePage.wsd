@@ -413,10 +413,10 @@ package "Extension.Wearable" {
         {static} +TitleProperty
         {static} +ContentProperty
         --Property--
-        Title: string
         Content: View
         FirstButton: MenuItem
         SecondButton: MenuItem
+        Overlap: bool
     }
 
     TwoButtonPage -u-|> ContentPage 

@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
@@ -26,21 +27,25 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (null != renderer.Element)
             {
                 Element element = renderer.Element;
-                while (!(element is CirclePage))
+                while (element != null)
                 {
+                    if (element is CirclePage)
+                    {
+                        var circlePageRenderer = Platform.GetRenderer(element) as CirclePageRenderer;
+                        return circlePageRenderer?.CircleSurface;
+                    }
+                    foreach (var effect in element.Effects)
+                    {
+                        if (effect is TizenCircleSurfaceEffect)
+                        {
+                            return CircleSurfaceEffectBehavior.GetSurface(element) as ElmSharp.Wearable.CircleSurface;
+                        }
+                    }
+
                     element = element.Parent;
                 }
-                if (element != null)
-                {
-                    var circlePageRenderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(element) as CirclePageRenderer;
-                    if (null != renderer)
-                    {
-                        return circlePageRenderer.CircleSurface;
-                    }
-                }
             }
-
-            return null;
+            throw new CircleSurfaceNotFoundException();
         }
     }
 }

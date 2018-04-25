@@ -21,7 +21,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Linq;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
@@ -35,7 +34,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class CirclePageRenderer : VisualElementRenderer<CirclePage>
     {
-        NBox _box;
+        ObservableBox _box;
 
         ElmSharp.Rectangle _bgColorObject;
         ElmSharp.EvasImage _bgImageObject;
@@ -148,7 +147,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
         void OnRealized()
         {
-            _box = new NBox(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
+            _box = new ObservableBox(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
             _box.SetLayoutCallback(OnLayout);
 
             _bgColorObject = new ElmSharp.Rectangle(_box)
@@ -493,58 +492,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else _moreOption.Hide();
         }
 
-        class NBox : ElmSharp.Box, IContainable<EvasObject>
-        {
-            ReObservableCollection<EvasObject> _children;
-            public NBox(EvasObject parent) : base(parent)
-            {
-                _children = new ReObservableCollection<EvasObject>();
-                _children.CollectionChanged += OnChildrenChanged;
-            }
-            IList<EvasObject> IContainable<EvasObject>.Children => _children;
-
-            void OnChildrenChanged(object sender, NotifyCollectionChangedEventArgs e)
-            {
-                if (e.Action == NotifyCollectionChangedAction.Add)
-                {
-                    foreach (var child in e.NewItems)
-                    {
-                        if (child is EvasObject)
-                        {
-                            PackEnd(child as EvasObject);
-                        }
-                    }
-                }
-                else if (e.Action == NotifyCollectionChangedAction.Remove)
-                {
-                    foreach (var child in e.OldItems)
-                    {
-                        if (child is EvasObject)
-                        {
-                            UnPack(child as EvasObject);
-                        }
-                    }
-                }
-            }
-        }
-
         class ActionMoreOptionItem : MoreOptionItem
         {
             public Action Action { get; set; }
-        }
-
-        class ReObservableCollection<T> : ObservableCollection<T>
-        {
-            protected override void ClearItems()
-            {
-                var oldItems = Items.ToList();
-                Items.Clear();
-                using (BlockReentrancy())
-                {
-                    OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, oldItems));
-                }
-                base.ClearItems();
-            }
         }
     }
 }

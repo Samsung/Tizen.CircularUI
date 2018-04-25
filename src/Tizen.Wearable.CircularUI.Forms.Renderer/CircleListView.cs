@@ -285,19 +285,21 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (Footer == null)
             {
                 cls = ListViewCache.PaddingItemClass;
+                type = ItemType.BottomPadding;
             }
             else
             {
                 cls = ListViewCache.InformalItemClass;
                 type = ItemType.Footer;
             }
+
             if (ctx == null || ctx.Type == ItemType.Header || ctx.Type == ItemType.TopPadding)
             {
                 Append(cls, new TypedItemContext(Footer, type));
             }
             else
             {
-                LastItem.UpdateItemClass(ListViewCache.InformalItemClass, new TypedItemContext(Footer, ItemType.Footer));
+                LastItem.UpdateItemClass(cls, new TypedItemContext(Footer, type));
             }
         }
         void RegisterItem(Cell cell, GenListItem item, bool IsGroup = false)

@@ -33,7 +33,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(TwoButtonPage.BackgroundImageProperty, UpdateBackgroundImage);
             RegisterPropertyHandler(TwoButtonPage.FirstButtonProperty, UpdateFirstButton);
             RegisterPropertyHandler(TwoButtonPage.SecondButtonProperty, UpdateSecondButton);
-            RegisterPropertyHandler(TwoButtonPage.TitleProperty, UpdateTitle);
+            RegisterPropertyHandler(TwoButtonPage.OverlapProperty, UpdateOverlap);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<TwoButtonPage> e)
@@ -83,6 +83,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return _widget.Canvas.Geometry;
         }
 
+        void UpdateOverlap()
+        {
+            _widget.Overlap = Element.Overlap;
+        }
+
         void OnLayoutUpdated(object sender, Xamarin.Forms.Platform.Tizen.Native.LayoutEventArgs e)
         {
             Element.Layout(e.Geometry.ToDP());
@@ -101,7 +106,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateSecondButton(bool initialize)
         {
-            Console.WriteLine($"Update Button2 init={initialize}, button={Element.SecondButton}");
             if (initialize && Element.SecondButton == null) return;
             if (Element.SecondButton != null)
             {
@@ -116,7 +120,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateFirstButton(bool initialize)
         {
-            Console.WriteLine($"Update Button1 init={initialize}, button={Element.FirstButton}");
             if (initialize && Element.FirstButton == null) return;
             if (Element.FirstButton != null)
             {
@@ -127,10 +130,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 _widget.HideButton1();
             }
-        }
-        void UpdateTitle()
-        {
-            _widget.Title = Element.Title;
         }
     }
 }

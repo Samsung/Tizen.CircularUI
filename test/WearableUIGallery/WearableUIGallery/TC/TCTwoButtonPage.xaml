@@ -19,6 +19,7 @@
                     VerticalOptions="FillAndExpand" />
                 <Button Clicked="OnRemove1" Text="Remove 1" />
                 <Button Clicked="OnRemove2" Text="Remove 2" />
+                <Button Clicked="ToggleOverlap" Text="No Overlap" />
             </StackLayout>
         </ScrollView>
     </w:TwoButtonPage.Content>
