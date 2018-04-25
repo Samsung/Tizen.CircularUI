@@ -218,6 +218,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html",
+          "hash": "0RiFU9iPqZPyGr95tgYJeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.yml",
       "output": {
         ".html": {
@@ -470,6 +482,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html",
+          "hash": "mXQ186Yvb1CfIhbaKixrsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation.yml",
       "output": {
         ".html": {
@@ -566,6 +590,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html",
+          "hash": "9atDDqUIPMpc1KqSFkX8Dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect.yml",
       "output": {
         ".html": {
@@ -594,7 +630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html",
-          "hash": "W/nFdKY5pzICEv1am4MmNQ=="
+          "hash": "lj9h8tWKD4mh3T1gbzSlgQ=="
         }
       },
       "is_incremental": false,
@@ -630,7 +666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "gAiTJxpUwEHLxLW5TMH+Yg=="
+          "hash": "DO/0DVgY7MJeQ33t+eG3rA=="
         }
       },
       "is_incremental": false,
@@ -690,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html",
-          "hash": "Eq6o0qdfjint3VXV+YSsUA=="
+          "hash": "1/MQxfZvOJ3iVDgC4qMghA=="
         }
       },
       "is_incremental": false,
@@ -702,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "D3Bd/SYvUxxQgnIrgOj0/Q=="
+          "hash": "C2XCbsPy0EofA2GoLIYusA=="
         }
       },
       "is_incremental": false,
@@ -714,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "6F39faPvyUPtr4boXCXxwg=="
+          "hash": "bxnYrkcWuM7b9/M2VNtKrA=="
         }
       },
       "is_incremental": false,
@@ -741,22 +777,22 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

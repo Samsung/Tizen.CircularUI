@@ -637,6 +637,64 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleStepper.MarkerLineWidthProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.MarkerLineWidthProperty
   nameWithType: CircleStepper.MarkerLineWidthProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
+  name: CircleSurfaceEffectBehavior
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
+  nameWithType: CircleSurfaceEffectBehavior
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)
+  name: OnAttachedTo(Page)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Xamarin_Forms_Page_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)
+  nameWithType: CircleSurfaceEffectBehavior.OnAttachedTo(Page)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo*
+  name: OnAttachedTo
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo
+  nameWithType: CircleSurfaceEffectBehavior.OnAttachedTo
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)
+  name: OnDetachingFrom(Page)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_Xamarin_Forms_Page_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)
+  nameWithType: CircleSurfaceEffectBehavior.OnDetachingFrom(Page)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom*
+  name: OnDetachingFrom
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom
+  nameWithType: CircleSurfaceEffectBehavior.OnDetachingFrom
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObject
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
+  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject*
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
+  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
+  name: RotaryFocusTargetName
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusTargetName
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
+  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusTargetName
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName*
+  name: RotaryFocusTargetName
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusTargetName_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
+  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusTargetName
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem
   name: CircleSurfaceItem
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html
@@ -2457,6 +2515,43 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged
   nameWithType: CircleStepperRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException
+  name: CircleSurfaceNotFoundException
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException
+  nameWithType: CircleSurfaceNotFoundException
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor
+  name: CircleSurfaceNotFoundException()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSurfaceNotFoundException__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.CircleSurfaceNotFoundException()
+  nameWithType: CircleSurfaceNotFoundException.CircleSurfaceNotFoundException()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: CircleSurfaceNotFoundException(SerializationInfo, StreamingContext)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSurfaceNotFoundException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.CircleSurfaceNotFoundException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: CircleSurfaceNotFoundException.CircleSurfaceNotFoundException(SerializationInfo, StreamingContext)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor(System.String)
+  name: CircleSurfaceNotFoundException(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSurfaceNotFoundException__ctor_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.CircleSurfaceNotFoundException(System.String)
+  nameWithType: CircleSurfaceNotFoundException.CircleSurfaceNotFoundException(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor(System.String,System.Exception)
+  name: CircleSurfaceNotFoundException(String, Exception)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSurfaceNotFoundException__ctor_System_String_System_Exception_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor(System.String,System.Exception)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.CircleSurfaceNotFoundException(System.String, System.Exception)
+  nameWithType: CircleSurfaceNotFoundException.CircleSurfaceNotFoundException(String, Exception)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor*
+  name: CircleSurfaceNotFoundException
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSurfaceNotFoundException__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.CircleSurfaceNotFoundException
+  nameWithType: CircleSurfaceNotFoundException.CircleSurfaceNotFoundException
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation
   name: ConfirmationPopupImplementation
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation.html
@@ -2951,6 +3046,38 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged
   nameWithType: RadioRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect
+  name: TizenCircleSurfaceEffect
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect
+  nameWithType: TizenCircleSurfaceEffect
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnAttached
+  name: OnAttached()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html#Tizen_Wearable_CircularUI_Forms_Renderer_TizenCircleSurfaceEffect_OnAttached
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnAttached
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnAttached()
+  nameWithType: TizenCircleSurfaceEffect.OnAttached()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnAttached*
+  name: OnAttached
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html#Tizen_Wearable_CircularUI_Forms_Renderer_TizenCircleSurfaceEffect_OnAttached_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnAttached
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnAttached
+  nameWithType: TizenCircleSurfaceEffect.OnAttached
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnDetached
+  name: OnDetached()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html#Tizen_Wearable_CircularUI_Forms_Renderer_TizenCircleSurfaceEffect_OnDetached
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnDetached
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnDetached()
+  nameWithType: TizenCircleSurfaceEffect.OnDetached()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnDetached*
+  name: OnDetached
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html#Tizen_Wearable_CircularUI_Forms_Renderer_TizenCircleSurfaceEffect_OnDetached_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnDetached
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.OnDetached
+  nameWithType: TizenCircleSurfaceEffect.OnDetached
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect
   name: TizenConfirmPopupEffect
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect.html
@@ -3173,6 +3300,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.OnUnrealize
   nameWithType: TwoButtonPageWidget.OnUnrealize
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap
+  name: Overlap
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_Overlap
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap
+  nameWithType: TwoButtonPageWidget.Overlap
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap*
+  name: Overlap
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_Overlap_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap
+  nameWithType: TwoButtonPageWidget.Overlap
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,System.Action)
   name: ShowButton1(String, String, Action)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_System_Action_
@@ -3199,19 +3339,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2
   nameWithType: TwoButtonPageWidget.ShowButton2
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Title
-  name: Title
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_Title
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Title
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Title
-  nameWithType: TwoButtonPageWidget.Title
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Title*
-  name: Title
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_Title_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Title
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Title
-  nameWithType: TwoButtonPageWidget.Title
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
   name: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.html
@@ -3455,6 +3582,25 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.TwoButtonPage.FirstButtonProperty
   fullName: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.FirstButtonProperty
   nameWithType: TwoButtonPage.FirstButtonProperty
+- uid: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.Overlap
+  name: Overlap
+  href: api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html#Tizen_Wearable_CircularUI_Forms_TwoButtonPage_Overlap
+  commentId: P:Tizen.Wearable.CircularUI.Forms.TwoButtonPage.Overlap
+  fullName: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.Overlap
+  nameWithType: TwoButtonPage.Overlap
+- uid: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.Overlap*
+  name: Overlap
+  href: api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html#Tizen_Wearable_CircularUI_Forms_TwoButtonPage_Overlap_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.TwoButtonPage.Overlap
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.Overlap
+  nameWithType: TwoButtonPage.Overlap
+- uid: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.OverlapProperty
+  name: OverlapProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html#Tizen_Wearable_CircularUI_Forms_TwoButtonPage_OverlapProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.TwoButtonPage.OverlapProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.OverlapProperty
+  nameWithType: TwoButtonPage.OverlapProperty
 - uid: Tizen.Wearable.CircularUI.Forms.TwoButtonPage.SecondButton
   name: SecondButton
   href: api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html#Tizen_Wearable_CircularUI_Forms_TwoButtonPage_SecondButton
