@@ -2,9 +2,7 @@
 `Toast` provides simple information. `Toast` automatically disappear after timeout seconds.
 Tizen Wearable `Toast` fills the whole screen for displaying message and image.
 
-
-<img src="data/toast1.png" alt="Drawing" style="width: 150px;"/>
-<img src="data/toast2.png" alt="Drawing" style="width: 150px;"/>
+![toast1](data/toast1.png) ![toast2](data/toast2.png)
 
 ## Create Toast
 `Toast` is static method. so you don't need to any container or parent control for using this control.

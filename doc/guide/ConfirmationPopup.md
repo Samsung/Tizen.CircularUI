@@ -3,7 +3,7 @@
 
 *`ConfirmationPopup` is displayed seperate from any control. So you can't set this in XAML file.*
 
-<img src="data/confirmation_popup1.png" alt="Drawing" style="width: 150px;"/>
+![confirmation_popup1](data/confirmation_popup1.png)
 
 ## Create ConfirmationPopup
 `ConfirmationPopup.Title` Property set title of popup. you can set `Content` property with Layout such as `StackLayout` or `ScrollView`.

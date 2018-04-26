@@ -3,10 +3,7 @@
 
 *`InformationPopup` is displayed seperate from any control. So you can't set this in XAML file.*
 
-<img src="data/information_popup1.png" alt="Drawing" style="width: 150px;"/>
-<img src="data/information_popup2.png" alt="Drawing" style="width: 150px;"/> 
-<img src="data/information_popup3.png" alt="Drawing" style="width: 150px;"/>
-
+![information_popup1](data/information_popup1.png) ![information_popup2](data/information_popup2.png) ![information_popup3](data/information_popup3.png)
 
 ## Create single text InformationPopup
 Single text informationPopup is used for displaying text. Single text informationPopup is similar to Toast popup. 

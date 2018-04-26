@@ -1,7 +1,7 @@
 # TwoButtonPage
 `TwoButtonPage` derive from `Xamarin.Forms.Page`. TwonButtonPage and has two semicircular button that is located at left side and right side of circle.
 
-<img src="data/twobutton_page.png" alt="Drawing" style="width: 150px;"/>
+![twobutton_page](data/twobutton_page.png) ![twobutton_page_overlay](data/twobutton_page_overlap.png)
 
 ## Create TwoButtonPage
 you can set control in the `TwoButtonPage.Content`. In this example, long text Label and two buttons was set for Content.

@@ -5,7 +5,7 @@
 *`ContextPopup` is displayed seperate from any control. So you can't set this in XAML file.*
 *If you want to attach context popup in XAML file. please use `ConfirmPopupEffect` instead*
 
-<img src="data/context_popup.png" alt="Drawing" style="width: 150px;"/>
+![context_popup](data/context_popup.png)
 
 
 ## Create ContextPopup

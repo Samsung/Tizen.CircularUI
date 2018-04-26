@@ -10,28 +10,31 @@ CirclePage can set bottom button and circle ProgressBar and circle Slider and Mo
 
 **WARNNING: `CircleListView`, `CircleDateTimeSelector`, `CircleScroller`, `CircleStepper` must be contained by `CirclePage` or `CircleSurfaceEffectBehavior` should be added in `Behaviors` of `Page` that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
 
+
 * bottom button 
     - Semicircular button is shown at bottom of screen. refer to below image.
 
-        <img src="data/bottom_button.png" alt="Drawing" style="width: 150px;"/>
+    ![bottom_button](data/bottom_button.png)
+
 
 * Circle ProgressBar
     - Circle ProgressBar shows the progress status of a given task with the circular design.
 
-        <img src="data/circle_progressbar.png" alt="Drawing" style="width: 150px;"/>
+    ![circle_progressbar](data/circle_progressbar.png)
+
 
 * Circle Slider
     - Circle Slider changes value corresponding to rotary events. this shows a circle bar at the edge of the circle screen.
 You can change radius of circle bar with modifying radius value.
 
-        <img src="data/circle_slider.png" alt="Drawing" style="width: 150px;" />
+    ![circle_slider](data/circle_slider.png)
 
 * MoreOption
     - More option contains a cue button (shown on the left in the following figure).
      When the cue button is clicked, the rotary selector view opens from the cue location (shown on the right in the figure).
      The rotary selector arranges multiple items around the circular edge of the screen, and switches the focus between items as users rotate the bezel.
 
-        <img src="data/more_option.png" alt="Drawing" style="width: 300px;"/>
+    ![more_option](data/more_option.png)
 
 
 ## Create CirclePage
@@ -140,7 +143,7 @@ CircleToolbarItem derive from `Xamarin.Forms.ToolbarItem`.
 
 For more information . Please refer to [CircleToolbarItem  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleToolbarItem.html)
 
-<img src="data/more_option_detail.png" alt="Drawing" style="width: 400px;"/>
+![more_option_detail](data/more_option_detail.png)
 
 **XAML file**
 ```xml
@@ -179,8 +182,7 @@ When `Value` property is incread or decrease. circle object extend or shrink fol
 
 For more information . Please refer to [CircleSurfaceItem  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html)
 
-
-<img src="data/circle_progressbar.png" alt="Drawing" style="width: 180px;"/>
+![circle_progressbar](data/circle_progressbar.png)
 
 _This guide's code example use XUIComponent's CircleProgressBar.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleProgressBar.xaml_
 

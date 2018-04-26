@@ -3,17 +3,20 @@ This guide show how to create an application that represents `Toast` and `Circle
  And If user rotates bezel of Tizen wearable device. `CircleSlider` bar is moving forward or backward direction.
 
 ## 1. Set up the development enviroment and Create a project
-- Create Tizen Xamarin Forms App following to [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).\
+- Create Tizen Xamarin Forms App following to [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).<br>
   In this guide project name is `SampleCircleApp`
 
-- Select only wearable device at tizen project wizard.\
-<img src="data/tizen_project_wizard_capture.png" alt="Drawing" style="width: 500px;"/>
+- Select only wearable device at tizen project wizard.
 
-- Search Tizen.Wearable.CircularUI nuget pakage at Nuget package manager. Package source is nuget.org.\
-<img src="data/nuget_package_manager_capture.png" alt="Drawing" style="width: 850px;"/>
+    ![tizen_project_wizard_capture](data/tizen_project_wizard_capture.png)
 
-- Install Tizen.Wearable.CircularUI nuget at portable class library(PCL) project.\
-<img src="data/after_Install_nuget_package.png" alt="Drawing" style="width: 250px;"/>
+- Search Tizen.Wearable.CircularUI nuget pakage at Nuget package manager. Package source is nuget.org.
+
+    ![nuget_package_manager_capture](data/nuget_package_manager_capture.png)
+
+- Install Tizen.Wearable.CircularUI nuget at portable class library(PCL) project.
+
+    ![after_Install_nuget_package](data/after_Install_nuget_package.png)
 
 
 ## 2. Insert CircularUI Control code
@@ -69,7 +72,7 @@ This guide show how to create an application that represents `Toast` and `Circle
 </Application>
 ```
 
-<be><br>
+<br><br>
 - In App.xaml.cs, remove all of the template code and replace it with the following code.
     - `OnButtonClicked` is event handler of `Button` `Clicked` event. below code simply display Toast popup during 3 second.
     
@@ -125,8 +128,10 @@ using Tizen.Wearable.CircularUI.Forms.Renderer;
 
 - Launch Tizen Emulator
     - Press `Launch Tizen Emulator` button, refer to below image
-   <img src="data/launch_emulator1.png" alt="Drawing" style="width: 600px;"/>
-   <img src="data/launch_emulator2.png" alt="Drawing" style="width: 600px;"/>
+
+    ![launch_emulator1](data/launch_emulator1.png)
+    ![launch_emulator2](data/launch_emulator2.png)
+
 
 
 - In Windows OS. copy application tpk from project binary path to sdb tool path.\
@@ -136,13 +141,12 @@ using Tizen.Wearable.CircularUI.Forms.Renderer;
 
 - If your OS is window, launch Tizen Sdb Command Prompt(Tool > Tizen > Tizen Sdb Command Prompt).
   If you use Linux. you can use sdb command directly in your project path. 
-  
+
 - Install your app with sdb command
 
 ```
 sdb install org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk
 ```
-
 
 - Check your App at Wearable emulator<br>
   ![launchApp](data/launch_app.png)<br>
