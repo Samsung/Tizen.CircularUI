@@ -26,7 +26,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             double r = Math.Min(width, height) / 2;
 
-            System.Diagnostics.Debug.WriteLine($"LayoutChildren : {width}, {height}");
+            //System.Diagnostics.Debug.WriteLine($"LayoutChildren : {width}, {height}");
 
             double gap1 = CalcGap(Children.FirstOrDefault(), r);
             double gap2 = CalcGap(Children.LastOrDefault(), r);
@@ -41,7 +41,7 @@ namespace Tizen.Wearable.CircularUI.Forms
                 region = new Rectangle(x, y + gap1, width, height - gap1 - gap2);
             }
 
-            System.Diagnostics.Debug.WriteLine($"LayoutChildren 2 : {gap1}, {gap2}, {region}");
+            //System.Diagnostics.Debug.WriteLine($"LayoutChildren 2 : {gap1}, {gap2}, {region}");
             base.LayoutChildren(region.X, region.Y, region.Width, region.Height);
 
             foreach (var child in Children)
@@ -53,7 +53,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
         {
-            System.Diagnostics.Debug.WriteLine($"--------- OnMeasure start");
+            //System.Diagnostics.Debug.WriteLine($"--------- OnMeasure start");
             var requested = base.OnMeasure(widthConstraint, heightConstraint);
 
             var minimum = requested.Minimum;
@@ -61,7 +61,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
             double r = Math.Min(widthConstraint, heightConstraint) / 2;
 
-            System.Diagnostics.Debug.WriteLine($"OnMeasure :{r}, {widthConstraint}, {heightConstraint} / {minimum.Width}, {minimum.Height} / {request.Width}, {request.Height} / {Width}, {Height}");
+            //System.Diagnostics.Debug.WriteLine($"OnMeasure :{r}, {widthConstraint}, {heightConstraint} / {minimum.Width}, {minimum.Height} / {request.Width}, {request.Height} / {Width}, {Height}");
 
             double gap = CalcGap(Children.FirstOrDefault(), r) + CalcGap(Children.LastOrDefault(), r);
 
@@ -168,6 +168,9 @@ namespace Tizen.Wearable.CircularUI.Forms
             if (view == null) return 0;
             var m = view.Measure(r, r);
             var minimum = Orientation == StackOrientation.Vertical ? m.Minimum.Width : m.Minimum.Height;
+            if (minimum > r) minimum = r;
+            //System.Diagnostics.Debug.WriteLine($"r = {r}, view.Measure = {m}, minimum = {minimum}");
+            //System.Diagnostics.Debug.WriteLine($"Math.Pow(r, 2) = {Math.Pow(r, 2)}, Math.Pow(minimum / 2, 2) = {Math.Pow(minimum / 2, 2)}, sqrt = {Math.Sqrt(Math.Pow(r, 2) - Math.Pow(minimum / 2, 2))}");
             return r - Math.Sqrt(Math.Pow(r, 2) - Math.Pow(minimum / 2, 2));
         }
     }
