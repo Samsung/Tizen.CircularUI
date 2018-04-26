@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="WearableUIGallery.TC.TCPopupEntry">
+    <ContentPage.Content>
+        <w:CircleStackLayout>
+            <w:PopupEntry BackgroundColor="Gray"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          TextColor="Blue"
+                          WidthRequest="100"/>
+            <w:PopupEntry Placeholder="Foobar"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand" />
+        </w:CircleStackLayout>
+    </ContentPage.Content>
+</ContentPage>
