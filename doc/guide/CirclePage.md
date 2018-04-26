@@ -4,32 +4,34 @@ CirclePage derive from Xamarin.Forms.Page. This visual element occupy all of the
 ![CirclePage](data/circlepage.png) ![CircleSurfaceItem](data/circlepage_surfaceitem.png)
 
 ## Overview
-CirclePage is container of any widget that use circleObject or rotary event.
-if you want to use any circle widget or to handle rotary event. you have to use CirclePage.
+CirclePage is container of any control that use circleObject or rotary event.
+if you want to use any circle control or to handle rotary event. you have to use CirclePage.
 CirclePage can set bottom button and circle ProgressBar and circle Slider and MoreOption on it's own.
+
+**WARNNING: `CircleListView`, `CircleDateTimeSelector`, `CircleScroller`, `CircleStepper` must be contained by `CirclePage` or `CircleSurfaceEffectBehavior` should be added in `Behaviors` of `Page` that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
 
 * bottom button 
     - Semicircular button is shown at bottom of screen. refer to below image.
 
-    <img src="data/bottom_button.png" alt="Drawing" style="width: 150px;"/>
+        <img src="data/bottom_button.png" alt="Drawing" style="width: 150px;"/>
 
 * Circle ProgressBar
     - Circle ProgressBar shows the progress status of a given task with the circular design.
 
-    <img src="data/circle_progressbar.png" alt="Drawing" style="width: 150px;"/>
+        <img src="data/circle_progressbar.png" alt="Drawing" style="width: 150px;"/>
 
 * Circle Slider
     - Circle Slider changes value corresponding to rotary events. this shows a circle bar at the edge of the circle screen.
 You can change radius of circle bar with modifying radius value.
 
-    <img src="data/circle_slider.png" alt="Drawing" style="width: 150px;" />
+        <img src="data/circle_slider.png" alt="Drawing" style="width: 150px;" />
 
 * MoreOption
     - More option contains a cue button (shown on the left in the following figure).
      When the cue button is clicked, the rotary selector view opens from the cue location (shown on the right in the figure).
      The rotary selector arranges multiple items around the circular edge of the screen, and switches the focus between items as users rotate the bezel.
 
-    <img src="data/more_option.png" alt="Drawing" style="width: 300px;"/>
+        <img src="data/more_option.png" alt="Drawing" style="width: 300px;"/>
 
 
 ## Create CirclePage
@@ -38,7 +40,7 @@ Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.W
 In a XAML file. import CircularUI and define namespace like as \
 `xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"`
 
-_This guide's code example use WearableUIGallery's CirclePageTC code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml_
+_This guide's code example use WearableUIGallery's TCCirclePage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml_
 
 
 **C# file**
@@ -76,8 +78,8 @@ namespace WearableUIGallery.TC
 
 ## Adding Content at CirclePage
 You can set content at `CirclePage.Content`. The following XAML code show CirclePage set content with `CircleDateTimeSelector`.
-`RotaryFocusTargetName` attribute set the current focused widget that is handle by rotating and display the docused widget's circle object.
-If you don't set this value properly. Widget can't receive rotary event or circle object can't be shown.
+`RotaryFocusTargetName` attribute set the current focused control that is handle by rotating and display the focused control's circle object.
+If you don't set this value properly. Control can't receive rotary event or circle object can't be shown.
 
 For more information . Please refer to [CirclePage API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CirclePage.html)
 
@@ -178,7 +180,7 @@ When `Value` property is incread or decrease. circle object extend or shrink fol
 For more information . Please refer to [CircleSurfaceItem  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html)
 
 
-<img src="data/CircleProgressbar.png" alt="Drawing" style="width: 180px;"/>
+<img src="data/circle_progressbar.png" alt="Drawing" style="width: 180px;"/>
 
 _This guide's code example use XUIComponent's CircleProgressBar.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleProgressBar.xaml_
 

@@ -11,7 +11,7 @@
                 <w:Check DisplayStyle="Default" HorizontalOptions="CenterAndExpand" />
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff" />
-                <w:Check DisplayStyle="Onoff" HorizontalOptions="CenterAndExpand" />
+                <w:Check DisplayStyle="Onoff" HorizontalOptions="FillAndExpand" />
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Small" />
                 <w:Check DisplayStyle="Small" HorizontalOptions="CenterAndExpand" />

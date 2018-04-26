@@ -57,7 +57,6 @@ namespace WearableUIGallery.TC
             };
 
             _textButtonPopUp = new InformationPopup();
-            _textButtonPopUp.BottomButton = bottomButton;
             _textButtonPopUp.Title = "Popup title";
             _textButtonPopUp.Text = "This is text and button popup test";
             _textButtonPopUp.BottomButton = bottomButton;

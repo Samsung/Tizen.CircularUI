@@ -75,11 +75,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     _overlap = value;
                     if (_overlap)
                     {
-                        OnLayout();
+                        _canvas.Geometry = _outbox.Geometry;
                     }
                     else
                     {
-                        _canvas.Geometry = _outbox.Geometry;
+                        OnLayout();
                     }
                 }
             }
