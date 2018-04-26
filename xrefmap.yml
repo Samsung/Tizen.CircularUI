@@ -1824,6 +1824,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.IRotaryFocusable
   fullName: Tizen.Wearable.CircularUI.Forms.IRotaryFocusable
   nameWithType: IRotaryFocusable
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry
+  name: PopupEntry
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.PopupEntry
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry
+  nameWithType: PopupEntry
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor
+  name: PopupEntry()
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupEntry()
+  nameWithType: PopupEntry.PopupEntry()
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor*
+  name: PopupEntry
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupEntry
+  nameWithType: PopupEntry.PopupEntry
 - uid: Tizen.Wearable.CircularUI.Forms.PositionOption
   name: PositionOption
   href: api/Tizen.Wearable.CircularUI.Forms.PositionOption.html
@@ -2998,6 +3017,41 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.PaddingItemClass
   nameWithType: PaddingItemClass.PaddingItemClass
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
+  name: PopupEntryRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
+  nameWithType: PopupEntryRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
+  name: PopupEntryRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.PopupEntryRenderer()
+  nameWithType: PopupEntryRenderer.PopupEntryRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor*
+  name: PopupEntryRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.PopupEntryRenderer
+  nameWithType: PopupEntryRenderer.PopupEntryRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Entry})
+  name: OnElementChanged(ElementChangedEventArgs<Entry>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Xamarin_Forms_Entry__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Entry})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Entry))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Xamarin.Forms.Entry))
+  nameWithType: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Entry>)
+  nameWithType.vb: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Entry))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged*
+  name: OnElementChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged
+  nameWithType: PopupEntryRenderer.OnElementChanged
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer
   name: RadioRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html

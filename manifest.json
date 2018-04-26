@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Check.html",
-          "hash": "5GhlYPzlDu2xyGe1IxcspA=="
+          "hash": "MD++T/y59wuQYK1fSgmwCQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html",
-          "hash": "wgK4azx7QWBcMCCjmelWhA=="
+          "hash": "c8DJhP8bhhQ3sgDyRiy3kA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleListView.html",
-          "hash": "6G4VXZYUrdMAOcRIjrOh/g=="
+          "hash": "mg8zRP6743JfdPBVSafElQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CirclePage.html",
-          "hash": "d2kjkv9RKItvvqbmy23tLA=="
+          "hash": "Wx1RWMPrchtBDHKj96zA5g=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html",
-          "hash": "liX5iKpXO3iAzKVyfaSQOQ=="
+          "hash": "QDlIOD0P12sFbZGj16ifmw=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleStackLayout.html",
-          "hash": "u4Bcbyu7O3bmgH+Ts9x1mg=="
+          "hash": "iu2i9T2aT88oj7nxg0s1kA=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html",
-          "hash": "vmNKtY+tAF6ORl2V9PnAKA=="
+          "hash": "N6KIXMM5QWKReUHWF82jaQ=="
         }
       },
       "is_incremental": false,
@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.IndexPage.html",
-          "hash": "Lr3vY6O8qK1XiESIO7t58w=="
+          "hash": "/DHoNckiRvHQPhE6tEP/kQ=="
         }
       },
       "is_incremental": false,
@@ -367,6 +367,18 @@
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html",
           "hash": "tVVQf+SrzjQDRFWEVdHsjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.PopupEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html",
+          "hash": "1xesQ5q09lqxOkzVZwa4uw=="
         }
       },
       "is_incremental": false,
@@ -390,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Radio.html",
-          "hash": "gTmiXRAomoo+u/k75rpFIQ=="
+          "hash": "BSx2Y2BdtNvk+Rcl7E9j9g=="
         }
       },
       "is_incremental": false,
@@ -402,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.html",
-          "hash": "p9rRUQdpMmUwq6GKo3zQ0A=="
+          "hash": "87YT52bUHd7AIzMssYyQNg=="
         }
       },
       "is_incremental": false,
@@ -414,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html",
-          "hash": "RbmzggoZOpNbUJXWMw86IQ=="
+          "hash": "ulRgYIYvq/KSFzLAYpRu7A=="
         }
       },
       "is_incremental": false,
@@ -438,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html",
-          "hash": "l1Wc4IehdD/klWQ0zvmcQQ=="
+          "hash": "mZ2u/4cqNsOP24hvek4OBw=="
         }
       },
       "is_incremental": false,
@@ -450,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html",
-          "hash": "A9P23GFa09iNj5hdhkeKLg=="
+          "hash": "eP1q6pgDi6qtcEe1/Pd7Zg=="
         }
       },
       "is_incremental": false,
@@ -474,7 +486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html",
-          "hash": "CBo8BnHmUYdal5VhFQksyg=="
+          "hash": "4Rrptkz91R5njtBo+A92ow=="
         }
       },
       "is_incremental": false,
@@ -534,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html",
-          "hash": "KdGgtQsNN82c5N1m5SpP/Q=="
+          "hash": "DvUeGILcGTZjt7oBeg22tA=="
         }
       },
       "is_incremental": false,
@@ -578,11 +590,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html",
+          "hash": "FZtaG7MGhduoMI4ezPQKdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.yml",
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html",
-          "hash": "COCIi+nb0w1NuPOIax62bA=="
+          "hash": "+uDdxKQbTSkrlEFMWrCWJQ=="
         }
       },
       "is_incremental": false,
@@ -618,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.html",
-          "hash": "n3f7V9B0heLt0UN8EQXvWg=="
+          "hash": "36LbRv1hrxpCiQVnVqBURQ=="
         }
       },
       "is_incremental": false,
@@ -666,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "DO/0DVgY7MJeQ33t+eG3rA=="
+          "hash": "ag1nrnAYM3q6rWIBlFBDVQ=="
         }
       },
       "is_incremental": false,
@@ -726,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html",
-          "hash": "1/MQxfZvOJ3iVDgC4qMghA=="
+          "hash": "DlZ0iZu+rdV/5E3ekoxzhQ=="
         }
       },
       "is_incremental": false,
@@ -738,7 +762,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "C2XCbsPy0EofA2GoLIYusA=="
+          "hash": "HoqbDsZfyuDWPkLXPbR6qw=="
         }
       },
       "is_incremental": false,
@@ -750,7 +774,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bxnYrkcWuM7b9/M2VNtKrA=="
+          "hash": "MOKdlNBHAnT9iSezpKeoqg=="
         }
       },
       "is_incremental": false,
@@ -777,14 +801,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
