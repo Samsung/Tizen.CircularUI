@@ -31,6 +31,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         ElmSharp.Color _defaultColor;
 
+        Interop.EFL.InputPanelState _IMEState;
+
         public PopupEntryRenderer() : base()
         {
         }
@@ -43,6 +45,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 Control.IsEditable = false;
                 Control.Clicked += OnClicked;
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (_editor != null)
+                {
+                    IntPtr entryHandle = Interop.EFL.elm_entry_imf_context_get(_editor.RealHandle);
+                    Interop.EFL.ecore_imf_context_input_panel_event_callback_del(entryHandle, Interop.EFL.InputPanelEventType.State, _editorStateChanged);
+                }
+            }
+            base.Dispose(disposing);
         }
 
         void OnClicked(object sender, EventArgs e) => ShowPopup();
@@ -72,25 +87,33 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.AllowFocus(true);
             _editor.Show();
 
-            _editor.ChangedByUser += (s, e) => HidePopup();
-
             _editor.SetInputPanelReturnKeyType(ElmSharp.InputPanelReturnKeyType.Done);
 
             _editor.SetInputPanelLayout(ElmSharp.InputPanelLayout.Normal);
 
-            _editorStateChanged = EditorStateChanged;
+            _editorPopup.BackButtonPressed += (s, e) => HidePopup();
+
+            _editor.Activated += (s, e) => HidePopup();
+
             IntPtr entryHandle = Interop.EFL.elm_entry_imf_context_get(_editor.RealHandle);
+
+            _editorStateChanged = EditorStateChanged;
             Interop.EFL.ecore_imf_context_input_panel_event_callback_add(entryHandle, Interop.EFL.InputPanelEventType.State, _editorStateChanged, IntPtr.Zero);
 
             layout.SetPartContent("elm.swallow.content", _editor);
-
-            layout.BackButtonPressed += (s, e) => HidePopup();
         }
 
         void HidePopup()
         {
             Control.Text = _editor.Text;
-            _editor.HideInputPanel();
+            if (_IMEState != Interop.EFL.InputPanelState.Hide)
+            {
+                _editor.HideInputPanel();
+            }
+            else if (_IMEState == Interop.EFL.InputPanelState.Hide)
+            {
+                _editorPopup.Hide();
+            }
         }
 
         void ShowPopup()
@@ -103,9 +126,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _editor.IsPassword = Control.IsPassword;
 
             _editor.Text = Control.Text;
-            _editor.ShowInputPanel();
-            _editor.MoveCursorEnd();
-            _editor.SetFocus(true);
 
             var edjeObj = Control.EdjeObject;
             edjeObj.GetColorClass("layout/editfield/bg",
@@ -118,16 +138,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.TextColor = Control.TextColor;
             _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? _defaultColor : Control.BackgroundColor;
 
-            _editorPopup.RaiseTop();
-            _editorPopup.Show();
+            _editor.MoveCursorEnd();
+            _editor.ShowInputPanel();
         }
 
         void EditorStateChanged(IntPtr data, IntPtr ctx, int value)
         {
-            if (value == (int)Interop.EFL.InputPanelState.Hide)
+            _IMEState = (Interop.EFL.InputPanelState)value;
+            if (_IMEState == Interop.EFL.InputPanelState.Hide)
             {
-                Control.Text = _editor.Text;
-                _editorPopup.Hide();
+                HidePopup();
+            }
+            else if (_IMEState == Interop.EFL.InputPanelState.Show)
+            {
+                _editor.SetFocus(true);
+                _editorPopup.RaiseTop();
+                _editorPopup.Show();
             }
         }
     }

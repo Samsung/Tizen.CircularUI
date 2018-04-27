@@ -49,6 +49,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Interop
         [DllImport(Ecore_IMF)]
         internal static extern void ecore_imf_context_input_panel_event_callback_add(IntPtr ctx, InputPanelEventType type, InputPanelEventCallback func, IntPtr data);
 
+        [DllImport(Ecore_IMF)]
+        internal static extern void ecore_imf_context_input_panel_event_callback_del(IntPtr ctx, InputPanelEventType type, InputPanelEventCallback func);
+
         [DllImport(Elementary)]
         internal static extern IntPtr elm_entry_imf_context_get(IntPtr entryHandle);
     }
