@@ -38,7 +38,7 @@ You can change radius of circle bar with modifying radius value.
 
 
 ## Create CirclePage
-First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to [How to make Tizen Wearable Xamarin Forms App with CircularUI](doc/guide/HOW_TO_MAKE_TIZEN_XAMARIN_FORMS_APP_WITH_CIRCULARUI.md).\
+First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to [QuickStart](Quickstart.md).\
 Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.\
 In a XAML file. import CircularUI and define namespace like as \
 `xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"`

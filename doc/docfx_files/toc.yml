@@ -1,3 +1,7 @@
-- name: API Documentation
+- name: REFERENCE
   href: api/
   homepage: api/index.md
+
+- name: GUIDES
+  href: ../guide/
+  homepage: ../guide/Overview.md

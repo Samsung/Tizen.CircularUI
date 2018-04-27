@@ -19,7 +19,12 @@
         "src": "obj"
       },
       {
-        "files": ["api/index.md", "index.md", "toc.yml"]
+        "files": ["index.md", "toc.yml", "api/index.md"]
+      },
+      {
+        "files": ["*.md"],
+        "src": "../guide",
+        "dest": "guide"
       }
     ],
     "resource": [
@@ -29,6 +34,11 @@
       {
         "files": ["widgets.png"],
         "src": "../design/data/"
+      },
+      {
+        "files": ["data/*"],
+        "src":"../guide",
+        "dest":"guide"
       }
     ],
     "globalMetadata": {

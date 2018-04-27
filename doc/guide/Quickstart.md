@@ -1,4 +1,5 @@
-# How to make Tizen Xamarin Forms App with CircularUI
+# Quickstart
+
 This guide show how to create an application that represents `Toast` and `CircleSlider`. If user presses the button, `Toast` pops up and then it automatically disappear after timeout seconds.
  And If user rotates bezel of Tizen wearable device. `CircleSlider` bar is moving forward or backward direction.
 
