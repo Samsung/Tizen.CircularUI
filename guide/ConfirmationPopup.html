@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ConfirmationPopup </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ConfirmationPopup ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="confirmationpopup">ConfirmationPopup</h1>
+
+<p><code>ConfirmationPopup</code> represents Tizen Wearable EFL Twobutton-popup style. <code>ConfirmationPopup</code> is usefull to select one of two options. (e.g  cancel/done, share/delete)\</p>
+<p><em><code>ConfirmationPopup</code> is displayed seperate from any control. So you can&#39;t set this in XAML file.</em></p>
+<p><img src="data/confirmation_popup1.png" alt="confirmation_popup1"></p>
+<h2 id="create-confirmationpopup">Create ConfirmationPopup</h2>
+<p><code>ConfirmationPopup.Title</code> Property set title of popup. you can set <code>Content</code> property with Layout such as <code>StackLayout</code> or <code>ScrollView</code>.
+<code>ConfirmationPopup.FirstButton</code> property set left side button. <code>ConfirmationPopup.SecondButton</code>property set right side button. you can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.</p>
+<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs</em></p>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html">ConfirmationPopup  API reference</a></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">            var leftButton = new MenuItem()
+            {
+                Icon = new FileImageSource
+                {
+                    File = &quot;image/b_option_list_icon_share.png&quot;,
+                },
+                Command = new Command(() =&gt;
+                {
+                    /* must insert code when user press left button */
+                })
+            };
+
+            ...
+
+            _popUp1 = new ConfirmationPopup();
+            _popUp1.FirstButton = leftButton;
+            _popUp1.SecondButton = rightButton;
+            _popUp1.Title = &quot;Popup title&quot;;
+            _popUp1.Content = new StackLayout()
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Children =
+                {
+                    new Label
+                    {
+                        Text = &quot;Will be saved, and sound, only on the Gear.&quot;,
+                    },
+                    new StackLayout
+                    {
+                        Orientation = StackOrientation.Horizontal,
+                        Padding = new Thickness(0, 30, 0, 30),
+                        Children =
+                        {
+                            checkbox,
+                            new Label
+                            {
+                                Text = &quot;Do not repeat&quot;,
+                            }
+                        }
+                    }
+                }
+            };
+    }
+</code></pre><h2 id="how-to-set-long-text-at-confirmationpopup">How to set long Text at ConfirmationPopup</h2>
+<p>ConfirmationPopup has <code>Text</code> Property. This Proerpty is usefull to set long text.\
+If long text was set by <code>Text</code> property. you don&#39;t need to add <code>StackLayout</code> and <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
+<p><em><code>Text</code> Property&#39;s area overlap <code>Content</code> Property area. So do not use two propery at the same time.</em></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">            _popUp2 = new ConfirmationPopup();
+            _popUp2.FirstButton = leftButton2;
+            _popUp2.SecondButton = rightButton2;
+            _popUp2.Title = &quot;Popup title&quot;;
+            _popUp2.Text = @&quot;This is scrollable popup text.
+This part is made by adding long text in popup. Popup internally added
+scroller to this layout when size of text is greater than total popup
+height. This has two button in action area and title text in title area&quot;;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

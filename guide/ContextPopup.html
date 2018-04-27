@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ContextPopup </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ContextPopup ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="contextpopup">ContextPopup</h1>
+
+<p><code>ContextPopup</code> represents Tizen wearable context popup that has one or two items.
+<code>ContextPopup</code> has same shape as <code>ConfirmPopupEffect</code>. <code>ConfirmPopupEffect</code> can be attached any control (such as button).</p>
+<p><em><code>ContextPopup</code> is displayed seperate from any control. So you can&#39;t set this in XAML file.</em>
+<em>If you want to attach context popup in XAML file. please use <code>ConfirmPopupEffect</code> instead</em></p>
+<p><img src="data/context_popup.png" alt="context_popup"></p>
+<h2 id="create-contextpopup">Create ContextPopup</h2>
+<p><code>ContextPopupItem</code> is each item of <code>ContextPopup</code>. <code>ContextPopupItem</code> parameter of constructor set item text.
+One or two <code>ContextPopupItem</code> can be attached at <code>ContextPopup</code> using <code>ContextPopup.Items.Add()</code>. <code>ItemSelected</code> event is occurred when user select item. <code>SelectedItem</code> get the value which item selected.</p>
+<p><em>It is possible to add more than 2 items, but any items from 3rd item are hidden. so one or two items are recommended.</em></p>
+<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCContextPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCContextPopup.xaml.cs</em></p>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html">ContextPopup  API reference</a></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">            var item1 = new ContextPopupItem(&quot;item 1&quot;);
+            var item2 = new ContextPopupItem(&quot;item 2&quot;);
+
+            _popup.Items.Add(item1);
+            _popup.Items.Add(item2);
+
+            _popup.ItemSelected += (s, e) =&gt;
+            {
+                Console.WriteLine($&quot;{_popup.SelectedItem?.Label} is selected&quot;);
+                /*  insert code when user select item */
+            };
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

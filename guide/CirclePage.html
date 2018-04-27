@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CirclePage </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CirclePage ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="circlepage">CirclePage</h1>
+
+<p>CirclePage derive from Xamarin.Forms.Page. This visual element occupy all of the wearable screen.</p>
+<p><img src="data/circlepage.png" alt="CirclePage"> <img src="data/circlepage_surfaceitem.png" alt="CircleSurfaceItem"></p>
+<h2 id="overview">Overview</h2>
+<p>CirclePage is container of any control that use circleObject or rotary event.
+if you want to use any circle control or to handle rotary event. you have to use CirclePage.
+CirclePage can set bottom button and circle ProgressBar and circle Slider and MoreOption on it&#39;s own.</p>
+<p><strong>WARNNING: <code>CircleListView</code>, <code>CircleDateTimeSelector</code>, <code>CircleScroller</code>, <code>CircleStepper</code> must be contained by <code>CirclePage</code> or <code>CircleSurfaceEffectBehavior</code> should be added in <code>Behaviors</code> of <code>Page</code> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
+<ul>
+<li><p>bottom button </p>
+<ul>
+<li><p>Semicircular button is shown at bottom of screen. refer to below image.</p>
+<p><img src="data/bottom_button.png" alt="bottom_button"></p>
+</li>
+</ul>
+</li>
+<li><p>Circle ProgressBar</p>
+<ul>
+<li><p>Circle ProgressBar shows the progress status of a given task with the circular design.</p>
+<p><img src="data/circle_progressbar.png" alt="circle_progressbar"></p>
+</li>
+</ul>
+</li>
+<li><p>Circle Slider</p>
+<ul>
+<li><p>Circle Slider changes value corresponding to rotary events. this shows a circle bar at the edge of the circle screen.
+You can change radius of circle bar with modifying radius value.</p>
+<p><img src="data/circle_slider.png" alt="circle_slider"></p>
+</li>
+</ul>
+</li>
+<li><p>MoreOption</p>
+<ul>
+<li><p>More option contains a cue button (shown on the left in the following figure).
+When the cue button is clicked, the rotary selector view opens from the cue location (shown on the right in the figure).
+The rotary selector arranges multiple items around the circular edge of the screen, and switches the focus between items as users rotate the bezel.</p>
+<p><img src="data/more_option.png" alt="more_option"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="create-circlepage">Create CirclePage</h2>
+<p>First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to <a href="Quickstart.html">QuickStart</a>.\
+Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.\
+In a XAML file. import CircularUI and define namespace like as \
+<code>xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;</code></p>
+<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCCirclePage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml</em></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms.Xaml;
+
+
+namespace WearableUIGallery.TC
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCirclePage : CirclePage
+    {
+        public TCCirclePage()
+        {
+            InitializeComponent();
+        }
+    }
+}
+</code></pre><p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;w:CirclePage
+    x:Class=&quot;WearableUIGallery.TC.TCCirclePage&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
+    RotaryFocusTargetName=&quot;{Binding RotaryFocusName}&quot;&gt;
+    &lt;w:CirclePage.Content&gt;
+</code></pre><h2 id="adding-content-at-circlepage">Adding Content at CirclePage</h2>
+<p>You can set content at <code>CirclePage.Content</code>. The following XAML code show CirclePage set content with <code>CircleDateTimeSelector</code>.
+<code>RotaryFocusTargetName</code> attribute set the current focused control that is handle by rotating and display the focused control&#39;s circle object.
+If you don&#39;t set this value properly. Control can&#39;t receive rotary event or circle object can&#39;t be shown.</p>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CirclePage.html">CirclePage API reference</a></p>
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;w:CirclePage
+    x:Class=&quot;WearableUIGallery.TC.TCCirclePage&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
+    RotaryFocusTargetName=&quot;{Binding RotaryFocusName}&quot;&gt;
+    &lt;w:CirclePage.BindingContext&gt;
+        &lt;local:TCCirclePageViewModel /&gt;
+    &lt;/w:CirclePage.BindingContext&gt;
+    &lt;w:CirclePage.Content&gt;
+        &lt;StackLayout
+            BackgroundColor=&quot;Black&quot;
+            HorizontalOptions=&quot;FillAndExpand&quot;
+            Orientation=&quot;Vertical&quot;
+            VerticalOptions=&quot;FillAndExpand&quot;&gt;
+            &lt;w:CircleDateTimeSelector
+                x:Name=&quot;DateSelector&quot;
+                IsVisibleOfDate=&quot;{Binding DateVisiblity}&quot;
+                MaximumDate=&quot;1/1/2020&quot;
+                MinimumDate=&quot;1/12/2015&quot;
+                ValueType=&quot;Date&quot; /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/w:CirclePage.Content&gt;
+</code></pre><h2 id="adding-actionbuttonitem-at-circlepage">Adding ActionButtonItem at CirclePage</h2>
+<p><code>ActionButtonItem</code> in CirclePage presents bottom button. ActionButtonItem derive from <code>Xamarin.Forms.Menuitem</code>.</p>
+<p><code>ActionButtonItem</code> has the following properties:</p>
+<ul>
+<li><code>Command</code> : Gets or sets the <code>ICommand</code> to be invoked on activation(item clicked).</li>
+<li><code>Text</code> : Gets or sets button&#39;s text.</li>
+</ul>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html">ActionButtonItem  API reference</a></p>
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">    &lt;w:CirclePage.ActionButton&gt;
+        &lt;w:ActionButtonItem Command=&quot;{Binding ProgressBarVisibleCommand}&quot; Text=&quot;OK&quot; /&gt;
+    &lt;/w:CirclePage.ActionButton&gt;
+</code></pre><h2 id="adding-toolbaritems-at-circlepage">Adding ToolbarItems at CirclePage</h2>
+<p>CirclePage <code>ToolbarItems</code> set rotary selector view&#39;s items. You can set each item with <code>CircleToolbarItem</code> property.\
+CircleToolbarItem derive from <code>Xamarin.Forms.ToolbarItem</code>. </p>
+<p><code>CircleToolbarItem</code> has the following properties:</p>
+<ul>
+<li><code>Command</code> : Gets or sets the <code>ICommand</code> to be invoked on activation(item clicked).</li>
+<li><code>Icon</code> : Gets or sets item&#39;s image.</li>
+<li><code>Text</code> : Gets or sets item&#39;s title.</li>
+</ul>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleToolbarItem.html">CircleToolbarItem  API reference</a></p>
+<p><img src="data/more_option_detail.png" alt="more_option_detail"></p>
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">    &lt;w:CirclePage.ToolbarItems&gt;
+        &lt;w:CircleToolbarItem
+            Command=&quot;{Binding Play.Action}&quot;
+            Icon=&quot;{Binding Play.Icon}&quot;
+            SubText=&quot;{Binding Play.SubText}&quot;
+            Text=&quot;{Binding Play.Text}&quot; /&gt;
+        &lt;w:CircleToolbarItem
+            Command=&quot;{Binding Stop.Action}&quot;
+            Icon=&quot;{Binding Stop.Icon}&quot;
+            SubText=&quot;{Binding Stop.SubText}&quot;
+            Text=&quot;{Binding Stop.Text}&quot; /&gt;
+
+    ...
+
+    &lt;/w:CirclePage.ToolbarItems&gt;
+</code></pre><h2 id="adding-circleprogressbarsurfaceitem-at-circlepage">Adding CircleProgressBarSurfaceItem at CirclePage</h2>
+<p>CirclePage <code>CircleSurfaceItems</code>  can set <code>CircleProgressBarSurfaceItem</code> and <code>CircleSliderSurfaceItem</code>.\
+<code>CircleProgressBarSurfaceItem</code> represent Circle ProgressBar.<code>progress1</code> at XAML code represents outter circle of below image. and <code>progress2</code> represents inner circle.\
+If you use CircleProgressbar, you don&#39;t need to set <code>RotaryFocusTargetName</code> property of CirclePage.
+When <code>Value</code> property is incread or decrease. circle object extend or shrink following to <code>Value</code> property. </p>
+<p><code>CircleProgressBarSurfaceItem</code> has the following properties:</p>
+<ul>
+<li><code>Value</code> : Gets or sets the value of the progressbar..</li>
+<li><code>IsVisible</code> : Gets or sets the visibility value of circle surface item.</li>
+<li><code>BarRadius</code> : Gets or sets the bar radius value.</li>
+<li><code>BackgroundRadius</code> : Gets or sets the background radius value.</li>
+<li><code>BarLineWidth</code> : Gets or sets the bar line width value.</li>
+<li><code>BackgroundLineWidth</code> : Gets or sets the background line width value.</li>
+<li><code>BarColor</code> : Gets or sets the bar color value.</li>
+<li><code>BackgroundLineWidth</code> : Gets or sets the background color value.</li>
+</ul>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html">CircleSurfaceItem  API reference</a></p>
+<p><img src="data/circle_progressbar.png" alt="circle_progressbar"></p>
+<p><em>This guide&#39;s code example use XUIComponent&#39;s CircleProgressBar.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleProgressBar.xaml</em></p>
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;w:CirclePage
+    x:Class=&quot;UIComponents.Samples.CircleProgressBar&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:UIComponents.Samples&quot;
+    xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
+    NavigationPage.HasNavigationBar=&quot;False&quot;&gt;
+    &lt;w:CirclePage.BindingContext&gt;
+        &lt;local:CircleProgressBarViewModel /&gt;
+    &lt;/w:CirclePage.BindingContext&gt;
+    &lt;w:CirclePage.Content&gt;
+        &lt;StackLayout
+            Padding=&quot;0,30,0,0&quot;
+            BackgroundColor=&quot;Black&quot;
+            HorizontalOptions=&quot;Center&quot;
+            Orientation=&quot;Vertical&quot;
+            VerticalOptions=&quot;FillAndExpand&quot;&gt;
+            &lt;Label
+                x:Name=&quot;label1&quot;
+                FontAttributes=&quot;Bold&quot;
+                FontSize=&quot;12&quot;
+                Text=&quot;{Binding ProgressLabel1}&quot;
+                TextColor=&quot;White&quot; /&gt;
+            &lt;Label
+                x:Name=&quot;label2&quot;
+                Margin=&quot;0,40&quot;
+                FontAttributes=&quot;Bold&quot;
+                FontSize=&quot;12&quot;
+                Text=&quot;{Binding ProgressLabel2}&quot;
+                TextColor=&quot;White&quot; /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/w:CirclePage.Content&gt;
+    &lt;w:CirclePage.CircleSurfaceItems&gt;
+        &lt;w:CircleProgressBarSurfaceItem
+            x:Name=&quot;progress1&quot;
+            IsVisible=&quot;True&quot;
+            Value=&quot;{Binding ProgressValue1}&quot; /&gt;
+        &lt;w:CircleProgressBarSurfaceItem
+            x:Name=&quot;progress2&quot;
+            BackgroundColor=&quot;Black&quot;
+            BackgroundLineWidth=&quot;15&quot;
+            BackgroundRadius=&quot;70&quot;
+            BarColor=&quot;Red&quot;
+            BarLineWidth=&quot;15&quot;
+            BarRadius=&quot;70&quot;
+            IsVisible=&quot;True&quot;
+            Value=&quot;{Binding ProgressValue2}&quot; /&gt;
+    &lt;/w:CirclePage.CircleSurfaceItems&gt;
+&lt;/w:CirclePage&gt;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

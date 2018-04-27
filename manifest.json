@@ -25,6 +25,400 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/CirclePage.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CirclePage.html",
+          "hash": "pXS4nzeugZK9MaYwx8JWZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/ConfirmationPopup.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/ConfirmationPopup.html",
+          "hash": "LtVzSWxOh7UTBHTlyAyPxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/ContextPopup.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/ContextPopup.html",
+          "hash": "MDShVtgYgLskHj9hmrkFUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/InformationPopup.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/InformationPopup.html",
+          "hash": "u4cCPalO8K7agFOloB8Zeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Overview.html",
+          "hash": "p8fNpBshuzyY3Gb7QzJyGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/Quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Quickstart.html",
+          "hash": "vSO779IIuxPubnMJuAPXWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/Toast.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Toast.html",
+          "hash": "pwE48Wk4kEW9sVErb/XucA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/TwoButtonPage.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/TwoButtonPage.html",
+          "hash": "FlBoZKqYCw/rX87IMR0R6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/after_Install_nuget_package.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/after_Install_nuget_package.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/app_capture1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/app_capture1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/bottom_button.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/bottom_button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/check.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/check.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/circle_progressbar.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/circle_progressbar.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/circle_slider.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/circle_slider.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/circlepage.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/circlepage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/circlepage_surfaceitem.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/circlepage_surfaceitem.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/confirmation_popup1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/confirmation_popup1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/confirmation_popup2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/confirmation_popup2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/context_popup.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/context_popup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/information_popup1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/information_popup1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/information_popup2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/information_popup2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/information_popup3.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/information_popup3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/launch_app.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/launch_app.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/launch_emulator1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/launch_emulator1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/launch_emulator2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/launch_emulator2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/more_option.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/more_option.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/more_option_detail.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/more_option_detail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/nuget_package_manager_capture.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/nuget_package_manager_capture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/radio.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/radio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/tizen_project_wizard_capture.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/tizen_project_wizard_capture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/toast1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/toast1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/toast2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/toast2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/twobutton_page.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/twobutton_page.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/twobutton_page_overlap.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/twobutton_page_overlap.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../guide/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/toc.html",
+          "hash": "bf8L9pkcUkUXmW+tbFtT5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
@@ -786,7 +1180,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "kuhzOtsom+3t3UPihE2pzA=="
+          "hash": "7eFVV5BskkESUiQK2xwxMg=="
         }
       },
       "is_incremental": false,
@@ -796,26 +1190,27 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
