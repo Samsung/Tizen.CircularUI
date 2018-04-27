@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CircleStepper </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CircleStepper ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="circlestepper">CircleStepper</h1>
+
+<p><code>CircleStepper</code> is extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/"><code>Xamarin.Forms.Stepper</code></a>.
+Marker color, MarkerLineWidth, and LabelFormat have been added to the existing <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/"><code>Xamarin.Forms.Stepper</code></a>.
+You can change value with Bezel Action.</p>
+<p>This widget related circle UI can be expressed as Child of <a href="CirclePage.html"><code>CirclePage</code></a>,
+In order to receive Bezel Action, it must be registered as <code>RotaryEventConsumer</code> property of <a href="CirclePage.html"><code>CirclePage</code></a>.</p>
+<p><img src="data/CircleStepper.png" alt="Drawing" style="width: 150px;"></p>
+<p><strong>WARNNING: <a href="CircleListView.html"><code>CircleListView</code></a>, <a href="CircleDateTimeSelector.html"><code>CircleDateTimeSelector</code></a>, <a href="CircleScrollView.html"><code>CircleScrollView</code></a>, <a href="CircleStepper.html"><code>CircleStepper</code></a> must be contained by <a href="CirclePage.html"><code>CirclePage</code></a> or <code>CircleSurfaceEffectBehavior</code> should be added in <code>Behaviors</code> of <code>Page</code> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
+<h2 id="properties">Properties</h2>
+<p>XAML for Xamarin.Forms supports the following properties:</p>
+<ul>
+<li>Increment : An integer or decimal literal.</li>
+<li>Maximum : An integer or decimal literal.</li>
+<li>Minimum : An integer or decimal literal. If this value is nonnegative, it must appear lexically below Maximum, so that validation can succeed.</li>
+<li>Value : An integer or decimal literal that represents a number that is in the range [Minimum,Maximum].</li>
+<li><p>ValueChanged : The name of an event handler. Note that this tag must appear below Value. </p>
+<p><code>CircleStepper</code> has the following properties:</p>
+<ul>
+<li>Increment : Double. Gets or sets the increment by which Value is increased or decreased.</li>
+<li>LabelFormat : string. Gets or sets format in which Value is shown.</li>
+<li>MarkerColor : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Color/"><code>Xamarin.Forms.Color</code></a>. Change color of marker to select value.</li>
+<li>MarkerLineWidth : int. Gets or sets length of marker.</li>
+<li>Maximum   : Double. Gets or sets the maximum selectable value.</li>
+<li>Minimum   : Double. Gets or sets the minimum selectabel value.</li>
+<li>Value : Double. Gets or sets the current value.</li>
+</ul>
+</li>
+</ul>
+<h2 id="events">Events</h2>
+<ul>
+<li>ValueChanged : Raised when the Value property changes.</li>
+</ul>
+<p>For more information. Please refer to below links</p>
+<ul>
+<li><a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html">CircleStepper  API reference</a></li>
+<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper  API reference</a></li>
+</ul>
+<h2 id="adding-circlestepper-at-circlepage">Adding CircleStepper at CirclePage</h2>
+<p>You can set CircleStepper at <a href="CirclePage.html"><code>CirclePage.Content</code></a>. The following code show CirclePage set content with <code>CircleStepper</code>.
+<code>RotaryFocusTargetName</code> attribute sets the current focused widget that is handled by rotating and display the focused widget&#39;s circle object.
+If you don&#39;t set this value properly. Widget can&#39;t receive rotary event.</p>
+<p><em>This guide&#39;s code example use XUIComponent&#39;s SpinnerDefault of CircleSpinner code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml</em></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">    public class SpinnerViewModel : INotifyPropertyChanged
+    {
+        double _value= 9.0;
+        ...
+
+        public double Value
+        {
+            get =&gt; _value;
+            set
+            {
+                if (_value == value) return;
+                _value = value;
+                OnPropertyChanged();
+            }
+        }
+</code></pre><p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;w:CirclePage
+    x:Class=&quot;UIComponents.Samples.CircleSpinner.SpinnerDefault&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleSpinner&quot;
+    xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
+    RotaryFocusTargetName=&quot;stepper&quot;&gt;
+    &lt;w:CirclePage.BindingContext&gt;
+        &lt;local:SpinnerViewModel /&gt;
+    &lt;/w:CirclePage.BindingContext&gt;
+    &lt;w:CirclePage.Content&gt;
+        &lt;StackLayout Padding=&quot;0,50,0,0&quot; Orientation=&quot;Vertical&quot;&gt;
+            &lt;Label
+                FontAttributes=&quot;Bold&quot;
+                FontSize=&quot;11&quot;
+                HorizontalTextAlignment=&quot;Center&quot;
+                Text=&quot;Title&quot;
+                TextColor=&quot;#0FB4EF&quot; /&gt;
+            &lt;Label
+                FontSize=&quot;8&quot;
+                HorizontalTextAlignment=&quot;Center&quot;
+                Text=&quot;unit&quot;
+                TextColor=&quot;White&quot; /&gt;
+            &lt;w:CircleStepper
+                x:Name=&quot;stepper&quot;
+                HorizontalOptions=&quot;CenterAndExpand&quot;
+                Increment=&quot;7.5&quot;
+                LabelFormat=&quot;%1.1f&quot;
+                MarkerColor=&quot;Coral&quot;
+                Maximum=&quot;99.0&quot;
+                Minimum=&quot;9.0&quot;
+                Value=&quot;{Binding Value}&quot; /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/w:CirclePage.Content&gt;
+    &lt;w:CirclePage.ActionButton&gt;
+        &lt;w:ActionButtonItem Command=&quot;{Binding ButtonPressedExit}&quot; Text=&quot;SET&quot; /&gt;
+    &lt;/w:CirclePage.ActionButton&gt;
+&lt;/w:CirclePage&gt;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CircleStackLayout </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CircleStackLayout ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="circlestacklayout">CircleStackLayout</h1>
+
+<p><code>CircleStackLayout</code> is the same as <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/"><code>Xamarin.Forms.StackLayout</code></a>, but it arranges internal components in a form that fits the circular screen.
+Rectangular components are placed in close proximity to the circle, and margin is calculated after placement.</p>
+<p>If you don&#39;t set Orientation, <code>Vertical</code> will be used.
+The larger the <code>Spacing</code> value, the greater the distance between the components placed.
+At the right end of the figure below, the <code>Spacing</code> value is 50.</p>
+<table>
+  <tr>
+    <th>Horizontal</th>
+    <th>Vertical</th> 
+    <th>Spacing</th> 
+  </tr>
+  <tr>
+    <td><img src="data/CircleStackLayout_Horizontal.png" alt="Horizontal"></td>
+    <td><img src="data/CircleStackLayout_Vertical.png" alt="Vertical"></td>
+    <td><img src="data/CircleStackLayout_Spacing.png" alt="Spacing"></td> 
+  </tr>
+</table>
+
+<h2 id="properties">Properties</h2>
+<ul>
+<li>Orientation : <code>Horizontal</code> or <code>Vertical</code>. The default is <code>Vertical</code>.</li>
+<li>Spacing : An integer or decimal value of spacing between deployed components.</li>
+</ul>
+<p>For more information. Please refer to below links</p>
+<ul>
+<li><a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleStackLayout.html">CircleStackLayout  API reference</a></li>
+<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/">Xamarin.Forms.StackLayout  API reference</a></li>
+</ul>
+<h2 id="adding-circlestacklayout-at-contentpage">Adding CircleStackLayout at ContentPage</h2>
+<p>You can set CircleStackLayout at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/"><code>ContentPage</code></a>. To create a new component, use the following XAML code.</p>
+<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCCircleStackLayout.xaml code at the test\WearableUIGallery\WearableUIGallery\TC\TCCircleStackLayout.xaml</em></p>
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;w:IndexPage
+    x:Class=&quot;WearableUIGallery.TC.TCCircleStackLayout&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:WearableUIGallery&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    ...
+    &lt;ContentPage&gt;
+        &lt;ScrollView&gt;
+            &lt;w:CircleStackLayout&gt;
+                &lt;BoxView BackgroundColor=&quot;Red&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Orange&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Yellow&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Green&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Blue&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Navy&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Purple&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Red&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Orange&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Yellow&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Green&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Blue&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Navy&quot; /&gt;
+                &lt;BoxView BackgroundColor=&quot;Purple&quot; /&gt;
+            &lt;/w:CircleStackLayout&gt;
+        &lt;/ScrollView&gt;
+    &lt;/ContentPage&gt;
+    ...
+&lt;/w:IndexPage&gt;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
