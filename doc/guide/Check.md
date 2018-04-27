@@ -1,0 +1,55 @@
+# Check
+`Check` provides Tizen Wearable specific CheckBox widget. Check accept user input by the method of toggling.
+`Check` derives from `Xamarin.Forms.Switch`.
+
+![check](data/check.png)
+
+## Create Check
+You can easily add `Check` control with C# or XAML file. Tizen wearable device support 3 style of `DisplayStyle` (`Default`, `Onoff`, `Small`).
+Each shape of DisplayStyle depends on the device model. you can set default value of check with `IsToggled` property. `True` value set Check selected. `False` value set Check unselected. If user toggle check. `Toggled` event will be occurred. You must add code for handling `Toggled` event.
+
+
+For more information . Please refer to [Check  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Check.html)
+
+**C# file**
+```cs
+ var check = new Check
+ {
+     HorizontalOptions = LayoutOptions.Center,
+     VerticalOptions = LayoutOptions.Center,
+     DisplayStyle = "Onoff"
+ }
+
+ check.Toggled += (s, e) => {
+     Console.WriteLine("Check is now {0}", e.Value);
+ }
+```
+
+**XAML file**
+
+_Refer to TCCheck code at the test\WearableUIGallery\WearableUIGallery\TC\TCCeck.xaml_
+
+```cs
+     <StackLayout Orientation="Vertical">
+        <Label HorizontalOptions="CenterAndExpand" Text="Default" />
+        <w:Check
+            DisplayStyle="Default"
+            HorizontalOptions="CenterAndExpand"
+            IsToggled="False"
+            Toggled="OnToggledDefault" />
+
+        <Label HorizontalOptions="CenterAndExpand" Text="Onoff" />
+        <w:Check
+            DisplayStyle="Onoff"
+            HorizontalOptions="FillAndExpand"
+            IsToggled="True"
+            Toggled="OnToggledOnOff" />
+
+        <Label HorizontalOptions="CenterAndExpand" Text="Small" />
+        <w:Check
+            DisplayStyle="Small"
+            HorizontalOptions="CenterAndExpand"
+            IsToggled="False"
+            Toggled="OnToggledSmall" />
+     </StackLayout>
+```

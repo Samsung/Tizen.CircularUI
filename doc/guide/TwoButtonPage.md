@@ -1,5 +1,5 @@
 # TwoButtonPage
-`TwoButtonPage` derive from `Xamarin.Forms.Page`. TwonButtonPage and has two semicircular button that is located at left side and right side of circle.
+`TwoButtonPage` derives from `Xamarin.Forms.Page`. TwonButtonPage has two semicircular buttons that are located at left side and right side of circle.
 
 ![twobutton_page](data/twobutton_page.png) ![twobutton_page_overlay](data/twobutton_page_overlap.png)
 

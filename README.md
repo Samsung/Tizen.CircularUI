@@ -44,6 +44,6 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
  - Installing Tizen Wearable emulator image (WEARABLE-4.0-Emulator or WEARABLE-5.0-Emulator)
 
 ## How to use CircularUI
-- [How to make Tizen Wearable Xamarin Forms App with CircularUI](doc/guide/HOW_TO_MAKE_TIZEN_XAMARIN_FORMS_APP_WITH_CIRCULARUI.md)
+- [QuickStart](doc/guide/Quickstart.md)
 
 - The [API Reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui) is available on the web to browse.

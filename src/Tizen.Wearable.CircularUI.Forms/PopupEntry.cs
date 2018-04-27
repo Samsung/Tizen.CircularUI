@@ -22,7 +22,6 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The CircleStepper is a class that extends Xamarin.Forms.Stepper for Circular UI.
     /// The PopupEntry is a class that extends Xamarin.Forms.Entry.
     /// It makes a new layer when editing text on the entry.
     /// </summary>

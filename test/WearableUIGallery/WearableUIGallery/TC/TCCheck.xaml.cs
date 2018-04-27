@@ -32,5 +32,20 @@ namespace WearableUIGallery.TC
 		{
 			InitializeComponent ();
 		}
-	}
+
+        public void OnToggledDefault(object sender, ToggledEventArgs e)
+        {
+            Console.WriteLine($"Default Check value:{e.Value}");
+        }
+
+        public void OnToggledOnOff(object sender, ToggledEventArgs e)
+        {
+            Console.WriteLine($"OnOff Check value:{e.Value}");
+        }
+
+        public void OnToggledSmall(object sender, ToggledEventArgs e)
+        {
+            Console.WriteLine($"Small Check value:{e.Value}");
+        }
+    }
 }

@@ -1,10 +1,10 @@
 # CirclePage
-CirclePage derive from Xamarin.Forms.Page. This visual element occupy all of the wearable screen.
+CirclePage derives from Xamarin.Forms.Page. This visual element occupies all of the wearable screen.
 
 ![CirclePage](data/circlepage.png) ![CircleSurfaceItem](data/circlepage_surfaceitem.png)
 
 ## Overview
-CirclePage is container of any control that use circleObject or rotary event.
+`CirclePage` is container of any control that use circleObject or rotary event.
 if you want to use any circle control or to handle rotary event. you have to use CirclePage.
 CirclePage can set bottom button and circle ProgressBar and circle Slider and MoreOption on it's own.
 
