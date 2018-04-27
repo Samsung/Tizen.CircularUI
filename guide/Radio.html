@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TwoButtonPage </title>
+    <title>Radio </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="TwoButtonPage ">
+    <meta name="title" content="Radio ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -75,47 +75,75 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="twobuttonpage">TwoButtonPage</h1>
+<h1 id="radio">Radio</h1>
 
-<p><code>TwoButtonPage</code> derives from <code>Xamarin.Forms.Page</code>. TwonButtonPage has two semicircular buttons that are located at left side and right side of circle.</p>
-<p><img src="data/twobutton_page.png" alt="twobutton_page"> <img src="data/twobutton_page_overlap.png" alt="twobutton_page_overlay"></p>
-<h2 id="create-twobuttonpage">Create TwoButtonPage</h2>
-<p>you can set control in the <code>TwoButtonPage.Content</code>. In this example, long text Label and two buttons was set for Content.
-If <code>Overlap</code> property is <code>true</code>. <code>Content</code> area occupies all of the screen. If <code>Overlap</code> property is <code>false</code>. <code>Content</code> area occupies screen that is excluded button&#39;s area. <code>Overlap</code> property default value is <code>false</code>.
-<code>TwoButtonPage.firstButton</code> set left side button. <code>TwoButtonPage.SecondButton</code> set right side button. you can add button using <code>MenuItem</code>.</p>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCTwoButtonPage code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml</em></p>
-<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html">TwoButtonPage  API reference</a></p>
+<p><code>Radio</code> display 1 or more option and allows user to select 1 of them.
+<code>Radio</code> can select only 1 item among items having same <code>GroupName</code> property.</p>
+<p><img src="data/radio.png" alt="radio"></p>
+<h2 id="create-radio">Create Radio</h2>
+<p><code>GroupName</code>property specifies which <code>Radio</code> controls are mutually exclusive. If user selected one Radio control of radio control group, other items are not selected.
+<code>IsSelected</code> property sets default selected value of Radio control. <code>Selected</code> event occurs when the Radio selection was changed.
+<code>Value</code> property sets any value of Radio control. <code>Value</code> property is usefull to distinguish which item was selected if all Radio control has same <code>Selected</code> event handler. please refer to below code.</p>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Radio.html">Radio  API reference</a></p>
+<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCRadio code at the test\WearableUIGallery\WearableUIGallery\TC\TCRadio.xaml.cs</em></p>
 <p><strong>XAML file</strong></p>
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-&lt;w:TwoButtonPage
-    x:Class=&quot;WearableUIGallery.TC.TCTwoButtonPage&quot;
-    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
-    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
-    xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
-    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
-    &lt;w:TwoButtonPage.BindingContext&gt;
-        &lt;local:TCTwoButtonPageViewModel /&gt;
-    &lt;/w:TwoButtonPage.BindingContext&gt;
-    &lt;w:TwoButtonPage.Content&gt;
-        &lt;ScrollView&gt;
-            &lt;StackLayout HorizontalOptions=&quot;FillAndExpand&quot; VerticalOptions=&quot;FillAndExpand&quot;&gt;
+<pre><code class="lang-xml">   &lt;w:CirclePage.Content&gt;
+        &lt;w:CircleScrollView x:Name=&quot;myscroller&quot; Orientation=&quot;Vertical&quot;&gt;
+            &lt;StackLayout Padding=&quot;50,50&quot; Orientation=&quot;Vertical&quot;&gt;
                 &lt;Label
-                    HorizontalOptions=&quot;FillAndExpand&quot;
-                    HorizontalTextAlignment=&quot;Center&quot;
-                    Text=&quot;{Binding Text}&quot;
-                    VerticalOptions=&quot;FillAndExpand&quot; /&gt;
-                &lt;Button Clicked=&quot;OnRemove1&quot; Text=&quot;Remove 1&quot; /&gt;
-                &lt;Button Clicked=&quot;OnRemove2&quot; Text=&quot;Remove 2&quot; /&gt;
+                    x:Name=&quot;label&quot;
+                    FontSize=&quot;Medium&quot;
+                    HorizontalOptions=&quot;CenterAndExpand&quot;
+                    Text=&quot;Selected : Sound&quot; /&gt;
+                &lt;StackLayout Orientation=&quot;Horizontal&quot;&gt;
+                    &lt;Label
+                        HorizontalOptions=&quot;CenterAndExpand&quot;
+                        Text=&quot;Sound&quot;
+                        VerticalOptions=&quot;Center&quot; /&gt;
+                    &lt;w:Radio
+                        GroupName=&quot;SoundMode&quot;
+                        HorizontalOptions=&quot;End&quot;
+                        IsSelected=&quot;True&quot;
+                        Selected=&quot;OnSelected&quot;
+                        Value=&quot;Sound&quot; /&gt;
+                &lt;/StackLayout&gt;
+
+                &lt;StackLayout Orientation=&quot;Horizontal&quot;&gt;
+                    &lt;Label
+                        HorizontalOptions=&quot;CenterAndExpand&quot;
+                        Text=&quot;Vibrate&quot;
+                        VerticalOptions=&quot;Center&quot; /&gt;
+                    &lt;w:Radio
+                        GroupName=&quot;SoundMode&quot;
+                        HorizontalOptions=&quot;End&quot;
+                        Selected=&quot;OnSelected&quot;
+                        Value=&quot;Vibrate&quot; /&gt;
+                &lt;/StackLayout&gt;
+
+                &lt;StackLayout Orientation=&quot;Horizontal&quot;&gt;
+                    &lt;Label
+                        HorizontalOptions=&quot;CenterAndExpand&quot;
+                        Text=&quot;Mute&quot;
+                        VerticalOptions=&quot;Center&quot; /&gt;
+                    &lt;w:Radio
+                        GroupName=&quot;SoundMode&quot;
+                        HorizontalOptions=&quot;End&quot;
+                        Selected=&quot;OnSelected&quot;
+                        Value=&quot;Mute&quot; /&gt;
+                &lt;/StackLayout&gt;
             &lt;/StackLayout&gt;
-        &lt;/ScrollView&gt;
-    &lt;/w:TwoButtonPage.Content&gt;
-    &lt;w:TwoButtonPage.FirstButton&gt;
-        &lt;MenuItem Command=&quot;{Binding Command1}&quot; Icon=&quot;image/tw_ic_popup_btn_check.png&quot; /&gt;
-    &lt;/w:TwoButtonPage.FirstButton&gt;
-    &lt;w:TwoButtonPage.SecondButton&gt;
-        &lt;MenuItem Command=&quot;{Binding Command2}&quot; Icon=&quot;image/tw_ic_popup_btn_delete.png&quot; /&gt;
-    &lt;/w:TwoButtonPage.SecondButton&gt;
-&lt;/w:TwoButtonPage&gt;
+        &lt;/w:CircleScrollView&gt;
+    &lt;/w:CirclePage.Content&gt;
+</code></pre><p><strong>C# file</strong></p>
+<pre><code class="lang-cs">        public void OnSelected(object sender, SelectedEventArgs args)
+        {
+            Console.WriteLine($&quot;OnSoundSelected!! value:{args.Value}&quot;);
+            Radio radio = sender as Radio;
+            if (radio != null)
+            {
+                if (args.Value) label.Text = &quot;Selected : &quot; + radio.Value;
+            }
+        }
 </code></pre></article>
           </div>
           

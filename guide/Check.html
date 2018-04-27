@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TwoButtonPage </title>
+    <title>Check </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="TwoButtonPage ">
+    <meta name="title" content="Check ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -75,47 +75,50 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="twobuttonpage">TwoButtonPage</h1>
+<h1 id="check">Check</h1>
 
-<p><code>TwoButtonPage</code> derives from <code>Xamarin.Forms.Page</code>. TwonButtonPage has two semicircular buttons that are located at left side and right side of circle.</p>
-<p><img src="data/twobutton_page.png" alt="twobutton_page"> <img src="data/twobutton_page_overlap.png" alt="twobutton_page_overlay"></p>
-<h2 id="create-twobuttonpage">Create TwoButtonPage</h2>
-<p>you can set control in the <code>TwoButtonPage.Content</code>. In this example, long text Label and two buttons was set for Content.
-If <code>Overlap</code> property is <code>true</code>. <code>Content</code> area occupies all of the screen. If <code>Overlap</code> property is <code>false</code>. <code>Content</code> area occupies screen that is excluded button&#39;s area. <code>Overlap</code> property default value is <code>false</code>.
-<code>TwoButtonPage.firstButton</code> set left side button. <code>TwoButtonPage.SecondButton</code> set right side button. you can add button using <code>MenuItem</code>.</p>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCTwoButtonPage code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml</em></p>
-<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html">TwoButtonPage  API reference</a></p>
-<p><strong>XAML file</strong></p>
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-&lt;w:TwoButtonPage
-    x:Class=&quot;WearableUIGallery.TC.TCTwoButtonPage&quot;
-    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
-    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
-    xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
-    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
-    &lt;w:TwoButtonPage.BindingContext&gt;
-        &lt;local:TCTwoButtonPageViewModel /&gt;
-    &lt;/w:TwoButtonPage.BindingContext&gt;
-    &lt;w:TwoButtonPage.Content&gt;
-        &lt;ScrollView&gt;
-            &lt;StackLayout HorizontalOptions=&quot;FillAndExpand&quot; VerticalOptions=&quot;FillAndExpand&quot;&gt;
-                &lt;Label
-                    HorizontalOptions=&quot;FillAndExpand&quot;
-                    HorizontalTextAlignment=&quot;Center&quot;
-                    Text=&quot;{Binding Text}&quot;
-                    VerticalOptions=&quot;FillAndExpand&quot; /&gt;
-                &lt;Button Clicked=&quot;OnRemove1&quot; Text=&quot;Remove 1&quot; /&gt;
-                &lt;Button Clicked=&quot;OnRemove2&quot; Text=&quot;Remove 2&quot; /&gt;
-            &lt;/StackLayout&gt;
-        &lt;/ScrollView&gt;
-    &lt;/w:TwoButtonPage.Content&gt;
-    &lt;w:TwoButtonPage.FirstButton&gt;
-        &lt;MenuItem Command=&quot;{Binding Command1}&quot; Icon=&quot;image/tw_ic_popup_btn_check.png&quot; /&gt;
-    &lt;/w:TwoButtonPage.FirstButton&gt;
-    &lt;w:TwoButtonPage.SecondButton&gt;
-        &lt;MenuItem Command=&quot;{Binding Command2}&quot; Icon=&quot;image/tw_ic_popup_btn_delete.png&quot; /&gt;
-    &lt;/w:TwoButtonPage.SecondButton&gt;
-&lt;/w:TwoButtonPage&gt;
+<p><code>Check</code> provides Tizen Wearable specific CheckBox widget. Check accept user input by the method of toggling.
+<code>Check</code> derives from <code>Xamarin.Forms.Switch</code>.</p>
+<p><img src="data/check.png" alt="check"></p>
+<h2 id="create-check">Create Check</h2>
+<p>You can easily add <code>Check</code> control with C# or XAML file. Tizen wearable device support 3 style of <code>DisplayStyle</code> (<code>Default</code>, <code>Onoff</code>, <code>Small</code>).
+Each shape of DisplayStyle depends on the device model. you can set default value of check with <code>IsToggled</code> property. <code>True</code> value set Check selected. <code>False</code> value set Check unselected. If user toggle check. <code>Toggled</code> event will be occurred. You must add code for handling <code>Toggled</code> event.</p>
+<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Check.html">Check  API reference</a></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs"> var check = new Check
+ {
+     HorizontalOptions = LayoutOptions.Center,
+     VerticalOptions = LayoutOptions.Center,
+     DisplayStyle = &quot;Onoff&quot;
+ }
+
+ check.Toggled += (s, e) =&gt; {
+     Console.WriteLine(&quot;Check is now {0}&quot;, e.Value);
+ }
+</code></pre><p><strong>XAML file</strong></p>
+<p><em>Refer to TCCheck code at the test\WearableUIGallery\WearableUIGallery\TC\TCCeck.xaml</em></p>
+<pre><code class="lang-cs">     &lt;StackLayout Orientation=&quot;Vertical&quot;&gt;
+        &lt;Label HorizontalOptions=&quot;CenterAndExpand&quot; Text=&quot;Default&quot; /&gt;
+        &lt;w:Check
+            DisplayStyle=&quot;Default&quot;
+            HorizontalOptions=&quot;CenterAndExpand&quot;
+            IsToggled=&quot;False&quot;
+            Toggled=&quot;OnToggledDefault&quot; /&gt;
+
+        &lt;Label HorizontalOptions=&quot;CenterAndExpand&quot; Text=&quot;Onoff&quot; /&gt;
+        &lt;w:Check
+            DisplayStyle=&quot;Onoff&quot;
+            HorizontalOptions=&quot;FillAndExpand&quot;
+            IsToggled=&quot;True&quot;
+            Toggled=&quot;OnToggledOnOff&quot; /&gt;
+
+        &lt;Label HorizontalOptions=&quot;CenterAndExpand&quot; Text=&quot;Small&quot; /&gt;
+        &lt;w:Check
+            DisplayStyle=&quot;Small&quot;
+            HorizontalOptions=&quot;CenterAndExpand&quot;
+            IsToggled=&quot;False&quot;
+            Toggled=&quot;OnToggledSmall&quot; /&gt;
+     &lt;/StackLayout&gt;
 </code></pre></article>
           </div>
           
