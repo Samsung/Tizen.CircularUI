@@ -48,3 +48,5 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
 - [QuickStart](doc/guide/Quickstart.md)
 
 - The [API Reference](https://samsung.github.io/Tizen.CircularUI/index.html) is available on the web to browse.
+
+Change for Test CI
