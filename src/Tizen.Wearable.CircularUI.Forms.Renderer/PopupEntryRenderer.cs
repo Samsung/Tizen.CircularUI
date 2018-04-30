@@ -138,7 +138,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.TextColor = Control.TextColor;
             _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? _defaultColor : Control.BackgroundColor;
 
-            _editor.MoveCursorEnd();
             _editor.ShowInputPanel();
         }
 
@@ -151,6 +150,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else if (_IMEState == Interop.EFL.InputPanelState.Show)
             {
+                _editor.MoveCursorEnd();
                 _editor.SetFocus(true);
                 _editorPopup.RaiseTop();
                 _editorPopup.Show();
