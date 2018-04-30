@@ -1,49 +1,42 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.CircleStepper
+summary: CircleStepper control guide
+---
 # CircleStepper
 
 `CircleStepper` is extension of [`Xamarin.Forms.Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/).
 Marker color, MarkerLineWidth, and LabelFormat have been added to the existing [`Xamarin.Forms.Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/).
-You can change value with Bezel Action.
+You can change value with bezel interaction.
+In order to receive bezel interaction, it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
-This widget related circle UI can be expressed as Child of [`CirclePage`](CirclePage.md),
-In order to receive Bezel Action, it must be registered as `RotaryEventConsumer` property of [`CirclePage`](CirclePage.md).
+![](data/CircleStepper.png)
 
-<img src="data/CircleStepper.png" alt="Drawing" style="width: 150px;"/>
-
-**WARNNING: [`CircleListView`](CircleListView.md), [`CircleDateTimeSelector`](CircleDateTimeSelector.md), [`CircleScrollView`](CircleScrollView.md), [`CircleStepper`](CircleStepper.md) must be contained by [`CirclePage`](CirclePage.md) or `CircleSurfaceEffectBehavior` should be added in `Behaviors` of `Page` that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
-
-## Properties
-XAML for Xamarin.Forms supports the following properties:
- - Increment : An integer or decimal literal.
- - Maximum : An integer or decimal literal.
- - Minimum : An integer or decimal literal. If this value is nonnegative, it must appear lexically below Maximum, so that validation can succeed.
- - Value : An integer or decimal literal that represents a number that is in the range [Minimum,Maximum].
- - ValueChanged : The name of an event handler. Note that this tag must appear below Value. 
-
- `CircleStepper` has the following properties:
-- Increment : Double. Gets or sets the increment by which Value is increased or decreased.
-- LabelFormat : string. Gets or sets format in which Value is shown.
-- MarkerColor : [`Xamarin.Forms.Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/). Change color of marker to select value.
-- MarkerLineWidth : int. Gets or sets length of marker.
-- Maximum	: Double. Gets or sets the maximum selectable value.
-- Minimum	: Double. Gets or sets the minimum selectabel value.
-- Value	: Double. Gets or sets the current value.
-
-## Events
-- ValueChanged : Raised when the Value property changes.
-
-For more information. Please refer to below links
-- [CircleStepper  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html)
-- [Xamarin.Forms.Stepper  API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/)
+**WARNNING: [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper) must be contained by `CirclePage` or [CircleSurfaceEffectBehavior](xref:Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior) should be added in [Behaviors](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) of [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
 
 ## Adding CircleStepper at CirclePage
-You can set CircleStepper at [`CirclePage.Content`](CirclePage.md). The following code show CirclePage set content with `CircleStepper`.
-`RotaryFocusTargetName` attribute sets the current focused widget that is handled by rotating and display the focused widget's circle object.
-If you don't set this value properly. Widget can't receive rotary event.
+
+You can set CircleStepper at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). The following code show CirclePage set content with `CircleStepper`.
+`RotaryFocusTargetName` attribute sets the current focused control that is handled by rotating and display the focused control's circle object.
+If you don't set this value properly, control can't receive rotary event.
+
+`CircleDateTimeSelector` has the following properties:
+
+- LabelFormat : Gets or sets format in which Value is shown.
+- MarkerColor : [`Xamarin.Forms.Color`](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/). Change color of marker to select value.
+- MarkerLineWidth : Gets or sets length of marker.
+
+For more information. Please refer to below links
+
+- [CircleStepper API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html)
+- [Xamarin.Forms.Stepper API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/)
+- [Xamarin.Forms.Stepper Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views#stepper)
 
 _This guide's code example use XUIComponent's SpinnerDefault of CircleSpinner code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml_
 
 **C# file**
+
 ```cs
+
     public class SpinnerViewModel : INotifyPropertyChanged
     {
         double _value= 9.0;
@@ -62,7 +55,9 @@ _This guide's code example use XUIComponent's SpinnerDefault of CircleSpinner co
 ```
 
 **XAML file**
+
 ```xml
+
 <w:CirclePage
     x:Class="UIComponents.Samples.CircleSpinner.SpinnerDefault"
     xmlns="http://xamarin.com/schemas/2014/forms"
