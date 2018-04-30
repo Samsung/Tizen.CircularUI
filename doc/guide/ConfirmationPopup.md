@@ -1,3 +1,8 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.ConfirmationPopup
+summary: ConfirmationPopup control guide
+---
+
 # ConfirmationPopup
 `ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is usefull to select one of two options. (e.g  cancel/done, share/delete)\
 
@@ -12,7 +17,7 @@
 
 _This guide's code example use WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
 
-For more information . Please refer to [ConfirmationPopup  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html)
+For more information . Please refer to [ConfirmationPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html)
 
 **C# file**
 ```cs

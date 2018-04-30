@@ -1,3 +1,8 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.ContextPopup
+summary: ContextPopup control guide
+---
+
 # ContextPopup
 `ContextPopup` represents Tizen wearable context popup that has one or two items.
 `ContextPopup` has same shape as `ConfirmPopupEffect`. `ConfirmPopupEffect` can be attached any control (such as button).
@@ -16,7 +21,7 @@ One or two `ContextPopupItem` can be attached at `ContextPopup` using `ContextPo
 
 _This guide's code example use WearableUIGallery's TCContextPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCContextPopup.xaml.cs_
 
-For more information . Please refer to [ContextPopup  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html)
+For more information . Please refer to [ContextPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html)
 
 **C# file**
 ```cs

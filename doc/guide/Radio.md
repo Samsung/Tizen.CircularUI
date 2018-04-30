@@ -1,3 +1,8 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.Radio
+summary: Radio control guide
+---
+
 # Radio
 `Radio` display 1 or more option and allows user to select 1 of them.
 `Radio` can select only 1 item among items having same `GroupName` property.
@@ -9,7 +14,7 @@
 `IsSelected` property sets default selected value of Radio control. `Selected` event occurs when the Radio selection was changed.
 `Value` property sets any value of Radio control. `Value` property is usefull to distinguish which item was selected if all Radio control has same `Selected` event handler. please refer to below code.
 
-For more information . Please refer to [Radio  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Radio.html)
+For more information . Please refer to [Radio  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Radio.html)
 
 _This guide's code example use WearableUIGallery's TCRadio code at the test\WearableUIGallery\WearableUIGallery\TC\TCRadio.xaml.cs_
 
