@@ -8,7 +8,7 @@
 ## Introduction
 The Tizen Wearable CircularUI project is a set of helpful extensions of the Xamarin Forms framework.<br>
 The aim of the Tizen Wearable CircularUI project is to develop an open source software motivate software developer to creating Tizen Wearable Xamarin Forms app more easily and efficiently.<br> 
-The binaries are available via NuGet (package name CircularUI)<br>
+The binaries are available via NuGet (package name **Tizen.Wearable.CircularUI**)<br>
 
 _Xamarin Forms provides cross-platform APIs, but this project are only worked on the Samsung Gear device that support Tizen .NET._ 
 
@@ -34,6 +34,7 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
 - ConfirmationPopup : A popup has two button in left and right side of the circular screen.
 - ConfirmPopupEffect : the effect to show a small popup has one or two button sticky with any control.
 - InformationPopup : A popup has a control to show progress and one button in bottom side of circular screen.
+- CircleSurfaceEffectBehavior : the effect to attach CircleSurface to page.
 
 ![widgets](doc/design/data/widgets.png)
 
@@ -46,4 +47,4 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
 ## How to use CircularUI
 - [QuickStart](doc/guide/Quickstart.md)
 
-- The [API Reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui) is available on the web to browse.
+- The [API Reference](https://samsung.github.io/Tizen.CircularUI/index.html) is available on the web to browse.

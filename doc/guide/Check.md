@@ -1,6 +1,11 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.Check
+summary: Check control guide
+---
+
 # Check
 `Check` provides Tizen Wearable specific CheckBox widget. Check accept user input by the method of toggling.
-`Check` derives from `Xamarin.Forms.Switch`.
+`Check` derives from [Xamarin.Forms.Switch](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/).
 
 ![check](data/check.png)
 
@@ -9,7 +14,9 @@ You can easily add `Check` control with C# or XAML file. Tizen wearable device s
 Each shape of DisplayStyle depends on the device model. you can set default value of check with `IsToggled` property. `True` value set Check selected. `False` value set Check unselected. If user toggle check. `Toggled` event will be occurred. You must add code for handling `Toggled` event.
 
 
-For more information . Please refer to [Check  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Check.html)
+For more information . Please refer to below links
+ - [Check  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Check.html)
+ - [Xamarin.Forms.Switch  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Check.html)
 
 **C# file**
 ```cs
