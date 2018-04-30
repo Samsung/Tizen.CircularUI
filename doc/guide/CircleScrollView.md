@@ -1,51 +1,36 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.CircleScrollView
+summary: CircleScrollView control guide
+---
 # CircleScrollView
+
 `CircleScrollView` is extension of [`Xamarin.Forms.ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/).
-Same as [`Xamarin.Forms.ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/), Scroller is rendered to CircleSurface and scrolling is possible with Bezel Action.
-This widget related circle UI can be expressed as Child of [`CirclePage`](CirclePage.md),
-In order to receive Bezel Action, it must be registered as `RotaryEventConsumer` property of [`CirclePage`](CirclePage.md).
+Same as [`Xamarin.Forms.ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/), Scroller is rendered to CircleSurface and scrolling is possible with bezel interaction.
+In order to receive bezel interaction, it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
-The orientation of the scroller depends on the setting of the Orientation value.
+|![Horizontal](data/CircleScrollView_Horizontal.png)|![Vertical](data/CircleScrollView_Vertical.png)|
+|:-----------------------------------------------:|:-----------------------------------------------:|
+|                      Horizontal                 |                    Vertical                     |
 
-<table style="width:30%">
-  <tr>
-    <th>Horizontal</th>
-    <th>Vertical</th> 
-  </tr>
-  <tr>
-    <td><img src="data/CircleScrollView_Horizontal.png" alt="Drawing" style="width: 150px;"/></td>
-    <td><img src="data/CircleScrollView_Vertical.png" alt="Drawing" style="width: 150px;"/></td> 
-  </tr>
-</table>
-
-**WARNNING: [`CircleListView`](CircleListView.md), [`CircleDateTimeSelector`](CircleDateTimeSelector.md), [`CircleScrollView`](CircleScrollView.md), [`CircleStepper`](CircleStepper.md) must be contained by [`CirclePage`](CirclePage.md) or `CircleSurfaceEffectBehavior` should be added in `Behaviors` of `Page` that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
-
-## Properties
-XAML for Xamarin.Forms supports the following properties:
-- Content : Markup that specifies a view to display in the `CircleScrollView`.
-- Orientation : *Horizontal* or *Vertical*, to indicate the scroll direction.
-
- `CircleScrollView` has the following properties:
-- Content : [`Xamarin.Forms.View`](https://developer.xamarin.com/api/type/Xamarin.Forms.View/). Gets or sets a view to display in the `CircleScrollView`.
-- ContentSize :	[`Xamarin.Forms.Size`](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/). Gets the size of the Content. This is a bindable property.
-- Orientation :	[`Xamarin.Forms.ScrollOrientation`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/). Gets or sets the scrolling direction of the `CircleScrollView`. This is a bindable property.
-- ScrollX :	Double. Gets the current X scroll position.
-- ScrollY :	Double. Gets the current Y scroll position.
-
-## Events
-- Scrolled : Event that is raised after a scroll completes.
-
-For more information. Please refer to below links
-- [CircleScrollView  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html)
-- [Xamarin.Forms.ScrollView  API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/)
+**WARNNING: [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper) must be contained by `CirclePage` or [CircleSurfaceEffectBehavior](xref:Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior) should be added in [Behaviors](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) of [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
 
 ## Adding CircleScrollView at CirclePage
-You can set `CircleScrollView` at [`CirclePage.Content`](CirclePage.md). The following XAML code show CirclePage set content with `CircleScrollView`.
-`RotaryFocusTargetName` attribute sets the current focused widget that is handled by rotating and display the focused widget's circle object.
-If you don't set this value properly. Widget can't receive rotary event.
+
+You can set `CircleScrollView` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). The following XAML code show [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage) with `CircleScrollView`.
+`RotaryFocusTargetName` attribute sets the current focused control that is handled by rotating and display the focused control's circle object.
+If you don't set this property, control can't receive rotary event.
+The orientation of the scroller depends on the setting of the Orientation value.
+
+For more information. Please refer to below links
+
+- [CircleScrollView API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html)
+- [Xamarin.Forms.ScrollView API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/)
+- [Xamarin.Forms.ScrollView Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/scroll-view)
 
 _This guide's code example use XUIComponent's HorizontalScroller.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleScroller/HorizontalScroller.xaml_
 
 **XAML file**
+
 ```xml
 <w:CirclePage
     x:Class="UIComponents.Samples.CircleScroller.HorizontalScroller"
@@ -85,5 +70,3 @@ _This guide's code example use XUIComponent's HorizontalScroller.xaml code at th
 </w:CirclePage>
 
 ```
-
-

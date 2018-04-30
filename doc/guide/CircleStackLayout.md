@@ -1,4 +1,9 @@
+---
+uid: Tizen.Wearable.CircularUI.doc.CircleStackLayout
+summary: CircleStackLayout control guide
+---
 # CircleStackLayout
+
 `CircleStackLayout` is the same as [`Xamarin.Forms.StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), but it arranges internal components in a form that fits the circular screen.
 Rectangular components are placed in close proximity to the circle, and margin is calculated after placement.
 
@@ -6,33 +11,24 @@ If you don't set Orientation, `Vertical` will be used.
 The larger the `Spacing` value, the greater the distance between the components placed.
 At the right end of the figure below, the `Spacing` value is 50.
 
-<table>
-  <tr>
-    <th>Horizontal</th>
-    <th>Vertical</th> 
-    <th>Spacing</th> 
-  </tr>
-  <tr>
-    <td><img src="data/CircleStackLayout_Horizontal.png" alt="Horizontal"/></td>
-    <td><img src="data/CircleStackLayout_Vertical.png" alt="Vertical"/></td>
-    <td><img src="data/CircleStackLayout_Spacing.png" alt="Spacing"/></td> 
-  </tr>
-</table>
-
-## Properties
-- Orientation : `Horizontal` or `Vertical`. The default is `Vertical`.
-- Spacing : An integer or decimal value of spacing between deployed components.
-
-For more information. Please refer to below links
-- [CircleStackLayout  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleStackLayout.html)
-- [Xamarin.Forms.StackLayout  API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)
+|![Horizontal](data/CircleStackLayout_Horizontal.png)|![Vertical](data/CircleStackLayout_Vertical.png)|![Spacing](data/CircleStackLayout_Spacing.png)|
+|:--------------------------------------------------:|:----------------------------------------------:|:--------------------------------------------:|
+|                   Horizontal                       |                     Vertical                   |                     Spacing                  |
 
 ## Adding CircleStackLayout at ContentPage
+
 You can set CircleStackLayout at [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/). To create a new component, use the following XAML code.
+
+For more information. Please refer to below links
+
+- [CircleStackLayout API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStackLayout.html)
+- [Xamarin.Forms.StackLayout API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)
+- [Xamarin.Forms.StackLayout Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout)
 
 _This guide's code example use WearableUIGallery's TCCircleStackLayout.xaml code at the test\WearableUIGallery\WearableUIGallery\TC\TCCircleStackLayout.xaml_
 
 **XAML file**
+
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <w:IndexPage
@@ -65,5 +61,3 @@ _This guide's code example use WearableUIGallery's TCCircleStackLayout.xaml code
     ...
 </w:IndexPage>
 ```
-
-
