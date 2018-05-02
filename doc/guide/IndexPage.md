@@ -4,17 +4,18 @@ summary: IndexPage control guide
 ---
 # IndexPage
 
-`IndexPage` is extension of [`Xamarin.Forms.MultiPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/).
-When [`Page`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages) is added and removed at [`Xamarin.Forms.MultiPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/). Circular index is added and removed automatically at the top of window.
+`IndexPage` allows you to know in advance how many pages you have when you configure your application on multiple pages, and  to show you how many pages you are viewing.
+It is extension of [`Xamarin.Forms.MultiPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/).
+When [`Page`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages) is added and removed at [`Xamarin.Forms.MultiPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/), The number of dot marks increases or decreases automatically at the top of window.
 It is similar to [`CarouselPage`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages#carouselpage) in Xamarin.Forms, with the addition of `Index`.
 When [`Page`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages) is scrolled, `Index` operates select internally.
 
-![](data/IndexPage.png)
+![](data/IndexPage_action.png)
 
 ## Adding IndexPage
 
 To create a new index component, use the following XAML code.
-If you add as many pages as you want, you will increase the dot mark by index accordingly. In the example below, 3 pages have been added.
+If you add as many pages as you want, you will increase the number of dot mark by index accordingly. In the example below, 3 pages have been added. The number of dot mark is 3. Because it is on the first page, only the first dot mark is shown as white, and the remaining dot marks are shown as grey.
 
 For more information. Please refer to below links
 
@@ -54,3 +55,7 @@ _This guide's code example use WearableUIGallery's TCIndexPage.xaml code at the 
     </ContentPage>
 </w:IndexPage>
 ```
+
+**Screenshot**
+
+![IndexPage](data/IndexPage.png)

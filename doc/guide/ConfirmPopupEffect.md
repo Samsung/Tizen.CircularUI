@@ -10,24 +10,31 @@ Accept button has one default, and "Ok" text is displayed in Accept as default.
 When `ConfirmVisibility` becomes `True`, it appears on the screen,
 The command given at the time of Accept or Cancel is executed and disappears automatically, and `ConfirmVisibility` becomes `False`.
 Also, when you touch the outside of the popup, the popup is automatically canceled. (Cancel command is performed similarly.)
-You can change the pop-up position by adjusting the X and Y value of Offset.
+You can change the position by adjusting the X and Y value of Offset.
 
 ![](data/ConfirmPopupEffect.png)
 
-## Adding popup with ConfirmPopupEffect at ContentPage
+## Adding popup with ConfirmPopupEffect at CirclePage
 
-You can set popup with ConfirmPopupEffect at [`ContentPage.Content`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/). To create a new popup, use the following code.
+You can set popup with `ConfirmPopupEffect` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add `CirclePage`, please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage). To create a new popup, use the following code.
 
 `ConfirmPopupEffect` has the following properties:
 
 - AcceptCommand : [`System.Windows.Input.ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command to be executed when Accept
 - CancelCommand : [`System.Windows.Input.ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
-- ConfirmVisibility : Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
+- ConfirmVisibility : Popup appears if `ConfirmVisibility` is True, and disappears when it becomes False. `CancelCommand` works even if it disappears to False.
 - PositionOption : Position type of popup
   - `BottomOfView` : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.
-  - `CenterOfWindow` : In the center of the screen, move by the Offset in the Popup.
+  - `CenterOfParent` : In the center of the screen, move by the Offset in the Popup.
   - `Absolute` : The value of Offset is X, Y and popup is placed on the screen.
   - `Relative` : Set Offset.X * Window.Width, Offset.Y * Window.Height.
+
+In the example below, a check with `ConfirmPopupEffect` in the `StackLayout` is set into the `CirclePage`. I have set the texts to be shown in `AcceptText` and `CancelText`, and defined the commands to execute when each item is selected in `AcceptCommand` and `CancelCommand`. Accept will change the background color to green and Cancel if it will be red.
+I set the position by assigning `CenterOfParent` to the `PositionOption`. `ConfirmVisibility` value set to be bound to `IsToggled`.
+
+|![BottomOfView](data/ConfirmPopupEffect_BottomOfView.png)|![CenterOfParent](data/ConfirmPopupEffect_2.png)|![3rd scene when selects 'Yes'](data/ConfirmPopupEffect_Absolute.png)|
+|:----------------------------------------------------:|:--------------------------------------------------:|:-----------------------------:|
+|                       BottomOfView                   |                    CenterOfParent                  |         Absolute/Relative     |
 
 For more information. Please refer to below links
 
@@ -67,7 +74,7 @@ _This guide's code example use WearableUIGallery's TCConfirm.xaml and TCConfirm.
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     x:Name="mypage">
     <ContentPage.Content>
-        <StackLayout>
+        <AbsoluteLayout>
             <w:Check
                 x:Name="confirm3"
                 w:ConfirmPopupEffect.AcceptCommand="{Binding AcceptedCommand, Source={x:Reference mypage}}"
@@ -76,6 +83,8 @@ _This guide's code example use WearableUIGallery's TCConfirm.xaml and TCConfirm.
                 w:ConfirmPopupEffect.CancelText="No"
                 w:ConfirmPopupEffect.ConfirmVisibility="{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}"
                 w:ConfirmPopupEffect.PositionOption="CenterOfParent"
+                AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
                 HorizontalOptions="CenterAndExpand"
                 IsToggled="False"
                 VerticalOptions="CenterAndExpand">
@@ -83,7 +92,7 @@ _This guide's code example use WearableUIGallery's TCConfirm.xaml and TCConfirm.
                     <w:ConfirmPopupEffect />
                 </w:Check.Effects>
             </w:Check>
-        </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </w:CirclePage>
 ```
