@@ -47,8 +47,8 @@ references:
   name: Popup Entry
   href: guide/PopupEntry.html
 - uid: Tizen.Wearable.CircularUI.doc.Radio
-  name: Radio
-  href: guide/Radio.html
+  name: Toast
+  href: guide/Toast.html
 - uid: Tizen.Wearable.CircularUI.doc.TwoButtonPage
   name: TwoButtonPage
   href: guide/TwoButtonPage.html
