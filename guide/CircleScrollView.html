@@ -74,52 +74,38 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleScrollView">
 <h1 id="circlescrollview">CircleScrollView</h1>
 
 <p><code>CircleScrollView</code> is extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/"><code>Xamarin.Forms.ScrollView</code></a>.
-Same as <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/"><code>Xamarin.Forms.ScrollView</code></a>, Scroller is rendered to CircleSurface and scrolling is possible with Bezel Action.
-This widget related circle UI can be expressed as Child of <a href="CirclePage.html"><code>CirclePage</code></a>,
-In order to receive Bezel Action, it must be registered as <code>RotaryEventConsumer</code> property of <a href="CirclePage.html"><code>CirclePage</code></a>.</p>
-<p>The orientation of the scroller depends on the setting of the Orientation value.</p>
-<table style="width:30%">
-  <tr>
-    <th>Horizontal</th>
-    <th>Vertical</th> 
-  </tr>
-  <tr>
-    <td><img src="data/CircleScrollView_Horizontal.png" alt="Drawing" style="width: 150px;"></td>
-    <td><img src="data/CircleScrollView_Vertical.png" alt="Drawing" style="width: 150px;"></td> 
-  </tr>
+Same as <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/"><code>Xamarin.Forms.ScrollView</code></a>, Scroller is rendered to CircleSurface and scrolling is possible with bezel interaction.
+In order to receive bezel interaction, it must be registered as <code>RotaryEventConsumer</code> property of <a class="xref" href="CirclePage.html"><code>CirclePage</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/CircleScrollView_Horizontal.png" alt="Horizontal"></th>
+<th style="text-align:center"><img src="data/CircleScrollView_Vertical.png" alt="Vertical"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Horizontal</td>
+<td style="text-align:center">Vertical</td>
+</tr>
+</tbody>
 </table>
-
-<p><strong>WARNNING: <a href="CircleListView.html"><code>CircleListView</code></a>, <a href="CircleDateTimeSelector.html"><code>CircleDateTimeSelector</code></a>, <a href="CircleScrollView.html"><code>CircleScrollView</code></a>, <a href="CircleStepper.html"><code>CircleStepper</code></a> must be contained by <a href="CirclePage.html"><code>CirclePage</code></a> or <code>CircleSurfaceEffectBehavior</code> should be added in <code>Behaviors</code> of <code>Page</code> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
-<h2 id="properties">Properties</h2>
-<p>XAML for Xamarin.Forms supports the following properties:</p>
-<ul>
-<li>Content : Markup that specifies a view to display in the <code>CircleScrollView</code>.</li>
-<li><p>Orientation : <em>Horizontal</em> or <em>Vertical</em>, to indicate the scroll direction.</p>
-<p><code>CircleScrollView</code> has the following properties:</p>
-</li>
-<li>Content : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/"><code>Xamarin.Forms.View</code></a>. Gets or sets a view to display in the <code>CircleScrollView</code>.</li>
-<li>ContentSize : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Size/"><code>Xamarin.Forms.Size</code></a>. Gets the size of the Content. This is a bindable property.</li>
-<li>Orientation : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollOrientation/"><code>Xamarin.Forms.ScrollOrientation</code></a>. Gets or sets the scrolling direction of the <code>CircleScrollView</code>. This is a bindable property.</li>
-<li>ScrollX : Double. Gets the current X scroll position.</li>
-<li>ScrollY : Double. Gets the current Y scroll position.</li>
-</ul>
-<h2 id="events">Events</h2>
-<ul>
-<li>Scrolled : Event that is raised after a scroll completes.</li>
-</ul>
+<p><strong>WARNNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
+<h2 id="adding-circlescrollview-at-circlepage">Adding CircleScrollView at CirclePage</h2>
+<p>You can set <code>CircleScrollView</code> at <a class="xref" href="CirclePage.html"><code>CirclePage.Content</code></a>. The following XAML code show <a class="xref" href="CirclePage.html"><code>CirclePage</code></a> with <code>CircleScrollView</code>.
+<code>RotaryFocusTargetName</code> attribute sets the current focused control that is handled by rotating and display the focused control&#39;s circle object.
+If you don&#39;t set this property, control can&#39;t receive rotary event.
+The orientation of the scroller depends on the setting of the Orientation value.</p>
 <p>For more information. Please refer to below links</p>
 <ul>
-<li><a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html">CircleScrollView  API reference</a></li>
-<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView  API reference</a></li>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html">CircleScrollView API reference</a></li>
+<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView API reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/scroll-view">Xamarin.Forms.ScrollView Guide</a></li>
 </ul>
-<h2 id="adding-circlescrollview-at-circlepage">Adding CircleScrollView at CirclePage</h2>
-<p>You can set <code>CircleScrollView</code> at <a href="CirclePage.html"><code>CirclePage.Content</code></a>. The following XAML code show CirclePage set content with <code>CircleScrollView</code>.
-<code>RotaryFocusTargetName</code> attribute sets the current focused widget that is handled by rotating and display the focused widget&#39;s circle object.
-If you don&#39;t set this value properly. Widget can&#39;t receive rotary event.</p>
 <p><em>This guide&#39;s code example use XUIComponent&#39;s HorizontalScroller.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleScroller/HorizontalScroller.xaml</em></p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;w:CirclePage

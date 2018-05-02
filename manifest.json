@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/TeamCity/buildAgent/work/88e8348ed16b1c56/doc/docfx_files",
+  "source_base_path": "/home/ubuntu/workspace/Tizen.CIrcularUI/CircularUI release/doc/docfx_files",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -29,7 +29,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Check.html",
-          "hash": "Nvt55n8wXL5DP1KynkV6ag=="
+          "hash": "BOcvXnB8JUIUsyGXs9oAsg=="
         }
       },
       "is_incremental": false,
@@ -41,7 +41,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleDateTimeSelector.html",
-          "hash": "bWvhAAfL0EPPittwDhtv2Q=="
+          "hash": "FHkJFFOCLM1vBTsKMVHF6Q=="
         }
       },
       "is_incremental": false,
@@ -53,7 +53,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleListView.html",
-          "hash": "NtYleslB13rqUYAQYR/hXw=="
+          "hash": "bzzDlOlbvcedoLVIxt1zbA=="
         }
       },
       "is_incremental": false,
@@ -65,7 +65,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CirclePage.html",
-          "hash": "s0IWCFZaMe3S2b1Gju0UyA=="
+          "hash": "V1cPiyc6WT06trgPRZ4CLQ=="
         }
       },
       "is_incremental": false,
@@ -77,7 +77,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleScrollView.html",
-          "hash": "uAjbbOpbp1A6Y2gExtYdgQ=="
+          "hash": "/TXu5zRd4gPjz3aolD+FLA=="
         }
       },
       "is_incremental": false,
@@ -89,7 +89,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleStackLayout.html",
-          "hash": "Kq30547mEdx79jkzXGu+qA=="
+          "hash": "UflKt2YPPqL1J8ftotOFXg=="
         }
       },
       "is_incremental": false,
@@ -101,7 +101,19 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleStepper.html",
-          "hash": "/ZkNwwqBFW05A4MMTQOQyQ=="
+          "hash": "x13AnQf58jKotZ3lW9Zt8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/CircleSurfaceEffectBehavior.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CircleSurfaceEffectBehavior.html",
+          "hash": "idSFYIimw4QjGmuRli7ccw=="
         }
       },
       "is_incremental": false,
@@ -113,7 +125,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ConfirmPopupEffect.html",
-          "hash": "2de5rbaVstE1/6lzLTHnCQ=="
+          "hash": "4nEupLxPf270RorzQRX2dw=="
         }
       },
       "is_incremental": false,
@@ -125,7 +137,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ConfirmationPopup.html",
-          "hash": "LtVzSWxOh7UTBHTlyAyPxQ=="
+          "hash": "sO10+y8gvtVxMDAK3Iiq5w=="
         }
       },
       "is_incremental": false,
@@ -137,7 +149,19 @@
       "output": {
         ".html": {
           "relative_path": "guide/ContextPopup.html",
-          "hash": "MDShVtgYgLskHj9hmrkFUA=="
+          "hash": "v4041zfpH+Np2D+OO5M94A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/IRotaryEventReceiver.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/IRotaryEventReceiver.html",
+          "hash": "7VOKGVZkk22c3qOxe21nqA=="
         }
       },
       "is_incremental": false,
@@ -149,7 +173,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/IndexPage.html",
-          "hash": "RId3kmHPqrhoKEkiWEegSw=="
+          "hash": "qHl2dWqOLnmYLv2jqNNdHg=="
         }
       },
       "is_incremental": false,
@@ -161,7 +185,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/InformationPopup.html",
-          "hash": "u4cCPalO8K7agFOloB8Zeg=="
+          "hash": "x7lq9HOcTBIy4yH7yeDNgQ=="
         }
       },
       "is_incremental": false,
@@ -174,6 +198,18 @@
         ".html": {
           "relative_path": "guide/Overview.html",
           "hash": "p8fNpBshuzyY3Gb7QzJyGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/PopupEntry.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/PopupEntry.html",
+          "hash": "zXa5KDB9DPwyj0actr5Lfg=="
         }
       },
       "is_incremental": false,
@@ -197,19 +233,22 @@
       "output": {
         ".html": {
           "relative_path": "guide/Radio.html",
-          "hash": "KudcdC6PI/H+V5SOhOZmuQ=="
+          "hash": "S3Q+IXPiFynnXEKGbFqwvg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "../guide/Toast.md",
       "output": {
         ".html": {
           "relative_path": "guide/Toast.html",
-          "hash": "pwE48Wk4kEW9sVErb/XucA=="
+          "hash": "UfoocH9MqqlhUgqM1XptYg=="
         }
       },
       "is_incremental": false,
@@ -221,7 +260,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/TwoButtonPage.html",
-          "hash": "KXvWzI+K9ovyDiZB0Rgh5Q=="
+          "hash": "ihavG10Uetx6+5oPwk32Zw=="
         }
       },
       "is_incremental": false,
@@ -405,6 +444,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/PopupEntry.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/PopupEntry.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/PopupEntry_with_IME.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/PopupEntry_with_IME.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/after_Install_nuget_package.png",
       "output": {
         "resource": {
@@ -519,6 +580,28 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/context_popup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/entry.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/entry.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/entry_with_IME.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/entry_with_IME.png"
         }
       },
       "is_incremental": false,
@@ -690,12 +773,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "../guide/toc.md",
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "NPOZUSAHMpNm+f2xj0XKug=="
+          "hash": "iAb8MFnfSKJsh9dOl2AN+w=="
         }
       },
       "is_incremental": false,
@@ -756,7 +842,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html",
-          "hash": "QhvOff9gFTYRmYonZgsEbA=="
+          "hash": "A9oHRUdKn+GBvlNcsW1NYQ=="
         }
       },
       "is_incremental": false,
@@ -768,7 +854,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Check.html",
-          "hash": "MD++T/y59wuQYK1fSgmwCQ=="
+          "hash": "lemVtmn7cPo18zNlH7PUnA=="
         }
       },
       "is_incremental": false,
@@ -780,7 +866,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CheckDisplayStyle.html",
-          "hash": "V7LRxhyyfQb8Al1xfJ0Hdw=="
+          "hash": "v9K1kMvhNl5bwogS2B1DFg=="
         }
       },
       "is_incremental": false,
@@ -792,7 +878,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html",
-          "hash": "c8DJhP8bhhQ3sgDyRiy3kA=="
+          "hash": "3iiQsxZut5bKOC7fChJcGA=="
         }
       },
       "is_incremental": false,
@@ -804,7 +890,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleListView.html",
-          "hash": "mg8zRP6743JfdPBVSafElQ=="
+          "hash": "DdQPxBX5cbeKXKWdvFizVw=="
         }
       },
       "is_incremental": false,
@@ -816,7 +902,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CirclePage.html",
-          "hash": "Wx1RWMPrchtBDHKj96zA5g=="
+          "hash": "Mxi7WYw1M0FLzOp7/Z8lyA=="
         }
       },
       "is_incremental": false,
@@ -828,7 +914,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CirclePageNotFoundException.html",
-          "hash": "DUrWM1fhQKF2eFVLVfX1pg=="
+          "hash": "PrzgzruX11nEWMbeqiE+kA=="
         }
       },
       "is_incremental": false,
@@ -840,7 +926,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleProgressBarSurfaceItem.html",
-          "hash": "/B4oHAMIRk3W3Xj2A23Vig=="
+          "hash": "7Pi7FeXAnmz+T/iHXm0KRA=="
         }
       },
       "is_incremental": false,
@@ -852,7 +938,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html",
-          "hash": "QDlIOD0P12sFbZGj16ifmw=="
+          "hash": "ImVMGJVeBinBAMei3D1cGA=="
         }
       },
       "is_incremental": false,
@@ -864,7 +950,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem.html",
-          "hash": "9JsddcjN9gRuLmwMloFQsw=="
+          "hash": "KfhFKs1Vzvl0BggbCKTYyw=="
         }
       },
       "is_incremental": false,
@@ -876,7 +962,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleStackLayout.html",
-          "hash": "iu2i9T2aT88oj7nxg0s1kA=="
+          "hash": "iLfsV06tc9gElmxCDnR4fQ=="
         }
       },
       "is_incremental": false,
@@ -888,7 +974,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html",
-          "hash": "N6KIXMM5QWKReUHWF82jaQ=="
+          "hash": "/F/X6OGnsp86X110c/Z+Zw=="
         }
       },
       "is_incremental": false,
@@ -900,7 +986,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html",
-          "hash": "0RiFU9iPqZPyGr95tgYJeQ=="
+          "hash": "F/b2maiSjTX95cXUsJ+3qQ=="
         }
       },
       "is_incremental": false,
@@ -912,7 +998,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html",
-          "hash": "TckiBvXiyBsg5EWxJOZZ2A=="
+          "hash": "LZJv7VN3RH7Fi8wkg3kayg=="
         }
       },
       "is_incremental": false,
@@ -924,7 +1010,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleToolbarItem.html",
-          "hash": "RtO2WSSdbeAPlbLGmp7E/A=="
+          "hash": "c1aOtfYx8ZE7YL7eAYDdFg=="
         }
       },
       "is_incremental": false,
@@ -936,7 +1022,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.html",
-          "hash": "mWuI3jzo/JX0TR9+p6VJxw=="
+          "hash": "mShKcy2UTfM9yRmEiksp9A=="
         }
       },
       "is_incremental": false,
@@ -948,7 +1034,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html",
-          "hash": "HuewRrpIUM7/ggOPVrYWxQ=="
+          "hash": "FGj88cqCHC7iMNRuifqvGA=="
         }
       },
       "is_incremental": false,
@@ -960,7 +1046,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html",
-          "hash": "0Jzh/yBW5DqsgArRcojLXw=="
+          "hash": "XVPj3eryYXL0AFjP6T67AA=="
         }
       },
       "is_incremental": false,
@@ -972,7 +1058,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ContextPopupItem.html",
-          "hash": "ZD3Fq90fxyn/EBHnzyDoVw=="
+          "hash": "TswEwaGpc78neoiZW9P9eQ=="
         }
       },
       "is_incremental": false,
@@ -984,7 +1070,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.DateTimeType.html",
-          "hash": "XMLKjnhiaWq37PZTaBLnQg=="
+          "hash": "ugtLyfBVlImvKcVcD9bKkw=="
         }
       },
       "is_incremental": false,
@@ -1032,7 +1118,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.IndexPage.html",
-          "hash": "/DHoNckiRvHQPhE6tEP/kQ=="
+          "hash": "RKCh1yS9vhCiAqVJMCWhHQ=="
         }
       },
       "is_incremental": false,
@@ -1044,7 +1130,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html",
-          "hash": "tVVQf+SrzjQDRFWEVdHsjQ=="
+          "hash": "3aWIFsidbAxQKNxH5IajIA=="
         }
       },
       "is_incremental": false,
@@ -1056,7 +1142,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html",
-          "hash": "b5GzS6LlWSQPqk6hSyp/cA=="
+          "hash": "/w9e5GqHyDbvoTLdTW0JpA=="
         }
       },
       "is_incremental": false,
@@ -1068,7 +1154,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.PositionOption.html",
-          "hash": "0joVFEYEog7wUZuQP/f9IQ=="
+          "hash": "W0gsZyZl9h+1DcyAhmN2Ig=="
         }
       },
       "is_incremental": false,
@@ -1080,7 +1166,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Radio.html",
-          "hash": "BSx2Y2BdtNvk+Rcl7E9j9g=="
+          "hash": "EiOLPJn6P9IpNHkUn6i2Sg=="
         }
       },
       "is_incremental": false,
@@ -1092,7 +1178,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.html",
-          "hash": "87YT52bUHd7AIzMssYyQNg=="
+          "hash": "EvA9XJxD5VzB/wiwvSPoZg=="
         }
       },
       "is_incremental": false,
@@ -1104,7 +1190,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html",
-          "hash": "ulRgYIYvq/KSFzLAYpRu7A=="
+          "hash": "uBIvskBae1Gk1Pt6e+NjmQ=="
         }
       },
       "is_incremental": false,
@@ -1116,7 +1202,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html",
-          "hash": "ESN50v0Q9CfSJ988z7QMMw=="
+          "hash": "y0A1Hzd0T35hE1tp92h3uQ=="
         }
       },
       "is_incremental": false,
@@ -1128,7 +1214,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html",
-          "hash": "mZ2u/4cqNsOP24hvek4OBw=="
+          "hash": "o1hC5iMXt3WkLc45LiPDJQ=="
         }
       },
       "is_incremental": false,
@@ -1140,7 +1226,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html",
-          "hash": "eP1q6pgDi6qtcEe1/Pd7Zg=="
+          "hash": "IEwd+nYd7CR345dGiHEKYQ=="
         }
       },
       "is_incremental": false,
@@ -1152,7 +1238,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.html",
-          "hash": "IoU97M/kOYAaNOk3yHprEw=="
+          "hash": "32/wD/CsAxaeESM1djoZXg=="
         }
       },
       "is_incremental": false,
@@ -1164,7 +1250,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html",
-          "hash": "4Rrptkz91R5njtBo+A92ow=="
+          "hash": "JisjL/ge1qYrk84W8RPzSw=="
         }
       },
       "is_incremental": false,
@@ -1176,7 +1262,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html",
-          "hash": "mXQ186Yvb1CfIhbaKixrsw=="
+          "hash": "7FmYgAparMAF55Ukcl1jeQ=="
         }
       },
       "is_incremental": false,
@@ -1188,7 +1274,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation.html",
-          "hash": "MfvrWYlQMzfjFwZg8JewKw=="
+          "hash": "8VA4yNfv0fxEalkyMHjHrw=="
         }
       },
       "is_incremental": false,
@@ -1200,7 +1286,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html",
-          "hash": "d+VriJUlJ3SDP2xHaStvtw=="
+          "hash": "kuaO77JSJylI+BmX1/xsjQ=="
         }
       },
       "is_incremental": false,
@@ -1212,7 +1298,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html",
-          "hash": "catuFsxoi0JgJqwCljh6yA=="
+          "hash": "HvTHf63Oi5bOPI4PmpmL+g=="
         }
       },
       "is_incremental": false,
@@ -1224,7 +1310,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html",
-          "hash": "DvUeGILcGTZjt7oBeg22tA=="
+          "hash": "9CYIabHtAHP/SbYaU2KxkQ=="
         }
       },
       "is_incremental": false,
@@ -1236,7 +1322,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation.html",
-          "hash": "34Tmb/v3Bw2G3utKYxTizw=="
+          "hash": "mBcYL3b7LncFwUh4tPedew=="
         }
       },
       "is_incremental": false,
@@ -1248,7 +1334,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html",
-          "hash": "+8cXeTa0U+ObVYoNgH6eow=="
+          "hash": "4vBLeYy2CMbGIa62RN7YoQ=="
         }
       },
       "is_incremental": false,
@@ -1260,7 +1346,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.html",
-          "hash": "MJSGCg5ia7dH9vilfjeP8g=="
+          "hash": "3BvyJUJcRDPFfRDf13hgLQ=="
         }
       },
       "is_incremental": false,
@@ -1272,7 +1358,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html",
-          "hash": "2RFzIPPdaVu05qoEinCfTA=="
+          "hash": "UoZMXj++JOpvzp+Rbqnipg=="
         }
       },
       "is_incremental": false,
@@ -1284,7 +1370,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html",
-          "hash": "+uDdxKQbTSkrlEFMWrCWJQ=="
+          "hash": "7IBsK1UL/xyzHAg0nHVQ4A=="
         }
       },
       "is_incremental": false,
@@ -1296,7 +1382,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html",
-          "hash": "9atDDqUIPMpc1KqSFkX8Dw=="
+          "hash": "9F+2KlwH0MFCuk6o4y1aIg=="
         }
       },
       "is_incremental": false,
@@ -1308,7 +1394,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect.html",
-          "hash": "Gwke4T1v18ix8RE3p0RtlA=="
+          "hash": "iumyPW/4tSance/bstc1NQ=="
         }
       },
       "is_incremental": false,
@@ -1320,7 +1406,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.html",
-          "hash": "36LbRv1hrxpCiQVnVqBURQ=="
+          "hash": "M9e7JU/PoRL8pkyTK823IQ=="
         }
       },
       "is_incremental": false,
@@ -1332,7 +1418,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html",
-          "hash": "lj9h8tWKD4mh3T1gbzSlgQ=="
+          "hash": "D6CGy94rs/QHRi0m/7//jw=="
         }
       },
       "is_incremental": false,
@@ -1344,7 +1430,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html",
-          "hash": "RiyYmKAhKDPuaFNAcYHbQg=="
+          "hash": "qptHPQrOaqoPX8PZv3nbiQ=="
         }
       },
       "is_incremental": false,
@@ -1380,7 +1466,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.RotaryEventArgs.html",
-          "hash": "vf6ZBsaBw215I4nU5i4vVQ=="
+          "hash": "YhQRszUXBYhJwY+HxGqbaQ=="
         }
       },
       "is_incremental": false,
@@ -1404,7 +1490,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html",
-          "hash": "KTf5VSx2QGXB6yVXQAwR7g=="
+          "hash": "o5BAl4QYhNWMwQ6uP9EmPg=="
         }
       },
       "is_incremental": false,
@@ -1416,7 +1502,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Toast.html",
-          "hash": "Jg8W4I+xnvMzkn9dqikcWg=="
+          "hash": "EtX5nudr7MsSB2IgybvECw=="
         }
       },
       "is_incremental": false,
@@ -1428,7 +1514,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html",
-          "hash": "DlZ0iZu+rdV/5E3ekoxzhQ=="
+          "hash": "KfH2AKHZv71TYs93dkG1ig=="
         }
       },
       "is_incremental": false,
@@ -1484,17 +1570,17 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

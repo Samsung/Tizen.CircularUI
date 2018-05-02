@@ -74,53 +74,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector">
 <h1 id="circledatetimeselector">CircleDateTimeSelector</h1>
 
 <p><code>CircleDateTimeSelector</code> is a view for Date picker and Time picker.
-You can scroll it by bezel action.
+You can scroll it by bezel interaction.
 This view is the size that covers the entire screen.
-This widget related circle UI can be expressed as Child of <a href="CirclePage.html"><code>CirclePage</code></a>,
-In order to receive Bezel Action, it must be registered as <code>RotaryEventConsumer</code> property of <a href="CirclePage.html"><code>CirclePage</code></a>.</p>
-<p>In the Date type, you can change the value of the item by touching the item to set the year: month: day value.
+In order to receive bezel interaction, it must be registered as <code>RotaryEventConsumer</code> property of <a class="xref" href="CirclePage.html"><code>CirclePage</code></a>.</p>
+<p>In the Date type, you can change the value of the item by touching the item and rotating bezel to set the year: month: day value.
 For the Time type, you can change the hour: minute: AM / PM value.</p>
 <table>
-  <tr>
-    <th>Date</th>
-    <th>Time</th> 
-  </tr>
-  <tr>
-    <td><img src="data/CircleDateTimeSelector_DatePicker.png" alt="Date"></td>
-    <td><img src="data/CircleDateTimeSelector_TimePicker.png" alt="Time"></td>
-  </tr>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/CircleDateTimeSelector_DatePicker.png" alt="Date"></th>
+<th style="text-align:center"><img src="data/CircleDateTimeSelector_TimePicker.png" alt="Time"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Date</td>
+<td style="text-align:center">Time</td>
+</tr>
+</tbody>
 </table>
-
-<p><strong>WARNNING: <a href="CircleListView.html"><code>CircleListView</code></a>, <a href="CircleDateTimeSelector.html"><code>CircleDateTimeSelector</code></a>, <a href="CircleScrollView.html"><code>CircleScrollView</code></a>, <a href="CircleStepper.html"><code>CircleStepper</code></a> must be contained by <a href="CirclePage.html"><code>CirclePage</code></a> or <code>CircleSurfaceEffectBehavior</code> should be added in <code>Behaviors</code> of <code>Page</code> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>MarkerColor : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Color/"><code>Xamarin.Forms.Color</code></a>. Change color of marker to select value.</li>
-<li>ValueType : DateTimeType. Time can be changed if it is Time and if it is a Date, the date can be changed.</li>
-<li>DateTime : DateTime. Sets or gets date/time.</li>
-<li>Date of ValueType<ul>
-<li>MaximumDate : DateTime. Sets or gets maximum date.</li>
-<li>MimimumDate : DateTime. Sets or gets minimum date.</li>
-<li>IsVisibleOfYear : Boolean. Sets whether or not the year field is shown.</li>
-<li>IsVisibleOfMonth : Boolean. Sets whether or not the month field is shown.</li>
-<li>IsVisibleOfDate : Boolean. Sets whether or not the day field is shown.</li>
-</ul>
-</li>
-<li>Time of ValueType   <ul>
-<li>IsVisibleOfHour : Boolean. Sets whether or not the hour field is shown.</li>
-<li>IsVisibleOfMinute : Boolean. Sets whether or not the minute field is shown.</li>
-<li>IsVisibleOfAmPm : Boolean. Sets whether or not the AM/PM field is shown.</li>
-</ul>
-</li>
-</ul>
-<p>For more information. Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html">CircleDateTimeSelector  API reference</a></p>
+<p><strong>WARNNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
 <h2 id="adding-circledatetimeselector-at-circlepage">Adding CircleDateTimeSelector at CirclePage</h2>
-<p>You can set <code>CircleDateTimeSelector</code> at <a href="CirclePage.html"><code>CirclePage.Content</code></a>. The following code show CirclePage set content with <code>CircleDateTimeSelector</code>.
-<code>RotaryFocusTargetName</code> attribute sets the current focused widget that is handled by rotating and display the focused widget&#39;s circle object.
-If you don&#39;t set this value properly. Widget can&#39;t receive rotary event.</p>
+<p>You can set <code>CircleDateTimeSelector</code> at <a class="xref" href="CirclePage.html"><code>CirclePage.Content</code></a>. The following code show <a class="xref" href="CirclePage.html"><code>CirclePage</code></a> with <code>CircleDateTimeSelector</code>.
+<code>RotaryFocusTargetName</code> attribute sets the current focused control that is handled by rotating and display the focused control&#39;s circle object.
+If you don&#39;t set this property. Control can&#39;t receive rotary event.</p>
+<p><code>CircleDateTimeSelector</code> has the following properties:</p>
+<ul>
+<li>ValueType : Time can be changed if it is Time and if it is a Date, the date can be changed.</li>
+<li>DateTime : Sets or gets date/time.</li>
+<li>MaximumDate : Sets or gets maximum date.</li>
+<li>MimimumDate : Sets or gets minimum date.</li>
+</ul>
+<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html">CircleDateTimeSelector  API reference</a></p>
 <p><em>This guide&#39;s code example use XUIComponent&#39;s CircleTime of CircleDateTime code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleDateTime/DateTimeViewModel.cs and CircleTime.xaml</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">    public class DateTimeViewModel : INotifyPropertyChanged

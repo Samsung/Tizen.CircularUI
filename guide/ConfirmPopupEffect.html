@@ -74,44 +74,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ConfirmPopupEffect">
 <h1 id="confirmpopupeffect">ConfirmPopupEffect</h1>
 
-<p><code>ConfirmPopupEffect</code> is an <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/"><code>Effect</code></a> for Xamarin.Forms that is proportional to a particular widget or has one or two buttons anywhere on the screen.
+<p><code>ConfirmPopupEffect</code> is an <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/"><code>Effect</code></a> for Xamarin.Forms that is used to make the <a class="xref" href="CirclePage.html"><code>CirclePage</code></a> have one button or two buttons.
 Accept button has one default, and &quot;Ok&quot; text is displayed in Accept as default.</p>
 <p>When <code>ConfirmVisibility</code> becomes <code>True</code>, it appears on the screen,
 The command given at the time of Accept or Cancel is executed and disappears automatically, and <code>ConfirmVisibility</code> becomes <code>False</code>.
 Also, when you touch the outside of the popup, the popup is automatically canceled. (Cancel command is performed similarly.)
 You can change the pop-up position by adjusting the X and Y value of Offset.</p>
-<p><img src="data/ConfirmPopupEffect.png" alt="Drawing" style="width:40%;"></p>
-<h2 id="properties">Properties</h2>
+<p><img src="data/ConfirmPopupEffect.png" alt=""></p>
+<h2 id="adding-popup-with-confirmpopupeffect-at-contentpage">Adding popup with ConfirmPopupEffect at ContentPage</h2>
+<p>You can set popup with ConfirmPopupEffect at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/"><code>ContentPage.Content</code></a>. To create a new popup, use the following code.</p>
+<p><code>ConfirmPopupEffect</code> has the following properties:</p>
 <ul>
-<li>AcceptText : string. Accept button is displayed as &quot;Ok&quot; when Accep button is not given Text value.</li>
 <li>AcceptCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/"><code>System.Windows.Input.ICommand</code></a>. Command to be executed when Accept</li>
-<li>AcceptCommandParameter : <a href="https://developer.xamarin.com/api/type/System.Object/"><code>System.Object</code></a>. Parameter to be applied to AcceptCommand</li>
-<li>CancelText : string. Text to use as Cancel button</li>
 <li>CancelCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/"><code>System.Windows.Input.ICommand</code></a>. Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.</li>
-<li>CancelCommandParameter : <a href="https://developer.xamarin.com/api/type/System.Object/"><code>System.Object</code></a>. Parameter to be applied to CancelCommand</li>
-<li>ConfirmVisibility : Boolean. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.</li>
-<li>PositionOption : Enumeration. Position type of popup<ul>
+<li>ConfirmVisibility : Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.</li>
+<li>PositionOption : Position type of popup<ul>
 <li><code>BottomOfView</code> : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.</li>
 <li><code>CenterOfWindow</code> : In the center of the screen, move by the Offset in the Popup.</li>
 <li><code>Absolute</code> : The value of Offset is X, Y and popup is placed on the screen.</li>
 <li><code>Relative</code> : Set Offset.X * Window.Width, Offset.Y * Window.Height.</li>
 </ul>
 </li>
-<li>Offset : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Point/"><code>Xamarin.Forms.Point</code></a>. A value of how far to move from the base tap position represented by the PositionOption type. If it isn&#39;t set, it returns 0,0.</li>
 </ul>
 <p>For more information. Please refer to below links</p>
 <ul>
-<li><a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.html">ConfirmPopupEffect  API reference</a></li>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.html">ConfirmPopupEffect  API reference</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/">Xamarin.Forms.RoutingEffect  API reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/">Xamarin.Forms.Effect Guide</a></li>
 </ul>
-<h2 id="adding-popup-with-confirmpopupeffect-at-contentpage">Adding popup with ConfirmPopupEffect at ContentPage</h2>
-<p>You can set popup with ConfirmPopupEffect at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/"><code>ContentPage.Content</code></a>. To create a new popup, use the following code.</p>
 <p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCConfirm.xaml and TCConfirm.xaml.cs code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirm.xaml</em></p>
 <p><strong>C# file</strong></p>
-<pre><code class="lang-cs">    [XamlCompilation(XamlCompilationOptions.Compile)]
+<pre><code class="lang-cs">    [XamlCompilation(XamlCompilationOptions.Compile)
     public partial class TCConfirm : CirclePage
     {
         public TCConfirm ()
@@ -153,19 +149,23 @@ You can change the pop-up position by adjusting the X and Y value of Offset.</p>
         &lt;/StackLayout&gt;
     &lt;/ContentPage.Content&gt;
 &lt;/w:CirclePage&gt;
-</code></pre><p><strong>Screenshot</strong>
+</code></pre><p><strong>Screenshot</strong></p>
 <table>
-  <tr>
-    <th>1st scene with Check</th>
-    <th>2nd scene with ConfirmPopupEffect</th> 
-    <th>3rd scene when selects &#39;Yes&#39;</th> 
-  </tr>
-  <tr>
-    <td><img src="data/ConfirmPopupEffect_1.png" alt="1st scene"></td>
-    <td><img src="data/ConfirmPopupEffect_2.png" alt="2nd scene"></td>
-    <td><img src="data/ConfirmPopupEffect_3.png" alt="3rd scene"></td> 
-  </tr>
-</table></p>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/ConfirmPopupEffect_1.png" alt="1st scene with Check"></th>
+<th style="text-align:center"><img src="data/ConfirmPopupEffect_2.png" alt="2nd scene with ConfirmPopupEffect"></th>
+<th style="text-align:center"><img src="data/ConfirmPopupEffect_3.png" alt="3rd scene when selects &#39;Yes&#39;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st scene with Check</td>
+<td style="text-align:center">2nd scene with ConfirmPopupEffect</td>
+<td style="text-align:center">3rd scene when selects &#39;Yes&#39;</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           

@@ -74,18 +74,33 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.InformationPopup">
 <h1 id="informationpopup">InformationPopup</h1>
 
 <p><code>InformationPopup</code> can represent 3 types of Tizen Wearable EFL popup style. InformationPopup is usefull to show any information or warnning.</p>
 <p><em><code>InformationPopup</code> is displayed seperate from any control. So you can&#39;t set this in XAML file.</em></p>
-<p><img src="data/information_popup1.png" alt="information_popup1"> <img src="data/information_popup2.png" alt="information_popup2"> <img src="data/information_popup3.png" alt="information_popup3"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/information_popup1.png" alt="information_popup1"></th>
+<th style="text-align:center"><img src="data/information_popup2.png" alt="information_popup2"></th>
+<th style="text-align:center"><img src="data/information_popup3.png" alt="information_popup3"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Single text</td>
+<td style="text-align:center">Bottom button</td>
+<td style="text-align:center">Progress</td>
+</tr>
+</tbody>
+</table>
 <h2 id="create-single-text-informationpopup">Create single text InformationPopup</h2>
 <p>Single text informationPopup is used for displaying text. Single text informationPopup is similar to Toast popup. 
 but this popup doesn&#39;t disappear automatically.\
  <code>Text</code> property can be set with text. <code>BackButtonPressed</code> event occur when user press back button of device. If you want to dismiss popup when this event occurred. you should add <code>Dismiss()</code> in <code>BackButtonPressed</code> event handle code.</p>
 <p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCInformationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCInformationPopup.xaml.cs</em></p>
-<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html">InformationPopup  API reference</a></p>
+<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html">InformationPopup  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            _textPopUp = new InformationPopup();
             _textPopUp.Text = &quot;This is text popup test&quot;;

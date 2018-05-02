@@ -74,52 +74,35 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleStepper">
 <h1 id="circlestepper">CircleStepper</h1>
 
 <p><code>CircleStepper</code> is extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/"><code>Xamarin.Forms.Stepper</code></a>.
 Marker color, MarkerLineWidth, and LabelFormat have been added to the existing <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/"><code>Xamarin.Forms.Stepper</code></a>.
-You can change value with Bezel Action.</p>
-<p>This widget related circle UI can be expressed as Child of <a href="CirclePage.html"><code>CirclePage</code></a>,
-In order to receive Bezel Action, it must be registered as <code>RotaryEventConsumer</code> property of <a href="CirclePage.html"><code>CirclePage</code></a>.</p>
-<p><img src="data/CircleStepper.png" alt="Drawing" style="width: 150px;"></p>
-<p><strong>WARNNING: <a href="CircleListView.html"><code>CircleListView</code></a>, <a href="CircleDateTimeSelector.html"><code>CircleDateTimeSelector</code></a>, <a href="CircleScrollView.html"><code>CircleScrollView</code></a>, <a href="CircleStepper.html"><code>CircleStepper</code></a> must be contained by <a href="CirclePage.html"><code>CirclePage</code></a> or <code>CircleSurfaceEffectBehavior</code> should be added in <code>Behaviors</code> of <code>Page</code> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
-<h2 id="properties">Properties</h2>
-<p>XAML for Xamarin.Forms supports the following properties:</p>
+You can change value with bezel interaction.
+In order to receive bezel interaction, it must be registered as <code>RotaryEventConsumer</code> property of <a class="xref" href="CirclePage.html"><code>CirclePage</code></a>.</p>
+<p><img src="data/CircleStepper.png" alt=""></p>
+<p><strong>WARNNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
+<h2 id="adding-circlestepper-at-circlepage">Adding CircleStepper at CirclePage</h2>
+<p>You can set CircleStepper at <a class="xref" href="CirclePage.html"><code>CirclePage.Content</code></a>. The following code show CirclePage set content with <code>CircleStepper</code>.
+<code>RotaryFocusTargetName</code> attribute sets the current focused control that is handled by rotating and display the focused control&#39;s circle object.
+If you don&#39;t set this value properly, control can&#39;t receive rotary event.</p>
+<p><code>CircleDateTimeSelector</code> has the following properties:</p>
 <ul>
-<li>Increment : An integer or decimal literal.</li>
-<li>Maximum : An integer or decimal literal.</li>
-<li>Minimum : An integer or decimal literal. If this value is nonnegative, it must appear lexically below Maximum, so that validation can succeed.</li>
-<li>Value : An integer or decimal literal that represents a number that is in the range [Minimum,Maximum].</li>
-<li><p>ValueChanged : The name of an event handler. Note that this tag must appear below Value. </p>
-<p><code>CircleStepper</code> has the following properties:</p>
-<ul>
-<li>Increment : Double. Gets or sets the increment by which Value is increased or decreased.</li>
-<li>LabelFormat : string. Gets or sets format in which Value is shown.</li>
+<li>LabelFormat : Gets or sets format in which Value is shown.</li>
 <li>MarkerColor : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Color/"><code>Xamarin.Forms.Color</code></a>. Change color of marker to select value.</li>
-<li>MarkerLineWidth : int. Gets or sets length of marker.</li>
-<li>Maximum   : Double. Gets or sets the maximum selectable value.</li>
-<li>Minimum   : Double. Gets or sets the minimum selectabel value.</li>
-<li>Value : Double. Gets or sets the current value.</li>
-</ul>
-</li>
-</ul>
-<h2 id="events">Events</h2>
-<ul>
-<li>ValueChanged : Raised when the Value property changes.</li>
+<li>MarkerLineWidth : Gets or sets length of marker.</li>
 </ul>
 <p>For more information. Please refer to below links</p>
 <ul>
-<li><a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html">CircleStepper  API reference</a></li>
-<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper  API reference</a></li>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html">CircleStepper API reference</a></li>
+<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper API reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views#stepper">Xamarin.Forms.Stepper Guide</a></li>
 </ul>
-<h2 id="adding-circlestepper-at-circlepage">Adding CircleStepper at CirclePage</h2>
-<p>You can set CircleStepper at <a href="CirclePage.html"><code>CirclePage.Content</code></a>. The following code show CirclePage set content with <code>CircleStepper</code>.
-<code>RotaryFocusTargetName</code> attribute sets the current focused widget that is handled by rotating and display the focused widget&#39;s circle object.
-If you don&#39;t set this value properly. Widget can&#39;t receive rotary event.</p>
 <p><em>This guide&#39;s code example use XUIComponent&#39;s SpinnerDefault of CircleSpinner code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml</em></p>
 <p><strong>C# file</strong></p>
-<pre><code class="lang-cs">    public class SpinnerViewModel : INotifyPropertyChanged
+<pre><code class="lang-cs">
+    public class SpinnerViewModel : INotifyPropertyChanged
     {
         double _value= 9.0;
         ...
@@ -135,7 +118,8 @@ If you don&#39;t set this value properly. Widget can&#39;t receive rotary event.
             }
         }
 </code></pre><p><strong>XAML file</strong></p>
-<pre><code class="lang-xml">&lt;w:CirclePage
+<pre><code class="lang-xml">
+&lt;w:CirclePage
     x:Class=&quot;UIComponents.Samples.CircleSpinner.SpinnerDefault&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;

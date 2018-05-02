@@ -74,19 +74,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.Radio">
 <h1 id="toast">Toast</h1>
 
 <p><code>Toast</code> provides simple information. <code>Toast</code> automatically disappear after timeout seconds.
 Tizen Wearable <code>Toast</code> fills the whole screen for displaying message and image.</p>
-<p><img src="data/toast1.png" alt="toast1"> <img src="data/toast2.png" alt="toast2"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/toast1.png" alt="toast1"></th>
+<th style="text-align:center"><img src="data/toast2.png" alt="toast2"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Single text</td>
+<td style="text-align:center">Icon and text</td>
+</tr>
+</tbody>
+</table>
 <h2 id="create-toast">Create Toast</h2>
 <p><code>Toast</code> is static method. so you don&#39;t need to any container or parent control for using this control.
 <code>Toast</code> provides two method, <code>Toast.DisplayText()</code> shows simple text message. <code>Toast.DisplayIconText()</code> shows simple icon and simple text message.\
-<code>Toast.DisplayText()</code> first parameter is message text. and second parameter is timeout duration(milliseconds). second parameter is optional. If you don&#39;t set this value.
-default value(3000) is set.\
+<code>Toast.DisplayText()</code> first parameter is message text. and second parameter is timeout duration(milliseconds). second parameter is optional. If you don&#39;t set this value. Default value is set 3000(3 seconds).\
 <code>Toast.DisplayIconText()</code> first parameter is message text. and second parameter is icon file path, you can set file path with <code>new FileImageSource</code>. third parameter is timeout duration that is also optional.</p>
-<p>For more information . Please refer to <a href="https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Toast.html">Toast  API reference</a></p>
+<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Toast.html">Toast  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs"> Toast.DisplayText(&quot;Toast popup&quot;, 3000);
 

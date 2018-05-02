@@ -5,11 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class IndexPageRenderer
-   </title>
+    <title>IRotaryEventReceiver </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class IndexPageRenderer
-   ">
+    <meta name="title" content="IRotaryEventReceiver ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,77 +74,51 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer">
-  
-  
-  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer" class="text-break">Class IndexPageRenderer
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">VisualElementRenderer</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.IndexPage.html">IndexPage</a>&gt;</div>
-    <div class="level1"><span class="xref">IndexPageRenderer</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
-  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IndexPageRenderer : VisualElementRenderer&lt;IndexPage&gt;</code></pre>
-  </div>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_Dispose_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.Dispose*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_Dispose_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">disposing</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_IndexPage__" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.IndexPage})">OnElementChanged(ElementChangedEventArgs&lt;IndexPage&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;IndexPage&gt; e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ElementChangedEventArgs</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.IndexPage.html">IndexPage</a>&gt;</td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</article>
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.IRotaryEventReceiver">
+<h1 id="irotaryeventreceiver">IRotaryEventReceiver</h1>
+
+<p><code>IRotaryEventReceiver</code> is a receiver interface to take a rotary event. <code>IRotaryEventReceiver</code> has <code>Rotate(RotaryEventArgs)</code> method that is called when rotary event is occurred. You can simply handle of rotary event using this interface. such as below sample, you can easily rotate image according to bezel rotation.</p>
+<h2 id="adding-irotaryeventreceiver">adding IRotaryEventReceiver</h2>
+<p>Add <code>IRotaryEventReceiver</code> interface to <code>CirclePage</code> or <code>Page</code> having <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. Implement <code>Rotate()</code> method to control a rotary event. <code>RotaryEventArgs</code> is event argument for a rotary event.
+<code>RotaryEventArgs.IsClockwise</code> get direction of bezel rotation. If device has rotated in the clockwise direction, <code>IsClockwise</code> is <code>true</code>.
+Below sample receives rotary event at <code>Rotate()</code> method. and add angle of image following to rotary event direction. and then rotate image.</p>
+<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCIRotaryEventReceiver code at the test\WearableUIGallery\WearableUIGallery\TC\TCIRotaryEventReceiver.xaml</em></p>
+<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html">IRotaryEventReceiver API reference</a></p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCIRotaryEventReceiver : CirclePage, IRotaryEventReceiver
+    {
+        bool _rotating;
+        double _angle;
+        public TCIRotaryEventReceiver ()
+        {
+            InitializeComponent ();
+            _angle = 0;
+        }
+
+        public void Rotate(RotaryEventArgs args)
+        {
+            if (_rotating) return;
+
+            _rotating = true;
+            _angle += args.IsClockwise ? 30 : -30;
+            Cat.RotateTo(_angle).ContinueWith(
+                (b) =&gt;
+                {
+                    _rotating = false;
+                    if (_angle == 360)
+                    {
+                        Cat.Rotation = 0;
+                        _angle = 0;
+                    }
+                });
+        }
+    }
+</code></pre><p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">    &lt;w:CirclePage.Content&gt;
+        &lt;Image x:Name=&quot;Cat&quot; Source=&quot;image/cat360.png&quot; /&gt;
+    &lt;/w:CirclePage.Content&gt;
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
