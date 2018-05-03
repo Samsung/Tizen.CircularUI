@@ -29,7 +29,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Check.html",
-          "hash": "BOcvXnB8JUIUsyGXs9oAsg=="
+          "hash": "9x0nuuCtTdzGGn57G9SxHw=="
         }
       },
       "is_incremental": false,
@@ -65,7 +65,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CirclePage.html",
-          "hash": "V1cPiyc6WT06trgPRZ4CLQ=="
+          "hash": "MhK/ZR/o/ZSKdSHm/LMN5w=="
         }
       },
       "is_incremental": false,
@@ -113,7 +113,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleSurfaceEffectBehavior.html",
-          "hash": "idSFYIimw4QjGmuRli7ccw=="
+          "hash": "oFwHgfWAoMRKZ/vvaIa8Og=="
         }
       },
       "is_incremental": false,
@@ -137,7 +137,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ConfirmationPopup.html",
-          "hash": "sO10+y8gvtVxMDAK3Iiq5w=="
+          "hash": "xTzUH8MEgoJximXIBjgWcA=="
         }
       },
       "is_incremental": false,
@@ -185,7 +185,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/InformationPopup.html",
-          "hash": "x7lq9HOcTBIy4yH7yeDNgQ=="
+          "hash": "q4TU+vus2wtazOT6wXLLOg=="
         }
       },
       "is_incremental": false,
@@ -248,7 +248,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Toast.html",
-          "hash": "UfoocH9MqqlhUgqM1XptYg=="
+          "hash": "Uft3F8oC67TCRXj8fuzsoQ=="
         }
       },
       "is_incremental": false,
@@ -773,15 +773,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "../guide/toc.md",
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "XLhm2DmFh3UQbclA3hTe/w=="
+          "hash": "v4xUk7gYYTCW3ihTlPAa+A=="
         }
       },
       "is_incremental": false,
@@ -1570,17 +1567,17 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

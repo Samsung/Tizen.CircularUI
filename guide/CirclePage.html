@@ -118,10 +118,9 @@ The rotary selector arranges multiple items around the circular edge of the scre
 </li>
 </ul>
 <h2 id="create-circlepage">Create CirclePage</h2>
-<p>First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to <a href="Quickstart.html">QuickStart</a>.\
-Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.\
-In a XAML file. import CircularUI and define namespace like as \
-<code>xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;</code></p>
+<p>First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to <a href="Quickstart.html">QuickStart</a>.<br>
+Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.<br>
+In a XAML file. import CircularUI and define namespace like as <code>xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;</code></p>
 <p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCCirclePage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">using Tizen.Wearable.CircularUI.Forms;
@@ -156,7 +155,7 @@ If you don&#39;t set this value properly. Control can&#39;t receive rotary event
 <p>For more information . Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CirclePage.html">CirclePage API reference</a></li>
-<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Xamarin.Forms.Page API reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Xamarin.Forms.Page guide</a></li>
 </ul>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;w:CirclePage
@@ -200,7 +199,7 @@ If you don&#39;t set this value properly. Control can&#39;t receive rotary event
         &lt;w:ActionButtonItem Command=&quot;{Binding ProgressBarVisibleCommand}&quot; Text=&quot;OK&quot; /&gt;
     &lt;/w:CirclePage.ActionButton&gt;
 </code></pre><h2 id="adding-toolbaritems-at-circlepage">Adding ToolbarItems at CirclePage</h2>
-<p>CirclePage <code>ToolbarItems</code> set rotary selector view&#39;s items. You can set each item with <code>CircleToolbarItem</code> property.\
+<p>CirclePage <code>ToolbarItems</code> set rotary selector view&#39;s items. You can set each item with <code>CircleToolbarItem</code> property.
 CircleToolbarItem derive from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/">Xamarin.Forms.ToolbarItem</a>. </p>
 <p><code>CircleToolbarItem</code> has the following properties:</p>
 <ul>
@@ -231,10 +230,10 @@ CircleToolbarItem derive from <a href="https://developer.xamarin.com/api/type/Xa
 
     &lt;/w:CirclePage.ToolbarItems&gt;
 </code></pre><h2 id="adding-circleprogressbarsurfaceitem-at-circlepage">Adding CircleProgressBarSurfaceItem at CirclePage</h2>
-<p>CirclePage <code>CircleSurfaceItems</code>  can set <code>CircleProgressBarSurfaceItem</code> and <code>CircleSliderSurfaceItem</code>.\
-<code>CircleProgressBarSurfaceItem</code> represent Circle ProgressBar.<code>progress1</code> at XAML code represents outter circle of below image. and <code>progress2</code> represents inner circle.\
+<p>CirclePage <code>CircleSurfaceItems</code>  can set <code>CircleProgressBarSurfaceItem</code> and <code>CircleSliderSurfaceItem</code>.
+<code>CircleProgressBarSurfaceItem</code> represent Circle ProgressBar.<code>progress1</code> at XAML code represents outter circle of below image. and <code>progress2</code> represents inner circle.
 If you use CircleProgressbar, you don&#39;t need to set <code>RotaryFocusTargetName</code> property of CirclePage.
-When <code>Value</code> property is incread or decrease. circle object extend or shrink following to <code>Value</code> property. </p>
+When <code>Value</code> property is incread or decrease. circle object extend or shrink following to <code>Value</code> property.</p>
 <p><code>CircleProgressBarSurfaceItem</code> has the following properties:</p>
 <ul>
 <li><code>Value</code> : Gets or sets the value of the progressbar..</li>
