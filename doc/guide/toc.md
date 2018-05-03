@@ -10,7 +10,7 @@
 ## [CircleStepper](CircleScrollView.md)
 ## [CircleSurfaceEffectBehavior](CircleSurfaceEffectBehavior.md)
 ## [ConfirmationPopup](ConfirmationPopup.md)
-## [ConfirmationPopupEffect](ConfirmationPopupEffect.md)
+## [ConfirmPopupEffect](ConfirmPopupEffect.md)
 ## [ContextPopup](ContextPopup.md)
 ## [IndexPage](IndexPage.md)
 ## [InformationPopup](InformationPopup.md)
