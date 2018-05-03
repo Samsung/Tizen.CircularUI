@@ -16,7 +16,7 @@ Each shape of DisplayStyle depends on the device model. you can set default valu
 
 For more information . Please refer to below links
  - [Check  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Check.html)
- - [Xamarin.Forms.Switch  API reference](https://github.sec.samsung.net/pages/dotnet/tizen-circular-ui/api/Tizen.Wearable.CircularUI.Forms.Check.html)
+ - [Xamarin.Forms.Switch  API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/)
 
 **C# file**
 ```cs
