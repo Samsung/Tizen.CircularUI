@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DisableImplicitFrameworkReferences>false</DisableImplicitFrameworkReferences>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<NoPackageAnalysis>true</NoPackageAnalysis>
+		<NuspecFile>Tizen.Wearable.CircularUI.nuspec</NuspecFile>
+		<NuspecProperties Condition="'$(Version)' != ''">version=$(Version);configuration=$(configuration)</NuspecProperties>
+		<PackageOutputPath Condition="'$(PackageOutputPath)' == ''">$(PWD)</PackageOutputPath>
+	</PropertyGroup>
+
+</Project>
