@@ -6,9 +6,9 @@ summary: CircleDateTimeSelector control guide
 # CircleDateTimeSelector
 
 `CircleDateTimeSelector` is a view for Date picker and Time picker.
-You can scroll it by bezel interaction.
+You can scroll it by [`Bezel interaction`](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
 This view is the size that covers the entire screen.
-In order to receive bezel interaction, it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
+In order to receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
 In the Date type, you can change the value of the item by touching the item and rotating bezel to set the year: month: day value.
 For the Time type, you can change the hour: minute: AM / PM value.
@@ -21,9 +21,10 @@ For the Time type, you can change the hour: minute: AM / PM value.
 
 ## Adding CircleDateTimeSelector at CirclePage
 
-You can set `CircleDateTimeSelector` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). The following code show [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage) with `CircleDateTimeSelector`.
+You can set `CircleDateTimeSelector` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add `CirclePage`, please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
+The following code show [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage) with `CircleDateTimeSelector`.
 `RotaryFocusTargetName` attribute sets the current focused control that is handled by rotating and display the focused control's circle object.
-If you don't set this property. Control can't receive rotary event.
+If you don't set this property, control can't receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 `CircleDateTimeSelector` has the following properties:
 
@@ -31,6 +32,9 @@ If you don't set this property. Control can't receive rotary event.
 - DateTime : Sets or gets date/time.
 - MaximumDate : Sets or gets maximum date.
 - MimimumDate : Sets or gets minimum date.
+
+The example below sets the time picker by putting the `ValueType` value "Time". And set the current time to the `DateTime` property.
+The current time will be displayed on the screen when it is executed. Since the hour item is shown as having focus, the hour is changed when the bezel is turned. If you touch the minute item and turn the bezel, you can change the minute.
 
 For more information. Please refer to [CircleDateTimeSelector  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html)
 

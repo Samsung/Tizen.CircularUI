@@ -6,7 +6,7 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     x:Name="mypage">
     <ContentPage.Content>
-        <StackLayout>
+        <AbsoluteLayout>
             <w:Check
                 x:Name="confirm3"
                 w:ConfirmPopupEffect.AcceptCommand="{Binding AcceptedCommand, Source={x:Reference mypage}}"
@@ -14,7 +14,9 @@
                 w:ConfirmPopupEffect.CancelCommand="{Binding CancelCommand, Source={x:Reference mypage}}"
                 w:ConfirmPopupEffect.CancelText="No"
                 w:ConfirmPopupEffect.ConfirmVisibility="{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}"
-                w:ConfirmPopupEffect.PositionOption="CenterOfParent"
+                w:ConfirmPopupEffect.PositionOption="BottomOfView"
+                AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.25"
+                AbsoluteLayout.LayoutFlags="All"
                 HorizontalOptions="CenterAndExpand"
                 IsToggled="False"
                 VerticalOptions="CenterAndExpand">
@@ -22,6 +24,6 @@
                     <w:ConfirmPopupEffect />
                 </w:Check.Effects>
             </w:Check>
-        </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </w:CirclePage>

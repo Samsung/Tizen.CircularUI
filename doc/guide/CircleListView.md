@@ -3,23 +3,35 @@ uid: Tizen.Wearable.CircularUI.doc.CircleListView
 summary: CircleListView control guide
 ---
 # CircleListView
-`CircleListView` is extension of [`Xamarin.Forms.ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/).
-Same as [`Xamarin.Forms.ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), but Scroller is rendered to [`CircleSurface`](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface). You can also move the List to a bezel interaction.
-In order to receive bezel interaction, it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
-|![Normal list](data/CircleListView_noscroll.png)|![Group list](data/CircleListView_group.png)|![2 texts and 1 icon list](data/CircleStackLayout_Spacing.png)|
+`CircleListView` is a view for presenting lists of data, especially long lists that require scrolling.
+It is extension of [`Xamarin.Forms.ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/).
+Same as [`Xamarin.Forms.ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), but Scroller is rendered to [`CircleSurface`](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface). You can move the list by [`Bezel interaction`](https://developer.tizen.org/design/wearable/interaction/bezel-interactions) and [`Drag`](https://developer.tizen.org/design/wearable/interaction/touch#swipe).
+In order to receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
+
+|![Normal list](data/CircleListView_noscroll.png)|![Group list](data/CircleListView_group.png)|![2 texts and 1 icon list](data/CircleListView_2text1icon1.png)|
 |:----------------------------------------------:|:------------------------------------------:|:------------------------------------------------------------:|
 |                   Normal list                  |               Group list                   |                      2 texts and 1 icon list                 |
+
+## Components
+
+- [Header](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance#Headers_and_Footers) : Text or view to display at the beginning of a list
+- [Cells](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) : Data in a `CircleListView` is presented in cells. Each cell corresponds to a row of data.
+- [Footer](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance#Headers_and_Footers) : Text or view to display at end of a list
 
 **WARNNING: [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper) must be contained by `CirclePage` or [CircleSurfaceEffectBehavior](xref:Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior) should be added in [Behaviors](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) of [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) that contain these Control. If other `page` contains these control. It may cause exception or control can not be displayed.**
 
 ## Adding CircleListView at CirclePage
 
-You can set `CircleListView` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). The following XAML code show CirclePage with `CircleListView`.
+You can set `CircleListView` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add `CirclePage`, please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
+The following XAML code show CirclePage with `CircleListView`.
 `RotaryFocusTargetName` attribute sets the current focused control that is handled by rotating and display the focused control's circle object.
-If you don't set this value properly, control can't receive rotary event.
+If you don't set this value properly, control can't receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
-You can put the text in the header, footer, and use the DataTemplate to change the formatting of the text.
+You can set the `Header` and/or `Footer` to a simple text, or you can set them to a more complex layout. There are also `HeaderTemplate` and `FooterTemplate` properties that let you create more complex layouts for the header and footer that support data binding.
+
+The example below has cells, header, footer.
+And use the [`DataTemplate`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/) to format a data object for display.
 
 For more information. Please refer to below links
 
@@ -93,4 +105,250 @@ _This guide's code example use WearableUIGallery's TCCircleListView.xaml code at
         </w:CircleListView>
     </w:CirclePage.Content>
 </w:CirclePage>
+```
+
+## Adding Group List as list contents
+
+You can add group list as contents of `CircleListView`.
+
+To enable grouping:
+
+- Create a list of List<>.
+- Set [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) to that list.
+- Set [`IsGroupingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.IsGroupingEnabled/) to true.
+- Set [`GroupDisplayBinding`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
+
+_This guide's code example use WearableUIGallery's TCGroupList code at the test\WearableUIGallery\WearableUIGallery\TC\TCGroupList.xaml_
+
+
+**C# file**
+
+```cs
+namespace WearableUIGallery.TC
+{
+    ...
+    public class GroupModel : List<NamedList<string>>
+    {
+        public GroupModel()
+        {
+            Add(new NamedList<string>("group1") { "Aaliyah", "Aamir", "Aaralyn ", "Aaron", "Abagail", "Babitha", "Bahuratna", "Bandana", "Bulbul", "Cade", "Caldwell" });
+            Add(new NamedList<string>("group2") { "Chandan", "Caster", "Dagan ", "Daulat", "Dag", "Earl", "Ebenzer", "Ellison", "Elizabeth", "Filbert", "Fitzpatrick", "Florian", "Fulton" });
+            Add(new NamedList<string>("group3") { "Frazer", "Gabriel", "Gage", "Galen", "Garland", "Gauhar", "Hadden", "Hafiz", "Hakon", "Haleem", "Hank", "Hanuman" });
+            Add(new NamedList<string>("group4") { "Jabali ", "Jaimini", "Jayadev", "Jake", "Jayatsena", "Jonathan", "Kamaal", "Jeirk", "Jasper", "Jack", "Mac", "Macy", "Marlon", "Milson" });
+        }
+    }
+
+    public class NamedList<T> : List<T>
+    {
+        public NamedList(string name) => Name = name;
+        public string Name { get; set; }
+    }}
+```
+
+**XAML file**
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCGroupList"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <w:CirclePage.BindingContext>
+        <local:GroupModel />
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <w:CircleListView
+            x:Name="mylist"
+            GroupDisplayBinding="{Binding Name}"
+            IsGroupingEnabled="True"
+            ItemsSource="{Binding .}">
+            <w:CircleListView.Header>
+                <x:String>TITLE</x:String>
+            </w:CircleListView.Header>
+            <w:CircleListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        HeightRequest="120"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="#6CC3F1" />
+                </DataTemplate>
+            </w:CircleListView.HeaderTemplate>
+        </w:CircleListView>
+    </w:CirclePage.Content>
+</w:CirclePage>
+
+```
+
+## Adding list with 2 texts and 1 icon as list contents
+
+You can add list with 2 texts and 1 icon as contents of `CircleListView`.
+
+This can easily be done using [`ViewCell`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells).
+
+- [`ViewCell`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) is nested inside a [`DataTemplate`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/), which is inside `CircleListView.ItemTemplate`.
+- Layout of [`ViewCell`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) is managed by a [`StackLayout`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout).
+- You can place it in the [`StackLayout`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout) with your desired configuration.
+
+
+_This guide's code example use XUIComponent's CircleList of Style2text1icon1 code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleList/ListViewModel.cs and Style2text1icon1.xaml_
+
+
+**C# file**
+
+```cs
+namespace WearableUIGallery.TC
+{
+    public class ListViewModel : INotifyPropertyChanged
+    {
+        static List<string> _names = new List<string>
+        {
+            "Aaliyah", "Aamir", "Aaralyn", "Aaron", "Abagail",
+            "Babitha", "Bahuratna", "Bandana", "Bulbul", "Cade", "Caldwell",
+            "Chandan", "Caster", "Dagan ", "Daulat", "Dag", "Earl", "Ebenzer",
+            "Ellison", "Elizabeth", "Filbert", "Fitzpatrick", "Florian", "Fulton",
+            "Frazer", "Gabriel", "Gage", "Galen", "Garland", "Gauhar", "Hadden",
+            "Hafiz", "Hakon", "Haleem", "Hank", "Hanuman", "Jabali ", "Jaimini",
+            "Jayadev", "Jake", "Jayatsena", "Jonathan", "Kamaal", "Jeirk",
+            "Jasper", "Jack", "Mac", "Macy", "Marlon", "Milson"
+        };
+...
+        public List<string> Names => _names;
+        public ObservableCollection<CheckableName> CheckableNames { get; private set; }
+
+        public int CheckedNamesCount
+        {
+            get => _checkedNamesCount;
+            private set
+            {
+                if (_checkedNamesCount != value)
+                {
+                    _checkedNamesCount = value;
+                    OnPropertyChanged();
+
+                    UpdateSelectOptionMessage();
+                }
+            }
+        }
+
+        public ListViewModel()
+        {
+            CheckableNames = new ObservableCollection<CheckableName>();
+            foreach (var name in _names)
+            {
+                var data = new CheckableName(name, false);
+                data.PropertyChanged += (s, e) =>
+                {
+                    if (e.PropertyName == "Checked")
+                    {
+                        CheckedNamesCount += data.Checked ? 1 : -1;
+                    }
+                };
+                CheckableNames.Add(data);
+            }
+...
+        }
+   }
+
+    public class CheckableName : INotifyPropertyChanged
+    {
+        string _name;
+        bool _checked;
+
+        public CheckableName(string name, bool isChecked)
+        {
+            _name = name;
+            _checked = isChecked;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (_name != value)
+                {
+                    _name = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public bool Checked
+        {
+            get => _checked;
+            set
+            {
+                if (_checked != value)
+                {
+                    _checked = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+...
+    }
+```
+
+**XAML file**
+
+```xml
+<w:CirclePage
+    x:Class="UIComponents.Samples.CircleList.Style2text1icon1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UIComponents.Samples.CircleList"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusTargetName="mylist">
+    <w:CirclePage.BindingContext>
+        <local:ListViewModel />
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <w:CircleListView x:Name="mylist" ItemsSource="{Binding Names}">
+            <w:CircleListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            HeightRequest="120"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="360">
+                            <StackLayout
+                                HorizontalOptions="CenterAndExpand"
+                                Orientation="Vertical"
+                                VerticalOptions="Center">
+                                <Label
+                                    FontSize="8"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding ., StringFormat='elm.text:{0}'}"
+                                    VerticalOptions="Center"
+                                    VerticalTextAlignment="Center" />
+                                <Label
+                                    FontSize="5"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding ., StringFormat='elm.text.1:{0}'}"
+                                    VerticalOptions="Center"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+                            <w:Check
+                                DisplayStyle="Default"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </w:CircleListView.ItemTemplate>
+        </w:CircleListView>
+    </w:CirclePage.Content>
+</w:CirclePage>
+
 ```

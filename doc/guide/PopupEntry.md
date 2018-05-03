@@ -5,7 +5,7 @@ summary:  PopupEntry control guide
 
 # Popup Entry
 
-[PopupEntry](xref:Tizen.Wearable.CircularUI.Forms.PopupEntry) is a [Entry][https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/] that allows you to enter text with the IME when you click the entry.
+[PopupEntry](xref:Tizen.Wearable.CircularUI.Forms.PopupEntry) is a [Entry](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) that allows you to enter text with the IME when you click the entry.
 
 # Overview
 
