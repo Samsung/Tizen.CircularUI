@@ -15,7 +15,7 @@ summary: InformationPopup control guide
 
 ## Create single text InformationPopup
 Single text informationPopup is used for displaying text. Single text informationPopup is similar to Toast popup. 
-but this popup doesn't disappear automatically.\
+but this popup doesn't disappear automatically.<br>
  `Text` property can be set with text. `BackButtonPressed` event occur when user press back button of device. If you want to dismiss popup when this event occurred. you should add `Dismiss()` in `BackButtonPressed` event handle code.
 
 

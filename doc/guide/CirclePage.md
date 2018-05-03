@@ -43,10 +43,9 @@ You can change radius of circle bar with modifying radius value.
 
 
 ## Create CirclePage
-First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to [QuickStart](Quickstart.md).\
-Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.\
-In a XAML file. import CircularUI and define namespace like as \
-`xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"`
+First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to [QuickStart](Quickstart.md).<br>
+Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.<br>
+In a XAML file. import CircularUI and define namespace like as `xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"`
 
 _This guide's code example use WearableUIGallery's TCCirclePage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml_
 
@@ -91,7 +90,7 @@ If you don't set this value properly. Control can't receive rotary event or circ
 
 For more information . Please refer to below links
 - [CirclePage API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CirclePage.html)
-- [Xamarin.Forms.Page API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
+- [Xamarin.Forms.Page guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages)
 
 **XAML file**
 ```xml
@@ -140,7 +139,7 @@ For more information . Please refer to below links
 ```
 
 ## Adding ToolbarItems at CirclePage
-CirclePage `ToolbarItems` set rotary selector view's items. You can set each item with `CircleToolbarItem` property.\
+CirclePage `ToolbarItems` set rotary selector view's items. You can set each item with `CircleToolbarItem` property.
 CircleToolbarItem derive from [Xamarin.Forms.ToolbarItem](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/). 
 
 `CircleToolbarItem` has the following properties:
@@ -175,10 +174,10 @@ For more information . Please refer to below links
 ```
 
 ## Adding CircleProgressBarSurfaceItem at CirclePage
-CirclePage `CircleSurfaceItems`  can set `CircleProgressBarSurfaceItem` and `CircleSliderSurfaceItem`.\
-`CircleProgressBarSurfaceItem` represent Circle ProgressBar.`progress1` at XAML code represents outter circle of below image. and `progress2` represents inner circle.\
+CirclePage `CircleSurfaceItems`  can set `CircleProgressBarSurfaceItem` and `CircleSliderSurfaceItem`.
+`CircleProgressBarSurfaceItem` represent Circle ProgressBar.`progress1` at XAML code represents outter circle of below image. and `progress2` represents inner circle.
 If you use CircleProgressbar, you don't need to set `RotaryFocusTargetName` property of CirclePage.
-When `Value` property is incread or decrease. circle object extend or shrink following to `Value` property. 
+When `Value` property is incread or decrease. circle object extend or shrink following to `Value` property.
 
 `CircleProgressBarSurfaceItem` has the following properties:
 - `Value` : Gets or sets the value of the progressbar..

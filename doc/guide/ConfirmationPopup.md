@@ -4,7 +4,7 @@ summary: ConfirmationPopup control guide
 ---
 
 # ConfirmationPopup
-`ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is usefull to select one of two options. (e.g  cancel/done, share/delete)\
+`ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is usefull to select one of two options. (e.g  cancel/done, share/delete)
 
 *`ConfirmationPopup` is displayed seperate from any control. So you can't set this in XAML file.*
 
@@ -13,7 +13,6 @@ summary: ConfirmationPopup control guide
 ## Create ConfirmationPopup
 `ConfirmationPopup.Title` Property set title of popup. you can set `Content` property with Layout such as `StackLayout` or `ScrollView`.
 `ConfirmationPopup.FirstButton` property set left side button. `ConfirmationPopup.SecondButton`property set right side button. you can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
-
 
 _This guide's code example use WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
 
@@ -67,7 +66,7 @@ For more information . Please refer to [ConfirmationPopup  API reference](https:
 ```
 
 ## How to set long Text at ConfirmationPopup
-ConfirmationPopup has `Text` Property. This Proerpty is usefull to set long text.\
+ConfirmationPopup has `Text` Property. This Proerpty is usefull to set long text.
 If long text was set by `Text` property. you don't need to add `StackLayout` and `ScrollView` and `Label` for displaying long text.
 
 *`Text` Property's area overlap `Content` Property area. So do not use two propery at the same time.*
