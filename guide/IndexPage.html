@@ -77,14 +77,15 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.IndexPage">
 <h1 id="indexpage">IndexPage</h1>
 
-<p><code>IndexPage</code> is extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/"><code>Xamarin.Forms.MultiPage</code></a>.
-When <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages"><code>Page</code></a> is added and removed at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/"><code>Xamarin.Forms.MultiPage</code></a>. Circular index is added and removed automatically at the top of window.
+<p><code>IndexPage</code> allows you to know in advance how many pages you have when you configure your application on multiple pages, and  to show you how many pages you are viewing.
+It is extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/"><code>Xamarin.Forms.MultiPage</code></a>.
+When <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages"><code>Page</code></a> is added and removed at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/"><code>Xamarin.Forms.MultiPage</code></a>, The number of dot marks increases or decreases automatically at the top of window.
 It is similar to <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages#carouselpage"><code>CarouselPage</code></a> in Xamarin.Forms, with the addition of <code>Index</code>.
 When <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages"><code>Page</code></a> is scrolled, <code>Index</code> operates select internally.</p>
-<p><img src="data/IndexPage.png" alt=""></p>
+<p><img src="data/IndexPage_action.png" alt=""></p>
 <h2 id="adding-indexpage">Adding IndexPage</h2>
 <p>To create a new index component, use the following XAML code.
-If you add as many pages as you want, you will increase the dot mark by index accordingly. In the example below, 3 pages have been added.</p>
+If you add as many pages as you want, you will increase the number of dot mark by index accordingly. In the example below, 3 pages have been added. The number of dot mark is 3. Because it is on the first page, only the first dot mark is shown as white, and the remaining dot marks are shown as grey.</p>
 <p>For more information. Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IndexPage.html">IndexPage  API reference</a></li>
@@ -119,7 +120,9 @@ If you add as many pages as you want, you will increase the dot mark by index ac
         &lt;/StackLayout&gt;
     &lt;/ContentPage&gt;
 &lt;/w:IndexPage&gt;
-</code></pre></article>
+</code></pre><p><strong>Screenshot</strong></p>
+<p><img src="data/IndexPage.png" alt="IndexPage"></p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

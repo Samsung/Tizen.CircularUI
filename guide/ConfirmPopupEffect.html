@@ -82,23 +82,41 @@ Accept button has one default, and &quot;Ok&quot; text is displayed in Accept as
 <p>When <code>ConfirmVisibility</code> becomes <code>True</code>, it appears on the screen,
 The command given at the time of Accept or Cancel is executed and disappears automatically, and <code>ConfirmVisibility</code> becomes <code>False</code>.
 Also, when you touch the outside of the popup, the popup is automatically canceled. (Cancel command is performed similarly.)
-You can change the pop-up position by adjusting the X and Y value of Offset.</p>
+You can change the position by adjusting the X and Y value of Offset.</p>
 <p><img src="data/ConfirmPopupEffect.png" alt=""></p>
-<h2 id="adding-popup-with-confirmpopupeffect-at-contentpage">Adding popup with ConfirmPopupEffect at ContentPage</h2>
-<p>You can set popup with ConfirmPopupEffect at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/"><code>ContentPage.Content</code></a>. To create a new popup, use the following code.</p>
+<h2 id="adding-popup-with-confirmpopupeffect-at-circlepage">Adding popup with ConfirmPopupEffect at CirclePage</h2>
+<p>You can set popup with <code>ConfirmPopupEffect</code> at <a class="xref" href="CirclePage.html"><code>CirclePage.Content</code></a>. If you&#39;d like to know how to add <code>CirclePage</code>, please refer to <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>. To create a new popup, use the following code.</p>
 <p><code>ConfirmPopupEffect</code> has the following properties:</p>
 <ul>
 <li>AcceptCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/"><code>System.Windows.Input.ICommand</code></a>. Command to be executed when Accept</li>
 <li>CancelCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/"><code>System.Windows.Input.ICommand</code></a>. Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.</li>
-<li>ConfirmVisibility : Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.</li>
+<li>ConfirmVisibility : Popup appears if <code>ConfirmVisibility</code> is True, and disappears when it becomes False. <code>CancelCommand</code> works even if it disappears to False.</li>
 <li>PositionOption : Position type of popup<ul>
 <li><code>BottomOfView</code> : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.</li>
-<li><code>CenterOfWindow</code> : In the center of the screen, move by the Offset in the Popup.</li>
+<li><code>CenterOfParent</code> : In the center of the screen, move by the Offset in the Popup.</li>
 <li><code>Absolute</code> : The value of Offset is X, Y and popup is placed on the screen.</li>
 <li><code>Relative</code> : Set Offset.X * Window.Width, Offset.Y * Window.Height.</li>
 </ul>
 </li>
 </ul>
+<p>In the example below, a check with <code>ConfirmPopupEffect</code> in the <code>StackLayout</code> is set into the <code>CirclePage</code>. I have set the texts to be shown in <code>AcceptText</code> and <code>CancelText</code>, and defined the commands to execute when each item is selected in <code>AcceptCommand</code> and <code>CancelCommand</code>. Accept will change the background color to green and Cancel if it will be red.
+I set the position by assigning <code>CenterOfParent</code> to the <code>PositionOption</code>. <code>ConfirmVisibility</code> value set to be bound to <code>IsToggled</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/ConfirmPopupEffect_BottomOfView.png" alt="BottomOfView"></th>
+<th style="text-align:center"><img src="data/ConfirmPopupEffect_2.png" alt="CenterOfParent"></th>
+<th style="text-align:center"><img src="data/ConfirmPopupEffect_Absolute.png" alt="3rd scene when selects &#39;Yes&#39;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">BottomOfView</td>
+<td style="text-align:center">CenterOfParent</td>
+<td style="text-align:center">Absolute/Relative</td>
+</tr>
+</tbody>
+</table>
 <p>For more information. Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.html">ConfirmPopupEffect  API reference</a></li>
@@ -130,7 +148,7 @@ You can change the pop-up position by adjusting the X and Y value of Offset.</p>
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
     x:Name=&quot;mypage&quot;&gt;
     &lt;ContentPage.Content&gt;
-        &lt;StackLayout&gt;
+        &lt;AbsoluteLayout&gt;
             &lt;w:Check
                 x:Name=&quot;confirm3&quot;
                 w:ConfirmPopupEffect.AcceptCommand=&quot;{Binding AcceptedCommand, Source={x:Reference mypage}}&quot;
@@ -139,6 +157,8 @@ You can change the pop-up position by adjusting the X and Y value of Offset.</p>
                 w:ConfirmPopupEffect.CancelText=&quot;No&quot;
                 w:ConfirmPopupEffect.ConfirmVisibility=&quot;{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}&quot;
                 w:ConfirmPopupEffect.PositionOption=&quot;CenterOfParent&quot;
+                AbsoluteLayout.LayoutBounds=&quot;0.5, 0.2, 1, 0.25&quot;
+                AbsoluteLayout.LayoutFlags=&quot;All&quot;
                 HorizontalOptions=&quot;CenterAndExpand&quot;
                 IsToggled=&quot;False&quot;
                 VerticalOptions=&quot;CenterAndExpand&quot;&gt;
@@ -146,7 +166,7 @@ You can change the pop-up position by adjusting the X and Y value of Offset.</p>
                     &lt;w:ConfirmPopupEffect /&gt;
                 &lt;/w:Check.Effects&gt;
             &lt;/w:Check&gt;
-        &lt;/StackLayout&gt;
+        &lt;/AbsoluteLayout&gt;
     &lt;/ContentPage.Content&gt;
 &lt;/w:CirclePage&gt;
 </code></pre><p><strong>Screenshot</strong></p>
