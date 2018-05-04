@@ -4,6 +4,7 @@
 - [Controls](#controls)
 - [Prerequisite](#prerequisite)
 - [How to use CircularUI](#how-to-use-circularui)
+- [Sample and Test application using CircularUI](#sample-and-test-application-using-circularui)
 
 ## Introduction
 The Tizen Wearable CircularUI project is a set of helpful extensions of the Xamarin Forms framework.<br>
@@ -48,4 +49,40 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
 ## How to use CircularUI
 - [QuickStart](doc/guide/Quickstart.md)
 
-- The [API Reference](https://samsung.github.io/Tizen.CircularUI/index.html) is available on the web to browse.
+- The [API Reference](https://samsung.github.io/Tizen.CircularUI/api/index.html) is available on the web to browse.
+- The [API Guide](https://samsung.github.io/Tizen.CircularUI/index.html) is available on the web to browse.
+
+## Sample and Test application using CircularUI
+
+<table>
+  <tr>
+    <th></th>
+    <th>Screenshot</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>WearableUIGallery</td>
+    <td><img src="doc/design/data/widgets.png" alt="widgets"></td>
+    <td>This application was created to check the basic behavior of CircularUI API. It contains all the controls of the CircularUI API, and the functions of each control consist of one TC or several TCs depending on the characteristics of the control.<br>
+    - Install guide : sdb install org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk <br>
+    <a href="https://github.com/Samsung/Tizen.CircularUI/tree/master/test/WearableUIGallery">Source</a></td>
+  </tr>
+  <tr>
+    <td>SimpleTextWatchface</td>
+    <td><img src="doc/design/data/SimpleWatchface_1.png" alt="widgets"></td>
+    <td>This application was created to check the default behavior of the Watchface API. <br>
+    - Install guide : sdb install org.tizen.example.SimpleTextWatchface-1.0.0.tpk <br>
+    - Test guide : <br>
+    1) Touch and hold on Watchface of Main page <br>
+    2) Move to left on watchface list and select SimpleTextWatchface icon <br>
+    3) You can see `SimpleTextWatchface` on Watchface of Main page <br>
+        <a href="https://github.com/Samsung/Tizen.CircularUI/tree/master/test/SimpleTextWatchface">Source</a> </td>
+  </tr>
+  <tr>
+    <td>XUIComponents</td>
+    <td><img src="doc/design/data/XUIComponent.png" alt="widgets"></td>
+    <td>This application is similar to the UIComponents application using the native API. The functions of each control consist of several test cases depending on the characteristics of the control. <br>
+    - Install guide : sdb install org.tizen.example.UIComponents.Tizen.Wearable-1.0.0.tpk <br>
+        <a href="https://github.com/Samsung/Tizen.CircularUI/tree/master/sample/XUIComponents">Source</a></td>
+  </tr>
+</table>
