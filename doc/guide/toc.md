@@ -15,7 +15,7 @@
 ## [IndexPage](IndexPage.md)
 ## [InformationPopup](InformationPopup.md)
 ## [IRotaryEventReceiver](IRotaryEventReceiver.md)
+## [PopupEntry](PopupEntry.md)
 ## [Radio](Radio.md)
 ## [Toast](Toast.md)
 ## [TwoButtonPage](TwoButtonPage.md)
-## [PopupEntry](PopupEntry.md)

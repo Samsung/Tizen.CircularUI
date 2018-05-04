@@ -6,17 +6,17 @@ summary: ConfirmationPopup control guide
 # ConfirmationPopup
 `ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is usefull to select one of two options. (e.g  cancel/done, share/delete)
 
-*`ConfirmationPopup` is displayed seperate from any control. So you can't set this in XAML file.*
+*`ConfirmationPopup` is displayed separately from any control. So you can't set this in XAML file.*
 
 ![confirmation_popup1](data/confirmation_popup1.png)
 
 ## Create ConfirmationPopup
-`ConfirmationPopup.Title` Property set title of popup. you can set `Content` property with Layout such as `StackLayout` or `ScrollView`.
+`ConfirmationPopup.Title` Property set the title of the popup. you can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
 `ConfirmationPopup.FirstButton` property set left side button. `ConfirmationPopup.SecondButton`property set right side button. you can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
 
-_This guide's code example use WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
+_This guide's code example uses WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
 
-For more information . Please refer to [ConfirmationPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html)
+For more information. Please refer to [ConfirmationPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html)
 
 **C# file**
 ```cs
@@ -66,10 +66,10 @@ For more information . Please refer to [ConfirmationPopup  API reference](https:
 ```
 
 ## How to set long Text at ConfirmationPopup
-ConfirmationPopup has `Text` Property. This Proerpty is usefull to set long text.
-If long text was set by `Text` property. you don't need to add `StackLayout` and `ScrollView` and `Label` for displaying long text.
+ConfirmationPopup has `Text` Property. This Property is useful to set long text.
+If a long text was set by `Text` property. you don't need to add `StackLayout` and `ScrollView` and `Label` for displaying long text.
 
-*`Text` Property's area overlap `Content` Property area. So do not use two propery at the same time.*
+*`Text` Property's area overlaps `Content` Property area. So do not use two property at the same time.*
 
 **C# file**
 ```cs
