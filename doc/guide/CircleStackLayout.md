@@ -29,7 +29,7 @@ For more information. Please refer to below links
 - [Xamarin.Forms.StackLayout API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)
 - [Xamarin.Forms.StackLayout Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout)
 
-_This guide's code example use WearableUIGallery's TCCircleStackLayout.xaml code at the test\WearableUIGallery\WearableUIGallery\TC\TCCircleStackLayout.xaml_
+_This guide's code example uses WearableUIGallery's TCCircleStackLayout.xaml code at the test\WearableUIGallery\WearableUIGallery\TC\TCCircleStackLayout.xaml_
 
 **XAML file**
 

@@ -1,21 +1,21 @@
 # Quickstart
 
-This guide show how to create an application that represents `Toast` and `CircleSlider`. If user presses the button, `Toast` pops up and then it automatically disappear after timeout seconds.
- And If user rotates bezel of Tizen wearable device. `CircleSlider` bar is moving forward or backward direction.
+This guide shows how to create an application that represents `Toast` and `CircleSlider`. If a user presses the button, `Toast` pops up and then it automatically disappear after timeout seconds.
+ And If a user rotates bezel of Tizen wearable device. `CircleSlider` bar is moving forward or backward direction.
 
-## 1. Set up the development enviroment and Create a project
+## 1. Set up the development environment and Create a project
 - Create Tizen Xamarin Forms App following to [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).<br>
   In this guide project name is `SampleCircleApp`
 
-- Select only wearable device at tizen project wizard.
+- Select only wearable device at Tizen project wizard.
 
     ![tizen_project_wizard_capture](data/tizen_project_wizard_capture.png)
 
-- Search Tizen.Wearable.CircularUI nuget pakage at Nuget package manager. Package source is nuget.org.
+- Search Tizen.Wearable.CircularUI NuGet package at NuGet package manager. Package source is nuget.org.
 
     ![nuget_package_manager_capture](data/nuget_package_manager_capture.png)
 
-- Install Tizen.Wearable.CircularUI nuget at portable class library(PCL) project.
+- Install Tizen.Wearable.CircularUI NuGet at portable class library(PCL) project.
 
     ![after_Install_nuget_package](data/after_Install_nuget_package.png)
 
@@ -28,9 +28,9 @@ This guide show how to create an application that represents `Toast` and `Circle
   - `xmlns:w=clr-namespace:Tizen.Wearable.CircularUI.Forms` : `w` prefix means `Tizen.Wearable.CircularUI.Forms` namespace.
   - `<w:CirclePage>` : `CirclePage` derive from `Xamarin.Forms.Page`. This Page's content area has `Label` and `Button`.
   - `<w:CirclePage.CircleSurfaceItems>` : `CircleSliderSurfaceItem` attached for `CircleSurfaceItem` of  `CirclePage`.
-  - `RotaryFocusTargetName` is set `slider` name. `CircleSliderSurfaceItem` has rotary focus. `CircleSliderSurfaceItem` can receive rotary event from the wearable device's bezel interaction.
+  - `RotaryFocusTargetName` is set `slider` name. `CircleSliderSurfaceItem` has rotary focus. `CircleSliderSurfaceItem` can receive a Rotary Event from the wearable device's bezel interaction.
 
-   For more information . Please refer to [CirclePage guide](CirclePage.md)
+   For more information. Please refer to [CirclePage guide](CirclePage.md)
 
 **App.xaml file**
 ```xml
@@ -75,7 +75,7 @@ This guide show how to create an application that represents `Toast` and `Circle
 
 <br><br>
 - In App.xaml.cs, remove all of the template code and replace it with the following code.
-    - `OnButtonClicked` is event handler of `Button` `Clicked` event. below code simply display Toast popup during 3 second.
+    - `OnButtonClicked` is event handler of `Button` `Clicked` event. below code simply display Toast popup during 3 seconds.
     
 **App.xaml.cs file**
 ```cs
@@ -104,7 +104,7 @@ namespace SampleCircleApp
 ```
 
 <br><br>
-- For initialize CircularUI instance. Please insert `FormsCircularUI.Init()` code in Main method at `SampleCircleApp.Tizen.Wearable.cs`.
+- For initializing CircularUI instance. Please insert `FormsCircularUI.Init()` code in the Main method at `SampleCircleApp.Tizen.Wearable.cs`.
 You should import `Tizen.Wearable.CircularUI.Forms.Renderer` with `using` directives.
 
 **SampleCircleApp.Tizen.Wearable.cs file**
@@ -138,9 +138,9 @@ using Tizen.Wearable.CircularUI.Forms.Renderer;
 - In Windows OS. copy application tpk from project binary path to sdb tool path.\
     - `SampleCircleApp` tpk locate in `ProjectPath\SampleCircleApp.Tizen.Wearable\bin\Debug\tizen40\org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk`.\
     - You can verify your project path. In the Solution Explorer view, right-click the solution name and press `open folder in file explorer` menu.
-    - sdb tool loacted in `c:\tizen\tools\sdb.exe`)
+    - sdb tool located in `c:\tizen\tools\sdb.exe`)
 
-- If your OS is window, launch Tizen Sdb Command Prompt(Tool > Tizen > Tizen Sdb Command Prompt).
+- If your OS is the window, launch Tizen Sdb Command Prompt(Tool > Tizen > Tizen Sdb Command Prompt).
   If you use Linux. you can use sdb command directly in your project path. 
 
 - Install your app with sdb command

@@ -11,10 +11,9 @@ summary: Check control guide
 
 ## Create Check
 You can easily add `Check` control with C# or XAML file. Tizen wearable device support 3 styles of `DisplayStyle` (`Default`, `Onoff`, `Small`).
-Each shape of DisplayStyle depends on the device model. you can set the default value of check with `IsToggled` property. `True` value set Check selected. `False` value set Check unselected. If user toggle check. `Toggled` event will have occurred. You must add code for handling `Toggled` event.
+Each shape of DisplayStyle depends on the device model. you can set the default value of check with `IsToggled` property. `True` value set `Check` selected. `False` value set `Check` unselected. `Toggled` event is raised when `Check` is toggled. You must add code for handling `Toggled` event.
 
-
-For more information . Please refer to below links
+For more information. Please refer to below links
  - [Check  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Check.html)
  - [Xamarin.Forms.Switch  API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/)
 

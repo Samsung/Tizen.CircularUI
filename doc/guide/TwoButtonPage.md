@@ -4,20 +4,20 @@ summary: TwoButtonPage control guide
 ---
 
 # TwoButtonPage
-`TwoButtonPage` derives from [Xamarin.Forms.Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). TwonButtonPage has two semicircular buttons that are located at left side and right side of circle.
+`TwoButtonPage` derives from [Xamarin.Forms.Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). TwonButtonPage has two semicircular buttons that are located at the left side and the right side of the circle.
 
 |![twobutton_page](data/twobutton_page.png)|![twobutton_page_overlay](data/twobutton_page_overlap.png)
 |:------------:|:--------:|
 |Non-overlapped|Overlapped|
 
 ## Create TwoButtonPage
-you can set control in the `TwoButtonPage.Content`. In this example, long text Label and two buttons was set for Content.
-If `Overlap` property is `true`. `Content` area occupies all of the screen. If `Overlap` property is `false`. `Content` area occupies screen that is excluded button's area. `Overlap` property default value is `false`.
-`TwoButtonPage.firstButton` set left side button. `TwoButtonPage.SecondButton` set right side button. you can add button using `MenuItem`.
+you can set control in the `TwoButtonPage.Content`. In this example, long text Label and two buttons were set for Content.
+If `Overlap` property is `true`. The `Content` area occupies the whole of the screen. If `Overlap` property is `false`. The `Content` area occupies screen that is excluded button's area. `Overlap` property default value is `false`.
+`TwoButtonPage.firstButton` set left side button. `TwoButtonPage.SecondButton` set right side button. you can add buttons using `MenuItem`.
 
-_This guide's code example use WearableUIGallery's TCTwoButtonPage code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml_
+_This guide's code example uses WearableUIGallery's TCTwoButtonPage code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml_
 
-For more information . Please refer to below links
+For more information. Please refer to below links
 - [TwoButtonPage  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html)
 - [Xamarin.Forms.Page guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages)
 - [Xamarin.Forms.MenuItem API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
