@@ -11,7 +11,6 @@ The binaries are available via NuGet (package name CircularUI) with the source a
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector)        | A control to select date or time fits in the circular screen. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleListView)                | A subclass of Xamarin.Forms.ListView control fits in the circular screen. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.CirclePage)                    | A subclass of Xamarin.Forms.Page that can show Circular ProgressBar and Circular Slider and the button on the bottom of the screen. it can also show MenuItems on the circular menu.(MoreOption) |
-
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleProgressBarSurfaceItem)  | A control  fits in the circular screen. it can be shown in CirclePage only. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem)       | A Slider control that responds to the bezel action and fits in the circular screen. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleScrollView)              | A subclass of Xamarin.Forms.ScrollView that can be scrolled by the bezel action. |

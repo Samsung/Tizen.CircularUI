@@ -16,25 +16,26 @@ _Xamarin Forms provides cross-platform APIs, but this project are only worked on
 ## Controls
 The Tizen Wearable CircularUI project provides you the following UI controls:
 
-- CirclePage : A subclass of Xamarin.Forms.Page that can show circular ProgressBar and circular Slider and Button on bottom of screen. it can also show MenuItems on the circular menu.(MoreOption)
-- CircleListView : A subclass of Xamarin.Forms.ListView control fits in the circular screen and have circular scroll bar.
-- CircleProgressBarSurfaceItem : A control  fits in the circular screen. it can be shown in CirclePage only.
+- Check : A subclass of Xamarin.Forms.Switch control supports Tizen specific style.
+- CircleDateTimeSelector : A control to select date or time fits in the circular screen.
+- CircleListView : A subclass of Xamarin.Forms.ListView control fits in the circular screen and has the circular scrollbar.
+- CirclePage : A subclass of Xamarin.Forms.Page that can show Circular ProgressBar and Circular Slider and the button on the bottom of the screen. it can also show MenuItems on the circular menu.(MoreOption)
+- CircleProgressBarSurfaceItem : A control fits in the circular screen. it can be shown in CirclePage only.
 - CircleSliderSurfaceItem : A Slider control that responds to the bezel action and fits in the circular screen.
 - CircleScrollView : A subclass of Xamarin.Forms.ScrollView that can be scrolled by the bezel action.
-- CircleDateTimeSelector : A control to select date or time fits in the circular screen.
-- CircleStepper : A control to select a number of steps fits in the circular screen.
 - CircleStackLayout : A container to layout children linear in the circular area.
-- IndexPage : A subclass of multiple page that can slide child page horizontal and has dots on top of the screen for the number of child pages.
-- Check : A subclass of Xamarin.Forms.Switch control supports tizen specific style.
-- RotationReceiver : A event receiver for using the bezel action.
-- Radio : A radio control.
-- Toast : A popup for simple feedback.
-- TwoButtonPage : A subclass of Xamarin.Forms.Page has two button in left and right side of the circular screen.
-- ContextPopup : A context popup fits in the circular screen.
-- ConfirmationPopup : A popup has two button in left and right side of the circular screen.
+- CircleStepper : A control to select a number of steps fits in the circular screen.
+- CircleSurfaceEffectBehavior : The CircleSurfaceEffectBehavior is an effect which allows you to insert views that require CircleSurface.
+- ConfirmationPopup : A popup has two buttons on the left and right side of the circular screen.
 - ConfirmPopupEffect : the effect to show a small popup has one or two button sticky with any control.
-- InformationPopup : A popup has a control to show progress and one button in bottom side of circular screen.
-- CircleSurfaceEffectBehavior : the effect to attach CircleSurface to page.
+- ContextPopup : A context popup fits in the circular screen.
+- IndexPage : A subclass of multiple pages that can slide child page horizontal and has dots on top of the screen for the number of child pages.
+- InformationPopup : A popup has a control to show progress and one button on the bottom side of the circular screen.
+- IRotationReceiver : A event receiver for using the bezel action.
+- Radio : A radio control.
+- PopupEntry : The PopupEntry is a class that extends Xamarin.Forms.Entry. It makes a new layer when editing text on the entry.
+- Toast : A popup for simple feedback.
+- TwoButtonPage : A subclass of Xamarin.Forms.Page has two buttons on the left and right side of the circular screen.
 
 ![widgets](doc/design/data/widgets.png)
 

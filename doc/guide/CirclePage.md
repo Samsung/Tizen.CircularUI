@@ -143,7 +143,7 @@ CirclePage `ToolbarItems` set rotary selector view's items. You can set each ite
 CircleToolbarItem derives from [Xamarin.Forms.ToolbarItem](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/). 
 
 `CircleToolbarItem` has the following properties:
-- `Command` : Gets or sets the `ICommand` to be invoked on activation(item clicked).
+- `Command`: Gets or sets the `ICommand` to be invoked on activation(item clicked).
 - `Icon` : Gets or sets item's image.
 - `Text` : Gets or sets item's title.
 
