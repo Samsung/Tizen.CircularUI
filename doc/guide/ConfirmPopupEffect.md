@@ -4,7 +4,7 @@ summary: ConfirmPopupEffect control guide
 ---
 # ConfirmPopupEffect
 
-`ConfirmPopupEffect` is an [`Effect`](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/) for Xamarin.Forms that is used to make the [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage) have one button or two buttons.
+`ConfirmPopupEffect` is an [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/) for Xamarin.Forms that is used to make the [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage) have one button or two buttons.
 Accept button has one default, and "Ok" text is displayed in Accept as default.
 
 When `ConfirmVisibility` becomes `True`, it appears on the screen,
@@ -16,12 +16,12 @@ You can change the position by adjusting the X and Y value of Offset.
 
 ## Adding popup with ConfirmPopupEffect at CirclePage
 
-You can set popup with `ConfirmPopupEffect` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add `CirclePage`, please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage). To create a new popup, use the following code.
+You can set popup with `ConfirmPopupEffect` at [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage). To create a new popup, use the following code.
 
 `ConfirmPopupEffect` has the following properties:
 
-- AcceptCommand : [`System.Windows.Input.ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command to be executed when Accept
-- CancelCommand : [`System.Windows.Input.ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
+- AcceptCommand : [System.Windows.Input.ICommand](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command to be executed when Accept
+- CancelCommand : [System.Windows.Input.ICommand](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
 - ConfirmVisibility : Popup appears if `ConfirmVisibility` is True, and disappears when it becomes False. `CancelCommand` works even if it disappears to False.
 - PositionOption : Position type of popup
   - `BottomOfView` : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.

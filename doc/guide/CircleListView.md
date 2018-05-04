@@ -5,9 +5,9 @@ summary: CircleListView control guide
 # CircleListView
 
 `CircleListView` is a view for presenting lists of data, especially long lists that require scrolling.
-It is extension of [`Xamarin.Forms.ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/).
-Same as [`Xamarin.Forms.ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), but Scroller is rendered to [`CircleSurface`](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface). You can move the list by [`Bezel interaction`](https://developer.tizen.org/design/wearable/interaction/bezel-interactions) and [`Drag`](https://developer.tizen.org/design/wearable/interaction/touch#swipe).
-In order to receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
+It is extension of [Xamarin.Forms.ListView](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/).
+Same as [Xamarin.Forms.ListView](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), but Scroller is rendered to [CircleSurface](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface). You can move the list by [Bezel interaction](https://developer.tizen.org/design/wearable/interaction/bezel-interactions) and [Drag](https://developer.tizen.org/design/wearable/interaction/touch#swipe).
+In order to receive [Rotary event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryFocusObject` property of [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
 |![Normal list](data/CircleListView_noscroll.png)|![Group list](data/CircleListView_group.png)|![2 texts and 1 icon list](data/CircleListView_2text1icon1.png)|
 |:----------------------------------------------:|:------------------------------------------:|:------------------------------------------------------------:|
@@ -23,15 +23,15 @@ In order to receive [`Rotary event`](https://developer.tizen.org/development/tra
 
 ## Adding CircleListView at CirclePage
 
-You can set `CircleListView` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add `CirclePage`, please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
+You can set `CircleListView` at [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
 The following XAML code show CirclePage with `CircleListView`.
 `RotaryFocusTargetName` attribute sets the current focused control that is handled by rotating and display the focused control's circle object.
-If you don't set this value properly, control can't receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
+If you don't set this value properly, control can't receive [Rotary event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 You can set the `Header` and/or `Footer` to a simple text, or you can set them to a more complex layout. There are also `HeaderTemplate` and `FooterTemplate` properties that let you create more complex layouts for the header and footer that support data binding.
 
 The example below has cells, header, footer.
-And use the [`DataTemplate`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/) to format a data object for display.
+And use the [DataTemplate](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/) to format a data object for display.
 
 For more information. Please refer to below links
 
@@ -114,9 +114,9 @@ You can add group list as contents of `CircleListView`.
 To enable grouping:
 
 - Create a list of List<>.
-- Set [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) to that list.
-- Set [`IsGroupingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.IsGroupingEnabled/) to true.
-- Set [`GroupDisplayBinding`](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
+- Set [ItemsSource](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) to that list.
+- Set [IsGroupingEnabled](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.IsGroupingEnabled/) to true.
+- Set [GroupDisplayBinding](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
 
 _This guide's code example use WearableUIGallery's TCGroupList code at the test\WearableUIGallery\WearableUIGallery\TC\TCGroupList.xaml_
 
@@ -188,11 +188,11 @@ namespace WearableUIGallery.TC
 
 You can add list with 2 texts and 1 icon as contents of `CircleListView`.
 
-This can easily be done using [`ViewCell`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells).
+This can easily be done using [ViewCell](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells).
 
-- [`ViewCell`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) is nested inside a [`DataTemplate`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/), which is inside `CircleListView.ItemTemplate`.
-- Layout of [`ViewCell`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) is managed by a [`StackLayout`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout).
-- You can place it in the [`StackLayout`](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout) with your desired configuration.
+- [ViewCell](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) is nested inside a [DataTemplate](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/), which is inside `CircleListView.ItemTemplate`.
+- Layout of [ViewCell](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells) is managed by a [StackLayout](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout).
+- You can place it in the [StackLayout](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout) with your desired configuration.
 
 
 _This guide's code example use XUIComponent's CircleList of Style2text1icon1 code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleList/ListViewModel.cs and Style2text1icon1.xaml_

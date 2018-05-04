@@ -6,9 +6,9 @@ summary: CircleDateTimeSelector control guide
 # CircleDateTimeSelector
 
 `CircleDateTimeSelector` is a view for Date picker and Time picker.
-You can scroll it by [`Bezel interaction`](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
+You can scroll it by [Bezel interaction](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
 This view is the size that covers the entire screen.
-In order to receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryEventConsumer` property of [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
+In order to receive [Rotary event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryFocusObject` property of [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
 In the Date type, you can change the value of the item by touching the item and rotating bezel to set the year: month: day value.
 For the Time type, you can change the hour: minute: AM / PM value.
@@ -21,10 +21,10 @@ For the Time type, you can change the hour: minute: AM / PM value.
 
 ## Adding CircleDateTimeSelector at CirclePage
 
-You can set `CircleDateTimeSelector` at [`CirclePage.Content`](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add `CirclePage`, please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
-The following code show [`CirclePage`](xref:Tizen.Wearable.CircularUI.doc.CirclePage) with `CircleDateTimeSelector`.
+You can set `CircleDateTimeSelector` at [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). If you'd like to know how to add [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), please refer to [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
+The following code show [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage) with `CircleDateTimeSelector`.
 `RotaryFocusTargetName` attribute sets the current focused control that is handled by rotating and display the focused control's circle object.
-If you don't set this property, control can't receive [`Rotary event`](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
+If you don't set this property, control can't receive [Rotary event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 `CircleDateTimeSelector` has the following properties:
 
