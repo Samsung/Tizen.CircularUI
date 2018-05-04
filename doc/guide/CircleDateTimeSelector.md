@@ -33,7 +33,7 @@ If you don't set this property, control can't receive [Rotary event](https://dev
 - MaximumDate : Sets or gets maximum date.
 - MimimumDate : Sets or gets minimum date.
 
-The example below sets the time picker by putting the `ValueType` value "Time". And set the current time to the `DateTime` property.
+The example below sets the time picker by putting the `ValueType` value "Time". And sets the current time to the `DateTime` property.
 The current time will be displayed on the screen when it is executed. Since the hour item is shown as having focus, the hour is changed when the bezel is turned. If you touch the minute item and turn the bezel, you can change the minute.
 
 For more information. Please refer to [CircleDateTimeSelector  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html)
