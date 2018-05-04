@@ -78,13 +78,13 @@
 <h1 id="confirmationpopup">ConfirmationPopup</h1>
 
 <p><code>ConfirmationPopup</code> represents Tizen Wearable EFL Twobutton-popup style. <code>ConfirmationPopup</code> is usefull to select one of two options. (e.g  cancel/done, share/delete)</p>
-<p><em><code>ConfirmationPopup</code> is displayed seperate from any control. So you can&#39;t set this in XAML file.</em></p>
+<p><em><code>ConfirmationPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em></p>
 <p><img src="data/confirmation_popup1.png" alt="confirmation_popup1"></p>
 <h2 id="create-confirmationpopup">Create ConfirmationPopup</h2>
-<p><code>ConfirmationPopup.Title</code> Property set title of popup. you can set <code>Content</code> property with Layout such as <code>StackLayout</code> or <code>ScrollView</code>.
+<p><code>ConfirmationPopup.Title</code> Property set the title of the popup. you can set the <code>Content</code> property with Layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
 <code>ConfirmationPopup.FirstButton</code> property set left side button. <code>ConfirmationPopup.SecondButton</code>property set right side button. you can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.</p>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs</em></p>
-<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html">ConfirmationPopup  API reference</a></p>
+<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs</em></p>
+<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html">ConfirmationPopup  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            var leftButton = new MenuItem()
             {
@@ -130,9 +130,9 @@
             };
     }
 </code></pre><h2 id="how-to-set-long-text-at-confirmationpopup">How to set long Text at ConfirmationPopup</h2>
-<p>ConfirmationPopup has <code>Text</code> Property. This Proerpty is usefull to set long text.
-If long text was set by <code>Text</code> property. you don&#39;t need to add <code>StackLayout</code> and <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
-<p><em><code>Text</code> Property&#39;s area overlap <code>Content</code> Property area. So do not use two propery at the same time.</em></p>
+<p>ConfirmationPopup has <code>Text</code> Property. This Property is useful to set long text.
+If a long text was set by <code>Text</code> property. you don&#39;t need to add <code>StackLayout</code> and <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
+<p><em><code>Text</code> Property&#39;s area overlaps <code>Content</code> Property area. So do not use two property at the same time.</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            _popUp2 = new ConfirmationPopup();
             _popUp2.FirstButton = leftButton2;

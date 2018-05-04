@@ -94,11 +94,11 @@ Tizen Wearable <code>Toast</code> fills the whole screen for displaying message 
 </tbody>
 </table>
 <h2 id="create-toast">Create Toast</h2>
-<p><code>Toast</code> is static method. so you don&#39;t need to any container or parent control for using this control.
-<code>Toast</code> provides two method, <code>Toast.DisplayText()</code> shows simple text message. <code>Toast.DisplayIconText()</code> shows simple icon and simple text message.<br>
-<code>Toast.DisplayText()</code> first parameter is message text. and second parameter is timeout duration(milliseconds). second parameter is optional. If you don&#39;t set this value. Default value is set 3000(3 seconds).<br>
-<code>Toast.DisplayIconText()</code> first parameter is message text. and second parameter is icon file path, you can set file path with <code>new FileImageSource</code>. third parameter is timeout duration that is also optional.</p>
-<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Toast.html">Toast  API reference</a></p>
+<p><code>Toast</code> is a static method. so you don&#39;t need to any container or parent control for using this control.
+<code>Toast</code> provides two methods, <code>Toast.DisplayText()</code> shows simple text message. <code>Toast.DisplayIconText()</code> shows simple icon and simple text message.<br>
+<code>Toast.DisplayText()</code> method&#39;s first parameter is message text. and the second parameter is timeout duration(milliseconds). the second parameter is optional. If you don&#39;t set this value. The default value is set 3000(3 seconds).<br>
+<code>Toast.DisplayIconText()</code> method&#39;s first parameter is message text. and the second parameter is icon file path, you can set file path with <code>new FileImageSource</code>. the third parameter is timeout duration that is also optional.</p>
+<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Toast.html">Toast  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs"> Toast.DisplayText(&quot;Toast popup&quot;, 3000);
 

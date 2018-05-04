@@ -77,20 +77,20 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="quickstart">Quickstart</h1>
 
-<p>This guide show how to create an application that represents <code>Toast</code> and <code>CircleSlider</code>. If user presses the button, <code>Toast</code> pops up and then it automatically disappear after timeout seconds.
- And If user rotates bezel of Tizen wearable device. <code>CircleSlider</code> bar is moving forward or backward direction.</p>
-<h2 id="1-set-up-the-development-enviroment-and-create-a-project">1. Set up the development enviroment and Create a project</h2>
+<p>This guide shows how to create an application that represents <code>Toast</code> and <code>CircleSlider</code>. If a user presses the button, <code>Toast</code> pops up and then it automatically disappear after timeout seconds.
+ And If a user rotates bezel of Tizen wearable device. <code>CircleSlider</code> bar is moving forward or backward direction.</p>
+<h2 id="1-set-up-the-development-environment-and-create-a-project">1. Set up the development environment and Create a project</h2>
 <ul>
 <li><p>Create Tizen Xamarin Forms App following to <a href="https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application">Tizen.org guide</a>.<br>
 In this guide project name is <code>SampleCircleApp</code></p>
 </li>
-<li><p>Select only wearable device at tizen project wizard.</p>
+<li><p>Select only wearable device at Tizen project wizard.</p>
 <p>  <img src="data/tizen_project_wizard_capture.png" alt="tizen_project_wizard_capture"></p>
 </li>
-<li><p>Search Tizen.Wearable.CircularUI nuget pakage at Nuget package manager. Package source is nuget.org.</p>
+<li><p>Search Tizen.Wearable.CircularUI NuGet package at NuGet package manager. Package source is nuget.org.</p>
 <p>  <img src="data/nuget_package_manager_capture.png" alt="nuget_package_manager_capture"></p>
 </li>
-<li><p>Install Tizen.Wearable.CircularUI nuget at portable class library(PCL) project.</p>
+<li><p>Install Tizen.Wearable.CircularUI NuGet at portable class library(PCL) project.</p>
 <p>  <img src="data/after_Install_nuget_package.png" alt="after_Install_nuget_package"></p>
 </li>
 </ul>
@@ -103,8 +103,8 @@ In this guide project name is <code>SampleCircleApp</code></p>
 <li><code>xmlns:w=clr-namespace:Tizen.Wearable.CircularUI.Forms</code> : <code>w</code> prefix means <code>Tizen.Wearable.CircularUI.Forms</code> namespace.</li>
 <li><code>&lt;w:CirclePage&gt;</code> : <code>CirclePage</code> derive from <code>Xamarin.Forms.Page</code>. This Page&#39;s content area has <code>Label</code> and <code>Button</code>.</li>
 <li><code>&lt;w:CirclePage.CircleSurfaceItems&gt;</code> : <code>CircleSliderSurfaceItem</code> attached for <code>CircleSurfaceItem</code> of  <code>CirclePage</code>.</li>
-<li><p><code>RotaryFocusTargetName</code> is set <code>slider</code> name. <code>CircleSliderSurfaceItem</code> has rotary focus. <code>CircleSliderSurfaceItem</code> can receive rotary event from the wearable device&#39;s bezel interaction.</p>
-<p>For more information . Please refer to <a href="CirclePage.html">CirclePage guide</a></p>
+<li><p><code>RotaryFocusTargetName</code> is set <code>slider</code> name. <code>CircleSliderSurfaceItem</code> has rotary focus. <code>CircleSliderSurfaceItem</code> can receive a Rotary Event from the wearable device&#39;s bezel interaction.</p>
+<p>For more information. Please refer to <a href="CirclePage.html">CirclePage guide</a></p>
 </li>
 </ul>
 </li>
@@ -150,7 +150,7 @@ In this guide project name is <code>SampleCircleApp</code></p>
 </code></pre><p><br><br></p>
 <ul>
 <li>In App.xaml.cs, remove all of the template code and replace it with the following code.<ul>
-<li><code>OnButtonClicked</code> is event handler of <code>Button</code> <code>Clicked</code> event. below code simply display Toast popup during 3 second.</li>
+<li><code>OnButtonClicked</code> is event handler of <code>Button</code> <code>Clicked</code> event. below code simply display Toast popup during 3 seconds.</li>
 </ul>
 </li>
 </ul>
@@ -179,7 +179,7 @@ namespace SampleCircleApp
 }
 </code></pre><p><br><br></p>
 <ul>
-<li>For initialize CircularUI instance. Please insert <code>FormsCircularUI.Init()</code> code in Main method at <code>SampleCircleApp.Tizen.Wearable.cs</code>.
+<li>For initializing CircularUI instance. Please insert <code>FormsCircularUI.Init()</code> code in the Main method at <code>SampleCircleApp.Tizen.Wearable.cs</code>.
 You should import <code>Tizen.Wearable.CircularUI.Forms.Renderer</code> with <code>using</code> directives.</li>
 </ul>
 <p><strong>SampleCircleApp.Tizen.Wearable.cs file</strong></p>
@@ -214,10 +214,10 @@ You should import <code>Tizen.Wearable.CircularUI.Forms.Renderer</code> with <co
 <ul>
 <li><code>SampleCircleApp</code> tpk locate in <code>ProjectPath\SampleCircleApp.Tizen.Wearable\bin\Debug\tizen40\org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk</code>.\</li>
 <li>You can verify your project path. In the Solution Explorer view, right-click the solution name and press <code>open folder in file explorer</code> menu.</li>
-<li>sdb tool loacted in <code>c:\tizen\tools\sdb.exe</code>)</li>
+<li>sdb tool located in <code>c:\tizen\tools\sdb.exe</code>)</li>
 </ul>
 </li>
-<li><p>If your OS is window, launch Tizen Sdb Command Prompt(Tool &gt; Tizen &gt; Tizen Sdb Command Prompt).
+<li><p>If your OS is the window, launch Tizen Sdb Command Prompt(Tool &gt; Tizen &gt; Tizen Sdb Command Prompt).
 If you use Linux. you can use sdb command directly in your project path. </p>
 </li>
 <li><p>Install your app with sdb command</p>

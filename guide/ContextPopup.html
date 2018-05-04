@@ -78,16 +78,16 @@
 <h1 id="contextpopup">ContextPopup</h1>
 
 <p><code>ContextPopup</code> represents Tizen wearable context popup that has one or two items.
-<code>ContextPopup</code> has same shape as <code>ConfirmPopupEffect</code>. <code>ConfirmPopupEffect</code> can be attached any control (such as button).</p>
-<p><em><code>ContextPopup</code> is displayed seperate from any control. So you can&#39;t set this in XAML file.</em>
+<code>ContextPopup</code> has the same shape as <code>ConfirmPopupEffect</code>. <code>ConfirmPopupEffect</code> can be attached any control (such as a button).</p>
+<p><em><code>ContextPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em>
 <em>If you want to attach context popup in XAML file. please use <code>ConfirmPopupEffect</code> instead</em></p>
 <p><img src="data/context_popup.png" alt="context_popup"></p>
 <h2 id="create-contextpopup">Create ContextPopup</h2>
 <p><code>ContextPopupItem</code> is each item of <code>ContextPopup</code>. <code>ContextPopupItem</code> parameter of constructor set item text.
 One or two <code>ContextPopupItem</code> can be attached at <code>ContextPopup</code> using <code>ContextPopup.Items.Add()</code>. <code>ItemSelected</code> event is occurred when user select item. <code>SelectedItem</code> get the value which item selected.</p>
-<p><em>It is possible to add more than 2 items, but any items from 3rd item are hidden. so one or two items are recommended.</em></p>
+<p><em>It is possible to add more than 2 items, but any items from the 3rd item are hidden. so one or two items are recommended.</em></p>
 <p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCContextPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCContextPopup.xaml.cs</em></p>
-<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html">ContextPopup  API reference</a></p>
+<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html">ContextPopup  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            var item1 = new ContextPopupItem(&quot;item 1&quot;);
             var item2 = new ContextPopupItem(&quot;item 2&quot;);

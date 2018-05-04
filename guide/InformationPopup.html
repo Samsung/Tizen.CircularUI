@@ -77,8 +77,8 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.InformationPopup">
 <h1 id="informationpopup">InformationPopup</h1>
 
-<p><code>InformationPopup</code> can represent 3 types of Tizen Wearable EFL popup style. InformationPopup is usefull to show any information or warnning.</p>
-<p><em><code>InformationPopup</code> is displayed seperate from any control. So you can&#39;t set this in XAML file.</em></p>
+<p><code>InformationPopup</code> can represent 3 types of Tizen Wearable EFL popup style. InformationPopup is useful to show any information or warning.</p>
+<p><em><code>InformationPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em></p>
 <table>
 <thead>
 <tr>
@@ -96,11 +96,11 @@
 </tbody>
 </table>
 <h2 id="create-single-text-informationpopup">Create single text InformationPopup</h2>
-<p>Single text informationPopup is used for displaying text. Single text informationPopup is similar to Toast popup. 
+<p>Single text <code>InformationPopup</code> is used for displaying text. Single text <code>InformationPopup</code> is similar to <code>Toast</code> popup. 
 but this popup doesn&#39;t disappear automatically.<br>
- <code>Text</code> property can be set with text. <code>BackButtonPressed</code> event occur when user press back button of device. If you want to dismiss popup when this event occurred. you should add <code>Dismiss()</code> in <code>BackButtonPressed</code> event handle code.</p>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCInformationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCInformationPopup.xaml.cs</em></p>
-<p>For more information . Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html">InformationPopup  API reference</a></p>
+ <code>Text</code> property can be set with text. <code>BackButtonPressed</code> event occurs when user press back button of the device. If you want to dismiss popup when this event occurred. you should add <code>Dismiss()</code> in <code>BackButtonPressed</code> event handle code.</p>
+<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCInformationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCInformationPopup.xaml.cs</em></p>
+<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html">InformationPopup  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            _textPopUp = new InformationPopup();
             _textPopUp.Text = &quot;This is text popup test&quot;;
@@ -111,9 +111,9 @@ but this popup doesn&#39;t disappear automatically.<br>
                 label1.Text = &quot;text popup is dismissed&quot;;
             };
 </code></pre><h2 id="create-bottom-button-informationpopup">Create bottom button InformationPopup</h2>
-<p>You can set <code>BottomButton</code> property with <code>MenuItem</code>. bottom button is used for confirmation of user.
+<p>You can set <code>BottomButton</code> property with <code>MenuItem</code>. the bottom button is used for confirmation of user.
 InformationPopup has <code>Title</code> property for displaying title.
- <code>BottomButton.Clicked</code> event occur when user press bottom button.</p>
+<code>BottomButton.Clicked</code> event occurs when user press bottom button.</p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            var bottomButton = new MenuItem()
             {
@@ -135,7 +135,7 @@ InformationPopup has <code>Title</code> property for displaying title.
                 label1.Text = &quot;text&amp;button is dismissed&quot;;
             };
 </code></pre><h2 id="create-progress-informationpopup">Create progress InformationPopup</h2>
-<p><code>InformationPopup</code>  has <code>IsProgressRunning</code> property. If this property set <code>true</code>. small circle progress bar is displayed center of screen.</p>
+<p><code>InformationPopup</code>  has <code>IsProgressRunning</code> property. If this property set <code>true</code>. small circle progress bar is displayed center of the screen.</p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            _progressPopUp = new InformationPopup();
             _progressPopUp.Title = &quot;Popup title&quot;;

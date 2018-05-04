@@ -80,14 +80,14 @@
 <p>CirclePage derives from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Xamarin.Forms.Page</a>. This visual element occupies all of the wearable screen.</p>
 <p><img src="data/circlepage.png" alt="CirclePage"> <img src="data/circlepage_surfaceitem.png" alt="CircleSurfaceItem"></p>
 <h2 id="overview">Overview</h2>
-<p><code>CirclePage</code> is container of any control that use circleObject or rotary event.
-if you want to use any circle control or to handle rotary event. you have to use <code>CirclePage</code>.
+<p><code>CirclePage</code> is a container of any control that uses circle object or <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.
+If you want to use any circle control or to handle the <code>Rotary Event</code>. you have to use <code>CirclePage</code>.
 <code>CirclePage</code> can set bottom button(<code>ActionButtonItem</code>) and <code>CircleProgressBar</code> and <code>CircleSlider</code> and <code>MoreOption</code> on it&#39;s own.</p>
-<p><strong>WARNNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
+<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contain these Control. If other <code>pages</code> contain these control. It may cause exception or control cannot be displayed.</strong></p>
 <ul>
 <li><p>bottom button(ActionButtonItem) </p>
 <ul>
-<li><p>Semicircular button is shown at bottom of screen. refer to below image.</p>
+<li><p>A Semicircular button is shown at bottom of screen. refer to below image.</p>
 <p><img src="data/bottom_button.png" alt="bottom_button"></p>
 </li>
 </ul>
@@ -101,8 +101,8 @@ if you want to use any circle control or to handle rotary event. you have to use
 </li>
 <li><p>CircleSlider</p>
 <ul>
-<li><p>Circle Slider changes value corresponding to rotary events. this shows a circle bar at the edge of the circle screen.
-You can change radius of circle bar with modifying radius value.</p>
+<li><p>Circle Slider changes value corresponding to the <code>Rotary Event</code>. this shows a circle bar at the edge of the circle screen.
+You can change the radius of circle bar with modifying radius value.</p>
 <p><img src="data/circle_slider.png" alt="circle_slider"></p>
 </li>
 </ul>
@@ -118,10 +118,10 @@ The rotary selector arranges multiple items around the circular edge of the scre
 </li>
 </ul>
 <h2 id="create-circlepage">Create CirclePage</h2>
-<p>First, you should download Tizen.Wearalbe.CircularUI nuget package in your application project, please refer to <a href="Quickstart.html">QuickStart</a>.<br>
+<p>First, you should download Tizen.Wearable.CircularUI NuGet package in your application project, please refer to <a href="Quickstart.html">QuickStart</a>.<br>
 Add a new XAML page to the Tizen Xamarin.Forms application, First import Tizen.Wearable.CircularUI.Forms and change the base class from ContentPage to CirclePage. This has to be done in both the C# and XAML.<br>
 In a XAML file. import CircularUI and define namespace like as <code>xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;</code></p>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCCirclePage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml</em></p>
+<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCCirclePage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCirclePage.xaml</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
@@ -150,9 +150,9 @@ namespace WearableUIGallery.TC
     &lt;w:CirclePage.Content&gt;
 </code></pre><h2 id="adding-content-at-circlepage">Adding Content at CirclePage</h2>
 <p>You can set content at <code>CirclePage.Content</code>. The following XAML code show CirclePage set content with <code>CircleDateTimeSelector</code>.
-<code>RotaryFocusTargetName</code> property set the current focused control that is handle by rotating and display the focused control&#39;s circle object.
-If you don&#39;t set this value properly. Control can&#39;t receive rotary event or circle object can&#39;t be shown.</p>
-<p>For more information . Please refer to below links</p>
+<code>RotaryFocusTargetName</code> property set the currently focused control that is handled by rotating and display the focused control&#39;s circle object.
+If you don&#39;t set this value properly. Control can&#39;t receive the Rotary Event or circle object can&#39;t be shown.</p>
+<p>For more information. Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CirclePage.html">CirclePage API reference</a></li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Xamarin.Forms.Page guide</a></li>
@@ -183,13 +183,13 @@ If you don&#39;t set this value properly. Control can&#39;t receive rotary event
         &lt;/StackLayout&gt;
     &lt;/w:CirclePage.Content&gt;
 </code></pre><h2 id="adding-actionbuttonitem-at-circlepage">Adding ActionButtonItem at CirclePage</h2>
-<p><code>ActionButtonItem</code> in CirclePage presents bottom button. ActionButtonItem derive from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/">Xamarin.Forms.Menuitem</a>.
+<p><code>ActionButtonItem</code> in CirclePage presents bottom button. ActionButtonItem derives from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/">Xamarin.Forms.Menuitem</a>.
 <code>ActionButtonItem</code> has the following properties:</p>
 <ul>
 <li><code>Command</code> : Gets or sets the <code>ICommand</code> to be invoked on activation(item clicked).</li>
 <li><code>Text</code> : Gets or sets button&#39;s text.</li>
 </ul>
-<p>For more information . Please refer to below links</p>
+<p>For more information. Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html">ActionButtonItem API reference</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/">Xamarin.Forms.MenuItem API reference</a></li>
@@ -200,14 +200,14 @@ If you don&#39;t set this value properly. Control can&#39;t receive rotary event
     &lt;/w:CirclePage.ActionButton&gt;
 </code></pre><h2 id="adding-toolbaritems-at-circlepage">Adding ToolbarItems at CirclePage</h2>
 <p>CirclePage <code>ToolbarItems</code> set rotary selector view&#39;s items. You can set each item with <code>CircleToolbarItem</code> property.
-CircleToolbarItem derive from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/">Xamarin.Forms.ToolbarItem</a>. </p>
+CircleToolbarItem derives from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/">Xamarin.Forms.ToolbarItem</a>. </p>
 <p><code>CircleToolbarItem</code> has the following properties:</p>
 <ul>
 <li><code>Command</code> : Gets or sets the <code>ICommand</code> to be invoked on activation(item clicked).</li>
 <li><code>Icon</code> : Gets or sets item&#39;s image.</li>
 <li><code>Text</code> : Gets or sets item&#39;s title.</li>
 </ul>
-<p>For more information . Please refer to below links</p>
+<p>For more information. Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleToolbarItem.html">CircleToolbarItem API reference</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/">Xamarin.Forms.ToolbarItem API reference</a></li>
@@ -231,12 +231,12 @@ CircleToolbarItem derive from <a href="https://developer.xamarin.com/api/type/Xa
     &lt;/w:CirclePage.ToolbarItems&gt;
 </code></pre><h2 id="adding-circleprogressbarsurfaceitem-at-circlepage">Adding CircleProgressBarSurfaceItem at CirclePage</h2>
 <p>CirclePage <code>CircleSurfaceItems</code>  can set <code>CircleProgressBarSurfaceItem</code> and <code>CircleSliderSurfaceItem</code>.
-<code>CircleProgressBarSurfaceItem</code> represent Circle ProgressBar.<code>progress1</code> at XAML code represents outter circle of below image. and <code>progress2</code> represents inner circle.
-If you use CircleProgressbar, you don&#39;t need to set <code>RotaryFocusTargetName</code> property of CirclePage.
-When <code>Value</code> property is incread or decrease. circle object extend or shrink following to <code>Value</code> property.</p>
+<code>CircleProgressBarSurfaceItem</code> represent Circle ProgressBar.<code>progress1</code> at XAML code represents the outer circle of below image. and <code>progress2</code> represents the inner circle.
+If you use CircleProgressbar, you don&#39;t need to set the <code>RotaryFocusTargetName</code> property of CirclePage.
+When <code>Value</code> property is increased or decreased. circle object extends or shrinks following to the <code>Value</code> property.</p>
 <p><code>CircleProgressBarSurfaceItem</code> has the following properties:</p>
 <ul>
-<li><code>Value</code> : Gets or sets the value of the progressbar..</li>
+<li><code>Value</code> : Gets or sets the value of the progress bar.</li>
 <li><code>IsVisible</code> : Gets or sets the visibility value of circle surface item.</li>
 <li><code>BarRadius</code> : Gets or sets the bar radius value.</li>
 <li><code>BackgroundRadius</code> : Gets or sets the background radius value.</li>
@@ -245,13 +245,13 @@ When <code>Value</code> property is incread or decrease. circle object extend or
 <li><code>BarColor</code> : Gets or sets the bar color value.</li>
 <li><code>BackgroundLineWidth</code> : Gets or sets the background color value.</li>
 </ul>
-<p>For more information . Please refer to below links</p>
+<p>For more information. Please refer to below links</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html">CircleSurfaceItem  API reference</a></li>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleProgressBarSurfaceItem.html">CircleProgressBarSurfaceItem  API reference</a></li>
 </ul>
 <p><img src="data/circle_progressbar.png" alt="circle_progressbar"></p>
-<p><em>This guide&#39;s code example use XUIComponent&#39;s CircleProgressBar.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleProgressBar.xaml</em></p>
+<p><em>This guide&#39;s code example uses XUIComponent&#39;s CircleProgressBar.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleProgressBar.xaml</em></p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;w:CirclePage
     x:Class=&quot;UIComponents.Samples.CircleProgressBar&quot;
