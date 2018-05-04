@@ -27,12 +27,12 @@ namespace WearableUIGallery.TC
             mylist.ItemsSource = Texts;
 		}
 
-        void DoAdd()
+        void DoAdd(object sender, EventArgs e)
         {
             Texts.Add("Test " + (Texts.Count+1));
         }
 
-        void DoDel()
+        void DoDel(object sender, EventArgs e)
         {
             if (Texts.Count > 0)
                 Texts.RemoveAt(Texts.Count - 1);
