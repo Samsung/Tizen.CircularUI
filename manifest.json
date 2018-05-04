@@ -41,7 +41,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleDateTimeSelector.html",
-          "hash": "oIpXePjd3yOnT2uvbVxNIA=="
+          "hash": "lQ/AVxLug+XEWMwqTIbJjA=="
         }
       },
       "is_incremental": false,
@@ -53,7 +53,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleListView.html",
-          "hash": "UXtCVzdrVd0z4KCBRYJIMw=="
+          "hash": "eNQV8IhX7caih4IXO/s9uA=="
         }
       },
       "is_incremental": false,
@@ -77,7 +77,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleScrollView.html",
-          "hash": "cjMuJGNWtMuYZQc/DTuY+w=="
+          "hash": "8euRNH/Y/ktkLxFL7td4eg=="
         }
       },
       "is_incremental": false,
@@ -89,7 +89,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleStackLayout.html",
-          "hash": "8o0n2kEo0so49a10wMyMoA=="
+          "hash": "Mua0qybcUnd7xp5y75KLQQ=="
         }
       },
       "is_incremental": false,
@@ -101,7 +101,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleStepper.html",
-          "hash": "boN0OPVceSR3EUSTl1b1qg=="
+          "hash": "gT7wGQpZt5g7DMOylEykEQ=="
         }
       },
       "is_incremental": false,
@@ -125,7 +125,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ConfirmPopupEffect.html",
-          "hash": "OYiXWbRao5Xs35P0ow7rnQ=="
+          "hash": "1pmeIVPwHAV3k04V/B4YGg=="
         }
       },
       "is_incremental": false,
@@ -173,7 +173,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/IndexPage.html",
-          "hash": "AYbq5IL0F+6BywtBI3kseA=="
+          "hash": "6utqHkDW+2afKSdVmTIVVQ=="
         }
       },
       "is_incremental": false,
@@ -228,6 +228,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "../guide/Radio.md",
       "output": {
@@ -240,9 +243,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "../guide/Toast.md",
       "output": {
@@ -1611,17 +1611,17 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

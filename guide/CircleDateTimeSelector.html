@@ -78,9 +78,9 @@
 <h1 id="circledatetimeselector">CircleDateTimeSelector</h1>
 
 <p><code>CircleDateTimeSelector</code> is a view for Date picker and Time picker.
-You can scroll it by <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions"><code>Bezel interaction</code></a>.
+You can scroll it by <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
 This view is the size that covers the entire screen.
-In order to receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary"><code>Rotary event</code></a>, it must be registered as <code>RotaryEventConsumer</code> property of <a class="xref" href="CirclePage.html"><code>CirclePage</code></a>.</p>
+In order to receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code> property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
 <p>In the Date type, you can change the value of the item by touching the item and rotating bezel to set the year: month: day value.
 For the Time type, you can change the hour: minute: AM / PM value.</p>
 <table>
@@ -99,10 +99,10 @@ For the Time type, you can change the hour: minute: AM / PM value.</p>
 </table>
 <p><strong>WARNNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contain these Control. If other <code>page</code> contains these control. It may cause exception or control can not be displayed.</strong></p>
 <h2 id="adding-circledatetimeselector-at-circlepage">Adding CircleDateTimeSelector at CirclePage</h2>
-<p>You can set <code>CircleDateTimeSelector</code> at <a class="xref" href="CirclePage.html"><code>CirclePage.Content</code></a>. If you&#39;d like to know how to add <code>CirclePage</code>, please refer to <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-The following code show <a class="xref" href="CirclePage.html"><code>CirclePage</code></a> with <code>CircleDateTimeSelector</code>.
+<p>You can set <code>CircleDateTimeSelector</code> at <a class="xref" href="CirclePage.html">CirclePage.Content</a>. If you&#39;d like to know how to add <a class="xref" href="CirclePage.html">CirclePage</a>, please refer to <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
+The following code show <a class="xref" href="CirclePage.html">CirclePage</a> with <code>CircleDateTimeSelector</code>.
 <code>RotaryFocusTargetName</code> attribute sets the current focused control that is handled by rotating and display the focused control&#39;s circle object.
-If you don&#39;t set this property, control can&#39;t receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary"><code>Rotary event</code></a>.</p>
+If you don&#39;t set this property, control can&#39;t receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>.</p>
 <p><code>CircleDateTimeSelector</code> has the following properties:</p>
 <ul>
 <li>ValueType : Time can be changed if it is Time and if it is a Date, the date can be changed.</li>
