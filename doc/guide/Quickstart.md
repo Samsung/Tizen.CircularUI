@@ -15,7 +15,9 @@ This guide shows how to create an application that represents `Toast` and `Circl
    
     ![nuget_package_source](data/nuget_package_source.png)
 
-- Search Xamarin.Forms NuGet package and install latest version via NuGet package manager. Package source is [Nuget.org](https://api.nuget.org/v3/index.json).
+- Search Xamarin.Forms NuGet package and install latest version(Minimum version required is 3.1.0.469394-pre1) via NuGet package manager. Package source is [Nuget.org](https://api.nuget.org/v3/index.json).
+
+    ![nuget_package_manager_capture2](data/nuget_package_manager_capture2.png)
 
 - Search Tizen.Wearable.CircularUI NuGet package and install latest version via NuGet package manager. Package source is [myget](https://tizen.myget.org/F/dotnet/api/v3/index.json).
 
