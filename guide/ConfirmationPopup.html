@@ -83,8 +83,8 @@
 <p><em><code>ConfirmationPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em></p>
 <p><img src="data/confirmation_popup1.png" alt="confirmation_popup1"></p>
 <h2 id="create-confirmationpopup">Create ConfirmationPopup</h2>
-<p><code>ConfirmationPopup.Title</code> Property set the title of the popup. you can set the <code>Content</code> property with Layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
-<code>ConfirmationPopup.FirstButton</code> property set left side button. <code>ConfirmationPopup.SecondButton</code>property set right side button. you can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.</p>
+<p><code>ConfirmationPopup.Title</code> Property sets the title of the popup. You can set the <code>Content</code> property with Layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
+<code>ConfirmationPopup.FirstButton</code> property sets left side button. <code>ConfirmationPopup.SecondButton</code>property sets right side button. You can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.</p>
 <p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs</em></p>
 <p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html">ConfirmationPopup  API reference</a></p>
 <p><strong>C# file</strong></p>
@@ -133,7 +133,7 @@
     }
 </code></pre><h2 id="how-to-set-long-text-at-confirmationpopup">How to set long Text at ConfirmationPopup</h2>
 <p>ConfirmationPopup has <code>Text</code> Property. This Property is useful to set long text.
-If a long text was set by <code>Text</code> property. you don&#39;t need to add <code>StackLayout</code> and <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
+If a long text was set by <code>Text</code> property, you don&#39;t need to add <code>StackLayout</code>, <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
 <p><em><code>Text</code> Property&#39;s area overlaps <code>Content</code> Property area. So do not use two property at the same time.</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            _popUp2 = new ConfirmationPopup();
