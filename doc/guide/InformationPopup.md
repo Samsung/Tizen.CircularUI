@@ -14,10 +14,9 @@ summary: InformationPopup control guide
 |Single text|Bottom button|Progress|
 
 ## Create single text InformationPopup
-Single text `InformationPopup` is used for displaying text. Single text `InformationPopup` is similar to `Toast` popup. 
-but this popup doesn't disappear automatically.<br>
- `Text` property can be set with text. `BackButtonPressed` event occurs when user press back button of the device. If you want to dismiss popup when this event occurred. you should add `Dismiss()` in `BackButtonPressed` event handle code.
+Single text `InformationPopup` is used for displaying text. It is similar to `Toast` popup. But this popup doesn't disappear automatically.
 
+ `Text` property can be set with text. `BackButtonPressed` event occurs when user press back button of the device. If you want to dismiss popup when this event occurred, you should add `Dismiss()` in `BackButtonPressed` event handle code.
 
 _This guide's code example uses WearableUIGallery's TCInformationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCInformationPopup.xaml.cs_
 
@@ -36,7 +35,7 @@ For more information. Please refer to [InformationPopup  API reference](https://
 ```
 
 ## Create bottom button InformationPopup
-You can set `BottomButton` property with `MenuItem`. the bottom button is used for confirmation of user.
+You can set `BottomButton` property with `MenuItem`. The bottom button is used for confirmation of user.
 InformationPopup has `Title` property for displaying title.
 `BottomButton.Clicked` event occurs when user press bottom button.
 
@@ -64,7 +63,7 @@ InformationPopup has `Title` property for displaying title.
 ```
 
 ## Create progress InformationPopup
-`InformationPopup`  has `IsProgressRunning` property. If this property set `true`. small circle progress bar is displayed center of the screen.
+`InformationPopup`  has `IsProgressRunning` property. If this property sets `true`, small circle progress bar is displayed center of the screen.
 
 **C# file**
 ```cs

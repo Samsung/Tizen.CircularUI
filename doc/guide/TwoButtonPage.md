@@ -11,9 +11,9 @@ summary: TwoButtonPage control guide
 |Non-overlapped|Overlapped|
 
 ## Create TwoButtonPage
-you can set control in the `TwoButtonPage.Content`. In this example, long text Label and two buttons were set for Content.
-If `Overlap` property is `true`. The `Content` area occupies the whole of the screen. If `Overlap` property is `false`. The `Content` area occupies screen that is excluded button's area. `Overlap` property default value is `false`.
-`TwoButtonPage.firstButton` set left side button. `TwoButtonPage.SecondButton` set right side button. you can add buttons using `MenuItem`.
+You can set control in the `TwoButtonPage.Content`. In this example, long text Label and two buttons were set for Content.
+If `Overlap` property is `true`, the `Content` area occupies the whole of the screen. If `Overlap` property is `false`, the `Content` area occupies screen that is excluded button's area. The default value of `Overlap` property is `false`.
+`TwoButtonPage.firstButton` sets left side button. `TwoButtonPage.SecondButton` sets right side button. You can add buttons using `MenuItem`.
 
 _This guide's code example uses WearableUIGallery's TCTwoButtonPage code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml_
 

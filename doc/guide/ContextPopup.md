@@ -8,16 +8,15 @@ summary: ContextPopup control guide
 `ContextPopup` has the same shape as `ConfirmPopupEffect`. `ConfirmPopupEffect` can be attached any control (such as a button).
 
 *`ContextPopup` is displayed separately from any control. So you can't set this in XAML file.*
-*If you want to attach context popup in XAML file. please use `ConfirmPopupEffect` instead*
+*If you want to attach context popup in XAML file, please use [ConfirmPopupEffect](xref:Tizen.Wearable.CircularUI.doc.ConfirmPopupEffect) instead.*
 
 ![context_popup](data/context_popup.png)
 
-
 ## Create ContextPopup
 `ContextPopupItem` is each item of `ContextPopup`. `ContextPopupItem` parameter of constructor set item text.
-One or two `ContextPopupItem` can be attached at `ContextPopup` using `ContextPopup.Items.Add()`. `ItemSelected` event is occurred when user select item. `SelectedItem` get the value which item selected.
+One or two `ContextPopupItem` can be attached at `ContextPopup` using `ContextPopup.Items.Add()`. `ItemSelected` event is occurred when user select item. `SelectedItem` gets the value which item selected.
 
-*It is possible to add more than 2 items, but any items from the 3rd item are hidden. so one or two items are recommended.*
+*It is possible to add more than 2 items, but any items from the 3rd item are hidden. So one or two items are recommended.*
 
 _This guide's code example use WearableUIGallery's TCContextPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCContextPopup.xaml.cs_
 
