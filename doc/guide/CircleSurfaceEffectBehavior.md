@@ -4,11 +4,11 @@ summary: CircleSurfaceEffectBehavior guide
 ---
 
 # CircleSurfaceEffectBehavior
-`CircleSurfaceEffectBehavior` is an effect which allows to attach `CircleSurface` to [Xamarin.Forms.Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). [CircleSurface](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface) is Tizen specific component that manages [circle objects](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-object). 
-If you need to add `circle control`(such as [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper)) at `Page` in Tizen Xamarin Forms application. There is two way, one is inserting these controls to `CirclePage`, another is adding `CircleSurfaceEffectBehavior` at `Page` that includes `circle control`.
+`CircleSurfaceEffectBehavior` is an effect which allows to attach `CircleSurface` to [Xamarin.Forms.Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). [CircleSurface](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface) is Tizen specific component that manages [circle objects](https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-object).
+If you need to add `circle control`(such as [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper)) at `Page` in Tizen Xamarin Forms application, there are two ways. One is inserting these controls to `CirclePage`, the other is adding `CircleSurfaceEffectBehavior` at `Page` that includes `circle control`.
 
-## adding CircleSurfaceEffectBehavior at Page
-add `CircleSurfaceEffectBehavior` at `<Page.Behaviors>`. and then set `RotaryFocusTargetName` property with `circle control` name. `RotaryFocusTargetName` set the currently focused control that is handled by rotating and display the focused control's circle object. please refer to below sample code.
+## Adding CircleSurfaceEffectBehavior at Page
+Add `CircleSurfaceEffectBehavior` at `<Page.Behaviors>`. And then set `RotaryFocusTargetName` property with `circle control` name. `RotaryFocusTargetName` sets the currently focused control that is handled by rotating and display the focused control's circle object. Please refer to below sample code.
 
 _This guide's code example uses WearableUIGallery's TCListAppender code at the test\WearableUIGallery\WearableUIGallery\TC\TCListAppender.xaml_
 

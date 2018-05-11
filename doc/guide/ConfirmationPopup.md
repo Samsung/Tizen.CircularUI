@@ -11,8 +11,8 @@ summary: ConfirmationPopup control guide
 ![confirmation_popup1](data/confirmation_popup1.png)
 
 ## Create ConfirmationPopup
-`ConfirmationPopup.Title` Property set the title of the popup. you can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
-`ConfirmationPopup.FirstButton` property set left side button. `ConfirmationPopup.SecondButton`property set right side button. you can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
+`ConfirmationPopup.Title` Property sets the title of the popup. You can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
+`ConfirmationPopup.FirstButton` property sets left side button. `ConfirmationPopup.SecondButton`property sets right side button. You can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
 
 _This guide's code example uses WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
 
@@ -67,7 +67,7 @@ For more information. Please refer to [ConfirmationPopup  API reference](https:/
 
 ## How to set long Text at ConfirmationPopup
 ConfirmationPopup has `Text` Property. This Property is useful to set long text.
-If a long text was set by `Text` property. you don't need to add `StackLayout` and `ScrollView` and `Label` for displaying long text.
+If a long text was set by `Text` property, you don't need to add `StackLayout`, `ScrollView` and `Label` for displaying long text.
 
 *`Text` Property's area overlaps `Content` Property area. So do not use two property at the same time.*
 

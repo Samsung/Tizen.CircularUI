@@ -26,7 +26,7 @@ The `Entry` is not visible because it is masked by the IME.
 The above image is the same as using `PopupEntry`, It can type text while watching it properly.
 
 The `BackgroundColor` of the input pop-up is the same as the `BackgroundColor` of the `PopupEntry`
-And `TextColor` inside the input pop-up is also the same as the `TextColor` of the `PopupEntry` also [IsPassword](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/) property is kept the same.
+and `TextColor` inside the input pop-up is also the same as the `TextColor` of the `PopupEntry` also [IsPassword](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/) property is kept the same.
 
 # How to use
 
