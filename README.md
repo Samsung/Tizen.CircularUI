@@ -1,5 +1,7 @@
 # Tizen Wearable CircularUI
 
+[![Build Status](http://13.124.0.26:8080/job/Tizen.CIrcularUI/job/CircularUI%20Release/badge/icon)](http://13.124.0.26:8080/job/Tizen.CIrcularUI/job/CircularUI%20Release/)
+
 - [Introduction](#introduction)
 - [Controls](#controls)
 - [Prerequisite](#prerequisite)
