@@ -221,7 +221,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Quickstart.html",
-          "hash": "T/nekxrQ5eXyeO88/sm0cw=="
+          "hash": "/DrwN+aDzysWUtSARWidUA=="
         }
       },
       "is_incremental": false,
@@ -752,6 +752,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/nuget_package_manager_capture2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/nuget_package_manager_capture2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/nuget_package_source.png",
       "output": {
         "resource": {
@@ -1242,7 +1253,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html",
-          "hash": "LGrfjeCI7FKUyOAzBnxoWg=="
+          "hash": "JBMc/wBzBt/7x+qZ2KsZpg=="
         }
       },
       "is_incremental": false,
@@ -1278,7 +1289,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html",
-          "hash": "/eoahBU03vMnW41GICWZig=="
+          "hash": "TErULgucnPCkhXGvW3fIqw=="
         }
       },
       "is_incremental": false,
@@ -1290,7 +1301,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.html",
-          "hash": "TQfEqdq1xAYuYryNfXKfeA=="
+          "hash": "sV6BmrBezu1xnJy5HIpTeg=="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1313,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html",
-          "hash": "nGyiFDci98pzliX/o/KJ0A=="
+          "hash": "MVxb0u8jb3A8VgXfUQnujw=="
         }
       },
       "is_incremental": false,
@@ -1422,7 +1433,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html",
-          "hash": "N/IhCLVMbqpyuDLzb4OXfQ=="
+          "hash": "rgitWRhWUeRk1bdmVecv9A=="
         }
       },
       "is_incremental": false,
@@ -1627,11 +1638,11 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         }
