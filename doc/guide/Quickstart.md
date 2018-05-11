@@ -4,7 +4,8 @@ This guide shows how to create an application that represents `Toast` and `Circl
  And If a user rotates bezel of Tizen wearable device. `CircleSlider` bar is moving forward or backward direction.
 
 ## 1. Set up the development environment and Create a project
-- Create Tizen Xamarin Forms App following to [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).<br>
+- Create Tizen Xamarin Forms App following to [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
+
   In this guide project name is `SampleCircleApp`
 
 - Select only wearable device at Tizen project wizard.
@@ -29,7 +30,7 @@ This guide shows how to create an application that represents `Toast` and `Circl
 
 
 ## 2. Insert CircularUI Control code
-- remove SampleCircleApp.cs that is generated automatically at PCL. and then add App.xaml and App.xaml.cs using add item.
+- Remove SampleCircleApp.cs that is generated automatically at PCL. and then add App.xaml and App.xaml.cs using add item.
 
 - In App.xaml file, remove all of the template code and replace it with the following code. This code defines the user interface for the page.
   

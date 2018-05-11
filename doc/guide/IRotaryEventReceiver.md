@@ -4,12 +4,12 @@ summary: IRotaryEventReceiver guide
 ---
 
 # IRotaryEventReceiver
-`IRotaryEventReceiver` is a receiver interface to take a rotary event. `IRotaryEventReceiver` has `Rotate(RotaryEventArgs)` method that is called when rotary event is occurred. You can simply handle of rotary event using this interface. such as below sample, you can easily rotate image according to bezel rotation.
+`IRotaryEventReceiver` is a receiver interface to take a rotary event. `IRotaryEventReceiver` has `Rotate(RotaryEventArgs)` method that is called when rotary event is occurred. You can simply handle of rotary event using this interface. Such as below sample, you can easily rotate image according to bezel rotation.
 
-## adding IRotaryEventReceiver
+## Adding IRotaryEventReceiver
 Add `IRotaryEventReceiver` interface to `CirclePage` or `Page` having [CircleSurfaceEffectBehavior](xref:Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior). Implement `Rotate()` method to control a rotary event. `RotaryEventArgs` is event argument for the Rotary Event.
 `RotaryEventArgs.IsClockwise` gets the direction of bezel rotation. If the device has rotated in the clockwise direction, `IsClockwise` is `true`.
-Below sample receives rotary event at `Rotate()` method. and add angle of the image following to rotary event direction. and then rotate the image.
+Below sample receives rotary event at `Rotate()` method and add angle of the image following to rotary event direction. And then rotate the image.
 
 _This guide's code example uses WearableUIGallery's TCIRotaryEventReceiver code at the test\WearableUIGallery\WearableUIGallery\TC\TCIRotaryEventReceiver.xaml_
 
@@ -54,4 +54,3 @@ For more information. Please refer to [IRotaryEventReceiver API reference](https
         <Image x:Name="Cat" Source="image/cat360.png" />
     </w:CirclePage.Content>
 ```
-
