@@ -1,6 +1,6 @@
 ---
-uid: Tizen.Wearable.CircularUI.doc.Radio
-summary: Radio control guide
+uid: Tizen.Wearable.CircularUI.doc.Toast
+summary: Toast control guide
 ---
 
 # Toast
