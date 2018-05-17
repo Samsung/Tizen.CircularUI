@@ -4,7 +4,7 @@ summary: ConfirmationPopup control guide
 ---
 
 # ConfirmationPopup
-`ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is usefull to select one of two options. (e.g  cancel/done, share/delete)
+`ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is useful to select one of two options. (e.g  cancel/done, share/delete)
 
 *`ConfirmationPopup` is displayed separately from any control. So you can't set this in XAML file.*
 

@@ -1,6 +1,6 @@
 ---
 uid: Tizen.Wearable.CircularUI.doc.ConfirmPopupEffect
-summary: ConfirmPopupEffect control guide
+summary: ConfirmPopupEffect guide
 ---
 # ConfirmPopupEffect
 
