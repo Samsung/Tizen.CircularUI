@@ -258,7 +258,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (!string.IsNullOrEmpty(SecondButton.Text)) _secondButton.Text = SecondButton.Text;
 
-                if (FirstButton.Icon != null)
+                if (SecondButton.Icon != null)
                 {
                     var iconPath = SecondButton.Icon.File;
                     if (!string.IsNullOrEmpty(iconPath))
