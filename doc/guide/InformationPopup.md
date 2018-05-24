@@ -36,6 +36,8 @@ For more information. Please refer to [InformationPopup  API reference](https://
 
 ## Create bottom button InformationPopup
 You can set `BottomButton` property with `MenuItem`. The bottom button is used for confirmation of user.
+Do not use `Icon` property and `Text` property at the same time because two area has the same position.
+You should use only one property between `Icon` property and `Text` property for avoiding overlapped.
 InformationPopup has `Title` property for displaying title.
 `BottomButton.Clicked` event occurs when user press bottom button.
 

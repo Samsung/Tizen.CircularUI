@@ -13,6 +13,7 @@ summary: ConfirmationPopup control guide
 ## Create ConfirmationPopup
 `ConfirmationPopup.Title` Property sets the title of the popup. You can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
 `ConfirmationPopup.FirstButton` property sets left side button. `ConfirmationPopup.SecondButton`property sets right side button. You can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
+*`Text` Property of `MenuItem` will be ignored since button has no spece to display text*
 
 _This guide's code example uses WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
 

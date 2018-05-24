@@ -158,6 +158,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         /// <summary>
         /// Gets or sets left button of the Popup.
+        /// Text property of MenuItem is ignored since button has no space to display text.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public MenuItem FirstButton
@@ -168,6 +169,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         /// <summary>
         /// Gets or sets right button of the Popup.
+        /// Text property of MenuItem is ignored since button has no space to display text.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public MenuItem SecondButton
