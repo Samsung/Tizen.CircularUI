@@ -137,7 +137,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ConfirmationPopup.html",
-          "hash": "6Cz/PmWQVb5euSuRVsGCTA=="
+          "hash": "E4QjE08bMMs24QXelmon6w=="
         }
       },
       "is_incremental": false,
@@ -185,7 +185,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/InformationPopup.html",
-          "hash": "OEdRXS9Jd2klxRxbcjZBXw=="
+          "hash": "0TEm/mBgQi1SFctsRLs8NA=="
         }
       },
       "is_incremental": false,
@@ -257,7 +257,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/TwoButtonPage.html",
-          "hash": "iOJ5XHfKbN5T6gc5xmxxig=="
+          "hash": "rc/wsgdDgQs5bAYsa8rfeQ=="
         }
       },
       "is_incremental": false,
@@ -1094,7 +1094,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html",
-          "hash": "FGj88cqCHC7iMNRuifqvGA=="
+          "hash": "uMHNUQf8Ogp8hgA1T04n2Q=="
         }
       },
       "is_incremental": false,
@@ -1190,7 +1190,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html",
-          "hash": "3aWIFsidbAxQKNxH5IajIA=="
+          "hash": "5qIRsQ/QtSt9VIZeb9Cm1w=="
         }
       },
       "is_incremental": false,
@@ -1574,7 +1574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html",
-          "hash": "KfH2AKHZv71TYs93dkG1ig=="
+          "hash": "q9/s7WVCnWFmf2x+NiIcrA=="
         }
       },
       "is_incremental": false,

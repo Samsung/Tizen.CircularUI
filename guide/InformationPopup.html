@@ -111,6 +111,8 @@
             };
 </code></pre><h2 id="create-bottom-button-informationpopup">Create bottom button InformationPopup</h2>
 <p>You can set <code>BottomButton</code> property with <code>MenuItem</code>. The bottom button is used for confirmation of user.
+Do not use <code>Icon</code> property and <code>Text</code> property at the same time because two area has the same position.
+You should use only one property between <code>Icon</code> property and <code>Text</code> property for avoiding overlapped.
 InformationPopup has <code>Title</code> property for displaying title.
 <code>BottomButton.Clicked</code> event occurs when user press bottom button.</p>
 <p><strong>C# file</strong></p>
