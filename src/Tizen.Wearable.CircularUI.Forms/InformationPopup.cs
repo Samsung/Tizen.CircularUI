@@ -103,7 +103,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         /// <summary>
         /// Gets or sets bottom button of the Popup.
-        /// You should use only one property between `Icon` property and `Text` property because two area has the same position.
+        /// You should use only one property between Icon property and Text property because two area has the same position.
         /// </summary>
         public MenuItem BottomButton
         {

@@ -61,7 +61,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Gets or sets left button of TwoButtonPage
+        /// Gets or sets left button of TwoButtonPage.
         /// Text property of MenuItem is ignored since button has no space to display text.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -71,7 +71,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             set => SetValue(FirstButtonProperty, value);
         }
         /// <summary>
-        /// Gets or sets right button of TwoButtonPage
+        /// Gets or sets right button of TwoButtonPage.
         /// Text property of MenuItem is ignored since button has no space to display text.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
