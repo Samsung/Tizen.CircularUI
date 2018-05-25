@@ -1190,7 +1190,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html",
-          "hash": "5qIRsQ/QtSt9VIZeb9Cm1w=="
+          "hash": "3gAJy81lh1S2rTM1QV6FKA=="
         }
       },
       "is_incremental": false,
@@ -1574,7 +1574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html",
-          "hash": "q9/s7WVCnWFmf2x+NiIcrA=="
+          "hash": "m0Wso9DgAY3TYKfuM5vDOA=="
         }
       },
       "is_incremental": false,
@@ -1635,11 +1635,11 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         }
