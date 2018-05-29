@@ -12,8 +12,6 @@ The command given at the time of Accept or Cancel is executed and disappears aut
 Also, when you touch the outside of the popup, the popup is automatically canceled. (Cancel command is performed similarly.)
 You can change the position by adjusting the X and Y value of Offset.
 
-*If you want to display context popup separately from any control, please use [ContextPopup](xref:Tizen.Wearable.CircularUI.doc.ContextPopup) instead.*
-
 ![](data/ConfirmPopupEffect.png)
 
 ## Adding popup with ConfirmPopupEffect at CirclePage

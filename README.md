@@ -29,9 +29,8 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
 - CircleStackLayout : A container to layout children linear in the circular area.
 - CircleStepper : A control to select a number of steps fits in the circular screen.
 - CircleSurfaceEffectBehavior : The CircleSurfaceEffectBehavior is an effect which allows you to insert views that require CircleSurface.
-- ConfirmationPopup : A popup has two buttons on the left and right side of the circular screen.
+- TwoButtonPopup : A popup has two buttons on the left and right side of the circular screen.
 - ConfirmPopupEffect : the effect to show a small popup has one or two button sticky with any control.
-- ContextPopup : A context popup fits in the circular screen.
 - IndexPage : A subclass of multiple pages that can slide child page horizontal and has dots on top of the screen for the number of child pages.
 - InformationPopup : A popup has a control to show progress and one button on the bottom side of the circular screen.
 - IRotationReceiver : A event receiver for using the bezel action.

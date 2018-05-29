@@ -360,49 +360,6 @@ public class CircleSliderSurfaceItem : ICircleSurfaceItem
 
 ![CircleStepper Scene Graph](uml/CircleStepper_SceneGraph.png)
 
-# ContextPopup
-
-`ContextPopup`는 `ElmSharp.ContextPopup`을 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
-
-`ContextPopup`의 `Items`에 추가되는 `ContextItem`은 1개 혹은 2개 값을 가지며, 그 이상의  `ContextItem`은 화면에 표시 않는다.(초과된 item은 하단에 숨겨져 있으며. Scroll up시 화면에 표시 가능하다)
-
-item이 1개 일 경우 Popup 전체를 , 2개의 경우 위 아래 나뉘어서 표시 된다(아래 이미지 참조)
-
-
-![ContextPopup Design](data/ContextPopup.png)
-
-`ContextPopup`의 Class Diagram은 아래와 같다.
-
-![ContextPopup Class Diagram](uml/ContextPopup.png)
-
-위 Class 중 Xamarin interface 부분은 다음과 같이 Code로 표현된다.
-
- ```C#
- public class ContextPopup : BindableObject
- {
-     public static readonly BindableProperty SelectedIndexProperty;
-     public static readonly BindableProperty SelectedItemProperty;
-
-     public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
-     public event EventHandler Dismissed;
-
-     public int SelectedIndex { get; set; }
-     public ContextPopupItem SelectedItem { get; set; }
-     public IList<ContextPopupItem> Items { get; }
-
-     public void Show(View anchor);
-     public void Show(View anchor, int xOffset, int yOffset);
-     public void Show(View anchor, double xOffset, double yOffset);
-     public void Dismiss();
- }
-
- public class ContextPopupItem
- {
-    public string Label
- }
-
- ```
-
 # IndexPage
 
 `IndexPage`는 `ElmSharp.Index`를 표현하며, `Xamarin.Forms`의 `MultiPage`를 확장한다.
@@ -496,19 +453,19 @@ ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![TwoButtonPage Scene Graph](uml/TwoButtonPage_SceneGraph.png)
 
-# ConfirmationPopup
+# TwoButtonPopup
 
-![ConfirmationPopup design](data/ConfirmationPopup.png)
+![TwoButtonPopup design](data/TwoButtonPopup.png)
 
-`ConfirmationPopup`는 `ElmSharp.Popup`의 `two-button popup`형태를 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
+`TwoButtonPopup`는 `ElmSharp.Popup`의 `two-button popup`형태를 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
 
 
-![ConfirmationPopup Diagram](uml/ConfirmationPopup.png)
+![TwoButtonPopup Diagram](uml/TwoButtonPopup.png)
 
-ConfirmationPopup Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
+TwoButtonPopup Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
 
 ```C#
-public class ConfirmationPopup : BindableObject
+public class TwoButtonPopup : BindableObject
 {
     public static readonly BindableProperty TitleProperty;
     public static readonly BindableProperty TextProperty;
@@ -530,7 +487,7 @@ ElmSharp의 Popup을 사용하며, Layout이 아니므로 Parent가 존재하지
 
 ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
-![ConfirmationPopup Scene Graph](uml/ConfirmationPopup_SceneGraph.png)
+![TwoButtonPopup Scene Graph](uml/TwoButtonPopup_SceneGraph.png)
 
 # Radio
 

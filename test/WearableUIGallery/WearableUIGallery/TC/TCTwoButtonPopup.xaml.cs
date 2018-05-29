@@ -27,11 +27,11 @@ using Tizen.Wearable.CircularUI.Forms;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCConfirmationPopup : ContentPage
+    public partial class TCTwoButtonPopup : ContentPage
     {
-        ConfirmationPopup _popUp1 = null;
-        ConfirmationPopup _popUp2 = null;
-        public TCConfirmationPopup()
+        TwoButtonPopup _popUp1 = null;
+        TwoButtonPopup _popUp2 = null;
+        public TCTwoButtonPopup()
         {
             InitializeComponent();
 
@@ -71,7 +71,7 @@ namespace WearableUIGallery.TC
                 Console.WriteLine($"checkbox toggled. checkbox.IsToggled:{checkbox.IsToggled}");
             };
 
-            _popUp1 = new ConfirmationPopup();
+            _popUp1 = new TwoButtonPopup();
             _popUp1.FirstButton = leftButton;
             _popUp1.SecondButton = rightButton;
             _popUp1.Title = "Popup title";
@@ -132,7 +132,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _popUp2 = new ConfirmationPopup();
+            _popUp2 = new TwoButtonPopup();
             _popUp2.FirstButton = leftButton2;
             _popUp2.SecondButton = rightButton2;
             _popUp2.Title = "Popup title";
