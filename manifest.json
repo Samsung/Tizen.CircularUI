@@ -125,31 +125,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ConfirmPopupEffect.html",
-          "hash": "pChJ6mlveZ/aNqqwAyueHA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../guide/ConfirmationPopup.md",
-      "output": {
-        ".html": {
-          "relative_path": "guide/ConfirmationPopup.html",
-          "hash": "E4QjE08bMMs24QXelmon6w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../guide/ContextPopup.md",
-      "output": {
-        ".html": {
-          "relative_path": "guide/ContextPopup.html",
-          "hash": "ZetNChvdor8q0YpcvTnkAA=="
+          "hash": "SlpeN5YaJ4rx4PU+jXLdFw=="
         }
       },
       "is_incremental": false,
@@ -258,6 +234,18 @@
         ".html": {
           "relative_path": "guide/TwoButtonPage.html",
           "hash": "rc/wsgdDgQs5bAYsa8rfeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/TwoButtonPopup.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/TwoButtonPopup.html",
+          "hash": "krJIvkK3egsOZSDJXheNIg=="
         }
       },
       "is_incremental": false,
@@ -841,7 +829,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "rkmjgGUn52HO0V7eZgL7iA=="
+          "hash": "wQQ8q6Bybbj4yJhqM0FUiw=="
         }
       },
       "is_incremental": false,
@@ -879,7 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "p/G2bcwaNU59zTC9AN0CXw=="
+          "hash": "5t/Bcn2WpiCAyMKM22383Q=="
         }
       },
       "is_incremental": false,
@@ -1090,42 +1078,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html",
-          "hash": "uMHNUQf8Ogp8hgA1T04n2Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ContextPopup.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ContextPopup.html",
-          "hash": "XVPj3eryYXL0AFjP6T67AA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ContextPopupItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ContextPopupItem.html",
-          "hash": "TswEwaGpc78neoiZW9P9eQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.DateTimeType.yml",
       "output": {
         ".html": {
@@ -1190,7 +1142,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html",
-          "hash": "3gAJy81lh1S2rTM1QV6FKA=="
+          "hash": "Kuy/fLHN4aj6TBdn36GxcQ=="
         }
       },
       "is_incremental": false,
@@ -1323,18 +1275,6 @@
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceNotFoundException.html",
           "hash": "7FmYgAparMAF55Ukcl1jeQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation.html",
-          "hash": "8VA4yNfv0fxEalkyMHjHrw=="
         }
       },
       "is_incremental": false,
@@ -1486,6 +1426,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation.html",
+          "hash": "9mCzcNklfROErnurmtNpMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.yml",
       "output": {
         ".html": {
@@ -1514,7 +1466,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "ag1nrnAYM3q6rWIBlFBDVQ=="
+          "hash": "kZnflECiTu6TpeZansXkWA=="
         }
       },
       "is_incremental": false,
@@ -1582,11 +1534,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html",
+          "hash": "F8B6mMEQE31qjRngY5JRpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.yml",
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "e0VYz7OdueWZBz87vtj0Sw=="
+          "hash": "xnyF/eRNzhTsZH99ho5zJA=="
         }
       },
       "is_incremental": false,
@@ -1598,7 +1562,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "MOKdlNBHAnT9iSezpKeoqg=="
+          "hash": "qdtE/lzUaTn99/ddkZCpTQ=="
         }
       },
       "is_incremental": false,

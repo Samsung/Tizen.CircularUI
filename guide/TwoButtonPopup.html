@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ConfirmationPopup </title>
+    <title>TwoButtonPopup </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="ConfirmationPopup ">
+    <meta name="title" content="TwoButtonPopup ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -74,18 +74,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ConfirmationPopup">
-<h1 id="confirmationpopup">ConfirmationPopup</h1>
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.TwoButtonPopup">
+<h1 id="twobuttonpopup">TwoButtonPopup</h1>
 
-<p><code>ConfirmationPopup</code> represents Tizen Wearable EFL Twobutton-popup style. <code>ConfirmationPopup</code> is useful to select one of two options. (e.g  cancel/done, share/delete)</p>
-<p><em><code>ConfirmationPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em></p>
+<p><code>TwoButtonPopup</code> represents Tizen Wearable EFL Twobutton-popup style. <code>TwoButtonPopup</code> is useful to select one of two options. (e.g  cancel/done, share/delete)</p>
+<p><em><code>TwoButtonPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em></p>
 <p><img src="data/confirmation_popup1.png" alt="confirmation_popup1"></p>
-<h2 id="create-confirmationpopup">Create ConfirmationPopup</h2>
-<p><code>ConfirmationPopup.Title</code> Property sets the title of the popup. You can set the <code>Content</code> property with Layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
-<code>ConfirmationPopup.FirstButton</code> property sets left side button. <code>ConfirmationPopup.SecondButton</code>property sets right side button. You can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.
+<h2 id="create-twobuttonpopup">Create TwoButtonPopup</h2>
+<p><code>TwoButtonPopup.Title</code> Property sets the title of the popup. You can set the <code>Content</code> property with Layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
+<code>TwoButtonPopup.FirstButton</code> property sets left side button. <code>TwoButtonPopup.SecondButton</code>property sets right side button. You can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.
 <em><code>Text</code> Property of <code>MenuItem</code> is ignored since button has no space to display text</em></p>
-<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs</em></p>
-<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html">ConfirmationPopup  API reference</a></p>
+<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCTwoButtonPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPopup.xaml.cs</em></p>
+<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html">TwoButtonPopup  API reference</a></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            var leftButton = new MenuItem()
             {
@@ -101,7 +101,7 @@
 
             ...
 
-            _popUp1 = new ConfirmationPopup();
+            _popUp1 = new TwoButtonPopup();
             _popUp1.FirstButton = leftButton;
             _popUp1.SecondButton = rightButton;
             _popUp1.Title = &quot;Popup title&quot;;
@@ -130,12 +130,12 @@
                 }
             };
     }
-</code></pre><h2 id="how-to-set-long-text-at-confirmationpopup">How to set long Text at ConfirmationPopup</h2>
-<p>ConfirmationPopup has <code>Text</code> Property. This Property is useful to set long text.
+</code></pre><h2 id="how-to-set-long-text-at-twobuttonpopup">How to set long Text at TwoButtonPopup</h2>
+<p>TwoButtonPopup has <code>Text</code> Property. This Property is useful to set long text.
 If a long text was set by <code>Text</code> property, you don&#39;t need to add <code>StackLayout</code>, <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
 <p><em><code>Text</code> Property&#39;s area overlaps <code>Content</code> Property area. So do not use two property at the same time.</em></p>
 <p><strong>C# file</strong></p>
-<pre><code class="lang-cs">            _popUp2 = new ConfirmationPopup();
+<pre><code class="lang-cs">            _popUp2 = new TwoButtonPopup();
             _popUp2.FirstButton = leftButton2;
             _popUp2.SecondButton = rightButton2;
             _popUp2.Title = &quot;Popup title&quot;;

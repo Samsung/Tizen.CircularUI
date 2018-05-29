@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ConfirmationPopup
+    <title>Class TwoButtonPopup
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ConfirmationPopup
+    <meta name="title" content="Class TwoButtonPopup
    ">
     <meta name="generator" content="docfx 2.34.0.0">
     
@@ -76,26 +76,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup" class="text-break">Class ConfirmationPopup
+  <h1 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup" class="text-break">Class TwoButtonPopup
   </h1>
-  <div class="markdown level0 summary"><p>The ConfirmationPopup describe pop-up which has circular two button, title, text, and content area.</p>
+  <div class="markdown level0 summary"><p>The TwoButtonPopup describe pop-up which has circular two button, title, text, and content area.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">BindableObject</span></div>
-    <div class="level1"><span class="xref">ConfirmationPopup</span></div>
+    <div class="level1"><span class="xref">TwoButtonPopup</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_syntax">Syntax</h5>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConfirmationPopup : BindableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class TwoButtonPopup : BindableObject</code></pre>
   </div>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_examples"><strong>Examples</strong></h5>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_examples"><strong>Examples</strong></h5>
   <pre><code>var leftButton = new MenuItem()
 {
     Text = &quot;Save&quot;,
@@ -110,7 +110,7 @@ var rightButton = new MenuItem()
     Command = new Command(() => { ... })
 };
 
-var popup = new ConfirmationPopup();
+var popup = new TwoButtonPopup();
 popup.FirstButton = leftButton;
 popup.SecondButton = rightButton;
 popup.Title = &quot;Popup title&quot;;
@@ -133,18 +133,18 @@ popup.BackButtonPressed += (s, e) =>
 
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup__ctor_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.#ctor*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup__ctor" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.#ctor">ConfirmationPopup()</h4>
-  <div class="markdown level1 summary"><p>Creates and initializes a new instance of the ConfirmationPopup class.</p>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup__ctor_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.#ctor*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup__ctor" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.#ctor">TwoButtonPopup()</h4>
+  <div class="markdown level1 summary"><p>Creates and initializes a new instance of the TwoButtonPopup class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfirmationPopup()</code></pre>
+    <pre><code class="lang-csharp hljs">public TwoButtonPopup()</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_ContentProperty" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.ContentProperty">ContentProperty</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_ContentProperty" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.ContentProperty">ContentProperty</h4>
   <div class="markdown level1 summary"><p>BindableProperty. Identifies the content bindable property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -167,7 +167,7 @@ popup.BackButtonPressed += (s, e) =>
       </tr>
     </tbody>
   </table>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_FirstButtonProperty" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.FirstButtonProperty">FirstButtonProperty</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_FirstButtonProperty" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.FirstButtonProperty">FirstButtonProperty</h4>
   <div class="markdown level1 summary"><p>BindableProperty. Identifies the first button bindable property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -190,7 +190,7 @@ popup.BackButtonPressed += (s, e) =>
       </tr>
     </tbody>
   </table>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_SecondButtonProperty" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.SecondButtonProperty">SecondButtonProperty</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_SecondButtonProperty" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.SecondButtonProperty">SecondButtonProperty</h4>
   <div class="markdown level1 summary"><p>BindableProperty. Identifies the second button bindable property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -213,7 +213,7 @@ popup.BackButtonPressed += (s, e) =>
       </tr>
     </tbody>
   </table>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_TextProperty" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.TextProperty">TextProperty</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_TextProperty" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.TextProperty">TextProperty</h4>
   <div class="markdown level1 summary"><p>BindableProperty. Identifies the title bindable property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -236,7 +236,7 @@ popup.BackButtonPressed += (s, e) =>
       </tr>
     </tbody>
   </table>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_TitleProperty" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.TitleProperty">TitleProperty</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_TitleProperty" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.TitleProperty">TitleProperty</h4>
   <div class="markdown level1 summary"><p>BindableProperty. Identifies the title bindable property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -261,8 +261,8 @@ popup.BackButtonPressed += (s, e) =>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Content_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Content*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Content" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Content">Content</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Content_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Content*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Content" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Content">Content</h4>
   <div class="markdown level1 summary"><p>Gets or sets content view of the Popup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -285,8 +285,8 @@ popup.BackButtonPressed += (s, e) =>
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_FirstButton_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.FirstButton*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_FirstButton" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.FirstButton">FirstButton</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_FirstButton_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.FirstButton*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_FirstButton" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.FirstButton">FirstButton</h4>
   <div class="markdown level1 summary"><p>Gets or sets left button of the Popup.
 Text property of MenuItem is ignored since button has no space to display text.</p>
 </div>
@@ -310,8 +310,8 @@ Text property of MenuItem is ignored since button has no space to display text.<
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_SecondButton_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.SecondButton*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_SecondButton" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.SecondButton">SecondButton</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_SecondButton_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.SecondButton*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_SecondButton" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.SecondButton">SecondButton</h4>
   <div class="markdown level1 summary"><p>Gets or sets right button of the Popup.
 Text property of MenuItem is ignored since button has no space to display text.</p>
 </div>
@@ -335,8 +335,8 @@ Text property of MenuItem is ignored since button has no space to display text.<
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Text_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Text*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Text" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Text">Text</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Text_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Text*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Text" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Text">Text</h4>
   <div class="markdown level1 summary"><p>Gets or sets text of the Popup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -359,8 +359,8 @@ Text property of MenuItem is ignored since button has no space to display text.<
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Title_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Title*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Title" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Title">Title</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Title_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Title*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Title" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Title">Title</h4>
   <div class="markdown level1 summary"><p>Gets or sets title of the Popup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -385,18 +385,18 @@ Text property of MenuItem is ignored since button has no space to display text.<
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Dismiss_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Dismiss*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Dismiss" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Dismiss">Dismiss()</h4>
-  <div class="markdown level1 summary"><p>Dismisses the ConfirmationPopup.</p>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Dismiss_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Dismiss*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Dismiss" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Dismiss">Dismiss()</h4>
+  <div class="markdown level1 summary"><p>Dismisses the TwoButtonPopup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dismiss()</code></pre>
   </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Show_" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Show*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_Show" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.Show">Show()</h4>
-  <div class="markdown level1 summary"><p>Shows the ConfirmationPopup.</p>
+  <a id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Show_" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Show*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_Show" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.Show">Show()</h4>
+  <div class="markdown level1 summary"><p>Shows the TwoButtonPopup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -405,7 +405,7 @@ Text property of MenuItem is ignored since button has no space to display text.<
   </div>
   <h3 id="events">Events
   </h3>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_ConfirmationPopup_BackButtonPressed" data-uid="Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.BackButtonPressed">BackButtonPressed</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_TwoButtonPopup_BackButtonPressed" data-uid="Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.BackButtonPressed">BackButtonPressed</h4>
   <div class="markdown level1 summary"><p>Occurs when the device&apos;s back button is pressed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
