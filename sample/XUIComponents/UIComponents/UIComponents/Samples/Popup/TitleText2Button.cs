@@ -4,7 +4,7 @@ using Tizen.Wearable.CircularUI.Forms;
 
 namespace UIComponents.Samples.Popup
 {
-    public class TitleText2Button : ConfirmationPopup
+    public class TitleText2Button : TwoButtonPopup
     {
         public TitleText2Button()
         {
