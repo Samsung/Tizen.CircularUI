@@ -303,6 +303,60 @@ When <code>Value</code> property is increased or decreased, circle object extend
             Value=&quot;{Binding ProgressValue2}&quot; /&gt;
     &lt;/w:CirclePage.CircleSurfaceItems&gt;
 &lt;/w:CirclePage&gt;
+</code></pre><h2 id="adding-circleslidersurfaceitem-at-circlepage">Adding CircleSliderSurfaceItem at CirclePage</h2>
+<p><code>CircleSliderSurfaceItem</code> represents Circle Slider.<code>slider</code> at XAML code represents the circle of below image.
+If you use CircleSliderbar, you have to set Circle Slider name at the <code>RotaryFocusTargetName</code> property of CirclePage.
+<code>Value</code> property is default value of Slider. If user rotate bezel, <code>Value</code> property is increased or decreased follow to bezel action.
+<code>Increment</code> property is increase/decrease value when user rotates bezel.
+&#39;</p>
+<p><code>CircleSliderSurfaceItem</code> has the following properties:</p>
+<ul>
+<li><code>Value</code> : Gets or sets the value of the slider.</li>
+<li><code>Increment</code> : The value of the slider is increased/decreased by the Increment value.</li>
+<li><code>Minimum</code> : Gets or sets the minimum value of the slider.</li>
+<li><code>Maximum</code> : Gets or sets the maximum value of the slider.</li>
+<li><code>BarLineWidth</code> : Gets or sets the bar line width value.</li>
+<li><code>BackgroundLineWidth</code> : Gets or sets the background line width value.</li>
+<li><code>BarColor</code> : Gets or sets the bar color value.</li>
+<li><code>BackgroundLineWidth</code> : Gets or sets the background color value.</li>
+</ul>
+<p>For more information. Please refer to below links</p>
+<ul>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html">CircleSurfaceItem  API reference</a></li>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem.html">CircleSliderSurfaceItem  API reference</a></li>
+</ul>
+<p><img src="data/circle_slider.png" alt="circle_slider"></p>
+<p><em>This guide&#39;s code example uses XUIComponent&#39;s CircleSlider.xaml code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSlider.xaml</em></p>
+<pre><code>&lt;w:CirclePage
+    x:Class=&quot;UIComponents.Samples.CircleSlider&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:UIComponents.Samples&quot;
+    xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
+    NavigationPage.HasNavigationBar=&quot;False&quot;
+    RotaryFocusTargetName=&quot;slider&quot;&gt;
+    &lt;w:CirclePage.Content&gt;
+        &lt;StackLayout
+            HorizontalOptions=&quot;Center&quot;
+            Orientation=&quot;Vertical&quot;
+            VerticalOptions=&quot;Center&quot;&gt;
+            &lt;Label
+                x:Name=&quot;label&quot;
+                BindingContext=&quot;{x:Reference Name=slider}&quot;
+                FontSize=&quot;12&quot;
+                Text=&quot;{Binding Value, StringFormat=&#39;{0:F1}&#39;}&quot; /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/w:CirclePage.Content&gt;
+    &lt;w:CirclePage.CircleSurfaceItems&gt;
+        &lt;w:CircleSliderSurfaceItem
+            x:Name=&quot;slider&quot;
+            Increment=&quot;0.5&quot;
+            Maximum=&quot;15&quot;
+            Minimum=&quot;0&quot;
+            Value=&quot;3&quot; /&gt;
+    &lt;/w:CirclePage.CircleSurfaceItems&gt;
+&lt;/w:CirclePage&gt;
 </code></pre></article>
           </div>
           
