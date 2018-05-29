@@ -5,7 +5,7 @@ using WCheck = Tizen.Wearable.CircularUI.Forms.Check;
 
 namespace UIComponents.Samples.Popup
 {
-    public class TitleTextCheckButton : ConfirmationPopup
+    public class TitleTextCheckButton : TwoButtonPopup
     {
         public TitleTextCheckButton()
         {

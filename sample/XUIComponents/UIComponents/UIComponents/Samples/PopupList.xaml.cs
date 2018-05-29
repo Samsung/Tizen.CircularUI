@@ -27,7 +27,7 @@ namespace UIComponents.Samples
                 if (title.EndsWith("2button"))
                 {
                     Console.WriteLine($"title end 2button ");
-                    var twoButtonPopup = Activator.CreateInstance(pageType) as ConfirmationPopup;
+                    var twoButtonPopup = Activator.CreateInstance(pageType) as TwoButtonPopup;
                     if (twoButtonPopup != null) twoButtonPopup.Show();
                 }
                 else if (title.Equals("Toast"))
