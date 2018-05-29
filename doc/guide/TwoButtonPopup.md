@@ -1,23 +1,23 @@
 ---
-uid: Tizen.Wearable.CircularUI.doc.ConfirmationPopup
-summary: ConfirmationPopup control guide
+uid: Tizen.Wearable.CircularUI.doc.TwoButtonPopup
+summary: TwoButtonPopup control guide
 ---
 
-# ConfirmationPopup
-`ConfirmationPopup` represents Tizen Wearable EFL Twobutton-popup style. `ConfirmationPopup` is useful to select one of two options. (e.g  cancel/done, share/delete)
+# TwoButtonPopup
+`TwoButtonPopup` represents Tizen Wearable EFL Twobutton-popup style. `TwoButtonPopup` is useful to select one of two options. (e.g  cancel/done, share/delete)
 
-*`ConfirmationPopup` is displayed separately from any control. So you can't set this in XAML file.*
+*`TwoButtonPopup` is displayed separately from any control. So you can't set this in XAML file.*
 
 ![confirmation_popup1](data/confirmation_popup1.png)
 
-## Create ConfirmationPopup
-`ConfirmationPopup.Title` Property sets the title of the popup. You can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
-`ConfirmationPopup.FirstButton` property sets left side button. `ConfirmationPopup.SecondButton`property sets right side button. You can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
+## Create TwoButtonPopup
+`TwoButtonPopup.Title` Property sets the title of the popup. You can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
+`TwoButtonPopup.FirstButton` property sets left side button. `TwoButtonPopup.SecondButton`property sets right side button. You can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
 *`Text` Property of `MenuItem` is ignored since button has no space to display text*
 
-_This guide's code example uses WearableUIGallery's TCConfirmationPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirmationPopup.xaml.cs_
+_This guide's code example uses WearableUIGallery's TCTwoButtonPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPopup.xaml.cs_
 
-For more information. Please refer to [ConfirmationPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmationPopup.html)
+For more information. Please refer to [TwoButtonPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html)
 
 **C# file**
 ```cs
@@ -35,7 +35,7 @@ For more information. Please refer to [ConfirmationPopup  API reference](https:/
 
             ...
 
-            _popUp1 = new ConfirmationPopup();
+            _popUp1 = new TwoButtonPopup();
             _popUp1.FirstButton = leftButton;
             _popUp1.SecondButton = rightButton;
             _popUp1.Title = "Popup title";
@@ -66,15 +66,15 @@ For more information. Please refer to [ConfirmationPopup  API reference](https:/
     }
 ```
 
-## How to set long Text at ConfirmationPopup
-ConfirmationPopup has `Text` Property. This Property is useful to set long text.
+## How to set long Text at TwoButtonPopup
+TwoButtonPopup has `Text` Property. This Property is useful to set long text.
 If a long text was set by `Text` property, you don't need to add `StackLayout`, `ScrollView` and `Label` for displaying long text.
 
 *`Text` Property's area overlaps `Content` Property area. So do not use two property at the same time.*
 
 **C# file**
 ```cs
-            _popUp2 = new ConfirmationPopup();
+            _popUp2 = new TwoButtonPopup();
             _popUp2.FirstButton = leftButton2;
             _popUp2.SecondButton = rightButton2;
             _popUp2.Title = "Popup title";

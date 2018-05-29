@@ -120,7 +120,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Dismisses the ConfirmationPopup.
+        /// Dismisses the InformationPopup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public void Dismiss()

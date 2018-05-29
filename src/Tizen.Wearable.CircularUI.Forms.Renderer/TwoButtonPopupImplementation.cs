@@ -20,11 +20,11 @@ using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 using XForms = Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
-[assembly: XForms.Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ConfirmationPopupImplementation))]
+[assembly: XForms.Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class ConfirmationPopupImplementation : IConfirmationPopup, IDisposable
+    public class TwoButtonPopupImplementation : ITwoButtonPopup, IDisposable
     {
         View _content;
         StackLayout _contentView;
@@ -43,7 +43,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public event EventHandler BackButtonPressed;
 
-        public ConfirmationPopupImplementation()
+        public TwoButtonPopupImplementation()
         {
             _popUp = new ElmSharp.Popup(TForms.NativeParent);
             _popUp.Style = "circle";
@@ -57,7 +57,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _contentView = new StackLayout();
         }
 
-        ~ConfirmationPopupImplementation()
+        ~TwoButtonPopupImplementation()
         {
             Dispose(false);
         }

@@ -9,7 +9,6 @@
 ## [CircleStackLayout](CircleStackLayout.md)
 ## [CircleStepper](CircleStepper.md)
 ## [CircleSurfaceEffectBehavior](CircleSurfaceEffectBehavior.md)
-## [ConfirmationPopup](ConfirmationPopup.md)
 ## [ConfirmPopupEffect](ConfirmPopupEffect.md)
 ## [IndexPage](IndexPage.md)
 ## [InformationPopup](InformationPopup.md)
@@ -18,3 +17,4 @@
 ## [Radio](Radio.md)
 ## [Toast](Toast.md)
 ## [TwoButtonPage](TwoButtonPage.md)
+## [TwoButtonPopup](TwoButtonPopup.md)

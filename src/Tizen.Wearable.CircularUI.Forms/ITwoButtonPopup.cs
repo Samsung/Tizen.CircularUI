@@ -21,10 +21,10 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The IConfirmationPopup is an interface to describe confirmation pop-up which has circular two button, title, text, and content area
+    /// The ITwoButtonPopup is an interface to describe confirmation pop-up which has circular two button, title, text, and content area
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    internal interface IConfirmationPopup
+    internal interface ITwoButtonPopup
     {
         /// <summary>
         /// Occurs when the Back button is pressed.

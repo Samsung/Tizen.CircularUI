@@ -453,19 +453,19 @@ ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
 ![TwoButtonPage Scene Graph](uml/TwoButtonPage_SceneGraph.png)
 
-# ConfirmationPopup
+# TwoButtonPopup
 
-![ConfirmationPopup design](data/ConfirmationPopup.png)
+![TwoButtonPopup design](data/TwoButtonPopup.png)
 
-`ConfirmationPopup`는 `ElmSharp.Popup`의 `two-button popup`형태를 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
+`TwoButtonPopup`는 `ElmSharp.Popup`의 `two-button popup`형태를 표현하며, 화면을 구성하는 layer의 최상단에 Popup형태로 display 된다.
 
 
-![ConfirmationPopup Diagram](uml/ConfirmationPopup.png)
+![TwoButtonPopup Diagram](uml/TwoButtonPopup.png)
 
-ConfirmationPopup Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
+TwoButtonPopup Diagram은 위와 같으며, 다음과 같이 코드로 표현된다.
 
 ```C#
-public class ConfirmationPopup : BindableObject
+public class TwoButtonPopup : BindableObject
 {
     public static readonly BindableProperty TitleProperty;
     public static readonly BindableProperty TextProperty;
@@ -487,7 +487,7 @@ ElmSharp의 Popup을 사용하며, Layout이 아니므로 Parent가 존재하지
 
 ElmSharp Level에서의 Scene Graph는 다음과 같이 표현된다.
 
-![ConfirmationPopup Scene Graph](uml/ConfirmationPopup_SceneGraph.png)
+![TwoButtonPopup Scene Graph](uml/TwoButtonPopup_SceneGraph.png)
 
 # Radio
 

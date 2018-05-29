@@ -21,7 +21,7 @@ using System;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The ConfirmationPopup describe pop-up which has circular two button, title, text, and content area.
+    /// The TwoButtonPopup describe pop-up which has circular two button, title, text, and content area.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
     /// <example>
@@ -40,7 +40,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     ///     Command = new Command(() => { ... })
     /// };
     ///
-    /// var popup = new ConfirmationPopup();
+    /// var popup = new TwoButtonPopup();
     /// popup.FirstButton = leftButton;
     /// popup.SecondButton = rightButton;
     /// popup.Title = "Popup title";
@@ -62,39 +62,39 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// };
     /// </code>
     /// </example>
-    public class ConfirmationPopup : BindableObject
+    public class TwoButtonPopup : BindableObject
     {
         /// <summary>
         /// BindableProperty. Identifies the content bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ConfirmationPopup), null);
+        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(ConfirmationPopup), null);
+        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(ConfirmationPopup), null);
+        public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the first button bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(ConfirmationPopup), null);
+        public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the second button bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(ConfirmationPopup), null);
+        public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
 
-        IConfirmationPopup _popUp = null;
+        ITwoButtonPopup _popUp = null;
 
         /// <summary>
         /// Occurs when the device's back button is pressed.
@@ -103,12 +103,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         public event EventHandler BackButtonPressed;
 
         /// <summary>
-        /// Creates and initializes a new instance of the ConfirmationPopup class.
+        /// Creates and initializes a new instance of the TwoButtonPopup class.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public ConfirmationPopup()
+        public TwoButtonPopup()
         {
-            _popUp = DependencyService.Get<IConfirmationPopup>(DependencyFetchTarget.NewInstance);
+            _popUp = DependencyService.Get<ITwoButtonPopup>(DependencyFetchTarget.NewInstance);
             if (_popUp == null)
             {
                 throw new Exception("Object reference not set to an instance of a Popup.");
@@ -179,7 +179,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Shows the ConfirmationPopup.
+        /// Shows the TwoButtonPopup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public void Show()
@@ -188,7 +188,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Dismisses the ConfirmationPopup.
+        /// Dismisses the TwoButtonPopup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public void Dismiss()

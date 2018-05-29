@@ -485,10 +485,10 @@ FirstButton ..> FirstButtonImage : "elm.swallow.content"
 SecondButton ..> SecondButtonImage : "elm.swallow.content"
 @enduml
 
-@startuml ConfirmationPopup.png
+@startuml TwoButtonPopup.png
 
 package "Extension.Wearable" {
-    class ConfirmationPopup {
+    class TwoButtonPopup {
         --BindableProperty--
         {static} +TitleProperty
         {static} +ContentProperty
@@ -507,21 +507,21 @@ package "Extension.Wearable" {
 }
 
 package "Extension.Wearable.Renderer" {
-    class ConfirmationPopupImplementation
+    class TwoButtonPopupImplementation
 
-    ConfirmationPopupImplementation .l. ConfirmationPopup
+    TwoButtonPopupImplementation .l. TwoButtonPopup
 }
 
 package "ElmSharp" {
     class Popup
-    ConfirmationPopupImplementation *.. Popup
+    TwoButtonPopupImplementation *.. Popup
 }
 
 @enduml
 
-@startuml ConfirmationPopup_SceneGraph.png
+@startuml TwoButtonPopup_SceneGraph.png
 
-node ConfirmationPopup [
+node TwoButtonPopup [
     Popup
 ]
 
@@ -552,7 +552,7 @@ interface SecondButtonImage [
 () TitleArea
 () TextArea
 
-ConfirmationPopup --> BaseLayout :  "elm.swallow.content"
+TwoButtonPopup --> BaseLayout :  "elm.swallow.content"
 BaseLayout --> ContentArea : "elm.swallow.content"
 BaseLayout --> TitleArea : "elm.text.title"
 BaseLayout --> TextArea : "elm.text.text"
