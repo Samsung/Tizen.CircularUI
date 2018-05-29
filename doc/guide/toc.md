@@ -5,6 +5,8 @@
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
 ## [CircleListView](CircleListView.md)
 ## [CirclePage](CirclePage.md)
+### [CircleProgressBarSurfaceItem](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#adding-circleprogressbarsurfaceitem-at-circlepage)
+### [CircleSliderSurfaceItem](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#adding-circleslidersurfaceitem-at-circlepage)
 ## [CircleScrollView](CircleScrollView.md)
 ## [CircleStackLayout](CircleStackLayout.md)
 ## [CircleStepper](CircleStepper.md)
