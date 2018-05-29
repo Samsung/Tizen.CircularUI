@@ -31,7 +31,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) });
             TCs.Add(new TCDescribe { Title = "CircleStackLayout", Class = typeof(TCCircleStackLayout) });
             TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
-            TCs.Add(new TCDescribe { Title = "ConfirmEffect", Class = typeof(TCConfirm) });
+            TCs.Add(new TCDescribe { Title = "ConfirmPopupEffect", Class = typeof(TCConfirm) });
             TCs.Add(new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) });
             TCs.Add(new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) });
             TCs.Add(new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) });
@@ -40,7 +40,6 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
             TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPage) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
-            TCs.Add(new TCDescribe { Title = "ContextPopup", Class = typeof(TCContextPopup) });
             TCs.Add(new TCDescribe { Title = "ConfirmationPopup", Class = typeof(TCConfirmationPopup) });
             TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
             TCs.Add(new TCDescribe { Title = "Toast", Class = typeof(TCToast) });

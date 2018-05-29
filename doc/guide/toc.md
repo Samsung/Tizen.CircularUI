@@ -11,7 +11,6 @@
 ## [CircleSurfaceEffectBehavior](CircleSurfaceEffectBehavior.md)
 ## [ConfirmationPopup](ConfirmationPopup.md)
 ## [ConfirmPopupEffect](ConfirmPopupEffect.md)
-## [ContextPopup](ContextPopup.md)
 ## [IndexPage](IndexPage.md)
 ## [InformationPopup](InformationPopup.md)
 ## [IRotaryEventReceiver](IRotaryEventReceiver.md)
