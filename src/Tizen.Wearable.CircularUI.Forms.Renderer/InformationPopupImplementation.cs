@@ -186,17 +186,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _progress.PlayPulse();
                 _box.PackEnd(_progress);
 
-                if (!string.IsNullOrEmpty(_text))
-                {
-                    var progressLabel = new ElmSharp.Label(TForms.NativeParent)
-                    {
-                        TextStyle = "DEFAULT = 'align=center'",
-                    };
-                    progressLabel.Text = _text;
-                    progressLabel.Show();
-                    _box.PackEnd(progressLabel);
-                }
-
                 _layout.SetPartContent("elm.swallow.content", _box, true);
 
                 UpdateTitle();
@@ -269,6 +258,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else
             {
                 _layout.SetPartText("elm.text", null);
+                if (!string.IsNullOrEmpty(_text))
+                {
+                    if (_progressLabel == null)
+                    {
+                        _progressLabel = new ElmSharp.Label(TForms.NativeParent)
+                        {
+                            TextStyle = "DEFAULT ='font=Tizen:style=Light color=#F9F9F9FF font_size=32 align=center valign=top wrap=word'",
+                        };
+                    }
+                    _progressLabel.Text = _text;
+                    _progressLabel.Show();
+                    if (_box != null)
+                    {
+                        _box.PackEnd(_progressLabel);
+                    }
+                }
             }
         }
 
