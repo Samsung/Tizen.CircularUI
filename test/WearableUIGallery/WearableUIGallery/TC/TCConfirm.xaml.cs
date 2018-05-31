@@ -35,6 +35,12 @@ namespace WearableUIGallery.TC
             CancelCommand = new Command(() => BackgroundColor = Color.Red);
 
             InitializeComponent ();
+
+            CtxCheck.PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == Check.IsToggledProperty.PropertyName)
+                    System.Diagnostics.Debug.WriteLine($"IsToggled = {CtxCheck.IsToggled}");
+            };
 		}
 
         public ICommand AcceptedCommand { get; private set; }

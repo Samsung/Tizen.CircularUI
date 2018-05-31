@@ -16,9 +16,9 @@ The binaries are available via NuGet (package name CircularUI) with the source a
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleScrollView)              | A subclass of Xamarin.Forms.ScrollView that can be scrolled by the bezel action. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleStackLayout)             | A container to layout children linear in the circular area. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.CircleStepper)                 | A control to select a number of steps fits in the circular screen. |
-| [](xref:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior)   | The CircleSurfaceEffectBehavior is an effect which allows you to insert views that require CircleSurface. |
+| [](xref:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior)   | The CircleSurfaceEffectBehavior is an behavior which allows you to insert views that require CircleSurface. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.TwoButtonPopup)                | A popup has two button in left and right side of the circular screen. |
-| [](xref:Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect)            | The effect to show a small popup has one or two buttons sticky with any control. |
+| [](xref:Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior)    | The behavior to show a small popup has one or two buttons sticky with any control. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.IndexPage)                     | A subclass of multiple Pages that can slide child page horizontal and has dots on top of the screen for the number of child pages. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.InformationPopup)              | A popup has a control to show progress and one button in the bottom side of the circular screen. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver )         | A event receiver for using the bezel action. |
