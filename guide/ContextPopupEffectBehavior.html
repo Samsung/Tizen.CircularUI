@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ConfirmPopupEffect </title>
+    <title>ContextPopupEffectBehavior </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="ConfirmPopupEffect ">
+    <meta name="title" content="ContextPopupEffectBehavior ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -74,23 +74,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ConfirmPopupEffect">
-<h1 id="confirmpopupeffect">ConfirmPopupEffect</h1>
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ContextPopupEffectBehavior">
+<h1 id="contextpopupeffectbehavior">ContextPopupEffectBehavior</h1>
 
-<p><code>ConfirmPopupEffect</code> is an <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/">Effect</a> for Xamarin.Forms that is used to make the <a class="xref" href="CirclePage.html">CirclePage</a> have one button or two buttons.
+<p><code>ContextPopupEffectBehavior</code> is an <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/">Behavior</a> for Xamarin.Forms that is used to make the <a href="https://docs.microsoft.com/dotnet/api/xamarin.forms.view">View</a> have context popup that has one button or two buttons.
 Accept button has one default, and &quot;Ok&quot; text is displayed in Accept as default.</p>
-<p>When <code>ConfirmVisibility</code> becomes <code>True</code>, it appears on the screen,
+<p>When <code>Visibility</code> becomes <code>True</code>, it appears on the screen,
 The command given at the time of Accept or Cancel is executed and disappears automatically, and <code>ConfirmVisibility</code> becomes <code>False</code>.
-Also, when you touch the outside of the popup, the popup is automatically canceled. (Cancel command is performed similarly.)
+Also, when you touch the outside of the popup, the popup is automatically removed.
 You can change the position by adjusting the X and Y value of Offset.</p>
-<p><img src="data/ConfirmPopupEffect.png" alt=""></p>
-<h2 id="adding-popup-with-confirmpopupeffect-at-circlepage">Adding popup with ConfirmPopupEffect at CirclePage</h2>
-<p>You can set popup with <code>ConfirmPopupEffect</code> at <a class="xref" href="CirclePage.html">CirclePage.Content</a>. If you want to know how to add <a class="xref" href="CirclePage.html">CirclePage</a>, please refer to <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>. To create a new popup, use the following code.</p>
-<p><code>ConfirmPopupEffect</code> has the following properties:</p>
+<p><img src="data/ContextPopupEffectBehavior.png" alt=""></p>
+<h2 id="adding-popup-with-contextpopupeffectbehavior-at-circlepage">Adding popup with ContextPopupEffectBehavior at CirclePage</h2>
+<p>You can set popup with <code>ContextPopupEffectBehavior</code> at any <code>View</code>. To create a new popup, use the following code.</p>
+<p><code>ContextPopupEffectBehavior</code> has the following properties:</p>
 <ul>
 <li>AcceptCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/">System.Windows.Input.ICommand</a>. Command to be executed when Accept</li>
 <li>CancelCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/">System.Windows.Input.ICommand</a>. Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.</li>
-<li>ConfirmVisibility : Popup appears if <code>ConfirmVisibility</code> is True, and disappears when it becomes False. <code>CancelCommand</code> works even if it disappears to False.</li>
+<li>Visibility : Popup appears if <code>ConfirmVisibility</code> is True, and disappears when it becomes False. <code>CancelCommand</code> works even if it disappears to False.</li>
 <li>PositionOption : Position type of popup<ul>
 <li><code>BottomOfView</code> : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.</li>
 <li><code>CenterOfParent</code> : In the center of the screen, move by the Offset in the Popup.</li>
@@ -99,14 +99,16 @@ You can change the position by adjusting the X and Y value of Offset.</p>
 </ul>
 </li>
 </ul>
-<p>In the example below, a check with <code>ConfirmPopupEffect</code> in the <code>StackLayout</code> is set into the <code>CirclePage</code>. I have set the texts to be shown in <code>AcceptText</code> and <code>CancelText</code>, and defined the commands to execute when each item is selected in <code>AcceptCommand</code> and <code>CancelCommand</code>. Accept will change the background color to green and Cancel if it will be red.
-I set the position by assigning <code>CenterOfParent</code> to the <code>PositionOption</code>. <code>ConfirmVisibility</code> value set to be bound to <code>IsToggled</code>.</p>
+<p>In the example below, a <code>Check</code> with <code>ContextPopupEffectBehavior</code> in the <code>AbsoluteLayout</code> is set into the <code>CirclePage</code> 
+I have set the texts to be shown in <code>AcceptText</code> and <code>CancelText</code>, and defined the commands to execute when each item is selected in <code>AcceptCommand</code> and <code>CancelCommand</code>.
+Accept will change the background color to green and Cancel if it will be red.
+I set the position by assigning <code>CenterOfParent</code> to the <code>PositionOption</code>. <code>Visibility</code> value set to be bound to <code>IsToggled</code>.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center"><img src="data/ConfirmPopupEffect_BottomOfView.png" alt="BottomOfView"></th>
-<th style="text-align:center"><img src="data/ConfirmPopupEffect_2.png" alt="CenterOfParent"></th>
-<th style="text-align:center"><img src="data/ConfirmPopupEffect_Absolute.png" alt="3rd scene when selects &#39;Yes&#39;"></th>
+<th style="text-align:center"><img src="data/ContextPopupEffectBehavior_BottomOfView.png" alt="BottomOfView"></th>
+<th style="text-align:center"><img src="data/ContextPopupEffectBehavior_2.png" alt="CenterOfParent"></th>
+<th style="text-align:center"><img src="data/ContextPopupEffectBehavior_Absolute.png" alt="3rd scene when selects &#39;Yes&#39;"></th>
 </tr>
 </thead>
 <tbody>
@@ -119,7 +121,7 @@ I set the position by assigning <code>CenterOfParent</code> to the <code>Positio
 </table>
 <p>For more information. Please refer to below links</p>
 <ul>
-<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.html">ConfirmPopupEffect  API reference</a></li>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html">ContextPopupEffectBehavior  API reference</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/">Xamarin.Forms.RoutingEffect  API reference</a></li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/">Xamarin.Forms.Effect Guide</a></li>
 </ul>
@@ -150,21 +152,21 @@ I set the position by assigning <code>CenterOfParent</code> to the <code>Positio
     &lt;ContentPage.Content&gt;
         &lt;AbsoluteLayout&gt;
             &lt;w:Check
-                x:Name=&quot;confirm3&quot;
-                w:ConfirmPopupEffect.AcceptCommand=&quot;{Binding AcceptedCommand, Source={x:Reference mypage}}&quot;
-                w:ConfirmPopupEffect.AcceptText=&quot;Yes&quot;
-                w:ConfirmPopupEffect.CancelCommand=&quot;{Binding CancelCommand, Source={x:Reference mypage}}&quot;
-                w:ConfirmPopupEffect.CancelText=&quot;No&quot;
-                w:ConfirmPopupEffect.ConfirmVisibility=&quot;{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}&quot;
-                w:ConfirmPopupEffect.PositionOption=&quot;CenterOfParent&quot;
+                x:Name=&quot;CtxCheck&quot;
                 AbsoluteLayout.LayoutBounds=&quot;0.5, 0.2, 1, 0.25&quot;
                 AbsoluteLayout.LayoutFlags=&quot;All&quot;
                 HorizontalOptions=&quot;CenterAndExpand&quot;
                 IsToggled=&quot;False&quot;
                 VerticalOptions=&quot;CenterAndExpand&quot;&gt;
-                &lt;w:Check.Effects&gt;
-                    &lt;w:ConfirmPopupEffect /&gt;
-                &lt;/w:Check.Effects&gt;
+                &lt;w:Check.Behaviors&gt;
+                    &lt;w:ContextPopupEffectBehavior
+                        AcceptCommand=&quot;{Binding AcceptedCommand, Source={x:Reference mypage}}&quot;
+                        AcceptText=&quot;Yes&quot;
+                        CancelCommand=&quot;{Binding CancelCommand, Source={x:Reference mypage}}&quot;
+                        CancelText=&quot;No&quot;
+                        Visibility=&quot;{Binding IsToggled, Source={x:Reference CtxCheck}, Mode=TwoWay}&quot;
+                        PositionOption=&quot;BottomOfView&quot;/&gt;
+                &lt;/w:Check.Behaviors&gt;
             &lt;/w:Check&gt;
         &lt;/AbsoluteLayout&gt;
     &lt;/ContentPage.Content&gt;
@@ -173,15 +175,15 @@ I set the position by assigning <code>CenterOfParent</code> to the <code>Positio
 <table>
 <thead>
 <tr>
-<th style="text-align:center"><img src="data/ConfirmPopupEffect_1.png" alt="1st scene with Check"></th>
-<th style="text-align:center"><img src="data/ConfirmPopupEffect_2.png" alt="2nd scene with ConfirmPopupEffect"></th>
-<th style="text-align:center"><img src="data/ConfirmPopupEffect_3.png" alt="3rd scene when selects &#39;Yes&#39;"></th>
+<th style="text-align:center"><img src="data/ContextPopupEffectBehavior_1.png" alt="1st scene with Check"></th>
+<th style="text-align:center"><img src="data/ContextPopupEffectBehavior_2.png" alt="2nd scene with ContextPopupEffectBehavior"></th>
+<th style="text-align:center"><img src="data/ContextPopupEffectBehavior_3.png" alt="3rd scene when selects &#39;Yes&#39;"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">1st scene with Check</td>
-<td style="text-align:center">2nd scene with ConfirmPopupEffect</td>
+<td style="text-align:center">2nd scene with ContextPopupEffectBehavior</td>
 <td style="text-align:center">3rd scene when selects &#39;Yes&#39;</td>
 </tr>
 </tbody>
