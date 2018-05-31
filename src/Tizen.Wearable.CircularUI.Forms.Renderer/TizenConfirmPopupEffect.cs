@@ -19,21 +19,28 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
 [assembly: ResolutionGroupName("CircleUI")]
-[assembly: ExportEffect(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect), "ConfirmPopupEffect")]
+[assembly: ExportEffect(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect), "ContextPopupEffectBehavior")]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class TizenConfirmPopupEffect : PlatformEffect
     {
         SelectContextPopup _popup;
+        ContextPopupEffectBehavior _behavior;
 
         protected override void OnAttached()
         {
-            Show();
+            _behavior = Element.GetValue(ContextPopupEffectBehavior.ContextPopupEffectBehaviorProperty) as ContextPopupEffectBehavior;
+            _behavior.PropertyChanged += OnBehaviorPropertyChanged;
+
+            if (_behavior != null)
+                UpdatePopupVisibility();
+
         }
 
         protected override void OnDetached()
@@ -41,34 +48,41 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (_popup != null)
             {
                 _popup.Dismiss();
+                _popup.Unrealize();
+            }
+            if (_behavior != null)
+                _behavior.PropertyChanged -= OnBehaviorPropertyChanged;
+        }
+
+        void OnBehaviorPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == ContextPopupEffectBehavior.VisibilityProperty.PropertyName)
+            {
+                UpdatePopupVisibility();
             }
         }
 
-        protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
+        void UpdatePopupVisibility()
         {
-            base.OnElementPropertyChanged(args);
-            if (args.PropertyName == ConfirmPopupEffect.ConfirmVisibilityProperty.PropertyName)
+            if (_behavior == null) return;
+            if (_behavior.Visibility)
             {
-                Show();
-            }
-        }
-
-        void Show()
-        {
-            bool visibility = ConfirmPopupEffect.GetConfirmVisibility(Element);
-            Console.WriteLine("Show called. - " + visibility);
-            if (visibility)
-            {
-                _popup = ShowPopup();
+                CreatePopup();
+                _popup.Show();
             }
             else
             {
-                _popup?.Dismiss();
+                if (_popup == null) return;
+                _popup.Dismiss();
+                _popup.Unrealize();
+                _popup = null;
             }
         }
 
-        SelectContextPopup ShowPopup()
+        void CreatePopup()
         {
+            if (_popup != null) return;
+
             ElmSharp.EvasObject parent = null;
             if (Control?.Parent != null)
             {
@@ -79,65 +93,47 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 parent = Xamarin.Forms.Platform.Tizen.Forms.NativeParent;
             }
 
-            var ctx = new SelectContextPopup(parent);
-            ctx.Dismissed += (s, e) => ConfirmPopupEffect.SetConfirmVisibility(Element, false);
+            _popup = new SelectContextPopup(parent);
+            _popup.Dismissed += (s, e) => _behavior.Visibility = false;
 
-            var acceptCommand = ConfirmPopupEffect.GetAcceptCommand(Element);
-            if (acceptCommand != null)
-            {
-                ctx.Accepted += (s, e) => acceptCommand.Execute(ConfirmPopupEffect.GetAcceptCommandParameter(Element));
-            }
+            _popup.Accepted += (s, e) => _behavior?.AcceptCommand?.Execute(_behavior?.AcceptCommandParameter);
+            _popup.Canceled += (s, e) => _behavior?.CancelCommand?.Execute(_behavior?.CancelCommandParameter);
 
-            var cancelCommand = ConfirmPopupEffect.GetCancelCommand(Element);
-            if (cancelCommand != null)
-            {
-                ctx.Canceled += (s, e) => cancelCommand.Execute(ConfirmPopupEffect.GetCancelCommandParameter(Element));
-            }
+            string accept = _behavior.AcceptText ?? "";
 
-            string accept = ConfirmPopupEffect.GetAcceptText(Element);
+            var acceptItem = _popup.Append(accept);
 
-            if (string.IsNullOrEmpty(accept))
-            {
-                accept = "Ok";
-            }
-            var acceptItem = ctx.Append(accept);
-
-            ctx.Show();
-
-            string cancel = ConfirmPopupEffect.GetCancelText(Element);
+            string cancel = _behavior.CancelText;
             if (!string.IsNullOrEmpty(cancel))
             {
-                var cancelItem = ctx.Append(cancel);
+                var cancelItem = _popup.Append(cancel);
 
                 acceptItem.Style = "select_mode/top";
                 cancelItem.Style = "select_mode/bottom";
-                cancelItem.Selected += (s, e) => ctx.Cancel();
-
-                Console.WriteLine($"Handle.Style = [{acceptItem.Style}]");
-                Console.WriteLine($"Handle.Style = [{cancelItem.Style}]");
+                cancelItem.Selected += (s, e) => _popup.Cancel();
             }
-            acceptItem.Selected += (s, e) => ctx.Accept();
+            acceptItem.Selected += (s, e) => _popup.Accept();
 
-            var option = ConfirmPopupEffect.GetPositionOption(Element);
-            var offset = ConfirmPopupEffect.GetOffset(Element);
+            var option = _behavior.PositionOption;
+            var offset = _behavior.Offset;
             int x = 0, y = 0;
             Rect rect;
             switch (option)
             {
                 case PositionOption.Absolute:
-                    x = (int)offset.X;
-                    y = (int)offset.Y;
+                    x = Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
+                    y = Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.BottomOfView:
                     rect = Control.Geometry;
-                    x = rect.X + rect.Width / 2 + (int)offset.X;
-                    y = rect.Y + rect.Height / 2 + (int)offset.Y;
+                    x = rect.X + rect.Width / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
+                    y = rect.Y + rect.Height / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.CenterOfParent:
                     rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
-                    var ctxRect = ctx.Geometry;
-                    x = rect.Width / 2 + (int)offset.X;
-                    y = rect.Height / 2 - ctxRect.Height / 2 + (int)offset.Y;
+                    var ctxRect = _popup.Geometry;
+                    x = rect.Width / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
+                    y = rect.Height / 2 - ctxRect.Height / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.Relative:
                     rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
@@ -145,9 +141,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     y = (int)(rect.Height * offset.Y);
                     break;
             }
-            ctx.Move(x, y);
-
-            return ctx;
+            _popup.Move(x, y);
         }
 
         class SelectContextPopup : ElmSharp.ContextPopup

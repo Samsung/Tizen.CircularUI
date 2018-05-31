@@ -11,7 +11,7 @@
 ## [CircleStackLayout](CircleStackLayout.md)
 ## [CircleStepper](CircleStepper.md)
 ## [CircleSurfaceEffectBehavior](CircleSurfaceEffectBehavior.md)
-## [ConfirmPopupEffect](ConfirmPopupEffect.md)
+## [ContextPopupEffectBehavior](ContextPopupEffectBehavior.md)
 ## [IndexPage](IndexPage.md)
 ## [InformationPopup](InformationPopup.md)
 ## [IRotaryEventReceiver](IRotaryEventReceiver.md)

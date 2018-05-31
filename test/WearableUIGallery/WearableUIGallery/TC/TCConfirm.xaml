@@ -8,21 +8,21 @@
     <ContentPage.Content>
         <AbsoluteLayout>
             <w:Check
-                x:Name="confirm3"
-                w:ConfirmPopupEffect.AcceptCommand="{Binding AcceptedCommand, Source={x:Reference mypage}}"
-                w:ConfirmPopupEffect.AcceptText="Yes"
-                w:ConfirmPopupEffect.CancelCommand="{Binding CancelCommand, Source={x:Reference mypage}}"
-                w:ConfirmPopupEffect.CancelText="No"
-                w:ConfirmPopupEffect.ConfirmVisibility="{Binding IsToggled, Source={x:Reference confirm3}, Mode=TwoWay}"
-                w:ConfirmPopupEffect.PositionOption="BottomOfView"
+                x:Name="CtxCheck"
                 AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.25"
                 AbsoluteLayout.LayoutFlags="All"
                 HorizontalOptions="CenterAndExpand"
                 IsToggled="False"
                 VerticalOptions="CenterAndExpand">
-                <w:Check.Effects>
-                    <w:ConfirmPopupEffect />
-                </w:Check.Effects>
+                <w:Check.Behaviors>
+                    <w:ContextPopupEffectBehavior
+                        AcceptCommand="{Binding AcceptedCommand, Source={x:Reference mypage}}"
+                        AcceptText="Yes"
+                        CancelCommand="{Binding CancelCommand, Source={x:Reference mypage}}"
+                        CancelText="No"
+                        Visibility="{Binding IsToggled, Source={x:Reference CtxCheck}, Mode=TwoWay}"
+                        PositionOption="BottomOfView"/>
+                </w:Check.Behaviors>
             </w:Check>
         </AbsoluteLayout>
     </ContentPage.Content>

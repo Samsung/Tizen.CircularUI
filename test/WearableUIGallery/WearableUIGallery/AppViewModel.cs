@@ -31,7 +31,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) });
             TCs.Add(new TCDescribe { Title = "CircleStackLayout", Class = typeof(TCCircleStackLayout) });
             TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
-            TCs.Add(new TCDescribe { Title = "ConfirmPopupEffect", Class = typeof(TCConfirm) });
+            TCs.Add(new TCDescribe { Title = "ContextPopupBehavior", Class = typeof(TCConfirm) });
             TCs.Add(new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) });
             TCs.Add(new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) });
             TCs.Add(new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) });
