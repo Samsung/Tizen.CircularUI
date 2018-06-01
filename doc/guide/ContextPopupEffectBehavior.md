@@ -4,47 +4,47 @@ summary: ContextPopupEffectBehavior guide
 ---
 # ContextPopupEffectBehavior
 
-`ContextPopupEffectBehavior` is an [Behavior](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/) for Xamarin.Forms that is used to make the [View](https://docs.microsoft.com/dotnet/api/xamarin.forms.view) have context popup that has one button or two buttons.
-Accept button has one default, and "Ok" text is displayed in Accept as default.
+`ContextPopupEffectBehavior` is a [Behavior](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/) for Xamarin.Forms that is used to create the [View](https://docs.microsoft.com/dotnet/api/xamarin.forms.view) with one or two buttons.
+A popup with only one button will have an **Accept** button only. The default text for **Accept** button is OK.
 
-When `Visibility` becomes `True`, it appears on the screen,
-The command given at the time of Accept or Cancel is executed and disappears automatically, and `ConfirmVisibility` becomes `False`.
-Also, when you touch the outside of the popup, the popup is automatically removed.
-You can change the position by adjusting the X and Y value of Offset.
+When `Visibility` is set to `True`, the popup appears on the screen. The popup displayed with the **Accept** or **Cancel** button is executed automatically. Accept command is executed when click **Accept** button. After the command is executed, popup disappears and `Visibility` is set to `False`.
+If you touch outside of the popup, the popup is removed. It is same to execute Cancel command. You can adjust the X and Y value to change the position of popup.
 
 ![](data/ContextPopupEffectBehavior.png)
 
-## Adding popup with ContextPopupEffectBehavior at CirclePage
+## Add popup with ContextPopupEffectBehavior in CirclePage
 
-You can set popup with `ContextPopupEffectBehavior` at any `View`. To create a new popup, use the following code.
+You can set popup with the `ContextPopupEffectBehavior` in any `View`. For more information on how to add [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), see [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
 
 `ContextPopupEffectBehavior` has the following properties:
 
-- AcceptCommand : [System.Windows.Input.ICommand](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command to be executed when Accept
-- CancelCommand : [System.Windows.Input.ICommand](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.
-- Visibility : Popup appears if `ConfirmVisibility` is True, and disappears when it becomes False. `CancelCommand` works even if it disappears to False.
-- PositionOption : Position type of popup
-  - `BottomOfView` : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.
-  - `CenterOfParent` : In the center of the screen, move by the Offset in the Popup.
-  - `Absolute` : The value of Offset is X, Y and popup is placed on the screen.
-  - `Relative` : Set Offset.X * Window.Width, Offset.Y * Window.Height.
+- AcceptCommand : [System.Windows.Input.ICommand](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). This command is executed when Accept.
+- CancelCommand : [System.Windows.Input.ICommand](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/). This command is executed when Cancel. It is also executed when the popup disappears on touching an area outside the popup.
+- Visibility : This property when set to `True`, the popup appears and when set to `False`, the popup disappears. The `CancelCommand` works even when the popup disappears and the `Visibility` is set to `False`.
 
-In the example below, a `Check` with `ContextPopupEffectBehavior` in the `AbsoluteLayout` is set into the `CirclePage` 
-I have set the texts to be shown in `AcceptText` and `CancelText`, and defined the commands to execute when each item is selected in `AcceptCommand` and `CancelCommand`.
-Accept will change the background color to green and Cancel if it will be red.
-I set the position by assigning `CenterOfParent` to the `PositionOption`. `Visibility` value set to be bound to `IsToggled`.
+- PositionOption : The popup has the following position type
+  - `BottomOfView` : The popup appears at the bottom of the view with `ContextPopupEffectBehavior`. The position is changed by offset in the center of view.
+  - `CenterOfParent` : In the center of the screen, you can move the values of offset to adjust position of popup.
+  - `Absolute` : The value of offset is X, Y and popup is placed on the screen.
+  - `Relative` : Set the width of the screen to Offset.X * Window.Width and height of the screen to Offset.Y * Window.Height.
+
+In the example, you can see a `Check` with the `ContextPopupEffectBehavior` in the `AbsoluteLayout` set into the `CirclePage`.
+The text for the `AcceptText` and the `CancelText` are set. Also, the commands for `AcceptCommand` and `CancelCommand` are set. When selected, **Yes** will change the background color to green and **No** will change the background color to red.
+The `PositionOption` is set as `CenterOfParent`. The value of `Visibility` is set to `IsToggled`.
 
 |![BottomOfView](data/ContextPopupEffectBehavior_BottomOfView.png)|![CenterOfParent](data/ContextPopupEffectBehavior_2.png)|![3rd scene when selects 'Yes'](data/ContextPopupEffectBehavior_Absolute.png)|
 |:----------------------------------------------------:|:--------------------------------------------------:|:-----------------------------:|
 |                       BottomOfView                   |                    CenterOfParent                  |         Absolute/Relative     |
 
-For more information. Please refer to below links
+For more information, see the following links:
 
 - [ContextPopupEffectBehavior  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html)
-- [Xamarin.Forms.RoutingEffect  API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)
-- [Xamarin.Forms.Effect Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/)
+- [Xamarin.Forms.Behaviors Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/)
+- [Consuming a Xamarin.Forms Behavior](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/creating#consuming-a-xamarinforms-behavior)
 
-_This guide's code example use WearableUIGallery's TCConfirm.xaml and TCConfirm.xaml.cs code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirm.xaml_
+_The code example of this guide uses TCConfirm code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCConfirm.xaml_
+
+To create a context popup in CirclePage, use the following code:
 
 **C# file**
 
@@ -58,6 +58,12 @@ _This guide's code example use WearableUIGallery's TCConfirm.xaml and TCConfirm.
             CancelCommand = new Command(() => BackgroundColor = Color.Red);
 
             InitializeComponent ();
+
+            CtxCheck.PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == Check.IsToggledProperty.PropertyName)
+                    System.Diagnostics.Debug.WriteLine($"IsToggled = {CtxCheck.IsToggled}");
+            };
         }
 
         public ICommand AcceptedCommand { get; private set; }
@@ -103,5 +109,5 @@ _This guide's code example use WearableUIGallery's TCConfirm.xaml and TCConfirm.
 
 |![1st scene with Check](data/ContextPopupEffectBehavior_1.png)| ![2nd scene with ContextPopupEffectBehavior](data/ContextPopupEffectBehavior_2.png)|![3rd scene when selects 'Yes'](data/ContextPopupEffectBehavior_3.png)|
 |:----------------------------------------------------:|:-------------------------------------------------------------------:|:-----------------------------------------:|
-|                       1st scene with Check            |                    2nd scene with ContextPopupEffectBehavior                |         3rd scene when selects 'Yes' |
+|                       1st scene with Check            |                    2nd scene with context popup                |         3rd scene when selects 'Yes' |
 
