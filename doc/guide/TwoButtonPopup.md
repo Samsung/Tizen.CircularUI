@@ -12,7 +12,7 @@ The `TwoButtonPopup` represents The Tizen Wearable EFL two button popup style. T
 
 ## Create TwoButtonPopup
 The `TwoButtonPopup.Title` property sets the title of the popup. You can set the `Content` property with layouts such as `StackLayout` or `ScrollView`.
-The `TwoButtonPopup.FirstButton` property sets the left side button. The `TwoButtonPopup.SecondButton` property sets the right side button. You can set` FirstButton` and `SecondButton` using the `MenuItem`. You must add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
+The `TwoButtonPopup.FirstButton` property sets the left side button. The `TwoButtonPopup.SecondButton` property sets the right side button. You can set `FirstButton` and `SecondButton` using the `MenuItem`. You must add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
 
 For more information, see [TwoButtonPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html).
 
