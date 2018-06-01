@@ -4,20 +4,19 @@ summary: TwoButtonPopup control guide
 ---
 
 # TwoButtonPopup
-`TwoButtonPopup` represents Tizen Wearable EFL Twobutton-popup style. `TwoButtonPopup` is useful to select one of two options. (e.g  cancel/done, share/delete)
+The `TwoButtonPopup` represents The Tizen Wearable EFL two button popup style. The `TwoButtonPopup` is used to select one of the two options such as cancel or done, and share or delete.
 
-*`TwoButtonPopup` is displayed separately from any control. So you can't set this in XAML file.*
+*Since `TwoButtonPopup` does not adhere as a control, this popup cannot be set in the XAML file.*
 
-![confirmation_popup1](data/confirmation_popup1.png)
+![TwoButton_popup1](data/twobutton_popup1.png)
 
 ## Create TwoButtonPopup
-`TwoButtonPopup.Title` Property sets the title of the popup. You can set the `Content` property with Layouts such as `StackLayout` or `ScrollView`.
-`TwoButtonPopup.FirstButton` property sets left side button. `TwoButtonPopup.SecondButton`property sets right side button. You can set` FirstButton` and `SecondButton` using `MenuItem`. You should add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
-*`Text` Property of `MenuItem` is ignored since button has no space to display text*
+The `TwoButtonPopup.Title` property sets the title of the popup. You can set the `Content` property with layouts such as `StackLayout` or `ScrollView`.
+The `TwoButtonPopup.FirstButton` property sets the left side button. The `TwoButtonPopup.SecondButton` property sets the right side button. You can set` FirstButton` and `SecondButton` using the `MenuItem`. You must add code at `Command` or `Clicked` event handler for controlling `MenuItem` clicked.
 
-_This guide's code example uses WearableUIGallery's TCTwoButtonPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPopup.xaml.cs_
+For more information, see [TwoButtonPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html).
 
-For more information. Please refer to [TwoButtonPopup  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html)
+_The code example of this guide uses TCTwoButtonPopup code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPopup.xaml.cs_
 
 **C# file**
 ```cs
@@ -66,11 +65,13 @@ For more information. Please refer to [TwoButtonPopup  API reference](https://sa
     }
 ```
 
-## How to set long Text at TwoButtonPopup
-TwoButtonPopup has `Text` Property. This Property is useful to set long text.
-If a long text was set by `Text` property, you don't need to add `StackLayout`, `ScrollView` and `Label` for displaying long text.
+## How to Set Long Text in TwoButtonPopup
+The `TwoButtonPopup` has `Text` property. This property is useful to set long text.
+If a long text is set using the `Text` property, you do not need to add `StackLayout`, `ScrollView`, `Label` to display long text.
 
-*`Text` Property's area overlaps `Content` Property area. So do not use two property at the same time.*
+*The area of the `Text` property overlaps the area of the `Content` property. Therefore, do not use two properties at the same time.*
+
+![TwoButton_popup2](data/twobutton_popup2.png)
 
 **C# file**
 ```cs
