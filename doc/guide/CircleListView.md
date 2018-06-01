@@ -114,10 +114,10 @@ You can add group list as contents of `CircleListView`.
 
 To enable grouping:
 
-- Create a list of List<>.
-- Set [ItemsSource](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) to that list.
-- Set [IsGroupingEnabled](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.IsGroupingEnabled/) to true.
-- Set [GroupDisplayBinding](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
+1. Create a list of List<>.
+2. Set [ItemsSource](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) to that list.
+3. Set [IsGroupingEnabled](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.IsGroupingEnabled/) to true.
+4. Set [GroupDisplayBinding](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) to bind to the property of the groups that is being used as the title of the group.
 
 _The code example of this guide uses TCGroupList code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCGroupList.xaml_
 
