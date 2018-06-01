@@ -77,21 +77,21 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.IndexPage">
 <h1 id="indexpage">IndexPage</h1>
 
-<p><code>IndexPage</code> allows you to know in advance how many pages you have when you configure your application on multiple pages, and  to show you how many pages you are viewing.
-It is extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/">Xamarin.Forms.MultiPage</a>.
-When <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Page</a> is added and removed at <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/">Xamarin.Forms.MultiPage</a>, the number of dot marks increases or decreases automatically at the top of window.
-It is similar to <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages#carouselpage">CarouselPage</a> in Xamarin.Forms, with the addition of <code>Index</code>.
-When <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Page</a> is scrolled, <code>Index</code> operates select internally.</p>
+<p>The <code>IndexPage</code> allows you to know in advance the number of pages you have when you configure the application on multiple pages. It also shows the number of pages you are viewing.
+It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/">Xamarin.Forms.MultiPage</a>. When the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Page</a> is added and removed in the <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/">Xamarin.Forms.MultiPage</a>, the number of dot marks increases or decreases automatically at the top of window.
+It is similar to the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages#carouselpage">CarouselPage</a> in the Xamarin.Forms, with the addition of <code>Index</code>.
+When the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Page</a> is scrolled, the <code>Index</code> operates internally.</p>
 <p><img src="data/IndexPage_action.png" alt=""></p>
-<h2 id="adding-indexpage">Adding IndexPage</h2>
-<p>To create a new index component, use the following XAML code.
-If you add as many pages as you want, you will increase the number of dot mark by index accordingly. In the example below, 3 pages have been added. The number of dot mark is 3. Because it is on the first page, only the first dot mark is shown as white, and the remaining dot marks are shown as grey.</p>
-<p>For more information. Please refer to below links</p>
+<h2 id="add-indexpage">Add IndexPage</h2>
+<p>You can add as many pages you want, and this will increase the number of dot mark by index accordingly.
+In the illustrated example, three pages are added. The number of dot mark is three. Since, it is on the first page, only the first dot mark is shown as white, and the remaining dot marks are shown as grey.</p>
+<p><img src="data/IndexPage.png" alt="IndexPage"></p>
+<p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IndexPage.html">IndexPage  API reference</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/">Xamarin.Forms.MultiPage  API reference</a></li>
 </ul>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCIndexPage.xaml code at the test\WearableUIGallery\WearableUIGallery\TC\TCIndexPage.xaml</em></p>
+<p><em>The code example of this guide uses TCIndexPage code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCIndexPage.xaml</em></p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
@@ -120,9 +120,7 @@ If you add as many pages as you want, you will increase the number of dot mark b
         &lt;/StackLayout&gt;
     &lt;/ContentPage&gt;
 &lt;/w:IndexPage&gt;
-</code></pre><p><strong>Screenshot</strong></p>
-<p><img src="data/IndexPage.png" alt="IndexPage"></p>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

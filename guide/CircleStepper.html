@@ -77,33 +77,33 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleStepper">
 <h1 id="circlestepper">CircleStepper</h1>
 
-<p><code>CircleStepper</code> allows the user to select a value from a range of incremental values specified with the <code>Minimum</code>, <code>Maximum</code>, and <code>Increment</code> properties.
-It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>.
-MarkerColor, MarkerLineWidth, and LabelFormat have been added to the <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>.
-You can change value with <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
-In order to receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code> property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
+<p><code>CircleStepper</code> allows you to select a value from a range of incremental values specified with <code>Minimum</code>, <code>Maximum</code>, and <code>Increment</code> properties.
+It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>. MarkerColor, MarkerLineWidth, and LabelFormat have been added to the <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>.
+You can modify the value with <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
+To receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code>, property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
 <p><img src="data/CircleStepper_property.png" alt=""></p>
-<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contains these controls. If other <code>pages</code> contain these controls, it may cause exception or can&#39;t display control.</strong></p>
-<h2 id="adding-circlestepper-at-circlepage">Adding CircleStepper at CirclePage</h2>
-<p>You can set <code>CircleStepper</code> at <a class="xref" href="CirclePage.html">CirclePage.Content</a>. If you want to know how to add <a class="xref" href="CirclePage.html">CirclePage</a>, please refer to <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-The following code shows <a class="xref" href="CirclePage.html">CirclePage</a> with <code>CircleStepper</code>.
-<code>RotaryFocusTargetName</code> attribute sets the currently focused control that is handled by rotating and display the focused control&#39;s circle object.
-If you don&#39;t set this value properly, control can&#39;t receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
+<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
+<h2 id="add-circlestepper-in-circlepage">Add CircleStepper in CirclePage</h2>
+<p>You can set the <code>CircleStepper</code> in the <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information on how to add <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
+<code>RotaryFocusTargetName</code> property sets the currently focused control that is handled by rotating and displaying the focused control&#39;s circle object.
+If this value properly is not set, then control can not receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
 <p><code>CircleStepper</code> has the following properties:</p>
 <ul>
-<li>LabelFormat : Gets or sets format in which Value is shown.</li>
-<li>MarkerColor : <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Color/">Xamarin.Forms.Color</a>. Change color of marker to select value.</li>
-<li>MarkerLineWidth : Gets or sets a length of the marker.</li>
+<li>LabelFormat: This property gets or sets the format in which the value is shown.</li>
+<li>MarkerColor: This property changes the color of the marker to the value selected.</li>
+<li>MarkerLineWidth: This property gets and sets the length of the marker.</li>
 </ul>
-<p>In the example below, we have a <code>StackLayout</code> with a <code>CircleStepper</code> and two labels in the <code>CirclePage</code>.
-Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &quot;% 1.1f&quot;, &quot;9.0&quot; appears on the screen. The <code>Increment</code> is 7.5, so if you turn the bezel and increase <code>Value</code>, it increases by 7.5. Since the <code>Maximum</code> is 99, the marker does not exceed the value. Since <code>MarkerColor</code> is set to &quot;Coral&quot;, it will be displayed as the corresponding color.</p>
-<p>For more information. Please refer to below links</p>
+<p>This example consists of <code>StackLayout</code> with a <code>CircleStepper</code> and two Labels in the <code>CirclePage</code>.
+Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &quot;% 1.1f&quot;, &quot;9.0&quot; appears on the screen. Since the <code>Increment</code> is 7.5, it increases by 7.5 when you turn the bezel and increase the <code>Value</code>. The <code>Maximum</code> defined value is 99, hence the marker does not exceed this value. Since the <code>MarkerColor</code> is set to &quot;Coral&quot;, it will be displayed as the corresponding color.</p>
+<p><img src="data/CircleStepper.png" alt=""></p>
+<p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html">CircleStepper API reference</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper API reference</a></li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views#stepper">Xamarin.Forms.Stepper Guide</a></li>
 </ul>
-<p><em>This guide&#39;s code example use XUIComponent&#39;s SpinnerDefault of CircleSpinner code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml</em></p>
+<p><em>The code example of this guide uses XUIComponent&#39;s SpinnerDefault of CircleSpinner code. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml</em></p>
+<p>The following code shows CirclePage with CircleStepper:</p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">
     public class SpinnerViewModel : INotifyPropertyChanged
@@ -162,9 +162,7 @@ Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &q
         &lt;w:ActionButtonItem Command=&quot;{Binding ButtonPressedExit}&quot; Text=&quot;SET&quot; /&gt;
     &lt;/w:CirclePage.ActionButton&gt;
 &lt;/w:CirclePage&gt;
-</code></pre><p><strong>Screenshot</strong></p>
-<p><img src="data/CircleStepper.png" alt=""></p>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

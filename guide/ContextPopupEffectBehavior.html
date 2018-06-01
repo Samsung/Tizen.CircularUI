@@ -77,32 +77,31 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ContextPopupEffectBehavior">
 <h1 id="contextpopupeffectbehavior">ContextPopupEffectBehavior</h1>
 
-<p><code>ContextPopupEffectBehavior</code> is an <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/">Behavior</a> for Xamarin.Forms that is used to make the <a href="https://docs.microsoft.com/dotnet/api/xamarin.forms.view">View</a> have context popup that has one button or two buttons.
-Accept button has one default, and &quot;Ok&quot; text is displayed in Accept as default.</p>
-<p>When <code>Visibility</code> becomes <code>True</code>, it appears on the screen,
-The command given at the time of Accept or Cancel is executed and disappears automatically, and <code>ConfirmVisibility</code> becomes <code>False</code>.
-Also, when you touch the outside of the popup, the popup is automatically removed.
-You can change the position by adjusting the X and Y value of Offset.</p>
+<p><code>ContextPopupEffectBehavior</code> is a <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/">Behavior</a> for Xamarin.Forms that is used to create the <a href="https://docs.microsoft.com/dotnet/api/xamarin.forms.view">View</a> with one or two buttons.
+A popup with only one button will have an <strong>Accept</strong> button only. The default text for <strong>Accept</strong> button is OK.</p>
+<p>When <code>Visibility</code> is set to <code>True</code>, the popup appears on the screen. The popup displayed with the <strong>Accept</strong> or <strong>Cancel</strong> button is executed automatically. Accept command is executed when click <strong>Accept</strong> button. After the command is executed, popup disappears and <code>Visibility</code> is set to <code>False</code>.
+If you touch outside of the popup, the popup is removed. It is same to execute Cancel command. You can adjust the X and Y value to change the position of popup.</p>
 <p><img src="data/ContextPopupEffectBehavior.png" alt=""></p>
-<h2 id="adding-popup-with-contextpopupeffectbehavior-at-circlepage">Adding popup with ContextPopupEffectBehavior at CirclePage</h2>
-<p>You can set popup with <code>ContextPopupEffectBehavior</code> at any <code>View</code>. To create a new popup, use the following code.</p>
+<h2 id="add-popup-with-contextpopupeffectbehavior-in-circlepage">Add popup with ContextPopupEffectBehavior in CirclePage</h2>
+<p>You can set popup with the <code>ContextPopupEffectBehavior</code> in any <code>View</code>. For more information on how to add <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.</p>
 <p><code>ContextPopupEffectBehavior</code> has the following properties:</p>
 <ul>
-<li>AcceptCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/">System.Windows.Input.ICommand</a>. Command to be executed when Accept</li>
-<li>CancelCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/">System.Windows.Input.ICommand</a>. Command is executed at the time of cancellation, even if the popup disappears by selecting outside the popup.</li>
-<li>Visibility : Popup appears if <code>ConfirmVisibility</code> is True, and disappears when it becomes False. <code>CancelCommand</code> works even if it disappears to False.</li>
-<li>PositionOption : Position type of popup<ul>
-<li><code>BottomOfView</code> : The popup appears at the bottom of the View using the Effect. The position is changed by Offset in the center of View.</li>
-<li><code>CenterOfParent</code> : In the center of the screen, move by the Offset in the Popup.</li>
-<li><code>Absolute</code> : The value of Offset is X, Y and popup is placed on the screen.</li>
-<li><code>Relative</code> : Set Offset.X * Window.Width, Offset.Y * Window.Height.</li>
+<li>AcceptCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/">System.Windows.Input.ICommand</a>. This command is executed when Accept.</li>
+<li>CancelCommand : <a href="https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/">System.Windows.Input.ICommand</a>. This command is executed when Cancel. It is also executed when the popup disappears on touching an area outside the popup.</li>
+<li><p>Visibility : This property when set to <code>True</code>, the popup appears and when set to <code>False</code>, the popup disappears. The <code>CancelCommand</code> works even when the popup disappears and the <code>Visibility</code> is set to <code>False</code>.</p>
+</li>
+<li><p>PositionOption : The popup has the following position type</p>
+<ul>
+<li><code>BottomOfView</code> : The popup appears at the bottom of the view with <code>ContextPopupEffectBehavior</code>. The position is changed by offset in the center of view.</li>
+<li><code>CenterOfParent</code> : In the center of the screen, you can move the values of offset to adjust position of popup.</li>
+<li><code>Absolute</code> : The value of offset is X, Y and popup is placed on the screen.</li>
+<li><code>Relative</code> : Set the width of the screen to Offset.X * Window.Width and height of the screen to Offset.Y * Window.Height.</li>
 </ul>
 </li>
 </ul>
-<p>In the example below, a <code>Check</code> with <code>ContextPopupEffectBehavior</code> in the <code>AbsoluteLayout</code> is set into the <code>CirclePage</code> 
-I have set the texts to be shown in <code>AcceptText</code> and <code>CancelText</code>, and defined the commands to execute when each item is selected in <code>AcceptCommand</code> and <code>CancelCommand</code>.
-Accept will change the background color to green and Cancel if it will be red.
-I set the position by assigning <code>CenterOfParent</code> to the <code>PositionOption</code>. <code>Visibility</code> value set to be bound to <code>IsToggled</code>.</p>
+<p>In the example, you can see a <code>Check</code> with the <code>ContextPopupEffectBehavior</code> in the <code>AbsoluteLayout</code> set into the <code>CirclePage</code>.
+The text for the <code>AcceptText</code> and the <code>CancelText</code> are set. Also, the commands for <code>AcceptCommand</code> and <code>CancelCommand</code> are set. When selected, <strong>Yes</strong> will change the background color to green and <strong>No</strong> will change the background color to red.
+The <code>PositionOption</code> is set as <code>CenterOfParent</code>. The value of <code>Visibility</code> is set to <code>IsToggled</code>.</p>
 <table>
 <thead>
 <tr>
@@ -119,13 +118,14 @@ I set the position by assigning <code>CenterOfParent</code> to the <code>Positio
 </tr>
 </tbody>
 </table>
-<p>For more information. Please refer to below links</p>
+<p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html">ContextPopupEffectBehavior  API reference</a></li>
-<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/">Xamarin.Forms.RoutingEffect  API reference</a></li>
-<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/">Xamarin.Forms.Effect Guide</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/">Xamarin.Forms.Behaviors Guide</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/creating#consuming-a-xamarinforms-behavior">Consuming a Xamarin.Forms Behavior</a></li>
 </ul>
-<p><em>This guide&#39;s code example use WearableUIGallery&#39;s TCConfirm.xaml and TCConfirm.xaml.cs code at the test\WearableUIGallery\WearableUIGallery\TC\TCConfirm.xaml</em></p>
+<p><em>The code example of this guide uses TCConfirm code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCConfirm.xaml</em></p>
+<p>To create a context popup in CirclePage, use the following code:</p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">    [XamlCompilation(XamlCompilationOptions.Compile)
     public partial class TCConfirm : CirclePage
@@ -136,6 +136,12 @@ I set the position by assigning <code>CenterOfParent</code> to the <code>Positio
             CancelCommand = new Command(() =&gt; BackgroundColor = Color.Red);
 
             InitializeComponent ();
+
+            CtxCheck.PropertyChanged += (s, e) =&gt;
+            {
+                if (e.PropertyName == Check.IsToggledProperty.PropertyName)
+                    System.Diagnostics.Debug.WriteLine($&quot;IsToggled = {CtxCheck.IsToggled}&quot;);
+            };
         }
 
         public ICommand AcceptedCommand { get; private set; }
@@ -183,7 +189,7 @@ I set the position by assigning <code>CenterOfParent</code> to the <code>Positio
 <tbody>
 <tr>
 <td style="text-align:center">1st scene with Check</td>
-<td style="text-align:center">2nd scene with ContextPopupEffectBehavior</td>
+<td style="text-align:center">2nd scene with context popup</td>
 <td style="text-align:center">3rd scene when selects &#39;Yes&#39;</td>
 </tr>
 </tbody>

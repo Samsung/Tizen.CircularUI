@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Popup Entry </title>
+    <title>PopupEntry </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Popup Entry ">
+    <meta name="title" content="PopupEntry ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -75,24 +75,28 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.PopupEntry">
-<h1 id="popup-entry">Popup Entry</h1>
+<h1 id="popupentry">PopupEntry</h1>
 
-<p><a class="xref" href="../api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html">PopupEntry</a> is a <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">Entry</a> that allows you to enter text with the IME when you click the entry.</p>
+<p><a class="xref" href="../api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html">PopupEntry</a> is a control that allows you to enter text with the IME when you click on <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">Entry</a>.</p>
 <h1 id="overview">Overview</h1>
-<p>This control has exactly the same usage as the <code>Entry</code>.
-However, in the case of a regular <code>Entry</code> in a circular screen, the input text may not be displayed correctly due to the IME at the time of input.
-Therefore, the <code>PopupEntry</code> allows to input on a pop-up which the written text is completely visible.</p>
-<p>Below image is a screen that has the normal <code>Entry</code> and a screen with IME after click the <code>Entry</code>.</p>
+<p><code>PopupEntry</code> control has exactly the same usage as the <code>Entry</code>.
+However, in the case of a regular <code>Entry</code> in a circular screen, the input text gets hidden behind the IME at the time of input.
+The <code>PopupEntry</code> allows the input to be on a pop up, hence the written text is visible.</p>
+<p>The following images shows a screen with a normal <code>Entry</code> and a screen with the text on the IME when you click on <code>Entry</code>.</p>
 <p><img src="data/entry.png" alt="Normal Entry">
 <img src="data/entry_with_IME.png" alt="Normal Entry with IME"></p>
 <p>The <code>Entry</code> is not visible because it is masked by the IME.</p>
 <p><img src="data/PopupEntry.png" alt="Popup Entry">
 <img src="data/PopupEntry_with_IME.png" alt="Popup entry with IME"></p>
 <p>The above image is the same as using <code>PopupEntry</code>, It can type text while watching it properly.</p>
-<p>The <code>BackgroundColor</code> of the input pop-up is the same as the <code>BackgroundColor</code> of the <code>PopupEntry</code>
-and <code>TextColor</code> inside the input pop-up is also the same as the <code>TextColor</code> of the <code>PopupEntry</code> also <a href="https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/">IsPassword</a> property is kept the same.</p>
+<p>When PopupEntry is used:</p>
+<ul>
+<li>The <code>BackgroundColor</code> of the input pop up is the same as the <code>BackgroundColor</code> of the <code>PopupEntry</code>.</li>
+<li>The <code>TextColor</code> inside the input pop up is also the same as the <code>TextColor</code> of the <code>PopupEntry</code>.</li>
+<li>The <a href="https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/">IsPassword</a> property of the input pop up is also the same as the <code>PopupEntry</code>.</li>
+</ul>
 <h1 id="how-to-use">How to use</h1>
-<p>This is exactly the same as the <code>Entry</code>.</p>
+<p><code>PopupEntry</code> uses the same method as the <code>Entry</code>.</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
 &lt;ContentPage xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
              xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;

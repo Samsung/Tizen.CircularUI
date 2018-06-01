@@ -77,8 +77,8 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.Toast">
 <h1 id="toast">Toast</h1>
 
-<p><code>Toast</code> provides simple information. <code>Toast</code> automatically disappear after timeout seconds.
-Tizen Wearable <code>Toast</code> fills the whole screen for displaying message and image.</p>
+<p><code>Toast</code> provides simple information. <code>Toast</code> automatically disappears after timeout (in seconds).
+Tizen Wearable <code>Toast</code> fills the entire screen with display message and image.</p>
 <table>
 <thead>
 <tr>
@@ -94,11 +94,10 @@ Tizen Wearable <code>Toast</code> fills the whole screen for displaying message 
 </tbody>
 </table>
 <h2 id="create-toast">Create Toast</h2>
-<p><code>Toast</code> is a static method. So you don&#39;t need to any container or parent control for using this control.
-<code>Toast</code> provides two methods, <code>Toast.DisplayText()</code> shows simple text message. <code>Toast.DisplayIconText()</code> shows simple icon and simple text message.</p>
-<p><code>Toast.DisplayText()</code> method&#39;s first parameter is message text. And the second parameter is timeout duration(milliseconds). The second parameter is optional. If you don&#39;t set this value, The default value is set 3000(3 seconds).</p>
-<p><code>Toast.DisplayIconText()</code> method&#39;s first parameter is message text. And the second parameter is icon file path, you can set file path with <code>new FileImageSource</code>. The third parameter is timeout duration that is also optional.</p>
-<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Toast.html">Toast  API reference</a></p>
+<p><code>Toast</code> is a static method. Therefore, you do not need any container or parent control for using this control. <code>Toast</code> provides two methods, <code>Toast.DisplayText()</code> displays simple text message and <code>Toast.DisplayIconText()</code> displays simple icon and simple text message.</p>
+<p>The first parameter of <code>Toast.DisplayText()</code> method is message text. The second parameter is timeout duration (milliseconds). The second parameter is optional. If you do not set this value, the default value is set to 3000 milliseconds (three seconds).</p>
+<p>The first parameter of <code>Toast.DisplayIconText()</code> method is message text. The second parameter is icon file path. You can set file path with <code>new FileImageSource</code>. The third parameter is timeout duration, which is optional.</p>
+<p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Toast.html">Toast  API reference</a>.</p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs"> Toast.DisplayText(&quot;Toast popup&quot;, 3000);
 

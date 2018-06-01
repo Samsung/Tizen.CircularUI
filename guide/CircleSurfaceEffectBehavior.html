@@ -77,17 +77,23 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior">
 <h1 id="circlesurfaceeffectbehavior">CircleSurfaceEffectBehavior</h1>
 
-<p><code>CircleSurfaceEffectBehavior</code> is an effect which allows to attach <code>CircleSurface</code> to <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Xamarin.Forms.Page</a>. <a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface">CircleSurface</a> is Tizen specific component that manages <a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-object">circle objects</a>.
-If you need to add <code>circle control</code>(such as <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a>) at <code>Page</code> in Tizen Xamarin Forms application, there are two ways. One is inserting these controls to <code>CirclePage</code>, the other is adding <code>CircleSurfaceEffectBehavior</code> at <code>Page</code> that includes <code>circle control</code>.</p>
-<h2 id="adding-circlesurfaceeffectbehavior-at-page">Adding CircleSurfaceEffectBehavior at Page</h2>
-<p>Add <code>CircleSurfaceEffectBehavior</code> at <code>&lt;Page.Behaviors&gt;</code>. And then set <code>RotaryFocusTargetName</code> property with <code>circle control</code> name. <code>RotaryFocusTargetName</code> sets the currently focused control that is handled by rotating and display the focused control&#39;s circle object. Please refer to below sample code.</p>
-<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCListAppender code at the test\WearableUIGallery\WearableUIGallery\TC\TCListAppender.xaml</em></p>
-<p>For more information. Please refer to below links</p>
+<p>The <code>CircleSurfaceEffectBehavior</code> is a <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/">Behavior</a>, which allows you to attach the <code>CircleSurface</code> to the <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Xamarin.Forms.Page</a>. <a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface">CircleSurface</a> is a Tizen specific component that manages <a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-object">circle objects</a>.</p>
+<p>Following are the two ways to add circle control such as <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a> and <a class="xref" href="CircleStepper.html">CircleStepper</a> at <code>Page</code> in Tizen Xamarin Forms application:</p>
+<ul>
+<li>Inserting these controls to <code>CirclePage</code>.</li>
+<li>Adding <code>CircleSurfaceEffectBehavior</code> in <code>Page</code> that includes circle control.</li>
+</ul>
+<h2 id="add-circlesurfaceeffectbehavior-in-page">Add CircleSurfaceEffectBehavior in Page</h2>
+<p>Add the <code>CircleSurfaceEffectBehavior</code> in the <code>&lt;Page.Behaviors&gt;</code> and set <code>RotaryFocusTargetName</code> property with circle control name.
+The <code>RotaryFocusTargetName</code> sets the currently focused control that is handled by rotating and display the focused control&#39;s circle object.</p>
+<p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior API reference</a></li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Xamarin.Forms.Page guide</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/">Xamarin.Forms.Behaviors Guide</a></li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/creating#consuming-a-xamarinforms-behavior">Consuming a Xamarin.Forms Behavior</a></li>
 </ul>
+<p><em>The code example of this guide uses TCListAppender code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCListAppender.xaml</em></p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;w:TwoButtonPage xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
                  xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;

@@ -38,7 +38,7 @@ references:
   name: IRotaryEventReceiver
   href: guide/IRotaryEventReceiver.html
 - uid: Tizen.Wearable.CircularUI.doc.PopupEntry
-  name: Popup Entry
+  name: PopupEntry
   href: guide/PopupEntry.html
 - uid: Tizen.Wearable.CircularUI.doc.Radio
   name: Radio

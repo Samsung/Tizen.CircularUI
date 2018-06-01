@@ -78,11 +78,11 @@
 <h1 id="circledatetimeselector">CircleDateTimeSelector</h1>
 
 <p><code>CircleDateTimeSelector</code> is a view for Date Picker and Time Picker.
-You can scroll it by <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
-This view is the size that covers the entire screen.
-In order to receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code> property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
-<p>In the Date type, you can change value of the item by touching the item and rotating bezel to set value of the year: month: day.
-For the Time type, you can change value of the hour: minute: AM / PM.</p>
+You can rotate the bezel to explore the screen using the <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
+The view of this selector covers the entire screen.
+To receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code>, property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
+<p>The Date display screen is a touch screen. You can set the value of the year: month: day by touch and by rotating the bezel.
+The Time display screen is also a touch screen. You can set the value of the hour: minute: AM / PM by touch and by rotating the bezel.</p>
 <table>
 <thead>
 <tr>
@@ -97,23 +97,23 @@ For the Time type, you can change value of the hour: minute: AM / PM.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be contained by <code>CirclePage</code> or <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a> should be added in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/">Behaviors</a> of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> that contains these controls. If other <code>pages</code> contain these controls, it may cause exception or can&#39;t display control.</strong></p>
-<h2 id="adding-circledatetimeselector-at-circlepage">Adding CircleDateTimeSelector at CirclePage</h2>
-<p>You can set <code>CircleDateTimeSelector</code> at <a class="xref" href="CirclePage.html">CirclePage.Content</a>. If you want to know how to add <a class="xref" href="CirclePage.html">CirclePage</a>, please refer to <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-The following code shows <a class="xref" href="CirclePage.html">CirclePage</a> with <code>CircleDateTimeSelector</code>.
-<code>RotaryFocusTargetName</code> attribute sets the currently focused control that is handled by rotating and display the focused control&#39;s circle object.
-If you don&#39;t set this property, control can&#39;t receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
+<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
+<h2 id="add-circledatetimeselector-in-circlepage">Add CircleDateTimeSelector in CirclePage</h2>
+<p>You can set <code>CircleDateTimeSelector</code> in the <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information on how to add a <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
+<code>RotaryFocusTargetName</code> property sets the currently focused control using the rotating interaction, and displays the focused control&#39;s circle object.
+If the value is not set properly, the control will not receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
 <p><code>CircleDateTimeSelector</code> has the following properties:</p>
 <ul>
-<li>ValueType : Time can be changed if it is Time and if it is a Date, the date can be changed.</li>
+<li>ValueType : The value of time is changed in Time, and the value of date is changed in Date.</li>
 <li>DateTime : Sets or gets date/time.</li>
 <li>MaximumDate : Sets or gets maximum date.</li>
 <li>MimimumDate : Sets or gets minimum date.</li>
 </ul>
-<p>The example below sets the time picker by putting the <code>ValueType</code> value &quot;Time&quot;. And set the current time to the <code>DateTime</code> property.
-The current time will be displayed on the screen when it is executed. Since the hour item is shown as having focus, the hour is changed when the bezel is turned. If you touch the minute item and turn the bezel, you can change the minute.</p>
-<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html">CircleDateTimeSelector  API reference</a></p>
-<p><em>This guide&#39;s code example uses XUIComponent&#39;s CircleTime of CircleDateTime code at the sample\XUIComponents\UIComponents\UIComponents\Samples\CircleDateTime/DateTimeViewModel.cs and CircleTime.xaml</em></p>
+<p>The following example explains how to set a timepicker. Assign <code>ValueType</code> value for &quot;Time&quot; and set the current time to the <code>DateTime</code> property.
+When the code is executed, the current time will be displayed on the screen. Since the focussed area on the screen shows the hour item, the hour item is changed when the bezel is turned. To change the minutes, touch the minute item and turn the bezel.</p>
+<p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html">CircleDateTimeSelector API reference</a>.</p>
+<p><em>The code example of this guide uses CircleDateTime code of XUIComponent. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleDateTime/DateTimeViewModel.cs and CircleTime.xaml</em></p>
+<p>The following code shows CirclePage with CircleDateTimeSelector:</p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">    public class DateTimeViewModel : INotifyPropertyChanged
     {

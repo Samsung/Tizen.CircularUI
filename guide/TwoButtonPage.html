@@ -77,7 +77,7 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.TwoButtonPage">
 <h1 id="twobuttonpage">TwoButtonPage</h1>
 
-<p><code>TwoButtonPage</code> derives from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Xamarin.Forms.Page</a>. TwonButtonPage has two semicircular buttons that are located at the left side and the right side of the circle.</p>
+<p><code>TwoButtonPage</code> is derived from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Xamarin.Forms.Page</a>. TwoButtonPage has two semicircular buttons that are located at the left side and the right side of the circle.</p>
 <table>
 <thead>
 <tr>
@@ -93,17 +93,16 @@
 </tbody>
 </table>
 <h2 id="create-twobuttonpage">Create TwoButtonPage</h2>
-<p>You can set control in the <code>TwoButtonPage.Content</code>. In this example, long text Label and two buttons were set for Content.
-If <code>Overlap</code> property is <code>true</code>, the <code>Content</code> area occupies the whole of the screen. If <code>Overlap</code> property is <code>false</code>, the <code>Content</code> area occupies screen that is excluded button&#39;s area. The default value of <code>Overlap</code> property is <code>false</code>.
-<code>TwoButtonPage.firstButton</code> sets left side button. <code>TwoButtonPage.SecondButton</code> sets right side button. You can add buttons using <code>MenuItem</code>.
-<em><code>Text</code> Property of <code>MenuItem</code> is ignored since button has no space to display text</em></p>
-<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCTwoButtonPage code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml</em></p>
-<p>For more information. Please refer to below links</p>
+<p>You can set controls in the <code>TwoButtonPage.Content</code> tag. In the XAML file example, a long text Label and two buttons are set as the content.
+If the <code>Overlap</code> property is set to <code>true</code>, the <code>Content</code> area occupies the entire screen. If the <code>Overlap</code> property is set to <code>false</code>, the <code>Content</code> area occupies the available area on the screen excluding the button area. The default value of <code>Overlap</code> property is always <code>false</code>.
+<code>TwoButtonPage.firstButton</code> sets left side button. <code>TwoButtonPage.SecondButton</code> sets right side button. You can add buttons using <code>MenuItem</code>.</p>
+<p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPage.html">TwoButtonPage  API reference</a></li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages">Xamarin.Forms.Page guide</a></li>
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/">Xamarin.Forms.MenuItem API reference</a></li>
 </ul>
+<p><em>The code example of this guide uses TCTwoButtonPage code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPage.xaml</em></p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
 &lt;w:TwoButtonPage

@@ -77,15 +77,16 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.Radio">
 <h1 id="radio">Radio</h1>
 
-<p><code>Radio</code> displays 1 or more option and allows a user to select 1 of them.
-<code>Radio</code> can select only 1 item among items having same <code>GroupName</code> property.</p>
+<p><code>Radio</code> displays one or more options. You can select only one of the options having same GroupName property.
+<code>Radio</code> can select only one item among items having same <code>GroupName</code> property.</p>
 <p><img src="data/radio.png" alt="radio"></p>
 <h2 id="create-radio">Create Radio</h2>
-<p><code>GroupName</code>property specifies which <code>Radio</code> controls are mutually exclusive. If a user selected one Radio control of radio control group, other items are not selected.
-<code>IsSelected</code> property sets default selected value of Radio control. <code>Selected</code> event occurs when the Radio selection was changed.
-<code>Value</code> property sets any value of Radio control. <code>Value</code> property is useful to distinguish which item was selected if all Radio control has the same <code>Selected</code> event handler. Please refer to below code.</p>
-<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Radio.html">Radio  API reference</a></p>
-<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCRadio code at the test\WearableUIGallery\WearableUIGallery\TC\TCRadio.xaml.cs</em></p>
+<p>The <code>GroupName</code> property specifies mutually exclusive Radio controls. If you select one Radio control of radio control group, other items are not selected.
+<code>IsSelected</code> property sets default selected value of Radio control. <code>Selected</code> event occurs when the Radio selection is changed.
+<code>Value</code> property sets any value of Radio control. <code>Value</code> property is useful to distinguish which item is selected if all Radio control has the same <code>Selected</code> event handler.
+The following code explains the process of creating <code>Radio</code>.</p>
+<p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Radio.html">Radio  API reference</a>.</p>
+<p><em>The code example of this guide uses TCRadio code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCRadio.xaml.cs</em></p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">   &lt;w:CirclePage.Content&gt;
         &lt;w:CircleScrollView x:Name=&quot;myscroller&quot; Orientation=&quot;Vertical&quot;&gt;

@@ -77,13 +77,13 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.IRotaryEventReceiver">
 <h1 id="irotaryeventreceiver">IRotaryEventReceiver</h1>
 
-<p><code>IRotaryEventReceiver</code> is a receiver interface to take a rotary event. <code>IRotaryEventReceiver</code> has <code>Rotate(RotaryEventArgs)</code> method that is called when rotary event is occurred. You can simply handle of rotary event using this interface. Such as below sample, you can easily rotate image according to bezel rotation.</p>
-<h2 id="adding-irotaryeventreceiver">Adding IRotaryEventReceiver</h2>
+<p><code>IRotaryEventReceiver</code> is a receiver interface to receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>. When a rotary event occur, <code>IRotaryEventReceiver</code> calls <code>Rotate(RotaryEventArgs)</code> method. You can control the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a> using this interface. If you read the following paragraphs, you can easily rotate image according to bezel rotation.</p>
+<h2 id="add-irotaryeventreceiver">Add IRotaryEventReceiver</h2>
 <p>Add <code>IRotaryEventReceiver</code> interface to <code>CirclePage</code> or <code>Page</code> having <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. Implement <code>Rotate()</code> method to control a rotary event. <code>RotaryEventArgs</code> is event argument for the Rotary Event.
-<code>RotaryEventArgs.IsClockwise</code> gets the direction of bezel rotation. If the device has rotated in the clockwise direction, <code>IsClockwise</code> is <code>true</code>.
-Below sample receives rotary event at <code>Rotate()</code> method and add angle of the image following to rotary event direction. And then rotate the image.</p>
-<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCIRotaryEventReceiver code at the test\WearableUIGallery\WearableUIGallery\TC\TCIRotaryEventReceiver.xaml</em></p>
-<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html">IRotaryEventReceiver API reference</a></p>
+<code>RotaryEventArgs.IsClockwise</code> gets the direction of bezel rotation. <code>IsClockwise</code> is <code>true</code>, when the device is rotated in the clockwise direction.
+The following sample receives rotary event at <code>Rotate()</code> method and add angle of the image following to rotary event direction. And then rotate the image.</p>
+<p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html">IRotaryEventReceiver API reference</a>.</p>
+<p><em>The code example of this guide uses TCIRotaryEventReceiver code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCIRotaryEventReceiver.xaml</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCIRotaryEventReceiver : CirclePage, IRotaryEventReceiver

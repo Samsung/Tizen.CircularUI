@@ -77,15 +77,14 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.TwoButtonPopup">
 <h1 id="twobuttonpopup">TwoButtonPopup</h1>
 
-<p><code>TwoButtonPopup</code> represents Tizen Wearable EFL Twobutton-popup style. <code>TwoButtonPopup</code> is useful to select one of two options. (e.g  cancel/done, share/delete)</p>
-<p><em><code>TwoButtonPopup</code> is displayed separately from any control. So you can&#39;t set this in XAML file.</em></p>
-<p><img src="data/confirmation_popup1.png" alt="confirmation_popup1"></p>
+<p>The <code>TwoButtonPopup</code> represents The Tizen Wearable EFL two button popup style. The <code>TwoButtonPopup</code> is used to select one of the two options such as cancel or done, and share or delete.</p>
+<p><em>Since <code>TwoButtonPopup</code> does not adhere as a control, this popup cannot be set in the XAML file.</em></p>
+<p><img src="data/twobutton_popup1.png" alt="TwoButton_popup1"></p>
 <h2 id="create-twobuttonpopup">Create TwoButtonPopup</h2>
-<p><code>TwoButtonPopup.Title</code> Property sets the title of the popup. You can set the <code>Content</code> property with Layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
-<code>TwoButtonPopup.FirstButton</code> property sets left side button. <code>TwoButtonPopup.SecondButton</code>property sets right side button. You can set<code>FirstButton</code> and <code>SecondButton</code> using <code>MenuItem</code>. You should add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.
-<em><code>Text</code> Property of <code>MenuItem</code> is ignored since button has no space to display text</em></p>
-<p><em>This guide&#39;s code example uses WearableUIGallery&#39;s TCTwoButtonPopup code at the test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPopup.xaml.cs</em></p>
-<p>For more information. Please refer to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html">TwoButtonPopup  API reference</a></p>
+<p>The <code>TwoButtonPopup.Title</code> property sets the title of the popup. You can set the <code>Content</code> property with layouts such as <code>StackLayout</code> or <code>ScrollView</code>.
+The <code>TwoButtonPopup.FirstButton</code> property sets the left side button. The <code>TwoButtonPopup.SecondButton</code> property sets the right side button. You can set<code>FirstButton</code> and <code>SecondButton</code> using the <code>MenuItem</code>. You must add code at <code>Command</code> or <code>Clicked</code> event handler for controlling <code>MenuItem</code> clicked.</p>
+<p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.html">TwoButtonPopup  API reference</a>.</p>
+<p><em>The code example of this guide uses TCTwoButtonPopup code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCTwoButtonPopup.xaml.cs</em></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            var leftButton = new MenuItem()
             {
@@ -130,10 +129,11 @@
                 }
             };
     }
-</code></pre><h2 id="how-to-set-long-text-at-twobuttonpopup">How to set long Text at TwoButtonPopup</h2>
-<p>TwoButtonPopup has <code>Text</code> Property. This Property is useful to set long text.
-If a long text was set by <code>Text</code> property, you don&#39;t need to add <code>StackLayout</code>, <code>ScrollView</code> and <code>Label</code> for displaying long text.</p>
-<p><em><code>Text</code> Property&#39;s area overlaps <code>Content</code> Property area. So do not use two property at the same time.</em></p>
+</code></pre><h2 id="how-to-set-long-text-in-twobuttonpopup">How to Set Long Text in TwoButtonPopup</h2>
+<p>The <code>TwoButtonPopup</code> has <code>Text</code> property. This property is useful to set long text.
+If a long text is set using the <code>Text</code> property, you do not need to add <code>StackLayout</code>, <code>ScrollView</code>, <code>Label</code> to display long text.</p>
+<p><em>The area of the <code>Text</code> property overlaps the area of the <code>Content</code> property. Therefore, do not use two properties at the same time.</em></p>
+<p><img src="data/twobutton_popup2.png" alt="TwoButton_popup2"></p>
 <p><strong>C# file</strong></p>
 <pre><code class="lang-cs">            _popUp2 = new TwoButtonPopup();
             _popUp2.FirstButton = leftButton2;
