@@ -257,9 +257,8 @@ _The code example of this guide uses CircleProgressBar.xaml code of XUIComponent
 ## Add CircleSliderSurfaceItem in CirclePage
 `CircleSliderSurfaceItem` represents Circle Slider.`slider` at XAML code represents the circle of following image.
 If you use CircleSlider bar, you must set Circle Slider name at the `RotaryFocusTargetName` property of CirclePage.
-`Value` property is default value of Slider. If you rotate bezel, `Value` property is increased or decreased follow to bezel action.
-`Increment` property is increase/decrease value when user rotates bezel.
-'
+The `Value` property is the default value for the Slider. If you rotate the  bezel, the `Value` property increases or decreases depending on the bezel behavior.
+The `Increment` property is the incremental or decremental change as you rotates the bezel.
 
 `CircleSliderSurfaceItem` has the following properties:
 - `Value`: Gets or sets the value of the slider.
@@ -271,7 +270,6 @@ If you use CircleSlider bar, you must set Circle Slider name at the `RotaryFocus
 - `BarColor`: Gets or sets the bar color value.
 - `BackgroundLineWidth`: Gets or sets the background color value.
 
-
 For more information, see the following links:
 - [CircleSurfaceItem  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html)
 - [CircleSliderSurfaceItem  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem.html)
@@ -280,7 +278,8 @@ For more information, see the following links:
 
 _The code example of this guide uses CircleSlider.xaml code of XUIComponent. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSlider.xaml_
 
-```
+**XAML file**
+```xml
 <w:CirclePage
     x:Class="UIComponents.Samples.CircleSlider"
     xmlns="http://xamarin.com/schemas/2014/forms"
