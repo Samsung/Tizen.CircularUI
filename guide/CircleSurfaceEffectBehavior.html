@@ -99,12 +99,25 @@ The <code>RotaryFocusTargetName</code> sets the currently focused control that i
                  xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
                  xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
                  x:Class=&quot;WearableUIGallery.TC.TCListAppender&quot;&gt;
-    &lt;w:TwoButtonPage.`CircleSurfaceEffectBehavior` at&gt;
+    &lt;w:TwoButtonPage.Behaviors&gt;
         &lt;w:CircleSurfaceEffectBehavior RotaryFocusTargetName=&quot;mylist&quot;/&gt;
     &lt;/w:TwoButtonPage.Behaviors&gt;
     &lt;w:TwoButtonPage.Content&gt;
         &lt;w:CircleListView x:Name=&quot;mylist&quot;  HorizontalOptions=&quot;FillAndExpand&quot; VerticalOptions=&quot;FillAndExpand&quot;&gt;
-
+            &lt;w:CircleListView.Header&gt;
+                &lt;x:String&gt;Head&lt;/x:String&gt;
+            &lt;/w:CircleListView.Header&gt;
+            &lt;w:CircleListView.HeaderTemplate&gt;
+                &lt;DataTemplate&gt;
+                    &lt;Label
+                        FontAttributes=&quot;Bold&quot;
+                        FontSize=&quot;Large&quot;
+                        HorizontalTextAlignment=&quot;Center&quot;
+                        Text=&quot;{Binding .}&quot;
+                        TextColor=&quot;Red&quot; /&gt;
+                &lt;/DataTemplate&gt;
+            &lt;/w:CircleListView.HeaderTemplate&gt;
+        &lt;/w:CircleListView&gt;
     &lt;/w:TwoButtonPage.Content&gt;
     &lt;w:TwoButtonPage.FirstButton&gt;
         &lt;MenuItem Clicked=&quot;DoAdd&quot; Icon=&quot;image/tw_ic_popup_btn_check.png&quot; /&gt;
