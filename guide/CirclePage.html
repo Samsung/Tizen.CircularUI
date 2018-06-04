@@ -311,9 +311,8 @@ When <code>Value</code> property is increased or decreased, circle object extend
 </code></pre><h2 id="add-circleslidersurfaceitem-in-circlepage">Add CircleSliderSurfaceItem in CirclePage</h2>
 <p><code>CircleSliderSurfaceItem</code> represents Circle Slider.<code>slider</code> at XAML code represents the circle of following image.
 If you use CircleSlider bar, you must set Circle Slider name at the <code>RotaryFocusTargetName</code> property of CirclePage.
-<code>Value</code> property is default value of Slider. If you rotate bezel, <code>Value</code> property is increased or decreased follow to bezel action.
-<code>Increment</code> property is increase/decrease value when user rotates bezel.
-&#39;</p>
+The <code>Value</code> property is the default value for the Slider. If you rotate the  bezel, the <code>Value</code> property increases or decreases depending on the bezel behavior.
+The <code>Increment</code> property is the incremental or decremental change as you rotates the bezel.</p>
 <p><code>CircleSliderSurfaceItem</code> has the following properties:</p>
 <ul>
 <li><code>Value</code>: Gets or sets the value of the slider.</li>
@@ -332,7 +331,8 @@ If you use CircleSlider bar, you must set Circle Slider name at the <code>Rotary
 </ul>
 <p><img src="data/circle_slider.png" alt="circle_slider"></p>
 <p><em>The code example of this guide uses CircleSlider.xaml code of XUIComponent. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSlider.xaml</em></p>
-<pre><code>&lt;w:CirclePage
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;w:CirclePage
     x:Class=&quot;UIComponents.Samples.CircleSlider&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
