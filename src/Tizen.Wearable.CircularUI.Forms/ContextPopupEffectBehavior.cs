@@ -6,6 +6,10 @@ using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+    /// <summary>
+    /// The ContextPopupEffectBehavior is a behavior which allows you to add a context popup.
+    /// </summary>
+    /// <since_tizen> 4 </since_tizen>
     public class ContextPopupEffectBehavior : Behavior<View>
     {
         /// <summary>
