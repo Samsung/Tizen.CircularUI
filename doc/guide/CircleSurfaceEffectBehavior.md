@@ -30,12 +30,25 @@ _The code example of this guide uses TCListAppender code of WearableUIGallery. T
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
                  x:Class="WearableUIGallery.TC.TCListAppender">
-    <w:TwoButtonPage.`CircleSurfaceEffectBehavior` at>
+    <w:TwoButtonPage.Behaviors>
         <w:CircleSurfaceEffectBehavior RotaryFocusTargetName="mylist"/>
     </w:TwoButtonPage.Behaviors>
     <w:TwoButtonPage.Content>
         <w:CircleListView x:Name="mylist"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-
+            <w:CircleListView.Header>
+                <x:String>Head</x:String>
+            </w:CircleListView.Header>
+            <w:CircleListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="Red" />
+                </DataTemplate>
+            </w:CircleListView.HeaderTemplate>
+        </w:CircleListView>
     </w:TwoButtonPage.Content>
     <w:TwoButtonPage.FirstButton>
         <MenuItem Clicked="DoAdd" Icon="image/tw_ic_popup_btn_check.png" />

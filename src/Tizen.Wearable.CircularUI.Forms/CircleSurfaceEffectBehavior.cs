@@ -23,7 +23,7 @@ using Xamarin.Forms.Internals;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The CircleSurfaceEffectBehavior is an effect which allows you to insert views that require CircleSurface.
+    /// The CircleSurfaceEffectBehavior is a behavior which allows you to add views that require CircleSurface.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
     public class CircleSurfaceEffectBehavior : Behavior<Page>
