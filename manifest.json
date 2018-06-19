@@ -1055,18 +1055,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ConfirmPopupEffect.html",
-          "hash": "mShKcy2UTfM9yRmEiksp9A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.yml",
       "output": {
         ".html": {
@@ -1551,7 +1539,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "ozGIN4Wdr1MQtDx5FtHrjA=="
+          "hash": "XRdrpFIClhWI0Ak2U1S+ug=="
         }
       },
       "is_incremental": false,
@@ -1563,7 +1551,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "JHy8lGuJkd0gG62a74n12Q=="
+          "hash": "cnqf0AX1SXk8lOu9UfUzlg=="
         }
       },
       "is_incremental": false,
@@ -1590,21 +1578,21 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         }
