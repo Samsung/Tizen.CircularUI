@@ -423,6 +423,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.CircleSurfaceItems
   nameWithType: CirclePage.CircleSurfaceItems
+- uid: Tizen.Wearable.CircularUI.Forms.CirclePage.OnBindingContextChanged
+  name: OnBindingContextChanged()
+  href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html#Tizen_Wearable_CircularUI_Forms_CirclePage_OnBindingContextChanged
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CirclePage.OnBindingContextChanged
+  fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.OnBindingContextChanged()
+  nameWithType: CirclePage.OnBindingContextChanged()
+- uid: Tizen.Wearable.CircularUI.Forms.CirclePage.OnBindingContextChanged*
+  name: OnBindingContextChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html#Tizen_Wearable_CircularUI_Forms_CirclePage_OnBindingContextChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CirclePage.OnBindingContextChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.OnBindingContextChanged
+  nameWithType: CirclePage.OnBindingContextChanged
 - uid: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusObject
   name: RotaryFocusObject
   href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html#Tizen_Wearable_CircularUI_Forms_CirclePage_RotaryFocusObject
