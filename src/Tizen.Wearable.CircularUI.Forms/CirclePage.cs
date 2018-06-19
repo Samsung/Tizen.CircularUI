@@ -115,6 +115,17 @@ namespace Tizen.Wearable.CircularUI.Forms
             set => SetValue(RotaryFocusTargetNameProperty, value);
         }
 
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+            foreach (var item in CircleSurfaceItems)
+            {
+                var element = item as Element;
+                if (element != null)
+                    SetInheritedBindingContext(element, BindingContext);
+            }
+        }
+
         void OnSurfaceItemsChanged(object sender, NotifyCollectionChangedEventArgs args)
         {
             if (args.Action != NotifyCollectionChangedAction.Add) return;
