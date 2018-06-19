@@ -6,7 +6,7 @@
               xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
               x:Class="UIComponents.Samples.CircleList.StyleSelectMode" x:Name="Control">
     <w:CirclePage.BindingContext>
-        <local:ListViewModel />
+        <local:ListViewModel x:Name="ListModel" />
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
         <AbsoluteLayout>
@@ -15,7 +15,7 @@
                               AbsoluteLayout.LayoutFlags="All"
                               effect:ItemLongPressEffect.Command="{Binding LongClickCommand, Source={x:Reference Control}}">
                 <w:CircleListView.Effects>
-                    <effect:ItemLongPressEffect />
+                    <effect:ItemLongPressEffect/>
                 </w:CircleListView.Effects>
                 <w:CircleListView.ItemTemplate>
                     <DataTemplate>
@@ -48,16 +48,18 @@
                     AbsoluteLayout.LayoutBounds="0.5, 10, AUtoSize, AutoSize"
                     AbsoluteLayout.LayoutFlags="XProportional"
                     effect:TizenStyleEffect.Style="select_mode"
-                    Clicked="OnCheckedCounterClicked"
-                    w:ConfirmPopupEffect.AcceptText="{Binding SelectOptionMessage1, Mode=OneWay}"
-                    w:ConfirmPopupEffect.AcceptCommand="{Binding SelectCommand1, Mode=OneWay}"
-                    w:ConfirmPopupEffect.CancelText="{Binding SelectOptionMessage2, Mode=OneWay}"
-                    w:ConfirmPopupEffect.CancelCommand="{Binding SelectCommand2, Mode=OneWay}"
-                    w:ConfirmPopupEffect.ConfirmVisibility="{Binding PopupVisibility, Source={x:Reference Control}, Mode=TwoWay}">
+                    Clicked="OnCheckedCounterClicked">
                 <Button.Effects>
-                    <effect:TizenStyleEffect/>
                     <w:ConfirmPopupEffect/>
                 </Button.Effects>
+                <Button.Behaviors>
+                    <w:ContextPopupEffectBehavior
+                        AcceptText="{Binding SelectOptionMessage1, Source={x:Reference ListModel}}"
+                        AcceptCommand="{Binding SelectCommand1, Source={x:Reference ListModel}}"
+                        CancelText="{Binding SelectOptionMessage2, Source={x:Reference ListModel}}"
+                        CancelCommand="{Binding SelectCommand2, Source={x:Reference ListModel}}"
+                        Visibility="{Binding PopupVisibility, Source={x:Reference Control}, Mode=TwoWay}"/>
+                </Button.Behaviors>
             </Button>
         </AbsoluteLayout>
     </w:CirclePage.Content>
