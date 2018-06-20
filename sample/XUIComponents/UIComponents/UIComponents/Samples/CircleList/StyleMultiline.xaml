@@ -11,7 +11,7 @@
         <local:ListViewModel />
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
-        <w:CircleListView x:Name="mylist" ItemsSource="{Binding LongTexts}">
+        <w:CircleListView x:Name="mylist" ItemsSource="{Binding LongTexts}" HasUnevenRows ="True">
             <w:CircleListView.ItemTemplate>
                 <DataTemplate>
                     <ex:MultilineCell Text="{Binding ., StringFormat='elm.text:{0}'}" />
