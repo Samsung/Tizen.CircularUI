@@ -49,12 +49,19 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindablePropertyKey. Identifies the RotaryFocusObject bindable property Key.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        static readonly BindablePropertyKey RotaryFocusObjectPropertyKey = BindableProperty.CreateReadOnly(nameof(RotaryFocusObject), typeof(IRotaryFocusable), typeof(CirclePage), null);
+        static readonly BindablePropertyKey RotaryFocusObjectPropertyKey = BindableProperty.CreateReadOnly(nameof(RotaryFocusObject), typeof(IRotaryFocusable), typeof(CirclePage), null,
+            propertyChanged: RotaryFocusObjectChanged);
         /// <summary>
         /// BindableProperty. Identifies the RotaryFocusObject bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty RotaryFocusObjectProperty = RotaryFocusObjectPropertyKey.BindableProperty;
+
+        static void RotaryFocusObjectChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            CirclePage page = bindable as CirclePage;
+            page.RotaryFocusTargetName = null;
+        }
 
         static void RotaryFocusTargetNameChanged(BindableObject bindable, object oldValue, object newValue)
         {
@@ -63,7 +70,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             {
                 string name = newValue as string;
                 var obj = page.FindByName<IRotaryFocusable>(name);
-                if (obj != null)
+                if (obj != null && page.RotaryFocusObject != obj)
                 {
                     page.RotaryFocusObject = obj;
                 }
@@ -95,13 +102,14 @@ namespace Tizen.Wearable.CircularUI.Forms
             set => SetValue(ActionButtonProperty, value);
         }
         /// <summary>
-        /// Gets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.
+        /// Gets or sets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.
+        /// If set, RotaryFocusTargetName will be null.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public IRotaryFocusable RotaryFocusObject
         {
             get => (IRotaryFocusable)GetValue(RotaryFocusObjectProperty);
-            private set => SetValue(RotaryFocusObjectPropertyKey, value);
+            set => SetValue(RotaryFocusObjectPropertyKey, value);
         }
 
         /// <summary>
