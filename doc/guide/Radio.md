@@ -27,45 +27,46 @@ _The code example of this guide uses TCRadio code of WearableUIGallery. The code
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Padding="50,50" Orientation="Vertical">
                 <Label
-                    x:Name="label"
+                    x:Name="label1"
                     FontSize="Medium"
                     HorizontalOptions="CenterAndExpand"
-                    Text="Selected : Sound" />
+                    Text="{Binding RadioLabel1, StringFormat='SoundMode:{0}'}"/>
                 <StackLayout Orientation="Horizontal">
                     <Label
                         HorizontalOptions="CenterAndExpand"
-                        Text="Sound"
+                        Text="{Binding Sound.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
-                        GroupName="SoundMode"
+                        GroupName="{Binding Sound.GroupName}"
                         HorizontalOptions="End"
-                        IsSelected="True"
+                        IsSelected="{Binding Sound.IsSelected,  Mode=TwoWay}"
                         Selected="OnSelected"
-                        Value="Sound" />
+                        Value="{Binding Sound.Value}" />
                 </StackLayout>
-
                 <StackLayout Orientation="Horizontal">
                     <Label
                         HorizontalOptions="CenterAndExpand"
-                        Text="Vibrate"
+                        Text="{Binding Vibrate.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
-                        GroupName="SoundMode"
+                        GroupName="{Binding Vibrate.GroupName}"
                         HorizontalOptions="End"
+                        IsSelected="{Binding Vibrate.IsSelected, Mode=TwoWay}"
                         Selected="OnSelected"
-                        Value="Vibrate" />
+                        Value="{Binding Vibrate.Value}" />
                 </StackLayout>
-
                 <StackLayout Orientation="Horizontal">
                     <Label
                         HorizontalOptions="CenterAndExpand"
-                        Text="Mute"
+                        Text="{Binding Mute.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
-                        GroupName="SoundMode"
+                        GroupName="{Binding Mute.GroupName}"
                         HorizontalOptions="End"
+                        IsSelected="{Binding Mute.IsSelected, Mode=TwoWay}"
                         Selected="OnSelected"
-                        Value="Mute" />
+                        Value="{Binding Mute.Value}" />
+                </StackLayout>
                 </StackLayout>
             </StackLayout>
         </w:CircleScrollView>
@@ -76,11 +77,49 @@ _The code example of this guide uses TCRadio code of WearableUIGallery. The code
 ```cs
         public void OnSelected(object sender, SelectedEventArgs args)
         {
-            Console.WriteLine($"OnSoundSelected!! value:{args.Value}");
             Radio radio = sender as Radio;
             if (radio != null)
             {
-                if (args.Value) label.Text = "Selected : " + radio.Value;
+                Console.WriteLine($"<<OnSelected>>  Radio Value:{radio.Value}, GroupName:{radio.GroupName}, IsSelected:{radio.IsSelected}");
             }
         }
 ```
+
+## Add Radio in ListViewItem
+If you want to use `Radio` control on ListView, you can add `Radio` control in `ViewCell` for customizing item.
+
+*When you use `Radio` on  ListView, you must set `HasUnevenRows` property `True`. If you don't set this property, Unwanted item's radio can be selected when you scroll up the ListView Since Xamarin.Forms reuse ListView Item rendering*
+
+_The code example of this guide uses TCRadioListView code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCRadioListView.xaml.cs_
+
+**XAML file**
+```xml
+   <w:CirclePage.BindingContext>
+        <local:TCRadioViewModel />
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <w:CircleListView
+            x:Name="mylist"
+            HasUnevenRows="True"
+            ItemsSource="{Binding SampleData}">
+            <w:CircleListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HeightRequest="120" Orientation="Horizontal">
+                            <Label
+                                HorizontalOptions="CenterAndExpand"
+                                Text="{Binding Text}"
+                                VerticalOptions="Center" />
+                            <w:Radio
+                                GroupName="{Binding GroupName}"
+                                HorizontalOptions="End"
+                                IsSelected="{Binding IsSelected, Mode=TwoWay}"
+                                Selected="OnSelected"
+                                VerticalOptions="Center"
+                                Value="{Binding Value}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </w:CircleListView.ItemTemplate>
+```
+

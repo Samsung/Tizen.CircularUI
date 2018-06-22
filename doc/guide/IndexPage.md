@@ -13,8 +13,9 @@ When the [Page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-inte
 
 ## Add IndexPage
 
-You can add as many pages you want, and this will increase the number of dot mark by index accordingly.
-In the illustrated example, three pages are added. The number of dot mark is three. Since, it is on the first page, only the first dot mark is shown as white, and the remaining dot marks are shown as grey.
+You can add pages and this will increase the number of dot mark by index accordingly. The maximum number of dot mark is 20 follow as the Samsung device UI limitation. In the illustrated example, three pages are added. The number of dot mark is three. Since, it is on the first page, only the first dot mark is shown as white, and the remaining dot marks are shown as grey.
+
+*Since the maximun number of dot mark is limited by the samsung device UI guide, you will run into unwanted issue if you add pages more than the maximum number*
 
 ![IndexPage](data/IndexPage.png)
 
