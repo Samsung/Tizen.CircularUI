@@ -40,7 +40,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the Maximum bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty MaximumProperty = BindableProperty.Create(nameof(Maximum), typeof(double), typeof(CircleSliderSurfaceItem), 1d, coerceValue: (bindable, value) =>
+        public static readonly BindableProperty MaximumProperty = BindableProperty.Create(nameof(Maximum), typeof(double), typeof(CircleSliderSurfaceItem), 11d, coerceValue: (bindable, value) =>
         {
             var slider = (CircleSliderSurfaceItem)bindable;
             slider.Value = slider.Value.Clamp(slider.Minimum, (double)value);
