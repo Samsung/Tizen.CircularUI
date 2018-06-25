@@ -5,37 +5,78 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Behaviors>
+        <w:CircleSurfaceEffectBehavior RotaryFocusTargetName="myscroller" />
+    </ContentPage.Behaviors>
     <ContentPage.Content>
-        <StackLayout Padding="0,30,0,0">
-            <Label
-                x:Name="label1"
-                HorizontalOptions="CenterAndExpand"
-                Text="Popup is not shown"
-                VerticalOptions="Start" />
-            <Button
-                x:Name="button1"
-                Clicked="OnButton1Clicked"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="text"
-                VerticalOptions="StartAndExpand"
-                WidthRequest="200" />
-            <Button
-                x:Name="button2"
-                Clicked="OnButton2Clicked"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="text button"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="200" />
-            <Button
-                x:Name="button3"
-                Clicked="OnButton3Clicked"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="process text"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="200" />
-        </StackLayout>
+        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
+            <StackLayout Padding="0,50,0,50">
+                <Label
+                    x:Name="label1"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Popup is not shown"
+                    VerticalOptions="Start" />
+                <Button
+                    x:Name="button1"
+                    Clicked="OnTextButtonClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Text"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button2"
+                    Clicked="OnLongTextButtonClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Long text"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button3"
+                    Clicked="OnTitleTextButtonClicked"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="Title text button(text)"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button4"
+                    Clicked="OnIconBottomButtonClicked"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="Long text button(icon)"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button5"
+                    Clicked="OnIconAndTextBottomButtonClicked"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="Title text button(icon text)"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button6"
+                    Clicked="OnProcessButtonClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Process text"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button7"
+                    Clicked="OnProcessLongTextButtonClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Process long text"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+            </StackLayout>
+        </w:CircleScrollView>
     </ContentPage.Content>
 </ContentPage>

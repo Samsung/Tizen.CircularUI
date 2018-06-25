@@ -18,7 +18,7 @@ The following code explains the process of creating `Radio`.
 
 For more information, see [Radio  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.Radio.html).
 
-_The code example of this guide uses TCRadio code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCRadio.xaml.cs_
+_The code example of this guide uses TCRadioStackLayout code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCRadioStackLayout.xaml.cs_
 
 **XAML file**
 

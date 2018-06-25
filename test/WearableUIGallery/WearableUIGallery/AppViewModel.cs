@@ -60,8 +60,8 @@ namespace WearableUIGallery
 
             // Radio TCs
             RadioTCs = new ObservableCollection<TCDescribe>();
-            RadioTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCRadio) });
-            RadioTCs.Add(new TCDescribe { Title = "ListView", Class = typeof(TCRadioGroup) });
+            RadioTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) });
+            RadioTCs.Add(new TCDescribe { Title = "ListView", Class = typeof(TCRadioListView) });
         }
 
         public IList<TCDescribe> TCs { get; private set; }

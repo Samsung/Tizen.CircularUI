@@ -29,9 +29,41 @@ namespace WearableUIGallery.TC
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TCIndexPage : IndexPage
 	{
-		public TCIndexPage ()
+        int _index;
+        IList<ContentPage> _addedContentPages = new List<ContentPage>();
+        public TCIndexPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+            _index = 0;
+            for (int i = 0; i < 20; i++)
+            {
+                var page = new ContentPage
+                {
+                    Content = new StackLayout
+                    {
+                        Children = {
+                        new BoxView {
+                            Color = Color.Purple,
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            VerticalOptions = LayoutOptions.FillAndExpand
+                        },
+                        new Label {
+                            Text = "Added Page(" + i + ")",
+                            HorizontalOptions = LayoutOptions.CenterAndExpand
+                        }
+                    }
+                    }
+                };
+
+                _addedContentPages.Add(page);
+            }
+        }
+
+        private void OnAddButtonClicked(object sender, EventArgs e)
+        {
+            if (_index > 19) return;
+            Children.Add(_addedContentPages[_index++]);
+        }
+    }
 }
