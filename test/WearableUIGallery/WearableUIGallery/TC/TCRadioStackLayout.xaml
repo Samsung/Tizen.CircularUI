@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCRadioStackLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusTargetName="myscroller">
+    <w:CirclePage.BindingContext>
+        <local:TCRadioViewModel />
+    </w:CirclePage.BindingContext>
+    <w:CirclePage.Content>
+        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
+            <StackLayout Padding="0,50" Orientation="Vertical">
+                <Label
+                    x:Name="label1"
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{Binding RadioLabel1, StringFormat='SoundMode:{0}'}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Sound.Text}"
+                        VerticalOptions="Center" />
+                    <w:Radio
+                        GroupName="{Binding Sound.GroupName}"
+                        HorizontalOptions="End"
+                        IsSelected="{Binding Sound.IsSelected,  Mode=TwoWay}"
+                        Selected="OnSelected"
+                        Value="{Binding Sound.Value}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Vibrate.Text}"
+                        VerticalOptions="Center" />
+                    <w:Radio
+                        GroupName="{Binding Vibrate.GroupName}"
+                        HorizontalOptions="End"
+                        IsSelected="{Binding Vibrate.IsSelected, Mode=TwoWay}"
+                        Selected="OnSelected"
+                        Value="{Binding Vibrate.Value}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Mute.Text}"
+                        VerticalOptions="Center" />
+                    <w:Radio
+                        GroupName="{Binding Mute.GroupName}"
+                        HorizontalOptions="End"
+                        IsSelected="{Binding Mute.IsSelected, Mode=TwoWay}"
+                        Selected="OnSelected"
+                        Value="{Binding Mute.Value}" />
+                </StackLayout>
+                <Label
+                    x:Name="label2"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{Binding RadioLabel2, StringFormat='Vib strength:{0}'}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Strong.Text}"
+                        VerticalOptions="Center" />
+                    <w:Radio
+                        GroupName="{Binding Strong.GroupName}"
+                        HorizontalOptions="End"
+                        IsSelected="{Binding Strong.IsSelected, Mode=TwoWay}"
+                        Selected="OnSelected"
+                        Value="{Binding Strong.Value}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Medium.Text}"
+                        VerticalOptions="Center" />
+                    <w:Radio
+                        GroupName="{Binding Medium.GroupName}"
+                        HorizontalOptions="End"
+                        IsSelected="{Binding Medium.IsSelected, Mode=TwoWay}"
+                        Selected="OnSelected"
+                        Value="{Binding Medium.Value}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Weak.Text}"
+                        VerticalOptions="Center" />
+                    <w:Radio
+                        GroupName="{Binding Weak.GroupName}"
+                        HorizontalOptions="End"
+                        IsSelected="{Binding Weak.IsSelected, Mode=TwoWay}"
+                        Selected="OnSelected"
+                        Value="{Binding Weak.Value}" />
+                </StackLayout>
+            </StackLayout>
+        </w:CircleScrollView>
+    </w:CirclePage.Content>
+</w:CirclePage>

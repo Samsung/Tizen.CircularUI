@@ -41,7 +41,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _control = new ElmSharp.Popup(TForms.NativeParent)
             {
                 Style = DefaultStyle,
-                AllowEvents = true,
+                AllowEvents = false,
             };
 
             _control.BackButtonPressed += (s, e) => _control.Dismiss();

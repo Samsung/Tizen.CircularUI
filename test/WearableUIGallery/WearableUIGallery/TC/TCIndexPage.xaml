@@ -23,4 +23,15 @@
             <Label HorizontalOptions="CenterAndExpand" Text="Blue" />
         </StackLayout>
     </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <BoxView VerticalOptions="FillAndExpand" Color="LightBlue" />
+            <Button
+                x:Name="button"
+                Clicked="OnAddButtonClicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Add"
+                WidthRequest="200" />
+        </StackLayout>
+    </ContentPage>
 </w:IndexPage>

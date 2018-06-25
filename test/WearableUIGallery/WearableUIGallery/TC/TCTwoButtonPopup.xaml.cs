@@ -31,11 +31,18 @@ namespace WearableUIGallery.TC
     {
         TwoButtonPopup _popUp1 = null;
         TwoButtonPopup _popUp2 = null;
+        MenuItem _leftButton;
+        MenuItem _rightButton;
+        MenuItem _noIconLeftButton;
+        MenuItem _noIconRightButton;
+        MenuItem _jpgIconButton1;
+        MenuItem _jpgIconButton2;
+
         public TCTwoButtonPopup()
         {
             InitializeComponent();
 
-            var leftButton = new MenuItem()
+            _leftButton = new MenuItem()
             {
                 Icon = new FileImageSource
                 {
@@ -48,7 +55,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            var rightButton = new MenuItem()
+            _rightButton = new MenuItem()
             {
                 Icon = new FileImageSource
                 {
@@ -61,6 +68,53 @@ namespace WearableUIGallery.TC
                 })
             };
 
+            _noIconLeftButton = new MenuItem()
+            {
+                Text = "No icon left button",
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("No icon left button Command!!");
+                    _popUp1.Dismiss();
+                })
+            };
+
+            _noIconRightButton = new MenuItem()
+            {
+                Text = "No icon right button",
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("no icon right button Command!!");
+                    _popUp1.Dismiss();
+                })
+            };
+
+            _jpgIconButton1 = new MenuItem()
+            {
+                Icon = new FileImageSource
+                {
+                    File = "image/a.jpg",
+                },
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("jpg button1 Command!!");
+                    _popUp1.Dismiss();
+                })
+            };
+
+            _jpgIconButton2 = new MenuItem()
+            {
+                Icon = new FileImageSource
+                {
+                    File = "image/b.jpg",
+                },
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("jpg button2 Command!!");
+                    _popUp1.Dismiss();
+                })
+            };
+
+
             var checkbox = new Check
             {
                 DisplayStyle = CheckDisplayStyle.Small
@@ -72,9 +126,9 @@ namespace WearableUIGallery.TC
             };
 
             _popUp1 = new TwoButtonPopup();
-            _popUp1.FirstButton = leftButton;
-            _popUp1.SecondButton = rightButton;
             _popUp1.Title = "Popup title";
+            _popUp1.FirstButton = _leftButton;
+            _popUp1.SecondButton = _rightButton;
             _popUp1.Content = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -87,7 +141,7 @@ namespace WearableUIGallery.TC
                     new StackLayout
                     {
                         Orientation = StackOrientation.Horizontal,
-                        Padding = new Thickness(0, 30, 0, 30),
+                        Padding = new Thickness(0, 40, 0, 40),
                         Children =
                         {
                             checkbox,
@@ -153,14 +207,51 @@ height. This has two button in action area and title text in title area";
         }
 
 
-        private void OnButton1Clicked(object sender, EventArgs e)
+        private void OnTwoButtonTextClicked(object sender, EventArgs e)
         {
+            _popUp1.FirstButton = _leftButton;
+            _popUp1.SecondButton = _rightButton;
             _popUp1.Show();
         }
 
-        private void OnButton2Clicked(object sender, EventArgs e)
+        private void OnTwoButtonLongTextClicked(object sender, EventArgs e)
         {
             _popUp2.Show();
+        }
+
+        private void OnLeftOnlyClicked(object sender, EventArgs e)
+        {
+            _popUp1.FirstButton = _leftButton;
+            _popUp1.SecondButton = null;
+            _popUp1.Show();
+        }
+
+        private void OnRightOnlyClicked(object sender, EventArgs e)
+        {
+            _popUp1.FirstButton = null;
+            _popUp1.SecondButton = _rightButton;
+            _popUp1.Show();
+        }
+
+        private void OnLeftNoIconClicked(object sender, EventArgs e)
+        {
+            _popUp1.FirstButton = _noIconLeftButton;
+            _popUp1.SecondButton = _rightButton;
+            _popUp1.Show();
+        }
+
+        private void OnRightNoIconClicked(object sender, EventArgs e)
+        {
+            _popUp1.FirstButton = _leftButton;
+            _popUp1.SecondButton = _noIconRightButton;
+            _popUp1.Show();
+        }
+
+        private void OnRightJpgIconClicked(object sender, EventArgs e)
+        {
+            _popUp1.FirstButton = _jpgIconButton1;
+            _popUp1.SecondButton = _jpgIconButton2;
+            _popUp1.Show();
         }
     }
 }

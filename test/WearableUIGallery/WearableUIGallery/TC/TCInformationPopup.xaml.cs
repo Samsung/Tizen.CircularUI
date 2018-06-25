@@ -32,13 +32,15 @@ namespace WearableUIGallery.TC
         InformationPopup _textPopUp = null;
         InformationPopup _textButtonPopUp = null;
         InformationPopup _progressPopUp = null;
+        MenuItem _textBottomButton;
+        MenuItem _iconBottomButton;
+        MenuItem _textIconBottomButton;
 
         public TCInformationPopup()
         {
             InitializeComponent();
 
             _textPopUp = new InformationPopup();
-            _textPopUp.Text = "This is text popup test";
 
             _textPopUp.BackButtonPressed += (s, e) =>
             {
@@ -46,12 +48,39 @@ namespace WearableUIGallery.TC
                 label1.Text = "text popup is dismissed";
             };
 
-            var bottomButton = new MenuItem()
+            _textBottomButton = new MenuItem()
             {
                 Text = "OK",
                 Command = new Command(() =>
                 {
-                    Console.WriteLine("bottom button Command!!");
+                    Console.WriteLine("text bottom button Command!!");
+                    _textButtonPopUp.Dismiss();
+                })
+            };
+
+            _iconBottomButton = new MenuItem()
+            {
+                Icon = new FileImageSource
+                {
+                    File = "image/tw_ic_popup_btn_delete.png",
+                },
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("icon bottom button Command!!");
+                    _textButtonPopUp.Dismiss();
+                })
+            };
+
+            _textIconBottomButton = new MenuItem()
+            {
+                Text = "OK",
+                Icon = new FileImageSource
+                {
+                    File = "image/tw_ic_popup_btn_delete.png",
+                },
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("text&icon bottom button Command!!");
                     _textButtonPopUp.Dismiss();
                 })
             };
@@ -59,7 +88,7 @@ namespace WearableUIGallery.TC
             _textButtonPopUp = new InformationPopup();
             _textButtonPopUp.Title = "Popup title";
             _textButtonPopUp.Text = "This is text and button popup test";
-            _textButtonPopUp.BottomButton = bottomButton;
+            _textButtonPopUp.BottomButton = _textBottomButton;
 
             _textButtonPopUp.BackButtonPressed += (s, e) =>
             {
@@ -86,20 +115,58 @@ namespace WearableUIGallery.TC
 
         }
 
-
-        private void OnButton1Clicked(object sender, EventArgs e)
+        private void OnTextButtonClicked(object sender, EventArgs e)
         {
+            _textPopUp.Text = "This is text popup test";
             _textPopUp.Show();
         }
 
-        private void OnButton2Clicked(object sender, EventArgs e)
+        private void OnLongTextButtonClicked(object sender, EventArgs e)
         {
+            _textPopUp.Text = @"This is scrollable popup text.
+This part is made by adding long text in popup.Popup internally added
+scroller to this layout when size of text is greater than total popup
+height.This has two button in action area and title text in title area";
+
+            _textPopUp.Show();
+        }
+
+        private void OnTitleTextButtonClicked(object sender, EventArgs e)
+        {
+            _textButtonPopUp.Text = "This is text and button popup test";
+            _textButtonPopUp.BottomButton = _textBottomButton;
+            _textButtonPopUp.Show();
+        }
+        private void OnIconBottomButtonClicked(object sender, EventArgs e)
+        {
+            _textButtonPopUp.Text = @"This is scrollable popup text.
+This part is made by adding long text in popup.Popup internally added
+scroller to this layout when size of text is greater than total popup
+height.This has two button in action area and title text in title area";
+            _textButtonPopUp.BottomButton = _iconBottomButton;
             _textButtonPopUp.Show();
         }
 
-        private void OnButton3Clicked(object sender, EventArgs e)
+        private void OnIconAndTextBottomButtonClicked(object sender, EventArgs e)
+        {
+            _textButtonPopUp.Text = "This is text and button popup test";
+            _textButtonPopUp.BottomButton = _textIconBottomButton;
+            _textButtonPopUp.Show();
+        }
+
+        private void OnProcessButtonClicked(object sender, EventArgs e)
         {
             _progressPopUp.Show();
         }
+
+        private void OnProcessLongTextButtonClicked(object sender, EventArgs e)
+        {
+            _progressPopUp.Text = @"This is scrollable popup text.
+This part is made by adding long text in popup.Popup internally added
+scroller to this layout when size of text is greater than total popup
+height.This has two button in action area and title text in title area";
+            _progressPopUp.Show();
+        }
+
     }
 }
