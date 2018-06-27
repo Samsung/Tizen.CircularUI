@@ -31,6 +31,31 @@ namespace WearableUIGallery.TC
 	{
         int _index;
         IList<ContentPage> _addedContentPages = new List<ContentPage>();
+
+        static Color[] _colors = new Color[] {
+            Color.DarkRed,
+            Color.IndianRed,
+            Color.MediumVioletRed,
+            Color.DeepPink,
+            Color.HotPink,
+            Color.GreenYellow,
+            Color.LawnGreen,
+            Color.LightGreen,
+            Color.LightSeaGreen,
+            Color.LimeGreen,
+            Color.Navy,
+            Color.Orange,
+            Color.PaleGreen,
+            Color.PaleVioletRed,
+            Color.Purple,
+            Color.RoyalBlue,
+            Color.DeepSkyBlue,
+            Color.BlueViolet,
+            Color.LightYellow,
+            Color.DarkOliveGreen,
+            Color.YellowGreen,
+        };
+
         public TCIndexPage ()
 		{
 			InitializeComponent ();
@@ -44,7 +69,7 @@ namespace WearableUIGallery.TC
                     {
                         Children = {
                         new BoxView {
-                            Color = Color.Purple,
+                            Color = _colors[i],
                             HorizontalOptions = LayoutOptions.FillAndExpand,
                             VerticalOptions = LayoutOptions.FillAndExpand
                         },

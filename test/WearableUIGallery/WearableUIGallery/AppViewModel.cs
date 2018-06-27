@@ -29,7 +29,7 @@ namespace WearableUIGallery
             TCs = new ObservableCollection<TCDescribe>();
             TCs.Add(new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) });
             TCs.Add(new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) });
-            TCs.Add(new TCDescribe { Title = "SurfaceItem", Class = typeof(TCSurfaceItems) });
+            TCs.Add(new TCDescribe { Title = "CircleSurfaceItem", Class = typeof(TCCircleSurfaceItemList) });
             TCs.Add(new TCDescribe { Title = "PopupEntry", Class = typeof(TCPopupEntry) });
             TCs.Add(new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) });
             TCs.Add(new TCDescribe { Title = "CircleStackLayout", Class = typeof(TCCircleStackLayout) });
@@ -51,6 +51,12 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadioList) });
             TCs.Add(new TCDescribe { Title = "Performance", Class = typeof(TCPerformance) });
 
+            // CircleSurfaceItem TCs
+            CircleSurfaceItemTCs = new ObservableCollection<TCDescribe>();
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "Add/Remove SurfaceItems", Class = typeof(TCCircleSurfaceItems1) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar", Class = typeof(TCCircleSurfaceItems2) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider", Class = typeof(TCCircleSurfaceItems3) });
+
             // CircleStepper TCs
             CircleStepperTCs = new ObservableCollection<TCDescribe>();
             CircleStepperTCs.Add(new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) });
@@ -65,6 +71,7 @@ namespace WearableUIGallery
         }
 
         public IList<TCDescribe> TCs { get; private set; }
+        public IList<TCDescribe> CircleSurfaceItemTCs { get; private set; }
         public IList<TCDescribe> CircleStepperTCs { get; private set; }
         public IList<TCDescribe> RadioTCs { get; private set; }
     }

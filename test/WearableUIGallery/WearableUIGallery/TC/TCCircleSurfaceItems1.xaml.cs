@@ -11,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCSurfaceItems : CirclePage
+	public partial class TCCircleSurfaceItems1 : CirclePage
 	{
         static Color[] colors = new Color[] {
             Color.IndianRed,
@@ -44,7 +44,7 @@ namespace WearableUIGallery.TC
             }
         }
 
-		public TCSurfaceItems ()
+		public TCCircleSurfaceItems1()
 		{
 			InitializeComponent ();
 		}
