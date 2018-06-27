@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <w:CirclePage
-    x:Class="WearableUIGallery.TC.TCRadioList"
+    x:Class="WearableUIGallery.TC.TCCircleSurfaceItemList"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="radiolist">
+    RotaryFocusTargetName="list">
     <w:CirclePage.BindingContext>
         <local:AppViewModel />
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
         <w:CircleListView
-            x:Name="radiolist"
+            x:Name="list"
             ItemTapped="OnItemTapped"
-            ItemsSource="{Binding RadioTCs}">
+            ItemsSource="{Binding CircleSurfaceItemTCs}">
             <w:CircleListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}" />
