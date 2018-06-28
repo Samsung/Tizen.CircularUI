@@ -150,11 +150,11 @@ namespace WearableUIGallery.TC
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
     xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusTargetName=&quot;{Binding RotaryFocusName}&quot;&gt;
+    RotaryFocusObject=&quot;{Binding RotaryFocusTarget}&quot;&gt;
     &lt;w:CirclePage.Content&gt;
 </code></pre><h2 id="add-content-in-circlepage">Add content in CirclePage</h2>
 <p>You can set content in the <code>CirclePage.Content</code>. In the XAML file, code explains that CirclePage adds content with <code>CircleDateTimeSelector</code>.
-<code>RotaryFocusTargetName</code> property sets the currently focused control that is handled by rotating and display the circle object of the focused control.
+<code>RotaryFocusObject</code> property sets the currently focused control that is handled by rotating and display the circle object of the focused control.
 If the value is not set properly, the control will not receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
 <p>For more information, see the following links:</p>
 <ul>
@@ -168,9 +168,9 @@ If the value is not set properly, the control will not receive the <a href="http
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
     xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusTargetName=&quot;{Binding RotaryFocusName}&quot;&gt;
+    RotaryFocusObject=&quot;{Binding RotaryFocusTarget}&quot;&gt;
     &lt;w:CirclePage.BindingContext&gt;
-        &lt;local:TCCirclePageViewModel /&gt;
+        &lt;local:TCCirclePageViewModel RotaryFocusTarget=&quot;{x:Reference DateSelector}&quot;/&gt;
     &lt;/w:CirclePage.BindingContext&gt;
     &lt;w:CirclePage.Content&gt;
         &lt;StackLayout
@@ -237,7 +237,7 @@ CircleToolbarItem derives from <a href="https://developer.xamarin.com/api/type/X
 <p>CirclePage <code>CircleSurfaceItems</code> can set <code>CircleProgressBarSurfaceItem</code> and <code>CircleSliderSurfaceItem</code>.
 <code>CircleProgressBarSurfaceItem</code> represents Circle ProgressBar.
 <code>progress1</code> at XAML code represents the outer circle of following image. <code>progress2</code> represents the inner circle.
-If you use CircleProgressbar, you do not need to set the <code>RotaryFocusTargetName</code> property of CirclePage.
+If you use CircleProgressbar, you do not need to set the <code>RotaryFocusObject</code> property of CirclePage.
 When <code>Value</code> property is increased or decreased, circle object extends or shrinks the following to the <code>Value</code> property.</p>
 <p><code>CircleProgressBarSurfaceItem</code> has the following properties:</p>
 <ul>
@@ -310,7 +310,7 @@ When <code>Value</code> property is increased or decreased, circle object extend
 &lt;/w:CirclePage&gt;
 </code></pre><h2 id="add-circleslidersurfaceitem-in-circlepage">Add CircleSliderSurfaceItem in CirclePage</h2>
 <p><code>CircleSliderSurfaceItem</code> represents Circle Slider.<code>slider</code> at XAML code represents the circle of following image.
-If you use CircleSlider bar, you must set Circle Slider name at the <code>RotaryFocusTargetName</code> property of CirclePage.
+If you use CircleSlider bar, you must set Circle Slider name at the <code>RotaryFocusObject</code> property of CirclePage.
 The <code>Value</code> property is the default value for the Slider. If you rotate the  bezel, the <code>Value</code> property increases or decreases depending on the bezel behavior.
 The <code>Increment</code> property is the incremental or decremental change as you rotates the bezel.</p>
 <p><code>CircleSliderSurfaceItem</code> has the following properties:</p>
@@ -340,7 +340,7 @@ The <code>Increment</code> property is the incremental or decremental change as 
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
     NavigationPage.HasNavigationBar=&quot;False&quot;
-    RotaryFocusTargetName=&quot;slider&quot;&gt;
+    RotaryFocusObject=&quot;{x:Reference slider}&quot;&gt;
     &lt;w:CirclePage.Content&gt;
         &lt;StackLayout
             HorizontalOptions=&quot;Center&quot;

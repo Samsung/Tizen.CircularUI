@@ -98,7 +98,7 @@ To receive <a href="https://developer.tizen.org/development/training/native-appl
 <h2 id="add-circlescrollview-in-circlepage">Add CircleScrollView in CirclePage</h2>
 <p>You can set <code>CircleScrollView</code> in <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information about how to add a <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
 The following XAML code shows <a class="xref" href="CirclePage.html">CirclePage</a> with <code>CircleScrollView</code>.
-<code>RotaryFocusTargetName</code> property sets the currently focused control that is handled by rotating and displays the circle object of focused control.
+<code>RotaryFocusObject</code> property sets the currently focused control that is handled by rotating and displays the circle object of focused control.
 If the value is not set properly, the control does not receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
 <p>The direction of the scroller depends on the setting of the <code>Orientation</code> value.</p>
 <p>In the following example, the <code>Orientation</code> of the <code>CircleScrollView</code> is set to <code>Horizontal</code> and is placed in the <code>StackLayout</code> to contain many images:</p>
@@ -118,7 +118,7 @@ If the value is not set properly, the control does not receive the <a href="http
     xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleScroller&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusTargetName=&quot;myscroller&quot;&gt;
+    RotaryFocusObject=&quot;{x:Reference myscroller}&quot;&gt;
     &lt;w:CirclePage.Content&gt;
         &lt;w:CircleScrollView x:Name=&quot;myscroller&quot; Orientation=&quot;Horizontal&quot;&gt;
             &lt;StackLayout

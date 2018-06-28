@@ -85,7 +85,7 @@ To receive <a href="https://developer.tizen.org/development/training/native-appl
 <p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
 <h2 id="add-circlestepper-in-circlepage">Add CircleStepper in CirclePage</h2>
 <p>You can set the <code>CircleStepper</code> in the <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information on how to add <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-<code>RotaryFocusTargetName</code> property sets the currently focused control that is handled by rotating and displaying the focused control&#39;s circle object.
+<code>RotaryFocusObject</code> property sets the currently focused control that is handled by rotating and displaying the focused control&#39;s circle object.
 If this value properly is not set, then control can not receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
 <p><code>CircleStepper</code> has the following properties:</p>
 <ul>
@@ -130,7 +130,7 @@ Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &q
     xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleSpinner&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusTargetName=&quot;stepper&quot;&gt;
+    RotaryFocusObject=&quot;{x:Reference stepper}&quot;&gt;
     &lt;w:CirclePage.BindingContext&gt;
         &lt;local:SpinnerViewModel /&gt;
     &lt;/w:CirclePage.BindingContext&gt;

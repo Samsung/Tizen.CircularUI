@@ -106,7 +106,7 @@ To receive <a href="https://developer.tizen.org/development/training/native-appl
 <p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
 <h2 id="add-circlelistview-in-circlepage">Add CircleListView in CirclePage</h2>
 <p>You can set <code>CircleListView</code> in the <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information on how to add a <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-<code>RotaryFocusTargetName</code> property sets the currently focused control using the rotating interaction, and displays the focused control&#39;s circle object.
+<code>RotaryFocusObject</code> property sets the currently focused control using the rotating interaction, and displays the focused control&#39;s circle object.
 If the value is not set properly,  the control will not receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
 <p>You can either set the <code>Header</code> and/or <code>Footer</code> to a simple text, or to a more complex layout. Using <code>HeaderTemplate</code> and <code>FooterTemplate</code> properties you can create more complex layouts for the header and footer that support data binding.</p>
 <p>The following example has cells, header, footer.
@@ -128,7 +128,7 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
     xmlns:local=&quot;clr-namespace:WearableUIGallery&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusTargetName=&quot;mylist&quot;&gt;
+    RotaryFocusObject=&quot;{x:Reference mylist}&quot;&gt;
     &lt;w:CirclePage.Content&gt;
         &lt;w:CircleListView x:Name=&quot;mylist&quot;&gt;
             &lt;w:CircleListView.ItemsSource&gt;
@@ -351,7 +351,7 @@ It is nested inside a <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-
     xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleList&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusTargetName=&quot;mylist&quot;&gt;
+    RotaryFocusObject=&quot;{x:Reference mylist}&quot;&gt;
     &lt;w:CirclePage.BindingContext&gt;
         &lt;local:ListViewModel /&gt;
     &lt;/w:CirclePage.BindingContext&gt;

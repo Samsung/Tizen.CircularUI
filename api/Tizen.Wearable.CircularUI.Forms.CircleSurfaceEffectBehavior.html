@@ -95,18 +95,58 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CircleSurfaceEffectBehavior : Behavior&lt;Page&gt;</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObject" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject">RotaryFocusObject</h4>
-  <div class="markdown level1 summary"><p>Gets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.</p>
-</div>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObjectProperty" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObjectProperty">RotaryFocusObjectProperty</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IRotaryFocusable RotaryFocusObject { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly BindableProperty RotaryFocusObjectProperty</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_BindableObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)">GetRotaryFocusObject(BindableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IRotaryFocusable GetRotaryFocusObject(BindableObject obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableObject</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -121,33 +161,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusTargetName_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusTargetName" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName">RotaryFocusTargetName</h4>
-  <div class="markdown level1 summary"><p>Gets or sets target name of RotaryFocusObject.
-If RotaryFocusTargetName is set, it registers only a consumer in the RotaryFocusObject property to receive bezel action (take a rotary event) from the current page</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RotaryFocusTargetName { set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
   <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo*"></a>
   <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Page_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Page)">OnAttachedTo(Page)</h4>
   <div class="markdown level1 summary"></div>
@@ -194,6 +207,36 @@ If RotaryFocusTargetName is set, it registers only a consumer in the RotaryFocus
       <tr>
         <td><span class="xref">Page</span></td>
         <td><span class="parametername">page</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_BindableObject_Tizen_Wearable_CircularUI_Forms_IRotaryFocusable_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)">SetRotaryFocusObject(BindableObject, IRotaryFocusable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetRotaryFocusObject(BindableObject obj, IRotaryFocusable focusable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableObject</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IRotaryFocusable.html">IRotaryFocusable</a></td>
+        <td><span class="parametername">focusable</span></td>
         <td></td>
       </tr>
     </tbody>

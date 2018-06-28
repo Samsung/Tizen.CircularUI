@@ -455,25 +455,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusObjectProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusObjectProperty
   nameWithType: CirclePage.RotaryFocusObjectProperty
-- uid: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetName
-  name: RotaryFocusTargetName
-  href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html#Tizen_Wearable_CircularUI_Forms_CirclePage_RotaryFocusTargetName
-  commentId: P:Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetName
-  fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetName
-  nameWithType: CirclePage.RotaryFocusTargetName
-- uid: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetName*
-  name: RotaryFocusTargetName
-  href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html#Tizen_Wearable_CircularUI_Forms_CirclePage_RotaryFocusTargetName_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetName
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetName
-  nameWithType: CirclePage.RotaryFocusTargetName
-- uid: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetNameProperty
-  name: RotaryFocusTargetNameProperty
-  href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html#Tizen_Wearable_CircularUI_Forms_CirclePage_RotaryFocusTargetNameProperty
-  commentId: F:Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetNameProperty
-  fullName: Tizen.Wearable.CircularUI.Forms.CirclePage.RotaryFocusTargetNameProperty
-  nameWithType: CirclePage.RotaryFocusTargetNameProperty
 - uid: Tizen.Wearable.CircularUI.Forms.CirclePageNotFoundException
   name: CirclePageNotFoundException
   href: api/Tizen.Wearable.CircularUI.Forms.CirclePageNotFoundException.html
@@ -707,6 +688,19 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
   fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
   nameWithType: CircleSurfaceEffectBehavior
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
+  name: GetRotaryFocusObject(BindableObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_BindableObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
+  nameWithType: CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject*
+  name: GetRotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject
+  nameWithType: CircleSurfaceEffectBehavior.GetRotaryFocusObject
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Page)
   name: OnAttachedTo(Page)
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Page_
@@ -733,32 +727,25 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom
   nameWithType: CircleSurfaceEffectBehavior.OnDetachingFrom
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
-  name: RotaryFocusObject
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObject
-  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
-  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusObject
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject*
-  name: RotaryFocusObject
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObject_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
+  name: RotaryFocusObjectProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusObjectProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
+  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
+  name: SetRotaryFocusObject(BindableObject, IRotaryFocusable)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_BindableObject_Tizen_Wearable_CircularUI_Forms_IRotaryFocusable_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject, Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
+  nameWithType: CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject, IRotaryFocusable)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject*
+  name: SetRotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObject
-  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusObject
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
-  name: RotaryFocusTargetName
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusTargetName
-  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
-  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusTargetName
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName*
-  name: RotaryFocusTargetName
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_RotaryFocusTargetName_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusTargetName
-  nameWithType: CircleSurfaceEffectBehavior.RotaryFocusTargetName
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject
+  nameWithType: CircleSurfaceEffectBehavior.SetRotaryFocusObject
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem
   name: CircleSurfaceItem
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html

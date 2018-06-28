@@ -84,8 +84,8 @@
 <li>Adding <code>CircleSurfaceEffectBehavior</code> in <code>Page</code> that includes circle control.</li>
 </ul>
 <h2 id="add-circlesurfaceeffectbehavior-in-page">Add CircleSurfaceEffectBehavior in Page</h2>
-<p>Add the <code>CircleSurfaceEffectBehavior</code> in the <code>&lt;Page.Behaviors&gt;</code> and set <code>RotaryFocusTargetName</code> property with circle control name.
-The <code>RotaryFocusTargetName</code> sets the currently focused control that is handled by rotating and display the focused control&#39;s circle object.</p>
+<p>Add the <code>CircleSurfaceEffectBehavior</code> in the <code>&lt;Page.Behaviors&gt;</code> and set <code>RotaryFocusObject</code> property to Attached Page with circle control name.
+The <code>RotaryFocusObject</code> sets the currently focused control that is handled by rotating and display the focused control&#39;s circle object.</p>
 <p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior API reference</a></li>
@@ -98,9 +98,10 @@ The <code>RotaryFocusTargetName</code> sets the currently focused control that i
 <pre><code class="lang-xml">&lt;w:TwoButtonPage xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
                  xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
                  xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-                 x:Class=&quot;WearableUIGallery.TC.TCListAppender&quot;&gt;
+                 x:Class=&quot;WearableUIGallery.TC.TCListAppender&quot;
+                                 w:CircleSurfaceEffectBehavior.RotaryFocusObject=&quot;{x:Reference mylist}&quot;&gt;
     &lt;w:TwoButtonPage.Behaviors&gt;
-        &lt;w:CircleSurfaceEffectBehavior RotaryFocusTargetName=&quot;mylist&quot;/&gt;
+        &lt;w:CircleSurfaceEffectBehavior/&gt;
     &lt;/w:TwoButtonPage.Behaviors&gt;
     &lt;w:TwoButtonPage.Content&gt;
         &lt;w:CircleListView x:Name=&quot;mylist&quot;  HorizontalOptions=&quot;FillAndExpand&quot; VerticalOptions=&quot;FillAndExpand&quot;&gt;
