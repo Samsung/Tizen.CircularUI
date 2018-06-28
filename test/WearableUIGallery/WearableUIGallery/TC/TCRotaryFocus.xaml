@@ -3,7 +3,8 @@
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
               xmlns:local="clr-namespace:WearableUIGallery.TC"
-              x:Class="WearableUIGallery.TC.TCRotaryFocus">
+              x:Class="WearableUIGallery.TC.TCRotaryFocus"
+              RotaryFocusObject="{x:Reference Spaceman}}">
     <ContentPage.Content>
         <AbsoluteLayout>
             <Image x:Name="Universe" Source="image/stars_background.png" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>

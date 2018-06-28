@@ -2,9 +2,11 @@
 <w:TwoButtonPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-                 x:Class="WearableUIGallery.TC.TCListAppender">
+                 x:Class="WearableUIGallery.TC.TCListAppender"
+                 x:Name="MyPage"
+                 w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference mylist}">
     <w:TwoButtonPage.Behaviors>
-        <w:CircleSurfaceEffectBehavior RotaryFocusTargetName="mylist"/>
+        <w:CircleSurfaceEffectBehavior/>
     </w:TwoButtonPage.Behaviors>
     <w:TwoButtonPage.Content>
         <w:CircleListView x:Name="mylist"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     x:Name="MyCirclePage"
-    RotaryFocusTargetName="MyCirclePage">
+    RotaryFocusObject="{x:Reference MyCirclePage}">
     <w:CirclePage.Content>
         <Image x:Name="Cat" Source="image/cat360.png" />
     </w:CirclePage.Content>

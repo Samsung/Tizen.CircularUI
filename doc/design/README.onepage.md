@@ -21,7 +21,6 @@ Design files for Circular UI on Xamarin Forms
 
      public IList<ICircleSurfaceItem> CircleSurfaceItems { get; }
      public MenuItem ActionButton { get; set; }
-     public string RotaryFocusTargetName { get; set; }
      public IRotaryFocusable RotaryFocusObject { get; set; }
  }
 
@@ -48,11 +47,9 @@ Design files for Circular UI on Xamarin Forms
  Page가 제거되거나, Hide 될때, `RotaryFocusObject`는 동작을 중단하며, 만약 Hide에서 Show 될때,
  `RotaryFocusObject`에 등록된 Child가 있다면, Rotary Event를 가져가게 된다.**
 
- 또한 `RotaryFocusTargetName` Property를 사용해 Xaml상의 이름으로 RotaryFocusObject를 정할 수 있다.
-
  Example:
  ```xml
-<w:CirclePage BackgroundColor="Blue" RotaryFocusTargetName="DateSelector">
+<w:CirclePage BackgroundColor="Blue" RotaryFocusObject="{x:Reference DateSelector}">
 <w:CirclePage.Content>
     <StackLayout>
         <w:CircleDateTimeSelector x:Name="DateSelector"/>

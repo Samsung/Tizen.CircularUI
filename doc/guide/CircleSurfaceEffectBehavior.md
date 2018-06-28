@@ -13,8 +13,8 @@ Following are the two ways to add circle control such as [CircleListView](xref:T
 
 ## Add CircleSurfaceEffectBehavior in Page
 
-Add the `CircleSurfaceEffectBehavior` in the `<Page.Behaviors>` and set `RotaryFocusTargetName` property with circle control name.
-The `RotaryFocusTargetName` sets the currently focused control that is handled by rotating and display the focused control's circle object.
+Add the `CircleSurfaceEffectBehavior` in the `<Page.Behaviors>` and set `RotaryFocusObject` property to Attached Page with circle control name.
+The `RotaryFocusObject` sets the currently focused control that is handled by rotating and display the focused control's circle object.
 
 For more information, see the following links:
 - [CircleSurfaceEffectBehavior API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html)
@@ -29,9 +29,10 @@ _The code example of this guide uses TCListAppender code of WearableUIGallery. T
 <w:TwoButtonPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-                 x:Class="WearableUIGallery.TC.TCListAppender">
+                 x:Class="WearableUIGallery.TC.TCListAppender"
+								 w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference mylist}">
     <w:TwoButtonPage.Behaviors>
-        <w:CircleSurfaceEffectBehavior RotaryFocusTargetName="mylist"/>
+        <w:CircleSurfaceEffectBehavior/>
     </w:TwoButtonPage.Behaviors>
     <w:TwoButtonPage.Content>
         <w:CircleListView x:Name="mylist"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

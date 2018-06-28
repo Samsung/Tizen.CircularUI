@@ -39,43 +39,13 @@ namespace Tizen.Wearable.CircularUI.Forms
                 if (n != null)
                     ((Element)n).Parent = (Element)b;
             });
-        /// <summary>
-        /// BindableProperty. Identifies the RotaryFocusTargetName bindable property.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty RotaryFocusTargetNameProperty = BindableProperty.Create(nameof(RotaryFocusTargetName), typeof(string), typeof(CirclePage), null,
-            propertyChanged: RotaryFocusTargetNameChanged);
-        /// <summary>
-        /// BindablePropertyKey. Identifies the RotaryFocusObject bindable property Key.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        static readonly BindablePropertyKey RotaryFocusObjectPropertyKey = BindableProperty.CreateReadOnly(nameof(RotaryFocusObject), typeof(IRotaryFocusable), typeof(CirclePage), null,
-            propertyChanged: RotaryFocusObjectChanged);
-        /// <summary>
-        /// BindableProperty. Identifies the RotaryFocusObject bindable property.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty RotaryFocusObjectProperty = RotaryFocusObjectPropertyKey.BindableProperty;
 
-        static void RotaryFocusObjectChanged(BindableObject bindable, object oldValue, object newValue)
-        {
-            CirclePage page = bindable as CirclePage;
-            page.RotaryFocusTargetName = null;
-        }
+        /// <summary>
+        /// BindableProperty. Identifies the RotaryFocusObject bindable property Key.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty RotaryFocusObjectProperty = BindableProperty.Create(nameof(RotaryFocusObject), typeof(IRotaryFocusable), typeof(CirclePage), null);
 
-        static void RotaryFocusTargetNameChanged(BindableObject bindable, object oldValue, object newValue)
-        {
-            CirclePage page = bindable as CirclePage;
-            if (page != null && newValue is string)
-            {
-                string name = newValue as string;
-                var obj = page.FindByName<IRotaryFocusable>(name);
-                if (obj != null && page.RotaryFocusObject != obj)
-                {
-                    page.RotaryFocusObject = obj;
-                }
-            }
-        }
         /// <summary>
         /// Creates and initializes a new instance of the CirclePage class.
         /// </summary>
@@ -103,24 +73,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
         /// <summary>
         /// Gets or sets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.
-        /// If set, RotaryFocusTargetName will be null.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public IRotaryFocusable RotaryFocusObject
         {
             get => (IRotaryFocusable)GetValue(RotaryFocusObjectProperty);
-            set => SetValue(RotaryFocusObjectPropertyKey, value);
-        }
-
-        /// <summary>
-        /// Gets or sets target name of RotaryFocusObject.
-        /// If RotaryFocusTargetName is set, it registers only a consumer in the RotaryFocusObject property to receive bezel action (take a rotary event) from the current page
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public string RotaryFocusTargetName
-        {
-            get => (string)GetValue(RotaryFocusTargetNameProperty);
-            set => SetValue(RotaryFocusTargetNameProperty, value);
+            set => SetValue(RotaryFocusObjectProperty, value);
         }
 
         protected override void OnBindingContextChanged()

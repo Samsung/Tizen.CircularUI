@@ -37,7 +37,7 @@ If you rotate the bezel of Tizen wearable device, `CircleSlider` bar is moves fo
   - `xmlns:w=clr-namespace:Tizen.Wearable.CircularUI.Forms` : `w` prefix means `Tizen.Wearable.CircularUI.Forms` namespace.
   - `<w:CirclePage>` : `CirclePage` derive from `Xamarin.Forms.Page`. This Page content area has `Label` and `Button`.
   - `<w:CirclePage.CircleSurfaceItems>` : `CircleSliderSurfaceItem` attached for `CircleSurfaceItem` of  `CirclePage`.
-  - `RotaryFocusTargetName` is set `slider` name. `CircleSliderSurfaceItem` has rotary focus. `CircleSliderSurfaceItem` can receive a Rotary Event from the wearable device's bezel interaction.
+  - `RotaryFocusObject` is set reference of the `slider`. `CircleSliderSurfaceItem` has rotary focus. `CircleSliderSurfaceItem` can receive a Rotary Event from the wearable device's bezel interaction.
 
    For more information, see [CirclePage guide](CirclePage.md).
 
@@ -56,7 +56,7 @@ If you rotate the bezel of Tizen wearable device, `CircleSlider` bar is moves fo
                 <w:CirclePage
                     x:Name="page"
                     NavigationPage.HasNavigationBar="False"
-                    RotaryFocusTargetName="slider">
+                    RotaryFocusObject="{x:Reference slider}">
                     <w:CirclePage.Content>
                         <StackLayout
                             HorizontalOptions="Center"

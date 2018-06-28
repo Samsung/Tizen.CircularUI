@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="mylist">
+    RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.BindingContext>
         <local:TCRadioViewModel />
     </w:CirclePage.BindingContext>

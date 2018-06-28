@@ -4,9 +4,10 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference myscroller}">
     <ContentPage.Behaviors>
-        <w:CircleSurfaceEffectBehavior RotaryFocusTargetName="myscroller" />
+        <w:CircleSurfaceEffectBehavior/>
     </ContentPage.Behaviors>
     <ContentPage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
