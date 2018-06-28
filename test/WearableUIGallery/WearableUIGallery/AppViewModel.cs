@@ -34,7 +34,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) });
             TCs.Add(new TCDescribe { Title = "CircleStackLayout", Class = typeof(TCCircleStackLayout) });
             TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
-            TCs.Add(new TCDescribe { Title = "ContextPopupBehavior", Class = typeof(TCConfirm) });
+            TCs.Add(new TCDescribe { Title = "ContextPopupBehavior", Class = typeof(TCCtxPopupList) });
             TCs.Add(new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) });
             TCs.Add(new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) });
             TCs.Add(new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) });
@@ -64,6 +64,12 @@ namespace WearableUIGallery
             CircleStepperTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCCircleStepper3) });
             CircleStepperTCs.Add(new TCDescribe { Title = "LabelFormat", Class = typeof(TCCircleStepper4) });
 
+            // ContextPopupEffectBehavior TCs
+            ContextPopupEffectBehaviorTCs = new ObservableCollection<TCDescribe>();
+            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Normal", Class = typeof(TCCtxPopup1) });
+            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Command Paramter", Class = typeof(TCCtxPopup2) });
+            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Attach/Detach behavior", Class = typeof(TCCtxPopup3) });
+
             // Radio TCs
             RadioTCs = new ObservableCollection<TCDescribe>();
             RadioTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) });
@@ -73,6 +79,7 @@ namespace WearableUIGallery
         public IList<TCDescribe> TCs { get; private set; }
         public IList<TCDescribe> CircleSurfaceItemTCs { get; private set; }
         public IList<TCDescribe> CircleStepperTCs { get; private set; }
+        public IList<TCDescribe> ContextPopupEffectBehaviorTCs { get; private set; }
         public IList<TCDescribe> RadioTCs { get; private set; }
     }
 }

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCtxPopup1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    x:Name="mypage"
+    RotaryFocusObject="{x:Reference myscrollview}">
+    <ContentPage.Content>
+        <w:CircleScrollView x:Name="myscrollview" Orientation="Vertical">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Margin="30" Orientation="Vertical">
+                    <w:Check
+                        x:Name="CtxCheck1"
+                        HorizontalOptions="CenterAndExpand"
+                        IsToggled="False"
+                        VerticalOptions="StartAndExpand">
+                        <w:Check.Behaviors>
+                            <w:ContextPopupEffectBehavior
+                                x:Name="CtxCheck1EffectBehavior"
+                                AcceptCommand="{Binding CtxCheck1AcceptedCommand, Source={x:Reference mypage}}"
+                                AcceptText="Yes"
+                                CancelCommand="{Binding CtxCheck1CancelCommand, Source={x:Reference mypage}}"
+                                CancelText="No"
+                                PositionOption="BottomOfView"
+                                Visibility="{Binding IsToggled, Source={x:Reference CtxCheck1}, Mode=TwoWay}" />
+                        </w:Check.Behaviors>
+                    </w:Check>
+                    <Button
+                        Clicked="OnClickVisibility"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Visibility"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="200" />
+                    <Button
+                        Clicked="OnClickOffset"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Reset offset"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="200" />
+                </StackLayout>
+                <StackLayout Padding="50,0,50,50" Orientation="Vertical">
+                    <Label
+                        x:Name="titleOfPositionOption"
+                        HorizontalTextAlignment="Start"
+                        Text="PositionOption : "
+                        TextColor="White"
+                        WidthRequest="150" />
+                    <Label
+                        x:Name="labelOfPositionOption"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        WidthRequest="150" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            x:Name="titleOfVisibility"
+                            HorizontalTextAlignment="Start"
+                            Text="Visibility : "
+                            TextColor="White"
+                            WidthRequest="150" />
+                        <Label
+                            x:Name="labelOfVisibility"
+                            HorizontalTextAlignment="Start"
+                            TextColor="White"
+                            WidthRequest="100" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            x:Name="titleOfOffsetX"
+                            HorizontalTextAlignment="Start"
+                            Text="X of Offset : "
+                            TextColor="White" />
+                        <Label
+                            x:Name="labelOfOffsetX"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            x:Name="titleOfOffsetY"
+                            HorizontalTextAlignment="Start"
+                            Text="Y of Offset : "
+                            TextColor="White" />
+                        <Label
+                            x:Name="labelOfOffsetY"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </w:CircleScrollView>
+    </ContentPage.Content>
+</w:CirclePage>

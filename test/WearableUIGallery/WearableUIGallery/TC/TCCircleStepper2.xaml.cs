@@ -24,23 +24,28 @@ namespace WearableUIGallery.TC
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TCCircleStepper2 : CirclePage
     {
-		public TCCircleStepper2()
-		{
+        public TCCircleStepper2()
+        {
             InitializeComponent ();
-		}
+        }
 
-        void OnFocusedHr(object sender, ValueChangedEventArgs args)
+        void OnFocusedT1(object sender, ValueChangedEventArgs args)
         {
             RotaryFocusObject = StepperT1;
+            StepperT1.MarkerColor = Color.Coral;
         }
-        void OnFocusedMm(object sender, ValueChangedEventArgs args)
+        void OnFocusedT2(object sender, ValueChangedEventArgs args)
         {
             RotaryFocusObject = StepperT2;
+            StepperT2.MarkerColor = Color.Blue;
+            StepperT2.MarkerLineWidth = 50;
         }
-        void OnFocusedSec(object sender, ValueChangedEventArgs args)
+        void OnFocusedT3(object sender, ValueChangedEventArgs args)
         {
             RotaryFocusObject = StepperT3;
+            StepperT3.MarkerColor = Color.DarkRed;
+            StepperT3.MarkerLineWidth = 80;
+            StepperT3.LabelFormat="%1.1f";
         }
-
     }
 }

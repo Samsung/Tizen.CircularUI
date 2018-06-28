@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCtxPopup3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    x:Name="mypage">
+    <ContentPage.Content>
+        <StackLayout Margin="30" Orientation="Vertical">
+            <w:Check
+                x:Name="CtxCheck1"
+                HorizontalOptions="CenterAndExpand"
+                IsToggled="False"
+                VerticalOptions="StartAndExpand" />
+            <Button
+                Clicked="OnClickAttach"
+                FontSize="Small"
+                HorizontalOptions="CenterAndExpand"
+                Text="Attach Behavior"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="250" />
+            <Button
+                Clicked="OnClickDetach"
+                FontSize="Small"
+                HorizontalOptions="CenterAndExpand"
+                Text="Detach Behavior"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="250" />
+            <Label
+                x:Name="State"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                WidthRequest="150" />
+        </StackLayout>
+    </ContentPage.Content>
+</w:CirclePage>

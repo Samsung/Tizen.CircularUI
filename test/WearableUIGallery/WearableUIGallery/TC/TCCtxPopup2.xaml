@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCtxPopup2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    x:Name="mypage">
+    <ContentPage.Content>
+        <StackLayout Padding="30,50,30,50" Orientation="Vertical">
+            <w:Check
+                x:Name="CtxCheck1"
+                HorizontalOptions="CenterAndExpand"
+                IsToggled="False"
+                VerticalOptions="StartAndExpand">
+                <w:Check.Behaviors>
+                    <w:ContextPopupEffectBehavior
+                        x:Name="CtxCheck1EffectBehavior"
+                        AcceptCommand="{Binding CtxCheck1AcceptedCommand, Source={x:Reference mypage}}"
+                        AcceptCommandParameter="None"
+                        AcceptText="Yes"
+                        CancelCommand="{Binding CtxCheck1CancelCommand, Source={x:Reference mypage}}"
+                        CancelCommandParameter="None"
+                        CancelText="No"
+                        PositionOption="BottomOfView"
+                        Visibility="{Binding IsToggled, Source={x:Reference CtxCheck1}, Mode=TwoWay}" />
+                </w:Check.Behaviors>
+            </w:Check>
+            <Label
+                x:Name="titleOfAcceptCommandParamter"
+                FontSize="8"
+                HorizontalTextAlignment="Start"
+                Text="AcceptCommandParamter : "
+                TextColor="White" />
+            <Label
+                x:Name="labelOfAcceptCommandParamter"
+                HorizontalTextAlignment="Center"
+                Text="None"
+                TextColor="White" />
+            <Label
+                x:Name="titleOfCancelCommandParamter"
+                FontSize="8"
+                HorizontalTextAlignment="Start"
+                Text="CancelCommandParamter : "
+                TextColor="White" />
+            <Label
+                x:Name="labelOfCancelCommandParamter"
+                HorizontalTextAlignment="Center"
+                Text="None"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</w:CirclePage>
