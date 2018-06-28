@@ -59,7 +59,7 @@ namespace UIComponents.Samples.Popup
                     new StackLayout
                     {
                         Orientation = StackOrientation.Horizontal,
-                        Padding = new Thickness(0, 30, 0, 30),
+                        Padding = new Thickness(0, 40, 0, 40),
                         Children =
                         {
                             checkbox,

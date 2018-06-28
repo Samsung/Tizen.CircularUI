@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:UIComponents.Samples.CircleDateTime"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="dateSelector">
+    RotaryFocusObject="{x:Reference dateSelector}">
     <w:CirclePage.BindingContext>
         <local:DateTimeViewModel />
     </w:CirclePage.BindingContext>

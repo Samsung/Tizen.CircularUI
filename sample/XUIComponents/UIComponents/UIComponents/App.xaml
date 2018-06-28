@@ -8,7 +8,7 @@
     <Application.MainPage>
         <NavigationPage x:Name="MainNavigation">
             <x:Arguments>
-                <w:CirclePage NavigationPage.HasNavigationBar="False" RotaryFocusTargetName="MainList">
+                <w:CirclePage NavigationPage.HasNavigationBar="False" RotaryFocusObject="{x:Reference MainList}">
                     <w:CirclePage.BindingContext>
                         <local:AppViewModel />
                     </w:CirclePage.BindingContext>

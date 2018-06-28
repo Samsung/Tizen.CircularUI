@@ -6,7 +6,7 @@
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     NavigationPage.HasNavigationBar="False"
-    RotaryFocusTargetName="slider">
+    RotaryFocusObject="{x:Reference slider}">
     <w:CirclePage.Content>
         <StackLayout
             HorizontalOptions="Center"
