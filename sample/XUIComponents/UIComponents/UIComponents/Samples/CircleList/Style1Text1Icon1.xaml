@@ -5,12 +5,15 @@
     xmlns:local="clr-namespace:UIComponents.Samples.CircleList"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="mylist">
+    RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.BindingContext>
         <local:ListViewModel />
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
-        <w:CircleListView x:Name="mylist" ItemsSource="{Binding Names}">
+        <w:CircleListView
+            x:Name="mylist"
+            HasUnevenRows="True"
+            ItemsSource="{Binding Names}">
             <w:CircleListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

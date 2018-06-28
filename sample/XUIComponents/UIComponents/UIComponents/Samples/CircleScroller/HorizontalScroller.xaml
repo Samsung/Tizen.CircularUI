@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:UIComponents.Samples.CircleScroller"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="myscroller">
+    RotaryFocusObject="{x:Reference myscroller}">
     <w:CirclePage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Horizontal">
             <StackLayout

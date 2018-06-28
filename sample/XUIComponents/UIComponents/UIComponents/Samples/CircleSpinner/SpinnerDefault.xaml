@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:UIComponents.Samples.CircleSpinner"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="stepper">
+    RotaryFocusObject="{x:Reference stepper}">
     <w:CirclePage.BindingContext>
         <local:SpinnerViewModel />
     </w:CirclePage.BindingContext>
