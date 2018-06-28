@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="StepperT1">
+    RotaryFocusObject="{x:Reference StepperT1}">
     <w:CirclePage.Content>
         <AbsoluteLayout BackgroundColor="#B878B8">
             <Label

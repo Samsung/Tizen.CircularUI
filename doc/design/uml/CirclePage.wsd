@@ -16,10 +16,8 @@ package "Extension.Wearable" {
     class CirclePage {
         --BindableProperty--
         {static} +ActionButtonProperty
-        {static} +RotaryFocusTargetNameProperty
         {static} +RotaryFocusObjectProperty
         --Property--
-        +RotaryFocusTargetName: string
         +RotaryFocusObject: IRotaryFocusable
         +CircleSurfaceItems: IList<ICircleSurfaceItem>
         +ActionButton: MenuItem

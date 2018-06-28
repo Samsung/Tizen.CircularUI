@@ -18,7 +18,7 @@ To receive [Rotary event](https://developer.tizen.org/development/training/nativ
 
 You can set `CircleScrollView` in [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). For more information about how to add a [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), see [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
 The following XAML code shows [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage) with `CircleScrollView`.
-`RotaryFocusTargetName` property sets the currently focused control that is handled by rotating and displays the circle object of focused control.
+`RotaryFocusObject` property sets the currently focused control that is handled by rotating and displays the circle object of focused control.
 If the value is not set properly, the control does not receive the [Rotary Event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 The direction of the scroller depends on the setting of the `Orientation` value.
@@ -45,7 +45,7 @@ The following code shows CirclePage with CircleScrollView:
     xmlns:local="clr-namespace:UIComponents.Samples.CircleScroller"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="myscroller">
+    RotaryFocusObject="{x:Reference myscroller}">
     <w:CirclePage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Horizontal">
             <StackLayout

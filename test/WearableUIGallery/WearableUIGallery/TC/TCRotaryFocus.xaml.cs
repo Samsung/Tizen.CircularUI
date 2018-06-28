@@ -22,17 +22,17 @@ namespace WearableUIGallery.TC
 
             var universe = new RotaryFocusProxy(Universe);
 
-            RotaryFocusObject = universe;
+            //RotaryFocusObject = universe;
 
             _universeClicked = new TapGestureRecognizer();
             _universeClicked.Command = new Command(() => RotaryFocusObject = universe);
 
             _spacemanClicked = new TapGestureRecognizer();
-            _spacemanClicked.Command = new Command(() => RotaryFocusTargetName = "Spaceman");
+            _spacemanClicked.Command = new Command(() => RotaryFocusObject = Spaceman);
 
             _sliderClicked = new TapGestureRecognizer()
             {
-                Command = new Command(() => RotaryFocusTargetName = "Slider")
+                Command = new Command(() => RotaryFocusObject = Slider)
             };
 
             Universe.GestureRecognizers.Add(_universeClicked);

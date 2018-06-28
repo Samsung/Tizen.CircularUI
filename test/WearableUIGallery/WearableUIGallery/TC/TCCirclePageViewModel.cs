@@ -20,16 +20,11 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 
 namespace WearableUIGallery.TC
 {
-    internal static class WidgetName
-    {
-        public const string DateSelector = "DateSelector";
-        public const string Alert = "AlertSlider";
-        public const string Ringtone = "RingtoneSlider";
-    }
 
     public class TCCirclePageViewModel : INotifyPropertyChanged
     {
@@ -39,7 +34,7 @@ namespace WearableUIGallery.TC
         bool _alertSliderVisibility;
         bool _ringtoneSliderVisibility;
         bool _dateVisibility = true;
-        string _rotaryFocusName = WidgetName.DateSelector;
+        IRotaryFocusable _rotaryFocusTarget = null;
 
         public double Progress
         {
@@ -96,13 +91,13 @@ namespace WearableUIGallery.TC
             }
         }
 
-        public string RotaryFocusName
+        public IRotaryFocusable RotaryFocusTarget
         {
-            get => _rotaryFocusName;
+            get => _rotaryFocusTarget;
             set
             {
-                if (_rotaryFocusName == value) return;
-                _rotaryFocusName = value;
+                if (_rotaryFocusTarget == value) return;
+                _rotaryFocusTarget = value;
                 OnPropertyChanged();
             }
         }
@@ -132,10 +127,11 @@ namespace WearableUIGallery.TC
             Playing = false;
             KeepGoing = false;
 
-            ProgressBarVisibleCommand = new Command(() =>
+            ProgressBarVisibleCommand = new Command((obj) =>
             {
+                var r = obj as IRotaryFocusable;
                 ProgressBarVisibility = !ProgressBarVisibility;
-                RotaryFocusName = WidgetName.DateSelector;
+                RotaryFocusTarget = r;
                 AlertSliderVisibility = false;
                 RingtoneSliderVisibility = false;
                 DateVisiblity = true;
@@ -180,21 +176,21 @@ namespace WearableUIGallery.TC
         {
             Console.WriteLine("DoAlertVolume!!");
             AlertSliderVisibility = true;
-            RotaryFocusName = WidgetName.Alert;
+            RotaryFocusTarget = obj as IRotaryFocusable;
         }
 
         void DoRingtoneVolume(object obj)
         {
             Console.WriteLine("DoRingtoneVolume!!");
             RingtoneSliderVisibility = true;
-            RotaryFocusName = WidgetName.Ringtone;
+            RotaryFocusTarget = obj as IRotaryFocusable;
         }
 
         void DoInVisibleDateSelector(object obj)
         {
             Console.WriteLine("DoInVisibleDateSelector!!");
             DateVisiblity = !DateVisiblity;
-            RotaryFocusName = WidgetName.DateSelector;
+            RotaryFocusTarget = obj as IRotaryFocusable;
         }
 
         bool UpdateProgress()

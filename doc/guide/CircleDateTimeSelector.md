@@ -22,7 +22,7 @@ The Time display screen is also a touch screen. You can set the value of the hou
 ## Add CircleDateTimeSelector in CirclePage
 
 You can set `CircleDateTimeSelector` in the [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). For more information on how to add a [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), see [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
-`RotaryFocusTargetName` property sets the currently focused control using the rotating interaction, and displays the focused control's circle object.
+`RotaryFocusObject` property sets the currently focused control using the rotating interaction, and displays the focused control's circle object.
 If the value is not set properly, the control will not receive the [Rotary Event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 `CircleDateTimeSelector` has the following properties:
@@ -72,7 +72,7 @@ The following code shows CirclePage with CircleDateTimeSelector:
     xmlns:local="clr-namespace:UIComponents.Samples.CircleDateTime"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="timeSelector">
+    RotaryFocusObject="{x:Reference timeSelector}">
     <w:CirclePage.BindingContext>
         <local:DateTimeViewModel />
     </w:CirclePage.BindingContext>

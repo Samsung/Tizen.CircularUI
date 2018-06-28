@@ -5,9 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="{Binding RotaryFocusName}">
+    RotaryFocusObject="{Binding RotaryFocusTarget}">
     <w:CirclePage.BindingContext>
-        <local:TCCirclePageViewModel />
+        <local:TCCirclePageViewModel RotaryFocusTarget="{x:Reference DateSelector}"/>
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
         <StackLayout
@@ -56,14 +56,14 @@
             Value="8" />
     </w:CirclePage.CircleSurfaceItems>
     <w:CirclePage.ActionButton>
-        <w:ActionButtonItem Command="{Binding ProgressBarVisibleCommand}" Text="OK" />
+        <w:ActionButtonItem Command="{Binding ProgressBarVisibleCommand}" CommandParameter="{x:Reference DateSelector}" Text="OK" />
     </w:CirclePage.ActionButton>
     <w:CirclePage.ToolbarItems>
         <w:CircleToolbarItem
             Command="{Binding Play.Action}"
             Icon="{Binding Play.Icon}"
             SubText="{Binding Play.SubText}"
-            Text="{Binding Play.Text}" />
+            Text="{Binding Play.Text}"/>
         <w:CircleToolbarItem
             Command="{Binding Stop.Action}"
             Icon="{Binding Stop.Icon}"
@@ -83,12 +83,14 @@
             Command="{Binding Alert.Action}"
             Icon="{Binding Alert.Icon}"
             SubText="{Binding Alert.SubText}"
-            Text="{Binding Alert.Text}" />
+            Text="{Binding Alert.Text}"
+            CommandParameter="{x:Reference AlertSlider}"/>
         <w:CircleToolbarItem
             Command="{Binding Ringtone.Action}"
             Icon="{Binding Ringtone.Icon}"
             SubText="{Binding Ringtone.SubText}"
-            Text="{Binding Ringtone.Text}" />
+            Text="{Binding Ringtone.Text}"
+            CommandParameter="{x:Reference RingtoneSlider}"/>
         <w:CircleToolbarItem
             Command="{Binding InVisible.Action}"
             Icon="{Binding InVisible.Icon}"

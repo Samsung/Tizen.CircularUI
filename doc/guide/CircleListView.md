@@ -24,7 +24,7 @@ To receive [Rotary event](https://developer.tizen.org/development/training/nativ
 ## Add CircleListView in CirclePage
 
 You can set `CircleListView` in the [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). For more information on how to add a [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), see [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
-`RotaryFocusTargetName` property sets the currently focused control using the rotating interaction, and displays the focused control's circle object.
+`RotaryFocusObject` property sets the currently focused control using the rotating interaction, and displays the focused control's circle object.
 If the value is not set properly,  the control will not receive the [Rotary Event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 You can either set the `Header` and/or `Footer` to a simple text, or to a more complex layout. Using `HeaderTemplate` and `FooterTemplate` properties you can create more complex layouts for the header and footer that support data binding.
@@ -53,7 +53,7 @@ The following code shows CirclePage with CircleListView:
     xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="mylist">
+    RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.Content>
         <w:CircleListView x:Name="mylist">
             <w:CircleListView.ItemsSource>
@@ -302,7 +302,7 @@ namespace WearableUIGallery.TC
     xmlns:local="clr-namespace:UIComponents.Samples.CircleList"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="mylist">
+    RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.BindingContext>
         <local:ListViewModel />
     </w:CirclePage.BindingContext>

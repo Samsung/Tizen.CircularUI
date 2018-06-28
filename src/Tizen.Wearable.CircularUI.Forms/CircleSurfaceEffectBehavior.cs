@@ -29,57 +29,23 @@ namespace Tizen.Wearable.CircularUI.Forms
     public class CircleSurfaceEffectBehavior : Behavior<Page>
     {
         internal static readonly BindableProperty SurfaceProperty = BindableProperty.CreateAttached("CircleSurface", typeof(object), typeof(CircleSurfaceEffectBehavior), null);
-        internal static readonly BindableProperty RotaryFocusObjectProperty = BindableProperty.CreateAttached("RotaryFocusObject", typeof(IRotaryFocusable), typeof(CircleSurfaceEffectBehavior), null);
 
-        string _focusableName;
-
-        /// <summary>
-        /// Gets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public IRotaryFocusable RotaryFocusObject
-        {
-            get => (IRotaryFocusable)TargetPage?.GetValue(RotaryFocusObjectProperty);
-            set => TargetPage?.SetValue(RotaryFocusObjectProperty, value);
-        }
-
-        /// <summary>
-        /// Gets or sets target name of RotaryFocusObject.
-        /// If RotaryFocusTargetName is set, it registers only a consumer in the RotaryFocusObject property to receive bezel action (take a rotary event) from the current page
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public string RotaryFocusTargetName
-        {
-            set
-            {
-                if (_focusableName == value) return;
-                var obj = TargetPage?.FindByName<IRotaryFocusable>(value);
-                _focusableName = value;
-                RotaryFocusObject = obj;
-            }
-        }
-
-        Page TargetPage { get; set; }
+        public static readonly BindableProperty RotaryFocusObjectProperty = BindableProperty.CreateAttached("RotaryFocusObject", typeof(IRotaryFocusable), typeof(CircleSurfaceEffectBehavior), null);
 
         internal static object GetSurface(BindableObject obj) => obj.GetValue(SurfaceProperty);
         internal static void SetSurface(BindableObject obj, object surface) => obj.SetValue(SurfaceProperty, surface);
 
-        internal static IRotaryFocusable GetRotaryFocusObject(BindableObject obj) => (IRotaryFocusable)obj.GetValue(RotaryFocusObjectProperty);
-        internal static void SetRotaryFocusObject(BindableObject obj, IRotaryFocusable focusable) => obj.SetValue(RotaryFocusObjectProperty, focusable);
+        public static IRotaryFocusable GetRotaryFocusObject(BindableObject obj) => (IRotaryFocusable)obj.GetValue(RotaryFocusObjectProperty);
+        public static void SetRotaryFocusObject(BindableObject obj, IRotaryFocusable focusable) => obj.SetValue(RotaryFocusObjectProperty, focusable);
 
         protected override void OnAttachedTo(Page page)
         {
             base.OnAttachedTo(page);
-            TargetPage = page;
+
             var effect = Effect.Resolve("CircleUI.CircleSurfaceEffect");
             if (effect != null)
             {
                 page.Effects.Add(effect);
-            }
-            if (!string.IsNullOrEmpty(_focusableName))
-            {
-                var obj = TargetPage?.FindByName<IRotaryFocusable>(_focusableName);
-                RotaryFocusObject = obj;
             }
         }
 
@@ -92,7 +58,6 @@ namespace Tizen.Wearable.CircularUI.Forms
             }
             base.OnDetachingFrom(page);
             page.RemoveBinding(RotaryFocusObjectProperty);
-            TargetPage = null;
         }
     }
 }

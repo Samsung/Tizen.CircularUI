@@ -16,7 +16,7 @@ To receive [Rotary event](https://developer.tizen.org/development/training/nativ
 ## Add CircleStepper in CirclePage
 
 You can set the `CircleStepper` in the [CirclePage.Content](xref:Tizen.Wearable.CircularUI.doc.CirclePage). For more information on how to add [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage), see [CirclePage guide](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage).
-`RotaryFocusTargetName` property sets the currently focused control that is handled by rotating and displaying the focused control's circle object.
+`RotaryFocusObject` property sets the currently focused control that is handled by rotating and displaying the focused control's circle object.
 If this value properly is not set, then control can not receive [Rotary Event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 `CircleStepper` has the following properties:
@@ -72,7 +72,7 @@ The following code shows CirclePage with CircleStepper:
     xmlns:local="clr-namespace:UIComponents.Samples.CircleSpinner"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="stepper">
+    RotaryFocusObject="{x:Reference stepper}">
     <w:CirclePage.BindingContext>
         <local:SpinnerViewModel />
     </w:CirclePage.BindingContext>

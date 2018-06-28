@@ -31,15 +31,15 @@ namespace WearableUIGallery.TC
 
         void OnFocusedHr(object sender, ValueChangedEventArgs args)
         {
-            RotaryFocusTargetName = "StepperT1";
+            RotaryFocusObject = StepperT1;
         }
         void OnFocusedMm(object sender, ValueChangedEventArgs args)
         {
-            RotaryFocusTargetName = "StepperT2";
+            RotaryFocusObject = StepperT2;
         }
         void OnFocusedSec(object sender, ValueChangedEventArgs args)
         {
-            RotaryFocusTargetName = "StepperT3";
+            RotaryFocusObject = StepperT3;
         }
 
     }

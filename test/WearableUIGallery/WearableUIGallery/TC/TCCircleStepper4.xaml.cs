@@ -36,7 +36,7 @@ namespace WearableUIGallery.TC
 
         void OnFocusedUnit(object sender, ValueChangedEventArgs args)
         {
-            RotaryFocusTargetName = "StepperUnit";
+            RotaryFocusObject = StepperUnit;
         }
     }
 }

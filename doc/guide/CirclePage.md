@@ -78,14 +78,14 @@ namespace WearableUIGallery.TC
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="{Binding RotaryFocusName}">
+    RotaryFocusObject="{Binding RotaryFocusTarget}">
     <w:CirclePage.Content>
 
 ```
 
 ## Add content in CirclePage
 You can set content in the `CirclePage.Content`. In the XAML file, code explains that CirclePage adds content with `CircleDateTimeSelector`.
-`RotaryFocusTargetName` property sets the currently focused control that is handled by rotating and display the circle object of the focused control.
+`RotaryFocusObject` property sets the currently focused control that is handled by rotating and display the circle object of the focused control.
 If the value is not set properly, the control will not receive the [Rotary Event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary).
 
 For more information, see the following links:
@@ -100,9 +100,9 @@ For more information, see the following links:
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusTargetName="{Binding RotaryFocusName}">
+    RotaryFocusObject="{Binding RotaryFocusTarget}">
     <w:CirclePage.BindingContext>
-        <local:TCCirclePageViewModel />
+        <local:TCCirclePageViewModel RotaryFocusTarget="{x:Reference DateSelector}"/>
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
         <StackLayout
@@ -177,7 +177,7 @@ For more information, see the following links:
 CirclePage `CircleSurfaceItems` can set `CircleProgressBarSurfaceItem` and `CircleSliderSurfaceItem`.
 `CircleProgressBarSurfaceItem` represents Circle ProgressBar.
 `progress1` at XAML code represents the outer circle of following image. `progress2` represents the inner circle.
-If you use CircleProgressbar, you do not need to set the `RotaryFocusTargetName` property of CirclePage.
+If you use CircleProgressbar, you do not need to set the `RotaryFocusObject` property of CirclePage.
 When `Value` property is increased or decreased, circle object extends or shrinks the following to the `Value` property.
 
 `CircleProgressBarSurfaceItem` has the following properties:
@@ -256,7 +256,7 @@ _The code example of this guide uses CircleProgressBar.xaml code of XUIComponent
 
 ## Add CircleSliderSurfaceItem in CirclePage
 `CircleSliderSurfaceItem` represents Circle Slider.`slider` at XAML code represents the circle of following image.
-If you use CircleSlider bar, you must set Circle Slider name at the `RotaryFocusTargetName` property of CirclePage.
+If you use CircleSlider bar, you must set Circle Slider name at the `RotaryFocusObject` property of CirclePage.
 The `Value` property is the default value for the Slider. If you rotate the  bezel, the `Value` property increases or decreases depending on the bezel behavior.
 The `Increment` property is the incremental or decremental change as you rotates the bezel.
 
@@ -288,7 +288,7 @@ _The code example of this guide uses CircleSlider.xaml code of XUIComponent. The
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     NavigationPage.HasNavigationBar="False"
-    RotaryFocusTargetName="slider">
+    RotaryFocusObject="{x:Reference slider}">
     <w:CirclePage.Content>
         <StackLayout
             HorizontalOptions="Center"
