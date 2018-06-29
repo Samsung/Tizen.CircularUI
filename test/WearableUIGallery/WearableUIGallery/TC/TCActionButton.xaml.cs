@@ -24,7 +24,7 @@ namespace WearableUIGallery.TC
             if (btn.Text == "Enable")
             {
                 btn.Text = "Disable";
-                ActionButton.IsEnable = false;
+                ActionButton.SetValue(ActionButtonItem.IsEnableProperty, false);
             }
             else
             {
@@ -40,7 +40,7 @@ namespace WearableUIGallery.TC
             if (btn.Text == "Invisible")
             {
                 btn.Text = "Visible";
-                ActionButton.IsVisible = true;
+                ActionButton.SetValue(ActionButtonItem.IsVisibleProperty, true);
             }
             else
             {

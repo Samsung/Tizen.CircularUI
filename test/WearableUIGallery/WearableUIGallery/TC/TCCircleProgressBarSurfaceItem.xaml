@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WearableUIGallery.TC.TCCircleProgressBarSurfaceItem"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
+        <StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    <w:CirclePage.CircleSurfaceItems>
+        <w:CircleProgressBarSurfaceItem
+            x:Name="ProgressBar"
+            BackgroundColor="Green"
+            BackgroundLineWidth="20"
+            BackgroundRadius="120"
+            BarColor="Red"
+            BarLineWidth="20"
+            BarRadius="120"
+            IsVisible="True"
+            Value="0.5" />
+    </w:CirclePage.CircleSurfaceItems>
+</w:CirclePage>

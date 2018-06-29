@@ -56,6 +56,7 @@ namespace WearableUIGallery
             CircleSurfaceItemTCs.Add(new TCDescribe { Title = "Add/Remove SurfaceItems", Class = typeof(TCCircleSurfaceItems1) });
             CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar", Class = typeof(TCCircleSurfaceItems2) });
             CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider", Class = typeof(TCCircleSurfaceItems3) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar2", Class = typeof(TCCircleProgressBarSurfaceItem) });
 
             // CircleStepper TCs
             CircleStepperTCs = new ObservableCollection<TCDescribe>();
