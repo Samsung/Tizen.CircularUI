@@ -42,8 +42,6 @@ For more information, see the following links:
 - [Xamarin.Forms.Behaviors Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/)
 - [Consuming a Xamarin.Forms Behavior](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/creating#consuming-a-xamarinforms-behavior)
 
-_The code example of this guide uses TCConfirm code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCConfirm.xaml_
-
 To create a context popup in CirclePage, use the following code:
 
 **C# file**

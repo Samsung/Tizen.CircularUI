@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
+
 using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,23 +27,26 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCConfirm : CirclePage
+	public partial class TCCtxPopupList : CirclePage
 	{
-		public TCConfirm ()
+		public TCCtxPopupList()
 		{
-            AcceptedCommand = new Command(() => BackgroundColor = Color.Green);
-            CancelCommand = new Command(() => BackgroundColor = Color.Red);
-
-            InitializeComponent ();
-
-            CtxCheck.PropertyChanged += (s, e) =>
-            {
-                if (e.PropertyName == Check.IsToggledProperty.PropertyName)
-                    System.Diagnostics.Debug.WriteLine($"IsToggled = {CtxCheck.IsToggled}");
-            };
+			InitializeComponent ();
 		}
 
-        public ICommand AcceptedCommand { get; private set; }
-        public ICommand CancelCommand { get; private set; }
-	}
+        public void OnItemTapped(object sender, ItemTappedEventArgs args)
+        {
+            if (args.Item == null) return;
+
+            var desc = args.Item as TCDescribe;
+            if (desc != null && desc.Class != null)
+            {
+                Type pageType = desc.Class;
+
+                var page = Activator.CreateInstance(pageType) as Page;
+                NavigationPage.SetHasNavigationBar(page, false);
+                Navigation.PushAsync(page as Page);
+            }
+        }
+    }
 }
