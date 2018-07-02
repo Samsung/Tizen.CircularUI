@@ -157,6 +157,24 @@ height.This has two button in action area and title text in title area";
         private void OnProcessButtonClicked(object sender, EventArgs e)
         {
             _progressPopUp.Show();
+
+            Device.StartTimer(TimeSpan.FromMilliseconds(3000), () =>
+            {
+                _progressPopUp.SetValue(InformationPopup.IsProgressRunningProperty, false);
+                _progressPopUp.SetValue(InformationPopup.TitleProperty, "Stopped Popup");
+                _progressPopUp.SetValue(InformationPopup.TextProperty, "Progress is finished");
+                _progressPopUp.SetValue(InformationPopup.BottomButtonProperty, new MenuItem
+                {
+                    Text = "Reset",
+                    Command = new Command(() => {
+                        _progressPopUp.Title = "Popup title";
+                        _progressPopUp.Text = "This is progress test";
+                        _progressPopUp.IsProgressRunning = true;
+                        _progressPopUp.BottomButton = null;
+                    })
+                });
+                return false;
+            });
         }
 
         private void OnProcessLongTextButtonClicked(object sender, EventArgs e)

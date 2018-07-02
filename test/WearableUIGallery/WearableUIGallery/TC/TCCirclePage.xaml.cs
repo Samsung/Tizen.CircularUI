@@ -32,6 +32,8 @@ namespace WearableUIGallery.TC
         public TCCirclePage()
         {
             InitializeComponent();
+
+            ChangeName.SubText = "SubText";
         }
     }
 }

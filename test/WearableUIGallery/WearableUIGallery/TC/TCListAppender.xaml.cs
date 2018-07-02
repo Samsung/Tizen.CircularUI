@@ -25,7 +25,7 @@ namespace WearableUIGallery.TC
             };
             InitializeComponent ();
             mylist.ItemsSource = Texts;
-		}
+        }
 
         void DoAdd(object sender, EventArgs e)
         {
