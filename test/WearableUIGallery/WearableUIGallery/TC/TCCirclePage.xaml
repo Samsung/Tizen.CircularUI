@@ -96,5 +96,9 @@
             Icon="{Binding InVisible.Icon}"
             SubText="{Binding InVisible.SubText}"
             Text="{Binding InVisible.Text}" />
+        <w:CircleToolbarItem
+            x:Name="ChangeName"
+            Icon="image/question.png"
+            Text="MainText"/>
     </w:CirclePage.ToolbarItems>
 </w:CirclePage>
