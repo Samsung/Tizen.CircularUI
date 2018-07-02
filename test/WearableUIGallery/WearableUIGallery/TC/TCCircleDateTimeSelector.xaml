@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:IndexPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:local="clr-namespace:WearableUIGallery.TC"
+             x:Class="WearableUIGallery.TC.TCCircleDateTimeSelector">
+    <w:CirclePage x:Name="SelectorPage" RotaryFocusObject="{x:Reference TimeSelector}">
+        <w:CirclePage.Resources>
+            <local:ValueTypeConverter x:Key="VTypeConverter"/>
+        </w:CirclePage.Resources>
+        <w:CirclePage.Content>
+            <w:CircleDateTimeSelector x:Name="TimeSelector"
+                                      MarkerColor="{Binding BackgroundColor, Source={x:Reference SettingColorLabel}}"
+                                      ValueType="{Binding IsToggled, Source={x:Reference SettingValueType}, Converter={StaticResource VTypeConverter}}"
+                                      IsVisibleOfYear="{Binding IsToggled, Source={x:Reference SettingOptionYear}}"
+                                      IsVisibleOfMonth="{Binding IsToggled, Source={x:Reference SettingOptionMonth}}"
+                                      IsVisibleOfDate="{Binding IsToggled, Source={x:Reference SettingOptionDate}}"
+                                      IsVisibleOfHour="{Binding IsToggled, Source={x:Reference SettingOptionHour}}"
+                                      IsVisibleOfMinute="{Binding IsToggled, Source={x:Reference SettingOptionMinute}}"
+                                      IsVisibleOfAmPm="{Binding IsToggled, Source={x:Reference SettingOptionAmPm}}"
+                                      DateTime="{Binding Text, Source={x:Reference SettingOptionDateTime}, Mode=OneWayToSource}"/>
+        </w:CirclePage.Content>
+    </w:CirclePage>
+    <ContentPage x:Name="SettingPage" w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference SettingScroller}">
+        <ContentPage.Behaviors>
+            <w:CircleSurfaceEffectBehavior/>
+        </ContentPage.Behaviors>
+        <ContentPage.Resources>
+            <local:ColorHexConverter x:Key="colorHexInverter"/>
+            <local:ReverseColor x:Key="colorReverser"/>
+        </ContentPage.Resources>
+        <ContentPage.Content>
+            <w:CircleScrollView x:Name="SettingScroller">
+                <StackLayout>
+                    <Grid RowSpacing="1" ColumnSpacing="1" Margin="0, 40, 0, 40" WidthRequest="200"  HorizontalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label x:Name="SettingColorLabel"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               Grid.Row="0" Grid.ColumnSpan="2"
+                               Text="{Binding BackgroundColor, Converter={StaticResource colorHexInverter}, Source={x:Reference SettingColorLabel}}"
+                               TextColor="{Binding BackgroundColor, Converter={StaticResource colorReverser}, Source={x:Reference SettingColorLabel}}"/>
+
+                        <Label x:Name="SettingValueTypeLabel" Grid.Row="1" Grid.Column="0"/>
+                        <Switch x:Name="SettingValueType" Grid.Row="1" Grid.Column="1"/>
+
+                        <Label Text="Year" Grid.Row="2" Grid.Column="0"/>
+                        <w:Check x:Name="SettingOptionYear" Grid.Row="2" Grid.Column="1" IsToggled="True"/>
+                        <Label Text="Month"  Grid.Row="3" Grid.Column="0"/>
+                        <w:Check x:Name="SettingOptionMonth" Grid.Row="3" Grid.Column="1" IsToggled="True"/>
+                        <Label Text="Date"  Grid.Row="4" Grid.Column="0"/>
+                        <w:Check x:Name="SettingOptionDate"  Grid.Row="4" Grid.Column="1" IsToggled="True"/>
+                        <Label Text="Hour" Grid.Row="5" Grid.Column="0"/>
+                        <w:Check x:Name="SettingOptionHour" Grid.Row="5" Grid.Column="1" IsToggled="True"/>
+                        <Label Text="Minute"  Grid.Row="6" Grid.Column="0"/>
+                        <w:Check x:Name="SettingOptionMinute" Grid.Row="6" Grid.Column="1" IsToggled="True"/>
+                        <Label Text="AmPm"  Grid.Row="7" Grid.Column="0"/>
+                        <w:Check x:Name="SettingOptionAmPm"  Grid.Row="7" Grid.Column="1" IsToggled="True"/>
+
+                        <Label x:Name="SettingOptionDateTime" Grid.Row="8" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </StackLayout>
+            </w:CircleScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage x:Name="TimeTextPage">
+        <Label x:Name="TimeText"
+               BackgroundColor="White" TextColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+    </ContentPage>
+</w:IndexPage>

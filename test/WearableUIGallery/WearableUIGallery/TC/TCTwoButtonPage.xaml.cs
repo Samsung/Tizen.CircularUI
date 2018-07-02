@@ -71,7 +71,7 @@ namespace WearableUIGallery.TC
         void ToggleOverlap(object sender, EventArgs args)
         {
             var btn = sender as Button;
-            Overlap = !Overlap;
+            SetValue(OverlapProperty, !Overlap);
             btn.Text = Overlap ? "Overlap" : "No Overlap";
         }
     }
