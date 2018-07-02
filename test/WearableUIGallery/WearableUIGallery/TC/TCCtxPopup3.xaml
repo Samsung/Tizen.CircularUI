@@ -4,33 +4,65 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    x:Name="mypage">
+    RotaryFocusObject="{x:Reference myscrollview}">
     <ContentPage.Content>
-        <StackLayout Margin="30" Orientation="Vertical">
-            <w:Check
-                x:Name="CtxCheck1"
-                HorizontalOptions="CenterAndExpand"
-                IsToggled="False"
-                VerticalOptions="StartAndExpand" />
-            <Button
-                Clicked="OnClickAttach"
-                FontSize="Small"
-                HorizontalOptions="CenterAndExpand"
-                Text="Attach Behavior"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="250" />
-            <Button
-                Clicked="OnClickDetach"
-                FontSize="Small"
-                HorizontalOptions="CenterAndExpand"
-                Text="Detach Behavior"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="250" />
-            <Label
-                x:Name="State"
-                HorizontalTextAlignment="Center"
-                TextColor="White"
-                WidthRequest="150" />
-        </StackLayout>
+        <w:CircleScrollView x:Name="myscrollview" Orientation="Vertical">
+            <StackLayout Padding="0,30,0,30" Orientation="Vertical">
+                <w:Check
+                    x:Name="CtxCheck1"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    VerticalOptions="StartAndExpand" />
+                <Button
+                    Clicked="OnClickAttach"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Attach Behavior"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <Button
+                    Clicked="OnClickDetach"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Detach Behavior"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <Button
+                    Clicked="OnClickVisibility"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Visible"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="True"
+                    Orientation="Horizontal">
+                    <Label
+                        x:Name="labelOfState"
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="State: " />
+                    <Label
+                        x:Name="labelOfStateValue"
+                        FontSize="Small"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="True"
+                    Orientation="Horizontal">
+                    <Label
+                        x:Name="labelOfVisibility"
+                        FontSize="Small"
+                        HorizontalTextAlignment="Start"
+                        Text="Visibility: " />
+                    <Label
+                        x:Name="labelOfVisibilityValue"
+                        FontSize="Small"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </StackLayout>
+        </w:CircleScrollView>
     </ContentPage.Content>
 </w:CirclePage>

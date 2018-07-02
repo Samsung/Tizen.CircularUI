@@ -53,10 +53,12 @@ namespace WearableUIGallery
 
             // CircleSurfaceItem TCs
             CircleSurfaceItemTCs = new ObservableCollection<TCDescribe>();
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "Add/Remove SurfaceItems", Class = typeof(TCCircleSurfaceItems1) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar", Class = typeof(TCCircleSurfaceItems2) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider", Class = typeof(TCCircleSurfaceItems3) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar2", Class = typeof(TCCircleProgressBarSurfaceItem) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "Add/Remove SurfaceItems", Class = typeof(TCCircleSurfaceItems) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar1", Class = typeof(TCCircleProgressBarSurfaceItem1) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar2", Class = typeof(TCCircleProgressBarSurfaceItem2) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider1", Class = typeof(TCCircleSliderSurfaceItem1) });
+            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider2", Class = typeof(TCCircleSliderSurfaceItem2) });
+
 
             // CircleStepper TCs
             CircleStepperTCs = new ObservableCollection<TCDescribe>();
@@ -67,9 +69,9 @@ namespace WearableUIGallery
 
             // ContextPopupEffectBehavior TCs
             ContextPopupEffectBehaviorTCs = new ObservableCollection<TCDescribe>();
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Normal", Class = typeof(TCCtxPopup1) });
+            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Position", Class = typeof(TCCtxPopup1) });
             ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Command Paramter", Class = typeof(TCCtxPopup2) });
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Attach/Detach behavior", Class = typeof(TCCtxPopup3) });
+            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Attach/Detach/Visibility", Class = typeof(TCCtxPopup3) });
 
             // Radio TCs
             RadioTCs = new ObservableCollection<TCDescribe>();

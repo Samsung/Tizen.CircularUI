@@ -21,13 +21,13 @@ using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCircleSurfaceItemList : CirclePage
-	{
-		public TCCircleSurfaceItemList()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCircleSurfaceItemList : CirclePage
+    {
+        public TCCircleSurfaceItemList()
+        {
+            InitializeComponent ();
+        }
 
         public void OnItemTapped(object sender, ItemTappedEventArgs args)
         {
