@@ -6,12 +6,12 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     x:Name="mypage">
     <ContentPage.Content>
-        <StackLayout Padding="30,50,30,50" Orientation="Vertical">
+        <AbsoluteLayout>
             <w:Check
                 x:Name="CtxCheck1"
-                HorizontalOptions="CenterAndExpand"
-                IsToggled="False"
-                VerticalOptions="StartAndExpand">
+                AbsoluteLayout.LayoutBounds="0.5, 0.3"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                IsToggled="False">
                 <w:Check.Behaviors>
                     <w:ContextPopupEffectBehavior
                         x:Name="CtxCheck1EffectBehavior"
@@ -26,27 +26,11 @@
                 </w:Check.Behaviors>
             </w:Check>
             <Label
-                x:Name="titleOfAcceptCommandParamter"
+                x:Name="labelOfCommandParamter"
+                AbsoluteLayout.LayoutBounds="0.1, 0.5"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
                 FontSize="8"
-                HorizontalTextAlignment="Start"
-                Text="AcceptCommandParamter : "
-                TextColor="White" />
-            <Label
-                x:Name="labelOfAcceptCommandParamter"
-                HorizontalTextAlignment="Center"
-                Text="None"
-                TextColor="White" />
-            <Label
-                x:Name="titleOfCancelCommandParamter"
-                FontSize="8"
-                HorizontalTextAlignment="Start"
-                Text="CancelCommandParamter : "
-                TextColor="White" />
-            <Label
-                x:Name="labelOfCancelCommandParamter"
-                HorizontalTextAlignment="Center"
-                Text="None"
-                TextColor="White" />
-        </StackLayout>
+                Text="Command param: None" />
+        </AbsoluteLayout>
     </ContentPage.Content>
 </w:CirclePage>

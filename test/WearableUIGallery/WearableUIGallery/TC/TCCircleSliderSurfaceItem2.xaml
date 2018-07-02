@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <w:CirclePage
-    x:Class="WearableUIGallery.TC.TCCircleSurfaceItems2"
+    x:Class="WearableUIGallery.TC.TCCircleSliderSurfaceItem2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
@@ -10,13 +10,22 @@
                 AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.5, 0.2"
                 AbsoluteLayout.LayoutFlags="All"
                 Clicked="OnClick"
-                Text="start" />
+                FontSize="Small"
+                Text="Change focus" />
             <Label
-                x:Name="percent"
+                x:Name="label1"
+                AbsoluteLayout.LayoutBounds="0.5, 0.6, 0.3, 0.1"
+                AbsoluteLayout.LayoutFlags="All"
+                FontSize="Micro"
+                HorizontalOptions="Center"
+                Text="0" />
+            <Label
+                x:Name="label2"
                 AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.4, 0.1"
                 AbsoluteLayout.LayoutFlags="All"
-                HorizontalOptions="CenterAndExpand"
-                Text="0 %" />
+                FontSize="Micro"
+                HorizontalOptions="Center"
+                Text="0" />
         </AbsoluteLayout>
     </w:CirclePage.Content>
 </w:CirclePage>

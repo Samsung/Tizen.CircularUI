@@ -15,31 +15,49 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Globalization;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCtxPopup3 : CirclePage
-	{
+ 
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCtxPopup3 : CirclePage
+    {
+        ContextPopupEffectBehavior _behavior;
+        bool _visibility = false;
+
+        public bool Visibility
+        {
+            get => _visibility;
+            set
+            {
+                if (_visibility != value)
+                {
+                    Console.WriteLine($"Visibility: {_visibility}");
+                    _visibility = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+
         public TCCtxPopup3()
         {
             CtxCheck1AcceptedCommand = new Command(
                 execute: () =>
                 {
-                    BackgroundColor = Color.Green;
+                    Console.WriteLine("CtxCheck1AcceptedCommand  excute");
                 });
             CtxCheck1CancelCommand = new Command(
                 execute: () =>
                 {
-                    BackgroundColor = Color.Red;
+                    Console.WriteLine("CtxCheck1CancelCommand excute");
                 });
 
             InitializeComponent();
@@ -51,28 +69,59 @@ namespace WearableUIGallery.TC
             };
         }
 
+        void makeContextPopupBehavior()
+        {
+            if (_behavior == null)
+            {
+                _behavior = new ContextPopupEffectBehavior()
+                {
+                    AcceptCommand = CtxCheck1AcceptedCommand,
+                    AcceptText = "Yes",
+                    CancelCommand = CtxCheck1CancelCommand,
+                    CancelText = "No",
+                    PositionOption = PositionOption.BottomOfView,
+                };
+
+                _behavior.SetBinding(ContextPopupEffectBehavior.VisibilityProperty, "Visibility", BindingMode.TwoWay, new ValueConverter());
+                _behavior.BindingContext = this;
+                labelOfVisibilityValue.SetBinding(Label.TextProperty, "Visibility", BindingMode.Default, new ValueConverter());
+                labelOfVisibilityValue.BindingContext = this;
+
+                CtxCheck1.Behaviors.Add(_behavior);
+            }
+        }
+
         void OnClickAttach(object sender, EventArgs args)
         {
-            var behavior = new ContextPopupEffectBehavior();
-            behavior.AcceptCommand = CtxCheck1AcceptedCommand;
-            behavior.AcceptText = "Yes";
-            behavior.CancelCommand = CtxCheck1CancelCommand;
-            behavior.CancelText = "No";
-            behavior.PositionOption = PositionOption.BottomOfView;
-            behavior.Visibility = true;
-
-            CtxCheck1.Behaviors.Add(behavior);
-
-            State.Text = "Attached";
+            makeContextPopupBehavior();
+            labelOfStateValue.Text = "Attached";
         }
 
         void OnClickDetach(object sender, EventArgs args)
         {
             CtxCheck1.Behaviors.Clear();
-            State.Text = "Detached";
+            labelOfStateValue.Text = "Detached";
+            _behavior = null;
+        }
+        void OnClickVisibility(object sender, EventArgs args)
+        {
+            var btn = sender as Button;
+            if(_behavior == null ) return;
+
+            if (!Visibility)
+            {
+                Visibility = true;
+            }
         }
 
         public ICommand CtxCheck1AcceptedCommand { get; private set; }
         public ICommand CtxCheck1CancelCommand { get; private set; }
+
+        class ValueConverter : IValueConverter
+        {
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture) => ((bool)value);
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => value;
+        }
     }
 }

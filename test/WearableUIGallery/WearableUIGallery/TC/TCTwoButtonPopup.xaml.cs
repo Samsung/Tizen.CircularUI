@@ -29,8 +29,10 @@ namespace WearableUIGallery.TC
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCTwoButtonPopup : ContentPage
     {
-        TwoButtonPopup _popUp1 = null;
-        TwoButtonPopup _popUp2 = null;
+        StackLayout _content ;
+        TwoButtonPopup _popUp1;
+        TwoButtonPopup _popUp2;
+        TwoButtonPopup _popUp3;
         MenuItem _leftButton;
         MenuItem _rightButton;
         MenuItem _noIconLeftButton;
@@ -97,7 +99,7 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("jpg button1 Command!!");
-                    _popUp1.Dismiss();
+                    _popUp3.Dismiss();
                 })
             };
 
@@ -110,7 +112,7 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("jpg button2 Command!!");
-                    _popUp1.Dismiss();
+                    _popUp3.Dismiss();
                 })
             };
 
@@ -187,13 +189,13 @@ namespace WearableUIGallery.TC
             };
 
             _popUp2 = new TwoButtonPopup();
-            _popUp2.FirstButton = leftButton2;
-            _popUp2.SecondButton = rightButton2;
-            _popUp2.Title = "Popup title";
+            _popUp2.Title= "Popup title";
             _popUp2.Text = @"This is scrollable popup text.
 This part is made by adding long text in popup. Popup internally added
 scroller to this layout when size of text is greater than total popup
 height. This has two button in action area and title text in title area";
+            _popUp2.SetValue(TwoButtonPopup.FirstButtonProperty, leftButton2);
+            _popUp2.SetValue(TwoButtonPopup.SecondButtonProperty, rightButton2);
 
             _popUp2.BackButtonPressed += (s, e) =>
             {
@@ -201,8 +203,52 @@ height. This has two button in action area and title text in title area";
                 label1.Text = "Popup2 is dismissed";
             };
 
+
+
+            _content = new StackLayout()
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Children =
+                {
+                    new StackLayout
+                    {
+                        Orientation = StackOrientation.Horizontal,
+                        Padding = new Thickness(0, 70, 0, 40),
+                        Children =
+                        {
+                            new Check
+                            {
+                                DisplayStyle = CheckDisplayStyle.Small
+                            },
+                            new Label
+                            {
+                                Text = "Do not repeat",
+                            }
+                        }
+                    }
+                }
+            };
+            _popUp3 = new TwoButtonPopup();
+            _popUp3.SetValue(TwoButtonPopup.TitleProperty, "Popup title");
+            _popUp3.SetValue(TwoButtonPopup.ContentProperty, _content);
+            _popUp3.SetValue(TwoButtonPopup.TextProperty, "Text area text. It can be overlapped content");
+            _popUp3.SetValue(TwoButtonPopup.FirstButtonProperty, _jpgIconButton1);
+            _popUp3.SetValue(TwoButtonPopup.SecondButtonProperty, _jpgIconButton2);
+
+            _popUp3.BackButtonPressed += (s, e) =>
+            {
+                _popUp3.Dismiss();
+                label1.Text = "Popup3 is dismissed";
+            };
+
             _popUp1.FirstButton.Clicked += (s, e) => Console.WriteLine("First(share) button clicked!");
             _popUp1.SecondButton.Clicked += (s, e) => Console.WriteLine("Second(delete) button clicked!");
+
+            _popUp2.FirstButton.Clicked += (s, e) => Console.WriteLine("_popUp2 First button clicked!");
+            _popUp2.SecondButton.Clicked += (s, e) => Console.WriteLine("_popUp2 Second button clicked!");
+
+            _popUp3.FirstButton.Clicked += (s, e) => Console.WriteLine("_popUp3 First button clicked!");
+            _popUp3.SecondButton.Clicked += (s, e) => Console.WriteLine("_popUp3 Second button clicked!");
 
         }
 
@@ -249,9 +295,7 @@ height. This has two button in action area and title text in title area";
 
         private void OnRightJpgIconClicked(object sender, EventArgs e)
         {
-            _popUp1.FirstButton = _jpgIconButton1;
-            _popUp1.SecondButton = _jpgIconButton2;
-            _popUp1.Show();
+            _popUp3.Show();
         }
     }
 }

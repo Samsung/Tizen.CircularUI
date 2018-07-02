@@ -26,37 +26,18 @@ using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCtxPopup1 : CirclePage
-	{
-		public TCCtxPopup1()
-		{
-            Point OffsetValue = new Point(0,0);
-
-            CtxCheck1AcceptedCommand = new Command( 
-                execute: () => 
-                {
-                    BackgroundColor = Color.Green;
-                    CtxCheck1EffectBehavior.AcceptText="Green";
-                    CtxCheck1EffectBehavior.PositionOption= PositionOption.CenterOfParent;
-
-                    UpdateDescription();
-                });
-            CtxCheck1CancelCommand = new Command(
-                execute: () =>
-                {
-                    BackgroundColor = Color.Red;
-                    CtxCheck1EffectBehavior.CancelText = "Red";
-                    CtxCheck1EffectBehavior.PositionOption = PositionOption.Absolute;
-                    OffsetValue.X = 100;
-                    OffsetValue.Y = 50;
-                    CtxCheck1EffectBehavior.Offset = OffsetValue;
-
-                    UpdateDescription();
-                });
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCtxPopup1 : CirclePage
+    {
+        int[] _xOffsetValue= {0, 0, 0,  100, 100, 100, 200, 200, 200};
+        int[] _yOffsetValue= {0, 50, 100, 0, 50, 100, 0, 50, 100};
+        public Point OffsetValue = new Point();
+        int index;
+        public TCCtxPopup1()
+        {
 
             InitializeComponent ();
-
+            index = 0;
             CtxCheck1.PropertyChanged += (s, e) =>
             {
                 if (e.PropertyName == Check.IsToggledProperty.PropertyName)
@@ -64,50 +45,51 @@ namespace WearableUIGallery.TC
             };
         }
 
-        void UpdateDescription()
-        {
-            labelOfPositionOption.Text = CtxCheck1EffectBehavior.PositionOption.ToString();
-            labelOfVisibility.Text = CtxCheck1EffectBehavior.Visibility.ToString();
-            labelOfOffsetX.Text = CtxCheck1EffectBehavior.Offset.X.ToString();
-            labelOfOffsetY.Text = CtxCheck1EffectBehavior.Offset.Y.ToString();
-        }
-
-        void OnClickVisibility(object sender, EventArgs args)
-        {
-            var btn = sender as Button;
-
-            if (btn.Text == "Invisible")
-            {
-                btn.Text = "Visible";
-                CtxCheck1EffectBehavior.Visibility = true;
-                labelOfVisibility.Text = CtxCheck1EffectBehavior.Visibility.ToString();
-            }
-            else
-            {
-                btn.Text = "Invisible";
-                CtxCheck1EffectBehavior.Visibility = false;
-                labelOfVisibility.Text = CtxCheck1EffectBehavior.Visibility.ToString();
-            }
-        }
-
         void OnClickOffset(object sender, EventArgs args)
         {
+            if (CtxCheck1EffectBehavior.PositionOption != PositionOption.Absolute) return;
+
+            var btn = sender as Button;
+            if (index >= 9) index = 0;
+            OffsetValue.X = _xOffsetValue[index];
+            OffsetValue.Y = _yOffsetValue[index++];
+            CtxCheck1EffectBehavior.Offset = OffsetValue;
+            CtxCheck1EffectBehavior.Visibility = true;
+        }
+
+        void OnClickPositionOption(object sender, EventArgs args)
+        {
             var btn = sender as Button;
 
-            if (btn.Text == "Reset offset")
+            if(CtxCheck1EffectBehavior.PositionOption == PositionOption.Absolute)
             {
                 OffsetValue.X = 0;
                 OffsetValue.Y = 0;
                 CtxCheck1EffectBehavior.Offset = OffsetValue;
-
-                labelOfOffsetX.Text = CtxCheck1EffectBehavior.Offset.X.ToString();
-                labelOfOffsetY.Text = CtxCheck1EffectBehavior.Offset.Y.ToString();
+                CtxCheck1EffectBehavior.PositionOption = PositionOption.BottomOfView;
             }
+            else if (CtxCheck1EffectBehavior.PositionOption == PositionOption.BottomOfView)
+            {
+                CtxCheck1EffectBehavior.PositionOption = PositionOption.CenterOfParent;
+            }
+            else if (CtxCheck1EffectBehavior.PositionOption == PositionOption.CenterOfParent)
+            {
+                CtxCheck1EffectBehavior.PositionOption = PositionOption.Relative;
+                OffsetValue.X = 0.5; //relative X-postion of Window
+                OffsetValue.Y = 0.3; //relative Y-postion of Window
+                CtxCheck1EffectBehavior.Offset = OffsetValue;
+            }
+            else
+            {
+                CtxCheck1EffectBehavior.PositionOption = PositionOption.Absolute;
+                if (index >= 9) index = 0;
+                OffsetValue.X = _xOffsetValue[index];
+                OffsetValue.Y = _yOffsetValue[index];
+                CtxCheck1EffectBehavior.Offset = OffsetValue;
+            }
+
+            CtxCheck1EffectBehavior.Visibility = true;
         }
 
-        public ICommand CtxCheck1AcceptedCommand { get; private set; }
-        public ICommand CtxCheck1CancelCommand { get; private set; }
-
-        public Point OffsetValue;
     }
 }

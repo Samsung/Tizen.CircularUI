@@ -26,28 +26,24 @@ using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCtxPopup2 : CirclePage
-	{
-		public TCCtxPopup2()
-		{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCtxPopup2 : CirclePage
+    {
+        public TCCtxPopup2()
+        {
             CtxCheck1AcceptedCommand = new Command( 
                 execute: () => 
                 {
                     BackgroundColor = Color.Green;
-                    CtxCheck1EffectBehavior.AcceptText="Green";
-                    CtxCheck1EffectBehavior.AcceptCommandParameter = "Accept is clicked";
-
-                    UpdateDescription();
+                    CtxCheck1EffectBehavior.AcceptCommandParameter = "Command param: Accept is clicked";
+                    labelOfCommandParamter.Text = CtxCheck1EffectBehavior.AcceptCommandParameter.ToString();
                 });
             CtxCheck1CancelCommand = new Command(
                 execute: () =>
                 {
                     BackgroundColor = Color.Red;
-                    CtxCheck1EffectBehavior.CancelText = "Red";
-                    CtxCheck1EffectBehavior.CancelCommandParameter = "Cancel is clicked";
-
-                    UpdateDescription();
+                    CtxCheck1EffectBehavior.CancelCommandParameter = "Command param: Cancel is clicked";
+                    labelOfCommandParamter.Text = CtxCheck1EffectBehavior.CancelCommandParameter.ToString();
                 });
 
             InitializeComponent ();
@@ -57,12 +53,6 @@ namespace WearableUIGallery.TC
                 if (e.PropertyName == Check.IsToggledProperty.PropertyName)
                     System.Diagnostics.Debug.WriteLine($"IsToggled of CtxCheck1= {CtxCheck1.IsToggled}");
             };
-        }
-
-        void UpdateDescription()
-        {
-            labelOfAcceptCommandParamter.Text = CtxCheck1EffectBehavior.AcceptCommandParameter.ToString();
-            labelOfCancelCommandParamter.Text = CtxCheck1EffectBehavior.CancelCommandParameter.ToString();
         }
 
         public ICommand CtxCheck1AcceptedCommand { get; private set; }
