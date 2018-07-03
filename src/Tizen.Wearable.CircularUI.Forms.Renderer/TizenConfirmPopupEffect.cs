@@ -127,7 +127,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 case PositionOption.BottomOfView:
                     rect = Control.Geometry;
                     x = rect.X + rect.Width / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
-                    y = rect.Y + rect.Height / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
+                    y = rect.Y + rect.Height + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.CenterOfParent:
                     rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
