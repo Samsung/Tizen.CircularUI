@@ -27,6 +27,7 @@ namespace WearableUIGallery
         public AppViewModel()
         {
             TCs = new ObservableCollection<TCDescribe>();
+            TCs.Add(new TCDescribe { Title = "DateTimeSelector", Class = typeof(TCCircleDateTimeSelector) });
             TCs.Add(new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) });
             TCs.Add(new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) });
             TCs.Add(new TCDescribe { Title = "CircleSurfaceItem", Class = typeof(TCCircleSurfaceItemList) });
