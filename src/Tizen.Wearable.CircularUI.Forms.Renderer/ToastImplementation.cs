@@ -47,6 +47,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _control.BackButtonPressed += (s, e) => _control.Dismiss();
             _control.TimedOut += (s, e) => _control.Dismiss();
             _control.OutsideClicked += (s, e) => _control.Dismiss();
+            _control.Dismissed += OnDismissed;
 
             UpdateIcon();
             UpdateText();
@@ -150,6 +151,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public void Dismiss()
         {
             _control.Dismiss();
+        }
+
+        void OnDismissed(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
