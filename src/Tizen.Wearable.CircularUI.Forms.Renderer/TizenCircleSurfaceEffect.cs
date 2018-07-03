@@ -66,11 +66,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Element.PropertyChanging += ElementPropertyChanging;
             Element.PropertyChanged += ElementPropertyChanged;
 
-            EcoreMainloop.Post(() =>
+            if (Element is Page)
             {
-                var obj = CircleSurfaceEffectBehavior.GetRotaryFocusObject(Element);
-                ActivateRotaryFocusable(obj);
-            });
+                (Element as Page).Appearing += (s, e) =>
+                {
+                    var obj = CircleSurfaceEffectBehavior.GetRotaryFocusObject(Element);
+                    ActivateRotaryFocusable(obj);
+                };
+            }
+            else
+            {
+                EcoreMainloop.Post(() =>
+                {
+                    var obj = CircleSurfaceEffectBehavior.GetRotaryFocusObject(Element);
+                    ActivateRotaryFocusable(obj);
+                });
+            }
         }
 
         protected override void OnDetached()
@@ -136,38 +147,36 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void ActivateRotaryFocusable(IRotaryFocusable focusable)
         {
-            var consumer = focusable as BindableObject;
-            if (consumer != null)
+            if (focusable is IRotaryEventReceiver)
             {
-                var nview = Platform.GetRenderer(consumer)?.NativeView;
-                if (nview == null) return;
-                if (nview is IRotaryEventReceiver)
+                _rotaryReceiver = focusable as IRotaryEventReceiver;
+                RotaryEventManager.Rotated += OnRotaryEventChanged;
+            }
+            else if (focusable is IRotaryFocusable)
+            {
+                var consumer = focusable as BindableObject;
+                if (consumer != null)
                 {
-                    _rotaryReceiver = nview as IRotaryEventReceiver;
-                    RotaryEventManager.Rotated += OnRotaryEventChanged;
-                }
-                else
-                {
-                    (nview as IRotaryActionWidget).Activate();
+                    var renderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(consumer);
+                    (renderer?.NativeView as IRotaryActionWidget)?.Activate();
                 }
             }
         }
 
         void DeativateRotaryFocusable(IRotaryFocusable focusable)
         {
-            var consumer = focusable as BindableObject;
-            if (consumer != null)
+            if (focusable is IRotaryEventReceiver)
             {
-                var nview = Platform.GetRenderer(consumer)?.NativeView;
-                if (nview == null) return;
-                if (nview is IRotaryEventReceiver)
+                _rotaryReceiver = null;
+                RotaryEventManager.Rotated -= OnRotaryEventChanged;
+            }
+            else if (focusable is IRotaryFocusable)
+            {
+                var consumer = focusable as BindableObject;
+                if (consumer != null)
                 {
-                    _rotaryReceiver = null;
-                    RotaryEventManager.Rotated -= OnRotaryEventChanged;
-                }
-                else
-                {
-                    (nview as IRotaryActionWidget).Deactivate();
+                    var renderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(consumer);
+                    (renderer?.NativeView as IRotaryActionWidget)?.Deactivate();
                 }
             }
         }
