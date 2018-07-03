@@ -42,7 +42,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (item.BackgroundLineWidth != -1) BackgroundLineWidth = item.BackgroundLineWidth;
             if (item.BackgroundRadius != -1) BackgroundRadius = item.BackgroundRadius;
 
-            BarAngle = item.BarAngle;
             BarAngleOffset = item.BarAngleOffset;
             BarAngleMaximum = item.BarAngleMaximum;
             BarAngleMinimum = item.BarAngleMinimum;
@@ -53,7 +52,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Minimum = item.Minimum;
             Maximum = item.Maximum;
             Step = item.Increment;
-            Value = item.Value;
+
+            if (item.Value == item.Minimum && item.BarAngle != 0)
+            {
+                BarAngle = item.BarAngle;
+            }
+            else
+            {
+                Value = item.Value;
+            }
+
             IsEnabled = item.IsEnabled;
 
             if (item.IsVisible) Show();
@@ -85,6 +93,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else if (args.PropertyName == CircleSliderSurfaceItem.BarAngleProperty.PropertyName)
             {
                 BarAngle = _item.BarAngle;
+                if (_item.Value != Value)
+                {
+                    _item.Value = Value;
+                }
             }
             else if (args.PropertyName == CircleSliderSurfaceItem.BarAngleOffsetProperty.PropertyName)
             {
@@ -118,6 +130,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else if (args.PropertyName == CircleSliderSurfaceItem.ValueProperty.PropertyName)
             {
                 if (_item.Value != Value) Value = _item.Value;
+                if (_item.BarAngle != BarAngle)
+                {
+                    _item.BarAngle = BarAngle;
+                }
             }
             else if (args.PropertyName == CircleSliderSurfaceItem.IsEnabledProperty.PropertyName)
             {
