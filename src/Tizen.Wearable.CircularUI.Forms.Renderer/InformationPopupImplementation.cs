@@ -52,6 +52,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _popUp.SetContent(_layout);
 
             _popUp.BackButtonPressed += BackButtonPressedHandler;
+            _popUp.Dismissed += OnDismissed;
         }
 
         ~InformationPopupImplementation()
@@ -187,14 +188,31 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _box.PackEnd(_progress);
 
                 _layout.SetPartContent("elm.swallow.content", _box, true);
-
-                UpdateTitle();
-                UpdateText();
             }
             else
             {
+                if (_box != null)
+                {
+                    if (_progress != null)
+                    {
+                        _progress.Unrealize();
+                        _progress = null;
+                    }
+
+                    if (_progressLabel != null)
+                    {
+                        _progressLabel.Unrealize();
+                        _progressLabel = null;
+                    }
+
+                    _box.Unrealize();
+                    _box = null;
+                }
                 _layout.SetPartContent("elm.swallow.content", null, true);
             }
+
+            UpdateTitle();
+            UpdateText();
         }
 
         void UpdateButton()
@@ -284,12 +302,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 throw new Exception("When the Application's Platform is null, can not show the Dialog.");
             }
 
-            _popUp.Show();
+            if (_popUp != null)
+            {
+                _popUp.Show();
+            }
         }
 
         public void Dismiss()
         {
-            _popUp.Hide();
+            if (_popUp != null)
+            {
+                _popUp.Dismiss();
+            }
+        }
+
+        void OnDismissed(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

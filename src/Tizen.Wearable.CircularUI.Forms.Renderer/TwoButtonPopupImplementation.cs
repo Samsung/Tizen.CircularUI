@@ -53,6 +53,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _popUp.SetContent(_layout);
 
             _popUp.BackButtonPressed += BackButtonPressedHandler;
+            _popUp.Dismissed += OnDismissed;
 
             _contentView = new StackLayout();
         }
@@ -80,6 +81,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     _firstButton.Unrealize();
                     _firstButton = null;
                 }
+
                 if (_secondButton != null)
                 {
                     _secondButton.Unrealize();
@@ -274,13 +276,24 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     SecondButton.Activate();
                 };
+
+                _popUp.SetPartContent("button2", _secondButton);
             }
             else
             {
+                /* This is workaround fix for Left button occupied whole window when right button is null*/
+                _secondButton = new ElmSharp.Button(_popUp)
+                {
+                    WeightX = 1.0,
+                    WeightY = 1.0,
+                    Style = "popup/circle/right"
+                };
+                _popUp.SetPartContent("button2", _secondButton);
+                _secondButton.Unrealize();
                 _secondButton = null;
             }
 
-            _popUp.SetPartContent("button2", _secondButton);
+           // _popUp.SetPartContent("button2", _secondButton);
         }
 
         void UpdateTitle()
@@ -303,12 +316,24 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 UpdateContent();
             }
-            _popUp.Show();
+
+            if (_popUp != null)
+            {
+                _popUp.Show();
+            }
         }
 
         public void Dismiss()
         {
-            _popUp.Hide();
+            if (_popUp != null)
+            {
+                _popUp.Dismiss();
+            }
+        }
+
+        void OnDismissed(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
