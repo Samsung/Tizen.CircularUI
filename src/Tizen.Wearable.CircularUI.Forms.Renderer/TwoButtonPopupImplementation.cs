@@ -292,8 +292,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _secondButton.Unrealize();
                 _secondButton = null;
             }
-
-           // _popUp.SetPartContent("button2", _secondButton);
         }
 
         void UpdateTitle()
