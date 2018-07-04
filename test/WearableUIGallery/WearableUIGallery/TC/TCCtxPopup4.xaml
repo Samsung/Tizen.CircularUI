@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCtxPopup4"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    x:Name="mypage"
+    RotaryFocusObject="{x:Reference myscrollview}">
+    <ContentPage.Content>
+        <w:CircleScrollView x:Name="myscrollview" Orientation="Vertical">
+            <StackLayout Padding="50,50,50,50" Orientation="Vertical">
+                <Button
+                    x:Name="CtxButton"
+                    Clicked="OnClickButton"
+                    FontSize="Small"
+                    HeightRequest="100"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Button"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <Button
+                    Clicked="OnClickAttach"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Attach status"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <Button
+                    Clicked="OnClickDetach"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Detach status"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <Button
+                    Clicked="OnClickStatus"
+                    FontSize="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Set status"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+                <Label
+                    x:Name="TitleOfState"
+                    HorizontalTextAlignment="Center"
+                    Text="State : "
+                    WidthRequest="150" />
+                <Label
+                    x:Name="State"
+                    HorizontalTextAlignment="Center"
+                    Text="None"
+                    WidthRequest="150" />
+                <Label
+                    x:Name="TitleOfStatus"
+                    HorizontalTextAlignment="Center"
+                    Text="Status : "
+                    WidthRequest="150" />
+                <Label
+                    x:Name="Status"
+                    HorizontalTextAlignment="Center"
+                    Text="None"
+                    WidthRequest="150" />
+            </StackLayout>
+        </w:CircleScrollView>
+    </ContentPage.Content>
+</w:CirclePage>
