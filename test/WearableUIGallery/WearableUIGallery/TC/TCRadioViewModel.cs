@@ -102,7 +102,6 @@ namespace WearableUIGallery.TC
             {
                 if (e.PropertyName == "IsSelected")
                 {
-                    Console.WriteLine($"Sound.PropertyChanged IsSelected:{Sound.IsSelected}");
                     if (Sound.IsSelected) RadioLabel1 = "Sound";
                 }
             };
@@ -111,7 +110,6 @@ namespace WearableUIGallery.TC
             {
                 if (e.PropertyName == "IsSelected")
                 {
-                    Console.WriteLine($"Vibrate.PropertyChanged IsSelected:{Vibrate.IsSelected}");
                     if (Vibrate.IsSelected) RadioLabel1 = "Vibrate";
                 }
             };
@@ -120,7 +118,6 @@ namespace WearableUIGallery.TC
             {
                 if (e.PropertyName == "IsSelected")
                 {
-                    Console.WriteLine($"Mute.PropertyChanged IsSelected:{Mute.IsSelected}");
                     if (Mute.IsSelected) RadioLabel1 = "Mute";
                 }
             };
