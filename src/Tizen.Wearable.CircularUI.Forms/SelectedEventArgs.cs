@@ -29,15 +29,22 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         /// <param name="value">The boolean value that checks whether the RadioButton is selected.</param>
         /// <since_tizen> 4 </since_tizen>
-        public SelectedEventArgs(bool value)
+        public SelectedEventArgs(string value, bool isSelected)
         {
             Value = value;
+            IsSelected = isSelected;
         }
 
         /// <summary>
-        /// Gets the value object for the SelectedEventArgs object.
+        /// Gets the Value for the SelectedEventArgs object.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public bool Value { get; private set; }
+        public string Value { get; private set; }
+
+        /// <summary>
+        /// Gets the IsSelected for the SelectedEventArgs object.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsSelected { get; private set; }
     }
 }

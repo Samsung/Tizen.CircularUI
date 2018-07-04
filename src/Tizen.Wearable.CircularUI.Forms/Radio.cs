@@ -114,7 +114,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         static void IsSelectedPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var radioButton = (Radio)bindable;
-            radioButton.Selected?.Invoke(radioButton, new SelectedEventArgs((bool)newValue));
+            radioButton.Selected?.Invoke(radioButton, new SelectedEventArgs(radioButton.Value, (bool)newValue));
         }
     }
 }

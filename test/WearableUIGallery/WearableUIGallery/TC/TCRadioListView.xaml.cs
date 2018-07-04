@@ -33,7 +33,8 @@ namespace WearableUIGallery.TC
             Radio radio = sender as Radio;
             if (radio != null)
             {
-                Console.WriteLine($"<<OnSelected>>  Radio Value:{radio.Value}, GroupName:{radio.GroupName}, IsSelected:{radio.IsSelected}");
+                Console.WriteLine($"<<OnSelected>>  args.Value:{args.Value}, args.IsSelected:{args.IsSelected}");
+                Console.WriteLine($"<<OnSelected>>  Radio Value:{radio.Value}, IsSelected:{radio.IsSelected}, GroupName:{radio.GroupName}");
             }
         }
     }
