@@ -3183,12 +3183,12 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.SelectedEventArgs
   fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs
   nameWithType: SelectedEventArgs
-- uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.#ctor(System.Boolean)
-  name: SelectedEventArgs(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html#Tizen_Wearable_CircularUI_Forms_SelectedEventArgs__ctor_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.#ctor(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.SelectedEventArgs(System.Boolean)
-  nameWithType: SelectedEventArgs.SelectedEventArgs(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.#ctor(System.String,System.Boolean)
+  name: SelectedEventArgs(String, Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html#Tizen_Wearable_CircularUI_Forms_SelectedEventArgs__ctor_System_String_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.#ctor(System.String,System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.SelectedEventArgs(System.String, System.Boolean)
+  nameWithType: SelectedEventArgs.SelectedEventArgs(String, Boolean)
 - uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.#ctor*
   name: SelectedEventArgs
   href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html#Tizen_Wearable_CircularUI_Forms_SelectedEventArgs__ctor_
@@ -3196,6 +3196,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.SelectedEventArgs
   nameWithType: SelectedEventArgs.SelectedEventArgs
+- uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.IsSelected
+  name: IsSelected
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html#Tizen_Wearable_CircularUI_Forms_SelectedEventArgs_IsSelected
+  commentId: P:Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.IsSelected
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.IsSelected
+  nameWithType: SelectedEventArgs.IsSelected
+- uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.IsSelected*
+  name: IsSelected
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html#Tizen_Wearable_CircularUI_Forms_SelectedEventArgs_IsSelected_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.IsSelected
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.IsSelected
+  nameWithType: SelectedEventArgs.IsSelected
 - uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.Value
   name: Value
   href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html#Tizen_Wearable_CircularUI_Forms_SelectedEventArgs_Value
