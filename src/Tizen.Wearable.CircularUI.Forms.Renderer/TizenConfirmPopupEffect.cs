@@ -118,6 +118,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             var offset = _behavior.Offset;
             int x = 0, y = 0;
             Rect rect;
+            Rect ctxRect = _popup.Geometry;
             switch (option)
             {
                 case PositionOption.Absolute:
@@ -131,7 +132,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     break;
                 case PositionOption.CenterOfParent:
                     rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
-                    var ctxRect = _popup.Geometry;
+
                     x = rect.Width / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
                     y = rect.Height / 2 - ctxRect.Height / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
                     break;
@@ -141,6 +142,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     y = (int)(rect.Height * offset.Y);
                     break;
             }
+
+            var window = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+            if (y + ctxRect.Height > window.Height)
+            {
+                y = window.Height - ctxRect.Height;
+            }
+
             _popup.Move(x, y);
         }
 
