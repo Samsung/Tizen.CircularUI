@@ -29,8 +29,13 @@ namespace WearableUIGallery.TC
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCCtxPopup1 : CirclePage
     {
-        int[] _xOffsetValue= {0, 0, 0,  100, 100, 100, 200, 200, 200};
-        int[] _yOffsetValue= {0, 50, 100, 0, 50, 100, 0, 50, 100};
+        int[] _xAbsoluteOffsetValue= {0, 0, 0, 100, 100, 100, 200, 200, 200};
+        int[] _yAbsoluteOffsetValue = {0, 50, 100, 0, 50, 100, 0, 50, 100};
+        int[] _xOffsetValue = { 0, 0, 0, -50, -50, -50, 50, 50, 50};
+        int[] _yOffsetValue = { 0, -50, 50,-50, 0, 50, -50, 0, 50};
+        double[] _xRelativeOffsetValue = { 0, 0.2, 0.2, 0.5, 0.5, 0.5, 0.7, 0.7, 1.0};
+        double[] _yRelativeOffsetValue = { 0, 0.2, 0.5, 0.2, 0.5, 0.7, 0.2, 0.7, 1.0};
+
         public Point OffsetValue = new Point();
         int index;
         public TCCtxPopup1()
@@ -47,12 +52,26 @@ namespace WearableUIGallery.TC
 
         void OnClickOffset(object sender, EventArgs args)
         {
-            if (CtxCheck1EffectBehavior.PositionOption != PositionOption.Absolute) return;
+            if (CtxCheck1EffectBehavior.PositionOption == PositionOption.CenterOfParent) return;
 
             var btn = sender as Button;
+            index++;
             if (index >= 9) index = 0;
-            OffsetValue.X = _xOffsetValue[index];
-            OffsetValue.Y = _yOffsetValue[index++];
+            if (CtxCheck1EffectBehavior.PositionOption == PositionOption.BottomOfView)
+            {
+                OffsetValue.X = _xOffsetValue[index];
+                OffsetValue.Y = _yOffsetValue[index];
+            }
+            else if (CtxCheck1EffectBehavior.PositionOption == PositionOption.Absolute)
+            {
+                OffsetValue.X = _xAbsoluteOffsetValue[index];
+                OffsetValue.Y = _yAbsoluteOffsetValue[index];
+            }
+            else
+            {
+                OffsetValue.X = _xRelativeOffsetValue[index];
+                OffsetValue.Y = _yRelativeOffsetValue[index];
+            }
             CtxCheck1EffectBehavior.Offset = OffsetValue;
             CtxCheck1EffectBehavior.Visibility = true;
         }
@@ -63,28 +82,33 @@ namespace WearableUIGallery.TC
 
             if(CtxCheck1EffectBehavior.PositionOption == PositionOption.Absolute)
             {
-                OffsetValue.X = 0;
-                OffsetValue.Y = 0;
+                index = 0;
+                OffsetValue.X = _xOffsetValue[index];
+                OffsetValue.Y = _xOffsetValue[index];
                 CtxCheck1EffectBehavior.Offset = OffsetValue;
                 CtxCheck1EffectBehavior.PositionOption = PositionOption.BottomOfView;
             }
             else if (CtxCheck1EffectBehavior.PositionOption == PositionOption.BottomOfView)
             {
+                OffsetValue.X = 0;
+                OffsetValue.Y = 0;
+                CtxCheck1EffectBehavior.Offset = OffsetValue;
                 CtxCheck1EffectBehavior.PositionOption = PositionOption.CenterOfParent;
             }
             else if (CtxCheck1EffectBehavior.PositionOption == PositionOption.CenterOfParent)
             {
                 CtxCheck1EffectBehavior.PositionOption = PositionOption.Relative;
-                OffsetValue.X = 0.5; //relative X-postion of Window
-                OffsetValue.Y = 0.3; //relative Y-postion of Window
+                index = 0;
+                OffsetValue.X = _xRelativeOffsetValue[index]; //relative X-postion of Window
+                OffsetValue.Y = _yRelativeOffsetValue[index]; //relative Y-postion of Window
                 CtxCheck1EffectBehavior.Offset = OffsetValue;
             }
             else
             {
+                index = 0;
                 CtxCheck1EffectBehavior.PositionOption = PositionOption.Absolute;
-                if (index >= 9) index = 0;
-                OffsetValue.X = _xOffsetValue[index];
-                OffsetValue.Y = _yOffsetValue[index];
+                OffsetValue.X = _xAbsoluteOffsetValue[index];
+                OffsetValue.Y = _yAbsoluteOffsetValue[index];
                 CtxCheck1EffectBehavior.Offset = OffsetValue;
             }
 
