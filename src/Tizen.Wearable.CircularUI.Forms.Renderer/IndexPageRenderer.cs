@@ -41,7 +41,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         const int EvenMiddleItem = 11;
         private int _pageIndex = 0;
         private int _changedByScroll = 0;
-        private bool _isUpdateContent = false;
 
         Index _index;
         List<IndexItem> _items = new List<IndexItem>();
@@ -50,6 +49,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         Scroller _scroller;
 
         private ElmSharp.Size _layoutBound;
+        bool _isInitalized = false;
+        bool _isUpdateCarousel = false;
 
         protected override void OnElementChanged(ElementChangedEventArgs<IndexPage> e)
         {
@@ -63,6 +64,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 e.OldElement.CurrentPageChanged -= OnCurrentPageChanged;
                 e.OldElement.PagesChanged -= OnPagesChanged;
+                _isInitalized = false;
             }
 
             if (e.NewElement != null)
@@ -72,6 +74,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
 
             base.OnElementChanged(e);
+        }
+
+        protected override void OnElementReady()
+        {
+            base.OnElementReady();
+            _isInitalized = true;
+            UpdateCarouselContent();
+            UpdateIndexItem();
         }
 
         private void Initialize()
@@ -119,7 +129,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void OnInnerLayoutUpdate()
         {
-            if (_layoutBound == _innerContainer.Geometry.Size)
+            if (!_isInitalized || _layoutBound == _innerContainer.Geometry.Size)
                 return;
 
             _layoutBound = _innerContainer.Geometry.Size;
@@ -140,23 +150,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 _scroller.ScrollTo(_pageIndex, 0, false);
             }
-
-            //Below code is workaround code.
-            //there is no way to call after Platform.GetRenderer(page) is ready.
-            if (!_isUpdateContent && _innerContainer.MinimumWidth == _layoutBound.Width)
-            {
-                UpdateCarouselContent();
-                UpdateIndexItem();
-                _isUpdateContent = true;
-            }
         }
 
         private void OnPageScrolled(object sender, EventArgs e)
         {
+            if(_isUpdateCarousel){
+                _isUpdateCarousel = false;
+                return;
+            }
+
             _changedByScroll++;
             int previousIndex = _pageIndex;
             _pageIndex = _scroller.HorizontalPageIndex;
-
             if (previousIndex != _pageIndex)
             {
                 (Element.Children[previousIndex] as IPageController)?.SendDisappearing();
@@ -164,7 +169,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 (Element.CurrentPage as IPageController)?.SendAppearing();
                 var selectIndex = _pageIndex;
                 if (selectIndex >= ItemMaxCount) selectIndex = ItemMaxCount - 1;
-                Console.WriteLine($"selectIndex->{selectIndex} ,_items.Count ->{_items.Count}");
                 _items[selectIndex].Select(true);
             }
             _changedByScroll--;
@@ -197,6 +201,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (IsChangedByScroll())
                 return;
 
+            Element.UpdateFocusTreePolicy();
             if (Element.CurrentPage != Element.Children[_pageIndex])
             {
                 var previousPageIndex = _pageIndex;
@@ -226,12 +231,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 var nativeView = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(page).NativeView;
                 _innerContainer.PackEnd(nativeView);
-                // if possible, make the subpage focusable, this ensures that there is something
-                // to focus on all pages and prevents the scroller from auto-scrolling to focused widget
-                (nativeView as ElmSharp.Widget)?.AllowFocus(true);
             }
             _pageIndex = Element.Children.IndexOf(Element.CurrentPage);
+            _isUpdateCarousel = true;
             _scroller.ScrollTo(_pageIndex, 0, false);
+            Element.UpdateFocusTreePolicy();
         }
 
         private void UpdateIndexItem()

@@ -1,37 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <w:IndexPage
-    x:Class="WearableUIGallery.TC.TCIndexPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <ContentPage>
-        <StackLayout>
-            <BoxView VerticalOptions="FillAndExpand" Color="Red" />
-            <Label HorizontalOptions="CenterAndExpand" Text="Red" />
-        </StackLayout>
-    </ContentPage>
-    <ContentPage>
-        <StackLayout>
-            <BoxView VerticalOptions="FillAndExpand" Color="Green" />
-            <Label HorizontalOptions="CenterAndExpand" Text="Green" />
-        </StackLayout>
-    </ContentPage>
-    <ContentPage>
-        <StackLayout>
-            <BoxView VerticalOptions="FillAndExpand" Color="Blue" />
-            <Label HorizontalOptions="CenterAndExpand" Text="Blue" />
-        </StackLayout>
-    </ContentPage>
-    <ContentPage>
-        <StackLayout>
-            <BoxView VerticalOptions="FillAndExpand" Color="LightBlue" />
-            <Button
-                x:Name="button"
-                Clicked="OnAddButtonClicked"
-                HorizontalOptions="CenterAndExpand"
-                Text="Add"
-                WidthRequest="200" />
-        </StackLayout>
-    </ContentPage>
+	x:Class="WearableUIGallery.TC.TCIndexPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:WearableUIGallery"
+	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+	<ContentPage x:Name="RedPage">
+		<StackLayout>
+			<BoxView VerticalOptions="FillAndExpand" Color="Red" />
+			<Label HorizontalOptions="CenterAndExpand" Text="Red" />
+		</StackLayout>
+	</ContentPage>
+	<ContentPage x:Name="GreenPage">
+		<StackLayout>
+			<BoxView VerticalOptions="FillAndExpand" Color="Green" />
+			<Label HorizontalOptions="CenterAndExpand" Text="Green" />
+		</StackLayout>
+	</ContentPage>
+	<ContentPage x:Name="BluePage">
+		<StackLayout>
+			<BoxView VerticalOptions="FillAndExpand" Color="Blue" />
+			<Label HorizontalOptions="CenterAndExpand" Text="Blue" />
+		</StackLayout>
+	</ContentPage>
+	<ContentPage x:Name="PurplePage">
+		<StackLayout>
+			<BoxView VerticalOptions="FillAndExpand" Color="Purple" />
+			<Button
+				x:Name="MoveButton"
+				Clicked="OnMoveButtonClicked"
+				FontSize="Micro"
+				HorizontalOptions="CenterAndExpand"
+				Text="Move to Red"
+				WidthRequest="200" />
+		</StackLayout>
+	</ContentPage>
+	<ContentPage x:Name="LightBluePage">
+		<StackLayout>
+			<BoxView VerticalOptions="FillAndExpand" Color="LightBlue" />
+			<Button
+				x:Name="AddButton"
+				Clicked="OnAddButtonClicked"
+				HorizontalOptions="CenterAndExpand"
+				Text="Add"
+				WidthRequest="200" />
+		</StackLayout>
+	</ContentPage>
 </w:IndexPage>
