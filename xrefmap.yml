@@ -2300,6 +2300,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged
   nameWithType: IndexPageRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementReady
+  name: OnElementReady()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_OnElementReady
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementReady
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementReady()
+  nameWithType: IndexPageRenderer.OnElementReady()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementReady*
+  name: OnElementReady
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_OnElementReady_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementReady
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementReady
+  nameWithType: IndexPageRenderer.OnElementReady
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation
   name: InformationPopupImplementation
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation.html
