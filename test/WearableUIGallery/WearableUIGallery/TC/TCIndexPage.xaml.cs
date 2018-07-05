@@ -61,6 +61,7 @@ namespace WearableUIGallery.TC
 			InitializeComponent ();
 
             _index = 0;
+            CurrentPage = GreenPage;
             for (int i = 0; i < 20; i++)
             {
                 var page = new ContentPage
@@ -85,10 +86,28 @@ namespace WearableUIGallery.TC
             }
         }
 
+        private void OnMoveButtonClicked(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (_index > 5)
+            {
+                CurrentPage = _addedContentPages[_index - 1];
+            }
+            else
+            {
+                CurrentPage = RedPage;
+            }
+        }
+
         private void OnAddButtonClicked(object sender, EventArgs e)
         {
             if (_index > 19) return;
             Children.Add(_addedContentPages[_index++]);
+
+            if (_index > 5)
+            {
+                MoveButton.Text = "Move to end";
+            }
         }
     }
 }

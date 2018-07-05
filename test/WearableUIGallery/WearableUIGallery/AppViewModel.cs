@@ -42,7 +42,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "ListViewNormal", Class = typeof(TCListView) });
             TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
             TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
-            TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPage) });
+            TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPageList) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) });
             TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
@@ -79,6 +79,11 @@ namespace WearableUIGallery
             RadioTCs = new ObservableCollection<TCDescribe>();
             RadioTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) });
             RadioTCs.Add(new TCDescribe { Title = "ListView", Class = typeof(TCRadioListView) });
+
+            // IndexPage TCs
+            IndexPageTCs = new ObservableCollection<TCDescribe>();
+            IndexPageTCs.Add(new TCDescribe { Title = "Add/Move", Class = typeof(TCIndexPage) });
+            IndexPageTCs.Add(new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) });
         }
 
         public IList<TCDescribe> TCs { get; private set; }
@@ -86,5 +91,6 @@ namespace WearableUIGallery
         public IList<TCDescribe> CircleStepperTCs { get; private set; }
         public IList<TCDescribe> ContextPopupEffectBehaviorTCs { get; private set; }
         public IList<TCDescribe> RadioTCs { get; private set; }
+        public IList<TCDescribe> IndexPageTCs { get; private set; }
     }
 }
