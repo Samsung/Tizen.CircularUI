@@ -29,8 +29,6 @@ namespace WearableUIGallery.TC
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TCCtxPopup4 : CirclePage
 	{
-        StatusContextPopupEffectBehavior behavior;
-
         public TCCtxPopup4()
         {
             AcceptedCommand = new Command(
@@ -45,61 +43,6 @@ namespace WearableUIGallery.TC
                 });
 
             InitializeComponent();
-        }
-
-        void OnClickButton(object sender, EventArgs args)
-        {
-            if(CtxButton.Text != "Button" && behavior != null)
-            {
-                behavior.Visibility = true;
-            }
-        }
-
-        void OnClickAttach(object sender, EventArgs args)
-        {
-            if(behavior == null)
-            {
-                behavior = new StatusContextPopupEffectBehavior();
-                behavior.AcceptCommand = AcceptedCommand;
-                behavior.AcceptText = "Green";
-                behavior.CancelCommand = CancelCommand;
-                behavior.CancelText = "Red";
-                behavior.PositionOption = PositionOption.CenterOfParent;
-                behavior.Visibility = false;
-            }
-
-            if (behavior != null)
-            {
-                behavior.Status = "Added";
-                behavior.OnAttachedTo(CtxButton);
-
-                CtxButton.Text = "Button with ContextPopup";
-                State.Text = "Attached";
-                Status.Text = behavior.Status.ToString();
-            }
-        }
-
-        void OnClickDetach(object sender, EventArgs args)
-        {
-            if(behavior != null)
-            {
-                behavior.Status = "Removed";
-                behavior.OnDetachingFrom(CtxButton);
-                CtxButton.Text = "Button";
-                State.Text = "Detached";
-                Status.Text = behavior.Status.ToString();
-
-                CtxButton.Behaviors.Clear();
-            }
-        }
-
-        void OnClickStatus(object sender, EventArgs args)
-        {
-            if (behavior != null && behavior.Status != "Removed")
-            {
-                behavior.Status = "Set";
-                Status.Text = behavior.Status.ToString();
-            }
         }
 
         public ICommand AcceptedCommand { get; private set; }

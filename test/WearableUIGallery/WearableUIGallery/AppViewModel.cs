@@ -73,7 +73,7 @@ namespace WearableUIGallery
             ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Position", Class = typeof(TCCtxPopup1) });
             ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Command Paramter", Class = typeof(TCCtxPopup2) });
             ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Attach/Detach/Visibility", Class = typeof(TCCtxPopup3) });
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Status Button", Class = typeof(TCCtxPopup4) });
+            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Label with TapCtx", Class = typeof(TCCtxPopup4) });
 
             // Radio TCs
             RadioTCs = new ObservableCollection<TCDescribe>();
