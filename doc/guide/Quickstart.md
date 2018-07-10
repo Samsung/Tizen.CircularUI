@@ -12,16 +12,12 @@ If you rotate the bezel of Tizen wearable device, `CircleSlider` bar is moves fo
 
     ![tizen_project_wizard_capture](data/tizen_project_wizard_capture.png)
 
-- Add myget (https://tizen.myget.org/F/dotnet/api/v3/index.json) package source at Tools > Options > Nuget Package Manager > Pakage Sources.
-   
-    ![nuget_package_source](data/nuget_package_source.png)
-
 - Search Xamarin.Forms NuGet package and install latest version
 (supports version 3.1.0.469394-pre1 and higher) via NuGet package manager. Package source is [Nuget.org](https://api.nuget.org/v3/index.json).
 
     ![nuget_package_manager_capture2](data/nuget_package_manager_capture2.png)
 
-- Search Tizen.Wearable.CircularUI NuGet package and install latest version via NuGet package manager. Package source is [myget](https://tizen.myget.org/F/dotnet/api/v3/index.json).
+- Search Tizen.Wearable.CircularUI NuGet package and install latest version via NuGet package manager. Package source is [Nuget.org](https://api.nuget.org/v3/index.json).
 
     ![nuget_package_manager_capture](data/nuget_package_manager_capture.png)
 
