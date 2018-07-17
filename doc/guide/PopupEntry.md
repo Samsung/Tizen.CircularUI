@@ -26,9 +26,11 @@ The `Entry` is not visible because it is masked by the IME.
 The above image is the same as using `PopupEntry`, It can type text while watching it properly.
 
 When PopupEntry is used:
-- The `BackgroundColor` of the input pop up is the same as the `BackgroundColor` of the `PopupEntry`.
+- The `BackgroundColor` of the input pop up is the same as the `BackgroundColor` of the `PopupEntry`. The default color of the `PopupEntry` is set if you don't set the `BackgroundColor`.
 - The `TextColor` inside the input pop up is also the same as the `TextColor` of the `PopupEntry`.
 - The [IsPassword](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/) property of the input pop up is also the same as the `PopupEntry`.
+
+**WARNING: If you set the `PopupEntry` width under the specific size(e.g 280), the `PopupEntry` can be truncated follow to device native theme.**
 
 # How to use
 
@@ -41,11 +43,22 @@ When PopupEntry is used:
              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
              x:Class="WearableUIGallery.TC.TCPopupEntry">
     <ContentPage.Content>
-        <w:CircleStackLayout>
-            <w:PopupEntry BackgroundColor="Gray" TextColor="Blue" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <w:PopupEntry Placeholder="Foobar" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <w:PopupEntry IsPassword="True" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-        </w:CircleStackLayout>
+		<StackLayout Padding="20,40,20,40">
+			<w:PopupEntry
+				BackgroundColor="Gray"
+				HorizontalOptions="FillAndExpand"
+				TextColor="Blue"
+				VerticalOptions="CenterAndExpand" />
+			<w:PopupEntry
+				HorizontalOptions="FillAndExpand"
+				Placeholder="Foobar"
+				VerticalOptions="CenterAndExpand" />
+			<w:PopupEntry
+				HorizontalOptions="FillAndExpand"
+				IsPassword="True"
+				Placeholder="Password"
+				VerticalOptions="CenterAndExpand" />
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
 ```

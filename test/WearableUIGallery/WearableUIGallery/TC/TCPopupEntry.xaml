@@ -1,18 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-             x:Class="WearableUIGallery.TC.TCPopupEntry">
-    <ContentPage.Content>
-        <w:CircleStackLayout>
-            <w:PopupEntry BackgroundColor="Gray"
-                          VerticalOptions="CenterAndExpand"
-                          HorizontalOptions="CenterAndExpand"
-                          TextColor="Blue"
-                          WidthRequest="100"/>
-            <w:PopupEntry Placeholder="Foobar"
-                          VerticalOptions="CenterAndExpand"
-                          HorizontalOptions="CenterAndExpand" />
-        </w:CircleStackLayout>
-    </ContentPage.Content>
+<ContentPage
+	x:Class="WearableUIGallery.TC.TCPopupEntry"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+	<ContentPage.Content>
+		<StackLayout Padding="20,40,20,40">
+			<w:PopupEntry
+				BackgroundColor="Gray"
+				HorizontalOptions="FillAndExpand"
+				TextColor="Blue"
+				VerticalOptions="CenterAndExpand" />
+			<w:PopupEntry
+				HorizontalOptions="FillAndExpand"
+				Placeholder="Foobar"
+				VerticalOptions="CenterAndExpand" />
+			<w:PopupEntry
+				HorizontalOptions="FillAndExpand"
+				IsPassword="True"
+				Placeholder="Password"
+				VerticalOptions="CenterAndExpand" />
+		</StackLayout>
+	</ContentPage.Content>
 </ContentPage>
