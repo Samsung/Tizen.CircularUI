@@ -127,14 +127,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _editor.Text = Control.Text;
 
-            var edjeObj = Control.EdjeObject;
-            edjeObj.GetColorClass("layout/editfield/bg",
-                out int r, out int g, out int b, out int a,
-                out _, out _, out _, out _,
-                out _, out _, out _, out _);
-
-            _defaultColor = new ElmSharp.Color(r, g, b, a);
-
+            _defaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
             _editor.TextColor = Control.TextColor;
             _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? _defaultColor : Control.BackgroundColor;
 
