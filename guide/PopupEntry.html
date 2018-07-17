@@ -91,10 +91,11 @@ The <code>PopupEntry</code> allows the input to be on a pop up, hence the writte
 <p>The above image is the same as using <code>PopupEntry</code>, It can type text while watching it properly.</p>
 <p>When PopupEntry is used:</p>
 <ul>
-<li>The <code>BackgroundColor</code> of the input pop up is the same as the <code>BackgroundColor</code> of the <code>PopupEntry</code>.</li>
+<li>The <code>BackgroundColor</code> of the input pop up is the same as the <code>BackgroundColor</code> of the <code>PopupEntry</code>. The default color of the <code>PopupEntry</code> is set if you don&#39;t set the <code>BackgroundColor</code>.</li>
 <li>The <code>TextColor</code> inside the input pop up is also the same as the <code>TextColor</code> of the <code>PopupEntry</code>.</li>
 <li>The <a href="https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/">IsPassword</a> property of the input pop up is also the same as the <code>PopupEntry</code>.</li>
 </ul>
+<p><strong>WARNING: If you set the <code>PopupEntry</code> width under the specific size(e.g 280), the <code>PopupEntry</code> can be truncated follow to device native theme.</strong></p>
 <h1 id="how-to-use">How to use</h1>
 <p><code>PopupEntry</code> uses the same method as the <code>Entry</code>.</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
@@ -103,11 +104,22 @@ The <code>PopupEntry</code> allows the input to be on a pop up, hence the writte
              xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
              x:Class=&quot;WearableUIGallery.TC.TCPopupEntry&quot;&gt;
     &lt;ContentPage.Content&gt;
-        &lt;w:CircleStackLayout&gt;
-            &lt;w:PopupEntry BackgroundColor=&quot;Gray&quot; TextColor=&quot;Blue&quot; VerticalOptions=&quot;CenterAndExpand&quot; HorizontalOptions=&quot;CenterAndExpand&quot; /&gt;
-            &lt;w:PopupEntry Placeholder=&quot;Foobar&quot; VerticalOptions=&quot;CenterAndExpand&quot; HorizontalOptions=&quot;CenterAndExpand&quot; /&gt;
-            &lt;w:PopupEntry IsPassword=&quot;True&quot; VerticalOptions=&quot;CenterAndExpand&quot; HorizontalOptions=&quot;CenterAndExpand&quot; /&gt;
-        &lt;/w:CircleStackLayout&gt;
+        &lt;StackLayout Padding=&quot;20,40,20,40&quot;&gt;
+            &lt;w:PopupEntry
+                BackgroundColor=&quot;Gray&quot;
+                HorizontalOptions=&quot;FillAndExpand&quot;
+                TextColor=&quot;Blue&quot;
+                VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
+            &lt;w:PopupEntry
+                HorizontalOptions=&quot;FillAndExpand&quot;
+                Placeholder=&quot;Foobar&quot;
+                VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
+            &lt;w:PopupEntry
+                HorizontalOptions=&quot;FillAndExpand&quot;
+                IsPassword=&quot;True&quot;
+                Placeholder=&quot;Password&quot;
+                VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
+        &lt;/StackLayout&gt;
     &lt;/ContentPage.Content&gt;
 &lt;/ContentPage&gt;
 </code></pre></article>
