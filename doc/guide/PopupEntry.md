@@ -30,7 +30,7 @@ When PopupEntry is used:
 - The `TextColor` inside the input pop up is also the same as the `TextColor` of the `PopupEntry`.
 - The [IsPassword](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.IsPassword/) property of the input pop up is also the same as the `PopupEntry`.
 
-**WARNING: If you set the `PopupEntry` width under the specific size(e.g 280), the `PopupEntry` can be truncated follow to device native layout.**
+**WARNING: If you set the `PopupEntry` width under the specific size(e.g 280), the `PopupEntry` can be truncated follow to device native theme.**
 
 # How to use
 
