@@ -44,7 +44,7 @@
                 Minimum="0"
                 Value="30" />
             <Label
-                AbsoluteLayout.LayoutBounds="0.35, 0.6, 0.1, 0.25"
+                AbsoluteLayout.LayoutBounds="0.35, 0.6, 0.1, 0.1"
                 AbsoluteLayout.LayoutFlags="All"
                 FontSize="Large"
                 HorizontalOptions="Center"
@@ -62,7 +62,7 @@
                 Minimum="3"
                 Value="3" />
             <Label
-                AbsoluteLayout.LayoutBounds="0.65, 0.6, 0.1, 0.25"
+                AbsoluteLayout.LayoutBounds="0.65, 0.6, 0.1, 0.1"
                 AbsoluteLayout.LayoutFlags="All"
                 FontSize="Large"
                 HorizontalOptions="Center"

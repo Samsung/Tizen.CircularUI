@@ -55,6 +55,7 @@
                     HorizontalOptions="Center"
                     Text=":"
                     TextColor="White"
+                    VerticalTextAlignment="End"
                     WidthRequest="20" />
                 <w:CircleStepper
                     x:Name="StepperMm3"
@@ -70,6 +71,7 @@
                     HorizontalOptions="Center"
                     Text=":"
                     TextColor="White"
+                    VerticalTextAlignment="End"
                     WidthRequest="30" />
                 <w:CircleStepper
                     x:Name="StepperSec3"
