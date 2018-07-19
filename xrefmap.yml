@@ -682,6 +682,25 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleStepper.MarkerLineWidthProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.MarkerLineWidthProperty
   nameWithType: CircleStepper.MarkerLineWidthProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.Title
+  name: Title
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_Title
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleStepper.Title
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.Title
+  nameWithType: CircleStepper.Title
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.Title*
+  name: Title
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_Title_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleStepper.Title
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.Title
+  nameWithType: CircleStepper.Title
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.TitleProperty
+  name: TitleProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_TitleProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircleStepper.TitleProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.TitleProperty
+  nameWithType: CircleStepper.TitleProperty
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
   name: CircleSurfaceEffectBehavior
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html
