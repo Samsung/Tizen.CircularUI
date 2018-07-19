@@ -32,6 +32,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(CircleStepper.MarkerColorProperty, UpdateMarkerColor);
             RegisterPropertyHandler(CircleStepper.MarkerLineWidthProperty, UpdateMarkerLineWidth);
             RegisterPropertyHandler(CircleStepper.LabelFormatProperty, UpdateLabelFormat);
+            RegisterPropertyHandler(CircleStepper.TitleProperty, UpdateTitle);
             RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
             RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
@@ -47,6 +48,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     var spinner = new ESpinner(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface);
                     spinner.Style = "circle";
+
                     SetNativeControl(spinner);
                     Control.ValueChanged += OnValueChanged;
                 }
@@ -132,6 +134,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (null != Control && null != Element)
             {
                 Control.LabelFormat = Element.LabelFormat;
+            }
+        }
+
+        void UpdateTitle(bool initialize)
+        {
+            if (null != Control && null != Element)
+            {
+                Control.SetPartText("elm.text", Element.Title);
             }
         }
 

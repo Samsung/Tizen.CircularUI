@@ -45,6 +45,7 @@ namespace WearableUIGallery.TC
         void OnFocusedSec(object sender, ValueChangedEventArgs args)
         {
             RotaryFocusObject = StepperSec3;
+            StepperSec3.Title = "Sec";
         }
 
     }
