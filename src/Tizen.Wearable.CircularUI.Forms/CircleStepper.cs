@@ -41,6 +41,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty LabelFormatProperty = BindableProperty.Create(nameof(LabelFormat), typeof(string), typeof(CircleStepper), null);
 
         /// <summary>
+        /// BindableProperty. Identifies the Title bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(CircleStepper), null);
+
+        /// <summary>
         /// Gets or sets Marker color
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -55,5 +61,10 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public string LabelFormat { get => (string)GetValue(LabelFormatProperty); set => SetValue(LabelFormatProperty, value); }
+        /// <summary>
+        /// Gets or sets title
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public string Title { get => (string)GetValue(TitleProperty); set => SetValue(TitleProperty, value); }
     }
 }

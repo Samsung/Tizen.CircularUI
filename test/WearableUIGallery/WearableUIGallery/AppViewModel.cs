@@ -65,7 +65,7 @@ namespace WearableUIGallery
             CircleStepperTCs = new ObservableCollection<TCDescribe>();
             CircleStepperTCs.Add(new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) });
             CircleStepperTCs.Add(new TCDescribe { Title = "AbsoluteLayout", Class = typeof(TCCircleStepper2) });
-            CircleStepperTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCCircleStepper3) });
+            CircleStepperTCs.Add(new TCDescribe { Title = "Title", Class = typeof(TCCircleStepper3) });
             CircleStepperTCs.Add(new TCDescribe { Title = "LabelFormat", Class = typeof(TCCircleStepper4) });
 
             // ContextPopupEffectBehavior TCs

@@ -14,35 +14,16 @@
             <Label
                 FontAttributes="Bold"
                 HorizontalTextAlignment="Center"
-                Text="StackLayout"
+                Text="Title"
                 TextColor="Black" />
             <StackLayout
-                Padding="30,50,30,0"
-                Orientation="Horizontal"
-                VerticalOptions="End">
-                <Label
-                    HorizontalTextAlignment="Center"
-                    Text="Hr"
-                    TextColor="Black"
-                    WidthRequest="70" />
-                <Label
-                    HorizontalTextAlignment="Center"
-                    Text="Mm"
-                    TextColor="Black"
-                    WidthRequest="100" />
-                <Label
-                    HorizontalTextAlignment="Center"
-                    Text="Sec"
-                    TextColor="Black"
-                    WidthRequest="70" />
-            </StackLayout>
-            <StackLayout
-                Padding="30,0,30,0"
-                HeightRequest="80"
+                Padding="30,20,30,0"
+                HeightRequest="130"
                 Orientation="Horizontal"
                 VerticalOptions="Start">
                 <w:CircleStepper
                     x:Name="StepperHr3"
+                    Title="Hr"
                     Focused="OnFocusedHr"
                     HorizontalOptions="Start"
                     MarkerColor="Coral"
@@ -52,13 +33,15 @@
                     Value="0" />
                 <Label
                     FontSize="Large"
+                    HeightRequest="100"
                     HorizontalOptions="Center"
                     Text=":"
                     TextColor="White"
-                    VerticalTextAlignment="End"
+                    VerticalTextAlignment="Center"
                     WidthRequest="20" />
                 <w:CircleStepper
                     x:Name="StepperMm3"
+                    Title="Mm"
                     Focused="OnFocusedMm"
                     HorizontalOptions="Center"
                     MarkerColor="Blue"
@@ -68,11 +51,12 @@
                     Value="0" />
                 <Label
                     FontSize="Large"
+                    HeightRequest="100"
                     HorizontalOptions="Center"
                     Text=":"
                     TextColor="White"
-                    VerticalTextAlignment="End"
-                    WidthRequest="30" />
+                    VerticalTextAlignment="Center"
+                    WidthRequest="20" />
                 <w:CircleStepper
                     x:Name="StepperSec3"
                     Focused="OnFocusedSec"

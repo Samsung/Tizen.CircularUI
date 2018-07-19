@@ -16,7 +16,7 @@
                 HorizontalTextAlignment="Center"
                 Text="LabelFormat"
                 TextColor="Black" />
-            <StackLayout Padding="30,50,30,0" Orientation="Vertical">
+            <StackLayout Padding="30,30,30,0" Orientation="Vertical">
                 <Label
                     HorizontalTextAlignment="Center"
                     Text="Unit"
