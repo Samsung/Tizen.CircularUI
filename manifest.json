@@ -197,7 +197,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Quickstart.html",
-          "hash": "lGGSEM7slvQtEdc0uhQOgw=="
+          "hash": "Mw0RwIYa152cW2GSsr9qyg=="
         }
       },
       "is_incremental": false,
@@ -741,6 +741,39 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/tizen_project_wizard_capture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/tizen_project_wizard_capture_template.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/tizen_project_wizard_capture_template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/tizen_project_wizard_capture_template2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/tizen_project_wizard_capture_template2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/tizen_project_wizard_capture_template_xaml.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/tizen_project_wizard_capture_template_xaml.png"
         }
       },
       "is_incremental": false,
