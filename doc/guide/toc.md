@@ -20,3 +20,5 @@
 ## [Toast](Toast.md)
 ## [TwoButtonPage](TwoButtonPage.md)
 ## [TwoButtonPopup](TwoButtonPopup.md)
+# Tip & Tech
+## [Localization](Localization.md)
