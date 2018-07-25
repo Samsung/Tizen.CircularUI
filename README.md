@@ -7,6 +7,7 @@
 - [Prerequisite](#prerequisite)
 - [How to use CircularUI](#how-to-use-circularui)
 - [Sample and Test application using CircularUI](#sample-and-test-application-using-circularui)
+- [Tip and Tech](#tip-and-tech)
 
 ## Introduction
 The Tizen Wearable CircularUI project is a set of helpful extensions of the Xamarin Forms framework.<br>
@@ -87,3 +88,9 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
         <a href="https://github.com/Samsung/Tizen.CircularUI/tree/master/sample/XUIComponents">Source</a></td>
   </tr>
 </table>
+
+
+
+## Tip and Tech
+
+- [Localization](doc/guide/Localization.md) : This guide describes how to support multiple languages. 
