@@ -9,13 +9,13 @@ If you rotate the bezel of Tizen wearable device, `CircleSlider` bar is moves fo
   In this guide, project name is `SampleCircleApp`
 
 - You can choose a template based on the nature of the application you want to create.
-    - [Tizen Wearable App template](#TizenWearableApp)
+    - [Tizen Wearable App template](https://samsung.github.io/Tizen.CircularUI/guide/Quickstart.html#tizen-wearable-app-template)
      It is convenient to use when it is developed for wearable only and does not consider other profiles.
-    - [Tizen XAML App template](#TizenXAMLApp)
+    - [Tizen XAML App template](https://samsung.github.io/Tizen.CircularUI/guide/Quickstart.html#tizen-xaml-app-template)
      Currently it is wearable only, but you can use it if you need a structure that can be implemented to support other profiles in the future.
 
 
-### Tizen Wearable App template {#TizenWearableApp}
+### Tizen Wearable App template
 #### 1) Create project
 - Select 'Tizen Wearable App' template on 'New project'.
     ![tizen_project_wizard_capture_template](data/tizen_project_wizard_capture_template.png)
@@ -116,7 +116,7 @@ namespace SampleCircleApp
 }
 ```
 
-### Tizen XAML App template {#TizenXAMLApp}
+### Tizen XAML App template
 #### 1) Create project
 - Select 'Tizen XAML App' template on 'New project'.
     ![tizen_project_wizard_capture_template_xaml](data/tizen_project_wizard_capture_template_xaml.png)
