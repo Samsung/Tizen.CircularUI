@@ -37,6 +37,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.IRotaryEventReceiver
   name: IRotaryEventReceiver
   href: guide/IRotaryEventReceiver.html
+- uid: Tizen.Wearable.CircularUI.doc.Localization
+  name: Localization
+  href: guide/Localization.html
 - uid: Tizen.Wearable.CircularUI.doc.PopupEntry
   name: PopupEntry
   href: guide/PopupEntry.html

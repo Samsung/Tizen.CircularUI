@@ -169,6 +169,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/Localization.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Localization.html",
+          "hash": "REpBN25QMYrupPTtzwNEeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/Overview.md",
       "output": {
         ".html": {
@@ -664,6 +676,149 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/launch_emulator2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_application_name.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_application_name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_appresources_resx1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_appresources_resx1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_appresources_resx2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_appresources_resx2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_appresources_resx3.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_appresources_resx3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_appresources_resx4.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_appresources_resx4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_default_image.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_default_image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_mgr_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_mgr_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_mgr_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_mgr_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_mgr_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_mgr_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_mgr_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_mgr_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_xml.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_xml.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_res_xml_code.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_res_xml_code.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/local_resx.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/local_resx.png"
         }
       },
       "is_incremental": false,
@@ -1616,17 +1771,17 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

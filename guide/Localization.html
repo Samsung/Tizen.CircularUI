@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Localization </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Localization ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.Localization">
+<h1 id="localization">Localization</h1>
+
+<p>This document describes how to localize your Tizen Xamarin.Forms application.</p>
+<ul>
+<li><a href="#string-localization">String Localization</a></li>
+<li><a href="#display-the-correct-language">Display the correct Language</a></li>
+<li><a href="#image-localization">Image Localization</a></li>
+<li><a href="#application-name-localization">Application Name Localization</a></li>
+</ul>
+<h2 id="string-localization">String Localization</h2>
+<p>You can begin with reading the following how-to article of Xamarin.Forms Localization.</p>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/localization/#string-and-image-localization">Xamarin.Forms Localization</a></p>
+<ul>
+<li><p>The first step is adding the <code>RESX</code> resource files that will be used to store all the text used in the your app.<br>
+<img src="data/local_resx.png" alt="local_resx"><br><br>
+<img src="data/local_appresources_resx1.png" alt="local_appresources_resx1"><br><br></p>
+</li>
+<li><p>Change string visibility from internal to public. Select the your <code>resx</code> file and show the <code>Properties</code>. change the configuration to Custom Tool: PublicResXFileCodeGenerator as shown in the screenshot below.<br>
+<img src="data/local_appresources_resx2.png" alt="local_appresources_resx2"><br><br>
+<img src="data/local_appresources_resx3.png" alt="local_appresources_resx3"><br><br></p>
+</li>
+<li><p>Add Language-Specific Resources files which must follow a specific naming convention and use the same filename as the base resources file.<br>
+<img src="data/local_appresources_resx4.png" alt="local_appresources_resx4"><br><br></p>
+</li>
+<li><p>Use name of strings in the <code>RESX</code> files in the your user interface code.</p>
+</li>
+</ul>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs">var speedLabel = new Label ();
+var maximumLabel = new Label ();
+
+speedLabel.Text = AppResources.Speed;
+maximumLabel.Text = AppResources.Maximum;
+</code></pre><ul>
+<li>Use name of strings in the <code>RESX</code> files in the your <code>xaml</code> code.</li>
+</ul>
+<p><strong>XAML file</strong></p>
+<pre><code class="lang-xml">&lt;Application
+    x:Class=&quot;Speedmeter.App&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:Speedmeter&quot;
+    xmlns:resx=&quot;clr-namespace:Speedmeter.Resx;&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    &lt;Application.MainPage&gt;
+        &lt;w:CirclePage&gt;
+            &lt;CirclePage.Content&gt;
+                &lt;AbsoluteLayout&gt;
+                    &lt;Label
+                        x:Name=&quot;SpeedLabel&quot;
+                        AbsoluteLayout.LayoutBounds=&quot;0.5, 0.3&quot;
+                        AbsoluteLayout.LayoutFlags=&quot;PositionProportional&quot;
+                        Style=&quot;{StaticResource LabelStyle-Base}&quot;
+                        Text=&quot;{x:Static resx:AppResources.Speed}&quot; /&gt;
+                    &lt;Label
+                        x:Name=&quot;AverageLabel&quot;
+                        AbsoluteLayout.LayoutBounds=&quot;0.2, 0.7&quot;
+                        AbsoluteLayout.LayoutFlags=&quot;PositionProportional&quot;
+                        Style=&quot;{StaticResource LabelStyle-Base}&quot;
+                        Text=&quot;{x:Static resx:AppResources.Average}&quot; /&gt;
+</code></pre><p><br><br></p>
+<h2 id="display-the-correct-language">Display the correct Language</h2>
+<p>For display the correct language, you should implement additional code at your project to determine which language the user has selected.
+Please refer to following Xamarin.Forms article. </p>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/localization/text?tabs=vswin#displaying-the-correct-language">Display the correct Language</a></p>
+<ul>
+<li>First. define an interface to use your <code>DependencyService</code></li>
+</ul>
+<pre><code class="lang-cs">public interface ILocalize
+{
+    CultureInfo CurrentCultureInfo { get; }
+    void SetLocale(CultureInfo ci);
+}
+</code></pre><ul>
+<li>Second. you should implement <code>DependencyService</code> at Tizen platform project for getting current system language setting.(<code>SystemSettings</code> API is included in Tizen.Net nuget package)</li>
+</ul>
+<pre><code class="lang-cs">[assembly: Dependency(typeof(LocaleService))]
+
+namespace Speedmeter.Tizen.Wearable.DependencyService
+{
+    class LocaleService : ILocalize
+    {
+        CultureInfo _currentCultureInfo;
+
+        public LocaleService()
+        {
+            _currentCultureInfo = GetCurrentCultureInfo();
+            // To get notified when system locale settings has been changed
+            SystemSettings.LocaleLanguageChanged += LanguageChanged;
+        }
+
+        public CultureInfo CurrentCultureInfo
+        {
+            get
+            {
+                return _currentCultureInfo;
+            }
+        }
+
+        public void SetLocale(CultureInfo info)
+        {
+
+            Thread.CurrentThread.CurrentCulture = info;
+            Thread.CurrentThread.CurrentUICulture = info;
+        }
+
+        CultureInfo GetCurrentCultureInfo()
+        {
+            var netLanguage = &quot;en&quot;;
+            var TizenLocale = SystemSettings.LocaleLanguage;
+            netLanguage = TizenToDotnetLanguage(TizenLocale.ToString().Replace(&quot;_&quot;, &quot;-&quot;));
+            CultureInfo info = null;
+            try
+            {
+                info = new CultureInfo(netLanguage);
+            }
+            catch (CultureNotFoundException e1)
+            {
+                Console.WriteLine(&quot;cannot find the current cultureInfo. so use &#39;en&#39;. (&quot; + e1.Message + &quot;)&quot;);
+                info = new CultureInfo(&quot;en&quot;);
+            }
+
+            return info;
+        }
+
+        private void LanguageChanged(object sender, LocaleLanguageChangedEventArgs e)
+        {
+            CultureInfo info = GetCurrentCultureInfo();
+            _currentCultureInfo = info;
+            // Notify the change of locale information
+            MessagingCenter.Send&lt;ILocalize, CultureInfo&gt;(this, &quot;LanguageChanged&quot;, info);
+        }
+
+        string TizenToDotnetLanguage(string tizenLanguage)
+        {
+            var netLanguage = tizenLanguage;
+            //certain languages need to be converted to CultureInfo equivalent
+            switch (tizenLanguage)
+            {
+                case &quot;zh-CN&quot;:   // Chinese Simplified (People&#39;s Republic of China)
+                    netLanguage = &quot;zh-Hans&quot;; // correct code for .NET
+                    break;
+                case &quot;zh-HK&quot;:  // Chinese Traditional (Hong Kong)
+                case &quot;zh-hk&quot;:
+                case &quot;zh-tw&quot;:  // Chinese Traditional (Taiwan)
+                case &quot;zh-TW&quot;:
+                    netLanguage = &quot;zh-Hant&quot;; // correct code for .NET
+                    break;
+            }
+
+            Console.WriteLine(&quot;[Speedmeter] .NET Language/Locale:&quot; + netLanguage);
+            return netLanguage;
+        }
+    }
+}
+</code></pre><ul>
+<li>Third. use the DependencyService in the Xamarin.Forms App to call the interface and set your <code>RESX</code> resources culture to the correct value.
+you can receive culture info using <code>MessagingCenter</code> and update your app UI when your app is running and system Language has been changed.</li>
+</ul>
+<pre><code class="lang-cs">var ci = DependencyService.Get&lt;ILocalize&gt;().CurrentCultureInfo;
+Resx.AppResources.Culture = ci; // set the RESX for resource localization
+DependencyService.Get&lt;ILocalize&gt;().SetLocale(ci);
+
+// Whenever language has been changed, CurrentCulture will be updated.
+MessagingCenter.Subscribe&lt;ILocalize, CultureInfo&gt;(this, &quot;LanguageChanged&quot;, (obj, culture) =&gt;
+{
+    Resx.AppResources.Culture = culture; 
+    DependencyService.Get&lt;ILocalize&gt;().SetLocale(culture);
+    //update your App UI
+});
+</code></pre><p><br><br></p>
+<h2 id="image-localization">Image Localization</h2>
+<p>Tizen project supports localized images(resources) using different resource directories.
+Tizen uses res.xml file to specify information about the directory where localized resources(e.g. Image, Sound, and so on) are contained.
+The res.xml file is automatically generated when building your application.</p>
+<p><br><br>
+<strong>To add the localized resource directories in your application in Visual Studio:</strong></p>
+<ul>
+<li>In Solution Explorer, Select Tizen project. And then, Go to Tools -&gt; Tizen -&gt; Resource Manager<br>
+<img src="data/local_res_mgr_1.png" alt="local_res_mgr_1"></li>
+</ul>
+<p><br><br></p>
+<ul>
+<li>Resource Manager opens configurations -&gt; Open the language drop-down list<br>
+<img src="data/local_res_mgr_2.png" alt="local_res_mgr_2"></li>
+</ul>
+<p><br><br></p>
+<ul>
+<li>Select the language to add -&gt; click Add button<br>
+<img src="data/local_res_mgr_3.png" alt="local_res_mgr_3"><br>
+<img src="data/local_res_mgr_4.png" alt="local_res_mgr_4"></li>
+</ul>
+<p><br><br></p>
+<ul>
+<li>Resource directories are automatically created in Tizen project as follows.<br>
+res.xml file will be generated in res directory of Tizen project after building an app.<br>
+<img src="data/local_res_xml.png" alt="res.xml"><br>
+<img src="data/local_res_xml_code.png" alt="res.xml code"></li>
+</ul>
+<p><br><br>
+<em>Your application can sometimes run in a locale which you don&#39;t provide images for. In that case, Tizen loads the default image from the resource content directory (yourApp.Tizen/res/content/ ). If there is no default image within resource content directory and a device sets the locale which you don&#39;t provide images for, an error occurs.</em></p>
+<p><img src="data/local_res_default_image.png" alt="default_image"></p>
+<p><br><br>
+When you detect locale changes, you need to update the resource culture and then update the texts and images you want to provide for localization.
+As for localized images, you can make custom image renderer to load the proper locale-specific images.
+Tizen provides the path of locale-specific images via ResourceManager.TryGetPath/GetPath methods. With this, you can change </p>
+<p><strong>class LocalizedImageRenderer :ImageRenderer</strong></p>
+<pre><code class="lang-cs">        using TizenResourceManager = Tizen.Applications.ResourceManager;
+
+        public LocalizedImageRenderer() : base()
+        {
+            SystemSettings.LocaleLanguageChanged += SystemSettings_LocaleLanguageChanged;
+        }
+
+        // Invoked every time the language setting has been changed
+        private void SystemSettings_LocaleLanguageChanged(object sender, LocaleLanguageChangedEventArgs e)
+        {
+            // Get the path of a proper image based on locale and update the source of an image
+            Element.Source = TizenResourceManager.TryGetPath(TizenResourceManager.Category.Image, fileName);
+        }
+</code></pre><p><br><br></p>
+<h2 id="application-name-localization">Application Name Localization</h2>
+<p>You can add localized Application name and icon using <code>tizen-manifest.xml</code> in the Tizen project.</p>
+<ul>
+<li><p>Open the <code>tizen-manifest.xml</code> and select the Localization tab and click Add button in Name.</p>
+</li>
+<li><p>Add application names for languages you want to support.<br>
+<img src="data/local_application_name.png" alt="app_name"></p>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
