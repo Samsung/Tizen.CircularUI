@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating Certificates </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating Certificates ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CreatingCertificates">
+<h1 id="creating-certificates">Creating Certificates</h1>
+
+<p>In the menu bar, click <code>Tools &gt; Tizen &gt; Tizen Certificate Manager</code> to launch the Certificate Manager.</p>
+<h2 id="import-old-profile">Import old profile</h2>
+<p>If you have a profile you created in the past, you can import it or click a <code>cancel</code> button.
+<img src="data/certification_guide3.png" alt="Migration for Certificate Profile"></p>
+<h2 id="create-a-new-certificate-profile">Create a new Certificate Profile</h2>
+<p>Certificate profile will contain author certificate and distributor certificate.</p>
+<h3 id="1-new-certificate-profile">1. New Certificate profile</h3>
+<p>Click the <code>+</code> button to create a certificate profile.</p>
+<p><img src="data/certification_guide4.png" alt="Tizen Certificate Manager"></p>
+<h3 id="2-type-of-the-certificate">2. Type of the certificate</h3>
+<p>Select Samsung to generate certificates to develop and install to Samsung devices and will you can upload the application to the Store.
+But if you want to use the emulator and do not have any plans to upload the application to the Store, just select Tizen to create certificate locally.</p>
+<p><img src="data/certification_guide5.png" alt="Select the type of certificate profile"></p>
+<h3 id="3-type-of-the-device">3. Type of the Device</h3>
+<p>Select <code>Device Type</code> and click <code>Next</code></p>
+<p><img src="data/certification_guide6.png" alt="Select a the device type"></p>
+<h3 id="4-create-new-or-select-old-profile">4. Create new or select old profile</h3>
+<p>Select <code>Create a new certificate profile</code> to create new one. In case of Select an existing certificate profile, see the <a class="xref" href="ManagingCertificateProfile.html">Managing Certificate Profile</a>.</p>
+<p><img src="data/certification_guide7.png" alt="Certificate Profile"></p>
+<h2 id="create-a-new-author-certificate">Create a new author certificate</h2>
+<p>An author certificate includes information about the author of the application.
+It is used to create an author signature, which ensures the integrity of the application from the author since the publication of the application.</p>
+<h3 id="1-create-new-or-select-existing-author-certiicate">1. Create new or select existing author certiicate</h3>
+<p>Select <code>Create a new author certificate</code>. In case of Select an existing author certificate, see the <a class="xref" href="ManagingCertificateProfile.html">Managing Certificate Profile</a>.</p>
+<p><img src="data/certification_guide8.png" alt="Author Certificate"></p>
+<p>With <code>Advanced options</code> menu, you can check <code>Use an existing author certificate</code> option to select either the Android keystore, or you can also choose already existing Samsung author certificate.</p>
+<p><img src="data/certification_guide8-2.png" alt="Author Certificate Advanced options"></p>
+<p>The same signing key helps in maintaining secure peer authentication between the Tizen Gear App and the Android mobile app.
+You can find out more details from the <a href="https://developer.samsung.com/galaxy/accessory">Accessory SDK</a>. In case of selecting a Samsung author certificate, you can just renew the certificate with the same information. This renewed certificate will be the same as your original RSA key so upgrading your application is guaranteed.</p>
+<h3 id="2-information-of-the-author-certicate">2. Information of the author certicate</h3>
+<p>Enter the author name and password. It is recommended to set a strong password and not to forget it . If you want to use the same password for the distributor certificate in the next step, check the box below. <code>Additional Fields</code> contains more CSR(Certificate Signing Request) information to input, but are not mandatory.</p>
+<p><img src="data/certification_guide9.png" alt="Create a new author certificate"></p>
+<h3 id="3-sign-in-to-samsung-account">3. Sign in to Samsung Account</h3>
+<p>At the Next step, a Samsung Account sign-in pops up. Sign in or Create a account. ( To get a certificate, you should have a Samsung Account. If you don&#39;t have it yet, please create a new account.)</p>
+<p><img src="data/certification_guide11.png" alt="samsung account"></p>
+<h3 id="4-backup-created-author-certificate">4. Backup created Author certificate</h3>
+<p>After a few seconds from signing-in you can get the author certificate.</p>
+<p><img src="data/certification_guide12.png" alt="Author certificate is complete"></p>
+<p>The author certificate should be secure. So we recommend making a backup. You can specify the backup location by clicking <code>Browse</code> button.</p>
+<p>Be careful because if you lose the author certificate you will not be able to upgrade your application signed with the same certificate.</p>
+<p>The <code>Next</code> step is creating distributor certificate.</p>
+<h2 id="create-a-new-distributor-certificate">Create a new distributor certificate.</h2>
+<h3 id="1-create-new-or-select-existing-distributor-certiicate">1. Create new or select existing distributor certiicate</h3>
+<p>Select <code>Create a new distributor certificate</code>. In case of <code>Select an existing distributor certificate</code>, see the <a class="xref" href="ManagingCertificateProfile.html">Managing Certificate Profile</a>.</p>
+<p><img src="data/certification_guide13.png" alt="Distributor certificate"></p>
+<h3 id="2-information-of-the-distributor-certicate">2. Information of the distributor certicate</h3>
+<p>Select the <code>Privilege</code> level for the distributor certificate. To ensure that implemented APIs work in the device, the application should be signed with distributor certificate which has appropriate privilege level.</p>
+<p><img src="data/certification_guide15.png" alt="Set the Privilege and DUID"></p>
+<blockquote><p><strong>Privileges</strong><br>To effectively protect the device system and user private data, the Tizen security architecture is based on privileges and application signing of the Linux basic security model, which includes process isolation and mandatory access control. The users must be able to grant privileges for security-sensitive operations<br><strong>Public</strong> - No limitation to use for all Tizen application developers.<br><strong>Partner</strong> - No limitation to request and get the distributor certificate with this level. But when the application is uploaded to the Store, Store re-signs the application with official partner level distributor certificate, only for the registered partner developer at Samsung.</p>
+</blockquote>
+<ul>
+<li>If you have checked an option to apply the password to be the same as the author certificate to the distributor certificate at <a href="#2-information-of-the-author-certicate">Information of the author certicate</a>, the password is already filled in.If you want to change it, just type the new password for the distributor certificate.</li>
+<li>Once the device is connected to the Host PC, the DUID is automatically added to the list. If you want to add more devices, just connect your device to your Host PC via USB or WiFi. Previous DUIDs on the list is not deleted even if you disconnect the device. To delete it click the trash icon. <a href="">How to connect the device to PC via WiFi</a></li>
+<li>When you need to register devices that are more than 10, upload a txt file using <code>Import a DUID list file</code> menu. 1 DUID on a line and max 50 DUIDs are be available.</li>
+</ul>
+<blockquote><p>The DUID of recent mobile and wearable devices start with a 2.0# but old devices are 1.0#. If a distributor certificate contains a 1.0# DUID, all devices with that certificate need one more step, see the <a class="xref" href="PermitDeviceToInstallApps.html">Permit device to install apps</a> guide.</p>
+<p>If you do not have any actual device but want to develop apps and upload to the Store, just launch the emulator virtual machine and use its DUID.</p>
+</blockquote>
+<h3 id="3-finish-to-create-the-distributor-certificate">3. Finish to create the distributor certificate</h3>
+<p>Click <code>Next</code>, after a few seconds you can get the distributor certificate.</p>
+<p><img src="data/certification_guide16.png" alt="Distributor certificate is complete"></p>
+<p>Click <code>Finish</code>. You can find the created profile and its information.</p>
+<p><img src="data/certification_guide17.png" alt="Tizen Certificate Manager"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

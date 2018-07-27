@@ -28,24 +28,42 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.ContextPopupEffectBehavior
   name: ContextPopupEffectBehavior
   href: guide/ContextPopupEffectBehavior.html
+- uid: Tizen.Wearable.CircularUI.doc.CreatingCertificates
+  name: Creating Certificates
+  href: guide/CreatingCertificates.html
+- uid: Tizen.Wearable.CircularUI.doc.GettingTheCertificates
+  name: Getting the Certificates
+  href: guide/GettingTheCertificates.html
 - uid: Tizen.Wearable.CircularUI.doc.IndexPage
   name: IndexPage
   href: guide/IndexPage.html
 - uid: Tizen.Wearable.CircularUI.doc.InformationPopup
   name: InformationPopup
   href: guide/InformationPopup.html
+- uid: Tizen.Wearable.CircularUI.doc.InstallingCertificateExtension
+  name: Installing Certificate Extension
+  href: guide/InstallingCertificateExtension.html
 - uid: Tizen.Wearable.CircularUI.doc.IRotaryEventReceiver
   name: IRotaryEventReceiver
   href: guide/IRotaryEventReceiver.html
 - uid: Tizen.Wearable.CircularUI.doc.Localization
   name: Localization
   href: guide/Localization.html
+- uid: Tizen.Wearable.CircularUI.doc.ManagingCertificateProfile
+  name: Managing Certificate Profile
+  href: guide/ManagingCertificateProfile.html
+- uid: Tizen.Wearable.CircularUI.doc.PermitDeviceToInstallApps
+  name: Permit device to install apps
+  href: guide/PermitDeviceToInstallApps.html
 - uid: Tizen.Wearable.CircularUI.doc.PopupEntry
   name: PopupEntry
   href: guide/PopupEntry.html
 - uid: Tizen.Wearable.CircularUI.doc.Radio
   name: Radio
   href: guide/Radio.html
+- uid: Tizen.Wearable.CircularUI.doc.TestingYourAppOnGear
+  name: Test Tizen .Net Application on a Gear device
+  href: guide/TestingYourAppOnGear.html
 - uid: Tizen.Wearable.CircularUI.doc.Toast
   name: Toast
   href: guide/Toast.html

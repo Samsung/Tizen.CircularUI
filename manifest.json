@@ -133,6 +133,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/CreatingCertificates.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CreatingCertificates.html",
+          "hash": "JOeYxAMveWr8/me7qmd6kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/GettingTheCertificates.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/GettingTheCertificates.html",
+          "hash": "GSEVk+CJQri+o3DiX6VFCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/IRotaryEventReceiver.md",
       "output": {
         ".html": {
@@ -169,6 +193,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/InstallingCertificateExtension.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/InstallingCertificateExtension.html",
+          "hash": "KNaZnKhBzORgmOf84fYUBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/Localization.md",
       "output": {
         ".html": {
@@ -181,11 +217,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/ManagingCertificateProfile.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/ManagingCertificateProfile.html",
+          "hash": "hOThyHTpfbmLL/mOQNIUfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/Overview.md",
       "output": {
         ".html": {
           "relative_path": "guide/Overview.html",
           "hash": "p8fNpBshuzyY3Gb7QzJyGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/PermitDeviceToInstallApps.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/PermitDeviceToInstallApps.html",
+          "hash": "fZKWW3M3LZTeGL3Go4gltQ=="
         }
       },
       "is_incremental": false,
@@ -209,7 +269,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Quickstart.html",
-          "hash": "jSsU4S9qOfWhjskM4ylQiQ=="
+          "hash": "rCRNr21UgJqsqByNIAD7gg=="
         }
       },
       "is_incremental": false,
@@ -222,6 +282,18 @@
         ".html": {
           "relative_path": "guide/Radio.html",
           "hash": "jYgV4lQxwtCaqj++5yhuHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/TestingYourAppOnGear.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/TestingYourAppOnGear.html",
+          "hash": "G6kFovvQ/4+d8NRDn+NDNQ=="
         }
       },
       "is_incremental": false,
@@ -463,6 +535,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/DeviceManager.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/DeviceManager.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/IndexPage.png",
       "output": {
         "resource": {
@@ -507,6 +590,138 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear1.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear10.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear11.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear12.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear3.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear4.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear5.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear6.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear7.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear8.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/TestingYourAppOnGear9.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/TestingYourAppOnGear9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/after_Install_nuget_package.png",
       "output": {
         "resource": {
@@ -533,6 +748,259 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/bottom_button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide11.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide12.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide13.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide15.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide16.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide17.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide17.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide18.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide18.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide19.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide19.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide20.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide20.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide21.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide21.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide22.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide22.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide23.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide23.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide24.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide24.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide25.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide25.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide3.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide4.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide5.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide6.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide7.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide8-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide8-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide8.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/certification_guide9.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/certification_guide9.png"
         }
       },
       "is_incremental": false,
@@ -610,6 +1078,17 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/entry_with_IME.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/gear_wifi_connect.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/gear_wifi_connect.png"
         }
       },
       "is_incremental": false,
@@ -1006,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "nhgYaDxHdJ9JGr31r0DaoQ=="
+          "hash": "K1LCSuunFeMVOJY0tPx4oA=="
         }
       },
       "is_incremental": false,
@@ -1766,6 +2245,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -1777,11 +2261,6 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

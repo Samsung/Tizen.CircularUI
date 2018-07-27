@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Managing Certificate Profile </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Managing Certificate Profile ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ManagingCertificateProfile">
+<h1 id="managing-certificate-profile">Managing Certificate Profile</h1>
+
+<p>Before installing your application on a device or submitting it to the Tizen Store, it must be signed with a certificate profile.
+The signature verifies the source of the application and makes sure it has not been tampered with since its publication.
+A certificate profile is a combination of the certificates used for signing.</p>
+<h2 id="general-information">General Information</h2>
+<p>In the menu bar, click <code>Tools &gt; Tizen &gt; Tizen Certificate Manager</code> to launch the Certificate Manager.</p>
+<p><img src="data/certification_guide18.png" alt="Tizen Certificate Manager with two profile"></p>
+<ul>
+<li>The Active profile is indicated by the check mark.</li>
+<li>All of the application in this SDK will be signed with this active profile.</li>
+<li>You can create, delete, and set a profile to active here.</li>
+<li>Lower window shows the information of each certificate.</li>
+<li>You can replace the certificate with another existing one.</li>
+<li>The Tizen platform allows multiple distributor certificates up to 2 which supports other device manufacturers or telecommunication companies but it is not needed for most of developers generally.</li>
+</ul>
+<h2 id="changing-only-a-distributor-certificate-in-a-profile">Changing Only a Distributor Certificate in a Profile</h2>
+<p>There might be an instance where you need to register more devices or change the devices to the distributor certificate.<br>However author certificates rarely needs to be changed.<br>This section describes how to do it.</p>
+<p>Do the same steps to create a certificate profile described in Creating Certificates before step <a class="xref" href="CreatingCertificates.html#4-create-new-or-select-old-profile">Create new or select old profile</a></p>
+<h3 id="1-select-an-existing-certificate-profile">1. Select an existing certificate profile</h3>
+<p>Click <code>Select an existing certificate profile</code> and select a profile which you want to change the registered device then click <code>Next</code>.</p>
+<p><img src="data/certification_guide19.png" alt="Select an existing certificate profile"></p>
+<h3 id="2-use-the-existing-author-certificate">2. Use the existing author certificate</h3>
+<p>Click <code>No</code> to use the existing author certificate then it moves to <a class="xref" href="CreatingCertificates.html#1-create-new-or-select-existing-distributor-certiicate">Create new or select existing distributor certiicate</a> to register DUID.</p>
+<p><img src="data/certification_guide20.png" alt="Alert popup to remove author certificate"></p>
+<blockquote><p>If you click <code>Yes</code>, it moves to <a class="xref" href="CreatingCertificates.html#create-a-new-author-certificate">Create a new author certificate</a> step and original author certificate will be removed permanently.
+So it should be carefully considered.<br>However the SDK automatically backups the original author.p12 file with timestamp extension like author.p12_bak_20160806092013 in the profile directory to protect developer from unintended removal.</p>
+</blockquote>
+<h3 id="3-create-new-distributor-for-certificate-profile">3. Create new Distributor for certificate profile</h3>
+<p>Next steps are same as guided in <a class="xref" href="CreatingCertificates.html">Create Certificate</a> after <a class="xref" href="CreatingCertificates.html#1-create-new-or-select-existing-distributor-certiicate">Create new or select existing distributor certiicate</a> step</p>
+<h2 id="importing-existing-certificates">Importing Existing Certificates</h2>
+<p>If you already have both the <code>author.p12</code> and <code>distributor.p12</code> certificates and don’t need a new certificate from Samsung, you can just import and use them to sign your application.<br>In that case, just create a new certificate profile and select existing certificates at each step.</p>
+<p>Do the same steps to create a certificate profile described in Creating Certificates before step <a class="xref" href="CreatingCertificates.html#4-create-new-or-select-old-profile">Create new or select old profile</a></p>
+<h3 id="1-select-an-existing-author-certificate">1. Select an existing author certificate</h3>
+<p>Note that the author certificate must be the same for the application to be upgraded.</p>
+<p>Select <code>Select an existing author certificate</code> and click <code>Next</code>.</p>
+<p><img src="data/certification_guide22.png" alt="Select an existing author certificate"></p>
+<p><code>Browse</code> and select your <code>author.p12</code> file and enter the password then click <code>Next</code>.</p>
+<p><img src="data/certification_guide23.png" alt="Select an existing author certificate"></p>
+<h3 id="2-select-an-existing-distributor-certificate">2. Select an existing distributor certificate</h3>
+<p>Click <code>Select an existing distributor certificate</code> and <code>Browse</code> and select your <code>distributor.p12</code> file and enter the password then click <code>Finish</code>.</p>
+<p><img src="data/certification_guide24.png" alt="Select an existing author certificate"></p>
+<h3 id="3-find-the-created-profile-in-the-list">3. Find the created profile in the list</h3>
+<p>Finally you can find the created profile in the list.</p>
+<p><img src="data/certification_guide25.png" alt="Select an existing author certificate"></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>I lost the author.p12. Can I make my application upgrade?
+No. If the author key is different, any application cannot be upgraded.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
