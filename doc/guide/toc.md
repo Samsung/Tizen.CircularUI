@@ -1,5 +1,12 @@
 # [App Basics](Overview.md)
 ## [Quick Start](Quickstart.md)
+## [Localization](Localization.md)
+## [Getting the certificates](GettingTheCertificates.md)
+### [Installing certificate Extension](InstallingCertificateExtension.md)
+### [Creating certificates](CreatingCertificates.md)
+### [Permit device to install Apps](PermitDeviceToInstallApps.md)
+### [Managing certificate profile](ManagingCertificateProfile.md)
+## [Testing Your App on Gear](TestingYourAppOnGear.md)
 # User Interface
 ## [Check](Check.md)
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
@@ -20,5 +27,3 @@
 ## [Toast](Toast.md)
 ## [TwoButtonPage](TwoButtonPage.md)
 ## [TwoButtonPopup](TwoButtonPopup.md)
-# Tip & Tech
-## [Localization](Localization.md)
