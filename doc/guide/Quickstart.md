@@ -3,6 +3,8 @@
 This guide explains how to create an application that represents `Toast` and `CircleSlider`. If you press the button, `Toast` pops up and it automatically disappears after timeout (in seconds).
 If you rotate the bezel of Tizen wearable device, `CircleSlider` bar is moves forward or backward direction.
 
+This document requires `Visual Studio` and the `Visual Studio tools for Tizen`. If you have not installed it, please [install it first.](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen)
+
 ## 1. Set up development environment and create project
 - Create a Tizen Xamarin Forms application. For more information, see [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
 
