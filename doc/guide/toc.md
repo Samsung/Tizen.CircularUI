@@ -7,6 +7,7 @@
 ### [Permit device to install Apps](PermitDeviceToInstallApps.md)
 ### [Managing certificate profile](ManagingCertificateProfile.md)
 ## [Testing Your App on Gear](TestingYourAppOnGear.md)
+## [3rd party libraries for Tizen .Net](LibraryList.md)
 # User Interface
 ## [Check](Check.md)
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
