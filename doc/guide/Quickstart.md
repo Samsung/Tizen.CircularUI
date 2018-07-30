@@ -21,87 +21,66 @@ This document requires `Visual Studio` and the `Visual Studio tools for Tizen`. 
  *Remark : If you want to choose 'Tizen XAML App template', for more information, see [Guide of Tizen XAML App template](Quickstart_tizenXAMLAppTemplate.md).*
 
 #### 2) Insert CircularUI control code
-- Remove App.cs that is generated automatically at PCL.
+- In App.cs file, add the following code. This code defines the user interface for the page:
 
-- Add App.xaml and App.xaml.cs using add item.
+  - `CirclePage` is derive from `Xamarin.Forms.Page`. This Page content area has `Label` and `Button`.
+     For more information, see [CirclePage guide](CirclePage.md).
+  - `circlePage.CircleSurfaceItems.Add()` : `CircleSliderSurfaceItem` is attached for `CircleSurfaceItem` of  `CirclePage`.
+  - `RotaryFocusObject` is set `circleSlider`. `CircleSliderSurfaceItem` has rotary focus. It can receive a Rotary Event from the wearable device's bezel interaction.
+  - `OnButtonClicked` is an event handler of `Button` `Clicked` event. The following code simply displays Toast popup during three seconds:
 
-- In App.xaml file, remove all of the template code and replace it with the following code. This code defines the user interface for the page:
-
-  - `xmlns:w=clr-namespace:Tizen.Wearable.CircularUI.Forms` : `w` prefix means `Tizen.Wearable.CircularUI.Forms` namespace.
-  - `<w:CirclePage>` : `CirclePage` derive from `Xamarin.Forms.Page`. This Page content area has `Label` and `Button`.
-  - `<w:CirclePage.CircleSurfaceItems>` : `CircleSliderSurfaceItem` attached for `CircleSurfaceItem` of  `CirclePage`.
-  - `RotaryFocusObject` is set reference of the `slider`. `CircleSliderSurfaceItem` has rotary focus. `CircleSliderSurfaceItem` can receive a Rotary Event from the wearable device's bezel interaction.
-
-   For more information, see [CirclePage guide](CirclePage.md).
-
-**App.xaml file**
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<Application
-    x:Class="SampleCircleApp.App"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SimpleCircleApp"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <Application.MainPage>
-        <NavigationPage x:Name="MainNavigation">
-            <x:Arguments>
-                <w:CirclePage
-                    x:Name="page"
-                    NavigationPage.HasNavigationBar="False"
-                    RotaryFocusObject="{x:Reference slider}">
-                    <w:CirclePage.Content>
-                        <StackLayout
-                            HorizontalOptions="Center"
-                            Orientation="Vertical"
-                            VerticalOptions="Center">
-                            <Label HorizontalTextAlignment="Center" Text="Welcome to Xamarin Forms!" />
-                            <Button Clicked="OnButtonClicked" Text="show toast" />
-                        </StackLayout>
-                    </w:CirclePage.Content>
-                    <w:CirclePage.CircleSurfaceItems>
-                        <w:CircleSliderSurfaceItem
-                            x:Name="slider"
-                            Increment="0.5"
-                            IsVisible="True"
-                            Maximum="15"
-                            Minimum="0"
-                            Value="3" />
-                    </w:CirclePage.CircleSurfaceItems>
-                </w:CirclePage>
-            </x:Arguments>
-        </NavigationPage>
-    </Application.MainPage>
-</Application>
-```
-
-- In App.xaml.cs, remove all of the template code and replace it with the following code:
-    - `OnButtonClicked` is an event handler of `Button` `Clicked` event. The following code simply displays Toast popup during three seconds:
-
-**App.xaml.cs file**
+**App.cs file**
 ```cs
-using Tizen.Wearable.CircularUI.Forms;
 using System;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Tizen.Wearable.CircularUI.Forms;
 
 namespace SampleCircleApp
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class App : Application
+    public class App : Application
     {
         public App()
         {
-            InitializeComponent();
+            Button btn = new Button { Text = "show toast" };
+            btn.Clicked += OnButtonClicked;
+
+            CircleSliderSurfaceItem circleSlider = new CircleSliderSurfaceItem() {
+                Increment = 0.5,
+                IsVisible = true,
+                Maximum = 15,
+                Minimum = 0,
+                Value = 3,
+            };
+
+            // The root page of your application
+            CirclePage circlePage = new CirclePage() {
+                Content = new StackLayout {
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center,
+                    Orientation = StackOrientation.Vertical,
+                    Children = {
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = "Welcome to Xamarin Forms!"
+                        },
+                        btn
+                    }
+                },
+            };
+            circlePage.CircleSurfaceItems.Add(circleSlider);
+            circlePage.RotaryFocusObject = circleSlider;
+            MainPage = circlePage;
         }
 
-        public void OnButtonClicked(object sender, EventArgs e)
+        private void OnButtonClicked(object sender, EventArgs e)
         {
             Toast.DisplayText("Toast popup", 3000);
         }
+        ...
     }
 }
+
 ```
 
 ## 2. Build and launch your application.
