@@ -46,6 +46,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.IRotaryEventReceiver
   name: IRotaryEventReceiver
   href: guide/IRotaryEventReceiver.html
+- uid: Tizen.Wearable.CircularUI.doc.LibraryList
+  name: 3rd party libraries for Tizen .Net
+  href: guide/LibraryList.html
 - uid: Tizen.Wearable.CircularUI.doc.Localization
   name: Localization
   href: guide/Localization.html
