@@ -269,7 +269,19 @@
       "output": {
         ".html": {
           "relative_path": "guide/Quickstart.html",
-          "hash": "rCRNr21UgJqsqByNIAD7gg=="
+          "hash": "/VXXu9xORcuMz+pvEA2KBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../guide/Quickstart_tizenXAMLAppTemplate.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/Quickstart_tizenXAMLAppTemplate.html",
+          "hash": "LkgxmqKGQYMN1u6foXL6LA=="
         }
       },
       "is_incremental": false,
@@ -2245,14 +2257,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

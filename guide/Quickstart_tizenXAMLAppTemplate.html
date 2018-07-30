@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Quickstart </title>
+    <title>Tizen XAML App Template </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Quickstart ">
+    <meta name="title" content="Tizen XAML App Template ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -75,31 +75,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="quickstart">Quickstart</h1>
+<h3 id="tizen-xaml-app-template">Tizen XAML App Template</h3>
 
-<p>This guide explains how to create an application that represents <code>Toast</code> and <code>CircleSlider</code>. If you press the button, <code>Toast</code> pops up and it automatically disappears after timeout (in seconds).
-If you rotate the bezel of Tizen wearable device, <code>CircleSlider</code> bar is moves forward or backward direction.</p>
-<p>This document requires <code>Visual Studio</code> and the <code>Visual Studio tools for Tizen</code>. If you have not installed it, please <a href="https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen">install it first.</a></p>
-<h2 id="1-set-up-development-environment-and-create-project">1. Set up development environment and create project</h2>
-<ul>
-<li><p>Create a Tizen Xamarin Forms application. For more information, see <a href="https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application">Tizen.org guide</a>.</p>
-<p>In this guide, project name is <code>SampleCircleApp</code></p>
-</li>
-</ul>
-<h3 id="tizen-wearable-app-template">Tizen Wearable App Template</h3>
 <h4 id="1-create-project">1) Create project</h4>
 <ul>
-<li><p>Select &#39;Tizen Wearable App&#39; template on &#39;New project&#39;.
-  <img src="data/tizen_project_wizard_capture_template.png" alt="tizen_project_wizard_capture_template"></p>
+<li><p>Select &#39;Tizen XAML App&#39; template on &#39;New project&#39;.
+  <img src="data/tizen_project_wizard_capture_template_xaml.png" alt="tizen_project_wizard_capture_template_xaml"></p>
 </li>
-<li><p>You can use APIs of Xamarin.Forms and Tizen.Wearable.CircularUI now.
-  <img src="data/tizen_project_wizard_capture_template2.png" alt="tizen_project_wizard_capture_template2"></p>
-<p><em>Remark : If you want to choose &#39;Tizen XAML App template&#39;, for more information, see <a href="Quickstart_tizenXAMLAppTemplate.html">Guide of Tizen XAML App template</a>.</em></p>
+<li><p>Select only wearable device at Tizen project wizard.</p>
+<p>  <img src="data/tizen_project_wizard_capture.png" alt="tizen_project_wizard_capture"></p>
+</li>
+<li><p>Search Xamarin.Forms NuGet package and install latest version
+(supports version 3.1.0.583944 and higher) via NuGet package manager. Package source is <a href="https://api.nuget.org/v3/index.json">Nuget.org</a>.</p>
+<p>  <img src="data/nuget_package_manager_capture2.png" alt="nuget_package_manager_capture2"></p>
+</li>
+<li><p>Search Tizen.Wearable.CircularUI NuGet package and install latest version via NuGet package manager. Package source is <a href="https://api.nuget.org/v3/index.json">Nuget.org</a>.</p>
+<p>  <img src="data/nuget_package_manager_capture.png" alt="nuget_package_manager_capture"></p>
+</li>
+<li><p>Install Tizen.Wearable.CircularUI NuGet at portable class library (PCL) project.</p>
+<p>  <img src="data/after_Install_nuget_package.png" alt="after_Install_nuget_package"></p>
 </li>
 </ul>
 <h4 id="2-insert-circularui-control-code">2) Insert CircularUI control code</h4>
 <ul>
-<li><p>Remove App.cs that is generated automatically at PCL.</p>
+<li><p>Remove SampleCircleApp.cs that is generated automatically at PCL.</p>
 </li>
 <li><p>Add App.xaml and App.xaml.cs using add item.</p>
 </li>
@@ -181,6 +180,21 @@ namespace SampleCircleApp
         }
     }
 }
+</code></pre><ul>
+<li>For initializing CircularUI instance, insert <code>FormsCircularUI.Init()</code> code in the Main method in <code>SampleCircleApp.Tizen.Wearable.cs</code>.
+You must import <code>Tizen.Wearable.CircularUI.Forms.Renderer</code> with <code>using</code> directives.</li>
+</ul>
+<p><strong>SampleCircleApp.Tizen.Wearable.cs file</strong></p>
+<pre><code class="lang-cs">using Tizen.Wearable.CircularUI.Forms.Renderer;
+
+
+        static void Main(string[] args)
+        {
+            var app = new Program();
+            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            FormsCircularUI.Init();  //must insert this initialize code
+            app.Run(args);
+        }
 </code></pre><h2 id="2-build-and-launch-your-application">2. Build and launch your application.</h2>
 <ul>
 <li><p>Build the solution </p>
@@ -200,7 +214,7 @@ namespace SampleCircleApp
 <li><p>For Windows OS, copy the application tpk file from the project binary path to sdb tool path.</p>
 <ul>
 <li><code>SampleCircleApp</code> tpk:
-      The file is located in <code>ProjectPath\SampleCircleApp\SampleCircleApp\bin\Debug\tizen40\org.tizen.example.SampleCircleApp-1.0.0.tpk</code>.</li>
+   The file is located in <code>ProjectPath\SampleCircleApp.Tizen.Wearable\bin\Debug\tizen40\org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk</code>.</li>
 <li>Project path: To locate the project path, in the Solution Explorer view, right-click the solution name and click <code>open folder in file explorer</code>.</li>
 <li>sdb tool: This is located in <code>c:\tizen\tools\sdb.exe</code></li>
 </ul>
@@ -209,7 +223,7 @@ namespace SampleCircleApp
 For Linux, you can use sdb command directly in your project path.</p>
 </li>
 <li><p>Install your app with sdb command</p>
-<pre><code>sdb install org.tizen.example.SampleCircleApp-1.0.0.tpk
+<pre><code>sdb install org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk
 </code></pre></li>
 <li><p>Launch wearable emulator to verify the application<br>
 <img src="data/launch_app.png" alt="launchApp"><br></p>
