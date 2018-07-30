@@ -1,27 +1,27 @@
-# Quickstart
-
-This guide explains how to create an application that represents `Toast` and `CircleSlider`. If you press the button, `Toast` pops up and it automatically disappears after timeout (in seconds).
-If you rotate the bezel of Tizen wearable device, `CircleSlider` bar is moves forward or backward direction.
-
-This document requires `Visual Studio` and the `Visual Studio tools for Tizen`. If you have not installed it, please [install it first.](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen)
-
-## 1. Set up development environment and create project
-- Create a Tizen Xamarin Forms application. For more information, see [Tizen.org guide](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application).
-
-  In this guide, project name is `SampleCircleApp`
-
-### Tizen Wearable App Template
+### Tizen XAML App Template
 #### 1) Create project
-- Select 'Tizen Wearable App' template on 'New project'.
-    ![tizen_project_wizard_capture_template](data/tizen_project_wizard_capture_template.png)
+- Select 'Tizen XAML App' template on 'New project'.
+    ![tizen_project_wizard_capture_template_xaml](data/tizen_project_wizard_capture_template_xaml.png)
 
-- You can use APIs of Xamarin.Forms and Tizen.Wearable.CircularUI now.
-    ![tizen_project_wizard_capture_template2](data/tizen_project_wizard_capture_template2.png)
+- Select only wearable device at Tizen project wizard.
 
- *Remark : If you want to choose 'Tizen XAML App template', for more information, see [Guide of Tizen XAML App template](Quickstart_tizenXAMLAppTemplate.md).*
+    ![tizen_project_wizard_capture](data/tizen_project_wizard_capture.png)
+
+- Search Xamarin.Forms NuGet package and install latest version
+(supports version 3.1.0.583944 and higher) via NuGet package manager. Package source is [Nuget.org](https://api.nuget.org/v3/index.json).
+
+    ![nuget_package_manager_capture2](data/nuget_package_manager_capture2.png)
+
+- Search Tizen.Wearable.CircularUI NuGet package and install latest version via NuGet package manager. Package source is [Nuget.org](https://api.nuget.org/v3/index.json).
+
+    ![nuget_package_manager_capture](data/nuget_package_manager_capture.png)
+
+- Install Tizen.Wearable.CircularUI NuGet at portable class library (PCL) project.
+
+    ![after_Install_nuget_package](data/after_Install_nuget_package.png)
 
 #### 2) Insert CircularUI control code
-- Remove App.cs that is generated automatically at PCL.
+- Remove SampleCircleApp.cs that is generated automatically at PCL.
 
 - Add App.xaml and App.xaml.cs using add item.
 
@@ -104,6 +104,23 @@ namespace SampleCircleApp
 }
 ```
 
+- For initializing CircularUI instance, insert `FormsCircularUI.Init()` code in the Main method in `SampleCircleApp.Tizen.Wearable.cs`.
+You must import `Tizen.Wearable.CircularUI.Forms.Renderer` with `using` directives.
+
+**SampleCircleApp.Tizen.Wearable.cs file**
+```cs
+using Tizen.Wearable.CircularUI.Forms.Renderer;
+
+
+        static void Main(string[] args)
+        {
+            var app = new Program();
+            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            FormsCircularUI.Init();  //must insert this initialize code
+            app.Run(args);
+        }
+```
+
 ## 2. Build and launch your application.
 - Build the solution 
     - In the Visual Studio menu, select Build > Build Solution.
@@ -117,7 +134,7 @@ namespace SampleCircleApp
 
 - For Windows OS, copy the application tpk file from the project binary path to sdb tool path.
     - `SampleCircleApp` tpk:
-            The file is located in `ProjectPath\SampleCircleApp\SampleCircleApp\bin\Debug\tizen40\org.tizen.example.SampleCircleApp-1.0.0.tpk`.
+         The file is located in `ProjectPath\SampleCircleApp.Tizen.Wearable\bin\Debug\tizen40\org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk`.
     - Project path: To locate the project path, in the Solution Explorer view, right-click the solution name and click `open folder in file explorer`.
     - sdb tool: This is located in `c:\tizen\tools\sdb.exe`
 
@@ -126,8 +143,9 @@ namespace SampleCircleApp
 
 - Install your app with sdb command
     ```
-    sdb install org.tizen.example.SampleCircleApp-1.0.0.tpk
+    sdb install org.tizen.example.SampleCircleApp.Tizen.Wearable-1.0.0.tpk
     ```
+
 - Launch wearable emulator to verify the application<br>
   ![launchApp](data/launch_app.png)<br>
 
