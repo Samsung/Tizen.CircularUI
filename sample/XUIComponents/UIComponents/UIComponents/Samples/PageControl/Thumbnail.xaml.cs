@@ -6,7 +6,10 @@ namespace UIComponents.Samples.PageControl
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Thumbnail : ContentPage
     {
-		public Thumbnail()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Thumbnail()
 		{
 			InitializeComponent ();
 		}

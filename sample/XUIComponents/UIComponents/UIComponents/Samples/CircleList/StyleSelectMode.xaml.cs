@@ -16,7 +16,10 @@ namespace UIComponents.Samples.CircleList
         public static BindableProperty IsCheckableProperty = BindableProperty.Create(nameof(IsCheckable), typeof(bool), typeof(StyleSelectMode), false);
         public static BindableProperty PopupVisibilityProperty = BindableProperty.Create(nameof(PopupVisibility), typeof(bool), typeof(StyleSelectMode), false);
 
-		public StyleSelectMode ()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public StyleSelectMode ()
 		{
             IsCheckable = false;
             LongClickCommand = new Command(OnLongClick);

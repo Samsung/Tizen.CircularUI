@@ -13,7 +13,10 @@ namespace UIComponents.Samples.Button
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DefaultButton : CirclePage
     {
-		public DefaultButton ()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public DefaultButton ()
 		{
 			InitializeComponent ();
 		}

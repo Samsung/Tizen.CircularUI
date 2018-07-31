@@ -6,7 +6,10 @@ namespace UIComponents.Samples.Entry
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Password : ContentPage
     {
-		public Password()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Password()
 		{
 			InitializeComponent ();
 		}

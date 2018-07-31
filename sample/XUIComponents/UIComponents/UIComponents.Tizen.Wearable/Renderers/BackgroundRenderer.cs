@@ -12,10 +12,17 @@ namespace UIComponents.Tizen.Wearable.Renderers
 {
     public class BackgroundRenderer : ViewRenderer<Background, EBackground>
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public BackgroundRenderer()
         {
         }
 
+        /// <summary>
+        /// Called when element is changed.
+        /// </summary>
+        /// <param name="e">Argument for ElementChangedEventArgs<Background></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Background> e)
         {
             if (Control == null)
@@ -31,6 +38,10 @@ namespace UIComponents.Tizen.Wearable.Renderers
             base.OnElementChanged(e);
         }
 
+        /// <summary>
+        /// Called when element property is changed.
+        /// </summary>
+        /// <param name="e">Argument for PropertyChangedEvent</param>
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == Background.ImageProperty.PropertyName)
@@ -44,6 +55,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             base.OnElementPropertyChanged(sender, e);
         }
 
+        /// <summary>
+        /// Setter for image
+        /// </summary>
         void UpdateImage()
         {
             if (Element.Image == null)
@@ -53,11 +67,19 @@ namespace UIComponents.Tizen.Wearable.Renderers
             Console.WriteLine("Control.File :" + Control.File);
         }
 
+        /// <summary>
+        /// Setter for option
+        /// </summary>
         void UpdateOption()
         {
             Control.BackgroundOption = ConvertToNativeBackgroundOptions(((Background)Element).Option);
         }
 
+        /// <summary>
+        /// Convert BackgroundOptions of UIComponents.Extensions to NativeBackgroundOptions
+        /// </summary>
+        /// <param name="option">BackgroundOptions</param>
+        /// <returns></returns>
         EBackgroundOptions ConvertToNativeBackgroundOptions(BackgroundOptions option)
         {
             Console.WriteLine("ConvertToNativeBackgroundOptions : " + option);

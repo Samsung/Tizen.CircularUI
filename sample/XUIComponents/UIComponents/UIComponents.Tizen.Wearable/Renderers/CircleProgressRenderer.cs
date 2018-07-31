@@ -11,10 +11,17 @@ namespace UIComponents.Tizen.Wearable.Renderers
 {
     public class CircleProgressRenderer : ViewRenderer<CircleProgress, EProgressBar>
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CircleProgressRenderer()
         {
         }
 
+        /// <summary>
+        /// Called when element is changed.
+        /// </summary>
+        /// <param name="e">Argument for ElementChangedEventArgs<CircleProgress></param>
         protected override void OnElementChanged(ElementChangedEventArgs<CircleProgress> e)
         {
             if (Control == null)
@@ -29,6 +36,10 @@ namespace UIComponents.Tizen.Wearable.Renderers
             base.OnElementChanged(e);
         }
 
+        /// <summary>
+        /// Called when element property is changed.
+        /// </summary>
+        /// <param name="e">Argument for PropertyChangedEvent</param>
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == CircleProgress.OptionProperty.PropertyName)
@@ -38,6 +49,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             base.OnElementPropertyChanged(sender, e);
         }
 
+        /// <summary>
+        /// Set style and pulsing animation
+        /// </summary>
         void UpdateOption()
         {
             if (((CircleProgress)Element).Option == ProgressOptions.Large)

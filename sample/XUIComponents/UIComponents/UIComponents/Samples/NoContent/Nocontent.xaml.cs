@@ -6,7 +6,10 @@ namespace UIComponents.Samples.NoContent
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Nocontent : ContentPage
     {
-		public Nocontent()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Nocontent()
 		{
 			InitializeComponent ();
 		}

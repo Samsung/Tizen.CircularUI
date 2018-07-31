@@ -11,6 +11,9 @@ namespace UIComponents.Tizen.Wearable.Effects
 {
     public class TizenItemLongPressEffect : PlatformEffect
     {
+        /// <summary>
+        /// Attach effect
+        /// </summary>
         protected override void OnAttached()
         {
             var genlist = Control as ElmSharp.GenList;
@@ -20,6 +23,9 @@ namespace UIComponents.Tizen.Wearable.Effects
             }
         }
 
+        /// <summary>
+        /// Detach effect
+        /// </summary>
         protected override void OnDetached()
         {
             var genlist = this.Control as ElmSharp.GenList;
@@ -29,6 +35,11 @@ namespace UIComponents.Tizen.Wearable.Effects
             }
         }
 
+        /// <summary>
+        /// Called when the item is long pressed.
+        /// </summary>
+        /// <param name="sender">Object </param>
+        /// <param name="e">Argument of ElmSharp.GenListItemEventArgs</param>
         void ItemLongPressed(object sender, ElmSharp.GenListItemEventArgs e)
         {
             var command = UIComponents.Extensions.Effects.ItemLongPressEffect.GetCommand(Element);

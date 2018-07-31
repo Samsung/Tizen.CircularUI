@@ -6,6 +6,9 @@ namespace UIComponents.Samples.CircleList
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StyleTitle : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public StyleTitle()
         {
             InitializeComponent();

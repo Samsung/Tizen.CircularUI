@@ -6,6 +6,9 @@ namespace UIComponents.Samples.Popup
 {
     public class TitleText1Button : InformationPopup
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public TitleText1Button()
         {
             Title = "Popup title";
@@ -24,6 +27,7 @@ height. This has one button in action area and title text in title area";
                 })
             };
 
+            // Set bottom button and add event handler of button
             BottomButton = button;
             BackButtonPressed += (s, e) => { this.Dismiss(); };
         }

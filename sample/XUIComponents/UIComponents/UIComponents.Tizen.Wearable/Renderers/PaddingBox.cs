@@ -18,19 +18,33 @@ namespace UIComponents.Tizen.Wearable.Renderers
         EvasObject _header;
         EvasObject _footer;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public PaddingBox(EvasObject parent) : base(parent)
         {
             _box.SetLayoutCallback(OnLayout);
         }
 
+        /// <summary>
+        /// Create EvasObject handler
+        /// </summary>
+        /// <param name="parent">EvasObject</param>
+        /// <returns></returns>
         protected override IntPtr CreateHandle(EvasObject parent)
         {
             _box = new Box(parent);
             return _box.Handle;
         }
 
+        /// <summary>
+        /// Setter and Getter for background color
+        /// </summary>
         public Color BackgroundColor { get => _box.BackgroundColor; set => _box.BackgroundColor = value; }
 
+        /// <summary>
+        /// Setter and Getter for Header
+        /// </summary>
         public EvasObject Header
         {
             get => _header;
@@ -48,6 +62,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Content
+        /// </summary>
         public EvasObject Content
         {
             get => _content;
@@ -73,6 +90,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Footer
+        /// </summary>
         public EvasObject Footer
         {
             get => _footer;
@@ -90,6 +110,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Padding
+        /// </summary>
         public Thickness Padding
         {
             get => _padding;
@@ -103,6 +126,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Header size
+        /// </summary>
         public Size HeaderSize
         {
             get => _headerSize;
@@ -116,6 +142,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Header gap
+        /// </summary>
         public int HeaderGap
         {
             get => _headerGap;
@@ -129,6 +158,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Footer size
+        /// </summary>
         public Size FooterSize
         {
             get => _footerSize;
@@ -142,6 +174,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for Footer gap
+        /// </summary>
         public int FooterGap
         {
             get => _footerGap;
@@ -255,15 +290,49 @@ namespace UIComponents.Tizen.Wearable.Renderers
 
     struct Thickness : IEquatable<Thickness>
     {
+        /// <summary>
+        /// Setter and getter for thickness of left area
+        /// </summary>
         public int Left { get; set; }
+        /// <summary>
+        /// Setter and getter for thickness of right area
+        /// </summary>
         public int Right { get; set; }
+        /// <summary>
+        /// Setter and getter for thickness of top area
+        /// </summary>
         public int Top { get; set; }
+        /// <summary>
+        /// Setter and getter for thickness of bottom area
+        /// </summary>
         public int Bottom { get; set; }
 
+        /// <summary>
+        /// Check if thickness is the same
+        /// </summary>
+        /// <param name="other">Thickness value to compare for equality</param>
+        /// <returns>Whether the thickness values are equal</returns>
         public bool Equals(Thickness other) =>
             other.Left == Left && other.Right == Right && other.Top == Top && other.Bottom == Bottom;
+        /// <summary>
+        /// Determine whether the thickness values are the same object
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <returns>Whether the thickness value is the same object</returns>
         public override bool Equals(object obj) => obj.GetType() == typeof(Thickness) && Equals((Thickness)obj);
+        /// <summary>
+        /// Operator == 
+        /// </summary>
+        /// <param name="t1">Thickness value 1 to compare</param>
+        /// <param name="t2">Thickness value 2 to compare</param>
+        /// <returns>Whether the thickness values are equal</returns>
         public static bool operator ==(Thickness t1, Thickness t2) => t1.Equals(t2);
+        /// <summary>
+        /// Operator != 
+        /// </summary>
+        /// <param name="t1">Thickness value 1 to compare</param>
+        /// <param name="t2">Thickness value 2 to compare</param>
+        /// <returns>Whether the thickness values are not equal</returns>
         public static bool operator !=(Thickness t1, Thickness t2) => !t1.Equals(t2);
         public override int GetHashCode() => Left.GetHashCode() ^ Top.GetHashCode() ^ Right.GetHashCode() ^ Bottom.GetHashCode();
     }

@@ -13,6 +13,9 @@ namespace UIComponents.Samples
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Image : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Image()
         {
             InitializeComponent();

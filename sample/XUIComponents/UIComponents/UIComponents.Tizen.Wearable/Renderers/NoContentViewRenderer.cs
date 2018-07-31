@@ -14,10 +14,17 @@ namespace UIComponents.Tizen.Wearable.Renderers
     {
         ELayout _layout;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public NoContentViewRenderer()
         {
         }
 
+        /// <summary>
+        /// Called when element is changed.
+        /// </summary>
+        /// <param name="e">Argument of ElementChangedEventArgs<NoContentView></param>
         protected override void OnElementChanged(ElementChangedEventArgs<NoContentView> e)
         {
             Console.WriteLine("OnElementChanged");
@@ -39,6 +46,11 @@ namespace UIComponents.Tizen.Wearable.Renderers
             base.OnElementChanged(e);
         }
 
+        /// <summary>
+        /// Called when element property is changed.
+        /// </summary>
+        /// <param name="sender">Object</param>
+        /// <param name="e">Argument of PropertyChangedEventArgs</param>
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             Console.WriteLine("OnElementPropertyChanged:" + e.PropertyName);
@@ -50,6 +62,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
             base.OnElementPropertyChanged(sender, e);
         }
 
+        /// <summary>
+        /// Set title
+        /// </summary>
         void UpdateTitle()
         {
             if (string.IsNullOrEmpty(Element.Title))

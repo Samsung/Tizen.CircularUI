@@ -16,11 +16,19 @@ using UIComponents.Samples.Popup;
 
 namespace UIComponents
 {
+    /// <summary>
+    /// Class for BindingContext
+    /// </summary>
     public class AppViewModel
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public AppViewModel()
         {
             Console.WriteLine("AppViewModel()");
+
+            // 1st depth
             Samples = new ObservableCollection<Sample>();
             Samples.Add(new Sample{ Title = "Bg", Class = typeof(BackgroundList) });
             Samples.Add(new Sample { Title = "Button", Class = typeof(ButtonList) });
@@ -42,6 +50,8 @@ namespace UIComponents
             Samples.Add(new Sample { Title = "(Circle) Slider", Class = typeof(CircleSlider) });
             Samples.Add(new Sample { Title = "(Circle) Spinner", Class = typeof(CircleSpinnerList) });
 
+            // 2nd depth
+            // Item count of this depth depends on characteristics of the control
             BgSamples = new ObservableCollection<Sample>();
             BgSamples.Add(new Sample { Title = "Solid Color", Class = typeof(SolidColor) });
             BgSamples.Add(new Sample { Title = "Image - CENTER", Class = typeof(ImageCenter) });

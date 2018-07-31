@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace UIComponents.Extensions
 {
+    /// <summary>
+    /// Types of Background Option
+    /// </summary>
     public enum BackgroundOptions
     {
         /// <summary>
@@ -28,13 +31,24 @@ namespace UIComponents.Extensions
         Tile
     }
 
+    /// <summary>
+    /// Background view
+    /// </summary>
     public class Background : View
     {
+        /// <summary>
+        /// Image source property
+        /// </summary>
         public static readonly BindableProperty ImageProperty = BindableProperty.Create("Image", typeof(FileImageSource), typeof(Background), default(FileImageSource));
 
+        /// <summary>
+        /// BackgroundOptions type property
+        /// </summary>
         public static readonly BindableProperty OptionProperty = BindableProperty.Create("Option", typeof(BackgroundOptions), typeof(Background), BackgroundOptions.Scale);
 
-
+        /// <summary>
+        /// Image source
+        /// </summary>
         public FileImageSource Image
         {
             get { return (FileImageSource)GetValue(ImageProperty); }
@@ -43,6 +57,9 @@ namespace UIComponents.Extensions
             }
         }
 
+        /// <summary>
+        /// BackgroundOptions type
+        /// </summary>
         public BackgroundOptions Option
         {
             get { return (BackgroundOptions)GetValue(OptionProperty); }

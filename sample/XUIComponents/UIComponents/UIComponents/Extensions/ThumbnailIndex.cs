@@ -7,7 +7,9 @@ using Xamarin.Forms;
 
 namespace UIComponents.Extensions
 {
-
+    /// <summary>
+    /// Thumbnail index for view 
+    /// </summary>
     public class ThumbnailIndex : View
     {
         ObservableCollection<ThumbnailItem> _items;
@@ -18,6 +20,9 @@ namespace UIComponents.Extensions
             _items.CollectionChanged += ItemsCollectionChanged;
         }
 
+        /// <summary>
+        /// List for Thumbnail items
+        /// </summary>
         public IList<ThumbnailItem> ThumbnailItems
         {
             get
@@ -26,6 +31,11 @@ namespace UIComponents.Extensions
             }
         }
 
+        /// <summary>
+        /// Called when items collection is changed.
+        /// </summary>
+        /// <param name="sender">Object</param>
+        /// <param name="e">Argument of NotifyCollectionChangedEventArgs</param>
         void ItemsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             switch (e.Action)

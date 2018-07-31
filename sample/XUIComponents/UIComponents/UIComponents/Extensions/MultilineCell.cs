@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace UIComponents.Extensions
 {
+    /// <summary>
+    /// TextCell for multiline
+    /// </summary>
     public class MultilineCell : TextCell
     {
     }

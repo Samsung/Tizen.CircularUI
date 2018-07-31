@@ -4,6 +4,9 @@ namespace UIComponents.Samples.Popup
 {
     public class ProcessSmall : InformationPopup
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public ProcessSmall()
         {
             IsProgressRunning = true;

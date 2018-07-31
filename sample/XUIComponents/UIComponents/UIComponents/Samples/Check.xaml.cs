@@ -13,6 +13,9 @@ namespace UIComponents.Samples
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Check : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Check()
         {
             InitializeComponent();

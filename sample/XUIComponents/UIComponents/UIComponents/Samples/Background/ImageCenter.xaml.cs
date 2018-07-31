@@ -6,6 +6,9 @@ namespace UIComponents.Samples.Background
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ImageCenter : ContentPage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public ImageCenter()
         {
             InitializeComponent();
