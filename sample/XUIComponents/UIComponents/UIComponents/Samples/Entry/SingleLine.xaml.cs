@@ -6,7 +6,10 @@ namespace UIComponents.Samples.Entry
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SingleLine : ContentPage
     {
-		public SingleLine()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public SingleLine()
 		{
 			InitializeComponent ();
 		}

@@ -13,7 +13,10 @@ namespace UIComponents.Samples.PageControl
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CircleIndex : IndexPage
     {
-		public CircleIndex()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public CircleIndex()
 		{
 			InitializeComponent ();
 		}

@@ -9,6 +9,9 @@ using Xamarin.Forms;
 
 namespace UIComponents.Samples.CircleList
 {
+    /// <summary>
+    /// Class for BindingContext in CircleList
+    /// </summary>
     public class ListViewModel : INotifyPropertyChanged
     {
         const string SelectAll = "Select all";
@@ -46,6 +49,9 @@ namespace UIComponents.Samples.CircleList
         public List<string> LongTexts => _longTexts;
         public ObservableCollection<CheckableName> CheckableNames { get; private set; }
 
+        /// <summary>
+        /// Getter for CheckedNamesCount
+        /// </summary>
         public int CheckedNamesCount
         {
             get => _checkedNamesCount;
@@ -61,6 +67,9 @@ namespace UIComponents.Samples.CircleList
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for SelectOptionMessage1
+        /// </summary>
         public string SelectOptionMessage1
         {
             get => _selectOptionMessage1;
@@ -74,6 +83,9 @@ namespace UIComponents.Samples.CircleList
             }
         }
 
+        /// <summary>
+        /// Setter and Getter for SelectOptionMessage2
+        /// </summary>
         public string SelectOptionMessage2
         {
             get => _selectOptionMessage2;
@@ -87,11 +99,19 @@ namespace UIComponents.Samples.CircleList
             }
         }
 
+        /// <summary>
+        /// Command for Accept button of ContextPopupEffectBehavior
+        /// </summary>
         public ICommand SelectCommand1 => new Command(SelectOption1Job);
+        /// <summary>
+        /// Command for Cancel button of ContextPopupEffectBehavior
+        /// </summary>
         public ICommand SelectCommand2 => new Command(SelectOption2Job);
 
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public ListViewModel()
         {
             CheckableNames = new ObservableCollection<CheckableName>();
@@ -113,6 +133,9 @@ namespace UIComponents.Samples.CircleList
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
+        /// <summary>
+        /// Called when Accept button of ContextPopupEffectBehavior is executed.
+        /// </summary>
         void SelectOption1Job()
         {
             bool r = CheckedNamesCount < CheckableNames.Count;
@@ -121,12 +144,18 @@ namespace UIComponents.Samples.CircleList
                 x.Checked = r;
             }
         }
+        /// <summary>
+        /// Called when Cancel button of ContextPopupEffectBehavior is executed.
+        /// </summary>
         void SelectOption2Job()
         {
             if (CheckedNamesCount > 0 && CheckedNamesCount != CheckableNames.Count)
                 foreach (var x in CheckableNames) x.Checked = false;
         }
 
+        /// <summary>
+        /// Set SelectOptionMessage
+        /// </summary>
         void UpdateSelectOptionMessage()
         {
             SelectOptionMessage1 = _checkedNamesCount < CheckableNames.Count ? SelectAll : DeselectAll;
@@ -134,19 +163,38 @@ namespace UIComponents.Samples.CircleList
         }
     }
 
+    /// <summary>
+    /// Class for element of MyGroup class
+    /// </summary>
+    ///|                                       GroupList                                           |
+    ///|-------------------------------------------------------------------------------------------|
+    ///|                  MyGroup            |            MyGroup                 | ...            |
+    ///| -------- ---------------------------|------------------------------------|----------------|
+    ///| CheckableName | CheckableName | ... |CheckableName | CheckableName | ... |...             |
+    ///| -------- ---------------------------|------------------------------------|----------------|
+    ///| ------------------------------------------------------------------------------------------|
     public class CheckableName : INotifyPropertyChanged
     {
         string _name;
         bool _checked;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CheckableName(string name, bool isChecked)
         {
             _name = name;
             _checked = isChecked;
         }
 
+        /// <summary>
+        /// Handle the PropertyChanged event raised when a property is changed on a component
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Setter and Getter for Name
+        /// </summary>
         public string Name
         {
             get => _name;
@@ -159,6 +207,9 @@ namespace UIComponents.Samples.CircleList
                 }
             }
         }
+        /// <summary>
+        /// Setter and Getter for Checked
+        /// </summary>
         public bool Checked
         {
             get => _checked;
@@ -172,27 +223,62 @@ namespace UIComponents.Samples.CircleList
             }
         }
 
+        /// <summary>
+        /// Called this method from a child class to notify that a change happened on a property.
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed</param>
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
-
-
+    /// <summary>
+    /// Class of element of Group list
+    /// </summary>
+    ///|                                       GroupList                                           |
+    ///|-------------------------------------------------------------------------------------------|
+    ///|                  MyGroup            |            MyGroup                 | ...            |
+    ///| -------- ---------------------------|------------------------------------|----------------|
+    ///| CheckableName | CheckableName | ... |CheckableName | CheckableName | ... |...             |
+    ///| -------- ---------------------------|------------------------------------|----------------|
+    ///| ------------------------------------------------------------------------------------------|
     public class MyGroup : List<CheckableName>
     {
+        /// <summary>
+        /// Setter and Getter for group name
+        /// </summary>
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MyGroup(string name) { GroupName = name; }
     }
 
-    public class ListVieGroupModel
+    /// <summary>
+    /// Class for BindingContext in StyleTitleGroupIndex of CircleList
+    /// </summary>
+    ///|                                       GroupList                                           |
+    ///|-------------------------------------------------------------------------------------------|
+    ///|                  MyGroup            |            MyGroup                 | ...            |
+    ///| -------- ---------------------------|------------------------------------|----------------|
+    ///| CheckableName | CheckableName | ... |CheckableName | CheckableName | ... |...             |
+    ///| -------- ---------------------------|------------------------------------|----------------|
+    ///| ------------------------------------------------------------------------------------------|
+    public class ListViewGroupModel
     {
+        /// <summary>
+        /// Getter for group list
+        /// </summary>
         public List<MyGroup> GroupList { get; private set; }
 
-        public ListVieGroupModel()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public ListViewGroupModel()
         {
+            // Create group list
             GroupList = new List<MyGroup>
             {
                 new MyGroup("group1") { new CheckableName("Aaliyah", false), new CheckableName("Aamir", false), new CheckableName("Aaralyn ", false), new CheckableName("Aaron", false), new CheckableName("Abagail", false), new CheckableName("Babitha", false), new CheckableName("Bahuratna", false), new CheckableName("Bandana", false), new CheckableName("Bulbul", false), new CheckableName("Cade", false), new CheckableName("Caldwell", false)},

@@ -7,7 +7,7 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.BindingContext>
-        <local:ListVieGroupModel />
+        <local:ListViewGroupModel />
     </w:CirclePage.BindingContext>
     <w:CirclePage.Content>
         <w:CircleListView

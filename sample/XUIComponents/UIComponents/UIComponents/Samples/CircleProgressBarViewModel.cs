@@ -6,6 +6,9 @@ using Xamarin.Forms;
 
 namespace UIComponents.Samples
 {
+    /// <summary>
+    /// Class for BindingContext in CircleProgressBar
+    /// </summary>
     public class CircleProgressBarViewModel : INotifyPropertyChanged
     {
         double _progress1;
@@ -13,6 +16,9 @@ namespace UIComponents.Samples
         string _progressLabel1="0 %";
         string _progressLabel2 = "0 %";
 
+        /// <summary>
+        /// Name of Progress 1
+        /// </summary>
         public string ProgressLabel1
         {
             get => _progressLabel1;
@@ -24,6 +30,9 @@ namespace UIComponents.Samples
             }
         }
 
+        /// <summary>
+        /// Name of Progress 2
+        /// </summary>
         public string ProgressLabel2
         {
             get => _progressLabel2;
@@ -35,6 +44,9 @@ namespace UIComponents.Samples
             }
         }
 
+        /// <summary>
+        /// Value of Progress 1
+        /// </summary>
         public double ProgressValue1
         {
             get => _progress1;
@@ -47,6 +59,9 @@ namespace UIComponents.Samples
             }
         }
 
+        /// <summary>
+        /// Value of Progress 2
+        /// </summary>
         public double ProgressValue2
         {
             get => _progress2;
@@ -59,8 +74,14 @@ namespace UIComponents.Samples
             }
         }
 
+        /// <summary>
+        /// Whether it is playing
+        /// </summary>
         public bool Playing { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CircleProgressBarViewModel()
         {
             Playing = true;
@@ -68,6 +89,10 @@ namespace UIComponents.Samples
             Device.StartTimer(TimeSpan.FromMilliseconds(200), UpdateProgress2);
         }
 
+        /// <summary>
+        /// Called when state of Progress 1 is changed
+        /// </summary>
+        /// <returns>Playing value</returns>
         bool UpdateProgress1()
         {
             ProgressValue1 += 0.05;
@@ -77,6 +102,10 @@ namespace UIComponents.Samples
             }
             return Playing;
         }
+        /// <summary>
+        /// Called when state of Progress 2 is changed
+        /// </summary>
+        /// <returns>Playing value</returns>
         bool UpdateProgress2()
         {
             ProgressValue2 += 0.05;
@@ -87,11 +116,18 @@ namespace UIComponents.Samples
             return Playing;
         }
 
+        /// <summary>
+        /// Called this method from a child class to notify that a change happened on a property.
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// Handle the PropertyChanged event raised when a property is changed on a component
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -6,6 +6,9 @@ namespace UIComponents.Samples.CircleScroller
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VerticalScroller : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public VerticalScroller()
         {
             InitializeComponent();

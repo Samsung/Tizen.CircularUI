@@ -13,11 +13,17 @@ namespace UIComponents.Tizen.Wearable.Effects
     {
         string oldStyle;
 
+        /// <summary>
+        /// Attach effect
+        /// </summary>
         protected override void OnAttached()
         {
             DoSetStyle();
         }
 
+        /// <summary>
+        /// Detach effect
+        /// </summary>
         protected override void OnDetached()
         {
             var view = Control as ElmSharp.Widget;
@@ -27,6 +33,10 @@ namespace UIComponents.Tizen.Wearable.Effects
             }
         }
 
+        /// <summary>
+        /// Called when element property is changed.
+        /// </summary>
+        /// <param name="args">Argument for PropertyChangedEvent</param>
         protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
         {
             base.OnElementPropertyChanged(args);
@@ -36,6 +46,9 @@ namespace UIComponents.Tizen.Wearable.Effects
             }
         }
 
+        /// <summary>
+        /// Set style
+        /// </summary>
         void DoSetStyle()
         {
             var view = Control as ElmSharp.Widget;

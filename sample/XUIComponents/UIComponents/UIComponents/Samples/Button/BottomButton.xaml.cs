@@ -13,7 +13,10 @@ namespace UIComponents.Samples.Button
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class BottomButton : CirclePage
     {
-		public BottomButton()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public BottomButton()
 		{
 			InitializeComponent ();
 		}

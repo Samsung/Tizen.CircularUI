@@ -7,16 +7,22 @@ namespace UIComponents.Samples.Popup
 {
     public class TitleTextCheckButton : TwoButtonPopup
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public TitleTextCheckButton()
         {
             Title = "Popup title";
 
+            // Initialize FirstButton
             FirstButton = new MenuItem()
             {
+                // Set icon
                 Icon = new FileImageSource
                 {
                     File = "b_option_list_icon_share.png",
                 },
+                //Set command
                 Command = new Command(() =>
                 {
                     Console.WriteLine("left button1 Command!!");
@@ -24,12 +30,15 @@ namespace UIComponents.Samples.Popup
                 })
             };
 
+            // Initialize SecondButton
             SecondButton = new MenuItem()
             {
+                // Set icon
                 Icon = new FileImageSource
                 {
                     File = "b_option_list_icon_delete.png",
                 },
+                //Set command
                 Command = new Command(() =>
                 {
                     Console.WriteLine("right button1 Command!!");
@@ -47,6 +56,7 @@ namespace UIComponents.Samples.Popup
                 Console.WriteLine($"checkbox toggled. checkbox.IsToggled:{checkbox.IsToggled}");
             };
 
+            // Add label and checkbox with label
             Content = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -72,6 +82,7 @@ namespace UIComponents.Samples.Popup
                 }
             };
 
+            // Add event handler
             BackButtonPressed += (s, e) => { this.Dismiss(); };
         }
     }

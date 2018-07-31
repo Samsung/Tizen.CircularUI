@@ -7,6 +7,9 @@ namespace UIComponents.Samples.CircleSpinner
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SpinnerDefault : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public SpinnerDefault()
         {
             InitializeComponent();

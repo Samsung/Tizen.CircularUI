@@ -6,10 +6,16 @@ using Xamarin.Forms;
 
 namespace UIComponents.Samples.CircleDateTime
 {
+    /// <summary>
+    /// Class for BindingContext in CircleDateTime
+    /// </summary>
     public class DateTimeViewModel : INotifyPropertyChanged
     {
         static DateTime _dateTime = DateTime.Now;
 
+        /// <summary>
+        /// Setter and Getter of Datetime
+        /// </summary>
         public DateTime Datetime
         {
             get => _dateTime;
@@ -22,10 +28,17 @@ namespace UIComponents.Samples.CircleDateTime
             }
         }
 
+        /// <summary>
+        /// Command is executed when ActionButton is pressed
+        /// </summary>
         public ICommand ButtonPressedExit { get; private set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public DateTimeViewModel()
         {
+            // Set button event of CircleDateTime
             ButtonPressedExit = new Command(() =>
             {
                 Console.WriteLine($"Saved and Exit Datetime:{Datetime.ToString()}");
@@ -33,11 +46,18 @@ namespace UIComponents.Samples.CircleDateTime
             });
         }
 
+        /// <summary>
+        /// Called this method from a child class to notify that a change happened on a property.
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// Handle the PropertyChanged event raised when a property is changed on a component
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

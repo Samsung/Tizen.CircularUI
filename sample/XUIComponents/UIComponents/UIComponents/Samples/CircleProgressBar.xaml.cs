@@ -6,6 +6,9 @@ namespace UIComponents.Samples
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CircleProgressBar : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CircleProgressBar()
         {
             InitializeComponent();

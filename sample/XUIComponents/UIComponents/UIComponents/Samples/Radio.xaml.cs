@@ -13,6 +13,9 @@ namespace UIComponents.Samples
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Radio : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Radio()
         {
             InitializeComponent();

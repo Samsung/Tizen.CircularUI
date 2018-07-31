@@ -9,11 +9,19 @@ namespace UIComponents.Samples
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CircleScrollerList : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CircleScrollerList()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Called when item is tapped
+        /// </summary>
+        /// <param name="sender">Object</param>
+        /// <param name="args">Argument of ItemTappedEventArgs</param>
         public void OnItemTapped(object sender, ItemTappedEventArgs args)
         {
             if (args.Item == null) return;
@@ -24,6 +32,7 @@ namespace UIComponents.Samples
             {
                 Type pageType = desc.Class;
 
+                // Create page and push it to navigation stack
                 var page = Activator.CreateInstance(pageType) as Page;
                 NavigationPage.SetHasNavigationBar(page, false);
                 Navigation.PushAsync(page as Page);

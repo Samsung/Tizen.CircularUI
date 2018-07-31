@@ -8,11 +8,19 @@ namespace UIComponents
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class App : Application
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public App ()
         {
             InitializeComponent ();
         }
 
+        /// <summary>
+        /// Called when item is tapped
+        /// </summary>
+        /// <param name="sender">Object</param>
+        /// <param name="args">Argument of ItemTappedEventArgs</param>
         public void OnItemTapped(object sender, ItemTappedEventArgs args)
         {
             if (args.Item == null) return;

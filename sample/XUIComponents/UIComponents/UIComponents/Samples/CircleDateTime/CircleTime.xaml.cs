@@ -11,6 +11,9 @@ namespace UIComponents.Samples.CircleDateTime
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CircleTime : CirclePage
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public CircleTime()
         {
             InitializeComponent();
