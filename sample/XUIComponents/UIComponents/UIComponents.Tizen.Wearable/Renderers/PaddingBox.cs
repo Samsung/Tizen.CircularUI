@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using ElmSharp;
 
 namespace UIComponents.Tizen.Wearable.Renderers
@@ -19,8 +35,9 @@ namespace UIComponents.Tizen.Wearable.Renderers
         EvasObject _footer;
 
         /// <summary>
-        /// Constructor
+        /// Constructor of PaddingBox class
         /// </summary>
+        /// <param name="parent">EvasObject</param>
         public PaddingBox(EvasObject parent) : base(parent)
         {
             _box.SetLayoutCallback(OnLayout);
@@ -30,7 +47,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
         /// Create EvasObject handler
         /// </summary>
         /// <param name="parent">EvasObject</param>
-        /// <returns></returns>
+        /// <returns>Returns box.Handle pointer</returns>
         protected override IntPtr CreateHandle(EvasObject parent)
         {
             _box = new Box(parent);
@@ -50,10 +67,16 @@ namespace UIComponents.Tizen.Wearable.Renderers
             get => _header;
             set
             {
-                if (_header == value) return;
+                if (_header == value)
+                {
+                    return;
+                }
+
                 _header = value;
                 if (_header == null)
+                {
                     _box.UnPack(_header);
+                }
                 else
                 {
                     _box.PackStart(_header);
@@ -70,19 +93,27 @@ namespace UIComponents.Tizen.Wearable.Renderers
             get => _content;
             set
             {
-                if (_content == value) return;
+                if (_content == value)
+                {
+                    return;
+                }
+
                 _content = value;
                 if (_content == null)
+                {
                     _box.UnPack(_content);
+                }
                 else
                 {
                     _box.PackEnd(_content);
                     _content.Show();
                 }
+
                 if (_footer != null)
                 {
                     _footer.RaiseTop();
                 }
+
                 if (_header != null)
                 {
                     _header.RaiseTop();
@@ -98,10 +129,16 @@ namespace UIComponents.Tizen.Wearable.Renderers
             get => _footer;
             set
             {
-                if (_footer == value) return;
+                if (_footer == value)
+                {
+                    return;
+                }
+
                 _footer = value;
                 if (_footer == null)
+                {
                     _box.UnPack(_footer);
+                }
                 else
                 {
                     _box.PackEnd(_footer);
@@ -192,7 +229,11 @@ namespace UIComponents.Tizen.Wearable.Renderers
 
         public void OnLayout()
         {
-            if (_layouting) return;
+            if (_layouting)
+            {
+                return;
+            }
+
             _layouting = true;
 
             int w = 0, h = 0, x = 0, y = 0;
@@ -224,12 +265,16 @@ namespace UIComponents.Tizen.Wearable.Renderers
                 {
                     x = (int)((w - hw) * ax);
                 }
+
                 _header.Geometry = new Rect(myg.X + x + _padding.Left, myg.Y + y + _padding.Top, hw, hh);
 
                 y += hh + _headerGap;
                 x = 0;
                 h -= hh + _headerGap;
-                if (h < hh) h = hh;
+                if (h < hh)
+                {
+                    h = hh;
+                }
             }
 
             if (_footer != null)
@@ -249,6 +294,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
                 {
                     x = (int)((w - fw) * ax);
                 }
+
                 _footer.Geometry = new Rect(myg.X + x + _padding.Left, myg.Y + fy + _padding.Top, fw, fh);
 
                 x = 0;
@@ -270,11 +316,6 @@ namespace UIComponents.Tizen.Wearable.Renderers
                 h = content.Height;
             }
 
-            //if (content.Height != 0)
-            //{
-            //    h = content.Height;
-            //}
-
             _content.Geometry = new Rect(myg.X + x + _padding.Left, myg.Y + y + _padding.Top, w, h);
 
             var ah = hh + _headerGap + h + fh + _footerGap + _padding.Top + _padding.Bottom;
@@ -294,45 +335,29 @@ namespace UIComponents.Tizen.Wearable.Renderers
         /// Setter and getter for thickness of left area
         /// </summary>
         public int Left { get; set; }
+
         /// <summary>
         /// Setter and getter for thickness of right area
         /// </summary>
         public int Right { get; set; }
+
         /// <summary>
         /// Setter and getter for thickness of top area
         /// </summary>
         public int Top { get; set; }
+
         /// <summary>
         /// Setter and getter for thickness of bottom area
         /// </summary>
         public int Bottom { get; set; }
 
-        /// <summary>
-        /// Check if thickness is the same
-        /// </summary>
-        /// <param name="other">Thickness value to compare for equality</param>
-        /// <returns>Whether the thickness values are equal</returns>
         public bool Equals(Thickness other) =>
             other.Left == Left && other.Right == Right && other.Top == Top && other.Bottom == Bottom;
-        /// <summary>
-        /// Determine whether the thickness values are the same object
-        /// </summary>
-        /// <param name="obj">Object</param>
-        /// <returns>Whether the thickness value is the same object</returns>
+
         public override bool Equals(object obj) => obj.GetType() == typeof(Thickness) && Equals((Thickness)obj);
-        /// <summary>
-        /// Operator == 
-        /// </summary>
-        /// <param name="t1">Thickness value 1 to compare</param>
-        /// <param name="t2">Thickness value 2 to compare</param>
-        /// <returns>Whether the thickness values are equal</returns>
+
         public static bool operator ==(Thickness t1, Thickness t2) => t1.Equals(t2);
-        /// <summary>
-        /// Operator != 
-        /// </summary>
-        /// <param name="t1">Thickness value 1 to compare</param>
-        /// <param name="t2">Thickness value 2 to compare</param>
-        /// <returns>Whether the thickness values are not equal</returns>
+
         public static bool operator !=(Thickness t1, Thickness t2) => !t1.Equals(t2);
         public override int GetHashCode() => Left.GetHashCode() ^ Top.GetHashCode() ^ Right.GetHashCode() ^ Bottom.GetHashCode();
     }

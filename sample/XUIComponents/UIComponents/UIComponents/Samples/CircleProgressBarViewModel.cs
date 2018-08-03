@@ -1,7 +1,22 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace UIComponents.Samples
@@ -13,32 +28,40 @@ namespace UIComponents.Samples
     {
         double _progress1;
         double _progress2;
-        string _progressLabel1="0 %";
+        string _progressLabel1 = "0 %";
         string _progressLabel2 = "0 %";
 
         /// <summary>
-        /// Name of Progress 1
+        /// String of Label of Progress 1
         /// </summary>
         public string ProgressLabel1
         {
             get => _progressLabel1;
             set
             {
-                if (_progressLabel1 == value) return;
+                if (_progressLabel1 == value)
+                {
+                    return;
+                }
+
                 _progressLabel1 = value;
                 OnPropertyChanged();
             }
         }
 
         /// <summary>
-        /// Name of Progress 2
+        /// String of Label of Progress 2
         /// </summary>
         public string ProgressLabel2
         {
             get => _progressLabel2;
             set
             {
-                if (_progressLabel2 == value) return;
+                if (_progressLabel2 == value)
+                {
+                    return;
+                }
+
                 _progressLabel2 = value;
                 OnPropertyChanged();
             }
@@ -52,7 +75,11 @@ namespace UIComponents.Samples
             get => _progress1;
             set
             {
-                if (_progress1 == value) return;
+                if (_progress1 == value)
+                {
+                    return;
+                }
+
                 _progress1 = value;
                 ProgressLabel1 = _progress1 * 100 + " %";
                 OnPropertyChanged();
@@ -67,7 +94,11 @@ namespace UIComponents.Samples
             get => _progress2;
             set
             {
-                if (_progress2 == value) return;
+                if (_progress2 == value)
+                {
+                    return;
+                }
+
                 _progress2 = value;
                 ProgressLabel2 = _progress2 * 100 + " %";
                 OnPropertyChanged();
@@ -80,7 +111,7 @@ namespace UIComponents.Samples
         public bool Playing { get; set; }
 
         /// <summary>
-        /// Constructor
+        /// Constructor of CircleProgressBarViewModel class
         /// </summary>
         public CircleProgressBarViewModel()
         {
@@ -100,8 +131,10 @@ namespace UIComponents.Samples
             {
                 ProgressValue1 = 0;
             }
+
             return Playing;
         }
+
         /// <summary>
         /// Called when state of Progress 2 is changed
         /// </summary>
@@ -113,11 +146,12 @@ namespace UIComponents.Samples
             {
                 ProgressValue2 = 0;
             }
+
             return Playing;
         }
 
         /// <summary>
-        /// Called this method from a child class to notify that a change happened on a property.
+        /// Called to notify that a change of property happened
         /// </summary>
         /// <param name="propertyName">The name of the property that changed</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -126,7 +160,7 @@ namespace UIComponents.Samples
         }
 
         /// <summary>
-        /// Handle the PropertyChanged event raised when a property is changed on a component
+        /// Event raised when a property is changed
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
     }

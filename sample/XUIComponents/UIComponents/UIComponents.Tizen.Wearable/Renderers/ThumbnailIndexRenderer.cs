@@ -1,5 +1,20 @@
-﻿using System;
-using System.ComponentModel;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using UIComponents.Extensions;
 using UIComponents.Tizen.Wearable.Renderers;
 using Xamarin.Forms.Platform.Tizen;
@@ -7,9 +22,6 @@ using ElmSharp;
 using Elayout = ElmSharp.Layout;
 using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(ThumbnailIndex), typeof(ThumbnailIndexRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers
@@ -25,7 +37,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
         bool _isFirstItem;
 
         /// <summary>
-        /// Constructor
+        /// Constructor of ThumbnailIndexRenderer class
         /// </summary>
         public ThumbnailIndexRenderer()
         {
@@ -47,7 +59,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
         }
 
         /// <summary>
-        /// Initialize UI components
+        /// Initialize ThumbnailIndex View
         /// </summary>
         private void Initialize()
         {
@@ -55,7 +67,6 @@ namespace UIComponents.Tizen.Wearable.Renderers
             _isFirstItem = true;
             //_outterLayout = new Elayout(TForms.Context.MainWindow);
 
-            // Initialize PaddingBox
             _pbox = new PaddingBox(TForms.NativeParent)
             {
                 Padding = new Thickness { Left = 0, Right = 0, Top = 22, Bottom = 0 },
@@ -64,7 +75,6 @@ namespace UIComponents.Tizen.Wearable.Renderers
             };
             _pbox.Show();
 
-            // Initialize Index
             _index = new ElmSharp.Index(_pbox/*_outterLayout*/)
             {
                 Style = "thumbnail",
@@ -77,7 +87,6 @@ namespace UIComponents.Tizen.Wearable.Renderers
             _pbox.Header = _index;
             //index.Geometry = new Rect(0, 22, 200, 19);
 
-            // Initialize Scroller
             _scroller = new ElmSharp.Scroller(_pbox/*_outterLayout*/)
             {
                 HorizontalLoop = false,
@@ -98,7 +107,6 @@ namespace UIComponents.Tizen.Wearable.Renderers
             _pbox.Content = _scroller;
             //_scroller.Geometry = new Rect(0, 79, 360, 281);
 
-            // Initialize Box
             var box = new ElmSharp.Box(_scroller)
             {
                 IsHorizontal = true,
@@ -151,7 +159,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
                     };
                     indexItem.Select(true);
                 }
-                // first item and other items case
+
                 _isFirstItem = false;
                 box.PackEnd(page);
             }

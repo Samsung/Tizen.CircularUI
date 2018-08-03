@@ -1,7 +1,22 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using UIComponents.Samples;
 using UIComponents.Samples.Background;
 using UIComponents.Samples.Button;
@@ -17,18 +32,18 @@ using UIComponents.Samples.Popup;
 namespace UIComponents
 {
     /// <summary>
-    /// Class for BindingContext
+    /// The model Class for main page of App.xaml.
     /// </summary>
     public class AppViewModel
     {
         /// <summary>
-        /// Constructor
+        /// Constructor of AppViewModel class
         /// </summary>
         public AppViewModel()
         {
             Console.WriteLine("AppViewModel()");
 
-            // 1st depth
+            // 1st depth, add Sample instance to Samples ObservableCollection. 
             Samples = new ObservableCollection<Sample>();
             Samples.Add(new Sample{ Title = "Bg", Class = typeof(BackgroundList) });
             Samples.Add(new Sample { Title = "Button", Class = typeof(ButtonList) });
