@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using System.ComponentModel;
 using UIComponents.Extensions;
 using UIComponents.Tizen.Wearable.Renderers;
@@ -13,7 +29,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
     public class BackgroundRenderer : ViewRenderer<Background, EBackground>
     {
         /// <summary>
-        /// Constructor
+        /// Constructor of BackgroundRenderer class
         /// </summary>
         public BackgroundRenderer()
         {
@@ -30,18 +46,21 @@ namespace UIComponents.Tizen.Wearable.Renderers
                 var background = new EBackground(TForms.NativeParent);
                 SetNativeControl(background);
             }
+
             if (e.NewElement != null)
             {
                 UpdateImage();
                 UpdateOption();
             }
+
             base.OnElementChanged(e);
         }
 
         /// <summary>
         /// Called when element property is changed.
         /// </summary>
-        /// <param name="e">Argument for PropertyChangedEvent</param>
+        /// <param name="sender">object</param>
+        /// <param name="e">PropertyChangedEvent</param>
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == Background.ImageProperty.PropertyName)
@@ -52,23 +71,29 @@ namespace UIComponents.Tizen.Wearable.Renderers
             {
                 UpdateOption();
             }
+
             base.OnElementPropertyChanged(sender, e);
         }
 
         /// <summary>
-        /// Setter for image
+        /// Update image of Background
         /// </summary>
         void UpdateImage()
         {
             if (Element.Image == null)
+            {
                 Control.File = "";
+            }
             else
+            {
                 Control.File = ResourcePath.GetPath(Element.Image.File);
+            }
+
             Console.WriteLine("Control.File :" + Control.File);
         }
 
         /// <summary>
-        /// Setter for option
+        ///  Update BackgroundOption of Background
         /// </summary>
         void UpdateOption()
         {
@@ -79,7 +104,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
         /// Convert BackgroundOptions of UIComponents.Extensions to NativeBackgroundOptions
         /// </summary>
         /// <param name="option">BackgroundOptions</param>
-        /// <returns></returns>
+        /// <returns>Returns elmsharp background option</returns>
         EBackgroundOptions ConvertToNativeBackgroundOptions(BackgroundOptions option)
         {
             Console.WriteLine("ConvertToNativeBackgroundOptions : " + option);

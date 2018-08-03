@@ -1,7 +1,22 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -10,7 +25,8 @@ using Xamarin.Forms;
 namespace UIComponents.Samples.CircleList
 {
     /// <summary>
-    /// Class for BindingContext in CircleList
+    /// ListViewModel class
+    /// This class is used for CircleList sample's binding context
     /// </summary>
     public class ListViewModel : INotifyPropertyChanged
     {
@@ -131,6 +147,10 @@ namespace UIComponents.Samples.CircleList
             UpdateSelectOptionMessage();
         }
 
+        /// <summary>
+        /// Called to notify that a change of property happened
+        /// </summary>
+        /// <param name="propertyName">The name of the property that changed</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
@@ -150,7 +170,12 @@ namespace UIComponents.Samples.CircleList
         void SelectOption2Job()
         {
             if (CheckedNamesCount > 0 && CheckedNamesCount != CheckableNames.Count)
-                foreach (var x in CheckableNames) x.Checked = false;
+            {
+                foreach (var x in CheckableNames)
+                {
+                    x.Checked = false;
+                }
+            }
         }
 
         /// <summary>
@@ -164,23 +189,19 @@ namespace UIComponents.Samples.CircleList
     }
 
     /// <summary>
-    /// Class for element of MyGroup class
+    /// CheckableName class
+    /// This class is element of MyGroup class
     /// </summary>
-    ///|                                       GroupList                                           |
-    ///|-------------------------------------------------------------------------------------------|
-    ///|                  MyGroup            |            MyGroup                 | ...            |
-    ///| -------- ---------------------------|------------------------------------|----------------|
-    ///| CheckableName | CheckableName | ... |CheckableName | CheckableName | ... |...             |
-    ///| -------- ---------------------------|------------------------------------|----------------|
-    ///| ------------------------------------------------------------------------------------------|
     public class CheckableName : INotifyPropertyChanged
     {
         string _name;
         bool _checked;
 
         /// <summary>
-        /// Constructor
+        /// Constructor of CheckableName class
         /// </summary>
+        /// <param name="name">string</param>
+        /// <param name="isChecked">bool</param>
         public CheckableName(string name, bool isChecked)
         {
             _name = name;
@@ -224,7 +245,7 @@ namespace UIComponents.Samples.CircleList
         }
 
         /// <summary>
-        /// Called this method from a child class to notify that a change happened on a property.
+        /// Called to notify that a change of property happened
         /// </summary>
         /// <param name="propertyName">The name of the property that changed</param>
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -234,15 +255,9 @@ namespace UIComponents.Samples.CircleList
     }
 
     /// <summary>
-    /// Class of element of Group list
+    /// MyGroup class
+    /// This class is element of GroupList class
     /// </summary>
-    ///|                                       GroupList                                           |
-    ///|-------------------------------------------------------------------------------------------|
-    ///|                  MyGroup            |            MyGroup                 | ...            |
-    ///| -------- ---------------------------|------------------------------------|----------------|
-    ///| CheckableName | CheckableName | ... |CheckableName | CheckableName | ... |...             |
-    ///| -------- ---------------------------|------------------------------------|----------------|
-    ///| ------------------------------------------------------------------------------------------|
     public class MyGroup : List<CheckableName>
     {
         /// <summary>
@@ -253,19 +268,16 @@ namespace UIComponents.Samples.CircleList
         /// <summary>
         /// Constructor
         /// </summary>
-        public MyGroup(string name) { GroupName = name; }
+        /// <param name="name">string</param>
+        public MyGroup(string name)
+        {
+            GroupName = name;
+        }
     }
 
     /// <summary>
-    /// Class for BindingContext in StyleTitleGroupIndex of CircleList
+    /// ListViewGroupModel class
     /// </summary>
-    ///|                                       GroupList                                           |
-    ///|-------------------------------------------------------------------------------------------|
-    ///|                  MyGroup            |            MyGroup                 | ...            |
-    ///| -------- ---------------------------|------------------------------------|----------------|
-    ///| CheckableName | CheckableName | ... |CheckableName | CheckableName | ... |...             |
-    ///| -------- ---------------------------|------------------------------------|----------------|
-    ///| ------------------------------------------------------------------------------------------|
     public class ListViewGroupModel
     {
         /// <summary>
@@ -278,13 +290,71 @@ namespace UIComponents.Samples.CircleList
         /// </summary>
         public ListViewGroupModel()
         {
-            // Create group list
+
             GroupList = new List<MyGroup>
             {
-                new MyGroup("group1") { new CheckableName("Aaliyah", false), new CheckableName("Aamir", false), new CheckableName("Aaralyn ", false), new CheckableName("Aaron", false), new CheckableName("Abagail", false), new CheckableName("Babitha", false), new CheckableName("Bahuratna", false), new CheckableName("Bandana", false), new CheckableName("Bulbul", false), new CheckableName("Cade", false), new CheckableName("Caldwell", false)},
-                new MyGroup("group2") { new CheckableName("Chandan", false), new CheckableName("Caster", false), new CheckableName("Dagan ", false), new CheckableName("Daulat", false), new CheckableName("Dag", false), new CheckableName("Earl", false), new CheckableName("Ebenzer", false), new CheckableName("Ellison", false), new CheckableName("Elizabeth", false), new CheckableName("Filbert", false), new CheckableName("Fitzpatrick", false), new CheckableName("Florian", false), new CheckableName("Fulton", false)},
-                new MyGroup("group3") { new CheckableName("Frazer", false), new CheckableName("Gabriel", false), new CheckableName("Gage", false), new CheckableName("Galen", false), new CheckableName("Garland", false), new CheckableName("Gauhar", false), new CheckableName("Hadden", false), new CheckableName("Hafiz", false), new CheckableName("Hakon", false), new CheckableName("Haleem", false), new CheckableName("Hank", false), new CheckableName("Hanuman", false)},
-                new MyGroup("group4") { new CheckableName("Jabali", false), new CheckableName("Jaimini", false), new CheckableName("Jayadev", false), new CheckableName("Jake", false), new CheckableName("Jayatsena", false), new CheckableName("Jonathan", false), new CheckableName("Jeirk", false), new CheckableName("Jasper", false), new CheckableName("Jack", false), new CheckableName("Kamaal", false), new CheckableName("Mac", false), new CheckableName("Macy", false), new CheckableName("Marlon", false), new CheckableName("Milson", false)},
+                new MyGroup("group1")
+                {
+                    new CheckableName("Aaliyah", false),
+                    new CheckableName("Aamir", false),
+                    new CheckableName("Aaralyn", false),
+                    new CheckableName("Aaron", false),
+                    new CheckableName("Abagail", false),
+                    new CheckableName("Babitha", false),
+                    new CheckableName("Bahuratna", false),
+                    new CheckableName("Bandana", false),
+                    new CheckableName("Bulbul", false),
+                    new CheckableName("Cade", false),
+                    new CheckableName("Caldwell", false)
+                },
+                new MyGroup("group2")
+                { 
+                    new CheckableName("Chandan", false),
+                    new CheckableName("Caster", false),
+                    new CheckableName("Dagan", false),
+                    new CheckableName("Daulat", false),
+                    new CheckableName("Dag", false),
+                    new CheckableName("Earl", false),
+                    new CheckableName("Ebenzer", false),
+                    new CheckableName("Ellison", false),
+                    new CheckableName("Elizabeth", false),
+                    new CheckableName("Filbert", false),
+                    new CheckableName("Fitzpatrick", false),
+                    new CheckableName("Florian", false),
+                    new CheckableName("Fulton", false)
+                },
+                new MyGroup("group3")
+                { 
+                    new CheckableName("Frazer", false),
+                    new CheckableName("Gabriel", false),
+                    new CheckableName("Gage", false),
+                    new CheckableName("Galen", false),
+                    new CheckableName("Garland", false),
+                    new CheckableName("Gauhar", false),
+                    new CheckableName("Hadden", false),
+                    new CheckableName("Hafiz", false),
+                    new CheckableName("Hakon", false),
+                    new CheckableName("Haleem", false),
+                    new CheckableName("Hank", false),
+                    new CheckableName("Hanuman", false)
+                },
+                new MyGroup("group4")
+                { 
+                    new CheckableName("Jabali", false),
+                    new CheckableName("Jaimini", false),
+                    new CheckableName("Jayadev", false),
+                    new CheckableName("Jake", false),
+                    new CheckableName("Jayatsena", false),
+                    new CheckableName("Jonathan", false),
+                    new CheckableName("Jeirk", false),
+                    new CheckableName("Jasper", false),
+                    new CheckableName("Jack", false),
+                    new CheckableName("Kamaal", false),
+                    new CheckableName("Mac", false),
+                    new CheckableName("Macy", false),
+                    new CheckableName("Marlon", false),
+                    new CheckableName("Milson", false)
+                },
             };
         }
     }

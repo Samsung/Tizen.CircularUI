@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 Samsung Electronics Co., Ltd
+ *
+ * Licensed under the Flora License, Version 1.1 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://floralicense.org/license/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -11,7 +27,7 @@ namespace UIComponents.Samples.CircleSpinner
     /// </summary>
     public class SpinnerViewModel : INotifyPropertyChanged
     {
-        double _value= 9.0;
+        double _value = 9.0;
         double _hour = 0;
         double _min = 0;
         double _sec = 0;
@@ -24,7 +40,11 @@ namespace UIComponents.Samples.CircleSpinner
             get => _value;
             set
             {
-                if (_value == value) return;
+                if (_value == value)
+                {
+                    return;
+                }
+
                 _value = value;
                 OnPropertyChanged();
             }
@@ -38,7 +58,11 @@ namespace UIComponents.Samples.CircleSpinner
             get => _hour;
             set
             {
-                if (_hour == value) return;
+                if (_hour == value) 
+                {
+                    return;
+                }
+
                 _hour = value;
                 OnPropertyChanged();
             }
@@ -52,7 +76,11 @@ namespace UIComponents.Samples.CircleSpinner
             get => _min;
             set
             {
-                if (_min == value) return;
+                if (_min == value)
+                {
+                    return;
+                }
+
                 _min = value;
                 OnPropertyChanged();
             }
@@ -66,7 +94,11 @@ namespace UIComponents.Samples.CircleSpinner
             get => _sec;
             set
             {
-                if (_sec == value) return;
+                if (_sec == value)
+                {
+                    return;
+                }
+
                 _sec = value;
                 OnPropertyChanged();
             }
@@ -102,7 +134,7 @@ namespace UIComponents.Samples.CircleSpinner
         }
 
         /// <summary>
-        /// Called this method from a child class to notify that a change happened on a property.
+        /// Called to notify that a change of property happened
         /// </summary>
         /// <param name="propertyName">The name of the property that changed</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
