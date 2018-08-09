@@ -32,10 +32,45 @@ namespace WearableUIGallery.TC
 	public partial class TCTwoButtonPage : TwoButtonPage
 	{
         MenuItem tmp1, tmp2;
-		public TCTwoButtonPage ()
+        TCTwoButtonPageViewModel _viewModel;
+        public TCTwoButtonPage ()
 		{
-			InitializeComponent ();
-		}
+            _viewModel = new TCTwoButtonPageViewModel();
+            InitializeComponent ();
+        }
+
+        public void OnChange1(object sender, EventArgs args)
+        {
+            if (FirstButton != null)
+            {
+                var newItem = new MenuItem
+                {
+                    Icon = new FileImageSource
+                    {
+                        File = "image/b_option_list_icon_delete.png",
+                    },
+                    Command = _viewModel.Command1
+                };
+
+                FirstButton = newItem;
+            }
+        }
+
+        public void OnChange2(object sender, EventArgs args)
+        {
+            if (SecondButton != null)
+            {
+                var newItem = new MenuItem
+                {
+                    Icon = new FileImageSource
+                    {
+                        File = "image/b_option_list_icon_share.png",
+                    },
+                    Command = _viewModel.Command2
+                };
+                SecondButton = newItem;
+            }
+        }
 
         public void OnRemove1(object sender, EventArgs args)
         {
