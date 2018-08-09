@@ -26,5 +26,22 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <since_tizen> 4 </since_tizen>
     public class CircleListView : ListView, IRotaryFocusable
     {
+        /// <summary>
+        /// BindableProperty. Identifies the Header, Footer cancel the Fish Eye Effect or not.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty CancelEffectProperty = BindableProperty.CreateAttached("CancelEffect", typeof(bool), typeof(CircleListView), false);
+
+        /// <summary>
+        /// Gets the Header, Footer cancel the Fish Eye Effect or not.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static bool GetCancelEffect(BindableObject view) => (bool)view.GetValue(CancelEffectProperty);
+
+        /// <summary>
+        /// Sets the Header, Footer cancel the Fish Eye Effect or not.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static void SetCancelEffect(BindableObject view, bool value) => view.SetValue(CancelEffectProperty, value);
     }
 }

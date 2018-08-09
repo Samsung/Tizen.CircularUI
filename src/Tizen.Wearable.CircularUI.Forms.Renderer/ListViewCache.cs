@@ -27,6 +27,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         static readonly Dictionary<Type, CellRenderer> _cellRendererCache = new Dictionary<Type, CellRenderer>();
         static GenItemClass _informalItemClass;
+        static GenItemClass _informalItemClassWithoutFishEye;
         static GenItemClass _paddingItemClass;
         static GroupTextCellRenderer _groupCache;
 
@@ -60,6 +61,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public static GenItemClass InformalItemClass => _informalItemClass ?? (_informalItemClass = new HeaderOrFooterItemClass());
         public static GenItemClass PaddingItemClass => _paddingItemClass ?? (_paddingItemClass = new PaddingItemClass());
+        public static GenItemClass InformalItemClassWithoutFishEye => _informalItemClassWithoutFishEye ?? (_informalItemClassWithoutFishEye = new HeaderOrFooterItemClass(false));
     }
 
     public class HeaderOrFooterItemClass : GenItemClass
@@ -68,9 +70,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             return (int)Math.Round(dp * Device.Info.ScalingFactor);
         }
-        public HeaderOrFooterItemClass() : base("full")
+        public HeaderOrFooterItemClass(bool fishEye) : base(fishEye ? "full" : "full_off")
         {
             GetContentHandler = OnGetContent;
+        }
+
+        public HeaderOrFooterItemClass() : this(true)
+        {
         }
 
         protected EvasObject OnGetContent(object data, string part)

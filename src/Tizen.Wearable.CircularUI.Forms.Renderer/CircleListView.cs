@@ -251,13 +251,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             GenItemClass cls = null;
             ItemType type = ItemType.TopPadding;
             var ctx = FirstItem?.Data as TypedItemContext;
+
             if (Header == null)
             {
                 cls = ListViewCache.PaddingItemClass;
             }
             else
             {
-                cls = ListViewCache.InformalItemClass;
+                cls = Forms.CircleListView.GetCancelEffect(Header) ? ListViewCache.InformalItemClassWithoutFishEye : ListViewCache.InformalItemClass;
                 type = ItemType.Header;
             }
 
@@ -289,7 +290,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
-                cls = ListViewCache.InformalItemClass;
+                cls = Forms.CircleListView.GetCancelEffect(Footer) ? ListViewCache.InformalItemClassWithoutFishEye : ListViewCache.InformalItemClass;
                 type = ItemType.Footer;
             }
 
