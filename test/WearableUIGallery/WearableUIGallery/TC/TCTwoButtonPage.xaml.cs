@@ -43,7 +43,7 @@ namespace WearableUIGallery.TC
         {
             if (FirstButton != null)
             {
-                var newItem = new MenuItem()
+                var newItem = new MenuItem
                 {
                     Icon = new FileImageSource
                     {
@@ -60,7 +60,7 @@ namespace WearableUIGallery.TC
         {
             if (SecondButton != null)
             {
-                var newItem = new MenuItem()
+                var newItem = new MenuItem
                 {
                     Icon = new FileImageSource
                     {
