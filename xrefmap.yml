@@ -396,6 +396,38 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleListView
   fullName: Tizen.Wearable.CircularUI.Forms.CircleListView
   nameWithType: CircleListView
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
+  name: CancelEffectProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_CancelEffectProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
+  nameWithType: CircleListView.CancelEffectProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
+  name: GetCancelEffect(BindableObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_GetCancelEffect_BindableObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
+  nameWithType: CircleListView.GetCancelEffect(BindableObject)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect*
+  name: GetCancelEffect
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_GetCancelEffect_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect
+  nameWithType: CircleListView.GetCancelEffect
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject,System.Boolean)
+  name: SetCancelEffect(BindableObject, Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_SetCancelEffect_BindableObject_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject,System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject, System.Boolean)
+  nameWithType: CircleListView.SetCancelEffect(BindableObject, Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect*
+  name: SetCancelEffect
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_SetCancelEffect_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect
+  nameWithType: CircleListView.SetCancelEffect
 - uid: Tizen.Wearable.CircularUI.Forms.CirclePage
   name: CirclePage
   href: api/Tizen.Wearable.CircularUI.Forms.CirclePage.html
@@ -2288,6 +2320,12 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.HeaderOrFooterItemClass()
   nameWithType: HeaderOrFooterItemClass.HeaderOrFooterItemClass()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor(System.Boolean)
+  name: HeaderOrFooterItemClass(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass__ctor_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.HeaderOrFooterItemClass(System.Boolean)
+  nameWithType: HeaderOrFooterItemClass.HeaderOrFooterItemClass(Boolean)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor*
   name: HeaderOrFooterItemClass
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass__ctor_
@@ -2523,6 +2561,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass
   nameWithType: ListViewCache.InformalItemClass
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
+  name: InformalItemClassWithoutFishEye
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_InformalItemClassWithoutFishEye
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
+  nameWithType: ListViewCache.InformalItemClassWithoutFishEye
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye*
+  name: InformalItemClassWithoutFishEye
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_InformalItemClassWithoutFishEye_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
+  nameWithType: ListViewCache.InformalItemClassWithoutFishEye
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
   name: PaddingItemClass
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_PaddingItemClass
