@@ -93,7 +93,7 @@
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Toast_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Toast : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Toast : object</code></pre>
   </div>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Toast_examples"><strong>Examples</strong></h5>
   <pre><code>Toast.DisplayText(&quot;Hello World&quot;, 3000)
@@ -141,13 +141,40 @@ Toast.DisplayIconText(&quot;Hello World&quot;, new FileImageSource { File = &quo
     </tbody>
   </table>
   <a id="Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_" data-uid="Tizen.Wearable.CircularUI.Forms.Toast.DisplayText*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_System_String_System_Int32_" data-uid="Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String,System.Int32)">DisplayText(String, Int32)</h4>
-  <div class="markdown level1 summary"><p>It shows the simplest form of the message.</p>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_System_String_" data-uid="Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String)">DisplayText(String)</h4>
+  <div class="markdown level1 summary"><p>It shows the simplest form of the message in 3000 milliseconds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DisplayText(string text, int duration = 3000)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DisplayText(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The body text of the toast.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_" data-uid="Tizen.Wearable.CircularUI.Forms.Toast.DisplayText*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_System_String_System_Int32_" data-uid="Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String,System.Int32)">DisplayText(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>It shows the simplest form of the message in the given duration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DisplayText(string text, int duration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

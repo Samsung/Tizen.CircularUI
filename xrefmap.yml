@@ -1535,19 +1535,6 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.PopupEntry
   fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry
   nameWithType: PopupEntry
-- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor
-  name: PopupEntry()
-  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupEntry()
-  nameWithType: PopupEntry.PopupEntry()
-- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor*
-  name: PopupEntry
-  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.PopupEntry.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupEntry
-  nameWithType: PopupEntry.PopupEntry
 - uid: Tizen.Wearable.CircularUI.Forms.PositionOption
   name: PositionOption
   href: api/Tizen.Wearable.CircularUI.Forms.PositionOption.html
@@ -2535,6 +2522,12 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
   nameWithType: ListViewCache
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
+  name: Get(Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
+  nameWithType: ListViewCache.Get(Cell)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell,System.Boolean)
   name: Get(Cell, Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Cell_System_Boolean_
@@ -2612,19 +2605,6 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
   nameWithType: PopupEntryRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
-  name: PopupEntryRenderer()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.PopupEntryRenderer()
-  nameWithType: PopupEntryRenderer.PopupEntryRenderer()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor*
-  name: PopupEntryRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.PopupEntryRenderer
-  nameWithType: PopupEntryRenderer.PopupEntryRenderer
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_Dispose_System_Boolean_
@@ -2956,6 +2936,24 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.Overlap
   nameWithType: TwoButtonPageWidget.Overlap
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String)
+  name: ShowButton1(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Action)
+  name: ShowButton1(String, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, Action)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String)
+  name: ShowButton1(String, String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.String)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, String)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,Action)
   name: ShowButton1(String, String, Action)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_Action_
@@ -2969,6 +2967,24 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1
   nameWithType: TwoButtonPageWidget.ShowButton1
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
+  name: ShowButton2(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Action)
+  name: ShowButton2(String, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Action)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String)
+  name: ShowButton2(String, String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, System.String)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, String)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,Action)
   name: ShowButton2(String, String, Action)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_Action_
@@ -3348,6 +3364,12 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText
   nameWithType: Toast.DisplayIconText
+- uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String)
+  name: DisplayText(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String)
+  nameWithType: Toast.DisplayText(String)
 - uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayText(System.String,System.Int32)
   name: DisplayText(String, Int32)
   href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayText_System_String_System_Int32_
