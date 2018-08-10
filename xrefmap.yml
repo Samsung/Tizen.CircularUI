@@ -3351,6 +3351,12 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Toast
   fullName: Tizen.Wearable.CircularUI.Forms.Toast
   nameWithType: Toast
+- uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource)
+  name: DisplayIconText(String, FileImageSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayIconText_System_String_FileImageSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String, FileImageSource)
+  nameWithType: Toast.DisplayIconText(String, FileImageSource)
 - uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource,System.Int32)
   name: DisplayIconText(String, FileImageSource, Int32)
   href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayIconText_System_String_FileImageSource_System_Int32_
