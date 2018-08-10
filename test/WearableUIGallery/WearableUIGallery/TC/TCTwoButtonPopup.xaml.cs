@@ -45,7 +45,7 @@ namespace WearableUIGallery.TC
         {
             InitializeComponent();
 
-            _leftButton = new MenuItem()
+            _leftButton = new MenuItem
             {
                 Icon = new FileImageSource
                 {

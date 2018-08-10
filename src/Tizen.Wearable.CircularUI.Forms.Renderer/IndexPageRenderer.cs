@@ -260,7 +260,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         string getItemStyle(int itemCount, int offset)
         {
             String returnValue = "";
-            int startItem = 10;
+            int startItem;
             int styleNumber;
 
             if (itemCount % 2 == 0)  //Item count is even.

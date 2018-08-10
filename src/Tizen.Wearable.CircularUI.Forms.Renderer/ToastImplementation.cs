@@ -34,7 +34,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         FileImageSource _icon;
         int _duration = 3000;
         string _text;
-        bool _isDisposed = false;
+        bool _isDisposed;
 
         public ToastImplementation()
         {

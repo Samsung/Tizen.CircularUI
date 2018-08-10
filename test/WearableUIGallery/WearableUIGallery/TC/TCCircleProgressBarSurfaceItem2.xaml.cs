@@ -86,7 +86,7 @@ namespace WearableUIGallery.TC
             }
             else
             {
-                if (Value == 1.0) Value = 0.0;
+                if (Value >= 1.0) Value = 0.0;
                 _startProgress = true;
                 btn.Text = "stop";
                 Device.StartTimer(TimeSpan.FromMilliseconds(200), () =>

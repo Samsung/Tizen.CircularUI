@@ -94,7 +94,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(TwoButtonPopup), null);
 
-        ITwoButtonPopup _popUp = null;
+        ITwoButtonPopup _popUp;
 
         /// <summary>
         /// Occurs when the device's back button is pressed.

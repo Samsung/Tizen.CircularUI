@@ -93,10 +93,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else if (args.PropertyName == CircleSliderSurfaceItem.BarAngleProperty.PropertyName)
             {
                 BarAngle = _item.BarAngle;
-                if (_item.Value != Value)
-                {
-                    _item.Value = Value;
-                }
+                _item.Value = Value;
             }
             else if (args.PropertyName == CircleSliderSurfaceItem.BarAngleOffsetProperty.PropertyName)
             {

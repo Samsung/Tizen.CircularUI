@@ -160,7 +160,7 @@ namespace WearableUIGallery.TC
             Playing = true;
             KeepGoing = true;
             Progress = 0;
-            Device.StartTimer(TimeSpan.FromMilliseconds(1000 / 60), UpdateProgress);
+            Device.StartTimer(TimeSpan.FromMilliseconds(1000.0 / 60.0), UpdateProgress);
         }
 
         void DoShuffle()

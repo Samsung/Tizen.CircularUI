@@ -59,7 +59,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <param name="icon">The file path of the toast icon.</param>
         /// <param name="duration">How long to display the text in milliseconds.</param>
         /// <since_tizen> 4 </since_tizen>
-        public static void DisplayIconText(string text, FileImageSource icon, int duration = 3000)
+        public static void DisplayIconText(string text, FileImageSource icon, int duration)
         {
             new ToastProxy
             {
@@ -68,5 +68,13 @@ namespace Tizen.Wearable.CircularUI.Forms
                 Duration = duration,
             }.Show();
         }
+
+        /// <summary>
+        /// It shows simplest icon and text messege in 3 seconds.
+        /// </summary>
+        /// <param name="text">The body text of the toast.</param>
+        /// <param name="icon">The file path of the toast icon.</param>
+        /// <since_tizen> 4 </since_tizen>
+        public static void DisplayIconText(string text, FileImageSource icon) => DisplayIconText(text, icon, 3000);
     }
 }
