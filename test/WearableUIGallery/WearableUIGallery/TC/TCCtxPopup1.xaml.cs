@@ -36,7 +36,7 @@ namespace WearableUIGallery.TC
         double[] _xRelativeOffsetValue = { 0, 0.2, 0.2, 0.5, 0.5, 0.5, 0.7, 0.7, 1.0};
         double[] _yRelativeOffsetValue = { 0, 0.2, 0.5, 0.2, 0.5, 0.7, 0.2, 0.7, 1.0};
 
-        public Point OffsetValue = new Point();
+        Point OffsetValue = new Point();
         int index;
         public TCCtxPopup1()
         {
@@ -54,7 +54,6 @@ namespace WearableUIGallery.TC
         {
             if (CtxCheck1EffectBehavior.PositionOption == PositionOption.CenterOfParent) return;
 
-            var btn = sender as Button;
             index++;
             if (index >= 9) index = 0;
             if (CtxCheck1EffectBehavior.PositionOption == PositionOption.BottomOfView)

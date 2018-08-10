@@ -47,7 +47,7 @@ namespace WearableUIGallery.TC
                 (b) =>
                 {
                     _rotating = false;
-                    if (_angle == 360)
+                    if (_angle == 360.0)
                     {
                         Cat.Rotation = 0;
                         _angle = 0;

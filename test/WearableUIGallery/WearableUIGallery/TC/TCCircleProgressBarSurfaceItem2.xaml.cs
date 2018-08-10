@@ -26,7 +26,7 @@ namespace WearableUIGallery.TC
     public partial class TCCircleProgressBarSurfaceItem2 : CirclePage
     {
         double _incValue = 0.02;
-        double _progressValue = 0.0;
+        double _progressValue;
         bool _startProgress;
 
         static Func<double,double>  convFuncs = (v) => v;
@@ -86,7 +86,7 @@ namespace WearableUIGallery.TC
             }
             else
             {
-                if (Value == 1.0) Value = 0;
+                if (Value == 1.0) Value = 0.0;
                 _startProgress = true;
                 btn.Text = "stop";
                 Device.StartTimer(TimeSpan.FromMilliseconds(200), () =>

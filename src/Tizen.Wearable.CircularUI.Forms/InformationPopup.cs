@@ -46,7 +46,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BottomButtonProperty = BindableProperty.Create(nameof(BottomButton), typeof(MenuItem), typeof(InformationPopup), null);
 
-        IInformationPopup _popUp = null;
+        IInformationPopup _popUp;
 
         /// <summary>
         /// Occurs when the device's back button is pressed.
@@ -59,7 +59,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             _popUp = DependencyService.Get<IInformationPopup>(DependencyFetchTarget.NewInstance);
             if (_popUp == null)
             {
-                throw new Exception("Object reference not set to an instance of a Popup.");
+                throw new InvalidOperationException("Object reference not set to an instance of a Popup.");
             }
 
             _popUp.BackButtonPressed += (s, e) =>

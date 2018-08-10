@@ -59,7 +59,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _rightButton = new MenuItem()
+            _rightButton = new MenuItem
             {
                 Icon = new FileImageSource
                 {
@@ -73,7 +73,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _noIconLeftButton = new MenuItem()
+            _noIconLeftButton = new MenuItem
             {
                 Text = "No icon left button",
                 Command = new Command(() =>
@@ -84,7 +84,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _noIconRightButton = new MenuItem()
+            _noIconRightButton = new MenuItem
             {
                 Text = "No icon right button",
                 Command = new Command(() =>
@@ -95,7 +95,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _content = new StackLayout()
+            _content = new StackLayout
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Children =
@@ -149,7 +149,7 @@ height. This has two button in action area and title text in title area";
             _popUp1.Title = "Popup title";
             _popUp1.FirstButton = _leftButton;
             _popUp1.SecondButton = _rightButton;
-            _popUp1.Content = new StackLayout()
+            _popUp1.Content = new StackLayout
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Children =
@@ -187,7 +187,7 @@ height. This has two button in action area and title text in title area";
 
         void createPopup2()
         {
-            var leftButton2 = new MenuItem()
+            var leftButton2 = new MenuItem
             {
                 Icon = new FileImageSource
                 {
@@ -201,7 +201,7 @@ height. This has two button in action area and title text in title area";
                 })
             };
 
-            var rightButton2 = new MenuItem()
+            var rightButton2 = new MenuItem
             {
                 Icon = new FileImageSource
                 {
@@ -234,7 +234,7 @@ height. This has two button in action area and title text in title area";
 
         void createPopup3()
         {
-            _jpgIconButton1 = new MenuItem()
+            _jpgIconButton1 = new MenuItem
             {
                 Icon = new FileImageSource
                 {
@@ -248,7 +248,7 @@ height. This has two button in action area and title text in title area";
                 })
             };
 
-            _jpgIconButton2 = new MenuItem()
+            _jpgIconButton2 = new MenuItem
             {
                 Icon = new FileImageSource
                 {

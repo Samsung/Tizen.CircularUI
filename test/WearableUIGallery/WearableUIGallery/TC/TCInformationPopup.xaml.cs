@@ -41,7 +41,7 @@ namespace WearableUIGallery.TC
         {
             InitializeComponent();
 
-            _textBottomButton = new MenuItem()
+            _textBottomButton = new MenuItem
             {
                 Text = "OK",
                 Command = new Command(() =>
@@ -52,7 +52,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _iconBottomButton = new MenuItem()
+            _iconBottomButton = new MenuItem
             {
                 Icon = new FileImageSource
                 {
@@ -66,7 +66,7 @@ namespace WearableUIGallery.TC
                 })
             };
 
-            _textIconBottomButton = new MenuItem()
+            _textIconBottomButton = new MenuItem
             {
                 Text = "OK",
                 Icon = new FileImageSource

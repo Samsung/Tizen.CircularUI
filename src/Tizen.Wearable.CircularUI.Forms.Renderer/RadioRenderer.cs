@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     public class RadioRenderer : ViewRenderer<Radio, ERadio>
     {
         static Lazy<RadioGroupManager> s_GroupManager = new Lazy<RadioGroupManager>();
-        int _changedCallbackDepth = 0;
+        int _changedCallbackDepth;
 
         public RadioRenderer()
         {

@@ -25,14 +25,14 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <since_tizen> 4 </since_tizen>
     internal class ToastProxy : IToast
     {
-        IToast _toastProxy = null;
+        IToast _toastProxy;
 
         public ToastProxy()
         {
             _toastProxy = DependencyService.Get<IToast>(DependencyFetchTarget.NewInstance);
 
             if (_toastProxy == null)
-                throw new Exception("RealObject is null, Internal instance via DependecyService was not created.");
+                throw new InvalidOperationException("Internal instance via DependecyService was not created.");
         }
 
         /// <summary>

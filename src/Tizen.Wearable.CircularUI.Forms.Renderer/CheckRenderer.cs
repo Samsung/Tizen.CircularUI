@@ -77,7 +77,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 case CheckDisplayStyle.Small:
                     Control.Style = CheckStyle.Small;
                     break;
-                case CheckDisplayStyle.Default:
                 default:
                     Control.Style = CheckStyle.Default;
                     break;

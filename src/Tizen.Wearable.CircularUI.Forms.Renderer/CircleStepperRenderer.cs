@@ -113,7 +113,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return new ESize(360, 110);
         }
 
-        void UpdateMarkerColor(bool initialize)
+        void UpdateMarkerColor()
         {
             if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
@@ -121,7 +121,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateMarkerLineWidth(bool initialize)
+        void UpdateMarkerLineWidth()
         {
             if (null != Control && null != Element)
             {
@@ -129,7 +129,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateLabelFormat(bool initialize)
+        void UpdateLabelFormat()
         {
             if (null != Control && null != Element)
             {
@@ -137,7 +137,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateTitle(bool initialize)
+        void UpdateTitle()
         {
             if (null != Control && null != Element)
             {
@@ -145,7 +145,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateValue(bool initialize)
+        void UpdateValue()
         {
             if (null != Control && null != Element)
             {
@@ -153,7 +153,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateMaximum(bool initialize)
+        void UpdateMaximum()
         {
             if (null != Control && null != Element)
             {
@@ -161,7 +161,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateMinimum(bool initialize)
+        void UpdateMinimum()
         {
             if (null != Control && null != Element)
             {
@@ -169,7 +169,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateIncrement(bool initialize)
+        void UpdateIncrement()
         {
             if (null != Control && null != Element)
             {

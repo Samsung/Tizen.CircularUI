@@ -115,8 +115,6 @@ namespace WearableUIGallery.TC
     {
         string _text;
         string _title;
-        ICommand _command1;
-        ICommand _command2;
 
         const string _myContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio purus, vulputate a porttitor non, iaculis id nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean feugiat ut justo ac porta. Nullam sit amet fermentum lectus. Vivamus id ante id felis fermentum finibus nec nec mi. Ut ac lectus id purus venenatis posuere a hendrerit sapien. Aliquam urna felis, aliquam vehicula egestas sed, commodo et risus. Sed suscipit sapien vel diam lacinia, quis vehicula eros egestas. Donec in ultricies nulla. Donec ullamcorper neque vitae neque ullamcorper pharetra. In non risus scelerisque, malesuada sapien ut, vulputate urna. Morbi sed justo eu lacus ornare viverra at id felis.";
 
@@ -124,8 +122,8 @@ namespace WearableUIGallery.TC
         {
             _text = _myContent;
             _title = "MyTitle";
-            _command1 = new Command(() => Title = string.IsNullOrEmpty(Title) ? "MyTitle" : "");
-            _command2 = new Command(() => Text = string.IsNullOrEmpty(Text) ? _myContent : "");
+            Command1 = new Command(() => Title = string.IsNullOrEmpty(Title) ? "MyTitle" : "");
+            Command2 = new Command(() => Text = string.IsNullOrEmpty(Text) ? _myContent : "");
         }
 
         public string Text
@@ -150,8 +148,8 @@ namespace WearableUIGallery.TC
             }
         }
 
-        public ICommand Command1 => _command1;
-        public ICommand Command2 => _command2;
+        public ICommand Command1 { get; private set; }
+        public ICommand Command2 { get; private set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

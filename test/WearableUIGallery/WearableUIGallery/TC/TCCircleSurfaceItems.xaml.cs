@@ -44,7 +44,7 @@ namespace WearableUIGallery.TC
         int index = 0;
         int inc = 1;
         double incValue = 0.01;
-        double progressValue = 0.0;
+        double progressValue;
         bool appeared;
 
         public double Value {

@@ -281,7 +281,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void UpdateFooter()
         {
             GenItemClass cls = null;
-            ItemType type = ItemType.BottomPadding;
+            ItemType type;
             var ctx = LastItem?.Data as TypedItemContext;
             if (Footer == null)
             {

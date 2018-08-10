@@ -10,10 +10,7 @@ namespace WearableUIGallery.TC
 {
     public class MyImageData : INotifyPropertyChanged
     {
-        bool _isSelected = false;
-        public MyImageData()
-        {
-        }
+        bool _isSelected;
 
         public string Text { get; set; }
 
@@ -47,12 +44,12 @@ namespace WearableUIGallery.TC
 
         public TCIndexPageViewModel()
         {
-            SampleImageData.Add(new MyImageData() { Text = "Image 1", Source = "image/100_1.jpg"});
-            SampleImageData.Add(new MyImageData() { Text = "Image 2", Source = "image/100_2.jpg" });
-            SampleImageData.Add(new MyImageData() { Text = "Image 3", Source = "image/100_3.jpg" });
-            SampleImageData.Add(new MyImageData() { Text = "Image 4", Source = "image/100_4.jpg" });
-            SampleImageData.Add(new MyImageData() { Text = "Image 5", Source = "image/100_5.jpg" });
-            SampleImageData.Add(new MyImageData() { Text = "Image 6", Source = "image/100_6.jpg" });
+            SampleImageData.Add(new MyImageData { Text = "Image 1", Source = "image/100_1.jpg"});
+            SampleImageData.Add(new MyImageData { Text = "Image 2", Source = "image/100_2.jpg" });
+            SampleImageData.Add(new MyImageData { Text = "Image 3", Source = "image/100_3.jpg" });
+            SampleImageData.Add(new MyImageData { Text = "Image 4", Source = "image/100_4.jpg" });
+            SampleImageData.Add(new MyImageData { Text = "Image 5", Source = "image/100_5.jpg" });
+            SampleImageData.Add(new MyImageData { Text = "Image 6", Source = "image/100_6.jpg" });
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")

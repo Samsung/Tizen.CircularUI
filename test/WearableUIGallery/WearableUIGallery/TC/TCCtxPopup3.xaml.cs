@@ -25,12 +25,11 @@ using System.Globalization;
 
 namespace WearableUIGallery.TC
 {
- 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCCtxPopup3 : CirclePage
     {
         ContextPopupEffectBehavior _behavior;
-        bool _visibility = false;
+        bool _visibility;
 
         public bool Visibility
         {
@@ -73,7 +72,7 @@ namespace WearableUIGallery.TC
         {
             if (_behavior == null)
             {
-                _behavior = new ContextPopupEffectBehavior()
+                _behavior = new ContextPopupEffectBehavior
                 {
                     AcceptCommand = CtxCheck1AcceptedCommand,
                     AcceptText = "Yes",
@@ -105,7 +104,6 @@ namespace WearableUIGallery.TC
         }
         void OnClickVisibility(object sender, EventArgs args)
         {
-            var btn = sender as Button;
             if(_behavior == null ) return;
 
             if (!Visibility)

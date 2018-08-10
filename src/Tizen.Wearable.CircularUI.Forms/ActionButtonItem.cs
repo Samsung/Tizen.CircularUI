@@ -28,12 +28,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the IsEnable bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsEnableProperty = BindableProperty.Create(nameof(IsEnable), typeof(bool), typeof(ActionButtonItem), true);
+        public static readonly BindableProperty IsEnableProperty = BindableProperty.Create(nameof(IsEnable), typeof(bool), typeof(ActionButtonItem), true);
         /// <summary>
         /// BindableProperty. Identifies the IsVisible bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleProperty = BindableProperty.Create(nameof(IsVisible), typeof(bool), typeof(ActionButtonItem), true);
+        public static readonly BindableProperty IsVisibleProperty = BindableProperty.Create(nameof(IsVisible), typeof(bool), typeof(ActionButtonItem), true);
 
         /// <summary>
         /// Gets or sets a boolean value that indicates whether this ActionButtonItem is enabled.

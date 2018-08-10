@@ -40,7 +40,7 @@ namespace WearableUIGallery.TC
 
                 var page = Activator.CreateInstance(pageType) as Page;
                 NavigationPage.SetHasNavigationBar(page, false);
-                Navigation.PushAsync(page as Page);
+                Navigation.PushAsync(page);
             }
         }
     }
