@@ -30,7 +30,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         ElmSharp.EvasObject _content;
         ElmSharp.SmartEvent _scrollAnimationStart, _scrollAnimationStop;
-        bool _isAnimation = false;
+        bool _isAnimation;
         TaskCompletionSource<bool> _animationTaskComplateSource;
 
         public CircleScrollViewRenderer()
@@ -105,7 +105,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 y = itemPosition.Y;
             }
             var region = new Xamarin.Forms.Rectangle(x, y, Element.Width, Element.Height).ToPixel();
-            await ScrollToAsync(region, e.ShouldAnimate);
+            await ScrollToAsync(region, e.ShouldAnimate).ConfigureAwait(false);
             Element.SendScrollFinished();
         }
 

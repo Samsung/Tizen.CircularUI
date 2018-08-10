@@ -77,8 +77,6 @@ namespace WearableUIGallery.TC
 
         void OnClickPositionOption(object sender, EventArgs args)
         {
-            var btn = sender as Button;
-
             if(CtxCheck1EffectBehavior.PositionOption == PositionOption.Absolute)
             {
                 index = 0;

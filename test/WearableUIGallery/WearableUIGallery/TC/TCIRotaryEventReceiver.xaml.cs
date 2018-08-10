@@ -43,16 +43,12 @@ namespace WearableUIGallery.TC
 
             _rotating = true;
             _angle += args.IsClockwise ? 30 : -30;
-            Cat.RotateTo(_angle).ContinueWith(
-                (b) =>
-                {
-                    _rotating = false;
-                    if (_angle == 360.0)
-                    {
-                        Cat.Rotation = 0;
-                        _angle = 0;
-                    }
-                });
+            if (_angle >= 360.0)
+            {
+                _angle = 0;
+                Cat.Rotation = 0;
+            }
+            Cat.RotateTo(_angle);
         }
     }
 }

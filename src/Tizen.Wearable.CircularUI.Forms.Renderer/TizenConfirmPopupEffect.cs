@@ -116,7 +116,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             var option = _behavior.PositionOption;
             var offset = _behavior.Offset;
-            int x = 0, y = 0;
+            int x, y;
             Rect rect;
             Rect ctxRect = _popup.Geometry;
             switch (option)
@@ -140,6 +140,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
                     x = (int)(rect.Width * offset.X);
                     y = (int)(rect.Height * offset.Y);
+                    break;
+                default:
+                    x = 0;
+                    y = 0;
                     break;
             }
 

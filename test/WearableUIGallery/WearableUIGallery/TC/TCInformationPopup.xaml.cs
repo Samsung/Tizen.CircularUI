@@ -29,9 +29,9 @@ namespace WearableUIGallery.TC
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCInformationPopup : ContentPage
     {
-        InformationPopup _textPopUp = null;
-        InformationPopup _textButtonPopUp = null;
-        InformationPopup _progressPopUp = null;
+        InformationPopup _textPopUp;
+        InformationPopup _textButtonPopUp;
+        InformationPopup _progressPopUp;
         MenuItem _textBottomButton;
         MenuItem _iconBottomButton;
         MenuItem _textIconBottomButton;
