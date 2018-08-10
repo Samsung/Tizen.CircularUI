@@ -119,7 +119,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
 
         Xamarin.Forms.Internals.DeviceOrientation GetDeviceOrientation()
         {
-            Xamarin.Forms.Internals.DeviceOrientation orientation = Xamarin.Forms.Internals.DeviceOrientation.Other;
+            Xamarin.Forms.Internals.DeviceOrientation orientation;
             var isPortraitDevice = Xamarin.Forms.Platform.Tizen.Forms.NaturalOrientation.IsPortrait();
             switch (Window.Rotation)
             {
@@ -131,6 +131,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
                 case 90:
                 case 270:
                     orientation = isPortraitDevice ? Xamarin.Forms.Internals.DeviceOrientation.Landscape : Xamarin.Forms.Internals.DeviceOrientation.Portrait;
+                    break;
+                default:
+                    orientation = Xamarin.Forms.Internals.DeviceOrientation.Other;
                     break;
             }
             return orientation;

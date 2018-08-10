@@ -29,45 +29,45 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the Minimum bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty MinimumProperty = BindableProperty.Create(nameof(Minimum), typeof(double), typeof(CircleSliderSurfaceItem), 0d, coerceValue: (bindable, value) =>
+        public static readonly BindableProperty MinimumProperty = BindableProperty.Create(nameof(Minimum), typeof(double), typeof(CircleSliderSurfaceItem), 0d, coerceValue: (bindable, v) =>
         {
             var slider = (CircleSliderSurfaceItem)bindable;
-            slider.Value = slider.Value.Clamp((double)value, slider.Maximum);
-            return value;
+            slider.Value = slider.Value.Clamp((double)v, slider.Maximum);
+            return v;
         });
 
         /// <summary>
         /// BindableProperty. Identifies the Maximum bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty MaximumProperty = BindableProperty.Create(nameof(Maximum), typeof(double), typeof(CircleSliderSurfaceItem), 11d, coerceValue: (bindable, value) =>
+        public static readonly BindableProperty MaximumProperty = BindableProperty.Create(nameof(Maximum), typeof(double), typeof(CircleSliderSurfaceItem), 11d, coerceValue: (bindable, v) =>
         {
             var slider = (CircleSliderSurfaceItem)bindable;
-            slider.Value = slider.Value.Clamp(slider.Minimum, (double)value);
-            return value;
+            slider.Value = slider.Value.Clamp(slider.Minimum, (double)v);
+            return v;
         });
 
         /// <summary>
         /// BindableProperty. Identifies the Increment bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty IncrementProperty = BindableProperty.Create(nameof(Increment), typeof(double), typeof(CircleSliderSurfaceItem), 1d, coerceValue: (bindable, value) =>
+        public static readonly BindableProperty IncrementProperty = BindableProperty.Create(nameof(Increment), typeof(double), typeof(CircleSliderSurfaceItem), 1d, coerceValue: (bindable, v) =>
         {
-            if ((double)value < 0d)
+            if ((double)v < 0d)
             {
-                value = 1d;
+                v = 1d;
             }
-            return value;
+            return v;
         });
 
         /// <summary>
         /// BindableProperty. Identifies the Value bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ValueProperty = BindableProperty.Create(nameof(Value), typeof(double), typeof(CircleSliderSurfaceItem), 0d, coerceValue: (bindable, value) =>
+        public static readonly BindableProperty ValueProperty = BindableProperty.Create(nameof(Value), typeof(double), typeof(CircleSliderSurfaceItem), 0d, coerceValue: (bindable, v) =>
         {
             var slider = (CircleSliderSurfaceItem)bindable;
-            return ((double)value).Clamp(slider.Minimum, slider.Maximum);
+            return ((double)v).Clamp(slider.Minimum, slider.Maximum);
         });
 
         /// <summary>

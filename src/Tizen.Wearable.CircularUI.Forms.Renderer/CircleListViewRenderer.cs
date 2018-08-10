@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
     public class CircleListViewRenderer : ViewRenderer<CCircularListView, CircleListView>
     {
-        int _selectedItemChanging = 0;
+        int _selectedItemChanging;
 
         public CircleListViewRenderer()
         {

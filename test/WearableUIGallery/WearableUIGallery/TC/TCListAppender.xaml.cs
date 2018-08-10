@@ -17,7 +17,7 @@ namespace WearableUIGallery.TC
 
 		public TCListAppender ()
 		{
-            Texts = new ObservableCollection<string>()
+            Texts = new ObservableCollection<string>
             {
                 "Test 1",
                 "Test 2",

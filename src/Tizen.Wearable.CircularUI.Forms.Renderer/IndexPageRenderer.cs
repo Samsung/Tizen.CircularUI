@@ -39,8 +39,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         const int ItemMaxCount = 20;
         const int OddMiddleItem = 10;
         const int EvenMiddleItem = 11;
-        private int _pageIndex = 0;
-        private int _changedByScroll = 0;
+        private int _pageIndex;
+        private int _changedByScroll;
 
         Index _index;
         List<IndexItem> _items = new List<IndexItem>();
@@ -49,8 +49,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         Scroller _scroller;
 
         private ElmSharp.Size _layoutBound;
-        bool _isInitalized = false;
-        bool _isUpdateCarousel = false;
+        bool _isInitalized;
+        bool _isUpdateCarousel;
 
         protected override void OnElementChanged(ElementChangedEventArgs<IndexPage> e)
         {
@@ -261,7 +261,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             String returnValue = "";
             int startItem = 10;
-            int styleNumber = 10;
+            int styleNumber;
 
             if (itemCount % 2 == 0)  //Item count is even.
             {

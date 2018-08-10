@@ -12,10 +12,6 @@ namespace WearableUIGallery.TC
     {
         bool _checked;
 
-        public MyCustomData()
-        {
-        }
-
         public string Text { get; set; }
         public string Value { get; set; }
         public string GroupName { get; set; }
@@ -80,23 +76,23 @@ namespace WearableUIGallery.TC
 
         public TCRadioViewModel()
         {
-            SampleData.Add(new MyCustomData() { Text = "No off", Value = "NoOff", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData() { Text = "15 seconds", Value = "15s", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData() { Text = "30 seconds", Value = "30s", GroupName = "timeout", IsSelected = true });
-            SampleData.Add(new MyCustomData() { Text = "1 minute", Value = "1m", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData() { Text = "5 minute", Value = "5m", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData() { Text = "10 minute", Value = "10m", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData() { Text = "15 minute", Value = "15m", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "No off", Value = "NoOff", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "15 seconds", Value = "15s", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "30 seconds", Value = "30s", GroupName = "timeout", IsSelected = true });
+            SampleData.Add(new MyCustomData { Text = "1 minute", Value = "1m", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "5 minute", Value = "5m", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "10 minute", Value = "10m", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "15 minute", Value = "15m", GroupName = "timeout", IsSelected = false });
 
             //SoundMode
-            Sound = new MyCustomData() { Text = "Sound", Value = "sound", GroupName = "SoundMode", IsSelected = true };
-            Vibrate = new MyCustomData() { Text = "Vibrate", Value = "vibrate", GroupName = "SoundMode", IsSelected = false };
-            Mute = new MyCustomData() { Text = "Mute", Value = "mute", GroupName = "SoundMode", IsSelected = false };
+            Sound = new MyCustomData { Text = "Sound", Value = "sound", GroupName = "SoundMode", IsSelected = true };
+            Vibrate = new MyCustomData { Text = "Vibrate", Value = "vibrate", GroupName = "SoundMode", IsSelected = false };
+            Mute = new MyCustomData { Text = "Mute", Value = "mute", GroupName = "SoundMode", IsSelected = false };
 
             //Vibrate Strength
-            Strong = new MyCustomData() { Text = "Strong", Value = "3", GroupName = "VibratorStrength", IsSelected = false };
-            Medium = new MyCustomData() { Text = "Medium", Value = "2", GroupName = "VibratorStrength", IsSelected = true };
-            Weak = new MyCustomData() { Text = "Weak", Value = "1", GroupName = "VibratorStrength", IsSelected = false };
+            Strong = new MyCustomData { Text = "Strong", Value = "3", GroupName = "VibratorStrength", IsSelected = false };
+            Medium = new MyCustomData { Text = "Medium", Value = "2", GroupName = "VibratorStrength", IsSelected = true };
+            Weak = new MyCustomData { Text = "Weak", Value = "1", GroupName = "VibratorStrength", IsSelected = false };
 
             Sound.PropertyChanged += (s, e) =>
             {

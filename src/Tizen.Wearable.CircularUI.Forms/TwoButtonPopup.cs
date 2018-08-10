@@ -111,7 +111,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             _popUp = DependencyService.Get<ITwoButtonPopup>(DependencyFetchTarget.NewInstance);
             if (_popUp == null)
             {
-                throw new Exception("Object reference not set to an instance of a Popup.");
+                throw new InvalidOperationException("Object reference not set to an instance of a Popup.");
             }
 
             _popUp.BackButtonPressed += (s, e) =>

@@ -115,7 +115,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             ((IScrollViewController)Element).SetScrolledPosition(region.X, region.Y);
         }
 
-        void OnContent(bool obj)
+        void OnContent()
         {
             if (_content != null)
             {
@@ -179,6 +179,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     Control.HorizontalScrollBarVisiblePolicy = ElmSharp.ScrollBarVisiblePolicy.Auto;
                     Control.VerticalScrollBarVisiblePolicy = ElmSharp.ScrollBarVisiblePolicy.Auto;
                     break;
+                default:
+                    throw new InvalidOperationException("Not supported orientation.");
             }
         }
 

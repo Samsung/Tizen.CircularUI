@@ -29,13 +29,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         Interop.EFL.InputPanelEventCallback _editorStateChanged;
 
-        ElmSharp.Color _defaultColor;
-
         Interop.EFL.InputPanelState _IMEState;
 
-        public PopupEntryRenderer() : base()
-        {
-        }
+        ElmSharp.Color DefaultColor { get; set; }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
@@ -127,9 +123,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _editor.Text = Control.Text;
 
-            _defaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
+            DefaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
             _editor.TextColor = Control.TextColor;
-            _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? _defaultColor : Control.BackgroundColor;
+            _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? DefaultColor : Control.BackgroundColor;
 
             _editor.MoveCursorEnd();
             _editor.ShowInputPanel();

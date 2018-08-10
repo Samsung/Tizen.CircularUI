@@ -34,7 +34,7 @@ namespace WearableUIGallery.TC
         bool _alertSliderVisibility;
         bool _ringtoneSliderVisibility;
         bool _dateVisibility = true;
-        IRotaryFocusable _rotaryFocusTarget = null;
+        IRotaryFocusable _rotaryFocusTarget;
 
         public double Progress
         {
@@ -144,7 +144,7 @@ namespace WearableUIGallery.TC
             Playing = true;
             Progress = 0;
             KeepGoing = false;
-            Device.StartTimer(TimeSpan.FromMilliseconds(1000 / 60), UpdateProgress);
+            Device.StartTimer(TimeSpan.FromMilliseconds(1000.0 / 60.0), UpdateProgress);
         }
 
         void DoStop()
@@ -169,7 +169,7 @@ namespace WearableUIGallery.TC
             Playing = true;
             KeepGoing = true;
             Progress = 0;
-            Device.StartTimer(TimeSpan.FromMilliseconds(1000 / 60), UpdateShuffleProgress);
+            Device.StartTimer(TimeSpan.FromMilliseconds(1000.0 / 60), UpdateShuffleProgress);
         }
 
         void DoAlertVolume(object obj)

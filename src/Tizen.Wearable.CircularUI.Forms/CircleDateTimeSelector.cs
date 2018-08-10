@@ -56,32 +56,32 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the IsVisibleOfYear bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleOfYearProperty = BindableProperty.Create(nameof(IsVisibleOfYear), typeof(bool), typeof(CircleDateTimeSelector), true);
+        public static readonly BindableProperty IsVisibleOfYearProperty = BindableProperty.Create(nameof(IsVisibleOfYear), typeof(bool), typeof(CircleDateTimeSelector), true);
         /// <summary>
         /// BindableProperty. Identifies the IsVisibleOfMonth bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleOfMonthProperty = BindableProperty.Create(nameof(IsVisibleOfMonth), typeof(bool), typeof(CircleDateTimeSelector), true);
+        public static readonly BindableProperty IsVisibleOfMonthProperty = BindableProperty.Create(nameof(IsVisibleOfMonth), typeof(bool), typeof(CircleDateTimeSelector), true);
         /// <summary>
         /// BindableProperty. Identifies the IsVisibleOfDate bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleOfDateProperty = BindableProperty.Create(nameof(IsVisibleOfDate), typeof(bool), typeof(CircleDateTimeSelector), true);
+        public static readonly BindableProperty IsVisibleOfDateProperty = BindableProperty.Create(nameof(IsVisibleOfDate), typeof(bool), typeof(CircleDateTimeSelector), true);
         /// <summary>
         /// BindableProperty. Identifies the IsVisibleOfHour bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleOfHourProperty = BindableProperty.Create(nameof(IsVisibleOfHour), typeof(bool), typeof(CircleDateTimeSelector), true);
+        public static readonly BindableProperty IsVisibleOfHourProperty = BindableProperty.Create(nameof(IsVisibleOfHour), typeof(bool), typeof(CircleDateTimeSelector), true);
         /// <summary>
         /// BindableProperty. Identifies the IsVisibleOfMinute bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleOfMinuteProperty = BindableProperty.Create(nameof(IsVisibleOfMinute), typeof(bool), typeof(CircleDateTimeSelector), true);
+        public static readonly BindableProperty IsVisibleOfMinuteProperty = BindableProperty.Create(nameof(IsVisibleOfMinute), typeof(bool), typeof(CircleDateTimeSelector), true);
         /// <summary>
         /// BindableProperty. Identifies the IsVisibleOfAmPm bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static BindableProperty IsVisibleOfAmPmProperty = BindableProperty.Create(nameof(IsVisibleOfAmPm), typeof(bool), typeof(CircleDateTimeSelector), true);
+        public static readonly BindableProperty IsVisibleOfAmPmProperty = BindableProperty.Create(nameof(IsVisibleOfAmPm), typeof(bool), typeof(CircleDateTimeSelector), true);
 
         /// <summary>
         /// Gets or sets Marker color

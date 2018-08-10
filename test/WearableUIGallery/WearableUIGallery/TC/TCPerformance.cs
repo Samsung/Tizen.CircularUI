@@ -40,20 +40,20 @@ namespace WearableUIGallery.TC
             }
         }
 
-        InformationPopup _popUp = null;
+        InformationPopup _popUp;
 
         IList<Data> _testData = new List<Data>();
         RenderCircleListView _listView;
-        IGlobalScrollConfig GlobalScrollConfig = null;
-        IEcoreAnimator EcoreAnimator = null;
+        IGlobalScrollConfig GlobalScrollConfig;
+        IEcoreAnimator EcoreAnimator;
 
-        double _enteringSpeed = 0.0;
-        double _startTime = 0.0;
-        int _frameCount = 0;
-        int _ecoreCount = 0;
-        double _frameSet = 0.0;
+        double _enteringSpeed;
+        double _startTime;
+        int _frameCount;
+        int _ecoreCount;
+        double _frameSet;
 
-        bool _startCal = false;
+        bool _startCal;
 
         Data ItemTarget => _testData[999];
 

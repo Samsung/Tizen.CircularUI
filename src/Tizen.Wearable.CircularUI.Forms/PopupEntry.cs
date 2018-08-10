@@ -28,8 +28,5 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <since_tizen> 4 </since_tizen>
     public class PopupEntry : Entry
     {
-        public PopupEntry() : base()
-        {
-        }
     }
 }

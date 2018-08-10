@@ -37,8 +37,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         string _title;
         string _text;
-        bool _isProgressRunning = false;
-        bool _isDisposed = false;
+        bool _isProgressRunning;
+        bool _isDisposed;
 
         public event EventHandler BackButtonPressed;
 
@@ -299,7 +299,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (Application.Current.Platform == null)
             {
-                throw new Exception("When the Application's Platform is null, can not show the Dialog.");
+                throw new InvalidOperationException("When the Application's Platform is null, can not show the Dialog.");
             }
 
             if (_popUp != null)

@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         static GenItemClass _paddingItemClass;
         static GroupTextCellRenderer _groupCache;
 
-        public static CellRenderer Get(Cell cell, bool IsGroupHeader = false)
+        public static CellRenderer Get(Cell cell, bool IsGroupHeader)
         {
             if (IsGroupHeader)
             {
@@ -58,6 +58,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 return _cellRendererCache[type] = renderer;
             }
         }
+        public static CellRenderer Get(Cell cell) => Get(cell, false);
 
         public static GenItemClass InformalItemClass => _informalItemClass ?? (_informalItemClass = new HeaderOrFooterItemClass());
         public static GenItemClass PaddingItemClass => _paddingItemClass ?? (_paddingItemClass = new PaddingItemClass());
@@ -95,7 +96,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     renderer.NativeView.MinimumHeight = ToPx(element.MinimumHeightRequest);
                 }
-                //Console.WriteLine($"{ctx.Type.ToString()} / renderer.NativeView.MinimumHeight = {renderer.NativeView.MinimumHeight}");
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 return renderer.NativeView;
             }
