@@ -48,7 +48,7 @@ namespace WearableUIGallery.TC
                 _angle = 0;
                 Cat.Rotation = 0;
             }
-            Cat.RotateTo(_angle);
+            Cat.RotateTo(_angle).ContinueWith(t => _rotating = false);
         }
     }
 }

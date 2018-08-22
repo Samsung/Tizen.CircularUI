@@ -11,6 +11,11 @@ Add `IRotaryEventReceiver` interface to `CirclePage` or `Page` having [CircleSur
 `RotaryEventArgs.IsClockwise` gets the direction of bezel rotation. `IsClockwise` is `true`, when the device is rotated in the clockwise direction.
 The following sample receives rotary event at `Rotate()` method and add angle of the image following to rotary event direction. And then rotate the image.
 
+## Set the event receiver to a RotaryFocusObject.
+
+Apply the implementation of IRotaryEventReceiver to the RotaryFocusObject in CirclePage.  
+IRotaryEventReceiver implements IRotaryFocusable, only IRotaryFocusable applied to a RotaryFocusObject can receive Bezel events.
+
 For more information, see [IRotaryEventReceiver API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html).
 
 _The code example of this guide uses TCIRotaryEventReceiver code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCIRotaryEventReceiver.xaml_
@@ -50,7 +55,17 @@ _The code example of this guide uses TCIRotaryEventReceiver code of WearableUIGa
 
 **XAML file**
 ```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCIRotaryEventReceiver"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    x:Name="MyCirclePage"
+    RotaryFocusObject="{x:Reference MyCirclePage}">
     <w:CirclePage.Content>
         <Image x:Name="Cat" Source="image/cat360.png" />
     </w:CirclePage.Content>
+</w:CirclePage>
 ```
