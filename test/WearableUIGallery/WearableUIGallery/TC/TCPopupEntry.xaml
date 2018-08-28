@@ -1,25 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<w:CirclePage
 	x:Class="WearableUIGallery.TC.TCPopupEntry"
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference Scroller}">
 	<ContentPage.Content>
-		<StackLayout Padding="20,40,20,40">
-			<w:PopupEntry
-				BackgroundColor="Gray"
-				HorizontalOptions="FillAndExpand"
-				TextColor="Blue"
-				VerticalOptions="CenterAndExpand" />
-			<w:PopupEntry
-				HorizontalOptions="FillAndExpand"
-				Placeholder="Foobar"
-				VerticalOptions="CenterAndExpand" />
-			<w:PopupEntry
-				HorizontalOptions="FillAndExpand"
-				IsPassword="True"
-				Placeholder="Password"
-				VerticalOptions="CenterAndExpand" />
-		</StackLayout>
-	</ContentPage.Content>
-</ContentPage>
+        <w:CircleScrollView x:Name="Scroller">
+            <StackLayout Padding="20,40,20,40">
+                <w:PopupEntry
+                    BackgroundColor="Gray"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="Blue"
+                    VerticalOptions="CenterAndExpand" />
+                <w:PopupEntry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Foobar"
+                    VerticalOptions="CenterAndExpand" />
+                <w:PopupEntry
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="True"
+                    Placeholder="Password"
+                    VerticalOptions="CenterAndExpand" />
+                <w:PopupEntry
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </w:CircleScrollView>
+    </ContentPage.Content>
+</w:CirclePage>
