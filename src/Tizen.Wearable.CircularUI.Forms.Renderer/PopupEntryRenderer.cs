@@ -145,15 +145,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 CreatePopup();
             }
-            if (_editor.IsPassword != Control.IsPassword)
-            {
-                _editor.IsPassword = Control.IsPassword;
-            }
-
-            if (_editor.HorizontalTextAlignment != Control.HorizontalTextAlignment)
-            {
-                _editor.HorizontalTextAlignment = Control.HorizontalTextAlignment;
-            }
+            _editor.IsPassword = Control.IsPassword;
+            _editor.HorizontalTextAlignment = Control.HorizontalTextAlignment;
 
             _editor.Text = Control.Text;
             _editor.TextChanged += PopupEntryTextChanged;
