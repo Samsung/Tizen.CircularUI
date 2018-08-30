@@ -125,8 +125,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             switch (visibility)
             {
-                case ScrollBarVisibility.Default:
-                    return ScrollBarVisiblePolicy.Auto;
                 case ScrollBarVisibility.Always:
                     return ScrollBarVisiblePolicy.Visible;
                 case ScrollBarVisibility.Never:
