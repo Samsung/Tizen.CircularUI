@@ -169,8 +169,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateContentSize()
         {
-            _scrollCanvas.MinimumWidth = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Width);
-            _scrollCanvas.MinimumHeight = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Height);
+            _scrollCanvas.MinimumWidth = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Width + Element.Padding.HorizontalThickness);
+            _scrollCanvas.MinimumHeight = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Height + Element.Padding.VerticalThickness);
 
             Device.BeginInvokeOnMainThread(() =>
             {
