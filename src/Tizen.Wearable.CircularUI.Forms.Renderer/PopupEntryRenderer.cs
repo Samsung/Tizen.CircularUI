@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using ElmSharp;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
@@ -33,13 +34,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         ElmSharp.Color DefaultColor { get; set; }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry> e)
         {
             base.OnElementChanged(e);
             if (e.NewElement != null)
             {
                 Control.IsEditable = false;
+                Control.SetInputPanelEnabled(false);
                 Control.Clicked += OnClicked;
+
+                // Set Text again for apply text style because IsEditable reset the style of text
+                Control.Text = string.Empty;
+                Control.Text = Element.Text;
             }
         }
 
@@ -58,11 +64,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnClicked(object sender, EventArgs e) => ShowPopup();
 
+        Window FindWindow(EvasObject obj)
+        {
+            EvasObject parent = obj.Parent;
+            while (!(parent is Window) && parent != null)
+            {
+                parent = parent.Parent;
+            }
+            return parent as Window;
+        }
+
         void CreatePopup()
         {
             var rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
 
-            _editorPopup = new ElmSharp.Background(Xamarin.Forms.Platform.Tizen.Forms.NativeParent)
+            var root = FindWindow(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
+
+            _editorPopup = new ElmSharp.Background(root)
             {
                 Geometry = rect
             };
@@ -77,15 +95,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor = new Xamarin.Forms.Platform.Tizen.Native.Entry(layout);
             _editor.IsSingleLine = true;
             _editor.Scrollable = true;
-            _editor.PredictionAllowed = false;
             _editor.SetInputPanelEnabled(false);
-            _editor.ShowInputPanel();
             _editor.AllowFocus(true);
             _editor.Show();
 
             _editor.SetInputPanelReturnKeyType(ElmSharp.InputPanelReturnKeyType.Done);
 
-            _editor.SetInputPanelLayout(ElmSharp.InputPanelLayout.Normal);
+            _editor.UpdateKeyboard(Element.Keyboard, Element.IsSpellCheckEnabled, Element.IsTextPredictionEnabled);
 
             _editorPopup.BackButtonPressed += (s, e) => HidePopup();
 
@@ -99,9 +115,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             layout.SetPartContent("elm.swallow.content", _editor);
         }
 
+        void PopupEntryTextChanged(object sender, TextChangedEventArgs e)
+        {
+            Control.Text = e.NewTextValue;
+        }
+
+        void PopupEntryActivated(object sender, EventArgs e)
+        {
+            ((IEntryController)Element).SendCompleted();
+        }
+
         void HidePopup()
         {
-            Control.Text = _editor.Text;
             if (_IMEState != Interop.EFL.InputPanelState.Hide)
             {
                 _editor.HideInputPanel();
@@ -109,6 +134,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else if (_IMEState == Interop.EFL.InputPanelState.Hide)
             {
                 _editorPopup.Hide();
+                _editor.TextChanged -= PopupEntryTextChanged;
+                _editor.Activated -= PopupEntryActivated;
             }
         }
 
@@ -129,9 +156,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
 
             _editor.Text = Control.Text;
+            _editor.TextChanged += PopupEntryTextChanged;
+            _editor.Activated += PopupEntryActivated;
 
             DefaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
-            _editor.TextColor = Control.TextColor;
+            _editor.TextStyle = Control.TextStyle;
             _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? DefaultColor : Control.BackgroundColor;
 
             _editor.MoveCursorEnd();

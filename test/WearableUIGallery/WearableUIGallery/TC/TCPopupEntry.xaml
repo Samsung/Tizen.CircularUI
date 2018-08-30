@@ -12,6 +12,8 @@
                     BackgroundColor="Gray"
                     HorizontalOptions="FillAndExpand"
                     TextColor="Blue"
+                    Placeholder="Foobar"
+                    PlaceholderColor="Blue"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
                     HorizontalOptions="FillAndExpand"
@@ -25,6 +27,11 @@
                 <w:PopupEntry
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"/>
+                <w:PopupEntry
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Keyboard="Numeric"
                     HorizontalTextAlignment="Center"/>
             </StackLayout>
         </w:CircleScrollView>
