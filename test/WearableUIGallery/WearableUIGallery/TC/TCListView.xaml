@@ -40,12 +40,20 @@
             </ListView.ItemTemplate>
             <ListView.HeaderTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding .}" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding .}"
+                        FontAttributes="Bold"
+                        TextColor="Red"
+                        HeightRequest="120"
+                        HorizontalTextAlignment="Center"/>
                 </DataTemplate>
             </ListView.HeaderTemplate>
             <ListView.FooterTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding .}" FontAttributes="Bold" TextColor="Red" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding .}"
+                        FontAttributes="Bold"
+                        TextColor="Red"
+                        HeightRequest="120"
+                        HorizontalTextAlignment="Center"/>
                 </DataTemplate>
             </ListView.FooterTemplate>
         </ListView>

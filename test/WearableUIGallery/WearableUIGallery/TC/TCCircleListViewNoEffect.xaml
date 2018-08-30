@@ -8,7 +8,8 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.Content>
-        <w:CircleListView x:Name="mylist">
+        <w:CircleListView x:Name="mylist"
+            ItemTapped="OnItemTapped">
             <w:CircleListView.ItemsSource>
                 <x:Array x:Key="array" Type="{x:Type sys:String}">
                     <x:String>Item 1</x:String>
@@ -34,7 +35,10 @@
             <w:CircleListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding .}" HorizontalTextAlignment="Center"/>
+                        <Label Text="{Binding .}"
+                            HeightRequest="120"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"/>
                     </ViewCell>
                 </DataTemplate>
             </w:CircleListView.ItemTemplate>
@@ -42,9 +46,11 @@
                 <DataTemplate>
                     <Label
                         w:CircleListView.CancelEffect="True"
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
                         Text="{Binding .}"
                         TextColor="Red" />
                 </DataTemplate>
@@ -53,9 +59,11 @@
                 <DataTemplate>
                     <Label
                         w:CircleListView.CancelEffect="True"
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
                         Text="{Binding .}"
                         TextColor="Blue" />
                 </DataTemplate>

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WearableUIGallery.TC.CustomViewCell">
     <ViewCell.View>
-        <RelativeLayout HeightRequest="90" WidthRequest="360">
+        <RelativeLayout HeightRequest="120" WidthRequest="360">
             <Label WidthRequest="279"
                    HeightRequest="42"
                    TextColor="White"

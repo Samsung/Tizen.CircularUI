@@ -9,7 +9,8 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.Content>
-        <w:CircleListView x:Name="mylist">
+        <w:CircleListView x:Name="mylist"
+            ItemTapped="OnItemTapped">
             <w:CircleListView.ItemsSource>
                 <x:Array x:Key="array" Type="{x:Type sys:String}">
                     <x:String>Item 1</x:String>
@@ -43,6 +44,7 @@
                         FontAttributes="Bold"
                         HorizontalTextAlignment="Center"
                         Text="{Binding .}"
+                        HeightRequest="120"
                         TextColor="Red" />
                 </DataTemplate>
             </w:CircleListView.HeaderTemplate>
@@ -52,6 +54,7 @@
                         FontAttributes="Bold"
                         HorizontalTextAlignment="Center"
                         Text="{Binding .}"
+                        HeightRequest="120"
                         TextColor="Blue" />
                 </DataTemplate>
             </w:CircleListView.FooterTemplate>

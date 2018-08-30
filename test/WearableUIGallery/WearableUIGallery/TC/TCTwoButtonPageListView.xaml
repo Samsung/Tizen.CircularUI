@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:TwoButtonPage
+	x:Class="WearableUIGallery.TC.TCTwoButtonPageListView"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:sys="clr-namespace:System;assembly=netstandard"
+	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+	w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference circleList}">
+	<w:TwoButtonPage.Behaviors>
+		<w:CircleSurfaceEffectBehavior />
+	</w:TwoButtonPage.Behaviors>
+	<w:TwoButtonPage.Content>
+		<w:CircleListView x:Name="circleList" ItemTapped="OnItemTapped">
+			<w:CircleListView.ItemsSource>
+				<x:Array x:Key="array" Type="{x:Type sys:String}">
+					<x:String>Item 1</x:String>
+					<x:String>Item 2</x:String>
+					<x:String>Item 3</x:String>
+					<x:String>Item 4</x:String>
+					<x:String>Item 5</x:String>
+					<x:String>Item 6</x:String>
+				</x:Array>
+			</w:CircleListView.ItemsSource>
+			<w:CircleListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding .}" />
+				</DataTemplate>
+			</w:CircleListView.ItemTemplate>
+		</w:CircleListView>
+	</w:TwoButtonPage.Content>
+	<w:TwoButtonPage.FirstButton>
+		<MenuItem Icon="image/tw_ic_popup_btn_check.png" />
+	</w:TwoButtonPage.FirstButton>
+	<w:TwoButtonPage.SecondButton>
+		<MenuItem Icon="image/tw_ic_popup_btn_delete.png" />
+	</w:TwoButtonPage.SecondButton>
+</w:TwoButtonPage>

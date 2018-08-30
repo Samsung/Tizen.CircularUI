@@ -45,6 +45,7 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
             TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPageList) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
+            TCs.Add(new TCDescribe { Title = "TwoButtonPageListView", Class = typeof(TCTwoButtonPageListView) });
             TCs.Add(new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) });
             TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
             TCs.Add(new TCDescribe { Title = "Toast", Class = typeof(TCToast) });

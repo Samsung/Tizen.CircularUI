@@ -33,5 +33,10 @@ namespace WearableUIGallery.TC
 		{
 			InitializeComponent ();
 		}
-	}
+
+        public void OnItemTapped(object sender, ItemTappedEventArgs args)
+        {
+            Console.WriteLine($"OnItemTapped Item:{args.Item.ToString()}");
+        }
+    }
 }

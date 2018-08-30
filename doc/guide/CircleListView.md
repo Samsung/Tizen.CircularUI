@@ -32,6 +32,9 @@ You can either set the `Header` and/or `Footer` to a simple text, or to a more c
 The following example has cells, header, footer.
 And use the [DataTemplate](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/) to format a data object for display.
 
+**WARNING: The `CircleListView`'s backend which is `EFL extension`, has a limitation not being focused and not being tapped on the top and bottom of the screen in Wearable Circle devices. If each item of a list has too small or too high a height, the first or last item of a list cannot be focused and tapped. To avoid this inherent problem, you should specify a proper height value (120 recommended) by the ViewCell or ListView Header or Footer.**
+
+
 For more information, see the following links:
 
 - [CircleListView  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleListView.html)
@@ -86,6 +89,7 @@ The following code shows CirclePage with CircleListView:
             <w:CircleListView.HeaderTemplate>
                 <DataTemplate>
                     <Label
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -96,6 +100,7 @@ The following code shows CirclePage with CircleListView:
             <w:CircleListView.FooterTemplate>
                 <DataTemplate>
                     <Label
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
