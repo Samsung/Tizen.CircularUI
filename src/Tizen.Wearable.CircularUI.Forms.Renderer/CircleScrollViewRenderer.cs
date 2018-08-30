@@ -28,7 +28,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     class CircleScrollViewRenderer : ViewRenderer<CircleScrollView, ElmSharp.Wearable.CircleScroller>
     {
-        ElmSharp.EvasObject _content;
+        Xamarin.Forms.Platform.Tizen.Native.Box _scrollCanvas;
         ElmSharp.SmartEvent _scrollAnimationStart, _scrollAnimationStop;
         bool _isAnimation;
         TaskCompletionSource<bool> _animationTaskComplateSource;
@@ -46,6 +46,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 SetNativeControl(new ElmSharp.Wearable.CircleScroller(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
                 InitControl();
                 Control.Scrolled += OnScrolled;
+                _scrollCanvas = new Xamarin.Forms.Platform.Tizen.Native.Box(Control);
+                _scrollCanvas.LayoutUpdated += OnContentLayoutUpdated;
+                Control.SetContent(_scrollCanvas);
             }
             if (e.OldElement != null)
             {
@@ -70,6 +73,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 UpdateContentSize();
             }
+            else if (ScrollView.VerticalScrollBarVisibilityProperty.PropertyName == e.PropertyName)
+            {
+                UpdateVerticalScrollBarVisibility();
+            }
+            else if (ScrollView.HorizontalScrollBarVisibilityProperty.PropertyName == e.PropertyName)
+            {
+                UpdateHorizontalScrollBarVisibility();
+            }
             base.OnElementPropertyChanged(sender, e);
         }
 
@@ -85,6 +96,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     Control.Scrolled -= OnScrolled;
                 }
+                if (_scrollCanvas != null)
+                {
+                    _scrollCanvas.LayoutUpdated -= OnContentLayoutUpdated;
+                }
             }
             base.Dispose(disposing);
         }
@@ -92,6 +107,33 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void UpdateAll()
         {
             UpdateOrientation();
+        }
+
+        void UpdateVerticalScrollBarVisibility()
+        {
+            Control.VerticalScrollBarVisiblePolicy = ScrollBarVisibilityToTizen(Element.VerticalScrollBarVisibility);
+        }
+
+        void UpdateHorizontalScrollBarVisibility()
+        {
+            var orientation = Element.Orientation;
+            if (orientation == ScrollOrientation.Horizontal || orientation == ScrollOrientation.Both)
+                Control.HorizontalScrollBarVisiblePolicy = ScrollBarVisibilityToTizen(Element.HorizontalScrollBarVisibility);
+        }
+
+        ScrollBarVisiblePolicy ScrollBarVisibilityToTizen(ScrollBarVisibility visibility)
+        {
+            switch (visibility)
+            {
+                case ScrollBarVisibility.Default:
+                    return ScrollBarVisiblePolicy.Auto;
+                case ScrollBarVisibility.Always:
+                    return ScrollBarVisiblePolicy.Visible;
+                case ScrollBarVisibility.Never:
+                    return ScrollBarVisiblePolicy.Invisible;
+                default:
+                    return ScrollBarVisiblePolicy.Auto;
+            }
         }
 
         async void OnScrollRequestedAsync(object sender, ScrollToRequestedEventArgs e)
@@ -117,34 +159,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnContent()
         {
-            if (_content != null)
-            {
-                if (_content is Xamarin.Forms.Platform.Tizen.Native.Box contentBox)
-                {
-                    contentBox.LayoutUpdated -= OnContentLayoutUpdated;
-                }
-                Control.SetContent(null, true);
-                _content.Unrealize();
-                _content = null;
-            }
+            _scrollCanvas.UnPackAll();
             if (Element.Content != null)
             {
-                _content = Xamarin.Forms.Platform.Tizen.Platform.GetOrCreateRenderer(Element.Content).NativeView;
-                if (_content is Xamarin.Forms.Platform.Tizen.Native.Box contentBox)
-                {
-                    contentBox.LayoutUpdated += OnContentLayoutUpdated;
-                }
-                Control.SetContent(_content, true);
+                _scrollCanvas.PackEnd(Platform.GetOrCreateRenderer(Element.Content).NativeView);
                 UpdateContentSize();
             }
         }
 
         void UpdateContentSize()
         {
-            if (_content == null) return;
-
-            _content.MinimumWidth = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Width);
-            _content.MinimumHeight = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Height);
+            _scrollCanvas.MinimumWidth = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Width);
+            _scrollCanvas.MinimumHeight = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Height);
 
             Device.BeginInvokeOnMainThread(() =>
             {
