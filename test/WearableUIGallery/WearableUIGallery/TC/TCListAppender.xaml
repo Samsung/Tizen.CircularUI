@@ -9,13 +9,17 @@
         <w:CircleSurfaceEffectBehavior/>
     </w:TwoButtonPage.Behaviors>
     <w:TwoButtonPage.Content>
-        <w:CircleListView x:Name="mylist"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <w:CircleListView
+            x:Name="mylist"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
             <w:CircleListView.Header>
                 <x:String>Head</x:String>
             </w:CircleListView.Header>
             <w:CircleListView.HeaderTemplate>
                 <DataTemplate>
                     <Label
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -26,9 +30,13 @@
         </w:CircleListView>
     </w:TwoButtonPage.Content>
     <w:TwoButtonPage.FirstButton>
-        <MenuItem Clicked="DoAdd" Icon="image/tw_ic_popup_btn_check.png" />
+        <MenuItem
+            Clicked="DoAdd"
+            Icon="image/tw_ic_popup_btn_check.png" />
     </w:TwoButtonPage.FirstButton>
     <w:TwoButtonPage.SecondButton>
-        <MenuItem Clicked="DoDel" Icon="image/tw_ic_popup_btn_delete.png" />
+        <MenuItem
+            Clicked="DoDel"
+            Icon="image/tw_ic_popup_btn_delete.png" />
     </w:TwoButtonPage.SecondButton>
 </w:TwoButtonPage>
