@@ -88,7 +88,6 @@ namespace WearableUIGallery.TC
 
         private void OnMoveButtonClicked(object sender, EventArgs e)
         {
-            var btn = sender as Button;
             if (_index > 5)
             {
                 CurrentPage = _addedContentPages[_index - 1];

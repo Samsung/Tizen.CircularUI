@@ -41,7 +41,7 @@ namespace WearableUIGallery.TC
             }
         };
 
-        int index = 0;
+        int index;
         int inc = 1;
         double incValue = 0.01;
         double progressValue;
