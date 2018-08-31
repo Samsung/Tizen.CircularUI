@@ -132,12 +132,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "../guide/CreatingCertificates.md",
       "output": {
         ".html": {
           "relative_path": "guide/CreatingCertificates.html",
-          "hash": "JOeYxAMveWr8/me7qmd6kw=="
+          "hash": "thspAqdKKXLz0qGVI5QlIQ=="
         }
       },
       "is_incremental": false,
@@ -149,7 +152,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/GettingTheCertificates.html",
-          "hash": "GSEVk+CJQri+o3DiX6VFCQ=="
+          "hash": "bTg9+W9fFpyVmBd1AFy4/Q=="
         }
       },
       "is_incremental": false,
@@ -197,7 +200,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/InstallingCertificateExtension.html",
-          "hash": "KNaZnKhBzORgmOf84fYUBw=="
+          "hash": "ZV2D6ldmFfMNtfxyoXs72A=="
         }
       },
       "is_incremental": false,
@@ -209,7 +212,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/LibraryList.html",
-          "hash": "pS0gH6zhj4qKG7XfklFKMw=="
+          "hash": "WnnxTlhZ2O8935Tkigeh5Q=="
         }
       },
       "is_incremental": false,
@@ -221,7 +224,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Localization.html",
-          "hash": "REpBN25QMYrupPTtzwNEeQ=="
+          "hash": "YqJ053KmsvRtLDaiskB/Qw=="
         }
       },
       "is_incremental": false,
@@ -233,7 +236,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/ManagingCertificateProfile.html",
-          "hash": "hOThyHTpfbmLL/mOQNIUfQ=="
+          "hash": "GdGL/hv74o1WB58gwZ44eQ=="
         }
       },
       "is_incremental": false,
@@ -257,7 +260,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/PermitDeviceToInstallApps.html",
-          "hash": "fZKWW3M3LZTeGL3Go4gltQ=="
+          "hash": "VgI8WPD3TS/ZtY54fBPz8A=="
         }
       },
       "is_incremental": false,
@@ -317,7 +320,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/TestingYourAppOnGear.html",
-          "hash": "G6kFovvQ/4+d8NRDn+NDNQ=="
+          "hash": "GtXVV5wSc2pz/LzMfCNU2w=="
         }
       },
       "is_incremental": false,
@@ -2269,22 +2272,22 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

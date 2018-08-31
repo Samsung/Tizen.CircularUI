@@ -47,7 +47,7 @@ references:
   name: IRotaryEventReceiver
   href: guide/IRotaryEventReceiver.html
 - uid: Tizen.Wearable.CircularUI.doc.LibraryList
-  name: 3rd party libraries for Tizen .Net
+  name: Third Party Libraries for Tizen .NET Application
   href: guide/LibraryList.html
 - uid: Tizen.Wearable.CircularUI.doc.Localization
   name: Localization
@@ -56,7 +56,7 @@ references:
   name: Managing Certificate Profile
   href: guide/ManagingCertificateProfile.html
 - uid: Tizen.Wearable.CircularUI.doc.PermitDeviceToInstallApps
-  name: Permit device to install apps
+  name: Permit Device To Install Applications
   href: guide/PermitDeviceToInstallApps.html
 - uid: Tizen.Wearable.CircularUI.doc.PopupEntry
   name: PopupEntry
@@ -65,7 +65,7 @@ references:
   name: Radio
   href: guide/Radio.html
 - uid: Tizen.Wearable.CircularUI.doc.TestingYourAppOnGear
-  name: Test Tizen .Net Application on a Gear device
+  name: Test Tizen .NET Application on a Gear device
   href: guide/TestingYourAppOnGear.html
 - uid: Tizen.Wearable.CircularUI.doc.Toast
   name: Toast

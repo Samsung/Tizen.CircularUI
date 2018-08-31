@@ -77,13 +77,20 @@
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.GettingTheCertificates">
 <h1 id="getting-the-certificates">Getting the Certificates</h1>
 
-<p>In order to install a Tizen application onto Samsung Tizen devices, you must first register certificates containing the DUID (Device Unique Identifier) of the device.
+<p>In order to install a Tizen application onto Samsung Tizen wearable devices, you must first register certificates containing the DUID (Device Unique Identifier) of the device.
 Two types of certificates are needed; the author and the distributor certificate.
 These certificates are used for signing and verifying the application.</p>
 <p>These certificates ensure that your signed application will run only on devices which you registered.
 The certification process is necessary not only for testing your apps on the actual devices but also for uploading your apps to Galaxy Apps.</p>
 <p>It guarantees that your application will not be distributed by someone else even if your application package is leaked.
 This document describes how to generate certificates from Samsung and how to maintain them also packaging the application.</p>
+<p>Contents:</p>
+<ul>
+<li><a class="xref" href="InstallingCertificateExtension.html">Installing Certificates Extension</a></li>
+<li><a class="xref" href="CreatingCertificates.html">Creating Certificates</a></li>
+<li><a class="xref" href="PermitDeviceToInstallApps.html">Permit Device To Install Applications</a></li>
+<li><a class="xref" href="ManagingCertificateProfile.html">Managing Certificate Profile</a></li>
+</ul>
 <h2 id="certificates">Certificates</h2>
 <p>Tizen certificate follows the exact specifications of <a href="http://www.w3.org/TR/widgets-digsig/">XML Digital signature for widgets</a> from W3C.
 Samsung issues certificates for Samsung Tizen devices based on the Tizen certificate.
@@ -97,13 +104,6 @@ After the application is uploaded to the Stores, it is replaced by the official 
 Ensure that you have secure backups.
 When you upload your applications at the Store without the original author certificate (which signs your app), you will not be able to publish any updates on to your applications.
 The same key must be used in all versions of your applications.</p>
-<h2 id="contents">Contents</h2>
-<ul>
-<li><a class="xref" href="InstallingCertificateExtension.html">Installing Certificates Extension</a></li>
-<li><a class="xref" href="CreatingCertificates.html">Creating Certificates</a></li>
-<li><a class="xref" href="PermitDeviceToInstallApps.html">Permit Device to install apps</a></li>
-<li><a class="xref" href="ManagingCertificateProfile.html">Managing Certificate Profile</a></li>
-</ul>
 </article>
           </div>
           

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Test Tizen .Net Application on a Gear device </title>
+    <title>Test Tizen .NET Application on a Gear device </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Test Tizen .Net Application on a Gear device ">
+    <meta name="title" content="Test Tizen .NET Application on a Gear device ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -75,45 +75,60 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.TestingYourAppOnGear">
-<h1 id="test-tizen-net-application-on-a-gear-device">Test Tizen .Net Application on a Gear device</h1>
+<h1 id="test-tizen-net-application-on-a-gear-device">Test Tizen .NET Application on a Gear device</h1>
 
-<p>To deploy Tizen .Net Application to Samsung Gallaxy app store, you need to test it on Samsung Gear devices.
-As Samsung Gear doesn&#39;t have a USB port, Tizen provides a way to do it over Wi-Fi.</p>
-<p>Therefore, the Gear device should be connected to Wi-Fi, and the host PC to Wi-Fi or UTP cable to the same local network.</p>
+<p>To publish a Tizen .NET Application to Samsung Gallaxy Apps store, you have to test it on Samsung Gear devices.
+Since Samsung Gear does not have a USB port, Tizen provides a support to publish the app to the app store over Wi-Fi.</p>
+<p>Therefore, you must connect the Gear device to Wi-Fi and the host PC to Wi-Fi or the Unshielded-Twisted-Pair (UTP) cable to the same local network.</p>
 <p><img src="data/gear_wifi_connect.png" alt="Host PC and the gear connect in local network"></p>
-<h2 id="prepare-the-gear-device">Prepare The Gear Device</h2>
-<p>To debug on the Samsung Gear device, use the following steps:</p>
-<h3 id="1-open-the-settings-app">1. Open the Settings app</h3>
-<h3 id="2-scroll-to-the-bottom-of-the-menu-and-tap-about-watch">2. Scroll to the bottom of the menu and tap About watch.</h3>
-<p><img src="data/TestingYourAppOnGear1.png" alt="About Watch"></p>
-<h3 id="3-turn-on-debugging-mode">3. Turn on Debugging mode.</h3>
+<h2 id="prepare-gear-device">Prepare Gear Device</h2>
+<p>To debug an application on the Samsung Gear device:</p>
+<ol>
+<li><p>Execute the <strong>Settings</strong> application.</p>
+</li>
+<li><p>Scroll to the bottom of the menu and tap <strong>About watch</strong>.</p>
+<p> <img src="data/TestingYourAppOnGear1.png" alt="About Watch"></p>
+</li>
+<li><p>Tap <strong>Debugging</strong> to turn on.</p>
+</li>
+</ol>
 <p><img src="data/TestingYourAppOnGear2.png" alt="Debugging menu"></p>
-<h3 id="4-press-hardware-back-button-and-scroll-to-the-connections-of-menu-and-tap-it">4. Press hardware back button and scroll to the Connections of menu and tap it.</h3>
-<p><img src="data/TestingYourAppOnGear3.png" alt="Connections menu"></p>
-<h3 id="5-turn-on-wi-fi">5. Turn on Wi-Fi.</h3>
-<p><img src="data/TestingYourAppOnGear4.png" alt="Enable Wi-Fi">
-<img src="data/TestingYourAppOnGear5.png" alt="Select Wi-Fi AP">
-<img src="data/TestingYourAppOnGear6.png" alt="Connect Wi-fi Network">
-<img src="data/TestingYourAppOnGear7.png" alt="IP Adress"></p>
+<ol>
+<li><p>Press the back button of the hardware, scroll to the <strong>Connections</strong>  menu, and tap it.</p>
+<p> <img src="data/TestingYourAppOnGear3.png" alt="Connections menu"></p>
+</li>
+<li><p>Tap <strong>Wi-Fi</strong> to turn it on.</p>
+<p> <img src="data/TestingYourAppOnGear4.png" alt="Enable Wi-Fi">
+ <img src="data/TestingYourAppOnGear5.png" alt="Select Wi-Fi AP">
+ <img src="data/TestingYourAppOnGear6.png" alt="Connect Wi-fi Network">
+ <img src="data/TestingYourAppOnGear7.png" alt="IP Adress"></p>
+</li>
+</ol>
 <h2 id="debugging-over-wi-fi">Debugging over Wi-Fi</h2>
 <p>You can install and execute your application on the Samsung Gear device over Wi-Fi.</p>
-<h3 id="1-open-visual-studio-2017-app-on-your-developer-computer">1. Open Visual Studio 2017 app on your developer computer.</h3>
-<h3 id="2-on-the-tools-menu-select-tizen--tizen-device-manager-and-then-choose-remote-device-manager">2. On the Tools menu, select Tizen &gt;&gt; Tizen Device Manager. and then choose Remote Device Manager.</h3>
-<p><img src="data/TestingYourAppOnGear8.png" alt="Device Manager-Remote Device Manager"></p>
-<h3 id="3-to-search-for-remote-samsung-gear-devices-select-scan-devices-you-can-see-a-list-of-available-remove-devices">3. To search for remote Samsung Gear devices, select Scan Devices. You can see a list of available remove devices.</h3>
-<p><img src="data/TestingYourAppOnGear9.png" alt="Scan Device">
-<img src="data/TestingYourAppOnGear10.png" alt="Remote Device Manager"></p>
-<h3 id="4-select-the-ip-of-samsung-gear-device-that-you-want-to-connect-to">4. Select the IP of Samsung Gear Device that you want to connect to.</h3>
-<p><img src="data/TestingYourAppOnGear11.png" alt="Remote Device Manager - Enable Connection"></p>
-<h3 id="5-the-connected-gear-device-will-be-displayed-on-device-manager-explorer">5. The connected Gear device will be displayed on Device Manager Explorer.</h3>
-<p><img src="data/TestingYourAppOnGear12.png" alt="Device Manager - connected device list"></p>
+<ol>
+<li><p>Open Visual Studio 2017 app on your developer computer.</p>
+</li>
+<li><p>Select <strong>Tizen</strong> &gt; <strong>Tizen Device Manager</strong> &gt; <strong>Remote Device Manager</strong>.</p>
+<p> <img src="data/TestingYourAppOnGear8.png" alt="Device Manager-Remote Device Manager"></p>
+</li>
+<li><p>Click <strong>Scan Devices</strong> to search for remote Samsung Gear devices. You can see a list of available remote devices.</p>
+<p> <img src="data/TestingYourAppOnGear9.png" alt="Scan Device">
+ <img src="data/TestingYourAppOnGear10.png" alt="Remote Device Manager"></p>
+</li>
+<li><p>Select the IP of Samsung Gear Device that you want to connect to.
+ <img src="data/TestingYourAppOnGear11.png" alt="Remote Device Manager - Enable Connection"></p>
+<p> The connected Gear device appears on the Device Manager Explorer window.
+ <img src="data/TestingYourAppOnGear12.png" alt="Device Manager - connected device list"></p>
+</li>
+</ol>
 <h2 id="connecting-via-the-sdb-command">Connecting via the SDB command</h2>
-<p>You can connect to Gear device via the SDB command.</p>
-<p>Open the Command Prompt in the Host PC and use the following command.</p>
+<p>You can connect to Gear device via SDB command.</p>
+<p>Open the Command Prompt in the Host PC and enter the following command:</p>
 <pre><code>$ sdb connect [Gear S2 IP address]:26101
 </code></pre><p>Example</p>
 <pre><code>$ sdb connect 192.168.0.71:26101
-</code></pre><p>You can see the states of the connected Gear devices by using SDB command.</p>
+</code></pre><p>You can see the states of the connected Gear devices using SDB command.</p>
 <pre><code>$ sdb devices
 List of devices attached
 192.168.0.71:26101      device       SM-R805U
