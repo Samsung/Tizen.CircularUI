@@ -2618,15 +2618,15 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.Dispose
   nameWithType: PopupEntryRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs{Entry})
-  name: OnElementChanged(ElementChangedEventArgs<Entry>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_ElementChangedEventArgs_Entry__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs{Entry})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of Entry))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Entry>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Entry))
-  nameWithType: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Entry>)
-  nameWithType.vb: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Entry))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Entry})
+  name: OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_ElementChangedEventArgs_Xamarin_Forms_Entry__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Entry})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Entry))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Entry))
+  nameWithType: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  nameWithType.vb: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Entry))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged*
   name: OnElementChanged
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_
