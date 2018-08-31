@@ -39,8 +39,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         const int ItemMaxCount = 20;
         const int OddMiddleItem = 10;
         const int EvenMiddleItem = 11;
-        private int _pageIndex = 0;
-        private int _changedByScroll = 0;
+        private int _pageIndex;
+        private int _changedByScroll;
 
         Index _index;
         List<IndexItem> _items = new List<IndexItem>();
@@ -49,8 +49,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         Scroller _scroller;
 
         private ElmSharp.Size _layoutBound;
-        bool _isInitalized = false;
-        bool _isUpdateCarousel = false;
+        bool _isInitalized;
+        bool _isUpdateCarousel;
 
         protected override void OnElementChanged(ElementChangedEventArgs<IndexPage> e)
         {
@@ -78,7 +78,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override void OnElementReady()
         {
-            //Console.WriteLine("OnElementReady()");
             base.OnElementReady();
             _isInitalized = true;
             UpdateCarouselContent();
@@ -178,7 +177,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnPagesChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            //Console.WriteLine("OnPagesChanged()");
             UpdateCarouselContent();
 
             //update Index items.
@@ -201,7 +199,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnCurrentPageChanged(object sender, EventArgs ea)
         {
-            //Console.WriteLine($"OnCurrentPageChanged() _pageIndex:{_pageIndex}, current:{Element.Children.IndexOf(Element.CurrentPage)}, _changedByScroll:{_changedByScroll}");
             if (IsChangedByScroll())
                 return;
 
@@ -212,7 +209,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _pageIndex = Element.Children.IndexOf(Element.CurrentPage);
                 if (previousPageIndex != _pageIndex)
                 {
-                    //Console.WriteLine($"OnCurrentPageChanged() ScrollTo _pageIndex:{_pageIndex}");
                     // notify disappearing/appearing pages and scroll to the requested page
                     (Element.Children[previousPageIndex] as IPageController)?.SendDisappearing();
                     _scroller.ScrollTo(_pageIndex, 0, false);
@@ -231,7 +227,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateCarouselContent()
         {
-            //Console.WriteLine("UpdateCarouselContent()");
             _innerContainer.UnPackAll();
             foreach (var page in Element.Children)
             {
@@ -247,7 +242,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void UpdateIndexItem()
         {
-            //Console.WriteLine($"UpdateIndexItem() _pageIndex:{_pageIndex}");
             _index.Style = IndexStyle.Circle;
             _items.Clear();
 
