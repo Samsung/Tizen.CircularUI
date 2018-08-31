@@ -3,9 +3,9 @@ uid: Tizen.Wearable.CircularUI.doc.LibraryList
 summary: 3rd party libraries for Tizen .Net
 ---
 
-# 3rd party libraries for Tizen .Net
+# Third Party Libraries for Tizen .NET Application
 
-In this list, you can find the libraries organized by purpose.
+Following is the list of libraries filtered based on the purpose:
 
 - [Hardware](#hardware)
 - [Messaging](#messaging)
@@ -16,46 +16,46 @@ In this list, you can find the libraries organized by purpose.
 
 ## Hardware
 
-*Libraries for programming with hardware.*
+Libraries for programming with hardware.
 
-* [Barcode Scanner](https://github.com/Redth/ZXing.Net.Mobile) - Scan and create barcodes with ZXing.NET.Mobile.
-* [Battery Status](https://github.com/jamesmontemagno/BatteryPlugin) - Gather battery level, charging status, and type.
-* [Connectivity](https://github.com/jamesmontemagno/ConnectivityPlugin) - Get network connectivity info such as type and if connection is available.
+* [Barcode Scanner](https://github.com/Redth/ZXing.Net.Mobile) - Scans and creates barcodes with ZXing.NET.Mobile.
+* [Battery Status](https://github.com/jamesmontemagno/BatteryPlugin) - Gathers battery level, charging status, and charging type.
+* [Connectivity](https://github.com/jamesmontemagno/ConnectivityPlugin) - Gets network connectivity information such as type and verifies whether the connection is available.
 * [Device Info](https://github.com/jamesmontemagno/DeviceInfoPlugin) - Properties about device such as OS, Model, and Id.
 * [Device Motion](https://github.com/rdelrosario/xamarin-plugins/tree/master/DeviceMotion) - Provides access to Accelerometer, Gyroscope, Magnetometer, and Compass.
 
 ## Messaging
 
-*Libraries for manipulating message.*
+Libraries for manipulating message.
 
-* [Messaging](https://github.com/cjlotz/Xamarin.Plugins) - Make phone call, send sms, and send e-mail
+* [Messaging](https://github.com/cjlotz/Xamarin.Plugins) - Make phone call, send sms, and send e-mail.
 
 ## Multimedia
 
-*Libraries for manipulating multimedia.*
+Libraries for manipulating multimedia.
 
-* [FFImageLoading](https://github.com/molinch/FFImageLoading) - Image loading with caching, placeholders, transformations and more
-* [SimpleAudioPlayer](https://github.com/adrianstevens/Xamarin-Plugins/tree/master/SimpleAudioPlayer) - SimpleAudioPlayer plays local files and audio data as a stream. This allows you to store audio data in a portable class library and play it on all supported platforms.
-* [SkiaSharp](https://github.com/mono/SkiaSharp) - The Skia 2D Graphics library from Google exposed to .NET languages and runtimes across the board
-* [Media](https://github.com/jamesmontemagno/MediaPlugin) - Take or pick photos and videos.
-* [Media Manager](https://github.com/martijn00/XamarinMediaManager) - Playback for Audio.
+* [FFImageLoading](https://github.com/molinch/FFImageLoading) - Image loading with caching, placeholders, transformations and so on.
+* [SimpleAudioPlayer](https://github.com/adrianstevens/Xamarin-Plugins/tree/master/SimpleAudioPlayer) - Plays local files and audio data as a stream. This allows you to store audio data in a portable class library and play it on all supported platforms.
+* [SkiaSharp](https://github.com/mono/SkiaSharp) - Is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library. It provides a comprehensive 2D API that can be used across mobile, server, and desktop models to render images.
+* [Media](https://github.com/jamesmontemagno/MediaPlugin) - Takes photos and videos using camera and selects them from gallery.
+* [Media Manager](https://github.com/martijn00/XamarinMediaManager) - Play and control audio and video.
 
 ## Security
 
-*Libraries for manipulating secure storage.*
+Libraries for manipulating secure storage.
 
-* [Secure Storage](https://github.com/sameerkapps/SecureStorage) - Provides secure storage for key value pairs Data
+* [Secure Storage](https://github.com/sameerkapps/SecureStorage) - Provides secure storage for key-value pairs. It can be used to securely store sensitive data strings such as password, session token, credit card number, and so on.
 
 ## System
 
-*Libraries for manipulating system.*
+Libraries for manipulating system.
 
-* [Permissions](https://github.com/jamesmontemagno/PermissionsPlugin) - Easily check and request runtime permissions.
-* [Settings](https://github.com/jamesmontemagno/SettingsPlugin) - Simple & Consistent cross platform settings API.
+* [Permissions](https://github.com/jamesmontemagno/PermissionsPlugin) - Verifies and requests runtime permissions.
+* [Settings](https://github.com/jamesmontemagno/SettingsPlugin) - Simple and consistent cross platform settings API.
 
 ## User interface
 
-*Libraries for working with graphical user interface applications.*
+Libraries for working with graphical user interface applications.
 
-* [Share](https://github.com/jguertl/SharePlugin) - Easily share text, links, or open a browser.
-* [User Dialogs](https://github.com/aritchie/userdialogs) - Message box style dialogs
+* [Share](https://github.com/jguertl/SharePlugin) - Shares texts, links, or opens a browser.
+* [User Dialogs](https://github.com/aritchie/userdialogs) - This library is for standard user dialog from core .net standard library, actionsheets, alerts, confirmations, loading, login, progress, prompt, and toast.

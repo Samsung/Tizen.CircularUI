@@ -5,7 +5,7 @@ summary: How to sign the package and managing certificates
 
 # Getting the Certificates
 
-In order to install a Tizen application onto Samsung Tizen devices, you must first register certificates containing the DUID (Device Unique Identifier) of the device.
+In order to install a Tizen application onto Samsung Tizen wearable devices, you must first register certificates containing the DUID (Device Unique Identifier) of the device.
 Two types of certificates are needed; the author and the distributor certificate.
 These certificates are used for signing and verifying the application.
 
@@ -14,6 +14,13 @@ The certification process is necessary not only for testing your apps on the act
 
 It guarantees that your application will not be distributed by someone else even if your application package is leaked.
 This document describes how to generate certificates from Samsung and how to maintain them also packaging the application.
+
+Contents:
+
+- [Installing Certificates Extension](xref:Tizen.Wearable.CircularUI.doc.InstallingCertificateExtension)
+- [Creating Certificates](xref:Tizen.Wearable.CircularUI.doc.CreatingCertificates)
+- [Permit Device To Install Applications](xref:Tizen.Wearable.CircularUI.doc.PermitDeviceToInstallApps)
+- [Managing Certificate Profile](xref:Tizen.Wearable.CircularUI.doc.ManagingCertificateProfile)
 
 ## Certificates
 
@@ -31,10 +38,3 @@ Keep your author certificate(author.p12) file in a safe and secure place.
 Ensure that you have secure backups.
 When you upload your applications at the Store without the original author certificate (which signs your app), you will not be able to publish any updates on to your applications.
 The same key must be used in all versions of your applications.
-
-## Contents
-
-* [Installing Certificates Extension](xref:Tizen.Wearable.CircularUI.doc.InstallingCertificateExtension)
-* [Creating Certificates](xref:Tizen.Wearable.CircularUI.doc.CreatingCertificates)
-* [Permit Device to install apps](xref:Tizen.Wearable.CircularUI.doc.PermitDeviceToInstallApps)
-* [Managing Certificate Profile](xref:Tizen.Wearable.CircularUI.doc.ManagingCertificateProfile)
