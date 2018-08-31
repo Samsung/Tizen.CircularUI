@@ -76,6 +76,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override void UpdateLayout()
         {
+            // Do Nothing because ignore base UpdateLayout
         }
 
         public override Rect GetNativeContentGeometry()
