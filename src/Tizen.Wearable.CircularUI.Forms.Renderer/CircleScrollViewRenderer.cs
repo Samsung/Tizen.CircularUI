@@ -100,6 +100,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     _scrollCanvas.LayoutUpdated -= OnContentLayoutUpdated;
                 }
+                _scrollAnimationStart?.Dispose();
+                _scrollAnimationStop?.Dispose();
             }
             base.Dispose(disposing);
         }
