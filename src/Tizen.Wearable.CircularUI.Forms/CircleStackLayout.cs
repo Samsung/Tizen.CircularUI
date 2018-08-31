@@ -28,23 +28,20 @@ namespace Tizen.Wearable.CircularUI.Forms
 
             double gap1 = CalcGap(Children.FirstOrDefault(), r);
             double gap2 = CalcGap(Children.LastOrDefault(), r);
-            Rectangle region;
 
             if (Orientation == StackOrientation.Horizontal)
             {
-                region = new Rectangle(x + gap1, y, width - gap1 - gap2, height);
+                base.LayoutChildren(x + gap1, y, width - gap1 - gap2, height);
             }
             else
             {
-                region = new Rectangle(x, y + gap1, width, height - gap1 - gap2);
+                base.LayoutChildren(x, y + gap1, width, height - gap1 - gap2);
             }
-
-            base.LayoutChildren(region.X, region.Y, region.Width, region.Height);
 
             foreach (var child in Children)
             {
                 if (!child.IsVisible) continue;
-                RecalcForCirlce(child, x, y, width, height, region, r);
+                RecalcForCirlce(child, x, y, width, height, r);
             }
         }
 
@@ -134,7 +131,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             }
         }
 
-        void RecalcForCirlce(View view, double x, double y, double width, double height, Rectangle region, double r)
+        void RecalcForCirlce(View view, double x, double y, double width, double height, double r)
         {
             var bounds = view.Bounds;
             var margin = view.Margin;
