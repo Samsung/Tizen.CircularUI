@@ -85,7 +85,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
         protected override void OnTerminate()
         {
             base.OnTerminate();
-            IDisposable obj = _application.MainPage.Platform as IDisposable;
+            IDisposable obj = _application?.MainPage?.Platform as IDisposable;
             obj?.Dispose();
         }
 
