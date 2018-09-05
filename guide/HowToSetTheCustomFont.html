@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to set the custom font </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to set the custom font ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-set-the-custom-font">How to set the custom font</h1>
+
+<p>You can add the font path via <a href="https://github.sec.samsung.net/pages/dotnet/apidoc/devel/api/ElmSharp.Utility.html#ElmSharp_Utility_AppendGlobalFontPath_System_String_">Elmsharp.Utility.AppendGlobalFontPath</a>.</p>
+<p>The parameter <code>path</code> must be a directory in which the fonts to be added are present.</p>
+<p>If you use only EflSharp, you should make get the following code. </p>
+<pre><code class="lang-C#">using ElmSharp;
+using Tizen.Applications;
+
+namespace ElmSharpNewFont
+{
+    class Program : CoreUIApplication
+    {
+        protected override void OnCreate()
+        {
+            var window = new Window(&quot;NewFontWindow&quot;);
+            Utility.AppendGlobalFontPath(Application.Current.DirectoryInfo.Resource);
+            var layout = new Box(window)
+            {
+                WeightX = NamedHint.Expand,
+                WeightY = NamedHint.Expand,
+                BackgroundColor = Color.Black
+            };
+            window.AddResizeObject(layout);
+            layout.Show();
+            var label = new Label(layout)
+            {
+                AlignmentX = 0.5,
+                AlignmentY = 0.5,
+                WeightX = NamedHint.Expand,
+                WeightY = NamedHint.Expand,
+                Text = &quot;안녕하세요.&quot;,
+                TextStyle = &quot;DEFAULT=&#39;font=YiSunShinBold font_size=39&#39;&quot;,
+            };
+            label.Show();
+            layout.PackEnd(label);
+        }
+
+        static void Main(string[] args)
+        {
+            var app = new Program();
+            app.Run(args);
+        }
+    }
+}
+</code></pre><p><a href="https://github.sec.samsung.net/pages/dotnet/apidoc/devel/api/Tizen.Applications.DirectoryInfo.html#Tizen_Applications_DirectoryInfo_Resource">Application.Current.DirectoryInfo.Resource</a> is application&#39;s resource directory in which the <code>YiSunShin-Bold.ttf</code> font is located</p>
+<p>In the <code>Label.TextStyle</code>, <code>font=</code> part should be <code>font name</code> not <code>font family</code>
+<code>YiSunShinBold</code> is the <code>font name</code> and <code>font family</code> is <code>YiSunShin Bold</code>,
+but you can see that it is written as <code>font name</code>.</p>
+<p>Of course, it can also be used with Xamarin.Forms.</p>
+<pre><code class="lang-C#">using ElmSharp;
+using Tizen.Applications;
+
+namespace XamarinFormsNewFont
+{
+    class Program : global::Xamarin.Forms.Platform.Tizen.FormsApplication
+    {
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+
+            Utility.AppendGlobalFontPath(Application.Current.DirectoryInfo.Resource);
+            LoadApplication(new App());
+        }
+
+        static void Main(string[] args)
+        {
+            var app = new Program();
+            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init();
+            app.Run(args);
+        }
+    }
+}
+</code></pre><pre><code class="lang-C#">using Xamarin.Forms;
+
+namespace XamarinFormsNewFont
+{
+    public class App : Application
+    {
+        public App()
+        {
+            MainPage = new ContentPage
+            {
+                Content = new StackLayout
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    Children = {
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            FontFamily = &quot;YiSunShinBold&quot;,
+                            Text = &quot;Welcome to Xamarin Forms!&quot;
+                        }
+                    }
+                }
+            };
+        }
+    }
+}
+</code></pre><p>Similarly, you can call <code>Utility.AppendGlobalFontPath</code> before the <code>Label</code> is used.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -160,6 +160,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/HowToSetTheCustomFont.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/HowToSetTheCustomFont.html",
+          "hash": "WKfweXuxc66uY5xdk56L0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/IRotaryEventReceiver.md",
       "output": {
         ".html": {
@@ -1512,7 +1524,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "+h+KlaidjGHkwnUCyv8YJw=="
+          "hash": "CJgI2KoCnVzs3VpIHXGeEw=="
         }
       },
       "is_incremental": false,
@@ -2277,17 +2289,17 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
