@@ -1,5 +1,6 @@
 # Tizen Wearable CircularUI
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/24e666da9e2d42dfbf868831492efc81)](https://app.codacy.com/app/TizenNET/Tizen.CircularUI?utm_source=github.com&utm_medium=referral&utm_content=Samsung/Tizen.CircularUI&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](http://13.124.0.26:8080/job/Tizen.CIrcularUI/job/CircularUI%20Release/badge/icon)](http://13.124.0.26:8080/job/Tizen.CIrcularUI/job/CircularUI%20Release/)
 
 - [Introduction](#introduction)
