@@ -8,6 +8,7 @@
 ### [Managing certificate profile](ManagingCertificateProfile.md)
 ## [Testing Your App on Gear](TestingYourAppOnGear.md)
 ## [3rd party libraries for Tizen .Net](LibraryList.md)
+## [How to set the custom font](HowToSetTheCustomFont.md)
 # User Interface
 ## [Check](Check.md)
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
