@@ -1,10 +1,10 @@
 # How to set the custom font
 
-You can add the font path via [Elmsharp.Utility.AppendGlobalFontPath](https://github.sec.samsung.net/pages/dotnet/apidoc/devel/api/ElmSharp.Utility.html#ElmSharp_Utility_AppendGlobalFontPath_System_String_).
+You can add the font path via [Elmsharp.Utility.AppendGlobalFontPath](https://developer.tizen.org/dev-guide/csapi/api/ElmSharp.Utility.html#ElmSharp_Utility_AppendGlobalFontPath_System_String_).
 
 The parameter `path` must be a directory in which the fonts to be added are present.
 
-If you use only EflSharp, you should make get the following code. 
+If you use only ElmSharp, you should make get the following code.
 
 ```C#
 using ElmSharp;
@@ -49,7 +49,7 @@ namespace ElmSharpNewFont
 ```
 [Application.Current.DirectoryInfo.Resource](https://github.sec.samsung.net/pages/dotnet/apidoc/devel/api/Tizen.Applications.DirectoryInfo.html#Tizen_Applications_DirectoryInfo_Resource) is application's resource directory in which the `YiSunShin-Bold.ttf` font is located
 
-In the `Label.TextStyle`, `font=` part should be `font name` not `font family`
+In the `Label.TextStyle`, `font=` part should be `font name` not `font family`.
 `YiSunShinBold` is the `font name` and `font family` is `YiSunShin Bold`,
 but you can see that it is written as `font name`.
 
