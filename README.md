@@ -12,7 +12,7 @@
 
 ## Introduction
 The Tizen Wearable CircularUI project is a set of helpful extensions of the Xamarin Forms framework.<br>
-The aim of the Tizen Wearable CircularUI project is to develop an open source software motivate software developer to creating Tizen Wearable Xamarin Forms app more easily and efficiently.<br> 
+The aim of the Tizen Wearable CircularUI project is an open source software to motivate and help software developer to create Tizen Wearable app(Xamarin.Forms app) more easily and efficiently.<br> 
 The binaries are available via NuGet (package name **Tizen.Wearable.CircularUI**)<br>
 
 _Xamarin Forms provides cross-platform APIs, but this project are only worked on the Samsung Gear device that support Tizen .NET._ 
