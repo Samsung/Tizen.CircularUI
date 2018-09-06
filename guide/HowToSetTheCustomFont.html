@@ -77,9 +77,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="how-to-set-the-custom-font">How to set the custom font</h1>
 
-<p>You can add the font path via <a href="https://github.sec.samsung.net/pages/dotnet/apidoc/devel/api/ElmSharp.Utility.html#ElmSharp_Utility_AppendGlobalFontPath_System_String_">Elmsharp.Utility.AppendGlobalFontPath</a>.</p>
+<p>You can add the font path via <a href="https://developer.tizen.org/dev-guide/csapi/api/ElmSharp.Utility.html#ElmSharp_Utility_AppendGlobalFontPath_System_String_">Elmsharp.Utility.AppendGlobalFontPath</a>.</p>
 <p>The parameter <code>path</code> must be a directory in which the fonts to be added are present.</p>
-<p>If you use only EflSharp, you should make get the following code. </p>
+<p>If you use only ElmSharp, you should make get the following code.</p>
 <pre><code class="lang-C#">using ElmSharp;
 using Tizen.Applications;
 
@@ -120,7 +120,7 @@ namespace ElmSharpNewFont
     }
 }
 </code></pre><p><a href="https://github.sec.samsung.net/pages/dotnet/apidoc/devel/api/Tizen.Applications.DirectoryInfo.html#Tizen_Applications_DirectoryInfo_Resource">Application.Current.DirectoryInfo.Resource</a> is application&#39;s resource directory in which the <code>YiSunShin-Bold.ttf</code> font is located</p>
-<p>In the <code>Label.TextStyle</code>, <code>font=</code> part should be <code>font name</code> not <code>font family</code>
+<p>In the <code>Label.TextStyle</code>, <code>font=</code> part should be <code>font name</code> not <code>font family</code>.
 <code>YiSunShinBold</code> is the <code>font name</code> and <code>font family</code> is <code>YiSunShin Bold</code>,
 but you can see that it is written as <code>font name</code>.</p>
 <p>Of course, it can also be used with Xamarin.Forms.</p>
