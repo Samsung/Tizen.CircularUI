@@ -5,6 +5,10 @@
              x:Class="WearableUIGallery.TC.TCActionButton">
     <ContentPage.Content>
         <StackLayout Orientation="Horizontal">
+            <Button Text="Set"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnClickSet"/>
             <Button Text="Enable"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
@@ -15,7 +19,4 @@
                     Clicked="OnClickVisible"/>
         </StackLayout>
     </ContentPage.Content>
-    <w:CirclePage.ActionButton>
-        <w:ActionButtonItem Text="Action" />
-    </w:CirclePage.ActionButton>
 </w:CirclePage>

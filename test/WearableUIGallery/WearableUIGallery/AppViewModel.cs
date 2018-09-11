@@ -27,72 +27,102 @@ namespace WearableUIGallery
         public AppViewModel()
         {
             TCs = new ObservableCollection<TCDescribe>();
-            TCs.Add(new TCDescribe { Title = "NoFishEyeHeaderList", Class = typeof(TCCircleListViewNoEffect) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "ListView",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "NoFishEyeHeaderList", Class = typeof(TCCircleListViewNoEffect) },
+                    new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) },
+                    new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) },
+                    new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) },
+                    new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) },
+                    new TCDescribe { Title = "ListViewNormal", Class = typeof(TCListPage) }
+                }
+            });
+            TCs.Add(new TCDescribe
+            {
+                Title = "CirclePage",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) },
+                    new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) },
+                    new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) }
+                }
+            });
             TCs.Add(new TCDescribe { Title = "DateTimeSelector", Class = typeof(TCCircleDateTimeSelector) });
-            TCs.Add(new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) });
-            TCs.Add(new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) });
-            TCs.Add(new TCDescribe { Title = "CircleSurfaceItem", Class = typeof(TCCircleSurfaceItemList) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "CircleSurfaceItem",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "Add/Remove SurfaceItems", Class = typeof(TCCircleSurfaceItems) },
+                    new TCDescribe { Title = "CircleProgressBar1", Class = typeof(TCCircleProgressBarSurfaceItem1) },
+                    new TCDescribe { Title = "CircleProgressBar2", Class = typeof(TCCircleProgressBarSurfaceItem2) },
+                    new TCDescribe { Title = "CircleSlider1", Class = typeof(TCCircleSliderSurfaceItem1) },
+                    new TCDescribe { Title = "CircleSlider2", Class = typeof(TCCircleSliderSurfaceItem2) }
+                }
+            });
             TCs.Add(new TCDescribe { Title = "PopupEntry", Class = typeof(TCPopupEntry) });
-            TCs.Add(new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) });
             TCs.Add(new TCDescribe { Title = "CircleStackLayout", Class = typeof(TCCircleStackLayout) });
-            TCs.Add(new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) });
-            TCs.Add(new TCDescribe { Title = "ContextPopupBehavior", Class = typeof(TCCtxPopupList) });
-            TCs.Add(new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) });
-            TCs.Add(new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) });
-            TCs.Add(new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) });
-            TCs.Add(new TCDescribe { Title = "ListViewNormal", Class = typeof(TCListView) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "ContextPopupBehavior",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "Position", Class = typeof(TCCtxPopup1) },
+                    new TCDescribe { Title = "Command Paramter", Class = typeof(TCCtxPopup2) },
+                    new TCDescribe { Title = "Attach/Detach/Visibility", Class = typeof(TCCtxPopup3) },
+                    new TCDescribe { Title = "Label with TapCtx", Class = typeof(TCCtxPopup4) }
+                }
+            });
             TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
-            TCs.Add(new TCDescribe { Title = "CircleStepper", Class = typeof(TCCircleStepperList) });
-            TCs.Add(new TCDescribe { Title = "IndexPage", Class = typeof(TCIndexPageList) });
-            TCs.Add(new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) });
-            TCs.Add(new TCDescribe { Title = "TwoButtonPageListView", Class = typeof(TCTwoButtonPageListView) });
-            TCs.Add(new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "CircleStepper",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) },
+                    new TCDescribe { Title = "AbsoluteLayout", Class = typeof(TCCircleStepper2) },
+                    new TCDescribe { Title = "Title", Class = typeof(TCCircleStepper3) },
+                    new TCDescribe { Title = "LabelFormat", Class = typeof(TCCircleStepper4) }
+                }
+            });
+            TCs.Add(new TCDescribe
+            {
+                Title = "IndexPage",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "Add/Move", Class = typeof(TCIndexPage) },
+                    new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) }
+                }
+            });
+            TCs.Add(new TCDescribe
+            {
+                Title = "TwoButtonPage",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) },
+                    new TCDescribe { Title = "TwoButtonPageListView", Class = typeof(TCTwoButtonPageListView) },
+                    new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) }
+                }
+            });
             TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
             TCs.Add(new TCDescribe { Title = "Toast", Class = typeof(TCToast) });
             TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
             TCs.Add(new TCDescribe { Title = "Check", Class = typeof(TCCheck) });
-            TCs.Add(new TCDescribe { Title = "Radio", Class = typeof(TCRadioList) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "Radio",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) },
+                    new TCDescribe { Title = "ListView", Class = typeof(TCRadioListView) }
+                }
+            });
             TCs.Add(new TCDescribe { Title = "Performance", Class = typeof(TCPerformance) });
-
-            // CircleSurfaceItem TCs
-            CircleSurfaceItemTCs = new ObservableCollection<TCDescribe>();
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "Add/Remove SurfaceItems", Class = typeof(TCCircleSurfaceItems) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar1", Class = typeof(TCCircleProgressBarSurfaceItem1) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleProgressBar2", Class = typeof(TCCircleProgressBarSurfaceItem2) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider1", Class = typeof(TCCircleSliderSurfaceItem1) });
-            CircleSurfaceItemTCs.Add(new TCDescribe { Title = "CircleSlider2", Class = typeof(TCCircleSliderSurfaceItem2) });
-
-
-            // CircleStepper TCs
-            CircleStepperTCs = new ObservableCollection<TCDescribe>();
-            CircleStepperTCs.Add(new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) });
-            CircleStepperTCs.Add(new TCDescribe { Title = "AbsoluteLayout", Class = typeof(TCCircleStepper2) });
-            CircleStepperTCs.Add(new TCDescribe { Title = "Title", Class = typeof(TCCircleStepper3) });
-            CircleStepperTCs.Add(new TCDescribe { Title = "LabelFormat", Class = typeof(TCCircleStepper4) });
-
-            // ContextPopupEffectBehavior TCs
-            ContextPopupEffectBehaviorTCs = new ObservableCollection<TCDescribe>();
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Position", Class = typeof(TCCtxPopup1) });
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Command Paramter", Class = typeof(TCCtxPopup2) });
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Attach/Detach/Visibility", Class = typeof(TCCtxPopup3) });
-            ContextPopupEffectBehaviorTCs.Add(new TCDescribe { Title = "Label with TapCtx", Class = typeof(TCCtxPopup4) });
-
-            // Radio TCs
-            RadioTCs = new ObservableCollection<TCDescribe>();
-            RadioTCs.Add(new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) });
-            RadioTCs.Add(new TCDescribe { Title = "ListView", Class = typeof(TCRadioListView) });
-
-            // IndexPage TCs
-            IndexPageTCs = new ObservableCollection<TCDescribe>();
-            IndexPageTCs.Add(new TCDescribe { Title = "Add/Move", Class = typeof(TCIndexPage) });
-            IndexPageTCs.Add(new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) });
         }
 
         public IList<TCDescribe> TCs { get; private set; }
-        public IList<TCDescribe> CircleSurfaceItemTCs { get; private set; }
-        public IList<TCDescribe> CircleStepperTCs { get; private set; }
-        public IList<TCDescribe> ContextPopupEffectBehaviorTCs { get; private set; }
-        public IList<TCDescribe> RadioTCs { get; private set; }
-        public IList<TCDescribe> IndexPageTCs { get; private set; }
     }
 }

@@ -234,10 +234,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
         void UpdateActionButton(bool initialize)
         {
-            if (initialize && Element.ActionButton == null) return;
-
             if (Element.ActionButton != null)
             {
+                if (_actionButton == null)
+                {
+                    _actionButton = new ElmSharp.Button(_box)
+                    {
+                        Style = "bottom"
+                    };
+                    _actionButton.Clicked += OnActionButtonClicked;
+                    _box.PackEnd(_actionButton);
+                }
+
                 SetVisibleActionButton(Element.ActionButton.IsVisible);
 
                 Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
@@ -252,9 +260,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     _actionButton.SetPartContent("elm.swallow.content", buttonImage);
                 }
             }
+            else
+            {
+                if (_actionButton != null)
+                {
+                    _actionButton.Clicked -= OnActionButtonClicked;
+                    _box.UnPack(_actionButton);
+                    _actionButton.Unrealize();
+                    _actionButton = null;
+                }
+            }
         }
         void OnActionButtonItemChanged(object sender, PropertyChangedEventArgs e)
         {
+            if (_actionButton == null)
+            {
+                return;
+            }
             if (e.PropertyName == MenuItem.TextProperty.PropertyName)
             {
                 _actionButton.Text = Element.ActionButton.Text;
@@ -467,12 +489,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_actionButton == null)
             {
-                _actionButton = new ElmSharp.Button(_box)
-                {
-                    Style = "bottom"
-                };
-                _actionButton.Clicked += OnActionButtonClicked;
-                _box.PackEnd(_actionButton);
+                return;
             }
             if (visible) _actionButton.Show();
             else _actionButton.Hide();
