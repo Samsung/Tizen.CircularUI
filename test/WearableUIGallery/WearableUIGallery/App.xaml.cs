@@ -30,25 +30,11 @@ namespace WearableUIGallery
     {
         public App()
         {
-            Datas = new ObservableCollection<TCDescribe>();
             InitializeComponent();
+
+            MainNavigation = MainNavigationPage;
         }
 
-        public ObservableCollection<TCDescribe> Datas { get; private set; }
-
-        public void OnItemTapped(object sender, ItemTappedEventArgs args)
-        {
-            if (args.Item == null) return;
-
-            var desc = args.Item as TCDescribe;
-            if (desc != null && desc.Class != null)
-            {
-                Type pageType = desc.Class;
-
-                var page = Activator.CreateInstance(pageType) as Page;
-                NavigationPage.SetHasNavigationBar(page, false);
-                MainNavigation.PushAsync(page);
-            }
-        }
+        public static NavigationPage MainNavigation { get; set; }
     }
 }

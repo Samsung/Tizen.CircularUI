@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-using System;
-
 namespace WearableUIGallery
 {
     public class TCDescribe
     {
         public string Title { get; set; }
-        public Type Class { get; set; }
+        public TCTypes Class { get; set; }
     }
 }

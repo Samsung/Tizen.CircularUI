@@ -49,5 +49,20 @@ namespace WearableUIGallery.TC
             }
         }
 
+
+        void OnClickSet(object sender, EventArgs args)
+        {
+            var btn = sender as Button;
+            if (btn.Text == "Set")
+            {
+                btn.Text = "Unset";
+                ActionButton = new ActionButtonItem { Text = "Action" };
+            }
+            else
+            {
+                btn.Text = "Set";
+                ActionButton = null;
+            }
+        }
     }
 }
