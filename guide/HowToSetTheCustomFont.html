@@ -123,6 +123,10 @@ namespace ElmSharpNewFont
 <p>In the <code>Label.TextStyle</code>, <code>font=</code> part should be <code>font name</code> not <code>font family</code>.
 <code>YiSunShinBold</code> is the <code>font name</code> and <code>font family</code> is <code>YiSunShin Bold</code>,
 but you can see that it is written as <code>font name</code>.</p>
+<div class="NOTE"><h5>Note</h5><p>The <code>font name</code> is actually <code>postscript name</code> in your TTF or OTF file.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>You can find <code>postscript name</code> from the font file with <code>fc-query</code> in the font config installed shell.<br><code>fc-query -f &quot;%{postscriptname}\n&quot; Font.ttf</code></p>
+</div>
 <p>Of course, it can also be used with Xamarin.Forms.</p>
 <pre><code class="lang-C#">using ElmSharp;
 using Tizen.Applications;
@@ -174,7 +178,8 @@ namespace XamarinFormsNewFont
     }
 }
 </code></pre><p>Similarly, you can call <code>Utility.AppendGlobalFontPath</code> before the <code>Label</code> is used.</p>
-<p>You can find <code>YiSunShin</code> font from <a href="https://www.asan.go.kr/main/cms/?no=49">here</a></p>
+<div class="TIP"><h5>Tip</h5><p>You can find <code>YiSunShin</code> font from <a href="https://www.asan.go.kr/main/cms/?no=49"><code>here</code></a></p>
+</div>
 </article>
           </div>
           
