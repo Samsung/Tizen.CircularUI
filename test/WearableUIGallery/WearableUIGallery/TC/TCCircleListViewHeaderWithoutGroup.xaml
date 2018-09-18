@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleListViewHeaderWithoutGroup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference mylist}">
+    <w:CirclePage.Content>
+        <w:CircleListView x:Name="mylist">
+            <w:CircleListView.ItemsSource>
+                <x:Array x:Key="array" Type="{x:Type sys:String}">
+                    <x:String>Item 1</x:String>
+                    <x:String>Item 2</x:String>
+                    <x:String>Item 3</x:String>
+                    <x:String>Item 4</x:String>
+                    <x:String>Item 5</x:String>
+                    <x:String>Item 6</x:String>
+                    <x:String>Item 7</x:String>
+                    <x:String>Item 8</x:String>
+                    <x:String>Item 9</x:String>
+                    <x:String>Item 10</x:String>
+                    <x:String>Item 11</x:String>
+                    <x:String>Item 12</x:String>
+                </x:Array>
+            </w:CircleListView.ItemsSource>
+            <w:CircleListView.Header>
+                <x:String>Header</x:String>
+            </w:CircleListView.Header>
+            <w:CircleListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label w:CircleListView.CancelEffect="True"
+                           FontSize="10"
+                           HorizontalTextAlignment="Center"
+                           Text="{Binding .}"
+                           TextColor="#4CCDFC"
+                           VerticalTextAlignment="Center" />
+                </DataTemplate>
+            </w:CircleListView.HeaderTemplate>
+            <w:CircleListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding .}"
+                            HeightRequest="120"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"/>
+                    </ViewCell>
+                </DataTemplate>
+            </w:CircleListView.ItemTemplate>
+        </w:CircleListView>
+    </w:CirclePage.Content>
+</w:CirclePage>

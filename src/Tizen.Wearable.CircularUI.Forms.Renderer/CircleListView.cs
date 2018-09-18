@@ -38,6 +38,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public CircleListView(EvasObject parent, CircleSurface surface) : base(parent, surface)
         {
         }
+
         public VisualElement Header
         {
             get => _header;
@@ -246,6 +247,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
+        void UpdateHeaderHeightForGroup(bool isPreviousOfGroup)
+        {
+            if (Header == null) return;
+            if (isPreviousOfGroup)
+            {
+                Header.MinimumHeightRequest = 83; // correct visible height on the Group Header
+            }
+            else
+            {
+                Header.MinimumHeightRequest = 115; // correct visible height on the None group header
+            }
+        }
+
         void UpdateHeader()
         {
             GenItemClass cls = null;
@@ -276,6 +290,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     FirstItem.UpdateItemClass(cls, new TypedItemContext(Header, type));
                 }
+            }
+
+            if (Header != null && FirstItem?.Next != null)
+            {
+                var nextCtx = FirstItem.Next?.Data as ListViewItemContext;
+                var isNextItemIsGroupHeader = nextCtx == null ? false : nextCtx.IsGroupItem;
+
+                UpdateHeaderHeightForGroup(isNextItemIsGroupHeader);
             }
         }
         void UpdateFooter()
@@ -309,6 +331,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             item.IsEnabled = cell.IsEnabled;
             item.Deleted += ItemDeletedHandler;
             _itemContexts[cell] = item;
+
+
+            if (Header != null && item == FirstItem.Next)
+            {
+                UpdateHeaderHeightForGroup(IsGroup);
+            }
 
             if (!IsGroup)
             {
