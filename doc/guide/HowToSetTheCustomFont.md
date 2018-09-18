@@ -53,6 +53,13 @@ In the `Label.TextStyle`, `font=` part should be `font name` not `font family`.
 `YiSunShinBold` is the `font name` and `font family` is `YiSunShin Bold`,
 but you can see that it is written as `font name`.
 
+> [!NOTE]
+> The `font name` is actually `postscript name` in your TTF or OTF file.
+
+> [!TIP]
+> You can find `postscript name` from the font file with `fc-query` in the font config installed shell.  
+> `fc-query -f "%{postscriptname}\n" Font.ttf`
+
 Of course, it can also be used with Xamarin.Forms.
 
 ``` C#
@@ -113,4 +120,5 @@ namespace XamarinFormsNewFont
 
 Similarly, you can call `Utility.AppendGlobalFontPath` before the `Label` is used.
 
-You can find `YiSunShin` font from [here](https://www.asan.go.kr/main/cms/?no=49)
+> [!TIP]
+> You can find `YiSunShin` font from [`here`](https://www.asan.go.kr/main/cms/?no=49)
