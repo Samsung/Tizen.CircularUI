@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleScroller2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference myscroller}">
+    <w:CirclePage.Content>
+        <w:CircleScrollView x:Name="myscroller" Orientation="Horizontal">
+            <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="FillAndExpand">
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="Red" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="Orange" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="Yellow" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="YellowGreen" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="Green" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="LightBlue" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="DeepSkyBlue" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="Blue" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="BlueViolet" />
+                <BoxView 
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="120"
+                    Color="Violet" />
+            </StackLayout>
+        </w:CircleScrollView>
+    </w:CirclePage.Content>
+</w:CirclePage>

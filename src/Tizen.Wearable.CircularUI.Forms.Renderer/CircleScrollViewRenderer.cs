@@ -21,6 +21,7 @@ using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
+using ERect = ElmSharp.Rect;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleScrollView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer))]
 
@@ -36,6 +37,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public CircleScrollViewRenderer()
         {
             RegisterPropertyHandler("Content", OnContent);
+        }
+
+        public override ERect GetNativeContentGeometry()
+        {
+            return _scrollCanvas.Geometry;
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircleScrollView> e)

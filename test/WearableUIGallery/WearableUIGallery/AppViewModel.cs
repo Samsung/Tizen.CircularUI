@@ -78,7 +78,15 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "Label with TapCtx", Class = typeof(TCCtxPopup4) }
                 }
             });
-            TCs.Add(new TCDescribe { Title = "CircleScroller", Class = typeof(TCCircleScroller) });
+            TCs.Add(new TCDescribe {
+                Title = "CircleScroller",
+                Class = new TCTypes
+                {
+                     new TCDescribe { Title = "vertical", Class = typeof(TCCircleScroller) },
+                     new TCDescribe { Title = "horizontal", Class = typeof(TCCircleScroller2) },
+                     new TCDescribe { Title = "remove/add", Class = typeof(TCCircleScroller3) }
+                }
+            });
             TCs.Add(new TCDescribe
             {
                 Title = "CircleStepper",
