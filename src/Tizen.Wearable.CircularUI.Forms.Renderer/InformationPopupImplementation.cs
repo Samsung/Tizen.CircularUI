@@ -27,6 +27,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     public class InformationPopupImplementation : IInformationPopup, IDisposable
     {
         MenuItem _bottomMenuItem;
+        Color _buttonBgColor;
 
         ElmSharp.Popup _popUp;
         ElmSharp.ProgressBar _progress;
@@ -136,6 +137,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             set
             {
                 if (_bottomMenuItem == value) return;
+
+                if (value is ColorMenuItem)
+                {
+                    _buttonBgColor = ((ColorMenuItem)value).BackgroundColor;
+                }
+                else
+                {
+                    _buttonBgColor = Color.Default;
+                }
                 _bottomMenuItem = value;
                 UpdateButton();
             }
@@ -246,6 +256,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     BottomButton.Activate();
                 };
+
+                if(_buttonBgColor != Color.Default)
+                {
+                    Console.WriteLine($"InformationPopup set button background color:{_buttonBgColor.ToNative()}");
+                    _bottomButton.BackgroundColor = _buttonBgColor.ToNative();
+                }
             }
             else
             {

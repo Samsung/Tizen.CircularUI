@@ -51,6 +51,7 @@
                         HorizontalOptions="End"
                         IsSelected="{Binding Mute.IsSelected, Mode=TwoWay}"
                         Selected="OnSelected"
+                        Color="Red"
                         Value="{Binding Mute.Value}" />
                 </StackLayout>
                 <Label
@@ -68,6 +69,7 @@
                         HorizontalOptions="End"
                         IsSelected="{Binding Strong.IsSelected, Mode=TwoWay}"
                         Selected="OnSelected"
+                        Color="Blue"
                         Value="{Binding Strong.Value}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -80,6 +82,7 @@
                         HorizontalOptions="End"
                         IsSelected="{Binding Medium.IsSelected, Mode=TwoWay}"
                         Selected="OnSelected"
+                        Color="Green"
                         Value="{Binding Medium.Value}" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -92,6 +95,7 @@
                         HorizontalOptions="End"
                         IsSelected="{Binding Weak.IsSelected, Mode=TwoWay}"
                         Selected="OnSelected"
+                        Color="Red"
                         Value="{Binding Weak.Value}" />
                 </StackLayout>
             </StackLayout>

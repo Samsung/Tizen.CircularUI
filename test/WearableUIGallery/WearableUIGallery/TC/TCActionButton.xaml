@@ -4,19 +4,29 @@
              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
              x:Class="WearableUIGallery.TC.TCActionButton">
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal">
-            <Button Text="Set"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    Clicked="OnClickSet"/>
-            <Button Text="Enable"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    Clicked="OnClickEnable"/>
-            <Button Text="Visible"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    Clicked="OnClickVisible"/>
+        <StackLayout Orientation="Vertical"
+            VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Set"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickSet"/>
+                <Button Text="Enable"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickEnable"/>
+                <Button Text="Visible"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickVisible"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Change button color"
+                        FontSize="Small"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickChangeColor"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </w:CirclePage>

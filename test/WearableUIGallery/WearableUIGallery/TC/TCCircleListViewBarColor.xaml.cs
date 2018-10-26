@@ -15,34 +15,28 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCheck : CirclePage
-	{
-		public TCCheck ()
-		{
-			InitializeComponent ();
-		}
-
-        public void OnToggledDefault(object sender, ToggledEventArgs e)
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCircleListViewBarColor : CirclePage
+    {
+        public TCCircleListViewBarColor()
         {
-            Console.WriteLine($"Default Check value:{e.Value}");
+            InitializeComponent();
         }
 
-        public void OnToggledOnOff(object sender, ToggledEventArgs e)
+        public void OnItemTapped(object sender, ItemTappedEventArgs args)
         {
-            Console.WriteLine($"OnOff Check value:{e.Value}");
-        }
-
-        public void OnToggledSmall(object sender, ToggledEventArgs e)
-        {
-            Console.WriteLine($"Small Check value:{e.Value}");
+            Console.WriteLine($"OnItemTapped Item:{args.Item.ToString()}");
         }
     }
 }

@@ -64,5 +64,10 @@ namespace WearableUIGallery.TC
                 ActionButton = null;
             }
         }
+
+        void OnClickChangeColor(object sender, EventArgs args)
+        {
+            ActionButton = new ActionButtonItem { Text = "Action", BackgroundColor = Color.Green };
+        }
     }
 }

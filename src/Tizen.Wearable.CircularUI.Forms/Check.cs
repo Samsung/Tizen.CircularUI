@@ -47,6 +47,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty DisplayStyleProperty = BindableProperty.Create(nameof(DisplayStyle), typeof(CheckDisplayStyle), typeof(Check), defaultValue: CheckDisplayStyle.Default);
 
         /// <summary>
+        /// BindableProperty. Identifies the Color bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty ColorProperty = BindableProperty.Create(nameof(Color), typeof(Color), typeof(Check), Color.Default);
+
+        /// <summary>
         /// Gets or sets display style of Check.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -54,6 +60,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             get { return (CheckDisplayStyle)GetValue(DisplayStyleProperty); }
             set { SetValue(DisplayStyleProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets a color value of Check.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public Color Color
+        {
+            get => (Color)GetValue(ColorProperty);
+            set => SetValue(ColorProperty, value);
         }
     }
 }

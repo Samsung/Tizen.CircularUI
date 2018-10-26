@@ -18,6 +18,7 @@
                 <w:PopupEntry
                     HorizontalOptions="FillAndExpand"
                     Placeholder="Foobar"
+                    PopupBackgroundColor="Green"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
                     HorizontalOptions="FillAndExpand"
@@ -25,8 +26,10 @@
                     Placeholder="Password"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
+                    BackgroundColor="DarkCyan"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="CenterAndExpand"
+                    PopupBackgroundColor="Red"
                     HorizontalTextAlignment="Center"/>
                 <w:PopupEntry
                     HorizontalOptions="FillAndExpand"

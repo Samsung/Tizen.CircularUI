@@ -110,8 +110,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (initialize && Element.SecondButton == null) return;
             if (Element.SecondButton != null)
             {
-                var item = Element.SecondButton;
-                _widget.ShowButton2(item.Text, item.Icon, () => item.Activate());
+                if (Element.SecondButton is ColorMenuItem)
+                {
+                    var item = ((ColorMenuItem)Element.SecondButton);
+                    _widget.ShowButton2(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => item.Activate());
+                }
+                else
+                {
+                    var item = Element.SecondButton;
+                    _widget.ShowButton2(item.Text, item.Icon, () => item.Activate());
+                }
             }
             else
             {
@@ -124,8 +132,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (initialize && Element.FirstButton == null) return;
             if (Element.FirstButton != null)
             {
-                var item = Element.FirstButton;
-                _widget.ShowButton1(item.Text, item.Icon, () => item.Activate());
+                if (Element.FirstButton is ColorMenuItem)
+                {
+                    var item = ((ColorMenuItem)Element.FirstButton);
+                    _widget.ShowButton1(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => item.Activate());
+                }
+                else
+                {
+                    var item = Element.FirstButton;
+                    _widget.ShowButton1(item.Text, item.Icon, () => item.Activate());
+                }
             }
             else
             {

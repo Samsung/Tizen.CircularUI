@@ -14,34 +14,26 @@
  * limitations under the License.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
-    /// <summary>
-    /// The PopupEntry is a class that extends Xamarin.Forms.Entry.
-    /// It makes a new layer when editing text on the entry.
-    /// </summary>
-    /// <since_tizen> 4 </since_tizen>
-    public class PopupEntry : Entry
+    public class ColorMenuItem : MenuItem
     {
         /// <summary>
-        /// BindableProperty. Identifies color of Popup background.
+        /// BindableProperty. Identifies the BackgroundColor bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty PopupBackgroundColorProperty = BindableProperty.CreateAttached(nameof(PopupBackgroundColor), typeof(Color), typeof(CircleListView), Color.Default);
+        public static readonly BindableProperty BackgroundColorProperty = BindableProperty.Create(nameof(BackgroundColor), typeof(Color), typeof(ActionButtonItem), Color.Default);
 
         /// <summary>
-        /// Gets or sets a color value of Popup.
+        /// Gets or sets a background color value of this ActionButtonItem.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public Color PopupBackgroundColor
+        public Color BackgroundColor
         {
-            get => (Color)GetValue(PopupBackgroundColorProperty);
-            set => SetValue(PopupBackgroundColorProperty, value);
+            get => (Color)GetValue(BackgroundColorProperty);
+            set => SetValue(BackgroundColorProperty, value);
         }
     }
 }

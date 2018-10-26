@@ -36,6 +36,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty IsVisibleProperty = BindableProperty.Create(nameof(IsVisible), typeof(bool), typeof(ActionButtonItem), true);
 
         /// <summary>
+        /// BindableProperty. Identifies the BackgroundColor bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty BackgroundColorProperty = BindableProperty.Create(nameof(BackgroundColor), typeof(Color), typeof(ActionButtonItem), Color.Default);
+
+        /// <summary>
         /// Gets or sets a boolean value that indicates whether this ActionButtonItem is enabled.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -53,6 +59,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             get => (bool)GetValue(IsVisibleProperty);
             set => SetValue(IsVisibleProperty, value);
+        }
+
+        /// <summary>
+        /// Gets or sets a background color value of ActionButtonItem.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public Color BackgroundColor
+        {
+            get => (Color)GetValue(BackgroundColorProperty);
+            set => SetValue(BackgroundColorProperty, value);
         }
     }
 }

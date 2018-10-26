@@ -37,6 +37,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             RegisterPropertyHandler(Radio.GroupNameProperty, UpdateGroupName);
             RegisterPropertyHandler(Radio.IsSelectedProperty, UpdateIsSelected);
+            RegisterPropertyHandler(Radio.ColorProperty, UpdateColor);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Radio> e)
@@ -82,6 +83,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _changedCallbackDepth++;
             Element.IsSelected = Control.GroupValue == 1 ? true : false;
             _changedCallbackDepth--;
+        }
+
+        void UpdateColor()
+        {
+            var color = Element.Color;
+            if (color != Xamarin.Forms.Color.Default)
+            {
+                Control.Color = Element.Color.ToNative();
+            }
         }
     }
 
