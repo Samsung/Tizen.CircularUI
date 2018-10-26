@@ -77,6 +77,15 @@
                     Text="Process long text"
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
+                <Button
+                    x:Name="button8"
+                    Clicked="OnChangeColorButtonClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Change button color"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
             </StackLayout>
         </w:CircleScrollView>
     </ContentPage.Content>

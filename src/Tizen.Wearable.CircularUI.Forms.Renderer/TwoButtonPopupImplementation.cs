@@ -30,6 +30,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         StackLayout _contentView;
         MenuItem _firstMenuItem;
         MenuItem _secondMenuItem;
+        XForms.Color _firstButtonBgColor;
+        XForms.Color _secondButtonBgColor;
 
         ElmSharp.Popup _popUp;
         ElmSharp.Layout _layout;
@@ -133,6 +135,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 if (_firstMenuItem == value) return;
                 _firstMenuItem = value;
+
+                if (value is ColorMenuItem)
+                {
+                    _firstButtonBgColor = ((ColorMenuItem)value).BackgroundColor;
+                }
+                else
+                {
+                    _firstButtonBgColor = Color.Default;
+                }
+
                 UpdateFirstButton();
             }
         }
@@ -147,6 +159,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 if (_secondMenuItem == value) return;
                 _secondMenuItem = value;
+
+                if (value is ColorMenuItem)
+                {
+                    _secondButtonBgColor = ((ColorMenuItem)value).BackgroundColor;
+                }
+                else
+                {
+                    _secondButtonBgColor = Color.Default;
+                }
+
                 UpdateSecondButton();
             }
         }
@@ -236,6 +258,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     FirstButton.Activate();
                 };
+
+                if (_firstButtonBgColor != Color.Default)
+                {
+                    Console.WriteLine($"TwoButtonPopup set first button background color:{_firstButtonBgColor.ToNative()}");
+                    _firstButton.BackgroundColor = _firstButtonBgColor.ToNative();
+                }
             }
             else
             {
@@ -276,6 +304,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     SecondButton.Activate();
                 };
+
+                if (_secondButtonBgColor != Color.Default)
+                {
+                    Console.WriteLine($"TwoButtonPopup set second button background color:{_secondButtonBgColor.ToNative()}");
+                    _secondButton.BackgroundColor = _secondButtonBgColor.ToNative();
+                }
 
                 _popUp.SetPartContent("button2", _secondButton);
             }

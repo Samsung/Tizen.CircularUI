@@ -109,6 +109,41 @@ namespace WearableUIGallery.TC
             SetValue(OverlapProperty, !Overlap);
             btn.Text = Overlap ? "Overlap" : "No Overlap";
         }
+
+        public void OnChangeColor1(object sender, EventArgs args)
+        {
+            if (FirstButton != null)
+            {
+                var newItem = new ColorMenuItem
+                {
+                    Icon = new FileImageSource
+                    {
+                        File = "image/b_option_list_icon_delete.png",
+                    },
+                    BackgroundColor = Color.Green,
+                    Command = _viewModel.Command1
+                };
+
+                FirstButton = newItem;
+            }
+        }
+
+        public void OnChangeColor2(object sender, EventArgs args)
+        {
+            if (SecondButton != null)
+            {
+                var newItem = new ColorMenuItem
+                {
+                    Icon = new FileImageSource
+                    {
+                        File = "image/b_option_list_icon_share.png",
+                    },
+                    BackgroundColor = Color.Blue,
+                    Command = _viewModel.Command2
+                };
+                SecondButton = newItem;
+            }
+        }
     }
 
     public class TCTwoButtonPageViewModel : INotifyPropertyChanged

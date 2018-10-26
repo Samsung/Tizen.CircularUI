@@ -71,6 +71,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty GroupNameProperty = BindableProperty.Create("GroupName", typeof(string), typeof(Radio), default(string));
 
+        /// <summary>
+        /// BindableProperty. Identifies the Color bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty ColorProperty = BindableProperty.Create(nameof(Color), typeof(Color), typeof(Radio), Color.Default);
+
 
         /// <summary>
         /// Gets or sets the value of the Radio.
@@ -115,6 +121,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             var radioButton = (Radio)bindable;
             radioButton.Selected?.Invoke(radioButton, new SelectedEventArgs(radioButton.Value, (bool)newValue));
+        }
+
+        /// <summary>
+        /// Gets or sets a color value of Radio.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public Color Color
+        {
+            get => (Color)GetValue(ColorProperty);
+            set => SetValue(ColorProperty, value);
         }
     }
 }

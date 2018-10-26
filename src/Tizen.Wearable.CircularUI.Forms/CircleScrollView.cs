@@ -25,5 +25,20 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <since_tizen> 4 </since_tizen>
     public class CircleScrollView : ScrollView, IRotaryFocusable
     {
+        /// <summary>
+        /// BindableProperty. Identifies the Header, Footer cancel the Fish Eye Effect or not.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty BarColorProperty = BindableProperty.CreateAttached("BarColor", typeof(Color), typeof(CircleListView), Color.Default);
+
+        /// <summary>
+        /// Gets or sets a scroll bar color value.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public Color BarColor
+        {
+            get => (Color)GetValue(BarColorProperty);
+            set => SetValue(BarColorProperty, value);
+        }
     }
 }

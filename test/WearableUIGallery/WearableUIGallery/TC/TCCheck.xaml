@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<w:CirclePage
     x:Class="WearableUIGallery.TC.TCCheck"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <ContentPage.Content>
-        <ScrollView>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference myscroller}">
+    <w:CirclePage.Content>
+        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Orientation="Vertical">
                 <Label HorizontalOptions="CenterAndExpand" Text="Default" />
                 <w:Check
@@ -27,7 +28,72 @@
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
                     Toggled="OnToggledSmall" />
+
+                <Label HorizontalOptions="CenterAndExpand" Text="Default Color blue" />
+                <w:Check
+                    DisplayStyle="Default"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    Color="Blue"
+                    Toggled="OnToggledDefault" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Default Color Red" />
+                <w:Check
+                    DisplayStyle="Default"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    Color="Red"
+                    Toggled="OnToggledDefault" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Default Color Green" />
+                <w:Check
+                    DisplayStyle="Default"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    Color="Green"
+                    Toggled="OnToggledDefault" />
+
+                <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color blue" />
+                <w:Check
+                    DisplayStyle="Onoff"
+                    HorizontalOptions="FillAndExpand"
+                    IsToggled="True"
+                    Color ="Blue"
+                    Toggled="OnToggledOnOff" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color Red" />
+                <w:Check
+                    DisplayStyle="Onoff"
+                    HorizontalOptions="FillAndExpand"
+                    IsToggled="True"
+                    Color ="Red"
+                    Toggled="OnToggledOnOff" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color Green" />
+                <w:Check
+                    DisplayStyle="Onoff"
+                    HorizontalOptions="FillAndExpand"
+                    IsToggled="True"
+                    Color ="Green"
+                    Toggled="OnToggledOnOff" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Small Color Blue" />
+                <w:Check
+                    DisplayStyle="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    Color="Blue"
+                    Toggled="OnToggledSmall" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Small Color Purple" />
+                <w:Check
+                    DisplayStyle="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    Color="Purple"
+                    Toggled="OnToggledSmall" />
+                <Label HorizontalOptions="CenterAndExpand" Text="Small Color Yellow" />
+                <w:Check
+                    DisplayStyle="Small"
+                    HorizontalOptions="CenterAndExpand"
+                    IsToggled="False"
+                    Color="Yellow"
+                    Toggled="OnToggledSmall" />
             </StackLayout>
-        </ScrollView>
-    </ContentPage.Content>
-</ContentPage>
+        </w:CircleScrollView>
+    </w:CirclePage.Content>
+</w:CirclePage>

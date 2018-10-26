@@ -73,6 +73,22 @@
                     Text="Jpg icon button"
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
+                <Button
+                    x:Name="button8"
+                    Clicked="OnChangeColorLeftClicked"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="change color of Left button"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    x:Name="button9"
+                    Clicked="OnChangeColorRightClicked"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="change color of right button"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
             </StackLayout>
         </w:CircleScrollView>
     </ContentPage.Content>

@@ -36,6 +36,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public CircleScrollViewRenderer()
         {
+            RegisterPropertyHandler(CircleScrollView.BarColorProperty, UpdateBarColor);
             RegisterPropertyHandler("Content", OnContent);
         }
 
@@ -127,6 +128,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             var orientation = Element.Orientation;
             if (orientation == ScrollOrientation.Horizontal || orientation == ScrollOrientation.Both)
                 Control.HorizontalScrollBarVisiblePolicy = ScrollBarVisibilityToTizen(Element.HorizontalScrollBarVisibility);
+        }
+
+        void UpdateBarColor()
+        {
+            var color = Element.BarColor;
+            if (color != Xamarin.Forms.Color.Default)
+            {
+                Control.VerticalScrollBarColor = color.ToNative();
+                Control.HorizontalScrollBarColor = color.ToNative();
+            }
         }
 
         ScrollBarVisiblePolicy ScrollBarVisibilityToTizen(ScrollBarVisibility visibility)

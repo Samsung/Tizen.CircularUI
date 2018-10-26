@@ -14,35 +14,40 @@
  * limitations under the License.
  */
 
-using System;
-
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCheck : CirclePage
+	public partial class TCCircleScrollerBarColor : CirclePage
 	{
-		public TCCheck ()
-		{
-			InitializeComponent ();
-		}
 
-        public void OnToggledDefault(object sender, ToggledEventArgs e)
-        {
-            Console.WriteLine($"Default Check value:{e.Value}");
-        }
+        static Color[] _colors = new Color[] {
+            Color.Blue,
+            Color.Red,
+            Color.Green,
+            Color.Violet,
+            Color.Pink,
+            Color.SkyBlue,
+            Color.GreenYellow,
+            Color.White,
+            Color.Silver,
+            Color.Yellow
+        };
 
-        public void OnToggledOnOff(object sender, ToggledEventArgs e)
-        {
-            Console.WriteLine($"OnOff Check value:{e.Value}");
-        }
+        static int i = 0;
 
-        public void OnToggledSmall(object sender, ToggledEventArgs e)
+        public TCCircleScrollerBarColor()
         {
-            Console.WriteLine($"Small Check value:{e.Value}");
+            InitializeComponent ();
+
+            button.Clicked += (s, e) =>
+            {
+                if (i >= 10) i = 0;
+                myscroller.BarColor = _colors[i++];
+            };
         }
-    }
+	}
 }

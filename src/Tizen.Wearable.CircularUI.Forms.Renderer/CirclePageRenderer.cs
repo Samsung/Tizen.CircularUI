@@ -259,6 +259,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     buttonImage.Show();
                     _actionButton.SetPartContent("elm.swallow.content", buttonImage);
                 }
+
+                if (Element.ActionButton.BackgroundColor != Xamarin.Forms.Color.Default)
+                {
+                    _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
+                }
             }
             else
             {

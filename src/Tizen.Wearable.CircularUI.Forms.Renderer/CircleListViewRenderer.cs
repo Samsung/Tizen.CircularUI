@@ -41,6 +41,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(CCircularListView.ItemsSourceProperty, UpdateSource);
             RegisterPropertyHandler("HeaderElement", UpdateHeader);
             RegisterPropertyHandler("FooterElement", UpdateFooter);
+            RegisterPropertyHandler(CCircularListView.BarColorProperty, UpdateBarColor);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CCircularListView> e)
@@ -96,6 +97,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             var header = (Element as IListViewController)?.HeaderElement as VisualElement;
             Control.Header = header;
+        }
+
+        void UpdateBarColor()
+        {
+            var color = Element.BarColor;
+            if (color != Xamarin.Forms.Color.Default)
+            {
+                Control.VerticalScrollBarColor = color.ToNative();
+            }
         }
 
         void UpdateSource(bool init)

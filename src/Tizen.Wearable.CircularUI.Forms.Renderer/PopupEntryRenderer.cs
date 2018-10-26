@@ -26,6 +26,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     public class PopupEntryRenderer : EntryRenderer
     {
         ElmSharp.Background _editorPopup;
+        ElmSharp.Color _popupBackgroundColor;
+
         Xamarin.Forms.Platform.Tizen.Native.Entry _editor;
 
         Interop.EFL.InputPanelEventCallback _editorStateChanged;
@@ -33,6 +35,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         Interop.EFL.InputPanelState _IMEState;
 
         ElmSharp.Color DefaultColor { get; set; }
+
+        public PopupEntryRenderer()
+        {
+            DefaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
+            RegisterPropertyHandler(PopupEntry.PopupBackgroundColorProperty, UpdatePopupBackgroundColor);
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry> e)
         {
@@ -90,7 +98,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             layout.Show();
 
             _editorPopup.SetPartContent("overlay", layout);
-            _editorPopup.Color = Control.BackgroundColor;
 
             _editor = new Xamarin.Forms.Platform.Tizen.Native.Entry(layout);
             _editor.IsSingleLine = true;
@@ -152,9 +159,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.TextChanged += PopupEntryTextChanged;
             _editor.Activated += PopupEntryActivated;
 
-            DefaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
             _editor.TextStyle = Control.TextStyle;
-            _editorPopup.Color = Control.BackgroundColor == default(ElmSharp.Color) ? DefaultColor : Control.BackgroundColor;
+            _editorPopup.Color = _popupBackgroundColor;
 
             _editor.MoveCursorEnd();
             _editor.ShowInputPanel();
@@ -172,6 +178,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _editor.SetFocus(true);
                 _editorPopup.RaiseTop();
                 _editorPopup.Show();
+            }
+        }
+
+        void UpdatePopupBackgroundColor()
+        {
+            Xamarin.Forms.Color bgColor = ((PopupEntry)Element).PopupBackgroundColor;
+            Console.WriteLine($"UpdatePopupBackgroundColor bgColor:{bgColor}");
+            if (bgColor == Xamarin.Forms.Color.Default)
+            {
+                Console.WriteLine($"set default color");
+                _popupBackgroundColor = DefaultColor;
+            }
+            else
+            {
+                _popupBackgroundColor = bgColor.ToNative();
+                Console.WriteLine($"set default color _popupBackgroundColor:{_popupBackgroundColor}");
             }
         }
     }

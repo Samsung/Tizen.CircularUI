@@ -39,6 +39,8 @@ namespace WearableUIGallery.TC
         MenuItem _noIconRightButton;
         MenuItem _jpgIconButton1;
         MenuItem _jpgIconButton2;
+        ColorMenuItem _colorleftButton;
+        ColorMenuItem _colorRightButton;
         string _longText;
 
         public TCTwoButtonPopup()
@@ -346,6 +348,54 @@ height. This has two button in action area and title text in title area";
         {
             createPopup3();
             _popUp3.Show();
+        }
+
+        private void OnChangeColorLeftClicked(object sender, EventArgs e)
+        {
+            createPopup1();
+
+            _colorleftButton = new ColorMenuItem
+            {
+                Icon = new FileImageSource
+                {
+                    File = "image/b_option_list_icon_share.png",
+                },
+                BackgroundColor = Color.Green,
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("left button1 Command!!");
+                    _popUp1?.Dismiss();
+                    _popUp1 = null;
+                })
+            };
+
+            _popUp1.FirstButton = _colorleftButton;
+            _popUp1.SecondButton = _rightButton;
+            _popUp1.Show();
+        }
+
+        private void OnChangeColorRightClicked(object sender, EventArgs e)
+        {
+            createPopup1();
+
+            _colorRightButton = new ColorMenuItem
+            {
+                Icon = new FileImageSource
+                {
+                    File = "image/b_option_list_icon_delete.png",
+                },
+                BackgroundColor = Color.Blue,
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("right button1 Command!!");
+                    _popUp1?.Dismiss();
+                    _popUp1 = null;
+                })
+            };
+
+            _popUp1.FirstButton = _leftButton;
+            _popUp1.SecondButton = _colorRightButton;
+            _popUp1.Show();
         }
     }
 }

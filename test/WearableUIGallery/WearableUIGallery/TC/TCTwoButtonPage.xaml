@@ -22,7 +22,9 @@
 				<Button Clicked="OnRemove1" Text="Remove 1" />
 				<Button Clicked="OnRemove2" Text="Remove 2" />
 				<Button Clicked="ToggleOverlap" Text="No Overlap" />
-			</StackLayout>
+                <Button Clicked="OnChangeColor1" Text="change color 1" />
+                <Button Clicked="OnChangeColor2" Text="change color 2" />
+            </StackLayout>
 		</ScrollView>
 	</w:TwoButtonPage.Content>
 	<w:TwoButtonPage.FirstButton>

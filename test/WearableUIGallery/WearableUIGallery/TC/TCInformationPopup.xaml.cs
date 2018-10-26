@@ -35,6 +35,7 @@ namespace WearableUIGallery.TC
         MenuItem _textBottomButton;
         MenuItem _iconBottomButton;
         MenuItem _textIconBottomButton;
+        ColorMenuItem _colorBottomButton;
         string _longText;
 
         public TCInformationPopup()
@@ -76,6 +77,18 @@ namespace WearableUIGallery.TC
                 Command = new Command(() =>
                 {
                     Console.WriteLine("text&icon bottom button Command!!");
+                    _textButtonPopUp?.Dismiss();
+                    _textButtonPopUp = null;
+                })
+            };
+
+            _colorBottomButton = new ColorMenuItem
+            {
+                Text = "OK",
+                BackgroundColor = Color.Blue,
+                Command = new Command(() =>
+                {
+                    Console.WriteLine("change color of bottom button Command!!");
                     _textButtonPopUp?.Dismiss();
                     _textButtonPopUp = null;
                 })
@@ -209,5 +222,13 @@ height.This has two button in action area and title text in title area";
             _progressPopUp.Show();
         }
 
+
+        private void OnChangeColorButtonClicked(object sender, EventArgs e)
+        {
+            createTextButtonPopup();
+            _textButtonPopUp.BottomButton = _colorBottomButton;
+            _textButtonPopUp.Text = "This is changing color of bottom button test";
+            _textButtonPopUp.Show();
+        }
     }
 }
