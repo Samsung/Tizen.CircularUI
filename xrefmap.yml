@@ -88,6 +88,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.ActionButtonItem
   fullName: Tizen.Wearable.CircularUI.Forms.ActionButtonItem
   nameWithType: ActionButtonItem
+- uid: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColor
+  name: BackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html#Tizen_Wearable_CircularUI_Forms_ActionButtonItem_BackgroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColor
+  nameWithType: ActionButtonItem.BackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColor*
+  name: BackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html#Tizen_Wearable_CircularUI_Forms_ActionButtonItem_BackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColor
+  nameWithType: ActionButtonItem.BackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColorProperty
+  name: BackgroundColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html#Tizen_Wearable_CircularUI_Forms_ActionButtonItem_BackgroundColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.BackgroundColorProperty
+  nameWithType: ActionButtonItem.BackgroundColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.IsEnable
   name: IsEnable
   href: api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.html#Tizen_Wearable_CircularUI_Forms_ActionButtonItem_IsEnable
@@ -132,6 +151,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Check
   fullName: Tizen.Wearable.CircularUI.Forms.Check
   nameWithType: Check
+- uid: Tizen.Wearable.CircularUI.Forms.Check.Color
+  name: Color
+  href: api/Tizen.Wearable.CircularUI.Forms.Check.html#Tizen_Wearable_CircularUI_Forms_Check_Color
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Check.Color
+  fullName: Tizen.Wearable.CircularUI.Forms.Check.Color
+  nameWithType: Check.Color
+- uid: Tizen.Wearable.CircularUI.Forms.Check.Color*
+  name: Color
+  href: api/Tizen.Wearable.CircularUI.Forms.Check.html#Tizen_Wearable_CircularUI_Forms_Check_Color_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Check.Color
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Check.Color
+  nameWithType: Check.Color
+- uid: Tizen.Wearable.CircularUI.Forms.Check.ColorProperty
+  name: ColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.Check.html#Tizen_Wearable_CircularUI_Forms_Check_ColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.Check.ColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.Check.ColorProperty
+  nameWithType: Check.ColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.Check.DisplayStyle
   name: DisplayStyle
   href: api/Tizen.Wearable.CircularUI.Forms.Check.html#Tizen_Wearable_CircularUI_Forms_Check_DisplayStyle
@@ -396,6 +434,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleListView
   fullName: Tizen.Wearable.CircularUI.Forms.CircleListView
   nameWithType: CircleListView
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.BarColor
+  name: BarColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_BarColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleListView.BarColor
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.BarColor
+  nameWithType: CircleListView.BarColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.BarColor*
+  name: BarColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_BarColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleListView.BarColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.BarColor
+  nameWithType: CircleListView.BarColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.BarColorProperty
+  name: BarColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_BarColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircleListView.BarColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.BarColorProperty
+  nameWithType: CircleListView.BarColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
   name: CancelEffectProperty
   href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_CancelEffectProperty
@@ -561,6 +618,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleScrollView
   fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView
   nameWithType: CircleScrollView
+- uid: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColor
+  name: BarColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html#Tizen_Wearable_CircularUI_Forms_CircleScrollView_BarColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColor
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColor
+  nameWithType: CircleScrollView.BarColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColor*
+  name: BarColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html#Tizen_Wearable_CircularUI_Forms_CircleScrollView_BarColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColor
+  nameWithType: CircleScrollView.BarColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColorProperty
+  name: BarColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html#Tizen_Wearable_CircularUI_Forms_CircleScrollView_BarColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColorProperty
+  nameWithType: CircleScrollView.BarColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem
   name: CircleSliderSurfaceItem
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem.html
@@ -1118,6 +1194,31 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleToolbarItem.SubTextProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleToolbarItem.SubTextProperty
   nameWithType: CircleToolbarItem.SubTextProperty
+- uid: Tizen.Wearable.CircularUI.Forms.ColorMenuItem
+  name: ColorMenuItem
+  href: api/Tizen.Wearable.CircularUI.Forms.ColorMenuItem.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.ColorMenuItem
+  fullName: Tizen.Wearable.CircularUI.Forms.ColorMenuItem
+  nameWithType: ColorMenuItem
+- uid: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColor
+  name: BackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.ColorMenuItem.html#Tizen_Wearable_CircularUI_Forms_ColorMenuItem_BackgroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColor
+  nameWithType: ColorMenuItem.BackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColor*
+  name: BackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.ColorMenuItem.html#Tizen_Wearable_CircularUI_Forms_ColorMenuItem_BackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColor
+  nameWithType: ColorMenuItem.BackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColorProperty
+  name: BackgroundColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.ColorMenuItem.html#Tizen_Wearable_CircularUI_Forms_ColorMenuItem_BackgroundColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColorProperty
+  nameWithType: ColorMenuItem.BackgroundColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior
   name: ContextPopupEffectBehavior
   href: api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html
@@ -1535,6 +1636,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.PopupEntry
   fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry
   nameWithType: PopupEntry
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor
+  name: PopupBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_PopupBackgroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor
+  nameWithType: PopupEntry.PopupBackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor*
+  name: PopupBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_PopupBackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor
+  nameWithType: PopupEntry.PopupBackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColorProperty
+  name: PopupBackgroundColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_PopupBackgroundColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColorProperty
+  nameWithType: PopupEntry.PopupBackgroundColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.PositionOption
   name: PositionOption
   href: api/Tizen.Wearable.CircularUI.Forms.PositionOption.html
@@ -1571,6 +1691,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Radio
   fullName: Tizen.Wearable.CircularUI.Forms.Radio
   nameWithType: Radio
+- uid: Tizen.Wearable.CircularUI.Forms.Radio.Color
+  name: Color
+  href: api/Tizen.Wearable.CircularUI.Forms.Radio.html#Tizen_Wearable_CircularUI_Forms_Radio_Color
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Radio.Color
+  fullName: Tizen.Wearable.CircularUI.Forms.Radio.Color
+  nameWithType: Radio.Color
+- uid: Tizen.Wearable.CircularUI.Forms.Radio.Color*
+  name: Color
+  href: api/Tizen.Wearable.CircularUI.Forms.Radio.html#Tizen_Wearable_CircularUI_Forms_Radio_Color_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Radio.Color
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Radio.Color
+  nameWithType: Radio.Color
+- uid: Tizen.Wearable.CircularUI.Forms.Radio.ColorProperty
+  name: ColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.Radio.html#Tizen_Wearable_CircularUI_Forms_Radio_ColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.Radio.ColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.Radio.ColorProperty
+  nameWithType: Radio.ColorProperty
 - uid: Tizen.Wearable.CircularUI.Forms.Radio.GroupName
   name: GroupName
   href: api/Tizen.Wearable.CircularUI.Forms.Radio.html#Tizen_Wearable_CircularUI_Forms_Radio_GroupName
@@ -2605,6 +2744,19 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
   nameWithType: PopupEntryRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
+  name: PopupEntryRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.PopupEntryRenderer()
+  nameWithType: PopupEntryRenderer.PopupEntryRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor*
+  name: PopupEntryRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.PopupEntryRenderer
+  nameWithType: PopupEntryRenderer.PopupEntryRenderer
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_Dispose_System_Boolean_
@@ -2948,18 +3100,18 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Action)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, Action)
   nameWithType: TwoButtonPageWidget.ShowButton1(String, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String)
-  name: ShowButton1(String, String)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.String)
-  nameWithType: TwoButtonPageWidget.ShowButton1(String, String)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,Action)
   name: ShowButton1(String, String, Action)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_Action_
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,Action)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.String, Action)
   nameWithType: TwoButtonPageWidget.ShowButton1(String, String, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,Color,Action)
+  name: ShowButton1(String, String, Color, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_Color_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,Color,Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.String, Color, Action)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, String, Color, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1*
   name: ShowButton1
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_
@@ -2973,12 +3125,6 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
   nameWithType: TwoButtonPageWidget.ShowButton2(String)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Action)
-  name: ShowButton2(String, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Action)
-  nameWithType: TwoButtonPageWidget.ShowButton2(String, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String)
   name: ShowButton2(String, String)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_
@@ -2991,6 +3137,12 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,Action)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, System.String, Action)
   nameWithType: TwoButtonPageWidget.ShowButton2(String, String, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,Color,Action)
+  name: ShowButton2(String, String, Color, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_Color_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,Color,Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, System.String, Color, Action)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, String, Color, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2*
   name: ShowButton2
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_
