@@ -134,6 +134,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void HidePopup()
         {
+            Control.TextChanged -= OnTextChanged;
+
             if (_IMEState != Interop.EFL.InputPanelState.Hide)
             {
                 _editor.HideInputPanel();
@@ -164,6 +166,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _editor.MoveCursorEnd();
             _editor.ShowInputPanel();
+
+            Control.TextChanged += OnTextChanged;
         }
 
         void EditorStateChanged(IntPtr data, IntPtr ctx, int value)
@@ -184,16 +188,28 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void UpdatePopupBackgroundColor()
         {
             Xamarin.Forms.Color bgColor = ((PopupEntry)Element).PopupBackgroundColor;
-            Console.WriteLine($"UpdatePopupBackgroundColor bgColor:{bgColor}");
             if (bgColor == Xamarin.Forms.Color.Default)
             {
-                Console.WriteLine($"set default color");
                 _popupBackgroundColor = DefaultColor;
             }
             else
             {
                 _popupBackgroundColor = bgColor.ToNative();
-                Console.WriteLine($"set default color _popupBackgroundColor:{_popupBackgroundColor}");
+            }
+        }
+
+        void OnTextChanged(object sender, EventArgs e)
+        {
+            if (_editor != null)
+            {
+                if (_editor.Text != Control.Text)
+                {
+                    _editor.Text = Control.Text;
+                    if (!_editor.IsFocused)
+                    {
+                        _editor.MoveCursorEnd();
+                    }
+                }
             }
         }
     }
