@@ -89,13 +89,107 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CircleSurfaceEffectBehavior</span></div>
+    <div class="level1"><span class="xref">Xamarin.Forms.BindableObject</span></div>
+    <div class="level2"><span class="xref">Xamarin.Forms.Behavior</span></div>
+    <div class="level3"><span class="xref">Xamarin.Forms.Behavior</span>&lt;<span class="xref">Xamarin.Forms.Page</span>&gt;</div>
+    <div class="level4"><span class="xref">CircleSurfaceEffectBehavior</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Xamarin.Forms.Behavior&lt;Xamarin.Forms.Page&gt;.OnAttachedTo(Xamarin.Forms.BindableObject)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Behavior&lt;Xamarin.Forms.Page&gt;.OnDetachingFrom(Xamarin.Forms.BindableObject)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Behavior.AssociatedType</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnBindingContextChanged()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnPropertyChanging(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CircleSurfaceEffectBehavior : Behavior&lt;Page&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CircleSurfaceEffectBehavior : Behavior&lt;Page&gt;, INotifyPropertyChanged, IDynamicResourceHandler, IAttachedObject</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -116,7 +210,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableProperty</span></td>
+        <td><span class="xref">Xamarin.Forms.BindableProperty</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -124,7 +218,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_BindableObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)">GetRotaryFocusObject(BindableObject)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_Xamarin_Forms_BindableObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(Xamarin.Forms.BindableObject)">GetRotaryFocusObject(BindableObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -142,7 +236,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableObject</span></td>
+        <td><span class="xref">Xamarin.Forms.BindableObject</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
@@ -164,7 +258,7 @@
     </tbody>
   </table>
   <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Page_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Page)">OnAttachedTo(Page)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Xamarin_Forms_Page_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)">OnAttachedTo(Page)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -182,14 +276,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Page</span></td>
+        <td><span class="xref">Xamarin.Forms.Page</span></td>
         <td><span class="parametername">page</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Xamarin.Forms.Behavior&lt;Xamarin.Forms.Page&gt;.OnAttachedTo(Xamarin.Forms.Page)</span></div>
   <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_Page_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Page)">OnDetachingFrom(Page)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_Xamarin_Forms_Page_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)">OnDetachingFrom(Page)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -207,14 +303,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Page</span></td>
+        <td><span class="xref">Xamarin.Forms.Page</span></td>
         <td><span class="parametername">page</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Xamarin.Forms.Behavior&lt;Xamarin.Forms.Page&gt;.OnDetachingFrom(Xamarin.Forms.Page)</span></div>
   <a id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_BindableObject_Tizen_Wearable_CircularUI_Forms_IRotaryFocusable_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)">SetRotaryFocusObject(BindableObject, IRotaryFocusable)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_Xamarin_Forms_BindableObject_Tizen_Wearable_CircularUI_Forms_IRotaryFocusable_" data-uid="Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(Xamarin.Forms.BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)">SetRotaryFocusObject(BindableObject, IRotaryFocusable)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -232,7 +330,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableObject</span></td>
+        <td><span class="xref">Xamarin.Forms.BindableObject</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
@@ -243,6 +341,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
 </article>
           </div>
           
