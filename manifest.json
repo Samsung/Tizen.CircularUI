@@ -89,7 +89,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CircleStackLayout.html",
-          "hash": "Eff4p4P17/lG+Y0fvoieyQ=="
+          "hash": "+dwDZFjfWJdFldCXt2w9jw=="
         }
       },
       "is_incremental": false,
@@ -479,6 +479,39 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/CircleStackLayout_Vertical.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/CircleStackLayout_avoid_case.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/CircleStackLayout_avoid_case.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/CircleStackLayout_right_option.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/CircleStackLayout_right_option.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/CircleStackLayout_stacklayout.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/CircleStackLayout_stacklayout.png"
         }
       },
       "is_incremental": false,
@@ -2296,11 +2329,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -2312,6 +2340,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

@@ -97,6 +97,9 @@
 </tr>
 </tbody>
 </table>
+<div class="NOTE"><h5>Note</h5><p>CircleStackLayout will lay out the children in the form of inserting a circle with a radius that is the shorter of &quot;width&quot; and &quot;height&quot;.
+Therefore, it may be strange if one of the axes is very short, so it is better to use it when the width and height of the layout area are similar. </p>
+</div>
 <h2 id="add-circlestacklayout-in-contentpage">Add CircleStackLayout in ContentPage</h2>
 <p>You can set <code>CircleStackLayout</code> in <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">ContentPage</a>.</p>
 <p>In the following example, there is a large number of <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/boxview">BoxView</a>.  Therefore, the entire content is larger than the screen size and uses <code>CircleStackLayout</code> in <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/scroll-view">ScrollView</a>.</p>
@@ -138,7 +141,34 @@
     &lt;/ContentPage&gt;
     ...
 &lt;/w:IndexPage&gt;
-</code></pre></article>
+</code></pre><h2 id="bad-case-to-using">Bad case to using</h2>
+<pre><code class="lang-xml">        &lt;ContentPage&gt;
+        &lt;w:CircleStackLayout VerticalOptions=&quot;Center&quot; BackgroundColor=&quot;White&quot;&gt;
+            &lt;Label VerticalOptions=&quot;Center&quot; Text=&quot;Welcome to Xamarin Forms!&quot; BackgroundColor=&quot;Gray&quot;/&gt;
+        &lt;/w:CircleStackLayout&gt;
+    &lt;/ContentPage&gt;
+</code></pre><p><img src="data/CircleStackLayout_avoid_case.png" alt="Bad Case"></p>
+<p>In Bad case, the width of CircleStackLayout is too long of the height of it. CircleStackLayout lay out the children in a small circle because it assumes shorter axes is a radius.</p>
+<p>Check out next very simple example of using StackLayout.</p>
+<pre><code class="lang-xml">    &lt;ContentPage&gt;
+        &lt;StackLayout VerticalOptions=&quot;Center&quot; BackgroundColor=&quot;White&quot;&gt;
+            &lt;Label VerticalOptions=&quot;Center&quot; Text=&quot;Welcome to Xamarin Forms!&quot; BackgroundColor=&quot;Gray&quot;/&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ContentPage&gt;
+</code></pre><p><img src="data/CircleStackLayout_stacklayout.png" alt="Case of normal StackLayout"></p>
+<p>You should check the size of the CircleStackLayout if you lay out the children to right place.</p>
+<pre><code class="lang-xml">    &lt;ContentPage&gt;
+        &lt;w:CircleStackLayout VerticalOptions=&quot;Fill&quot;  BackgroundColor=&quot;White&quot;&gt;
+            &lt;Label
+                                HorizontalOptions=&quot;CenterAndExpand&quot;
+                                VerticalOptions=&quot;CenterAndExpand&quot;
+                                Text=&quot;Welcome to Xamarin Forms!&quot;
+                                BackgroundColor=&quot;Gray&quot;/&gt;
+        &lt;/w:CircleStackLayout&gt;
+    &lt;/ContentPage&gt;
+</code></pre><p><img src="data/CircleStackLayout_right_option.png" alt="Good Case"></p>
+<p>In good case of the CircleStackLayout. you can see each vertex of the label that contacts inside of the circle.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
