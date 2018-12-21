@@ -115,6 +115,7 @@ namespace Appium.UITests
                 }
             }
         }
+
         public void Flick(int speedX, int speedY)
         {
             Flick(speedX, speedY, DelayTime);
