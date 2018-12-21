@@ -9,6 +9,7 @@
     RotaryFocusObject="{x:Reference mylist}">
     <w:CirclePage.Content>
         <w:CircleListView x:Name="mylist"
+            AutomationId="list"
             BarColor="Red"
             ItemTapped="OnItemTapped">
             <w:CircleListView.ItemsSource>

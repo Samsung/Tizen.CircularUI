@@ -27,6 +27,7 @@
                     </w:Check.Behaviors>
                 </w:Check>
                 <Button
+                    AutomationId="changePositionOption"
                     Clicked="OnClickPositionOption"
                     FontSize="Micro"
                     HorizontalOptions="CenterAndExpand"
@@ -34,6 +35,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="changeOffset"
                     Clicked="OnClickOffset"
                     FontSize="Micro"
                     HorizontalOptions="CenterAndExpand"
@@ -48,6 +50,7 @@
                         HorizontalTextAlignment="Start"
                         Text="PositionOption : " />
                     <Label
+                        AutomationId="labelPositionOption"
                         x:Name="labelOfPositionOption"
                         FontSize="Micro"
                         HorizontalTextAlignment="Center"
@@ -59,11 +62,13 @@
                     IsVisible="True"
                     Orientation="Horizontal">
                     <Label
+                        AutomationId = "labelOffsetX"
                         x:Name="titleOfOffsetX"
                         FontSize="Micro"
                         HorizontalTextAlignment="Start"
                         Text="X Offset: " />
                     <Label
+                        AutomationId="labelOffsetY"
                         x:Name="labelOfOffsetX"
                         FontSize="Micro"
                         HorizontalTextAlignment="Center"

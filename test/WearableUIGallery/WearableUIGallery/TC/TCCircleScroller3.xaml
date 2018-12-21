@@ -10,9 +10,9 @@
         <StackLayout  
             Orientation="Vertical"
             VerticalOptions="FillAndExpand">
-            <Label BackgroundColor="Blue" HeightRequest="250"/>
-            <Label x:Name="hideable" BackgroundColor="red" HeightRequest="300"/>
-            <Button x:Name="button" Text="Press me"/>
+            <Label AutomationId ="blueLabel" BackgroundColor="Blue" HeightRequest="250"/>
+            <Label AutomationId ="hideableLabel" x:Name="hideable" BackgroundColor="red" HeightRequest="300"/>
+            <Button AutomationId="button" x:Name="button" Text="Press me"/>
         </StackLayout>
     </w:CircleScrollView>
 </w:CirclePage>

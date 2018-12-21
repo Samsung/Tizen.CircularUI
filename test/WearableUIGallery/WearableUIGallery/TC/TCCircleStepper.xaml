@@ -69,6 +69,7 @@
                 Text="Sec"
                 TextColor="White" />
             <w:CircleStepper
+                AutomationId="stepperH"
                 x:Name="StepperHr"
                 Grid.Row="2"
                 Grid.Column="0"
@@ -87,6 +88,7 @@
                 Text=":"
                 VerticalOptions="CenterAndExpand" />
             <w:CircleStepper
+                AutomationId="stepperM"
                 x:Name="StepperMm"
                 Grid.Row="2"
                 Grid.Column="2"
@@ -105,6 +107,7 @@
                 Text=":"
                 VerticalOptions="CenterAndExpand" />
             <w:CircleStepper
+                AutomationId="stepperS"
                 x:Name="StepperSec"
                 Grid.Row="2"
                 Grid.Column="4"

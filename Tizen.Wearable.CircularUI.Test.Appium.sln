@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery", "test\WearableUIGallery\WearableUIGallery\WearableUIGallery.csproj", "{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery.Tizen.Wearable", "test\WearableUIGallery\WearableUIGallery.Tizen.Wearable\WearableUIGallery.Tizen.Wearable.csproj", "{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms", "src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms.Renderer", "src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Appium", "..\Appium\Tizen.Appium\Tizen.Appium.csproj", "{DF0500EB-2702-44B6-ABA6-8C3D89698177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571EFE9E-B539-4FF7-8E28-A6F451C64652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3736C77A-08ED-442D-ADE1-5779254463ED}
+	EndGlobalSection
+EndGlobal

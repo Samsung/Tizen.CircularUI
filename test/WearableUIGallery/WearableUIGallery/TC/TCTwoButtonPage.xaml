@@ -17,13 +17,13 @@
 					HorizontalTextAlignment="Center"
 					Text="{Binding Text}"
 					VerticalOptions="FillAndExpand" />
-				<Button Clicked="OnChange1" Text="change icon 1" />
-				<Button Clicked="OnChange2" Text="change icon 2" />
-				<Button Clicked="OnRemove1" Text="Remove 1" />
-				<Button Clicked="OnRemove2" Text="Remove 2" />
-				<Button Clicked="ToggleOverlap" Text="No Overlap" />
-                <Button Clicked="OnChangeColor1" Text="change color 1" />
-                <Button Clicked="OnChangeColor2" Text="change color 2" />
+                <Button AutomationId="change1" Clicked="OnChange1" Text="change icon 1" />
+                <Button AutomationId="change2" Clicked="OnChange2" Text="change icon 2" />
+                <Button AutomationId="remove1" Clicked="OnRemove1" Text="Remove 1" />
+                <Button AutomationId="remove2" Clicked="OnRemove2" Text="Remove 2" />
+                <Button AutomationId="toggleOverlap" Clicked="ToggleOverlap" Text="No Overlap" />
+                <Button AutomationId="changeColor1" Clicked="OnChangeColor1" Text="change color 1" />
+                <Button AutomationId="changeColor2" Clicked="OnChangeColor2" Text="change color 2" />
             </StackLayout>
 		</ScrollView>
 	</w:TwoButtonPage.Content>

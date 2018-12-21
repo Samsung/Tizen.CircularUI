@@ -23,6 +23,7 @@
                     TextColor="Black"
                     WidthRequest="70" />
                 <w:CircleStepper
+                    AutomationId="stepper"
                     x:Name="StepperUnit"
                     Focused="OnFocusedUnit"
                     HorizontalOptions="Center"

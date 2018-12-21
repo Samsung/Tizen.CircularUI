@@ -10,6 +10,7 @@
             <StackLayout Orientation="Vertical">
                 <Label HorizontalOptions="CenterAndExpand" Text="Default" />
                 <w:Check
+                    AutomationId="default"
                     DisplayStyle="Default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -17,6 +18,7 @@
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff" />
                 <w:Check
+                    AutomationId="onOff"
                     DisplayStyle="Onoff"
                     HorizontalOptions="FillAndExpand"
                     IsToggled="True"
@@ -24,6 +26,7 @@
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Small" />
                 <w:Check
+                    AutomationId="small"
                     DisplayStyle="Small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -31,6 +34,7 @@
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Default Color blue" />
                 <w:Check
+                    AutomationId="defaultColorBlue"
                     DisplayStyle="Default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -38,6 +42,7 @@
                     Toggled="OnToggledDefault" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Default Color Red" />
                 <w:Check
+                    AutomationId="defaultColorRed"
                     DisplayStyle="Default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -45,6 +50,7 @@
                     Toggled="OnToggledDefault" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Default Color Green" />
                 <w:Check
+                    AutomationId="defaultColorGreen"
                     DisplayStyle="Default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -53,6 +59,7 @@
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color blue" />
                 <w:Check
+                    AutomationId="onOffColorBlue"
                     DisplayStyle="Onoff"
                     HorizontalOptions="FillAndExpand"
                     IsToggled="True"
@@ -60,6 +67,7 @@
                     Toggled="OnToggledOnOff" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color Red" />
                 <w:Check
+                    AutomationId="onOffColorRed"
                     DisplayStyle="Onoff"
                     HorizontalOptions="FillAndExpand"
                     IsToggled="True"
@@ -67,6 +75,7 @@
                     Toggled="OnToggledOnOff" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color Green" />
                 <w:Check
+                    AutomationId="onOffColorGreen"
                     DisplayStyle="Onoff"
                     HorizontalOptions="FillAndExpand"
                     IsToggled="True"
@@ -74,6 +83,7 @@
                     Toggled="OnToggledOnOff" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Small Color Blue" />
                 <w:Check
+                    AutomationId="smallColorBlue"
                     DisplayStyle="Small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -81,6 +91,7 @@
                     Toggled="OnToggledSmall" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Small Color Purple" />
                 <w:Check
+                    AutomationId="smallColorPurple"
                     DisplayStyle="Small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
@@ -88,6 +99,7 @@
                     Toggled="OnToggledSmall" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Small Color Yellow" />
                 <w:Check
+                    AutomationId="smallColorYellow"
                     DisplayStyle="Small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"

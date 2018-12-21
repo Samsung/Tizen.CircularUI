@@ -14,6 +14,7 @@
                     IsToggled="False"
                     VerticalOptions="StartAndExpand" />
                 <Button
+                    AutomationId="attach"
                     Clicked="OnClickAttach"
                     FontSize="Small"
                     HorizontalOptions="CenterAndExpand"
@@ -21,6 +22,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="detach"
                     Clicked="OnClickDetach"
                     FontSize="Small"
                     HorizontalOptions="CenterAndExpand"
@@ -28,6 +30,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="visible"
                     Clicked="OnClickVisibility"
                     FontSize="Small"
                     HorizontalOptions="CenterAndExpand"

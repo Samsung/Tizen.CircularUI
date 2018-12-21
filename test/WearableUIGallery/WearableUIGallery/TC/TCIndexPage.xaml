@@ -27,6 +27,7 @@
 		<StackLayout>
 			<BoxView VerticalOptions="FillAndExpand" Color="Purple" />
 			<Button
+				AutomationId="moveButton"
 				x:Name="MoveButton"
 				Clicked="OnMoveButtonClicked"
 				FontSize="Micro"
@@ -39,6 +40,7 @@
 		<StackLayout>
 			<BoxView VerticalOptions="FillAndExpand" Color="LightBlue" />
 			<Button
+				AutomationId="addButton"
 				x:Name="AddButton"
 				Clicked="OnAddButtonClicked"
 				HorizontalOptions="CenterAndExpand"

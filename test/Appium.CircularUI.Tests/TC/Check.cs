@@ -1,0 +1,48 @@
+using NUnit.Framework;
+
+namespace Appium.UITests
+{
+    [TestFixture, Order(15)]
+    public class Check : TestTemplate
+    {
+
+        [Test]
+        public void CheckTest()
+        {
+            var image = "Check_Before.png";
+            Driver.CheckScreenshot(image);
+
+            Driver.Click("default");
+            Driver.Click("onOff");
+            Driver.Click("small");
+
+            var image2 = "Check_After.png";
+            Driver.CheckScreenshot(image2);
+
+            Driver.Flick(0, -80);
+            Driver.Flick(0, -80);
+
+
+            Driver.Click("defaultColorBlue");
+            Driver.Click("defaultColorRed");
+            Driver.Click("defaultColorGreen");
+
+            var result = Driver.GetAttribute<string>("defaultColorBlue", "Color");
+            var expect = "[Color: A=1, R=0, G=0, B=1, Hue=0.666666686534882, Saturation=1, Luminosity=0.5]";
+            Assert.AreEqual(expect, result);
+
+            var result2 = Driver.GetAttribute<string>("defaultColorRed", "Color");
+            var expect2 = "[Color: A=1, R=1, G=0, B=0, Hue=1, Saturation=1, Luminosity=0.5]";
+            Assert.AreEqual(expect2, result2);
+
+            Driver.Flick(0, -80);
+            Driver.Flick(0, -80);
+
+            Driver.Click("onOffColorBlue");
+            Driver.Click("onOffColorGreen");
+            var result4 = Driver.GetAttribute<string>("onOffColorBlue", "Color");
+            var expect4 = "[Color: A=1, R=0, G=0, B=1, Hue=0.666666686534882, Saturation=1, Luminosity=0.5]";
+            Assert.AreEqual(expect4, result4);
+        }
+    }
+}

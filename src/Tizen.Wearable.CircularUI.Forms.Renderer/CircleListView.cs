@@ -403,7 +403,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public ItemType Type { get; set; }
     }
 
-    class ListViewItemContext : Xamarin.Forms.Platform.Tizen.Native.ListView.ItemContext
+    public class ListViewItemContext : Xamarin.Forms.Platform.Tizen.Native.ListView.ItemContext
     {
         public ListViewItemContext(Cell cell, GroupList group, bool isGroup)
         {

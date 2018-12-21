@@ -14,7 +14,7 @@
         <w:CircleListView ItemTapped="OnItemTapped" x:Name="TCList" ItemsSource="{Binding .}">
             <w:CircleListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Title}" Detail="{Binding Class.Count, Converter={x:StaticResource DetailTextConverter} }"/>
+                    <TextCell  local:AutomationBinding.AutomationId="{Binding Title}" Text="{Binding Title}" Detail="{Binding Class.Count, Converter={x:StaticResource DetailTextConverter} }"/>
                 </DataTemplate>
             </w:CircleListView.ItemTemplate>
         </w:CircleListView>

@@ -75,6 +75,7 @@ namespace WearableUIGallery.TC
                             VerticalOptions = LayoutOptions.FillAndExpand
                         },
                         new Label {
+                            AutomationId = $"label{i}",
                             Text = "Added Page(" + i + ")",
                             HorizontalOptions = LayoutOptions.CenterAndExpand
                         }
