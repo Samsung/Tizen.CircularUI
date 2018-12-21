@@ -48,7 +48,7 @@ namespace WearableUIGallery.TC
 
         void DoAdd(object sender, EventArgs e)
         {
-            myDatas.Add(new MyData(){ Text = string.Format("TestItem{0}", myDatas.Count + 1) });
+            myDatas.Add(new MyData{ Text = string.Format("TestItem{0}", myDatas.Count + 1) });
         }
 
         void DoDel(object sender, EventArgs e)

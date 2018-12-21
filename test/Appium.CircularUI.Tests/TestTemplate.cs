@@ -23,7 +23,6 @@ namespace Appium.UITests
         public void TearDown()
         {
             System.Threading.Thread.Sleep(1000);
-            //Driver.GoHomePage();
         }
     }
 }

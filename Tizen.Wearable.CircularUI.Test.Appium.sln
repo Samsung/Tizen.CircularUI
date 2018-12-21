@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms.Renderer", "src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Appium", "..\Appium\Tizen.Appium\Tizen.Appium.csproj", "{DF0500EB-2702-44B6-ABA6-8C3D89698177}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF0500EB-2702-44B6-ABA6-8C3D89698177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

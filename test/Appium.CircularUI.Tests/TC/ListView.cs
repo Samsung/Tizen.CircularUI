@@ -30,8 +30,6 @@ namespace Appium.UITests
         {
             Driver.FindTC(CircleListBehaviorTestName);
 
-            //var btnId = "add"; //MenuItem is not VisualElement, It didn't add VisuleElement List on Tizen.Appium.      
-            //Driver.Click(btnId);
             Driver.Click(30, 180);
             Driver.Flick(0, -180, 3000);
 

@@ -67,9 +67,7 @@ namespace Appium.UITests
             option.AddAdditionalCapability("deviceName", "tizen-wearable");
             option.AddAdditionalCapability("appPackage", "org.tizen.example.WearableUIGallery.Tizen.Wearable");
             //option.AddAdditionalCapability("app", "org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk");
-            //option.AddAdditionalCapability("reboot", "true");
-            //_driver = new TizenDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), option);
-            _driver = new TizenDriver<AppiumWebElement>(new Uri("http://10.113.111.149:4723/wd/hub"), option);
+            _driver = new TizenDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), option); //please insert IP of Appium server.
             _touchScreen = new RemoteTouchScreen(_driver);
         }
 
@@ -117,14 +115,23 @@ namespace Appium.UITests
                 }
             }
         }
+        public void Flick(int speedX, int speedY)
+        {
+            Flick(speedX, speedY, DelayTime);
+        }
 
-        public void Flick(int speedX, int speedY, int delay = DelayTime)
+        public void Flick(int speedX, int speedY, int delay)
         {
             _touchScreen.Flick(speedX, speedY);
             System.Threading.Thread.Sleep(delay);
         }
 
-        public void Click(int x, int y, int delay = DelayTime)
+        public void Click(int x, int y)
+        {
+            Click(x, y, DelayTime);
+        }
+
+        public void Click(int x, int y, int delay)
         {
             var touchAction = new TouchAction(_driver);
             touchAction.Press(x, y);
@@ -134,13 +141,23 @@ namespace Appium.UITests
             System.Threading.Thread.Sleep(delay);
         }
 
-        public void Click(string automationId, int delay = DelayTime)
+        public void Click(string automationId)
+        {
+            Click(automationId, DelayTime);
+        }
+
+        public void Click(string automationId, int delay)
         {
             _driver.FindElementByAccessibilityId(automationId).Click();
             System.Threading.Thread.Sleep(delay);
         }
 
-        public void Drag(int startX, int startY, int endX, int endY, int delayTime = DelayTime)
+        public void Drag(int startX, int startY, int endX, int endY)
+        {
+            Drag(startX, startY, endX, endY, DelayTime);
+        }
+
+        public void Drag(int startX, int startY, int endX, int endY, int delayTime)
         {
             _touchScreen.Down(startX, startY);
             System.Threading.Thread.Sleep(delayTime);
@@ -149,13 +166,23 @@ namespace Appium.UITests
             _touchScreen.Up(endX, endX);
         }
 
-        public void SetText(string automationId, string text, int delayTime = DelayTime)
+        public void SetText(string automationId, string text)
+        {
+            SetText(automationId, text, DelayTime);
+        }
+
+        public void SetText(string automationId, string text, int delayTime)
         {
             _driver.FindElementByAccessibilityId(automationId).SetImmediateValue(text);
             System.Threading.Thread.Sleep(delayTime);
         }
 
-        public T GetAttribute<T>(string automationId, string attribute, int delayTime = DelayTime)
+        public T GetAttribute<T>(string automationId, string attribute)
+        {
+            return GetAttribute<T>(automationId, attribute, DelayTime);
+        }
+
+        public T GetAttribute<T>(string automationId, string attribute, int delayTime)
         {
             System.Threading.Thread.Sleep(delayTime);
             var element = _driver.FindElementByAccessibilityId(automationId);
@@ -175,14 +202,12 @@ namespace Appium.UITests
             return default(T);
         }
 
-        public Point GetLocation(string automationId, int delayTime = DelayTime)
+        public string GetText(string automationId)
         {
-            System.Threading.Thread.Sleep(delayTime);
-            var element = _driver.FindElementByAccessibilityId(automationId);
-            return element.Location;
+            return GetText(automationId, DelayTime);
         }
 
-        public string GetText(string automationId, int delayTime = DelayTime)
+        public string GetText(string automationId, int delayTime)
         {
             System.Threading.Thread.Sleep(delayTime);
             AppiumWebElement element;
@@ -204,7 +229,12 @@ namespace Appium.UITests
             return element.Size;
         }
 
-        public void SetAttribute(string automationId, string attribute, object value, int delayTime = DelayTime)
+        public void SetAttribute(string automationId, string attribute, object value)
+        {
+            SetAttribute(automationId, attribute, value, DelayTime);
+        }
+
+        public void SetAttribute(string automationId, string attribute, object value, int delayTime)
         {
             Console.WriteLine($"#### SetAttribute  automationId:{automationId},  attribute:{attribute}, value:{value}");
             var element = _driver.FindElementByAccessibilityId(automationId) as TizenElement;
@@ -237,7 +267,6 @@ namespace Appium.UITests
             if (tizenDriver == null)
                 return false;
 
-            //var path = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             var path = AppDomain.CurrentDomain.BaseDirectory;
             if (path.Contains("bin\\Debug\\"))
             {

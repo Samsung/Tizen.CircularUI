@@ -35,7 +35,7 @@ namespace WearableUIGallery
                 else
                 {
                     var types = desc.Class;
-                    page = new TCSubListPage()
+                    page = new TCSubListPage
                     {
                         AutomationId = desc.Title + "Page"
                     };
