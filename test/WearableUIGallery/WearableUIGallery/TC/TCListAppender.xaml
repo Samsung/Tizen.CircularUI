@@ -11,6 +11,7 @@
     <w:TwoButtonPage.Content>
         <w:CircleListView
             x:Name="mylist"
+            AutomationId="list"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
             <w:CircleListView.Header>
@@ -31,11 +32,13 @@
     </w:TwoButtonPage.Content>
     <w:TwoButtonPage.FirstButton>
         <MenuItem
+            AutomationId="add"
             Clicked="DoAdd"
             Icon="image/tw_ic_popup_btn_check.png" />
     </w:TwoButtonPage.FirstButton>
     <w:TwoButtonPage.SecondButton>
         <MenuItem
+            AutomationId="delete"
             Clicked="DoDel"
             Icon="image/tw_ic_popup_btn_delete.png" />
     </w:TwoButtonPage.SecondButton>

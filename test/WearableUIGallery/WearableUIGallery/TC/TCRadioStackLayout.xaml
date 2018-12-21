@@ -13,6 +13,7 @@
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Padding="0,50" Orientation="Vertical">
                 <Label
+                    AutomationId="labelMode"
                     x:Name="label1"
                     FontSize="Medium"
                     HorizontalOptions="CenterAndExpand"
@@ -23,6 +24,7 @@
                         Text="{Binding Sound.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
+                        AutomationId="radioValueSound"
                         GroupName="{Binding Sound.GroupName}"
                         HorizontalOptions="End"
                         IsSelected="{Binding Sound.IsSelected,  Mode=TwoWay}"
@@ -35,6 +37,7 @@
                         Text="{Binding Vibrate.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
+                        AutomationId="radioValueVibrator"
                         GroupName="{Binding Vibrate.GroupName}"
                         HorizontalOptions="End"
                         IsSelected="{Binding Vibrate.IsSelected, Mode=TwoWay}"
@@ -47,6 +50,7 @@
                         Text="{Binding Mute.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
+                        AutomationId="radioValueMute"
                         GroupName="{Binding Mute.GroupName}"
                         HorizontalOptions="End"
                         IsSelected="{Binding Mute.IsSelected, Mode=TwoWay}"
@@ -55,6 +59,7 @@
                         Value="{Binding Mute.Value}" />
                 </StackLayout>
                 <Label
+                    AutomationId="labelStrength"
                     x:Name="label2"
                     FontSize="Small"
                     HorizontalOptions="CenterAndExpand"
@@ -65,6 +70,7 @@
                         Text="{Binding Strong.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
+                        AutomationId="radioValueStrong"
                         GroupName="{Binding Strong.GroupName}"
                         HorizontalOptions="End"
                         IsSelected="{Binding Strong.IsSelected, Mode=TwoWay}"
@@ -78,6 +84,7 @@
                         Text="{Binding Medium.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
+                        AutomationId="radioValueMedium"
                         GroupName="{Binding Medium.GroupName}"
                         HorizontalOptions="End"
                         IsSelected="{Binding Medium.IsSelected, Mode=TwoWay}"
@@ -91,6 +98,7 @@
                         Text="{Binding Weak.Text}"
                         VerticalOptions="Center" />
                     <w:Radio
+                        AutomationId="radioValueWeak"
                         GroupName="{Binding Weak.GroupName}"
                         HorizontalOptions="End"
                         IsSelected="{Binding Weak.IsSelected, Mode=TwoWay}"

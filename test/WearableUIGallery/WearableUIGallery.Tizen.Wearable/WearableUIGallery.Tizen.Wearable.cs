@@ -27,11 +27,22 @@ namespace WearableUIGallery.Tizen.Wearable
             LoadApplication(new App());
         }
 
+        protected override void OnTerminate()
+        {
+            base.OnTerminate();
+#if UITest
+            global::Tizen.Appium.TizenAppium.StopService();
+#endif
+        }
+
         static void Main(string[] args)
         {
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
             FormsCircularUI.Init();
+#if UITest
+            global::Tizen.Appium.TizenAppium.StartService(app);
+#endif
             app.Run(args);
         }
     }

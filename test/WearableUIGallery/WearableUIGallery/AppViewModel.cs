@@ -33,14 +33,14 @@ namespace WearableUIGallery
                 Class = new TCTypes
                 {
                     new TCDescribe { Title = "NoFishEyeHeaderList", Class = typeof(TCCircleListViewNoEffect) },
-                    new TCDescribe { Title = "CircleList behavior", Class = typeof(TCListAppender) },
+                    new TCDescribe { Title = "CircleListBehavior", Class = typeof(TCListAppender) },
                     new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) },
                     new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) },
                     new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) },
                     new TCDescribe { Title = "ListViewNormal", Class = typeof(TCListView) },
                     new TCDescribe { Title = "HeaderWithGroup", Class = typeof(TCCircleListViewGroupHeader) },
                     new TCDescribe { Title = "HeaderWithoutGroup", Class = typeof(TCCircleListViewHeaderWithoutGroup) },
-                    new TCDescribe { Title = "change bar color", Class = typeof(TCCircleListViewBarColor) },
+                    new TCDescribe { Title = "ChangeBarColor", Class = typeof(TCCircleListViewBarColor) },
                 }
             });
             TCs.Add(new TCDescribe
@@ -48,7 +48,7 @@ namespace WearableUIGallery
                 Title = "CirclePage",
                 Class = new TCTypes
                 {
-                    new TCDescribe { Title = "CirclePage", Class = typeof(TCCirclePage) },
+                    new TCDescribe { Title = "CirclePageBehavior", Class = typeof(TCCirclePage) },
                     new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) },
                     new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) }
                 }
@@ -74,7 +74,7 @@ namespace WearableUIGallery
                 Class = new TCTypes
                 {
                     new TCDescribe { Title = "Position", Class = typeof(TCCtxPopup1) },
-                    new TCDescribe { Title = "Command Paramter", Class = typeof(TCCtxPopup2) },
+                    new TCDescribe { Title = "CommandParameter", Class = typeof(TCCtxPopup2) },
                     new TCDescribe { Title = "Attach/Detach/Visibility", Class = typeof(TCCtxPopup3) },
                     new TCDescribe { Title = "Label with TapCtx", Class = typeof(TCCtxPopup4) }
                 }
@@ -83,10 +83,10 @@ namespace WearableUIGallery
                 Title = "CircleScroller",
                 Class = new TCTypes
                 {
-                     new TCDescribe { Title = "vertical", Class = typeof(TCCircleScroller) },
-                     new TCDescribe { Title = "horizontal", Class = typeof(TCCircleScroller2) },
-                     new TCDescribe { Title = "remove/add", Class = typeof(TCCircleScroller3) },
-                     new TCDescribe { Title = "change bar color", Class = typeof(TCCircleScrollerBarColor) }
+                     new TCDescribe { Title = "Vertical", Class = typeof(TCCircleScroller) },
+                     new TCDescribe { Title = "Horizontal", Class = typeof(TCCircleScroller2) },
+                     new TCDescribe { Title = "Remove/Add", Class = typeof(TCCircleScroller3) },
+                     new TCDescribe { Title = "ChangeBarColor", Class = typeof(TCCircleScrollerBarColor) }
                 }
             });
             TCs.Add(new TCDescribe
@@ -114,7 +114,7 @@ namespace WearableUIGallery
                 Title = "TwoButtonPage",
                 Class = new TCTypes
                 {
-                    new TCDescribe { Title = "TwoButtonPage", Class = typeof(TCTwoButtonPage) },
+                    new TCDescribe { Title = "TwoButtonPageBehavior", Class = typeof(TCTwoButtonPage) },
                     new TCDescribe { Title = "TwoButtonPageListView", Class = typeof(TCTwoButtonPageListView) },
                     new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) }
                 }

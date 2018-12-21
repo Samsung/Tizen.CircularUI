@@ -10,32 +10,51 @@ using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCListAppender : TwoButtonPage
-	{
-        public ObservableCollection<string> Texts { get; set; }
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCListAppender : TwoButtonPage
+    {
+        public class MyData
+        {
+            public string Text { get; set; }
+        }
 
-		public TCListAppender ()
-		{
-            Texts = new ObservableCollection<string>
+        ObservableCollection<MyData> myDatas;
+
+        public TCListAppender ()
+        {
+            myDatas = new ObservableCollection<MyData>();
+
+            for (int i = 1; i <= 3; ++i)
             {
-                "Test 1",
-                "Test 2",
-                "Test 3"
-            };
+                myDatas.Add(new MyData() { Text = string.Format("TestItem{0}", i) });
+            }
+
             InitializeComponent ();
-            mylist.ItemsSource = Texts;
+
+            mylist.ItemTemplate = new DataTemplate(() =>
+            {
+                var cell = new TextCell();
+                cell.SetBinding(TextCell.TextProperty, new Binding("Text"));
+                cell.BindingContextChanged += (s, e) =>
+                {
+                    if (String.IsNullOrEmpty(cell.AutomationId))
+                        cell.AutomationId = cell.Text;
+                };
+                return cell;
+            });
+
+            mylist.ItemsSource = myDatas;
         }
 
         void DoAdd(object sender, EventArgs e)
         {
-            Texts.Add("Test " + (Texts.Count+1));
+            myDatas.Add(new MyData{ Text = string.Format("TestItem{0}", myDatas.Count + 1) });
         }
 
         void DoDel(object sender, EventArgs e)
         {
-            if (Texts.Count > 0)
-                Texts.RemoveAt(Texts.Count - 1);
+            if (myDatas.Count > 0)
+                myDatas.RemoveAt(myDatas.Count - 1);
         }
     }
 }

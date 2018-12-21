@@ -13,6 +13,7 @@
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Padding="0,50,0,50">
                 <Button
+                    AutomationId="text"
                     x:Name="button1"
                     Clicked="OnButton1Clicked"
                     FontSize="Small"
@@ -22,6 +23,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="longText"
                     x:Name="button2"
                     Clicked="OnButton2Clicked"
                     FontSize="Small"
@@ -31,6 +33,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="iconText"
                     x:Name="button3"
                     Clicked="OnButton3Clicked"
                     FontSize="Small"
@@ -40,6 +43,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="iconSize"
                     x:Name="button4"
                     Clicked="OnButton4Clicked"
                     FontSize="Small"
@@ -49,6 +53,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="250" />
                 <Button
+                    AutomationId="iconJpg"
                     x:Name="button5"
                     Clicked="OnButton5Clicked"
                     FontSize="Small"

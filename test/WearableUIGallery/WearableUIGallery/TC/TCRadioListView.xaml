@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:local2="clr-namespace:WearableUIGallery"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference mylist}">
@@ -24,6 +25,7 @@
                                 Text="{Binding Text}"
                                 VerticalOptions="Center" />
                             <w:Radio
+                                local2:AutomationBinding.AutomationId="{Binding Value}"
                                 GroupName="{Binding GroupName}"
                                 HorizontalOptions="End"
                                 IsSelected="{Binding IsSelected, Mode=TwoWay}"

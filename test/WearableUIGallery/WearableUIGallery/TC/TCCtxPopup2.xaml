@@ -8,6 +8,7 @@
     <ContentPage.Content>
         <AbsoluteLayout>
             <w:Check
+                AutomationId="check"
                 x:Name="CtxCheck1"
                 AbsoluteLayout.LayoutBounds="0.5, 0.3"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
@@ -26,6 +27,7 @@
                 </w:Check.Behaviors>
             </w:Check>
             <Label
+                AutomationId="label"
                 x:Name="labelOfCommandParamter"
                 AbsoluteLayout.LayoutBounds="0.1, 0.5"
                 AbsoluteLayout.LayoutFlags="PositionProportional"

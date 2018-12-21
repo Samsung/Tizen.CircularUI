@@ -10,7 +10,8 @@
             <Image x:Name="Universe" Source="image/stars_background.png" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
             <local:RotaryFocusImage x:Name="Spaceman" Source="image/spaceman.png" AbsoluteLayout.LayoutBounds="0.5, 0.2" AbsoluteLayout.LayoutFlags="PositionProportional"
                                     AnchorX="0.5" AnchorY="1.5"/>
-            <Image x:Name="SliderTarget" Source="image/tw_ic_popup_btn_check.png" AbsoluteLayout.LayoutBounds="0.5, 0.5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Image x:Name="SliderTarget" Source="image/tw_ic_popup_btn_check.png" AbsoluteLayout.LayoutBounds="0.5, 0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                    AutomationId="check"/>
         </AbsoluteLayout>
     </ContentPage.Content>
     <w:CirclePage.CircleSurfaceItems>

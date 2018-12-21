@@ -18,6 +18,7 @@
                     Text="Popup is not shown"
                     VerticalOptions="Start" />
                 <Button
+                    AutomationId="text"
                     x:Name="button1"
                     Clicked="OnTextButtonClicked"
                     FontSize="Small"
@@ -27,6 +28,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="longText"
                     x:Name="button2"
                     Clicked="OnLongTextButtonClicked"
                     FontSize="Small"
@@ -36,6 +38,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="titleTextButton"
                     x:Name="button3"
                     Clicked="OnTitleTextButtonClicked"
                     FontSize="Small"
@@ -44,6 +47,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="longTextButton"
                     x:Name="button4"
                     Clicked="OnIconBottomButtonClicked"
                     FontSize="Small"
@@ -52,6 +56,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="titleTextButton2"
                     x:Name="button5"
                     Clicked="OnIconAndTextBottomButtonClicked"
                     FontSize="Small"
@@ -60,6 +65,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="process"
                     x:Name="button6"
                     Clicked="OnProcessButtonClicked"
                     FontSize="Small"
@@ -69,6 +75,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="process2"
                     x:Name="button7"
                     Clicked="OnProcessLongTextButtonClicked"
                     FontSize="Small"
@@ -78,6 +85,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="changeButtonColor"
                     x:Name="button8"
                     Clicked="OnChangeColorButtonClicked"
                     FontSize="Small"

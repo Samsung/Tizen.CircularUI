@@ -9,6 +9,7 @@
         <w:CircleScrollView x:Name="Scroller">
             <StackLayout Padding="20,40,20,40">
                 <w:PopupEntry
+                    AutomationId="popupEntry1"
                     BackgroundColor="Gray"
                     HorizontalOptions="FillAndExpand"
                     TextColor="Blue"
@@ -16,22 +17,26 @@
                     PlaceholderColor="Blue"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
+                    AutomationId="popupEntry2"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="Foobar"
                     PopupBackgroundColor="Green"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
+                    AutomationId="popupEntry3"
                     HorizontalOptions="FillAndExpand"
                     IsPassword="True"
                     Placeholder="Password"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
+                    AutomationId="popupEntry4"
                     BackgroundColor="DarkCyan"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="CenterAndExpand"
                     PopupBackgroundColor="Red"
                     HorizontalTextAlignment="Center"/>
                 <w:PopupEntry
+                    AutomationId="popupEntry5"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="CenterAndExpand"
                     Keyboard="Numeric"

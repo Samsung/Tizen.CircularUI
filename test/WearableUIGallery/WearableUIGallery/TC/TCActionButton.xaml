@@ -8,20 +8,24 @@
             VerticalOptions="Center">
             <StackLayout Orientation="Horizontal">
                 <Button Text="Set"
+                        AutomationId="set"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
                         Clicked="OnClickSet"/>
                 <Button Text="Enable"
+                        AutomationId="enable"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
                         Clicked="OnClickEnable"/>
                 <Button Text="Visible"
+                        AutomationId="visible"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
                         Clicked="OnClickVisible"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Change button color"
+                        AutomationId="changeColor"
                         FontSize="Small"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"

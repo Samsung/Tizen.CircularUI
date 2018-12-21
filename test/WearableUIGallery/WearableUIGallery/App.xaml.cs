@@ -31,7 +31,7 @@ namespace WearableUIGallery
         public App()
         {
             InitializeComponent();
-
+            MainNavigationPage.AutomationId = "MainPage";
             MainNavigation = MainNavigationPage;
         }
 

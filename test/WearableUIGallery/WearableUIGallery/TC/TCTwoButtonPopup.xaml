@@ -18,6 +18,7 @@
                     Text="Popup is not shown"
                     VerticalOptions="Start" />
                 <Button
+                    AutomationId="text"
                     x:Name="button1"
                     Clicked="OnTwoButtonTextClicked"
                     FontSize="Small"
@@ -26,6 +27,7 @@
                     VerticalOptions="StartAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="longText"
                     x:Name="button2"
                     Clicked="OnTwoButtonLongTextClicked"
                     FontSize="Small"
@@ -34,6 +36,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="leftButtonOnly"
                     x:Name="button3"
                     Clicked="OnLeftOnlyClicked"
                     FontSize="Small"
@@ -42,6 +45,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="rightButtonOnly"
                     x:Name="button4"
                     Clicked="OnRightOnlyClicked"
                     FontSize="Small"
@@ -50,6 +54,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="leftButtonNoIcon"
                     x:Name="button5"
                     Clicked="OnLeftNoIconClicked"
                     FontSize="Small"
@@ -58,6 +63,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="ightButtonNoIcon"
                     x:Name="button6"
                     Clicked="OnRightNoIconClicked"
                     FontSize="Small"
@@ -66,6 +72,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="jpgIconButton"
                     x:Name="button7"
                     Clicked="OnRightJpgIconClicked"
                     FontSize="Small"
@@ -74,6 +81,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="changeLeftButtonColor"
                     x:Name="button8"
                     Clicked="OnChangeColorLeftClicked"
                     FontSize="Small"
@@ -82,6 +90,7 @@
                     VerticalOptions="CenterAndExpand"
                     WidthRequest="300" />
                 <Button
+                    AutomationId="changeRightButtonColor"
                     x:Name="button9"
                     Clicked="OnChangeColorRightClicked"
                     FontSize="Small"

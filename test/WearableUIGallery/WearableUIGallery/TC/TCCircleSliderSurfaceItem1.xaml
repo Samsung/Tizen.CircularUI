@@ -8,6 +8,7 @@
     <w:CirclePage.Content>
         <AbsoluteLayout>
             <Button
+                AutomationId="enable"
                 AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.5, 0.2"
                 AbsoluteLayout.LayoutFlags="All"
                 Clicked="OnClick"
