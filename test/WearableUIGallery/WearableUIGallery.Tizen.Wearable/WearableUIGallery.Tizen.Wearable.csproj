@@ -21,7 +21,6 @@
   
   <!-- If solution already has PCL project, will reference -->
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Appium\Tizen.Appium\Tizen.Appium.csproj" />
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj" />
     <ProjectReference Include="..\WearableUIGallery\WearableUIGallery.csproj" />
   </ItemGroup>
