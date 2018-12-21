@@ -2719,6 +2719,59 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
   nameWithType: ListViewCache.PaddingItemClass
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
+  name: ListViewItemContext
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
+  nameWithType: ListViewItemContext
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  name: ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  name.vb: ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  nameWithType: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
+  nameWithType.vb: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},System.Boolean)
+  name: ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},System.Boolean)
+  name.vb: ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>, System.Boolean)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell), System.Boolean)
+  nameWithType: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, Boolean)
+  nameWithType.vb: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  name: ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  name.vb: ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  nameWithType: ListViewItemContext.ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
+  nameWithType.vb: ListViewItemContext.ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor*
+  name: ListViewItemContext
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext
+  nameWithType: ListViewItemContext.ListViewItemContext
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
+  name: Group
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext_Group
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
+  nameWithType: ListViewItemContext.Group
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group*
+  name: Group
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext_Group_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
+  nameWithType: ListViewItemContext.Group
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass
   name: PaddingItemClass
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.html
