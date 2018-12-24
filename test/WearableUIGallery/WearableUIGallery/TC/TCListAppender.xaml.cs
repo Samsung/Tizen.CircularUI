@@ -26,7 +26,7 @@ namespace WearableUIGallery.TC
 
             for (int i = 1; i <= 3; ++i)
             {
-                myDatas.Add(new MyData() { Text = string.Format("TestItem{0}", i) });
+                myDatas.Add(new MyData{ Text = string.Format("TestItem{0}", i) });
             }
 
             InitializeComponent ();

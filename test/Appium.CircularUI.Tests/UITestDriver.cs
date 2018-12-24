@@ -20,10 +20,10 @@ namespace Appium.UITests
         const int DelayTime = 1000;
         const string Platform = "Tizen";
 
-        static bool createFolder = false;
         static UITestDriver _instance;
         AppiumDriver<AppiumWebElement> _driver;
         RemoteTouchScreen _touchScreen;
+        static bool createFolder;
 
         public static UITestDriver Instance
         {
@@ -69,6 +69,7 @@ namespace Appium.UITests
             //option.AddAdditionalCapability("app", "org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk");
             _driver = new TizenDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), option); //please insert IP of Appium server.
             _touchScreen = new RemoteTouchScreen(_driver);
+            createFolder = false;
         }
 
         public void Quit()
