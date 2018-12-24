@@ -116,7 +116,8 @@ namespace WearableUIGallery
                 {
                     new TCDescribe { Title = "TwoButtonPageBehavior", Class = typeof(TCTwoButtonPage) },
                     new TCDescribe { Title = "TwoButtonPageListView", Class = typeof(TCTwoButtonPageListView) },
-                    new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) }
+                    new TCDescribe { Title = "TwoButtonPopup", Class = typeof(TCTwoButtonPopup) },
+                    new TCDescribe { Title = "TwoButtonPopupCmd", Class = typeof(TCTwoButtonPopupCmd) }
                 }
             });
             TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
