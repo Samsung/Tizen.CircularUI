@@ -55,10 +55,15 @@ but you can see that it is written as `font name`.
 
 > [!NOTE]
 > The `font name` is actually `postscript name` in your TTF or OTF file.
+>
+> In some cases, a custom font can't be set with `postscript name`.
+> If your custom font is not applied with `postscript name`, please try to set `font family name`
 
 > [!TIP]
-> You can find `postscript name` from the font file with `fc-query` in the font config installed shell.  
+> You can find `postscript name` and `font family name` from the font file with `fc-query` in the font config installed shell.  
 > `fc-query -f "%{postscriptname}\n" Font.ttf`
+>
+> `fc-query -f "%{family}\n" Font.ttf`
 
 Of course, it can also be used with Xamarin.Forms.
 
