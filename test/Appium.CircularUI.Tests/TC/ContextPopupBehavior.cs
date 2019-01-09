@@ -67,16 +67,17 @@ namespace Appium.UITests
 
             Driver.Click(attachBtnId);
             Driver.Click(visibleBtnId);
-
+#if WATCH_DEVICE
             var image = "CtxPopup_AttachVisible.png";
             Driver.CheckScreenshot(image);
+#endif
             Driver.Click(180, 200);
-
             Driver.Click(detachBtnId);
             Driver.Click(visibleBtnId);
-
+#if WATCH_DEVICE
             var image2 = "CtxPopup_DetachVisible.png";
             Driver.CheckScreenshot(image2);
+#endif
             Driver.Click(180, 200);
         }
     }

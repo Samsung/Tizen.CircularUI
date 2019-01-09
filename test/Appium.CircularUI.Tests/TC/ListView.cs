@@ -19,10 +19,14 @@ namespace Appium.UITests
         {
             Driver.FindTC(NoFishEyeHeaderTestName);
 
+#if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
-
             var image = "CircleListView_NoFishEyeHeaderTest.png";
             Driver.CheckScreenshot(image);
+#else
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+#endif
         }
 
         [Test]
@@ -31,7 +35,7 @@ namespace Appium.UITests
             Driver.FindTC(CircleListBehaviorTestName);
 
             Driver.Click(30, 180);
-            Driver.Flick(0, -180, 3000);
+            Driver.Flick(0, SpeedY * 2, 3000);
 
             var text = Driver.GetText("TestItem4");
             Assert.AreEqual(text, "TestItem4");
@@ -48,10 +52,14 @@ namespace Appium.UITests
         {
             Driver.FindTC(GroupListTestName);
 
+#if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
-
             var image = "CircleListView_GroupListTest.png";
             Driver.CheckScreenshot(image);
+#else
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+#endif
         }
 
         [Test]
@@ -59,10 +67,14 @@ namespace Appium.UITests
         {
             Driver.FindTC(CircleListViewTestName);
 
+#if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
-
             var image = "CircleListView.png";
             Driver.CheckScreenshot(image);
+#else
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+#endif
         }
 
 
@@ -71,10 +83,14 @@ namespace Appium.UITests
         {
             Driver.FindTC(ViewCellTestName);
 
+#if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
-
             var image = "CircleListView_ViewCell.png";
             Driver.CheckScreenshot(image);
+#else
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+#endif
         }
 
         [Test]
@@ -82,10 +98,14 @@ namespace Appium.UITests
         {
             Driver.FindTC(HeaderWithGroupTestName);
 
+#if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
-
             var image = "CircleListView_HeaderWithGroup.png";
             Driver.CheckScreenshot(image);
+#else
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+#endif
         }
 
         [Test]
@@ -93,10 +113,14 @@ namespace Appium.UITests
         {
             Driver.FindTC(HeaderWithoutGroupTestName);
 
+#if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
-
             var image = "CircleListView_HeaderWithoutGroup.png";
             Driver.CheckScreenshot(image);
+#else
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+#endif
         }
 
         [Test]

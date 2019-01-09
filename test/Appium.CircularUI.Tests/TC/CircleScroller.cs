@@ -14,18 +14,18 @@ namespace Appium.UITests
         public void VerticalTest()
         {
             Driver.FindTC(VerticalTestName);
-            Driver.Flick(0, -150);
-            Driver.Flick(0, -150);
-            Driver.Flick(0, -150);
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
+            Driver.Flick(0, SpeedY * 2);
         }
 
         [Test]
         public void HorizontalTest()
         {
             Driver.FindTC(HorizontalTestName);
-            Driver.Flick(-150, 0);
-            Driver.Flick(-150, 0);
-            Driver.Flick(-150, 0);
+            Driver.Flick(SpeedX * 2, 0);
+            Driver.Flick(SpeedX * 2, 0);
+            Driver.Flick(SpeedX * 2, 0);
         }
 
         [Test]
@@ -37,11 +37,13 @@ namespace Appium.UITests
             var isVisible = Driver.GetAttribute<bool>(elementId, "IsVisible");
             Assert.True(isVisible, elementId + ".IsVisible should be true, but got " + isVisible);
 
-            Driver.Flick(0, -150);
+            Driver.Flick(0, SpeedY * 2);
             Driver.Click("button");
 
+#if WATCH_DEVICE
             var image = "CircleScrollView_Remove.png";
             Driver.CheckScreenshot(image);
+#endif
         }
 
         [Test]

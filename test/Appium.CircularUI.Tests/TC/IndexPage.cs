@@ -11,23 +11,15 @@ namespace Appium.UITests
         [Test]
         public void AddMoveTest()
         {
+            var speedX = SpeedX * 2;
             Driver.FindTC(AddMoveTestName);
 
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Click("moveButton");
-
-            var image = "IndexPopup_Move.png";
-            Driver.CheckScreenshot(image);
-
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
+            Driver.Flick(speedX, 0);
+            Driver.Flick(speedX, 0);
+            Driver.Flick(speedX, 0);
+            Driver.Flick(speedX, 0);
             Driver.Click("addButton");
-
-            Driver.Flick(-120, 0);
+            Driver.Flick(speedX, 0);
             var result = Driver.GetText("label0");
             var expect = "Added Page(0)";
             Assert.AreEqual(expect, result);
@@ -36,12 +28,15 @@ namespace Appium.UITests
         [Test]
         public void TemplateTest()
         {
+            var speedX = SpeedX * 2;
             Driver.FindTC(TemplateTestName);
 
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
+            Driver.Flick(speedX, 0);
+            Driver.Flick(speedX, 0);
+#if WATCH_DEVICE
             var image = "IndexPopup_Template.png";
             Driver.CheckScreenshot(image);
+#endif
         }
     }
 }
