@@ -18,8 +18,10 @@ namespace Appium.UITests
 
             Driver.Click(startBtnId, 15000);
 
+#if WATCH_DEVICE
             var image = "CircleSurfaceItem_CircleProgressBar.png";
             Driver.CheckScreenshot(image);
+#endif
         }
 
         [Test]
@@ -29,13 +31,17 @@ namespace Appium.UITests
 
             var enableBtnId = "enable";
 
+#if WATCH_DEVICE
             var image = "CircleSurfaceItem_CircleSliderDisable.png";
             Driver.CheckScreenshot(image);
+#endif
 
             Driver.Click(enableBtnId);
 
+#if WATCH_DEVICE
             var image2 = "CircleSurfaceItem_CircleSliderEnable.png";
             Driver.CheckScreenshot(image2);
+#endif
         }
 
         [Test]
@@ -44,16 +50,16 @@ namespace Appium.UITests
             Driver.FindTC(CircleSlider2TestName);
 
             var changeBtnId = "change";
-
             Driver.Click(changeBtnId);
-
+#if WATCH_DEVICE
             var image = "CircleSurfaceItem_CircleSliderChangeFocus1.png";
             Driver.CheckScreenshot(image);
-
+#endif
             Driver.Click(changeBtnId);
-
+#if WATCH_DEVICE
             var image2 = "CircleSurfaceItem_CircleSliderChangeFocus2.png";
             Driver.CheckScreenshot(image2);
+#endif
         }
     }
 }

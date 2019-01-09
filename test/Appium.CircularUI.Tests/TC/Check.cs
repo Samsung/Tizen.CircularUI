@@ -9,18 +9,22 @@ namespace Appium.UITests
         [Test]
         public void CheckTest()
         {
-            var image = "Check_Before.png";
-            Driver.CheckScreenshot(image);
-
             Driver.Click("default");
             Driver.Click("onOff");
             Driver.Click("small");
 
-            var image2 = "Check_After.png";
-            Driver.CheckScreenshot(image2);
+            var isToggled = Driver.GetAttribute<bool>("default", "IsToggled");
+            Assert.True(isToggled, "Check(default).IsToggled should be true, but got " + isToggled);
 
-            Driver.Flick(0, -80);
-            Driver.Flick(0, -80);
+            var isToggled2 = Driver.GetAttribute<bool>("onOff", "IsToggled");
+            Assert.False(isToggled2, "Check(onOff).IsToggled should be false, but got " + isToggled2);
+
+            var isToggled3 = Driver.GetAttribute<bool>("small", "IsToggled");
+            Assert.True(isToggled3, "Check(small).IsToggled should be true, but got " + isToggled3);
+
+
+            Driver.Flick(0, SpeedY);
+            Driver.Flick(0, SpeedY);
 
 
             Driver.Click("defaultColorBlue");
@@ -35,8 +39,8 @@ namespace Appium.UITests
             var expect2 = "[Color: A=1, R=1, G=0, B=0, Hue=1, Saturation=1, Luminosity=0.5]";
             Assert.AreEqual(expect2, result2);
 
-            Driver.Flick(0, -80);
-            Driver.Flick(0, -80);
+            Driver.Flick(0, SpeedY);
+            Driver.Flick(0, SpeedY);
 
             Driver.Click("onOffColorBlue");
             Driver.Click("onOffColorGreen");

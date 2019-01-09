@@ -102,7 +102,11 @@ namespace Appium.UITests
                 ReadOnlyCollection<AppiumWebElement> resultByAccessibilityId = _driver.FindElementsByAccessibilityId(testName);
                 if (resultByAccessibilityId.Count == 0)
                 {
+#if EMUL
+                    Flick(0, -40);
+#else
                     Flick(0, -80);
+#endif
                 }
                 else
                 {
@@ -111,7 +115,22 @@ namespace Appium.UITests
                     {
                         element.Click();
                         System.Threading.Thread.Sleep(1000);
-                        break;
+
+#if EMUL
+                        //Emulator behavior is different to real watch target.
+                        //In first click move to center. the second click goes to item content.
+                        ReadOnlyCollection<AppiumWebElement> resultByAccessibilityId2 = _driver.FindElementsByAccessibilityId(testName);
+                        if (resultByAccessibilityId2.Count == 0)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            element.Click();
+                            System.Threading.Thread.Sleep(1000);
+                            break;
+                        }
+#endif
                     }
                 }
             }

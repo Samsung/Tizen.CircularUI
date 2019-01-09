@@ -20,8 +20,8 @@ namespace Appium.UITests
             var expect = "SoundMode:Mute";
             Assert.AreEqual(expect, result);
 
-            Driver.Flick(0, -80);
-            Driver.Flick(0, -80);
+            Driver.Flick(0, SpeedY);
+            Driver.Flick(0, SpeedY);
             Driver.Click("radioValueStrong");
 
             var result2 = Driver.GetText("labelStrength");
@@ -34,17 +34,17 @@ namespace Appium.UITests
         }
 
         [Test]
-        public void ListViweTest()
+        public void ListViewTest()
         {
             Driver.FindTC(ListViewTestName);
 
             Driver.Click("NoOff");
-            Driver.Flick(0, -80);
+            Driver.Flick(0, SpeedY);
+            Driver.Click("15s");
+            Driver.Flick(0, SpeedY);
             Driver.Click("30s");
-            Driver.Flick(0, -80);
-            Driver.Click("5m");
-            Driver.Flick(0, -80);
-            Driver.Click("15m");
+            Driver.Flick(0, SpeedY);
+            Driver.Click("1m");
         }
     }
 }

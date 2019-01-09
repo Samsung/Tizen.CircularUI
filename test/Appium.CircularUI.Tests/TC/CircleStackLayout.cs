@@ -8,26 +8,11 @@ namespace Appium.UITests
         [Test]
         public void CircleStackLayoutTest()
         {
-            var image1 = "CircleStackLayout_VerticalLabel.png";
-            Driver.CheckScreenshot(image1);
-
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-
-            var image2 = "CircleStackLayout_Vertical.png";
-            Driver.CheckScreenshot(image2);
-
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-            Driver.Flick(-120, 0);
-
-            var image3 = "CircleStackLayout_Horizontal.png";
-            Driver.CheckScreenshot(image3);
-
+            var speedX = SpeedX * 2;
+            for (int i = 0; i < 18; i++)
+            {
+                Driver.Flick(speedX, 0);
+            }
         }
     }
 }
