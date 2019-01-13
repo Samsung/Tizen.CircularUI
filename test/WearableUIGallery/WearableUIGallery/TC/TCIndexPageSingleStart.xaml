@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:IndexPage
+    x:Class="WearableUIGallery.TC.TCIndexPageSingleStart"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage x:Name="LightBluePage">
+        <StackLayout>
+            <BoxView VerticalOptions="FillAndExpand" Color="LightBlue" />
+            <Button
+                AutomationId="addButton"
+                x:Name="AddButton"
+                Clicked="OnAddButtonClicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Add"
+                WidthRequest="200" />
+        </StackLayout>
+    </ContentPage>
+</w:IndexPage>
