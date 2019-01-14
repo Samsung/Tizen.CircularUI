@@ -66,7 +66,7 @@ namespace Appium.UITests
             option.AddAdditionalCapability("platformName", platform);
             option.AddAdditionalCapability("deviceName", "emulator-26111");
             option.AddAdditionalCapability("appPackage", "org.tizen.example.WearableUIGallery.Tizen.Wearable");
-            //option.AddAdditionalCapability("app", "org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk");
+            option.AddAdditionalCapability("app", "org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk");
             _driver = new TizenDriver<AppiumWebElement>(new Uri("http://192.168.0.49:4723/wd/hub"), option); //please insert the IP of Appium server.
             _touchScreen = new RemoteTouchScreen(_driver);
             createFolder = false;
@@ -98,15 +98,31 @@ namespace Appium.UITests
 
         public void FindTC(string testName)
         {
+            int flickCount = 0;
+            bool isFound;
+            bool isForward = true;
+
             while (true) {
                 ReadOnlyCollection<AppiumWebElement> resultByAccessibilityId = _driver.FindElementsByAccessibilityId(testName);
                 if (resultByAccessibilityId.Count == 0)
                 {
 #if EMUL
-                    Flick(0, -40);
+                    Flick(0, isForward ? -40 : 40);
 #else
-                    Flick(0, -80);
+                    Flick(0, isForward ? -80 : 80);
 #endif
+                    flickCount++;
+
+                    if (isForward == false && flickCount >= 20)
+                    {
+                        isFound = false;
+                        break;
+                    }
+                    else if(flickCount >= 20)
+                    {
+                        flickCount = 0;
+                        isForward = false;
+                    }
                 }
                 else
                 {
@@ -115,7 +131,7 @@ namespace Appium.UITests
                     {
                         element.Click();
                         System.Threading.Thread.Sleep(1000);
-
+                        isFound = true;
 #if EMUL
                         //Emulator behavior is different to real watch target.
                         //In first click move to center. the second click goes to item content.
@@ -134,6 +150,8 @@ namespace Appium.UITests
                     }
                 }
             }
+
+            Assert.True(isFound, testName + " Test should be found, but isFound is " + isFound);
         }
         public void Flick(int speedX, int speedY)
         {
