@@ -52,6 +52,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         bool _isInitalized;
         bool _isUpdateCarousel;
 
+        int _childCount;
+
         protected override void OnElementChanged(ElementChangedEventArgs<IndexPage> e)
         {
             if (NativeView == null)
@@ -129,10 +131,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void OnInnerLayoutUpdate()
         {
-            if (!_isInitalized || _layoutBound == _innerContainer.Geometry.Size)
+            if (!_isInitalized || (_layoutBound == _innerContainer.Geometry.Size && _childCount == Element.Children.Count))
                 return;
 
             _layoutBound = _innerContainer.Geometry.Size;
+            _childCount = Element.Children.Count;
             int baseX = _innerContainer.Geometry.X;
             Rect bound = _scroller.Geometry;
             int index = 0;
@@ -155,7 +158,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         private void OnPageScrolled(object sender, EventArgs e)
         {
             Console.WriteLine($"OnPageScrolled()  _pageIndex:{_pageIndex}, HorizontalPageIndex:{_scroller.HorizontalPageIndex}, _isUpdateCarousel:{_isUpdateCarousel}");
-            if (_isUpdateCarousel){
+            if (_isUpdateCarousel)
+            {
                 _isUpdateCarousel = false;
                 return;
             }
