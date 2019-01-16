@@ -31,7 +31,7 @@ namespace Appium.UITests
         {
             Driver.FindTC(TwoButtonPageListTestName);
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 6; i++)
                 Driver.Flick(0, SpeedY);
 #if WATCH_DEVICE
             var image = "TwoButtonPage_ListView.png";

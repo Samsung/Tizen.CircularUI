@@ -6,12 +6,15 @@ namespace Appium.UITests
     {
         public UITestDriver Driver;
 #if EMUL
-        public static int SpeedX = -40;
-        public static int SpeedY = -40;
-#else
+        public static int SpeedX = -45;
+        public static int SpeedY = -35;
+#elif WATCH_DEVICE
         //Watch device
         public static int SpeedX = -80;
-        public static int SpeedY = -80;
+        public static int SpeedY = -60;
+#else
+        public static int SpeedX = -40;
+        public static int SpeedY = -40;
 #endif
 
         [SetUp]

@@ -107,9 +107,9 @@ namespace Appium.UITests
                 if (resultByAccessibilityId.Count == 0)
                 {
 #if EMUL
-                    Flick(0, isForward ? -40 : 40);
+                    Flick(0, isForward ? -35 : 35);
 #else
-                    Flick(0, isForward ? -80 : 80);
+                    Flick(0, isForward ? -40 : 40);
 #endif
                     flickCount++;
 
@@ -146,6 +146,8 @@ namespace Appium.UITests
                             System.Threading.Thread.Sleep(1000);
                             break;
                         }
+#else
+                        break;
 #endif
                     }
                 }

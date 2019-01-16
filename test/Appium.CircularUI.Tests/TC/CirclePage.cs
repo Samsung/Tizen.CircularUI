@@ -14,7 +14,7 @@ namespace Appium.UITests
         public void CirclePageBehaviorTest()
         {
             Driver.FindTC(CirclePageTestName);
-            Driver.Click(350, 180, 2000);
+            Driver.Click(350, 180, 3000);
 #if WATCH_DEVICE
             var image = "CirclePage_ToolbarItems.png";
             Driver.CheckScreenshot(image);

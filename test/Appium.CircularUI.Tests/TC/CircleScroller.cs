@@ -23,9 +23,8 @@ namespace Appium.UITests
         public void HorizontalTest()
         {
             Driver.FindTC(HorizontalTestName);
-            Driver.Flick(SpeedX * 2, 0);
-            Driver.Flick(SpeedX * 2, 0);
-            Driver.Flick(SpeedX * 2, 0);
+            Driver.Flick(SpeedX, 0);
+            Driver.Flick(SpeedX, 0);
         }
 
         [Test]
