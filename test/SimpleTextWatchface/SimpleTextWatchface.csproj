@@ -20,11 +20,11 @@
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
-    <PackageReference Include="Tizen.NET" Version="4.0.0">
+    <PackageReference Include="Tizen.NET" Version="5.0.0.14562">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.62955-pre2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj" />

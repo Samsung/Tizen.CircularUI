@@ -181,8 +181,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateProcessVisibility()
         {
-            if (Application.Current.Platform == null)
+            if(!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
+            {
+                Console.WriteLine("Tizen Forms is not initialized");
                 return;
+            }
 
             if (_isProgressRunning)
             {
@@ -254,7 +257,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _bottomButton.Clicked += (s, e) =>
                 {
-                    BottomButton.Activate();
+                    ((IMenuItemController)BottomButton).Activate();
                 };
 
                 if(_buttonBgColor != Color.Default)
@@ -313,9 +316,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Show()
         {
-            if (Application.Current.Platform == null)
+            if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
             {
-                throw new InvalidOperationException("When the Application's Platform is null, can not show the Dialog.");
+                throw new InvalidOperationException("When the Application's Platform is not initialized, it can not show the Dialog.");
             }
 
             if (_popUp != null)

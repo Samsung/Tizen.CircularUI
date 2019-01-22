@@ -50,8 +50,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
             {
                 if (e.PropertyName == nameof(XApplication.MainPage))
                 {
-                    IDisposable obj = application.MainPage.Platform as IDisposable;
-                    obj?.Dispose();
+                    Platform.GetRenderer(application?.MainPage)?.Dispose();
                 }
             };
             application.PropertyChanged += (s, e) =>
@@ -85,8 +84,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
         protected override void OnTerminate()
         {
             base.OnTerminate();
-            IDisposable obj = _application?.MainPage?.Platform as IDisposable;
-            obj?.Dispose();
+            Platform.GetRenderer(_application?.MainPage)?.Dispose();
         }
 
         protected override void OnAppControlReceived(AppControlReceivedEventArgs e)
