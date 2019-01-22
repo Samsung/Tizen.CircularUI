@@ -92,20 +92,21 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Xamarin.Forms.BindableObject</span></div>
     <div class="level2"><span class="xref">Xamarin.Forms.Element</span></div>
-    <div class="level3"><span class="xref">Xamarin.Forms.VisualElement</span></div>
-    <div class="level4"><span class="xref">Xamarin.Forms.Page</span></div>
-    <div class="level5"><span class="xref">Xamarin.Forms.TemplatedPage</span></div>
-    <div class="level6"><span class="xref">Xamarin.Forms.ContentPage</span></div>
-    <div class="level7"><span class="xref">CirclePage</span></div>
+    <div class="level3"><span class="xref">Xamarin.Forms.NavigableElement</span></div>
+    <div class="level4"><span class="xref">Xamarin.Forms.VisualElement</span></div>
+    <div class="level5"><span class="xref">Xamarin.Forms.Page</span></div>
+    <div class="level6"><span class="xref">Xamarin.Forms.TemplatedPage</span></div>
+    <div class="level7"><span class="xref">Xamarin.Forms.ContentPage</span></div>
+    <div class="level8"><span class="xref">CirclePage</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
     <div><span class="xref">Xamarin.Forms.IAnimatable</span></div>
-    <div><span class="xref">Xamarin.Forms.IVisualElementController</span></div>
-    <div><span class="xref">Xamarin.Forms.IElementController</span></div>
     <div><span class="xref">Xamarin.Forms.ILayout</span></div>
     <div><span class="xref">Xamarin.Forms.IPageController</span></div>
+    <div><span class="xref">Xamarin.Forms.IVisualElementController</span></div>
+    <div><span class="xref">Xamarin.Forms.IElementController</span></div>
     <div><span class="xref">Xamarin.Forms.IElementConfiguration</span>&lt;<span class="xref">Xamarin.Forms.Page</span>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -216,9 +217,6 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.Page.Disappearing</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.NavigationProperty</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
     </div>
     <div>
@@ -267,6 +265,9 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.ScaleYProperty</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.VisualElement.VisualProperty</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.VisualElement.IsVisibleProperty</span>
     </div>
     <div>
@@ -280,9 +281,6 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.TriggersProperty</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.StyleProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.WidthRequestProperty</span>
@@ -301,6 +299,24 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.FlowDirectionProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnTabIndexPropertyChanged(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndexDefaultValueCreator()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnTabStopPropertyChanged(System.Boolean, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabStopDefaultValueCreator()</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.BatchBegin()</span>
@@ -351,6 +367,9 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.ChangeVisualState()</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Visual</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.VisualElement.FlowDirection</span>
     </div>
     <div>
@@ -396,9 +415,6 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.MinimumWidthRequest</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.Navigation</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.Opacity</span>
     </div>
     <div>
@@ -421,6 +437,12 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
@@ -468,7 +490,19 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.AutomationIdProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Element.ClassIdProperty</span>
@@ -601,7 +635,7 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_CirclePage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CirclePage : ContentPage, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, IAnimatable, IVisualElementController, IElementController, IResourcesProvider, IStyleElement, IFlowDirectionController, IStyleSelectable, IStylable, ILayout, IPageController, IElementConfiguration&lt;Page&gt;, IPaddingElement, IControlTemplated</code></pre>
+    <pre><code class="lang-csharp hljs">public class CirclePage : ContentPage, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, ILayout, IPageController, IVisualElementController, IElementController, IElementConfiguration&lt;Page&gt;, IPaddingElement, IControlTemplated</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -756,16 +790,16 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.IAnimatable</span>
   </div>
   <div>
-      <span class="xref">Xamarin.Forms.IVisualElementController</span>
-  </div>
-  <div>
-      <span class="xref">Xamarin.Forms.IElementController</span>
-  </div>
-  <div>
       <span class="xref">Xamarin.Forms.ILayout</span>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IPageController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IVisualElementController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IElementController</span>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IElementConfiguration&lt;TElement&gt;</span>

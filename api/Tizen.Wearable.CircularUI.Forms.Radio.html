@@ -91,9 +91,10 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Xamarin.Forms.BindableObject</span></div>
     <div class="level2"><span class="xref">Xamarin.Forms.Element</span></div>
-    <div class="level3"><span class="xref">Xamarin.Forms.VisualElement</span></div>
-    <div class="level4"><span class="xref">Xamarin.Forms.View</span></div>
-    <div class="level5"><span class="xref">Radio</span></div>
+    <div class="level3"><span class="xref">Xamarin.Forms.NavigableElement</span></div>
+    <div class="level4"><span class="xref">Xamarin.Forms.VisualElement</span></div>
+    <div class="level5"><span class="xref">Xamarin.Forms.View</span></div>
+    <div class="level6"><span class="xref">Radio</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -138,9 +139,6 @@
     </div>
     <div>
       <span class="xref">Xamarin.Forms.View.VerticalOptions</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.NavigationProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
@@ -191,6 +189,9 @@
       <span class="xref">Xamarin.Forms.VisualElement.ScaleYProperty</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.VisualElement.VisualProperty</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.VisualElement.IsVisibleProperty</span>
     </div>
     <div>
@@ -204,9 +205,6 @@
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.TriggersProperty</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.StyleProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.WidthRequestProperty</span>
@@ -225,6 +223,24 @@
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.FlowDirectionProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnTabIndexPropertyChanged(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndexDefaultValueCreator()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnTabStopPropertyChanged(System.Boolean, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabStopDefaultValueCreator()</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.BatchBegin()</span>
@@ -263,9 +279,6 @@
       <span class="xref">Xamarin.Forms.VisualElement.OnMeasure(System.Double, System.Double)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.OnParentSet()</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.OnSizeAllocated(System.Double, System.Double)</span>
     </div>
     <div>
@@ -279,6 +292,9 @@
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.ChangeVisualState()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Visual</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.FlowDirection</span>
@@ -326,9 +342,6 @@
       <span class="xref">Xamarin.Forms.VisualElement.MinimumWidthRequest</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.Navigation</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.Opacity</span>
     </div>
     <div>
@@ -351,6 +364,12 @@
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
@@ -398,7 +417,22 @@
       <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.OnParentSet()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.AutomationIdProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Element.ClassIdProperty</span>
@@ -531,7 +565,7 @@
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Radio_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Radio : View, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IStyleSelectable, IStylable, IViewController, IVisualElementController, IElementController, IGestureController</code></pre>
+    <pre><code class="lang-csharp hljs">public class Radio : View, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, IViewController, IVisualElementController, IElementController, IGestureController</code></pre>
   </div>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Radio_examples"><strong>Examples</strong></h5>
   <pre><code>var radio1 = new Radio
