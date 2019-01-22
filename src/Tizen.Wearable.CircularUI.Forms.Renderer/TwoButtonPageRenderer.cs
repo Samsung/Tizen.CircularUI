@@ -17,6 +17,7 @@
 using ElmSharp;
 using System;
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 
 [assembly: ExportRenderer(typeof(TwoButtonPage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer))]
@@ -113,12 +114,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.SecondButton is ColorMenuItem)
                 {
                     var item = ((ColorMenuItem)Element.SecondButton);
-                    _widget.ShowButton2(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => item.Activate());
+                    _widget.ShowButton2(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
                 }
                 else
                 {
                     var item = Element.SecondButton;
-                    _widget.ShowButton2(item.Text, item.Icon, () => item.Activate());
+                    _widget.ShowButton2(item.Text, item.Icon, () => ((IMenuItemController)item).Activate());
                 }
             }
             else
@@ -135,12 +136,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.FirstButton is ColorMenuItem)
                 {
                     var item = ((ColorMenuItem)Element.FirstButton);
-                    _widget.ShowButton1(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => item.Activate());
+                    _widget.ShowButton1(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
                 }
                 else
                 {
                     var item = Element.FirstButton;
-                    _widget.ShowButton1(item.Text, item.Icon, () => item.Activate());
+                    _widget.ShowButton1(item.Text, item.Icon, () => ((IMenuItemController)item).Activate());
                 }
             }
             else

@@ -203,14 +203,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateContent()
         {
-            if (Application.Current.Platform == null)
+            if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
+            {
+                Console.WriteLine("Tizen Forms is not initialized");
                 return;
+            }
 
             _contentView.Children.Clear();
             if (Content != null)
             {
                 _contentView.Children.Add(Content);
-                _contentView.Platform = Application.Current.Platform;
 
                 var renderer = Xamarin.Forms.Platform.Tizen.Platform.GetOrCreateRenderer(_contentView);
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
@@ -256,7 +258,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _firstButton.Clicked += (s, e) =>
                 {
-                    FirstButton.Activate();
+                    ((IMenuItemController)FirstButton).Activate();
                 };
 
                 if (_firstButtonBgColor != Color.Default)
@@ -302,7 +304,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _secondButton.Clicked += (s, e) =>
                 {
-                    SecondButton.Activate();
+                    ((IMenuItemController)SecondButton).Activate();
                 };
 
                 if (_secondButtonBgColor != Color.Default)
@@ -340,13 +342,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Show()
         {
-            if (Application.Current.Platform == null)
+            if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
             {
-                throw new InvalidOperationException("When the Application's Platform is null, can not show the Dialog.");
-            }
-            if (_contentView.Platform == null)
-            {
-                UpdateContent();
+                throw new InvalidOperationException("When the Application's Platform is not initialized, it can not show the Dialog.");
             }
 
             if (_popUp != null)

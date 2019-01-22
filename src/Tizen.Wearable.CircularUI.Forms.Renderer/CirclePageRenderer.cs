@@ -299,7 +299,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (Element.ActionButton != null)
             {
-                Element.ActionButton.Activate();
+                ((IMenuItemController)Element.ActionButton).Activate();
             }
         }
         void OnToolbarItemChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -339,7 +339,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     moreOptionItem.SubText = subText;
                 }
             }
-            moreOptionItem.Action = () => item.Activate();
+            moreOptionItem.Action = () => ((IMenuItemController)item).Activate();
             _moreOption.Items.Add(moreOptionItem);
             _toolbarItemMap[item] = moreOptionItem;
         }
