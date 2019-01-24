@@ -140,6 +140,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateRowHeight(bool initialize)
         {
+            Control.HeaderRowHeight = Element.RowHeight;
             if (!initialize)
                 Control.UpdateRealizedItems();
         }
