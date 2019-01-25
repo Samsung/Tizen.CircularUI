@@ -36,6 +36,7 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "CircleListBehavior", Class = typeof(TCListAppender) },
                     new TCDescribe { Title = "GroupList", Class = typeof(TCGroupList) },
                     new TCDescribe { Title = "CircleListView", Class = typeof(TCCircleListView) },
+                    new TCDescribe { Title = "CircleListViewNoHeader", Class = typeof(TCCircleListViewNoHeader) },
                     new TCDescribe { Title = "ViewCell", Class = typeof(TCViewCell) },
                     new TCDescribe { Title = "ListViewNormal", Class = typeof(TCListView) },
                     new TCDescribe { Title = "HeaderWithGroup", Class = typeof(TCCircleListViewGroupHeader) },

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <w:CirclePage
-    x:Class="WearableUIGallery.TC.TCCircleListView"
+    x:Class="WearableUIGallery.TC.TCCircleListViewNoHeader"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery"
@@ -25,17 +25,11 @@
                     <x:String>Item 12</x:String>
                 </x:Array>
             </w:CircleListView.ItemsSource>
-            <w:CircleListView.Header>
-                <x:String>Header</x:String>
-            </w:CircleListView.Header>
-            <w:CircleListView.Footer>
-                <x:String>Footer</x:String>
-            </w:CircleListView.Footer>
             <w:CircleListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Label Text="{Binding .}"
-                               HeightRequest="120"
+                               HeightRequest="360"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"
                                VerticalTextAlignment="Center"
@@ -43,28 +37,6 @@
                     </ViewCell>
                 </DataTemplate>
             </w:CircleListView.ItemTemplate>
-            <w:CircleListView.HeaderTemplate>
-                <DataTemplate>
-                    <Label
-                        FontAttributes="Bold"
-                        HeightRequest="360"
-                        FontSize="Large"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding .}"
-                        TextColor="Red" />
-                </DataTemplate>
-            </w:CircleListView.HeaderTemplate>
-            <w:CircleListView.FooterTemplate>
-                <DataTemplate>
-                    <Label
-                        FontAttributes="Bold"
-                        HeightRequest="360"
-                        FontSize="Large"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding .}"
-                        TextColor="Blue" />
-                </DataTemplate>
-            </w:CircleListView.FooterTemplate>
         </w:CircleListView>
     </w:CirclePage.Content>
 </w:CirclePage>

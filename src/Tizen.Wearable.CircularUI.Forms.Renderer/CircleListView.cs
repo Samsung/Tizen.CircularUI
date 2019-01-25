@@ -266,6 +266,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void UpdateHeaderHeightForGroup(bool isPreviousOfGroup)
         {
             if (Header == null) return;
+            Console.WriteLine($"UpdateHeaderHeightForGroup() isPreviousOfGroup:{isPreviousOfGroup}, HeaderRowHeight:{HeaderRowHeight}, HeaderMinimumHeight:{HeaderMinimumHeight}, Header.Height:{Header.Height}, Header.HeightRequest:{Header.HeightRequest} ");
             if (isPreviousOfGroup)
             {
                 Header.MinimumHeightRequest = GroupHeaderMinimumHeight; // correct visible height on the Group Header

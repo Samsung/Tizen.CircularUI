@@ -91,10 +91,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     var request = element.Measure(double.PositiveInfinity, double.PositiveInfinity);
                     renderer.NativeView.MinimumHeight = ToPx(request.Request.Height);
+                    Console.WriteLine($"OnGetContent() Request.Height:{request.Request.Height}");
                 }
                 else
                 {
                     renderer.NativeView.MinimumHeight = ToPx(element.MinimumHeightRequest);
+                    Console.WriteLine($"OnGetContent()  MinimumHeightRequest:{element.MinimumHeightRequest}");
                 }
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 return renderer.NativeView;
