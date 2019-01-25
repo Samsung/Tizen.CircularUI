@@ -2041,6 +2041,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header
   nameWithType: CircleListView.Header
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
+  name: HeaderRowHeight
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_HeaderRowHeight
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
+  nameWithType: CircleListView.HeaderRowHeight
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight*
+  name: HeaderRowHeight
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_HeaderRowHeight_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
+  nameWithType: CircleListView.HeaderRowHeight
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
   name: InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__Xamarin_Forms_Cell_
