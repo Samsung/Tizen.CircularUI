@@ -30,10 +30,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
     public class CircleListView : CircleGenList
     {
+        const int HeaderMinimumHeight = 115;
+        const int GroupHeaderMinimumHeight = 83;
+
         readonly Dictionary<Cell, GenListItem> _itemContexts = new Dictionary<Cell, GenListItem>();
 
         VisualElement _header;
         VisualElement _footer;
+        int _rowHeight;
 
         public CircleListView(EvasObject parent, CircleSurface surface) : base(parent, surface)
         {
@@ -57,6 +61,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (_footer == value) return;
                 _footer = value;
                 UpdateFooter();
+            }
+        }
+
+        public int HeaderRowHeight
+        {
+            get => _rowHeight;
+            set
+            {
+                if (_rowHeight == value) return;
+                _rowHeight = value;
             }
         }
 
@@ -143,6 +157,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 ScrollTo(item, position.ToNative(), animated);
             }
         }
+
         public void ApplySelectedItem(Cell cell)
         {
             GenListItem item;
@@ -151,6 +166,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 item.IsSelected = true;
             }
         }
+
         public void AddItem(Cell cell, GroupList group)
         {
             CellRenderer renderer = ListViewCache.Get(cell);
@@ -252,11 +268,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (Header == null) return;
             if (isPreviousOfGroup)
             {
-                Header.MinimumHeightRequest = 83; // correct visible height on the Group Header
+                Header.MinimumHeightRequest = GroupHeaderMinimumHeight; // correct visible height on the Group Header
             }
             else
             {
-                Header.MinimumHeightRequest = 115; // correct visible height on the None group header
+                if (Header.HeightRequest < 0 && HeaderRowHeight < 0)
+                {
+                    Header.MinimumHeightRequest = HeaderMinimumHeight;  // correct visible height on the None group header
+                }
+                else if(HeaderRowHeight > 0)
+                {
+                    Header.MinimumHeightRequest = HeaderRowHeight;
+                }
             }
         }
 
@@ -300,6 +323,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 UpdateHeaderHeightForGroup(isNextItemIsGroupHeader);
             }
         }
+
         void UpdateFooter()
         {
             GenItemClass cls = null;
@@ -325,6 +349,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 LastItem.UpdateItemClass(cls, new TypedItemContext(Footer, type));
             }
         }
+
         void RegisterItem(Cell cell, GenListItem item, bool IsGroup = false)
         {
             item.SelectionMode = IsGroup ? GenItemSelectionMode.None : GenItemSelectionMode.Always;
