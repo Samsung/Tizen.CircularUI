@@ -20,7 +20,7 @@
                 <w:Check
                     AutomationId="onOff"
                     DisplayStyle="Onoff"
-                    HorizontalOptions="FillAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
                     Toggled="OnToggledOnOff" />
 
@@ -61,7 +61,7 @@
                 <w:Check
                     AutomationId="onOffColorBlue"
                     DisplayStyle="Onoff"
-                    HorizontalOptions="FillAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
                     Color ="Blue"
                     Toggled="OnToggledOnOff" />
@@ -69,7 +69,7 @@
                 <w:Check
                     AutomationId="onOffColorRed"
                     DisplayStyle="Onoff"
-                    HorizontalOptions="FillAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
                     Color ="Red"
                     Toggled="OnToggledOnOff" />
@@ -77,7 +77,7 @@
                 <w:Check
                     AutomationId="onOffColorGreen"
                     DisplayStyle="Onoff"
-                    HorizontalOptions="FillAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
                     Color ="Green"
                     Toggled="OnToggledOnOff" />
