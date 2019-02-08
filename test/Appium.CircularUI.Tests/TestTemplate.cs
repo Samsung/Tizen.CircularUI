@@ -17,23 +17,22 @@ namespace Appium.UITests
         public static int SpeedY = -40;
 #endif
 
-        [SetUp]
-        public void TestFixtureSetUp()
+        [OneTimeSetUp]
+        public void Init()
         {
             Driver = UITestDriver.Instance;
+        }
+
+        [SetUp]
+        public void TestSetUp()
+        {
             Driver.FindTC(this.GetType().Name);
         }
 
         [TearDown]
-        public void TestFixtureTearDown()
+        public void TestCleanUp()
         {
             Driver.GoHomePage();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            System.Threading.Thread.Sleep(1000);
         }
     }
 }
