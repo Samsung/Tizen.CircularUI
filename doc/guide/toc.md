@@ -9,6 +9,7 @@
 ## [Testing Your App on Gear](TestingYourAppOnGear.md)
 ## [3rd party libraries for Tizen .Net](LibraryList.md)
 ## [How to set the custom font](HowToSetTheCustomFont.md)
+## [How to creat a UI automation test](CreatingTestAutomation.md)
 # User Interface
 ## [Check](Check.md)
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
