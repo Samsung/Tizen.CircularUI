@@ -31,6 +31,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.CreatingCertificates
   name: Creating Certificates
   href: guide/CreatingCertificates.html
+- uid: Tizen.Wearable.CircularUI.doc.CreatingTestAutomation
+  name: Creating UI automation test for Tizen .NET Application
+  href: guide/CreatingTestAutomation.html
 - uid: Tizen.Wearable.CircularUI.doc.GettingTheCertificates
   name: Getting the Certificates
   href: guide/GettingTheCertificates.html

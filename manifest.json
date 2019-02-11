@@ -148,6 +148,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/CreatingTestAutomation.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CreatingTestAutomation.html",
+          "hash": "nUUoe40cs2mIK48Vq9MsUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/GettingTheCertificates.md",
       "output": {
         ".html": {
@@ -794,6 +806,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/add_tizen_appium_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/add_tizen_appium_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/after_Install_nuget_package.png",
       "output": {
         "resource": {
@@ -809,6 +832,17 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/app_capture1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/appium_structure.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/appium_structure.png"
         }
       },
       "is_incremental": false,
@@ -1135,6 +1169,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/create_nunit_test_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/create_nunit_test_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/entry.png",
       "output": {
         "resource": {
@@ -1194,6 +1239,28 @@
       "output": {
         "resource": {
           "relative_path": "guide/data/information_popup3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/install_nunit_nuget.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/install_nunit_nuget.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/install_nunit_test_adapter.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/install_nunit_test_adapter.png"
         }
       },
       "is_incremental": false,
@@ -1443,6 +1510,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/test_explorer_window.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/test_explorer_window.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/tizen_project_wizard_capture.png",
       "output": {
         "resource": {
@@ -1557,7 +1635,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "wjzERc7bMGplABrjDjMWYQ=="
+          "hash": "ZrfIVaU97YOIgZ8zE1XUIA=="
         }
       },
       "is_incremental": false,
@@ -2341,9 +2419,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
@@ -2354,9 +2432,9 @@
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
