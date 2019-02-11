@@ -4,19 +4,13 @@ summary: Creating Appium UI automation test guide
 ---
 
 # Creating UI automation test for Tizen .NET Application
-
-This guide shows how to create and run a UI automation test using Appium and NUnit for Tizen .NET Application.
-
-[Appium](https://github.com/appium/appium) is an open source project supporting cross-platform test automation tool. You can find many guide and information.
-
-In This guide, Test Application uses [WearableUIGallery](https://github.com/Samsung/Tizen.CircularUI/tree/master/test/WearableUIGallery) which contains many TCs to check CircularUI API behavior.
-
-Appium Client has a test script for UI automation. This guide uses the [Appium.CircularUI.Test](https://github.com/Samsung/Tizen.CircularUI/tree/master/test/Appium.CircularUI.Tests).
-
+This guide shows how to create and run a UI automation test using Appium and NUnit for Tizen .NET Application.  
+[Appium](https://github.com/appium/appium) is an open source project supporting cross-platform test automation tool. You can find many guide and information.  
+In This guide, Test Application uses [WearableUIGallery](https://github.com/Samsung/Tizen.CircularUI/tree/master/test/WearableUIGallery) which contains many TCs to check CircularUI API behavior.  
+Appium Client has a test script for UI automation. This guide uses the [Appium.CircularUI.Test](https://github.com/Samsung/Tizen.CircularUI/tree/master/test/Appium.CircularUI.Tests).  
 Please refer to the following image
 
 ![Appium_structure](data/appium_structure.png)
-
 
 There are 4 step for building UI automation
 - [Prerequisite](#prerequisite)
@@ -26,7 +20,7 @@ There are 4 step for building UI automation
 
 
 ## Prerequisite
-1. Installing Appium server
+- Installing Appium server
     - appium guide  : https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/appium-from-source.md
     - appium git repository : https://github.com/appium/appium
     - setup and run appium server (e.g ubunt)
@@ -40,11 +34,10 @@ $ npm run build
 $ node .
 ```
 
-
 ## Modifying Your Application
-1. If your Application use CircularUI then download Tizen.Appium git. Otherwise, skips 2 ~ 3 steps and go to step 4 after adding Tizen.Appium NuGet in Your Application project.
+1) If your Application use CircularUI then download Tizen.Appium git. Otherwise, skips 2 ~ 3 steps and go to step 4 after adding Tizen.Appium NuGet in Your Application project.
 
-2. In the `Tizen.Appium.csproj` file, add `WATCH` to the `DefineConstants` value for being restored CircularUI NuGet.
+2) In the `Tizen.Appium.csproj` file, add `WATCH` to the `DefineConstants` value for being restored CircularUI NuGet.
 
 ```
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -58,14 +51,13 @@ $ node .
 
 ```
 
-3. Add `Tizen.Appium` project to your application solution, and then add Tizen.Appium in a reference project in your application project.
-
-   In the following Image, `Tizen.Appium` is added in `Tizen.Wearable.CircularUI.Test.Appium` solution, and then add in a reference project in `WearableUIGallery.Tizen.Wearable` project.
+3) Add `Tizen.Appium` project to your application solution, and then add Tizen.Appium in a reference project in your application project.  
+In the following Image, `Tizen.Appium` is added in `Tizen.Wearable.CircularUI.Test.Appium` solution, and then add in a reference project in `WearableUIGallery.Tizen.Wearable` project.
 
 
 ![Add_TizenAppium](data/add_tizen_appium_project.png)
 
-4. Add `Tizen.Appium.TizenAppium.StartService` to main method and `Tizen.Appium.TizenAppium.StopService`  to `OnTerminate` methods.
+4) Add `Tizen.Appium.TizenAppium.StartService` to main method and `Tizen.Appium.TizenAppium.StopService`  to `OnTerminate` methods.
 
 ```
         protected override void OnTerminate()
@@ -88,7 +80,7 @@ $ node .
         }
 ```
 
-5. Add `AutomationId` to the `Xamarin.Forms` control for allowing to find and control the specified control during the automation test. Please refer to the following code.
+5) Add `AutomationId` to the `Xamarin.Forms` control for allowing to find and control the specified control during the automation test. Please refer to the following code.
 
  ```xml
     <w:CirclePage.Content>
@@ -113,19 +105,19 @@ $ node .
 
 
 ## Make Testscript
-1. Install Nunit Test Adapter in visual studio :  Visual Studio Tools > Extension and Update > 
+1) Install Nunit Test Adapter in visual studio :  Visual Studio Tools > Extension and Update > 
 
 ![Install_NunitTest](data/install_nunit_test_adapter.png)
 
-2. Create unit test project(.NET framework)  
- Visual Studio  File > New > Project >  Tap Test in Visual C# > Select Unit Test Project(.NET Framework)
+2) Create unit test project(.NET framework)  
+Visual Studio  File > New > Project >  Tap Test in Visual C# > Select Unit Test Project(.NET Framework)
 
 ![Create_NunitTest_Project](data/create_nunit_test_project.png)
 
 
-3. Remove NuGet packages (e.g NunitTestAdapter, Xamarin.UITest ...) except Nunit, and then update Nunit NuGet package to v3.11.0.
+3) Remove NuGet packages (e.g NunitTestAdapter, Xamarin.UITest ...) except Nunit, and then update Nunit NuGet package to v3.11.0.
 
-4. Install following NuGet packages
+4) Install following NuGet packages
   - Appium.WebDriver (upper 4.0.0.4)
   - Selenium.WebDriver
   - Selenium.Support
@@ -135,10 +127,10 @@ $ node .
 
 ![Install_NuGet](data/install_nunit_nuget.png)
 
-5. Remove auto-generated cs files(e.g AppInitializer.cs, Tests.cs), And then copy 3 files (`Program.cs, TestTemplate.cs, UITestDriver.cs`) from  `Tizen.Wearable.CircularUI\test\Appium.CircularUI.Tests\` to your project.
+5) Remove auto-generated cs files(e.g AppInitializer.cs, Tests.cs), And then copy 3 files (`Program.cs, TestTemplate.cs, UITestDriver.cs`) from `Tizen.Wearable.CircularUI\test\Appium.CircularUI.Tests\` to your project.
 
-6. Set configuration. Please refer to `InitTizen()` in `test\Appium.CircularUI.Tests\UITestDriver.cs`
-   You should set AppiumOptions
+6) Set configuration. Please refer to `InitTizen()` in `test\Appium.CircularUI.Tests\UITestDriver.cs`.  
+You should set AppiumOptions
    - Set `platformName` to `Tizen`
    - Set `deviceName` to your testing device name.
    - Set `appPackage` to your Application package name.
@@ -159,8 +151,7 @@ $ node .
         }
 ```
 
-7. If you want to add a common set of functions that are performed before or after each test, please make [SetUp](https://github.com/nunit/docs/wiki/SetUp-Attribute) method and [TearDown](https://github.com/nunit/docs/wiki/TearDown-Attribute) method.
-
+7) If you want to add a common set of functions that are performed before or after each test, please make [SetUp](https://github.com/nunit/docs/wiki/SetUp-Attribute) method and [TearDown](https://github.com/nunit/docs/wiki/TearDown-Attribute) method.  
 In the following Appium.CircularUI.Tests code, SetUp and TearDown methods are called in TestTemplate Class. Each Test Class inherited the TestTemplate Class.
 
 ```cs
@@ -193,7 +184,7 @@ namespace Appium.UITests
 }
 ```
 
-8. Write test script with Nunit feature. please refer to [Nunit documentation](https://github.com/nunit/docs/wiki/NUnit-Documentation)
+8) Write test script with Nunit feature. please refer to [Nunit documentation](https://github.com/nunit/docs/wiki/NUnit-Documentation)
 
 ```cs
 using NUnit.Framework;
@@ -221,9 +212,9 @@ namespace Appium.UITests
 ```
 
 ## Run Testscript
-1. Launch your Tizen emulator or connect Tizen wearable device to PC which installed Appium server.
+1) Launch your Tizen emulator or connect Tizen wearable device to PC which installed Appium server.
 
-2. Run Appium Server. 
+2) Run Appium Server. 
 
 ```
 Appium installed Path/appium (master)$ node .
@@ -234,12 +225,9 @@ Appium installed Path/appium (master)$ node .
 
 
 
-3. Launch `Test Explorer` Window In Visual Studio 2017.  Top menu bar > Test > Windows > Test Explorer
+3) Launch `Test Explorer` Window In Visual Studio 2017.  Top menu bar > Test > Windows > Test Explorer
 
 ![Test_Explorer](data/test_explorer_window.png)
 
-
-
-4. Click `Run All` in Test Explorer window.
-
+4) Click `Run All` in Test Explorer window.  
 You can run the selected test clicking the `Run Selected Test` menu with a mouse right click on a test case.
