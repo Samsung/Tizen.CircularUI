@@ -65,6 +65,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 (e.NewElement as IScrollViewController).ScrollToRequested += OnScrollRequestedAsync;
             }
+
             UpdateAll();
 
             base.OnElementChanged(e);
@@ -88,6 +89,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 UpdateHorizontalScrollBarVisibility();
             }
+
             base.OnElementPropertyChanged(sender, e);
         }
 
@@ -116,11 +118,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void UpdateAll()
         {
             UpdateOrientation();
+            UpdateVerticalScrollBarVisibility();
+            UpdateHorizontalScrollBarVisibility();
         }
 
         void UpdateVerticalScrollBarVisibility()
         {
-            Control.VerticalScrollBarVisiblePolicy = ScrollBarVisibilityToTizen(Element.VerticalScrollBarVisibility);
+            var orientation = Element.Orientation;
+            if (orientation == ScrollOrientation.Vertical || orientation == ScrollOrientation.Both)
+                Control.VerticalScrollBarVisiblePolicy = ScrollBarVisibilityToTizen(Element.VerticalScrollBarVisibility);
         }
 
         void UpdateHorizontalScrollBarVisibility()

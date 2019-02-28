@@ -5,12 +5,16 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:local="clr-namespace:WearableUIGallery.TC"
 	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference myscroller}"
 	Title="{Binding Title}}">
-	<w:TwoButtonPage.BindingContext>
+    <w:TwoButtonPage.Behaviors>
+        <w:CircleSurfaceEffectBehavior />
+    </w:TwoButtonPage.Behaviors>
+    <w:TwoButtonPage.BindingContext>
 		<local:TCTwoButtonPageViewModel />
 	</w:TwoButtonPage.BindingContext>
 	<w:TwoButtonPage.Content>
-		<ScrollView>
+        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical" VerticalScrollBarVisibility="Never">
 			<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 				<Label
 					HorizontalOptions="FillAndExpand"
@@ -25,7 +29,7 @@
                 <Button AutomationId="changeColor1" Clicked="OnChangeColor1" Text="change color 1" />
                 <Button AutomationId="changeColor2" Clicked="OnChangeColor2" Text="change color 2" />
             </StackLayout>
-		</ScrollView>
+		</w:CircleScrollView>
 	</w:TwoButtonPage.Content>
 	<w:TwoButtonPage.FirstButton>
 		<MenuItem Command="{Binding Command1}" Icon="image/tw_ic_popup_btn_check.png" />
