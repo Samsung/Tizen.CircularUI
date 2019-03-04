@@ -29,7 +29,6 @@
                     HorizontalOptions="Center"
                     Increment="5"
                     LabelFormat="%1.1f"
-                    MarkerColor="Coral"
                     Maximum="100"
                     Minimum="0"
                     WidthRequest="130"

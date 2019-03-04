@@ -17,6 +17,8 @@ The Time display screen is also a touch screen. You can set the value of the hou
  |:--------------------------------------------------:|:--------------------------------------------------:|
  |                      Date                          |                           Time                     |
 
+**WARNING: The marker is no longer supported from Tizen 4.0 SDK which is applied bezel-less UX in 2019. Therefore, marker related API was deprecated.**
+
 **WARNING: [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper) must be confined in the `CirclePage` container or [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) with [CircleSurfaceEffectBehavior](xref:Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior). If you add these controls in any other way,  it may cause an exception or cannot display the controls.**
 
 ## Add CircleDateTimeSelector in CirclePage
