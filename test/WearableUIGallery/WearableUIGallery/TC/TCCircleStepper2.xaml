@@ -39,7 +39,6 @@
                 AbsoluteLayout.LayoutFlags="All"
                 Focused="OnFocusedT1"
                 HorizontalOptions="Start"
-                MarkerColor="White"
                 Maximum="23"
                 Minimum="0"
                 Value="30" />
@@ -57,7 +56,6 @@
                 Focused="OnFocusedT2"
                 HorizontalOptions="Center"
                 Increment="10"
-                MarkerColor="White"
                 Maximum="103"
                 Minimum="3"
                 Value="3" />
@@ -75,7 +73,6 @@
                 Focused="OnFocusedT3"
                 HorizontalOptions="End"
                 Increment="0.5"
-                MarkerColor="White"
                 Maximum="30"
                 Minimum="0"
                 Value="0" />

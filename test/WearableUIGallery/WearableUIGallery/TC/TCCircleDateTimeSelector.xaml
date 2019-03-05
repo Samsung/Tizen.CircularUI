@@ -10,7 +10,6 @@
         </w:CirclePage.Resources>
         <w:CirclePage.Content>
             <w:CircleDateTimeSelector x:Name="TimeSelector"
-                                      MarkerColor="{Binding BackgroundColor, Source={x:Reference SettingColorLabel}}"
                                       ValueType="{Binding IsToggled, Source={x:Reference SettingValueType}, Converter={StaticResource VTypeConverter}}"
                                       IsVisibleOfYear="{Binding IsToggled, Source={x:Reference SettingOptionYear}}"
                                       IsVisibleOfMonth="{Binding IsToggled, Source={x:Reference SettingOptionMonth}}"

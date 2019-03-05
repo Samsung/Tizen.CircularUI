@@ -5,11 +5,13 @@ summary: CircleStepper control guide
 # CircleStepper
 
 `CircleStepper` allows you to select a value from a range of incremental values specified with `Minimum`, `Maximum`, and `Increment` properties.
-It is an extension of [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/). MarkerColor, MarkerLineWidth, and LabelFormat have been added to the [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/).
+It is an extension of [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/). LabelFormat have been added to the [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/).
 You can modify the value with [Bezel interaction](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
 To receive [Rotary event](https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary), it must be registered as `RotaryFocusObject`, property of [CirclePage](xref:Tizen.Wearable.CircularUI.doc.CirclePage).
 
 ![](data/CircleStepper_property.png)
+
+**WARNING: The marker is no longer supported from Tizen 4.0 SDK which is applied bezel-less UX in 2019. Therefore, the above image is obsolete and marker related API was deprecated.**
 
 **WARNING: [CircleListView](xref:Tizen.Wearable.CircularUI.doc.CircleListView), [CircleDateTimeSelector](xref:Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector), [CircleScrollView](xref:Tizen.Wearable.CircularUI.doc.CircleScrollView), [CircleStepper](xref:Tizen.Wearable.CircularUI.doc.CircleStepper) must be confined in the `CirclePage` container or [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) with [CircleSurfaceEffectBehavior](xref:Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior). If you add these controls in any other way,  it may cause an exception or cannot display the controls.**
 
@@ -22,11 +24,9 @@ If this value properly is not set, then control can not receive [Rotary Event](h
 `CircleStepper` has the following properties:
 
 - LabelFormat: This property gets or sets the format in which the value is shown.
-- MarkerColor: This property changes the color of the marker to the value selected.
-- MarkerLineWidth: This property gets and sets the length of the marker.
 
 This example consists of `StackLayout` with a `CircleStepper` and two Labels in the `CirclePage`.
-Since 9 is set to `Minimum` and `LabelFormat` is set to "% 1.1f", "9.0" appears on the screen. Since the `Increment` is 7.5, it increases by 7.5 when you turn the bezel and increase the `Value`. The `Maximum` defined value is 99, hence the marker does not exceed this value. Since the `MarkerColor` is set to "Coral", it will be displayed as the corresponding color.
+Since 9 is set to `Minimum` and `LabelFormat` is set to "% 1.1f", "9.0" appears on the screen. Since the `Increment` is 7.5, it increases by 7.5 when you turn the bezel and increase the `Value`. The `Maximum` defined value is 99, hence the marker does not exceed this value.
 
 ![](data/CircleStepper.png)
 
@@ -94,7 +94,6 @@ The following code shows CirclePage with CircleStepper:
                 HorizontalOptions="CenterAndExpand"
                 Increment="7.5"
                 LabelFormat="%1.1f"
-                MarkerColor="Coral"
                 Maximum="99.0"
                 Minimum="9.0"
                 Value="{Binding Value}" />

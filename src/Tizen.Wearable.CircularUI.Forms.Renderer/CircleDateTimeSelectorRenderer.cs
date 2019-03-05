@@ -28,7 +28,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         public CircleDateTimeSelectorRenderer()
         {
+#pragma warning disable CS0618 // MarkerColorProperty is obsolete
             RegisterPropertyHandler(CircleDateTimeSelector.MarkerColorProperty, UpdateMarkerColor);
+#pragma warning restore CS0618 // MarkerColorProperty is obsolete
             RegisterPropertyHandler(CircleDateTimeSelector.ValueTypeProperty, UpdateValueType);
             RegisterPropertyHandler(CircleDateTimeSelector.DateTimeProperty, UpdateDateTime);
             RegisterPropertyHandler(CircleDateTimeSelector.MaximumDateProperty, UpdateMaximum);
@@ -112,10 +114,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateMarkerColor()
         {
+#pragma warning disable CS0618 // MarkerColor is obsolete
             if (null != Control && null != Element && Element.MarkerColor != Xamarin.Forms.Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
             }
+#pragma warning restore CS0618 // MarkerColor is obsolete
         }
 
         void OnDateTimeChanged(object sender, EventArgs e)

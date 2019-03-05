@@ -30,6 +30,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the MarkerColor bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
+        [Obsolete("MarkerColor bindable property is obsolete as of Tizen.NET version 4.0.0 and is no longer supported")]
         public static readonly BindableProperty MarkerColorProperty = BindableProperty.Create(nameof(MarkerColor), typeof(Color), typeof(CircleDateTimeSelector), Color.Default);
         /// <summary>
         /// BindableProperty. Identifies the ValueType bindable property.
@@ -87,6 +88,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets Marker color
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
+        [Obsolete("MarkerColor is obsolete as of Tizen.NET version 4.0.0 and is no longer supported")]
         public Color MarkerColor { get => (Color)GetValue(MarkerColorProperty); set => SetValue(MarkerColorProperty, value); }
         /// <summary>
         /// Gets or sets DateTimeType value. If it is Time, the UI will be changed to enable time selection. If it is a Date, the date can be changed.
