@@ -77,7 +77,6 @@ namespace WearableUIGallery.TC
                 }
 
                 sb.AppendLine();
-                sb.AppendLine($"Marker = {ColorHexConverter.ToHexString(TimeSelector.MarkerColor)}");
                 sb.AppendLine($"Max = {(TimeSelector.ValueType == DateTimeType.Date ? TimeSelector.MaximumDate.ToString("yyyy-MM-dd") : TimeSelector.MaximumDate.ToString("HH:mm"))}");
                 sb.AppendLine($"Min = {(TimeSelector.ValueType == DateTimeType.Date ? TimeSelector.MinimumDate.ToString("yyyy-MM-dd") : TimeSelector.MinimumDate.ToString("HH:mm"))}");
 

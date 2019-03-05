@@ -29,8 +29,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         public CircleStepperRenderer()
         {
+#pragma warning disable CS0618 // MarkerColorProperty and MarkerLineWidthProperty are obsolete
             RegisterPropertyHandler(CircleStepper.MarkerColorProperty, UpdateMarkerColor);
             RegisterPropertyHandler(CircleStepper.MarkerLineWidthProperty, UpdateMarkerLineWidth);
+#pragma warning restore CS0618 // MarkerColorProperty and MarkerLineWidthProperty are obsolete
             RegisterPropertyHandler(CircleStepper.LabelFormatProperty, UpdateLabelFormat);
             RegisterPropertyHandler(CircleStepper.TitleProperty, UpdateTitle);
             RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
@@ -115,17 +117,21 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateMarkerColor()
         {
+#pragma warning disable CS0618 // MarkerColor is obsolete
             if (null != Control && null != Element && Element.MarkerColor != Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
             }
+#pragma warning restore CS0618 // MarkerColor is obsolete
         }
 
         void UpdateMarkerLineWidth()
         {
             if (null != Control && null != Element)
             {
+#pragma warning disable CS0618 // MarkerLineWidth is obsolete
                 Control.MarkerLineWidth = Element.MarkerLineWidth;
+#pragma warning restore CS0618 // MarkerLineWidth is obsolete
             }
         }
 
