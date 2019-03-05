@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:IndexPage
+    x:Class="WearableUIGallery.TC.TCIndexPageFocus"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <w:CirclePage x:Name="firstPage" >
+        <w:CirclePage.Content>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <w:CircleStepper
+                    AutomationId="stepper1"
+                    x:Name="stepper1"
+                    Title="Steper title"
+                    Focused="OnFocused1"
+                    Maximum="10"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+                <w:CircleStepper
+                    AutomationId="stepper2"
+                    x:Name="stepper2"
+                    Title="Steper title"
+                    Focused="OnFocused2"
+                    Maximum="50"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+            </StackLayout>
+        </w:CirclePage.Content>
+    </w:CirclePage>
+    <ContentPage x:Name="secondPage">
+        <ContentPage.Content>
+            <StackLayout  Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <w:PopupEntry
+                    AutomationId="Entry1"
+                    Focused="OnEntryFocused1"
+                    BackgroundColor="Gray"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <w:PopupEntry
+                    AutomationId="Entry2"
+                    Focused="OnEntryFocused2"
+                    BackgroundColor="Gray"
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="White"
+                    Placeholder="Foobar"
+                    PlaceholderColor="Blue"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <w:CirclePage x:Name="thirdPage">
+        <w:CirclePage.Content>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <w:CircleStepper
+                    AutomationId="stepper3"
+                    x:Name="stepper3"
+                    Title="Steper title"
+                    Focused="OnFocused3"
+                    Maximum="10"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+                <w:CircleStepper
+                    AutomationId="stepper4"
+                    x:Name="stepper4"
+                    Title="Steper title"
+                    Focused="OnFocused4"
+                    Maximum="50"
+                    Minimum="0"
+                    WidthRequest="60"
+                    Value="0" />
+            </StackLayout>
+        </w:CirclePage.Content>
+    </w:CirclePage>
+</w:IndexPage>

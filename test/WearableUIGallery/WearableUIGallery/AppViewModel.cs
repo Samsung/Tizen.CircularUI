@@ -107,7 +107,8 @@ namespace WearableUIGallery
                 {
                     new TCDescribe { Title = "Add/Move", Class = typeof(TCIndexPage) },
                     new TCDescribe { Title = "Add (base 1)", Class = typeof(TCIndexPageSingleStart) },
-                    new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) }
+                    new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) },
+                    new TCDescribe { Title = "Focus", Class = typeof(TCIndexPageFocus) }
                 }
             });
             TCs.Add(new TCDescribe
