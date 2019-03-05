@@ -176,6 +176,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (selectIndex >= ItemMaxCount) selectIndex = ItemMaxCount - 1;
                 _items[selectIndex].Select(true);
             }
+
+            Element.UpdateFocusTreePolicy();
             _changedByScroll--;
         }
 
