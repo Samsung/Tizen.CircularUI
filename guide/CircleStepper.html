@@ -80,10 +80,11 @@
 <h1 id="circlestepper">CircleStepper</h1>
 
 <p><code>CircleStepper</code> allows you to select a value from a range of incremental values specified with <code>Minimum</code>, <code>Maximum</code>, and <code>Increment</code> properties.
-It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>. MarkerColor, MarkerLineWidth, and LabelFormat have been added to the <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>.
+It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>. LabelFormat have been added to the <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>.
 You can modify the value with <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
 To receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code>, property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
 <p><img src="data/CircleStepper_property.png" alt=""></p>
+<p><strong>WARNING: The marker is no longer supported from Tizen 4.0 SDK which is applied bezel-less UX in 2019. Therefore, the above image is obsolete and marker related API was deprecated.</strong></p>
 <p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
 <h2 id="add-circlestepper-in-circlepage">Add CircleStepper in CirclePage</h2>
 <p>You can set the <code>CircleStepper</code> in the <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information on how to add <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
@@ -92,11 +93,9 @@ If this value properly is not set, then control can not receive <a href="https:/
 <p><code>CircleStepper</code> has the following properties:</p>
 <ul>
 <li>LabelFormat: This property gets or sets the format in which the value is shown.</li>
-<li>MarkerColor: This property changes the color of the marker to the value selected.</li>
-<li>MarkerLineWidth: This property gets and sets the length of the marker.</li>
 </ul>
 <p>This example consists of <code>StackLayout</code> with a <code>CircleStepper</code> and two Labels in the <code>CirclePage</code>.
-Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &quot;% 1.1f&quot;, &quot;9.0&quot; appears on the screen. Since the <code>Increment</code> is 7.5, it increases by 7.5 when you turn the bezel and increase the <code>Value</code>. The <code>Maximum</code> defined value is 99, hence the marker does not exceed this value. Since the <code>MarkerColor</code> is set to &quot;Coral&quot;, it will be displayed as the corresponding color.</p>
+Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &quot;% 1.1f&quot;, &quot;9.0&quot; appears on the screen. Since the <code>Increment</code> is 7.5, it increases by 7.5 when you turn the bezel and increase the <code>Value</code>. The <code>Maximum</code> defined value is 99, hence the marker does not exceed this value.</p>
 <p><img src="data/CircleStepper.png" alt=""></p>
 <p>For more information, see the following links:</p>
 <ul>
@@ -154,7 +153,6 @@ Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &q
                 HorizontalOptions=&quot;CenterAndExpand&quot;
                 Increment=&quot;7.5&quot;
                 LabelFormat=&quot;%1.1f&quot;
-                MarkerColor=&quot;Coral&quot;
                 Maximum=&quot;99.0&quot;
                 Minimum=&quot;9.0&quot;
                 Value=&quot;{Binding Value}&quot; /&gt;
