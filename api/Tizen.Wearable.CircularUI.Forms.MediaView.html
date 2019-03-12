@@ -1,0 +1,908 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MediaView
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MediaView
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView">
+  
+  
+  <h1 id="Tizen_Wearable_CircularUI_Forms_MediaView" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView" class="text-break">Class MediaView
+  </h1>
+  <div class="markdown level0 summary"><p>The MediaView class is used to display the video output on the screen.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Xamarin.Forms.BindableObject</span></div>
+    <div class="level2"><span class="xref">Xamarin.Forms.Element</span></div>
+    <div class="level3"><span class="xref">Xamarin.Forms.NavigableElement</span></div>
+    <div class="level4"><span class="xref">Xamarin.Forms.VisualElement</span></div>
+    <div class="level5"><span class="xref">Xamarin.Forms.View</span></div>
+    <div class="level6"><span class="xref">Xamarin.Forms.Layout</span></div>
+    <div class="level7"><span class="xref">Xamarin.Forms.Layout</span>&lt;<span class="xref">Xamarin.Forms.View</span>&gt;</div>
+    <div class="level8"><span class="xref">MediaView</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+    <div><span class="xref">Xamarin.Forms.IAnimatable</span></div>
+    <div><span class="xref">Xamarin.Forms.IViewController</span></div>
+    <div><span class="xref">Xamarin.Forms.IVisualElementController</span></div>
+    <div><span class="xref">Xamarin.Forms.IElementController</span></div>
+    <div><span class="xref">Xamarin.Forms.Internals.IGestureController</span></div>
+    <div><span class="xref">Xamarin.Forms.ILayout</span></div>
+    <div><span class="xref">Xamarin.Forms.ILayoutController</span></div>
+    <div><span class="xref">Xamarin.Forms.IViewContainer</span>&lt;<span class="xref">Xamarin.Forms.View</span>&gt;</div>
+    <div><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IVideoOutput.html">IVideoOutput</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout&lt;Xamarin.Forms.View&gt;.OnAdded(Xamarin.Forms.View)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout&lt;Xamarin.Forms.View&gt;.OnChildAdded(Xamarin.Forms.Element)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout&lt;Xamarin.Forms.View&gt;.OnChildRemoved(Xamarin.Forms.Element)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout&lt;Xamarin.Forms.View&gt;.OnRemoved(Xamarin.Forms.View)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout&lt;Xamarin.Forms.View&gt;.Children</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.IsClippedToBoundsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.CascadeInputTransparentProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.PaddingProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.ForceLayout()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement, Xamarin.Forms.Rectangle)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.LowerChild(Xamarin.Forms.View)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.RaiseChild(Xamarin.Forms.View)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.InvalidateLayout()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.OnChildMeasureInvalidated(System.Object, System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.OnChildMeasureInvalidated()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.OnSizeAllocated(System.Double, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.ShouldInvalidateOnChildAdded(Xamarin.Forms.View)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.ShouldInvalidateOnChildRemoved(Xamarin.Forms.View)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.UpdateChildrenLayout()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.IsClippedToBounds</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.Padding</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.CascadeInputTransparent</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Layout.LayoutChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.VerticalOptionsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.HorizontalOptionsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.MarginProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.GetChildElements(Xamarin.Forms.Point)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.GestureController</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.GestureRecognizers</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.Xamarin.Forms.Internals.IGestureController.CompositeGestureRecognizers</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.HorizontalOptions</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.Margin</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.View.VerticalOptions</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.XProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.YProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.AnchorXProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.AnchorYProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TranslationXProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TranslationYProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.WidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.HeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.RotationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.RotationXProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.RotationYProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ScaleProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ScaleXProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ScaleYProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.VisualProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OpacityProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.BackgroundColorProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.BehaviorsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TriggersProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.WidthRequestProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.HeightRequestProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.MinimumWidthRequestProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.MinimumHeightRequestProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsFocusedProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.FlowDirectionProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnTabIndexPropertyChanged(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndexDefaultValueCreator()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnTabStopPropertyChanged(System.Boolean, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabStopDefaultValueCreator()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.BatchBegin()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.BatchCommit()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Measure(System.Double, System.Double, Xamarin.Forms.MeasureFlags)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Unfocus()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.InvalidateMeasure()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.OnChildrenReordered()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.SizeAllocated(System.Double, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Xamarin.Forms.IVisualElementController.InvalidateMeasure(Xamarin.Forms.Internals.InvalidationTrigger)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ChangeVisualState()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Visual</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.FlowDirection</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Xamarin.Forms.IVisualElementController.EffectiveFlowDirection</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.AnchorX</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.AnchorY</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.BackgroundColor</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Behaviors</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Bounds</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Height</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.HeightRequest</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.InputTransparent</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsEnabled</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsFocused</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsVisible</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.MinimumHeightRequest</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.MinimumWidthRequest</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Opacity</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Rotation</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.RotationX</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.RotationY</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Scale</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ScaleX</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ScaleY</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.class</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TranslationX</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.TranslationY</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Triggers</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Width</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.WidthRequest</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.X</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Y</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Resources</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.ChildrenReordered</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Focused</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.MeasureInvalidated</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.SizeChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.OnParentSet()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.AutomationIdProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.ClassIdProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.GetMenu(Xamarin.Forms.BindableObject)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.SetMenu(Xamarin.Forms.BindableObject, Xamarin.Forms.Menu)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.Xamarin.Forms.IElementController.SetValueFromRenderer(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.FindByName(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.RemoveDynamicResource(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.OnPropertyChanged(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.AutomationId</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.ClassId</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.Effects</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.Id</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.StyleId</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.Parent</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.ChildAdded</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.ChildRemoved</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.DescendantAdded</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Element.DescendantRemoved</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.OnPropertyChanging(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
+  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_MediaView_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ContentProperty(&quot;Player&quot;)]
+public class MediaView : Layout&lt;View&gt;, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, IViewController, IVisualElementController, IElementController, IGestureController, ILayout, ILayoutController, IPaddingElement, IViewContainer&lt;View&gt;, IVideoOutput</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_PlayerProperty" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.PlayerProperty">PlayerProperty</h4>
+  <div class="markdown level1 summary"><p>Identifies the Player bindable property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly BindableProperty PlayerProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Xamarin.Forms.BindableProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_OuputType_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OuputType*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_OuputType" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OuputType">OuputType</h4>
+  <div class="markdown level1 summary"><p>Gets the video output type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual VideoOuputType OuputType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.VideoOuputType.html">VideoOuputType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_Player_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Player*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_Player" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Player">Player</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the media player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaPlayer Player { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaPlayer.html">MediaPlayer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_LayoutChildren_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.LayoutChildren*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_LayoutChildren_System_Double_System_Double_System_Double_System_Double_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.LayoutChildren(System.Double,System.Double,System.Double,System.Double)">LayoutChildren(Double, Double, Double, Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void LayoutChildren(double x, double y, double width, double height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Xamarin.Forms.Layout.LayoutChildren(System.Double, System.Double, System.Double, System.Double)</span></div>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_OnBindingContextChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnBindingContextChanged*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_OnBindingContextChanged" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnBindingContextChanged">OnBindingContextChanged()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnBindingContextChanged()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Xamarin.Forms.View.OnBindingContextChanged()</span></div>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_OnMeasure_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnMeasure*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_OnMeasure_System_Double_System_Double_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnMeasure(System.Double,System.Double)">OnMeasure(Double, Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">widthConstraint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">heightConstraint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Xamarin.Forms.SizeRequest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Xamarin.Forms.VisualElement.OnMeasure(System.Double, System.Double)</span></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller">IVideoOutput.Controller</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">View IVideoOutput.Controller { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Xamarin.Forms.View</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView">IVideoOutput.MediaView</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">VisualElement IVideoOutput.MediaView { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Xamarin.Forms.VisualElement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IAnimatable</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IViewController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IVisualElementController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IElementController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.Internals.IGestureController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.ILayout</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.ILayoutController</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IViewContainer&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.IVideoOutput.html">IVideoOutput</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

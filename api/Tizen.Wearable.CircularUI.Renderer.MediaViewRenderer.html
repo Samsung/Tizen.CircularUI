@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MediaViewRenderer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MediaViewRenderer
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer">
+  
+  
+  <h1 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer" class="text-break">Class MediaViewRenderer
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaView.html">MediaView</a>&gt;</div>
+    <div class="level2"><span class="xref">Xamarin.Forms.Platform.Tizen.ViewRenderer</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaView.html">MediaView</a>, <a class="xref" href="Tizen.Wearable.CircularUI.Forms.LayoutCanvas.html">LayoutCanvas</a>&gt;</div>
+    <div class="level3"><span class="xref">MediaViewRenderer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Xamarin.Forms.Platform.Tizen.IVisualElementRenderer</span></div>
+    <div><span class="xref">Xamarin.Forms.IRegisterable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">Xamarin.Forms.IEffectControlProvider</span></div>
+    <div><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html">IMediaViewProvider</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.ViewRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView, Tizen.Wearable.CircularUI.Forms.LayoutCanvas&gt;.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.ViewRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView, Tizen.Wearable.CircularUI.Forms.LayoutCanvas&gt;.SetNativeControl(Tizen.Wearable.CircularUI.Forms.LayoutCanvas)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.ViewRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView, Tizen.Wearable.CircularUI.Forms.LayoutCanvas&gt;.UpdateIsEnabled(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.ViewRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView, Tizen.Wearable.CircularUI.Forms.LayoutCanvas&gt;.Control</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.GetDesiredSize(System.Double, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.SetElement(Tizen.Wearable.CircularUI.Forms.MediaView)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Xamarin.Forms.Platform.Tizen.IVisualElementRenderer.UpdateLayout()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Xamarin.Forms.Platform.Tizen.IVisualElementRenderer.SetElement(Xamarin.Forms.VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Xamarin.Forms.IEffectControlProvider.RegisterEffect(Xamarin.Forms.Effect)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.RegisterEffect(Xamarin.Forms.Effect)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateLayout()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Dispose(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.OnElementPropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.SetNativeView(ElmSharp.EvasObject)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.RegisterPropertyHandler(Xamarin.Forms.BindableProperty, System.Action&lt;System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.RegisterPropertyHandler(System.String, System.Action&lt;System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.RegisterPropertyHandler(Xamarin.Forms.BindableProperty, System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.RegisterPropertyHandler(System.String, System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateAllProperties(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.OnElementReady()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.MinimumSize()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Measure(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateBackgroundColor(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateOpacity(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.GetNativeContentGeometry()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateIsEnabled(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateInputTransparent(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.UpdateThemeStyle()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.ApplyTransformation()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Element</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.Xamarin.Forms.Platform.Tizen.IVisualElementRenderer.Element</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.NativeView</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.VisualElementRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;.IsDisposed</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Renderer.html">Tizen.Wearable.CircularUI.Renderer</a></h6>
+  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
+  <h5 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MediaViewRenderer : ViewRenderer&lt;MediaView, LayoutCanvas&gt;, IVisualElementRenderer, IRegisterable, IDisposable, IEffectControlProvider, IMediaViewProvider</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_MediaView__" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.MediaView})">OnElementChanged(ElementChangedEventArgs&lt;MediaView&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;MediaView&gt; e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaView.html">MediaView</a>&gt;</td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Xamarin.Forms.Platform.Tizen.ViewRenderer&lt;Tizen.Wearable.CircularUI.Forms.MediaView, Tizen.Wearable.CircularUI.Forms.LayoutCanvas&gt;.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs&lt;Tizen.Wearable.CircularUI.Forms.MediaView&gt;)</span></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView_" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView">IMediaViewProvider.GetMediaView()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MediaView IMediaViewProvider.GetMediaView()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tizen.Multimedia.MediaView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Xamarin.Forms.Platform.Tizen.IVisualElementRenderer</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IRegisterable</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.IEffectControlProvider</span>
+  </div>
+  <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html">IMediaViewProvider</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
