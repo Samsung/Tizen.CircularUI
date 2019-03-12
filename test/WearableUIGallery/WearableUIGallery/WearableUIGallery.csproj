@@ -13,6 +13,14 @@
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="TC\TCMediaViewAbsoluteLayout.xaml.cs">
+      <DependentUpon>TCMediaViewAbsoluteLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCMediaViewStackLayout.xaml.cs">
+      <DependentUpon>TCMediaViewStackLayout.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Update="TCListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

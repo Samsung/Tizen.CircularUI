@@ -13,12 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using WearableUIGallery.TC;
-using Xamarin.Forms;
 
 namespace WearableUIGallery
 {
@@ -136,6 +133,15 @@ namespace WearableUIGallery
                 }
             });
             TCs.Add(new TCDescribe { Title = "Performance", Class = typeof(TCPerformance) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "MediaPlayer",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "MediaView StackLayout", Class = typeof(TCMediaViewStackLayout) },
+                    new TCDescribe { Title = "MediaView AbsoluteLayout", Class = typeof(TCMediaViewAbsoluteLayout) },
+                }
+            });
         }
 
         public IList<TCDescribe> TCs { get; private set; }
