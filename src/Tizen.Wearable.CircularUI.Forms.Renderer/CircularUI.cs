@@ -13,12 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+using System;
+using ElmSharp;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public static class FormsCircularUI
     {
+        public static readonly string Tag = "CircularUI";
+
         public static bool IsInitialized { get; private set; }
+
         public static void Init()
         {
             if (IsInitialized) return;

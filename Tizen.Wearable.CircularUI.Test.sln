@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery", "test\W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearableUIGallery.Tizen.Wearable", "test\WearableUIGallery\WearableUIGallery.Tizen.Wearable\WearableUIGallery.Tizen.Wearable.csproj", "{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularUI", "src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms", "src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj", "{571EFE9E-B539-4FF7-8E28-A6F451C64652}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularUI.Tizen", "src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms.Renderer", "src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{8B32EE6A-0ADD-4E64-80E9-B2375690CC70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTextWatchface", "test\SimpleTextWatchface\SimpleTextWatchface.csproj", "{1998035F-ECAF-493E-8226-E7EB33D0C982}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTextWatchface", "test\SimpleTextWatchface\SimpleTextWatchface.csproj", "{1998035F-ECAF-493E-8226-E7EB33D0C982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{E00DD78A-32EC-4AFA-BC81-EEFF9A80E7E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9F1AB8B9-03B0-40A7-AB49-522B741F570A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B3ADEDC-D646-4C8A-B6AD-F2A07F2A0ACC} = {9F1AB8B9-03B0-40A7-AB49-522B741F570A}
+		{BACCF137-6E0F-4A33-AEC9-5EAF95C0E892} = {9F1AB8B9-03B0-40A7-AB49-522B741F570A}
+		{1998035F-ECAF-493E-8226-E7EB33D0C982} = {E00DD78A-32EC-4AFA-BC81-EEFF9A80E7E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3736C77A-08ED-442D-ADE1-5779254463ED}
