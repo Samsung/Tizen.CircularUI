@@ -26,5 +26,6 @@ The binaries are available via NuGet (package name CircularUI) with the source a
 | [](xref:Tizen.Wearable.CircularUI.Forms.PopupEntry)                    | The PopupEntry is a class that extends Xamarin.Forms.Entry. It makes a new layer when editing text on the entry. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.Toast)                         | A popup for simple feedback. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.TwoButtonPage)                 | A subclass of Xamarin.Forms.Page has two buttons on the left and right side of the circular screen. |
+| [](xref:Tizen.Wearable.CircularUI.Forms.MediaView)                     | The MediaView class is used to display the video output on the screen. |
 
 ![widgets](widgets.png)
