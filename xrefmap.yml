@@ -58,6 +58,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.ManagingCertificateProfile
   name: Managing Certificate Profile
   href: guide/ManagingCertificateProfile.html
+- uid: Tizen.Wearable.CircularUI.doc.MediaView
+  name: MediaView and MediaPlayer
+  href: guide/MediaView.html
 - uid: Tizen.Wearable.CircularUI.doc.PermitDeviceToInstallApps
   name: Permit Device To Install Applications
   href: guide/PermitDeviceToInstallApps.html

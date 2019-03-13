@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MediaView and MediaPlayer </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="MediaView and MediaPlayer ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.MediaView">
+<h1 id="mediaview-and-mediaplayer">MediaView and MediaPlayer</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p><code>MediaView</code> is used to displaythe video on the screen. <code>MediaPlayer</code> provides functionality of playing multimedia. </p>
+<h2 id="playbackstate">PlaybackState</h2>
+<p> <code>MediaPlayer</code> has a <code>PlaybackState</code>. Some APIs only work on the certain state and some APIs transit the state.</p>
+<h4 id="state-diagram-of-playbackstate">State diagram of PlaybackState</h4>
+<p><img src="data/mediaplayer_state_diagram.png" alt="state diagram"></p>
+<h2 id="video-output-type">Video output type</h2>
+<h4 id="buffer">Buffer</h4>
+<ul>
+<li>It displays video data on the graphics buffer using GL surface. It is usually used to attach a video on a part of the view.</li>
+<li><code>MediaView</code></li>
+</ul>
+<h2 id="associating-player-with-mediaview">Associating Player with MediaView</h2>
+<p> <code>MediaPlayer</code> and video output are created independently. The developer needs to associate Player and the video output to display video data.</p>
+<h4 id="use-player-property-of-mediaview">Use Player property of MediaView</h4>
+<pre><code class="lang-xml">&lt;w:CirclePage
+    x:Class=&quot;WearableUIGallery.TC.TCMediaViewStackLayout&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    &lt;w:CirclePage.Content&gt;
+        &lt;StackLayout&gt;
+            &lt;w:MediaView x:Name=&quot;View&quot;&gt;
+                &lt;w:MediaPlayer x:Name=&quot;VideoPlayer&quot; Source=&quot;test.mp4&quot; AutoPlay=&quot;true&quot; UsesEmbeddingControls=&quot;true&quot;/&gt;
+            &lt;/w:MediaView&gt;
+        &lt;/StackLayout&gt;
+    &lt;/w:CirclePage.Content&gt;
+&lt;/w:CirclePage&gt;
+</code></pre><pre><code class="lang-c#">var view = new MediaView
+{
+    Player = new MediaPlayer
+    {
+        UsesEmbeddingControls = true,
+        AutoPlay = true,
+        Source = MediaSource.FromFile(&quot;test.mp4&quot;)
+    }
+};
+</code></pre><h2 id="embedding-controls">Embedding controls</h2>
+<p> By default, <code>MediaPlayer</code> provides an embedding control. If you don&#39;t want to use the default embedding controls, set <code>UsesEmbeddingControls</code> to false.</p>
+<pre><code class="lang-c#">public bool UsesEmbeddingControls
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/mediaview_playing.png" alt="Normal list"></th>
+<th style="text-align:center"><img src="data/mediaview_pause.png" alt="Group list"></th>
+<th style="text-align:center"><img src="data/mediaview_nocontrol.png" alt="2 texts and 1 icon list"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">embedding contols (on playing)</td>
+<td style="text-align:center">embedding contols (on pausing)</td>
+<td style="text-align:center">without embedding controls</td>
+</tr>
+</tbody>
+</table>
+<h2 id="autoplayautostop">AutoPlay/AutoStop</h2>
+<p>Video can&#39;t play before media view is shown, so you need to know when the media views are available. If you use <code>AutoPlay</code>/<code>AutoStop</code> property, you don&#39;t need to care about the view state.</p>
+<h4 id="autoplay">AutoPlay</h4>
+<pre><code class="lang-c#">public bool AutoPlay
+</code></pre><p> Automatically starts a player when a <code>View</code> is shown (Rendered).</p>
+<h4 id="autostop">AutoStop</h4>
+<pre><code class="lang-c#">public bool AutoStop
+</code></pre><p>Automatically stops a player when a <code>View</code> is gone (Renderer was disposed).</p>
+<h2 id="convert-position-to-progress">Convert Position to Progress</h2>
+<p>In many cases, <code>MediaPlayer.Position</code> is <code>int</code> value, whereas <code>Progressbar.Progress</code> is <code>double</code> value (0 to 1.0), so conversion is required. This can be easily implemented through a custom converter as follows.</p>
+<h4 id="create-a-custom-converter">Create a custom converter</h4>
+<p> Implements <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/">Xamarin.Forms.IValueConverter</a></p>
+<pre><code class="lang-C#">public class PositionToProgressConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return ((int)value / (double)(GetParameter(parameter)));
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return (int)((double)value * GetParameter(parameter));
+    }
+
+    int GetParameter(object parameter)
+    {
+        var duration = ((Tizen.Wearable.CircularUI.Forms.MediaPlayer)parameter).Duration;
+        if (duration == 0)
+            duration = 1;
+        return duration;
+    }
+}
+</code></pre><p> Pass a <code>MediaPlayer</code> instance as the parameter</p>
+<h4 id="use-a-custom-converter-in-xaml">Use a custom converter in Xaml</h4>
+<pre><code class="lang-xml">....
+
+    &lt;ContentPage.Resources&gt;
+        &lt;ResourceDictionary&gt;
+            &lt;local:PositionToProgressConverter x:Key=&quot;positionToProgress&quot;/&gt;
+        &lt;/ResourceDictionary&gt;
+    &lt;/ContentPage.Resources&gt;
+...
+
+    &lt;ProgressBar Progress=&quot;{Binding Source={x:Reference Player}, Path=Position, Converter={StaticResource positionToProgress}, ConverterParameter={x:Reference Player}}}&quot;/&gt;
+
+....
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
