@@ -41,7 +41,7 @@ namespace WearableUIGallery.Tizen.Wearable
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
             FormsCircularUI.Init();
 #if UITest
-            global::Tizen.Appium.TizenAppium.StartService(app);
+            global::Tizen.Appium.TizenAppium.StartService();
 #endif
             app.Run(args);
         }
