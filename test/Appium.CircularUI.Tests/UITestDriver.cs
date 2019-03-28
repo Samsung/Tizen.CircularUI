@@ -67,7 +67,7 @@ namespace Appium.UITests
             option.AddAdditionalCapability("deviceName", "emulator-26111");
             option.AddAdditionalCapability("appPackage", "org.tizen.example.WearableUIGallery.Tizen.Wearable");
             option.AddAdditionalCapability("app", "org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk");
-            _driver = new TizenDriver<AppiumWebElement>(new Uri("http://127.0.0.0:4723/wd/hub"), option); //please insert the IP of your Appium server.
+            _driver = new TizenDriver<AppiumWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), option); //please insert the IP of your Appium server.
             _touchScreen = new RemoteTouchScreen(_driver);
             createFolder = false;
         }
