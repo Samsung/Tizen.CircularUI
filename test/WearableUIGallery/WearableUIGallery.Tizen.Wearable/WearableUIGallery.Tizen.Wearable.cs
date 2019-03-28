@@ -30,7 +30,7 @@ namespace WearableUIGallery.Tizen.Wearable
         protected override void OnTerminate()
         {
             base.OnTerminate();
-#if UITest
+#if UITEST
             global::Tizen.Appium.TizenAppium.StopService();
 #endif
         }
@@ -40,7 +40,7 @@ namespace WearableUIGallery.Tizen.Wearable
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
             FormsCircularUI.Init();
-#if UITest
+#if UITEST
             global::Tizen.Appium.TizenAppium.StartService();
 #endif
             app.Run(args);

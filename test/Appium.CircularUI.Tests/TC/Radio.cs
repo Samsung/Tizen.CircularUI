@@ -40,11 +40,19 @@ namespace Appium.UITests
 
             Driver.Click("NoOff");
             Driver.Flick(0, SpeedY);
+#if EMUL_40
+            Driver.Click("30s");
+            Driver.Flick(0, SpeedY);
+            Driver.Click("5m");
+            Driver.Flick(0, SpeedY);
+            Driver.Click("15m");
+#else
             Driver.Click("15s");
             Driver.Flick(0, SpeedY);
             Driver.Click("30s");
             Driver.Flick(0, SpeedY);
             Driver.Click("1m");
+#endif
         }
     }
 }
