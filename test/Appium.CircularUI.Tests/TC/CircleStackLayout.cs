@@ -8,7 +8,11 @@ namespace Appium.UITests
         [Test]
         public void CircleStackLayoutTest()
         {
+#if EMUL_40
+            var speedX = SpeedX * 3;
+#else
             var speedX = SpeedX * 2;
+#endif
             for (int i = 0; i < 18; i++)
             {
                 Driver.Flick(speedX, 0);
