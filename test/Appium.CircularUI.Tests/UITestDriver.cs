@@ -18,12 +18,14 @@ namespace Appium.UITests
     public sealed class UITestDriver // to communicate appium
     {
         const int DelayTime = 1000;
-        const string Platform = "Tizen";
 
         static UITestDriver _instance;
         AppiumDriver<AppiumWebElement> _driver;
         RemoteTouchScreen _touchScreen;
         static bool createFolder;
+
+        public int FlickSpeedX{ get; private set; }
+        public int FlickSpeedY { get; private set; }
 
         public static UITestDriver Instance
         {
@@ -31,7 +33,7 @@ namespace Appium.UITests
             {
                 if (_instance == null)
                 {
-                    _instance = new UITestDriver(Platform, "");
+                    _instance = new UITestDriver(Config.PLATFORM, "");
                 }
                 return _instance;
             }
@@ -63,13 +65,23 @@ namespace Appium.UITests
         {
             AppiumOptions option = new AppiumOptions();
 
-            option.AddAdditionalCapability("platformName", platform);
-            option.AddAdditionalCapability("deviceName", "emulator-26111");
-            option.AddAdditionalCapability("appPackage", "org.tizen.example.WearableUIGallery.Tizen.Wearable");
-            option.AddAdditionalCapability("app", "org.tizen.example.WearableUIGallery.Tizen.Wearable-1.0.0.tpk");
-            _driver = new TizenDriver<AppiumWebElement>(new Uri("http://127.0.0.0:4723/wd/hub"), option); //please insert the IP of your Appium server.
+            option.AddAdditionalCapability("platformName", Config.PLATFORM);
+            option.AddAdditionalCapability("deviceName", Config.DEVICE_NAME);
+            option.AddAdditionalCapability("appPackage", Config.APP_PACKAGE_NAME);
+            option.AddAdditionalCapability("app", Config.APP_NAME);
+            _driver = new TizenDriver<AppiumWebElement>(new Uri(Config.APPIUM_SERVER_URI), option);
             _touchScreen = new RemoteTouchScreen(_driver);
             createFolder = false;
+#if EMUL_40
+            FlickSpeedX = Config.SPEEDX_EMUL_40;
+            FlickSpeedY = Config.SPEEDY_EMUL_40;
+#elif EMUL_50
+            FlickSpeedX = Config.SPEEDX_EMUL_50;
+            FlickSpeedY = Config.SPEEDY_EMUL_50;
+#else
+            FlickSpeedX = Config.SPEEDX_GALAXY_WATCH;
+            FlickSpeedY = Config.SPEEDY_GALAXY_WATCH;
+#endif
         }
 
         public void Quit()
@@ -106,11 +118,7 @@ namespace Appium.UITests
                 ReadOnlyCollection<AppiumWebElement> resultByAccessibilityId = _driver.FindElementsByAccessibilityId(testName);
                 if (resultByAccessibilityId.Count == 0)
                 {
-#if EMUL
-                    Flick(0, isForward ? -35 : 35);
-#else
-                    Flick(0, isForward ? -40 : 40);
-#endif
+                    Flick(0, isForward ? FlickSpeedY : -FlickSpeedY);
                     flickCount++;
 
                     if (isForward == false && flickCount >= 20)

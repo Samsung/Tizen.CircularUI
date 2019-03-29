@@ -172,11 +172,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             if (Element.ToolbarItems.Count > 0)
             {
-                SetVisibleMoreOption(true);
-                foreach (var item in Element.ToolbarItems)
+                Device.BeginInvokeOnMainThread(() =>
                 {
-                    AddToolbarItem(item);
-                }
+                    SetVisibleMoreOption(true);
+
+                    foreach (var item in Element.ToolbarItems)
+                    {
+                        AddToolbarItem(item);
+                    }
+                });
+
             }
 
             SetNativeView(_box);
