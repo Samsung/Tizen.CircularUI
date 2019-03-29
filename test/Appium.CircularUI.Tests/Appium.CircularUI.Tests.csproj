@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="TC\Radio.cs" />
     <Compile Include="TC\Check.cs" />
     <Compile Include="TC\Toast.cs" />
