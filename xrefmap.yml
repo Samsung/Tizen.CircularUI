@@ -2825,6 +2825,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.PopupEntry
   fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry
   nameWithType: PopupEntry
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpened
+  name: IsPopupOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_IsPopupOpened
+  commentId: P:Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpened
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpened
+  nameWithType: PopupEntry.IsPopupOpened
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpened*
+  name: IsPopupOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_IsPopupOpened_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpened
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpened
+  nameWithType: PopupEntry.IsPopupOpened
+- uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpenedProperty
+  name: IsPopupOpenedProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_IsPopupOpenedProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpenedProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.PopupEntry.IsPopupOpenedProperty
+  nameWithType: PopupEntry.IsPopupOpenedProperty
 - uid: Tizen.Wearable.CircularUI.Forms.PopupEntry.PopupBackgroundColor
   name: PopupBackgroundColor
   href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html#Tizen_Wearable_CircularUI_Forms_PopupEntry_PopupBackgroundColor
