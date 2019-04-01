@@ -32,7 +32,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies color of Popup background.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty PopupBackgroundColorProperty = BindableProperty.CreateAttached(nameof(PopupBackgroundColor), typeof(Color), typeof(CircleListView), Color.Default);
+        public static readonly BindableProperty PopupBackgroundColorProperty = BindableProperty.CreateAttached(nameof(PopupBackgroundColor), typeof(Color), typeof(PopupEntry), Color.Default);
 
         /// <summary>
         /// Gets or sets a color value of Popup.
