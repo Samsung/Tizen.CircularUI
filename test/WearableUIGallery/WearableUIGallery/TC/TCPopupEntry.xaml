@@ -8,6 +8,8 @@
 	<ContentPage.Content>
         <w:CircleScrollView x:Name="Scroller">
             <StackLayout Padding="20,40,20,40">
+                <Button Text="PopupEntry Open"
+                        Clicked="ButtonClicked"/>
                 <w:PopupEntry
                     AutomationId="popupEntry1"
                     BackgroundColor="Gray"
@@ -15,13 +17,15 @@
                     TextColor="Blue"
                     Placeholder="Foobar"
                     PlaceholderColor="Blue"
-                    VerticalOptions="CenterAndExpand" />
+                    VerticalOptions="CenterAndExpand"
+                    x:Name="PopupEntry1"/>
                 <w:PopupEntry
                     AutomationId="popupEntry2"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="Foobar"
                     PopupBackgroundColor="Green"
-                    VerticalOptions="CenterAndExpand" />
+                    VerticalOptions="CenterAndExpand" 
+                    x:Name="PopupEntry2"/>
                 <w:PopupEntry
                     AutomationId="popupEntry3"
                     HorizontalOptions="FillAndExpand"
