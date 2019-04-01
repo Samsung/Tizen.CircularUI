@@ -25,12 +25,18 @@ using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCPopupEntry : CirclePage
-	{
-		public TCPopupEntry ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCPopupEntry : CirclePage
+    {
+        public TCPopupEntry()
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonClicked(object sender, EventArgs e)
+        {
+            this.PopupEntry2.IsPopupOpened = !this.PopupEntry2.IsPopupOpened;
+            Console.WriteLine("ButtonClicked = " + this.PopupEntry1.IsPopupOpened);
+        }
+    }
 }

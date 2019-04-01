@@ -36,10 +36,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         ElmSharp.Color DefaultColor { get; set; }
 
+        bool _IsPopupOpened = false;
+
         public PopupEntryRenderer()
         {
             DefaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
             RegisterPropertyHandler(PopupEntry.PopupBackgroundColorProperty, UpdatePopupBackgroundColor);
+            RegisterPropertyHandler(PopupEntry.IsPopupOpenedProperty, UpdateIsPopupOpened);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry> e)
@@ -146,6 +149,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _editor.TextChanged -= PopupEntryTextChanged;
                 _editor.Activated -= PopupEntryActivated;
             }
+            _IsPopupOpened = false;
+            ((PopupEntry)Element).IsPopupOpened = false;
         }
 
         void ShowPopup()
@@ -168,6 +173,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.ShowInputPanel();
 
             Control.TextChanged += OnTextChanged;
+            _IsPopupOpened = true;
+            ((PopupEntry)Element).IsPopupOpened = true;
         }
 
         void EditorStateChanged(IntPtr data, IntPtr ctx, int value)
@@ -210,6 +217,25 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                         _editor.MoveCursorEnd();
                     }
                 }
+            }
+        }
+
+        void UpdateIsPopupOpened()
+        {
+            bool isOpended = ((PopupEntry)Element).IsPopupOpened;
+            if (isOpended == _IsPopupOpened)
+            {
+                return;
+            }
+
+            _IsPopupOpened = isOpended;
+            if (isOpended)
+            {
+                ShowPopup();
+            }
+            else
+            {
+                HidePopup();
             }
         }
     }

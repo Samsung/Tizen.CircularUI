@@ -35,6 +35,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty PopupBackgroundColorProperty = BindableProperty.CreateAttached(nameof(PopupBackgroundColor), typeof(Color), typeof(PopupEntry), Color.Default);
 
         /// <summary>
+        /// BindableProperty. Identifies whether Popup is opended or not.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty IsPopupOpenedProperty = BindableProperty.CreateAttached(nameof(IsPopupOpened), typeof(bool), typeof(PopupEntry), false);
+
+        /// <summary>
         /// Gets or sets a color value of Popup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -42,6 +48,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             get => (Color)GetValue(PopupBackgroundColorProperty);
             set => SetValue(PopupBackgroundColorProperty, value);
+        }
+
+        /// <summary>
+        /// Gets or sets a status of Popup's open.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsPopupOpened
+        {
+            get => (bool)GetValue(IsPopupOpenedProperty);
+            set => SetValue(IsPopupOpenedProperty, value);
         }
     }
 }
