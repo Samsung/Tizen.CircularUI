@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage 
+    x:Class="WearableUIGallery.TC.TCMapViewPins2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <w:CirclePage.Content>
+        <w:CircleScrollView Orientation="Vertical">
+            <StackLayout Margin="0, 30">
+                <w:MapView x:Name="mapview"
+                    ItemsSource="{Binding Locations}"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    WidthRequest="300"
+                    HeightRequest="200">
+                    <w:MapView.ItemTemplate>
+                        <DataTemplate>
+                            <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                        </DataTemplate>
+                    </w:MapView.ItemTemplate>
+                </w:MapView>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Add"
+                        AutomationId="add"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Command="{Binding AddLocationCommand}" />
+                    <Button Text="Remove"
+                        AutomationId="remove"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Command="{Binding RemoveLocationCommand}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Clear"
+                        AutomationId="clear"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Command="{Binding ClearLocationsCommand}"/>
+                    <Button Text="Show Popup"
+                        AutomationId="show"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Clicked="OnClickShowPopup" />
+                </StackLayout>
+            </StackLayout>
+        </w:CircleScrollView>
+    </w:CirclePage.Content>
+</w:CirclePage>

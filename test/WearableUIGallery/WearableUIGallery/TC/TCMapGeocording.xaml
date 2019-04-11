@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage 
+    x:Class="WearableUIGallery.TC.TCMapGeocording"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
+        <w:CircleScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Margin="0, 40, 0, 40">
+                <w:PopupEntry AutomationId="addressEntry"
+                        x:Name="addressEntry"
+                        Text="1600 Amphitheatre Parkway, Mountain View, CA"
+                        HorizontalOptions="FillAndExpand"/>
+                <Label AutomationId="poistionLabel"
+                        x:Name="poistionLabel"
+                        IsVisible="False"
+                        HorizontalOptions="CenterAndExpand" />
+                <Button AutomationId="getPosition"
+                        Text="Get Position"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickGetPostion"/>
+                <Button AutomationId="getAddress"
+                        Text="Get Address"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickGetAddress"/>
+                <Label AutomationId="coordinateLabel"
+                        x:Name="coordinateLabel"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="lat:40.714224, lng:-73.961452" />
+                <Label AutomationId="addressLabel"
+                        x:Name="addressLabel"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="" />
+            </StackLayout>
+        </w:CircleScrollView>
+    </ContentPage.Content>
+</w:CirclePage>

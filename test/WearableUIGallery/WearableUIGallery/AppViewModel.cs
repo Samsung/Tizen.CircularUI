@@ -142,6 +142,20 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "MediaView AbsoluteLayout", Class = typeof(TCMediaViewAbsoluteLayout) },
                 }
             });
+            TCs.Add(new TCDescribe
+            {
+                Title = "Map",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "Geocording", Class = typeof(TCMapGeocording) },
+                    new TCDescribe { Title = "MapView StackLayout1 No MapOption", Class = typeof(TCMapViewStackLayout1) },
+                    new TCDescribe { Title = "MapView StackLayout2 Satellite", Class = typeof(TCMapViewStackLayout2) },
+                    new TCDescribe { Title = "MapView AbsoluteLayout Hybrid", Class = typeof(TCMapViewAbsoluteLayout) },
+                    new TCDescribe { Title = "MapView Pins code", Class = typeof(TCMapViewPins1) },
+                    new TCDescribe { Title = "MapView Pins Xaml data binding", Class = typeof(TCMapViewPins2) },
+                    new TCDescribe { Title = "MapView display static current position", Class = typeof(TCMapViewCurrentPosition) },
+                }
+            });
         }
 
         public IList<TCDescribe> TCs { get; private set; }

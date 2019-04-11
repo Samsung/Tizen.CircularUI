@@ -205,7 +205,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
             {
-                Console.WriteLine("Tizen Forms is not initialized");
+                Log.Debug(FormsCircularUI.Tag, "Tizen Forms is not initialized");
                 return;
             }
 
@@ -263,7 +263,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (_firstButtonBgColor != Color.Default)
                 {
-                    Console.WriteLine($"TwoButtonPopup set first button background color:{_firstButtonBgColor.ToNative()}");
+                    Log.Debug(FormsCircularUI.Tag, $"TwoButtonPopup set first button background color:{_firstButtonBgColor.ToNative()}");
                     _firstButton.BackgroundColor = _firstButtonBgColor.ToNative();
                 }
             }
@@ -309,7 +309,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (_secondButtonBgColor != Color.Default)
                 {
-                    Console.WriteLine($"TwoButtonPopup set second button background color:{_secondButtonBgColor.ToNative()}");
+                    Log.Debug(FormsCircularUI.Tag, $"TwoButtonPopup set second button background color:{_secondButtonBgColor.ToNative()}");
                     _secondButton.BackgroundColor = _secondButtonBgColor.ToNative();
                 }
 
