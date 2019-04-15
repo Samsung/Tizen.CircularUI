@@ -157,7 +157,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void OnPageScrolled(object sender, EventArgs e)
         {
-            Log.Debug(FormsCircularUI.Tag, $"OnPageScrolled()  _pageIndex:{_pageIndex}, HorizontalPageIndex:{_scroller.HorizontalPageIndex}, _isUpdateCarousel:{_isUpdateCarousel}");
+            Console.WriteLine($"OnPageScrolled()  _pageIndex:{_pageIndex}, HorizontalPageIndex:{_scroller.HorizontalPageIndex}, _isUpdateCarousel:{_isUpdateCarousel}");
             if (_isUpdateCarousel)
             {
                 _isUpdateCarousel = false;

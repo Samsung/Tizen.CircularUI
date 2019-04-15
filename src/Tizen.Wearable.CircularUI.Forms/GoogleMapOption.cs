@@ -20,17 +20,19 @@ using Xamarin.Forms.Maps;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The MapOption struct used to define the properties that can be set on a MapView.
+    /// The GoogleMapOption struct used to define the properties that can be set on a MapView.
     /// </summary>
-    public struct MapOption
+    public struct GoogleMapOption
     {
-        public MapOption(Position center, GoogleMapType type = GoogleMapType.Roadmap, int zoomLevel = 10, 
+        private double _zoom;
+
+        public GoogleMapOption(Position center, GoogleMapType type = GoogleMapType.Roadmap, int zoomLevel = 10, 
                 bool visibleZoomControl = false, bool pinsPopupOpened = false, bool enableGesture = true, 
                 ZoomControlPosition controlPosition = ZoomControlPosition.RightBottom )
         {
             Center = center;
             MapType = type;
-            Zoom = Math.Min(Math.Max(zoomLevel, 1.0), 20.0); ;
+            _zoom = Math.Min(Math.Max(zoomLevel, 1.0), 20.0); ;
             IsVisibleZoomControl = visibleZoomControl;
             IsPinsPopupOpened = pinsPopupOpened;
             IsEnableGestureHandle = enableGesture;
@@ -38,21 +40,32 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Gets or sets a Google Map type value of MapOption.
+        /// Gets or sets a Google Map type value of GoogleMapOption.
         /// </summary>
         public GoogleMapType MapType { get; set; }
 
         /// <summary>
-        /// Gets or sets a center postion of MapOption.
+        /// Gets or sets a center postion of GoogleMapOption.
         /// This value set center of MapView. But getting value not mean current center of MapView because value can't reflect user interaction.
         /// </summary>
         public Position Center { get; set; }
 
         /// <summary>
-        /// Gets or sets a zoom level of MapOption.
+        /// Gets or sets a zoom level of GoogleMapOption.
         /// This value set zoom level of MapView. But getting value not mean current zoom level of MapView because value can't reflect user interaction.
         /// </summary>
-        public double Zoom { get; set; }
+        public double Zoom 
+        {
+            get { return _zoom; }
+            set {
+                if (value > 20.0)
+                    _zoom = 20;
+                else if(value < 1.0)
+                    _zoom = 1;
+                else
+                    _zoom = value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets a boolean value that indicates whether zoom control is visible.
@@ -80,7 +93,7 @@ namespace Tizen.Wearable.CircularUI.Forms
                 return false;
             if (obj.GetType() != GetType())
                 return false;
-            var other = (MapOption)obj;
+            var other = (GoogleMapOption)obj;
             if (MapType != other.MapType)
                 return false;
             if (Center.Latitude != other.Center.Latitude || Center.Longitude == other.Center.Longitude)
@@ -98,18 +111,18 @@ namespace Tizen.Wearable.CircularUI.Forms
             return true;
         }
 
-        public static bool operator ==(MapOption left, MapOption right)
+        public static bool operator ==(GoogleMapOption left, GoogleMapOption right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(MapOption left, MapOption right)
+        public static bool operator !=(GoogleMapOption left, GoogleMapOption right)
         {
             return !Equals(left, right);
         }
 
         /// <summary>
-        /// Returns the values of MapOption".
+        /// Returns the values of GoogleMapOption".
         /// </summary>
         /// <returns></returns>
         public override string ToString()

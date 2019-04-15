@@ -21,7 +21,7 @@ namespace WearableUIGallery.Tizen.Wearable
 {
     class Program : global::Xamarin.Forms.Platform.Tizen.FormsApplication
     {
-        private static string APIKEY = "Invalid_Google_API_Key"; //Insert Your Google API key
+        //private static string APIKEY = "Invalid_API_Key"; //Insert Your Google API key
 
         protected override void OnCreate()
         {
@@ -41,8 +41,7 @@ namespace WearableUIGallery.Tizen.Wearable
         {
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
-            FormsCircularUI.Init();
-            Maps.Init(APIKEY);
+            FormsCircularUI.Init(APIKEY);
 #if UITEST
             global::Tizen.Appium.TizenAppium.StartService();
 #endif

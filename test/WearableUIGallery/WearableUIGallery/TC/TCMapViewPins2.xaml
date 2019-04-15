@@ -8,20 +8,20 @@
     <w:CirclePage.Content>
         <w:CircleScrollView Orientation="Vertical">
             <StackLayout Margin="0, 30">
-                <w:MapView x:Name="mapview"
+                <w:GoogleMapView x:Name="mapview"
                     ItemsSource="{Binding Locations}"
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="FillAndExpand"
                     WidthRequest="300"
                     HeightRequest="200">
-                    <w:MapView.ItemTemplate>
+                    <w:GoogleMapView.ItemTemplate>
                         <DataTemplate>
                             <maps:Pin Position="{Binding Position}"
                               Address="{Binding Address}"
                               Label="{Binding Description}" />
                         </DataTemplate>
-                    </w:MapView.ItemTemplate>
-                </w:MapView>
+                    </w:GoogleMapView.ItemTemplate>
+                </w:GoogleMapView>
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Add"
                         AutomationId="add"

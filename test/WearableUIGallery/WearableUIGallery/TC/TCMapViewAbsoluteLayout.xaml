@@ -6,7 +6,7 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage.Content>
         <AbsoluteLayout>
-            <w:MapView x:Name="mapview"  AbsoluteLayout.LayoutBounds="80, 80, 200, 200"/>
+            <w:GoogleMapView x:Name="mapview"  AbsoluteLayout.LayoutBounds="80, 80, 200, 200"/>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

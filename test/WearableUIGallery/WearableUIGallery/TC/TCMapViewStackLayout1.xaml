@@ -6,7 +6,7 @@
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
-            <w:MapView x:Name="mapview" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            <w:GoogleMapView x:Name="mapview" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

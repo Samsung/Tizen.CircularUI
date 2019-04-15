@@ -31,7 +31,7 @@ namespace WearableUIGallery.TC
         {
             InitializeComponent ();
 
-            var option = new MapOption();
+            var option = new GoogleMapOption();
             var position = new Position(Latitude, Longitude);
             option.Center = position;
             option.Zoom = 15;

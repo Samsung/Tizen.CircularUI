@@ -5,38 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage.Content>
-        <StackLayout Margin="0, 20">
-            <w:MapView x:Name="mapview" 
-                VerticalOptions="StartAndExpand"
-                HorizontalOptions="CenterAndExpand"
-                WidthRequest="300"
-                HeightRequest="200"/>
-            <StackLayout Orientation="Horizontal">
-                <Button x:Name="zoomVisibleBtn"
-                    AutomationId="zoomVisibleBtn"
-                    Text="Zoom invisible"
-                    FontSize="Micro"
-                    HorizontalOptions="CenterAndExpand"
-                    WidthRequest="180"
-                    HeightRequest="50"
-                    Clicked="OnClickZoomControlVisible" />
-                <Button x:Name="zoomMoveBtn"
-                    AutomationId="zoomMoveBtn"
-                    Text="Move Zoom"
-                    FontSize="Micro"
-                    HorizontalOptions="CenterAndExpand"
-                    WidthRequest="180"
-                    HeightRequest="50"
-                    Clicked="OnClickZoomControlMove" />
-            </StackLayout>
-            <Button x:Name="gestureBtn"
-                AutomationId="gestureBtn"
-                Text="Gesture enable"
-                FontSize="Micro"
-                HorizontalOptions="CenterAndExpand"
-                WidthRequest="200"
-                HeightRequest="50"
-                Clicked="OnClickGestureHandle" />
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <w:GoogleMapView x:Name="mapview" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

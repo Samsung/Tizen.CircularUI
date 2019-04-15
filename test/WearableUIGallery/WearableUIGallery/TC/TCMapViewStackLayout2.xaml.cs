@@ -14,75 +14,27 @@
  * limitations under the License.
  */
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Maps;
-using System;
+using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCMapViewStackLayout2 : ContentPage
     {
-        private static double Latitude = 37.512;
-        private static double Longitude = 127.063;
-
-        MapOption _option;
-
-        private ZoomControlPosition[] _positions = { ZoomControlPosition.LeftBottom, ZoomControlPosition.LeftCenter, ZoomControlPosition.LeftTop, ZoomControlPosition.RightTop, ZoomControlPosition.RightCenter, ZoomControlPosition.RightBottom };
-        int index;
+        private static double Latitude = 34.0869;
+        private static double Longitude = -118.282242;
 
         public TCMapViewStackLayout2()
         {
             InitializeComponent ();
-
             var position = new Position(Latitude, Longitude);
-            _option = new MapOption(position);
-            _option.Zoom = 15;
-            _option.MapType = GoogleMapType.Satellite;
-            mapview.SetMapOption(_option);
-            index = 0;
-        }
-
-        void OnClickZoomControlVisible(object sender, EventArgs args)
-        {
-            var btn = sender as Button;
-            if (btn.Text == "Zoom invisible")
-            {
-                btn.Text = "Zoom visible";
-                _option.IsVisibleZoomControl = true;
-            }
-            else
-            {
-                btn.Text = "Zoom invisible";
-                _option.IsVisibleZoomControl = false;
-            }
-
-            mapview.SetMapOption(_option);
-        }
-
-        void OnClickZoomControlMove(object sender, EventArgs args)
-        {
-            _option.ZoomControlPosition = _positions[index++];
-            mapview.SetMapOption(_option);
-        }
-
-        void OnClickGestureHandle(object sender, EventArgs args)
-        {
-            var btn = sender as Button;
-            if (btn.Text == "Gesture disable")
-            {
-                btn.Text = "Gesture enable";
-                _option.IsEnableGestureHandle = true;
-            }
-            else
-            {
-                btn.Text = "Gesture disable";
-                _option.IsEnableGestureHandle = false;
-            }
-
-            mapview.SetMapOption(_option);
+            var option = new GoogleMapOption(position);
+            option.Zoom = 10.1;
+            option.MapType = GoogleMapType.Hybrid;
+            mapview.SetMapOption(option);
         }
     }
 }

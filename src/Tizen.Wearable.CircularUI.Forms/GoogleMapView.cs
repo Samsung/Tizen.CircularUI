@@ -29,36 +29,47 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The MapView class is used to display a map on the screen.
     /// </summary>
-    public class MapView : View
+    public class GoogleMapView : View, IGoogleMapViewController
     {
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        internal static readonly BindableProperty OptionProperty = BindableProperty.Create(nameof(Option), typeof(MapOption), typeof(MapView), null);
-
         /// <summary>
         /// BindableProperty. Identifies the ItemsSource bindable property.
         /// </summary>
-        public static readonly BindableProperty ItemsSourceProperty = BindableProperty.Create(nameof(IEnumerable), typeof(IEnumerable), typeof(MapView),
-            default(IEnumerable), propertyChanged: (b, o, n) => ((MapView)b).OnItemsSourcePropertyChanged((IEnumerable)o, (IEnumerable)n));
+        public static readonly BindableProperty ItemsSourceProperty = BindableProperty.Create(nameof(IEnumerable), typeof(IEnumerable), typeof(GoogleMapView),
+            default(IEnumerable), propertyChanged: (b, o, n) => ((GoogleMapView)b).OnItemsSourcePropertyChanged((IEnumerable)o, (IEnumerable)n));
 
         /// <summary>
         /// BindableProperty. Identifies the ItemTemplate bindable property.
         /// </summary>
-        public static readonly BindableProperty ItemTemplateProperty = BindableProperty.Create(nameof(ItemTemplate), typeof(DataTemplate), typeof(MapView),
-            default(DataTemplate), propertyChanged: (b, o, n) => ((MapView)b).OnItemTemplatePropertyChanged((DataTemplate)o, (DataTemplate)n));
+        public static readonly BindableProperty ItemTemplateProperty = BindableProperty.Create(nameof(ItemTemplate), typeof(DataTemplate), typeof(GoogleMapView),
+            default(DataTemplate), propertyChanged: (b, o, n) => ((GoogleMapView)b).OnItemTemplatePropertyChanged((DataTemplate)o, (DataTemplate)n));
 
         readonly ObservableCollection<Pin> _pins = new ObservableCollection<Pin>();
 
-        public MapView()
+        private GoogleMapOption _option;
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public event EventHandler LoadMapRequested;
+
+        public GoogleMapView()
         {
-            var option = new MapOption(new Position(41.890202, 12.492049));
-            SetValue(OptionProperty, option);
+            var option = new GoogleMapOption(new Position(41.890202, 12.492049));
+            MapOption = option;
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        internal MapOption Option
+        public GoogleMapOption MapOption
         {
-            get => (MapOption)GetValue(OptionProperty);
-            set => SetValue(OptionProperty, value);
+            get
+            {
+                return _option;
+            }
+            set
+            {
+                if (_option.Equals(value))
+                    return;
+                _option = value;
+
+            }
         }
 
         /// <summary>
@@ -107,7 +118,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             if (newItemTemplate is DataTemplateSelector)
             {
-                throw new NotSupportedException($"You are using an instance of {nameof(DataTemplateSelector)} to set the {nameof(MapView)}.{ItemTemplateProperty.PropertyName} property. Use an instance of a {nameof(DataTemplate)} property instead to set an item template.");
+                throw new NotSupportedException($"You are using an instance of {nameof(DataTemplateSelector)} to set the {nameof(GoogleMapView)}.{ItemTemplateProperty.PropertyName} property. Use an instance of a {nameof(DataTemplate)} property instead to set an item template.");
             }
 
             _pins.Clear();
@@ -184,11 +195,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Set MapOption value to MapView.
+        /// Set GoogleMapOption value to MapView.
         /// </summary>
-        public void SetMapOption(MapOption value)
+        public void SetMapOption(GoogleMapOption value)
         {
-            SetValue(OptionProperty, value);
+            MapOption = value;
+            LoadMapRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }

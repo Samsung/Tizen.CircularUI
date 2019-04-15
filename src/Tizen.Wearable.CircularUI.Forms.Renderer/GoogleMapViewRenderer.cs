@@ -27,11 +27,11 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using Xamarin.Forms.Maps;
 
-[assembly: ExportRenderer(typeof(MapView), typeof(MapViewRenderer))]
+[assembly: ExportRenderer(typeof(GoogleMapView), typeof(GoogleMapViewRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class MapViewRenderer : ViewRenderer<MapView, WebViewContainer>
+    public class GoogleMapViewRenderer : ViewRenderer<GoogleMapView, WebViewContainer>
     {
         private const string HtmlStyle = "<html><head><style>html, body {height: 100%; margin: 0; padding: 0;} #map {height: 100%;}</style>";
         private const string GoogleMapURL = "http://maps.googleapis.com/maps/api/";
@@ -44,12 +44,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         TWebView NativeWebView => Control.WebView;
 
-        public MapViewRenderer()
-        {
-            RegisterPropertyHandler(MapView.OptionProperty, UpdateMapOption);
-        }
-
-        protected override void OnElementChanged(ElementChangedEventArgs<MapView> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<GoogleMapView> e)
         {
             if (Control == null)
             {
@@ -64,11 +59,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (e.OldElement != null)
             {
                 ((ObservableCollection<Pin>)e.OldElement.Pins).CollectionChanged -= OnCollectionChanged;
+                e.OldElement.LoadMapRequested -= OnLoadMapRequested;
             }
 
             if (e.NewElement != null)
             {
                 ((ObservableCollection<Pin>)e.NewElement.Pins).CollectionChanged += OnCollectionChanged;
+                e.NewElement.LoadMapRequested += OnLoadMapRequested;
+                LoadMap();
             }
             base.OnElementChanged(e);
         }
@@ -87,40 +85,35 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element != null)
                 {
                     ((ObservableCollection<Pin>)Element.Pins).CollectionChanged -= OnCollectionChanged;
+                    Element.LoadMapRequested -= OnLoadMapRequested;
                 }
             }
             base.Dispose(disposing);
         }
 
-        private void UpdateMapOption(bool obj)
-        {
-            Load();
-        }
-
-        void OnLoadError(object sender, global::Tizen.WebView.SmartCallbackLoadErrorArgs e)
+        private void OnLoadError(object sender, global::Tizen.WebView.SmartCallbackLoadErrorArgs e)
         {
             string url = e.Url;
             Log.Error(FormsCircularUI.Tag, $"OnLoadError() url:{url}");
         }
 
-        void OnLoadStarted(object sender, EventArgs e)
+        private void OnLoadStarted(object sender, EventArgs e)
         {
             string url = NativeWebView.Url;
             Log.Debug(FormsCircularUI.Tag, "OnLoadStarted()");
         }
 
-        void OnLoadFinished(object sender, EventArgs e)
+        private void OnLoadFinished(object sender, EventArgs e)
         {
             string url = NativeWebView.Url;
             Log.Debug(FormsCircularUI.Tag, "OnLoadFinished()");
             NativeWebView.SetFocus(true);
         }
 
-        void Load()
+        private void LoadMap()
         {
             _maphtml = CreateMapViewScript();
             var baseUrl = default(string);
-            //Log.Debug(FormsCircularUI.Tag, $"html:{_maphtml}, baseUrl:[{baseUrl}]");
             NativeWebView.LoadHtml(_maphtml, baseUrl);
         }
 
@@ -128,7 +121,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             string source = null;
             StringBuilder sb = new StringBuilder();
-            var apiKey = Maps.MapService.GetKey();
+            var apiKey = GoogleMaps.GetKey();
 
             sb.Append(HtmlStyle);
             sb.AppendLine();
@@ -143,7 +136,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             sb.AppendLine();
             sb.Append("function initialize(){\n    var map = new google.maps.Map(document.getElementById(\"map\"), mapProp); ");
 
-            Log.Debug(FormsCircularUI.Tag, $"Pins count:{Element.Pins.Count}");
             if (Element.Pins.Count > 0)
             {
                 sb = CreatePinsScript(sb);
@@ -158,30 +150,30 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private StringBuilder CreateMapOptionScript(StringBuilder sb)
         {
-            if (Element.Option != null)
+            if (Element.MapOption != null)
             {
-                if(Element.Option.Center.Latitude == 0 && Element.Option.Center.Longitude == 0)
+                if(Element.MapOption.Center.Latitude == 0 && Element.MapOption.Center.Longitude == 0)
                     sb.Append($"<script>\nvar myCenter = new google.maps.LatLng({DefaultLatitude}, {DefaultLongitude});");
                 else
-                    sb.Append($"<script>\nvar myCenter = new google.maps.LatLng({Element.Option.Center.Latitude}, {Element.Option.Center.Longitude});");
+                    sb.Append($"<script>\nvar myCenter = new google.maps.LatLng({Element.MapOption.Center.Latitude}, {Element.MapOption.Center.Longitude});");
 
                 sb.AppendLine();
-                var type = Element.Option.MapType;
+                var type = Element.MapOption.MapType;
                 var mapTypeId = type.ToString().ToUpper();
                 sb.Append("var mapProp = {\n  center:myCenter,\n");
-                sb.Append($"  zoom: {Element.Option.Zoom},\n  mapTypeId: google.maps.MapTypeId.{mapTypeId},\n");
+                sb.Append($"  zoom: {Element.MapOption.Zoom},\n  mapTypeId: google.maps.MapTypeId.{mapTypeId},\n");
 
-                if (Element.Option.IsEnableGestureHandle == false)
+                if (Element.MapOption.IsEnableGestureHandle == false)
                 {
                     sb.Append("  gestureHandling: 'none',\n");
                 }
 
-                if (Element.Option.IsVisibleZoomControl == true)
+                if (Element.MapOption.IsVisibleZoomControl == true)
                 {
                     sb.Append("  mapTypeControl: false,\n  rotateControl: false,\n  fullscreenControl: false,\n  streetViewControl: false,\n");
                     sb.Append("  zoomControl: true,\n");
                     sb.Append("  zoomControlOptions:{\n");
-                    int index = (int)Element.Option.ZoomControlPosition;
+                    int index = (int)Element.MapOption.ZoomControlPosition;
                     sb.Append($"    position: google.maps.ControlPosition.{_positions[index]},\n");
                     sb.Append("  }\n");
                     sb.Append("};");
@@ -206,17 +198,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             int index = 1;
             if (_sb == null || _sb.Length == 0) return _sb;
 
+            Log.Debug(FormsCircularUI.Tag, $"Pins count:{Element.Pins.Count}");
             foreach (var pin in Element.Pins)
             {
                 _sb.AppendLine();
-                //Log.Debug(FormsCircularUI.Tag, $"pin label:{pin.Label}, position:[{pin.Position.Latitude}, {pin.Position.Longitude}], address:{pin.Address}");
                 _sb.Append($"    var marker{index} = new google.maps.Marker({{position: new google.maps.LatLng({pin.Position.Latitude}, {pin.Position.Longitude}), title:\"{pin.Label}\" }}); ");
                 _sb.AppendLine();
                 _sb.Append($"    marker{index}.setMap(map);");
                 _sb.AppendLine();
                 _sb.Append($"    var infowindow{index} = new google.maps.InfoWindow({{ content: \"{pin.Label}\" }});");
                 _sb.AppendLine();
-                if (Element.Option.IsPinsPopupOpened == true)
+                if (Element.MapOption.IsPinsPopupOpened == true)
                 {
                     _sb.Append($"    infowindow{index}.open(map, marker{index});");
                 }
@@ -230,20 +222,27 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return _sb;
         }
 
-        void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
+            Log.Debug(FormsCircularUI.Tag, $"e.Action:{e.Action}");
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
                 case NotifyCollectionChangedAction.Remove:
                 case NotifyCollectionChangedAction.Replace:
                 case NotifyCollectionChangedAction.Reset:
-                    Load();
+                    LoadMap();
                     break;
                 case NotifyCollectionChangedAction.Move:
                     //do nothing
                     break;
             }
+        }
+
+        private void OnLoadMapRequested(object sender, EventArgs eventArgs)
+        {
+            Log.Debug(FormsCircularUI.Tag, $"Load Requested");
+            LoadMap();
         }
     }
 }

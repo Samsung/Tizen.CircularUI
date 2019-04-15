@@ -14,22 +14,30 @@
  * limitations under the License.
  */
 
-namespace Tizen.Wearable.CircularUI.Forms
+namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    /// <summary>
-    /// Enumeration for the singed type of Google webservice Map.
-    /// </summary>
-    /// <since_tizen> 4 </since_tizen>
-	public enum GoogleSignedType
+    internal static class GoogleMaps
     {
-        /// <summary>
-        /// Indicates that the Uri will be signed using an API Key which would allow per key quotas.
-        /// </summary>
-        ApiKey,
+        private static string _apiKey;
+
+        internal static bool IsInitialized { get; private set; }
+
 
         /// <summary>
-        /// Indicates that the Uri will be signed using the business client id and allows the use of the business services.
+        /// Initialize Map service with authentication key value.
         /// </summary>
-        Business
+        public static void Init(string apiKey)
+        {
+            if (IsInitialized)
+                return;
+
+            _apiKey = apiKey;
+            IsInitialized = true;
+        }
+
+        internal static string GetKey()
+        {
+            return _apiKey;
+        }
     }
 }

@@ -27,13 +27,13 @@ namespace WearableUIGallery.TC
         private static double Latitude = 40.7157961;
         private static double Longitude = -74.0252194;
 
-        MapOption _option;
+        GoogleMapOption _option;
         public TCMapViewPins2()
         {
             InitializeComponent ();
             BindingContext = new TCMapViewPinItemsViewModel();
             var position = new Position(Latitude, Longitude);
-            _option = new MapOption(position);
+            _option = new GoogleMapOption(position);
             _option.Zoom = 12;
             mapview.SetMapOption(_option);
         }

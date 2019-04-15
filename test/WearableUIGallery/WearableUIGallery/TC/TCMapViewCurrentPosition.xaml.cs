@@ -30,7 +30,7 @@ namespace WearableUIGallery.TC
         private static double Latitude = 40.7157961;
         private static double Longitude = -74.0252194;
 
-        MapOption _option;
+        GoogleMapOption _option;
         Locator _locator;
 
         bool _locatorInitialized = false;
@@ -39,7 +39,7 @@ namespace WearableUIGallery.TC
         {
             InitializeComponent();
             var position = new Position(Latitude, Longitude);
-            _option = new MapOption(position, GoogleMapType.Roadmap, 12);
+            _option = new GoogleMapOption(position, GoogleMapType.Roadmap, 12);
             mapviewPosition.SetMapOption(_option);
 
             PrivilegeCheck();
