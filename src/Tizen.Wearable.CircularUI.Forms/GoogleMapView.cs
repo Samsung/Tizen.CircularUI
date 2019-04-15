@@ -57,7 +57,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public GoogleMapOption MapOption
+        internal GoogleMapOption MapOption
         {
             get
             {
