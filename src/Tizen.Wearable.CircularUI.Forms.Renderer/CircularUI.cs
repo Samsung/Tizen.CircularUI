@@ -24,12 +24,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public static bool IsInitialized { get; private set; }
 
-        public static void Init(string apiKey = null)
+        public static void Init()
+        {
+            if (IsInitialized) return;
+            IsInitialized = true;
+        }
+
+        public static void Init(string apiKey)
         {
             if (IsInitialized) return;
             IsInitialized = true;
 
-            if(apiKey != null)
+            if (apiKey != null)
             {
                 GoogleMaps.Init(apiKey);
             }

@@ -17,7 +17,7 @@
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// Enumeration for the Map control position of the MapView.
+    /// Enumeration for the Zoom control position of the GoogleMapView.
     /// </summary>
     public enum ZoomControlPosition
     {
@@ -44,6 +44,14 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// The control should be placed along the bottom right of the map
         /// </summary>
-        RightBottom = 5
+        RightBottom = 5,
+        /// <summary>
+        /// The control should be placed along the top center of the map
+        /// </summary>
+        TopCenter = 6,
+        /// <summary>
+        /// The control should be placed along the bottom center of the map
+        /// </summary>
+        BottomCenter= 7
     }
 }

@@ -15,7 +15,6 @@
  */
 
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
 
@@ -32,38 +31,35 @@ namespace WearableUIGallery.TC
             InitializeComponent ();
 
             var option = new GoogleMapOption();
-            var position = new Position(Latitude, Longitude);
+            var position = new LatLng(Latitude, Longitude);
             option.Center = position;
             option.Zoom = 12;
-            mapview.SetMapOption(option);
+            mapview.Update(option);
 
-            var pin1 = new Pin
+            var marker1 = new Marker
             {
-                Position = new Position(40.711493, -74.011351),
+                Location = new LatLng(40.711493, -74.011351),
                 Label = "Westfield World Trade Center",
                 Address = "185 Greenwich St, New York, NY 10007",
-                Type = PinType.SavedPin
             };
 
-            var pin2 = new Pin
+            var marker2 = new Marker
             {
-                Position = new Position(40.689651, -74.045412),
+                Location = new LatLng(40.689651, -74.045412),
                 Label = "Statue of Liberty National Monument",
                 Address = "New York, NY 10004",
-                Type = PinType.SavedPin
             };
 
-            var pin3 = new Pin
+            var marker3 = new Marker
             {
-                Position = new Position(40.748368, -73.985560),
+                Location = new LatLng(40.748368, -73.985560),
                 Label = "Empire State Building",
                 Address = "20 W 34th St, New York, NY 10001",
-                Type = PinType.SavedPin
             };
 
-            mapview.Pins.Add(pin1);
-            mapview.Pins.Add(pin2);
-            mapview.Pins.Add(pin3);
+            mapview.Markers.Add(marker1);
+            mapview.Markers.Add(marker2);
+            mapview.Markers.Add(marker3);
 
         }
     }

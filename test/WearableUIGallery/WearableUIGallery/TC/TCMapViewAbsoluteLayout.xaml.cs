@@ -15,7 +15,6 @@
  */
 
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
 
@@ -32,12 +31,12 @@ namespace WearableUIGallery.TC
             InitializeComponent ();
 
             var option = new GoogleMapOption();
-            var position = new Position(Latitude, Longitude);
+            var position = new LatLng(Latitude, Longitude);
             option.Center = position;
             option.Zoom = 15;
             option.MapType = GoogleMapType.Hybrid;
 
-            mapview.SetMapOption(option);
+            mapview.Update(option);
         }
     }
 }

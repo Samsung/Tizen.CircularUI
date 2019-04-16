@@ -25,7 +25,6 @@ using TWebView = Tizen.WebView.WebView;
 using XForms = Xamarin.Forms.Platform.Tizen.Forms;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using Xamarin.Forms.Maps;
 
 [assembly: ExportRenderer(typeof(GoogleMapView), typeof(GoogleMapViewRenderer))]
 
@@ -38,7 +37,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         private const double DefaultLatitude = 41.890202;
         private const double DefaultLongitude = 12.492049;
 
-        private string[] _positions = { "LEFT_TOP", "RIGHT_TOP", "LEFT_CENTER", "RIGHT_CENTER", "LEFT_BOTTOM", "RIGHT_BOTTOM" };
+        private string[] _positions = { "LEFT_TOP", "RIGHT_TOP", "LEFT_CENTER", "RIGHT_CENTER", "LEFT_BOTTOM", "RIGHT_BOTTOM", "TOP_CENTER", "BOTTOM_CENTER" };
 
         string _maphtml;
 
@@ -58,13 +57,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             if (e.OldElement != null)
             {
-                ((ObservableCollection<Pin>)e.OldElement.Pins).CollectionChanged -= OnCollectionChanged;
+                ((ObservableCollection<Marker>)e.OldElement.Markers).CollectionChanged -= OnCollectionChanged;
                 e.OldElement.LoadMapRequested -= OnLoadMapRequested;
             }
 
             if (e.NewElement != null)
             {
-                ((ObservableCollection<Pin>)e.NewElement.Pins).CollectionChanged += OnCollectionChanged;
+                ((ObservableCollection<Marker>)e.NewElement.Markers).CollectionChanged += OnCollectionChanged;
                 e.NewElement.LoadMapRequested += OnLoadMapRequested;
                 LoadMap();
             }
@@ -84,7 +83,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 }
                 if (Element != null)
                 {
-                    ((ObservableCollection<Pin>)Element.Pins).CollectionChanged -= OnCollectionChanged;
+                    ((ObservableCollection<Marker>)Element.Markers).CollectionChanged -= OnCollectionChanged;
                     Element.LoadMapRequested -= OnLoadMapRequested;
                 }
             }
@@ -136,7 +135,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             sb.AppendLine();
             sb.Append("function initialize(){\n    var map = new google.maps.Map(document.getElementById(\"map\"), mapProp); ");
 
-            if (Element.Pins.Count > 0)
+            if (Element.Markers.Count > 0)
             {
                 sb = CreatePinsScript(sb);
             }
@@ -163,12 +162,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 sb.Append("var mapProp = {\n  center:myCenter,\n");
                 sb.Append($"  zoom: {Element.MapOption.Zoom},\n  mapTypeId: google.maps.MapTypeId.{mapTypeId},\n");
 
-                if (Element.MapOption.IsEnableGestureHandle == false)
+                if (Element.MapOption.HasGestureEnabled == false)
                 {
                     sb.Append("  gestureHandling: 'none',\n");
                 }
 
-                if (Element.MapOption.IsVisibleZoomControl == true)
+                if (Element.MapOption.IsZoomControlVisible == true)
                 {
                     sb.Append("  mapTypeControl: false,\n  rotateControl: false,\n  fullscreenControl: false,\n  streetViewControl: false,\n");
                     sb.Append("  zoomControl: true,\n");
@@ -198,17 +197,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             int index = 1;
             if (_sb == null || _sb.Length == 0) return _sb;
 
-            Log.Debug(FormsCircularUI.Tag, $"Pins count:{Element.Pins.Count}");
-            foreach (var pin in Element.Pins)
+            Log.Debug(FormsCircularUI.Tag, $"Markers count:{Element.Markers.Count}");
+            foreach (var marker in Element.Markers)
             {
                 _sb.AppendLine();
-                _sb.Append($"    var marker{index} = new google.maps.Marker({{position: new google.maps.LatLng({pin.Position.Latitude}, {pin.Position.Longitude}), title:\"{pin.Label}\" }}); ");
+                _sb.Append($"    var marker{index} = new google.maps.Marker({{position: new google.maps.LatLng({marker.Location.Latitude}, {marker.Location.Longitude}), title:\"{marker.Label}\" }}); ");
                 _sb.AppendLine();
                 _sb.Append($"    marker{index}.setMap(map);");
                 _sb.AppendLine();
-                _sb.Append($"    var infowindow{index} = new google.maps.InfoWindow({{ content: \"{pin.Label}\" }});");
+                _sb.Append($"    var infowindow{index} = new google.maps.InfoWindow({{ content: \"{marker.Label}\" }});");
                 _sb.AppendLine();
-                if (Element.MapOption.IsPinsPopupOpened == true)
+                if (marker.IsPopupOpened == true)
                 {
                     _sb.Append($"    infowindow{index}.open(map, marker{index});");
                 }

@@ -20,19 +20,19 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 
 namespace WearableUIGallery.TC
 {
     public class TestLocation : INotifyPropertyChanged
     {
-        Position _position;
+        LatLng _position;
 
         public string Address { get; }
         public string Description { get; }
 
-        public Position Position
+        public LatLng Position
         {
             get => _position;
             set
@@ -45,11 +45,14 @@ namespace WearableUIGallery.TC
             }
         }
 
-        public TestLocation(string address, string description, Position position)
+        public bool IsShowPopup { get; }
+
+        public TestLocation(string address, string description, LatLng position, bool isOpened)
         {
             Address = address;
             Description = description;
             Position = position;
+            IsShowPopup = isOpened;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -70,9 +73,9 @@ namespace WearableUIGallery.TC
         {
             _locations = new ObservableCollection<TestLocation>()
             {
-                new TestLocation("185 Greenwich St, New York, NY 10007", "Westfield World Trade Center", new Position(40.711493, -74.011351)),
-                new TestLocation("New York, NY 10004", "Statue of Liberty National Monument", new Position(40.689651, -74.045412)),
-                new TestLocation("20 W 34th St, New York, NY 10001", "Empire State Building", new Position(40.748368, -73.985560))
+                new TestLocation("185 Greenwich St, New York, NY 10007", "Westfield World Trade Center", new LatLng(40.711493, -74.011351), false),
+                new TestLocation("New York, NY 10004", "Statue of Liberty National Monument", new LatLng(40.689651, -74.045412), true),
+                new TestLocation("20 W 34th St, New York, NY 10001", "Empire State Building", new LatLng(40.748368, -73.985560), false)
             };
 
             AddLocationCommand = new Command(AddLocation);
@@ -99,7 +102,8 @@ namespace WearableUIGallery.TC
             return new TestLocation(
                 $"New address {_pinCreatedCount}, New York, NY",
                 $"New description {_pinCreatedCount}",
-                RandomPosition.Next(new Position(40.7157961, -74.0252194), 0.04, 0.04));
+                RandomPosition.Next(new LatLng(40.7157961, -74.0252194), 0.04, 0.04),
+                (_pinCreatedCount%2 == 0 ? true : false));
         }
 
     }
@@ -108,9 +112,9 @@ namespace WearableUIGallery.TC
     {
         static Random Random = new Random(Environment.TickCount);
 
-        public static Position Next(Position position, double latitudeRange, double longitudeRange)
+        public static LatLng Next(LatLng position, double latitudeRange, double longitudeRange)
         {
-            return new Position(
+            return new LatLng(
                 position.Latitude + (Random.NextDouble() * 2 - 1) * latitudeRange,
                 position.Longitude + (Random.NextDouble() * 2 - 1) * longitudeRange);
         }

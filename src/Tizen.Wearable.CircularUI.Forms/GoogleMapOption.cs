@@ -15,27 +15,27 @@
  */
 
 using System;
-using Xamarin.Forms.Maps;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The GoogleMapOption struct used to define the properties that can be set on a MapView.
+    /// The GoogleMapOption struct used to define the properties that can be set on a GoogleMapView.
     /// </summary>
     public struct GoogleMapOption
     {
         private double _zoom;
 
-        public GoogleMapOption(Position center, GoogleMapType type = GoogleMapType.Roadmap, int zoomLevel = 10, 
-                bool visibleZoomControl = false, bool pinsPopupOpened = false, bool enableGesture = true, 
-                ZoomControlPosition controlPosition = ZoomControlPosition.RightBottom )
+        /// <summary>
+        /// Constructor a new GoogleMapOption structure
+        /// </summary>
+        public GoogleMapOption(LatLng center, GoogleMapType type = GoogleMapType.Roadmap, int zoomLevel = 10, bool visibleZoomControl = false,
+                        bool enableGesture = true, ZoomControlPosition controlPosition = ZoomControlPosition.RightBottom )
         {
             Center = center;
             MapType = type;
             _zoom = Math.Min(Math.Max(zoomLevel, 1.0), 20.0); ;
-            IsVisibleZoomControl = visibleZoomControl;
-            IsPinsPopupOpened = pinsPopupOpened;
-            IsEnableGestureHandle = enableGesture;
+            IsZoomControlVisible = visibleZoomControl;
+            HasGestureEnabled = enableGesture;
             ZoomControlPosition = controlPosition;
         }
 
@@ -48,7 +48,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets a center postion of GoogleMapOption.
         /// This value set center of MapView. But getting value not mean current center of MapView because value can't reflect user interaction.
         /// </summary>
-        public Position Center { get; set; }
+        public LatLng Center { get; set; }
 
         /// <summary>
         /// Gets or sets a zoom level of GoogleMapOption.
@@ -70,17 +70,13 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a boolean value that indicates whether zoom control is visible.
         /// </summary>
-        public bool IsVisibleZoomControl { get; set; }
+        public bool IsZoomControlVisible { get; set; }
 
         /// <summary>
         /// Gets or sets a boolean value that indicates whether zoom and pan interaction is enable.
         /// </summary>
-        public bool IsEnableGestureHandle { get; set; }
+        public bool HasGestureEnabled { get; set; }
 
-        /// <summary>
-        /// Gets or sets a boolean value that indicates whether Pins popup is opened.
-        /// </summary>
-        public bool IsPinsPopupOpened { get; set; }
 
         /// <summary>
         /// Gets or sets a boolean value that indicates whether zoom and pan interaction is enable.
@@ -100,11 +96,9 @@ namespace Tizen.Wearable.CircularUI.Forms
                 return false;
             if (Zoom != other.Zoom)
                 return false;
-            if (IsVisibleZoomControl != other.IsVisibleZoomControl)
+            if (IsZoomControlVisible != other.IsZoomControlVisible)
                 return false;
-            if (IsEnableGestureHandle != other.IsEnableGestureHandle)
-                return false;
-            if (IsPinsPopupOpened != other.IsPinsPopupOpened)
+            if (HasGestureEnabled != other.HasGestureEnabled)
                 return false;
             if (ZoomControlPosition != other.ZoomControlPosition)
                 return false;
@@ -127,7 +121,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Center[{Center.Latitude},{Center.Longitude}], MapType:{MapType}, Zoom:{Zoom}, IsEnableGesture:{IsEnableGestureHandle}, IsVisibleZoomControl:{IsVisibleZoomControl}, IsPinsPopupOpened:{IsPinsPopupOpened}, ZoomControlPosition:{ZoomControlPosition}";
+            return $"Center[{Center.Latitude},{Center.Longitude}], MapType:{MapType}, Zoom:{Zoom}, HasGestureEnabled:{HasGestureEnabled}, IsZoomControlVisible:{IsZoomControlVisible}, ZoomControlPosition:{ZoomControlPosition}";
         }
 
         public override int GetHashCode()
@@ -137,9 +131,8 @@ namespace Tizen.Wearable.CircularUI.Forms
                 int hashCode = MapType.GetHashCode();
                 hashCode = hashCode * 397 ^ Center.GetHashCode();
                 hashCode = hashCode * 397 ^ Zoom.GetHashCode();
-                hashCode = hashCode * 397 ^ IsVisibleZoomControl.GetHashCode();
-                hashCode = hashCode * 397 ^ IsEnableGestureHandle.GetHashCode();
-                hashCode = hashCode * 397 ^ IsPinsPopupOpened.GetHashCode();
+                hashCode = hashCode * 397 ^ IsZoomControlVisible.GetHashCode();
+                hashCode = hashCode * 397 ^ HasGestureEnabled.GetHashCode();
                 hashCode = hashCode * 397 ^ ZoomControlPosition.GetHashCode();
                 return hashCode;
             }

@@ -11,7 +11,7 @@
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="360"
-                    HeightRequest="280"/>
+                    HeightRequest="300"/>
                 <Label x:Name="positionLabel"
                     HeightRequest="60"
                     FontSize="Micro"
@@ -21,13 +21,6 @@
                     VerticalOptions="StartAndExpand"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"/>
-                <Button Text="Go Current Position"
-                    AutomationId="go"
-                    FontSize="Micro"
-                    HorizontalOptions="CenterAndExpand"
-                    WidthRequest="300"
-                    HeightRequest="50"
-                    Clicked="OnClickCurrentPosition" />
             </StackLayout >
          </w:CircleScrollView>
      </w:CirclePage.Content>

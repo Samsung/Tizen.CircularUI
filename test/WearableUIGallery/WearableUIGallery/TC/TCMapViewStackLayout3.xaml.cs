@@ -17,7 +17,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
-using Xamarin.Forms.Maps;
 using System;
 
 namespace WearableUIGallery.TC
@@ -30,18 +29,18 @@ namespace WearableUIGallery.TC
 
         GoogleMapOption _option;
 
-        private ZoomControlPosition[] _positions = { ZoomControlPosition.LeftBottom, ZoomControlPosition.LeftCenter, ZoomControlPosition.LeftTop, ZoomControlPosition.RightTop, ZoomControlPosition.RightCenter, ZoomControlPosition.RightBottom };
+        private ZoomControlPosition[] _positions = { ZoomControlPosition.LeftBottom, ZoomControlPosition.LeftCenter, ZoomControlPosition.LeftTop, ZoomControlPosition.RightTop, ZoomControlPosition.RightCenter, ZoomControlPosition.RightBottom, ZoomControlPosition.BottomCenter, ZoomControlPosition.TopCenter };
         int index;
 
         public TCMapViewStackLayout3()
         {
             InitializeComponent ();
 
-            var position = new Position(Latitude, Longitude);
+            var position = new LatLng(Latitude, Longitude);
             _option = new GoogleMapOption(position);
             _option.Zoom = 15;
             _option.MapType = GoogleMapType.Satellite;
-            mapview.SetMapOption(_option);
+            mapview.Update(_option);
             index = 0;
         }
 
@@ -51,21 +50,22 @@ namespace WearableUIGallery.TC
             if (btn.Text == "Zoom invisible")
             {
                 btn.Text = "Zoom visible";
-                _option.IsVisibleZoomControl = true;
+                _option.IsZoomControlVisible = true;
             }
             else
             {
                 btn.Text = "Zoom invisible";
-                _option.IsVisibleZoomControl = false;
+                _option.IsZoomControlVisible = false;
             }
 
-            mapview.SetMapOption(_option);
+            mapview.Update(_option);
         }
 
         void OnClickZoomControlMove(object sender, EventArgs args)
         {
+            if (index > 7) index = 0;
             _option.ZoomControlPosition = _positions[index++];
-            mapview.SetMapOption(_option);
+            mapview.Update(_option);
         }
 
         void OnClickGestureHandle(object sender, EventArgs args)
@@ -74,15 +74,15 @@ namespace WearableUIGallery.TC
             if (btn.Text == "Gesture disable")
             {
                 btn.Text = "Gesture enable";
-                _option.IsEnableGestureHandle = true;
+                _option.HasGestureEnabled = true;
             }
             else
             {
                 btn.Text = "Gesture disable";
-                _option.IsEnableGestureHandle = false;
+                _option.HasGestureEnabled = false;
             }
 
-            mapview.SetMapOption(_option);
+            mapview.Update(_option);
         }
     }
 }

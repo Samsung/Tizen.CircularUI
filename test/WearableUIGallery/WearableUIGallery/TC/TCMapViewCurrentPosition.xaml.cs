@@ -17,7 +17,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
-using Xamarin.Forms.Maps;
 using Tizen.Location;
 using Tizen.Security;
 using System;
@@ -27,9 +26,6 @@ namespace WearableUIGallery.TC
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCMapViewCurrentPosition : CirclePage
     {
-        private static double Latitude = 40.7157961;
-        private static double Longitude = -74.0252194;
-
         GoogleMapOption _option;
         Locator _locator;
 
@@ -38,11 +34,13 @@ namespace WearableUIGallery.TC
         public TCMapViewCurrentPosition()
         {
             InitializeComponent();
-            var position = new Position(Latitude, Longitude);
-            _option = new GoogleMapOption(position, GoogleMapType.Roadmap, 12);
-            mapviewPosition.SetMapOption(_option);
 
             PrivilegeCheck();
+
+            if (_locatorInitialized == false)
+            {
+                LocationInitialize();
+            }
         }
 
         /// <summary>
@@ -114,14 +112,14 @@ namespace WearableUIGallery.TC
 
         private void GetCurrentPosition()
         {
-            var pin = new Pin();
+            var marker = new Marker();
 
             try
             {
                 Location location = _locator.GetLocation();
-                var current = new Position(location.Latitude, location.Longitude);
+                var current = new LatLng(location.Latitude, location.Longitude);
                 Tizen.Log.Debug("CircularUI", $"Current:[{location.Latitude},{location.Longitude} ]");
-                pin.Position = current;
+                marker.Location = current;
             }
             catch (Exception ex)
             {
@@ -135,17 +133,16 @@ namespace WearableUIGallery.TC
                 LocatorDispose();
             }
 
-            pin.Label = "Current position";
-            _option.Center = pin.Position;
+            marker.Label = "Current position";
+            _option.Center = marker.Location;
             _option.Zoom = 14;
-            _option.IsPinsPopupOpened = true;
-            positionLabel.Text = $"Position({pin.Position.Latitude}, {pin.Position.Longitude})";
+            positionLabel.Text = $"Position({marker.Location.Latitude}, {marker.Location.Longitude})";
             positionLabel.IsVisible = true;
-            mapviewPosition.SetMapOption(_option);
-            if(mapviewPosition.Pins.Count > 0) 
-                mapviewPosition.Pins.Clear();
+            mapviewPosition.Update(_option);
+            if(mapviewPosition.Markers.Count > 0)
+                mapviewPosition.Markers.Clear();
 
-            mapviewPosition.Pins.Add(pin);
+            mapviewPosition.Markers.Add(marker);
         }
 
         public void LocatorDispose()
@@ -157,18 +154,6 @@ namespace WearableUIGallery.TC
                 _locator.Dispose();
                 _locator = null;
                 _locatorInitialized = false;
-            }
-        }
-
-        void OnClickCurrentPosition(object sender, EventArgs args)
-        {
-            if (_locatorInitialized == false)
-            {
-                LocationInitialize();
-            }
-            else
-            {
-                GetCurrentPosition();
             }
         }
     }

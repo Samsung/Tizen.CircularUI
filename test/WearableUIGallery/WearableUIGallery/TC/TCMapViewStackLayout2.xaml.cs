@@ -16,7 +16,6 @@
 
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
@@ -24,17 +23,17 @@ namespace WearableUIGallery.TC
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCMapViewStackLayout2 : ContentPage
     {
-        private static double Latitude = 34.0869;
-        private static double Longitude = -118.282242;
+        private static double Latitude = 40.7138;
+        private static double Longitude = -74.0062;
 
         public TCMapViewStackLayout2()
         {
             InitializeComponent ();
-            var position = new Position(Latitude, Longitude);
+            var position = new LatLng(Latitude, Longitude);
             var option = new GoogleMapOption(position);
-            option.Zoom = 10.1;
+            option.Zoom = 16;
             option.MapType = GoogleMapType.Hybrid;
-            mapview.SetMapOption(option);
+            mapview.Update(option);
         }
     }
 }

@@ -22,7 +22,6 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
@@ -43,7 +42,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty ItemTemplateProperty = BindableProperty.Create(nameof(ItemTemplate), typeof(DataTemplate), typeof(GoogleMapView),
             default(DataTemplate), propertyChanged: (b, o, n) => ((GoogleMapView)b).OnItemTemplatePropertyChanged((DataTemplate)o, (DataTemplate)n));
 
-        readonly ObservableCollection<Pin> _pins = new ObservableCollection<Pin>();
+        readonly ObservableCollection<Marker> _markers = new ObservableCollection<Marker>();
 
         private GoogleMapOption _option;
 
@@ -52,7 +51,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         public GoogleMapView()
         {
-            var option = new GoogleMapOption(new Position(41.890202, 12.492049));
+            var option = new GoogleMapOption(new LatLng(41.890202, 12.492049));
             MapOption = option;
         }
 
@@ -75,9 +74,9 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// An IList of the Pins on this MapView.
         /// </summary>
-        public IList<Pin> Pins
+        public IList<Marker> Markers
         {
-            get { return _pins; }
+            get { return _markers; }
         }
 
         /// <summary>
@@ -110,8 +109,8 @@ namespace Tizen.Wearable.CircularUI.Forms
                 ncc1.CollectionChanged += OnItemsSourceCollectionChanged;
             }
 
-            _pins.Clear();
-            CreatePinItems();
+            _markers.Clear();
+            CreateMarkerItems();
         }
 
         void OnItemTemplatePropertyChanged(DataTemplate oldItemTemplate, DataTemplate newItemTemplate)
@@ -121,8 +120,8 @@ namespace Tizen.Wearable.CircularUI.Forms
                 throw new NotSupportedException($"You are using an instance of {nameof(DataTemplateSelector)} to set the {nameof(GoogleMapView)}.{ItemTemplateProperty.PropertyName} property. Use an instance of a {nameof(DataTemplate)} property instead to set an item template.");
             }
 
-            _pins.Clear();
-            CreatePinItems();
+            _markers.Clear();
+            CreateMarkerItems();
         }
 
         void OnItemsSourceCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -133,7 +132,7 @@ namespace Tizen.Wearable.CircularUI.Forms
                     if (e.NewStartingIndex == -1)
                         goto case NotifyCollectionChangedAction.Reset;
                     foreach (object item in e.NewItems)
-                        CreatePin(item);
+                        CreateMarker(item);
                     break;
                 case NotifyCollectionChangedAction.Move:
                     if (e.OldStartingIndex == -1 || e.NewStartingIndex == -1)
@@ -144,23 +143,23 @@ namespace Tizen.Wearable.CircularUI.Forms
                     if (e.OldStartingIndex == -1)
                         goto case NotifyCollectionChangedAction.Reset;
                     foreach (object item in e.OldItems)
-                        RemovePin(item);
+                        RemoveMarker(item);
                     break;
                 case NotifyCollectionChangedAction.Replace:
                     if (e.OldStartingIndex == -1)
                         goto case NotifyCollectionChangedAction.Reset;
                     foreach (object item in e.OldItems)
-                        RemovePin(item);
+                        RemoveMarker(item);
                     foreach (object item in e.NewItems)
-                        CreatePin(item);
+                        CreateMarker(item);
                     break;
                 case NotifyCollectionChangedAction.Reset:
-                    _pins.Clear();
+                    _markers.Clear();
                     break;
             }
         }
 
-        void CreatePinItems()
+        void CreateMarkerItems()
         {
             if (ItemsSource == null || ItemTemplate == null)
             {
@@ -169,35 +168,35 @@ namespace Tizen.Wearable.CircularUI.Forms
 
             foreach (object item in ItemsSource)
             {
-                CreatePin(item);
+                CreateMarker(item);
             }
         }
 
-        void CreatePin(object newItem)
+        void CreateMarker(object newItem)
         {
             if (ItemTemplate == null)
             {
                 return;
             }
 
-            var pin = (Pin)ItemTemplate.CreateContent();
-            pin.BindingContext = newItem;
-            _pins.Add(pin);
+            var marker = (Marker)ItemTemplate.CreateContent();
+            marker.BindingContext = newItem;
+            _markers.Add(marker);
         }
 
-        void RemovePin(object itemToRemove)
+        void RemoveMarker(object itemToRemove)
         {
-            Pin pinToRemove = _pins.FirstOrDefault(pin => pin.BindingContext?.Equals(itemToRemove) == true);
+            Marker pinToRemove = _markers.FirstOrDefault(marker => marker.BindingContext?.Equals(itemToRemove) == true);
             if (pinToRemove != null)
             {
-                _pins.Remove(pinToRemove);
+                _markers.Remove(pinToRemove);
             }
         }
 
         /// <summary>
         /// Set GoogleMapOption value to MapView.
         /// </summary>
-        public void SetMapOption(GoogleMapOption value)
+        public void Update(GoogleMapOption value)
         {
             MapOption = value;
             LoadMapRequested?.Invoke(this, EventArgs.Empty);

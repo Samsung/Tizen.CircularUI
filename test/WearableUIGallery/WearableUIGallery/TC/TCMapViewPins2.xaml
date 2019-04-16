@@ -3,22 +3,22 @@
     x:Class="WearableUIGallery.TC.TCMapViewPins2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <w:CirclePage.Content>
         <w:CircleScrollView Orientation="Vertical">
-            <StackLayout Margin="0, 30">
+            <StackLayout Margin="0, 20">
                 <w:GoogleMapView x:Name="mapview"
                     ItemsSource="{Binding Locations}"
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="FillAndExpand"
                     WidthRequest="300"
-                    HeightRequest="200">
+                    HeightRequest="220">
                     <w:GoogleMapView.ItemTemplate>
                         <DataTemplate>
-                            <maps:Pin Position="{Binding Position}"
+                            <w:Marker Location="{Binding Position}"
                               Address="{Binding Address}"
-                              Label="{Binding Description}" />
+                              Label="{Binding Description}"
+                              IsPopupOpened="{Binding IsShowPopup}"/>
                         </DataTemplate>
                     </w:GoogleMapView.ItemTemplate>
                 </w:GoogleMapView>
@@ -38,23 +38,14 @@
                         HeightRequest="50"
                         Command="{Binding RemoveLocationCommand}" />
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="Clear"
-                        AutomationId="clear"
-                        FontSize="Micro"
-                        HorizontalOptions="CenterAndExpand"
-                        WidthRequest="180"
-                        HeightRequest="50"
-                        Command="{Binding ClearLocationsCommand}"/>
-                    <Button Text="Show Popup"
-                        AutomationId="show"
-                        FontSize="Micro"
-                        HorizontalOptions="CenterAndExpand"
-                        WidthRequest="180"
-                        HeightRequest="50"
-                        Clicked="OnClickShowPopup" />
+                <Button Text="Clear"
+                    AutomationId="clear"
+                    FontSize="Micro"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    Command="{Binding ClearLocationsCommand}"/>
                 </StackLayout>
-            </StackLayout>
         </w:CircleScrollView>
     </w:CirclePage.Content>
 </w:CirclePage>

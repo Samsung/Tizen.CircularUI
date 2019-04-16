@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
 using System;
@@ -32,24 +31,10 @@ namespace WearableUIGallery.TC
         {
             InitializeComponent ();
             BindingContext = new TCMapViewPinItemsViewModel();
-            var position = new Position(Latitude, Longitude);
+            var position = new LatLng(Latitude, Longitude);
             _option = new GoogleMapOption(position);
             _option.Zoom = 12;
-            mapview.SetMapOption(_option);
-        }
-
-        void OnClickShowPopup(object sender, EventArgs args)
-        {
-            if (_option.IsPinsPopupOpened == true)
-            {
-                _option.IsPinsPopupOpened = false;
-            }
-            else
-            {
-                _option.IsPinsPopupOpened = true;
-            }
-
-            mapview.SetMapOption(_option);
+            mapview.Update(_option);
         }
     }
 }
