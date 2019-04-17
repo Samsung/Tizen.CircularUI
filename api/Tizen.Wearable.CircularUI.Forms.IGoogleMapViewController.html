@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FormsCircularUI
+    <title>Interface IGoogleMapViewController
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FormsCircularUI
+    <meta name="title" content="Interface IGoogleMapViewController
    ">
     <meta name="generator" content="docfx 1.0.0.0">
     
@@ -78,58 +78,88 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI" class="text-break">Class FormsCircularUI
+  <h1 id="Tizen_Wearable_CircularUI_Forms_IGoogleMapViewController" data-uid="Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController" class="text-break">Interface IGoogleMapViewController
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>For internal use by renderers.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FormsCircularUI</span></div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.NativeSizeChanged()</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.InvalidateMeasure(Xamarin.Forms.Internals.InvalidationTrigger)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.Batched</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.DisableLayout</span>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.EffectiveFlowDirection</span>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.IsInNativeLayout</span>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">Xamarin.Forms.IVisualElementController.IsNativeStateConsistent</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IVisualElementController.IsPlatformEnabled</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IVisualElementController.NavigationProxy</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IVisualElementController.BatchCommitted</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IVisualElementController.FocusChangeRequested</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.EffectIsAttached(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.SetValueFromRenderer(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.SetValueFromRenderer(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.Descendants()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.EffectControlProvider</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.LogicalChildren</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.IElementController.RealParent</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
-  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
+  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_IGoogleMapViewController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class FormsCircularUI</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGoogleMapViewController : IViewController, IVisualElementController, IElementController</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="events">Events
   </h3>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Tag" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Tag">Tag</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_IGoogleMapViewController_LoadMapRequested" data-uid="Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.LoadMapRequested">LoadMapRequested</h4>
+  <div class="markdown level1 summary"><p>Internal Event for GoogleMapView renderer</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly string Tag</code></pre>
+    <pre><code class="lang-csharp hljs">event EventHandler LoadMapRequested</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -139,67 +169,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_IsInitialized_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.IsInitialized*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_IsInitialized" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.IsInitialized">IsInitialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsInitialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init">Init()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Init()</code></pre>
-  </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_System_String_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)">Init(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Init(string apiKey)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">apiKey</span></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td></td>
       </tr>
     </tbody>

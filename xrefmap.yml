@@ -1625,6 +1625,281 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString
   nameWithType: FileMediaSourceConverter.ConvertFromInvariantString
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption
+  name: GoogleMapOption
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.GoogleMapOption
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption
+  nameWithType: GoogleMapOption
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.#ctor(Tizen.Wearable.CircularUI.Forms.LatLng,Tizen.Wearable.CircularUI.Forms.GoogleMapType,System.Int32,System.Boolean,System.Boolean,Tizen.Wearable.CircularUI.Forms.ZoomControlPosition)
+  name: GoogleMapOption(LatLng, GoogleMapType, Int32, Boolean, Boolean, ZoomControlPosition)
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption__ctor_Tizen_Wearable_CircularUI_Forms_LatLng_Tizen_Wearable_CircularUI_Forms_GoogleMapType_System_Int32_System_Boolean_System_Boolean_Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.#ctor(Tizen.Wearable.CircularUI.Forms.LatLng,Tizen.Wearable.CircularUI.Forms.GoogleMapType,System.Int32,System.Boolean,System.Boolean,Tizen.Wearable.CircularUI.Forms.ZoomControlPosition)
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GoogleMapOption(Tizen.Wearable.CircularUI.Forms.LatLng, Tizen.Wearable.CircularUI.Forms.GoogleMapType, System.Int32, System.Boolean, System.Boolean, Tizen.Wearable.CircularUI.Forms.ZoomControlPosition)
+  nameWithType: GoogleMapOption.GoogleMapOption(LatLng, GoogleMapType, Int32, Boolean, Boolean, ZoomControlPosition)
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.#ctor*
+  name: GoogleMapOption
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GoogleMapOption
+  nameWithType: GoogleMapOption.GoogleMapOption
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Center
+  name: Center
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Center
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Center
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Center
+  nameWithType: GoogleMapOption.Center
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Center*
+  name: Center
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Center_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Center
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Center
+  nameWithType: GoogleMapOption.Center
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Equals_System_Object_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equals(System.Object)
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equals(System.Object)
+  nameWithType: GoogleMapOption.Equals(Object)
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equals*
+  name: Equals
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Equals_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equals
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equals
+  nameWithType: GoogleMapOption.Equals
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GetHashCode
+  name: GetHashCode()
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_GetHashCode
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GetHashCode
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GetHashCode()
+  nameWithType: GoogleMapOption.GetHashCode()
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GetHashCode*
+  name: GetHashCode
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_GetHashCode_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GetHashCode
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.GetHashCode
+  nameWithType: GoogleMapOption.GetHashCode
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.HasGestureEnabled
+  name: HasGestureEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_HasGestureEnabled
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.HasGestureEnabled
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.HasGestureEnabled
+  nameWithType: GoogleMapOption.HasGestureEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.HasGestureEnabled*
+  name: HasGestureEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_HasGestureEnabled_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.HasGestureEnabled
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.HasGestureEnabled
+  nameWithType: GoogleMapOption.HasGestureEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.IsZoomControlVisible
+  name: IsZoomControlVisible
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_IsZoomControlVisible
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.IsZoomControlVisible
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.IsZoomControlVisible
+  nameWithType: GoogleMapOption.IsZoomControlVisible
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.IsZoomControlVisible*
+  name: IsZoomControlVisible
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_IsZoomControlVisible_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.IsZoomControlVisible
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.IsZoomControlVisible
+  nameWithType: GoogleMapOption.IsZoomControlVisible
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.MapType
+  name: MapType
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_MapType
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.MapType
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.MapType
+  nameWithType: GoogleMapOption.MapType
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.MapType*
+  name: MapType
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_MapType_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.MapType
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.MapType
+  nameWithType: GoogleMapOption.MapType
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Equality(Tizen.Wearable.CircularUI.Forms.GoogleMapOption,Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  name: Equality(GoogleMapOption, GoogleMapOption)
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_op_Equality_Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Tizen_Wearable_CircularUI_Forms_GoogleMapOption_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Equality(Tizen.Wearable.CircularUI.Forms.GoogleMapOption,Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equality(Tizen.Wearable.CircularUI.Forms.GoogleMapOption, Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  nameWithType: GoogleMapOption.Equality(GoogleMapOption, GoogleMapOption)
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Equality*
+  name: Equality
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_op_Equality_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Equality
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Equality
+  nameWithType: GoogleMapOption.Equality
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Inequality(Tizen.Wearable.CircularUI.Forms.GoogleMapOption,Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  name: Inequality(GoogleMapOption, GoogleMapOption)
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_op_Inequality_Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Tizen_Wearable_CircularUI_Forms_GoogleMapOption_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Inequality(Tizen.Wearable.CircularUI.Forms.GoogleMapOption,Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Inequality(Tizen.Wearable.CircularUI.Forms.GoogleMapOption, Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  nameWithType: GoogleMapOption.Inequality(GoogleMapOption, GoogleMapOption)
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Inequality*
+  name: Inequality
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_op_Inequality_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.op_Inequality
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Inequality
+  nameWithType: GoogleMapOption.Inequality
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ToString
+  name: ToString()
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_ToString
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ToString
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ToString()
+  nameWithType: GoogleMapOption.ToString()
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ToString*
+  name: ToString
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_ToString_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ToString
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ToString
+  nameWithType: GoogleMapOption.ToString
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Zoom
+  name: Zoom
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Zoom
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Zoom
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Zoom
+  nameWithType: GoogleMapOption.Zoom
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Zoom*
+  name: Zoom
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_Zoom_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Zoom
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.Zoom
+  nameWithType: GoogleMapOption.Zoom
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ZoomControlPosition
+  name: ZoomControlPosition
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_ZoomControlPosition
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ZoomControlPosition
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ZoomControlPosition
+  nameWithType: GoogleMapOption.ZoomControlPosition
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ZoomControlPosition*
+  name: ZoomControlPosition
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html#Tizen_Wearable_CircularUI_Forms_GoogleMapOption_ZoomControlPosition_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ZoomControlPosition
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapOption.ZoomControlPosition
+  nameWithType: GoogleMapOption.ZoomControlPosition
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapType
+  name: GoogleMapType
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapType.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.GoogleMapType
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapType
+  nameWithType: GoogleMapType
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Hybrid
+  name: Hybrid
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapType.html#Tizen_Wearable_CircularUI_Forms_GoogleMapType_Hybrid
+  commentId: F:Tizen.Wearable.CircularUI.Forms.GoogleMapType.Hybrid
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Hybrid
+  nameWithType: GoogleMapType.Hybrid
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Roadmap
+  name: Roadmap
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapType.html#Tizen_Wearable_CircularUI_Forms_GoogleMapType_Roadmap
+  commentId: F:Tizen.Wearable.CircularUI.Forms.GoogleMapType.Roadmap
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Roadmap
+  nameWithType: GoogleMapType.Roadmap
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Satellite
+  name: Satellite
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapType.html#Tizen_Wearable_CircularUI_Forms_GoogleMapType_Satellite
+  commentId: F:Tizen.Wearable.CircularUI.Forms.GoogleMapType.Satellite
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Satellite
+  nameWithType: GoogleMapType.Satellite
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Terrain
+  name: Terrain
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapType.html#Tizen_Wearable_CircularUI_Forms_GoogleMapType_Terrain
+  commentId: F:Tizen.Wearable.CircularUI.Forms.GoogleMapType.Terrain
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapType.Terrain
+  nameWithType: GoogleMapType.Terrain
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView
+  name: GoogleMapView
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.GoogleMapView
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView
+  nameWithType: GoogleMapView
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.#ctor
+  name: GoogleMapView()
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapView.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.GoogleMapView()
+  nameWithType: GoogleMapView.GoogleMapView()
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.#ctor*
+  name: GoogleMapView
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapView.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.GoogleMapView
+  nameWithType: GoogleMapView.GoogleMapView
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSource
+  name: ItemsSource
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_ItemsSource
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSource
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSource
+  nameWithType: GoogleMapView.ItemsSource
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSource*
+  name: ItemsSource
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_ItemsSource_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSource
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSource
+  nameWithType: GoogleMapView.ItemsSource
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSourceProperty
+  name: ItemsSourceProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_ItemsSourceProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSourceProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemsSourceProperty
+  nameWithType: GoogleMapView.ItemsSourceProperty
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplate
+  name: ItemTemplate
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_ItemTemplate
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplate
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplate
+  nameWithType: GoogleMapView.ItemTemplate
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplate*
+  name: ItemTemplate
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_ItemTemplate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplate
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplate
+  nameWithType: GoogleMapView.ItemTemplate
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplateProperty
+  name: ItemTemplateProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_ItemTemplateProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplateProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.ItemTemplateProperty
+  nameWithType: GoogleMapView.ItemTemplateProperty
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Markers
+  name: Markers
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_Markers
+  commentId: P:Tizen.Wearable.CircularUI.Forms.GoogleMapView.Markers
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Markers
+  nameWithType: GoogleMapView.Markers
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Markers*
+  name: Markers
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_Markers_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapView.Markers
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Markers
+  nameWithType: GoogleMapView.Markers
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update(Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  name: Update(GoogleMapOption)
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_Update_Tizen_Wearable_CircularUI_Forms_GoogleMapOption_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update(Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update(Tizen.Wearable.CircularUI.Forms.GoogleMapOption)
+  nameWithType: GoogleMapView.Update(GoogleMapOption)
+- uid: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update*
+  name: Update
+  href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html#Tizen_Wearable_CircularUI_Forms_GoogleMapView_Update_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update
+  nameWithType: GoogleMapView.Update
 - uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceItem
   name: ICircleSurfaceItem
   href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceItem.html
@@ -1644,6 +1919,18 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceItem.IsVisible
   nameWithType: ICircleSurfaceItem.IsVisible
+- uid: Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController
+  name: IGoogleMapViewController
+  href: api/Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController
+  fullName: Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController
+  nameWithType: IGoogleMapViewController
+- uid: Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.LoadMapRequested
+  name: LoadMapRequested
+  href: api/Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.html#Tizen_Wearable_CircularUI_Forms_IGoogleMapViewController_LoadMapRequested
+  commentId: E:Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.LoadMapRequested
+  fullName: Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.LoadMapRequested
+  nameWithType: IGoogleMapViewController.LoadMapRequested
 - uid: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider
   name: IMediaViewProvider
   href: api/Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html
@@ -2129,6 +2416,103 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType
   nameWithType: IVideoOutput.OuputType
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng
+  name: LatLng
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.LatLng
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng
+  nameWithType: LatLng
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.#ctor(System.Double,System.Double)
+  name: LatLng(Double, Double)
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng__ctor_System_Double_System_Double_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.LatLng.#ctor(System.Double,System.Double)
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.LatLng(System.Double, System.Double)
+  nameWithType: LatLng.LatLng(Double, Double)
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.#ctor*
+  name: LatLng
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.LatLng
+  nameWithType: LatLng.LatLng
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_Equals_System_Object_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.LatLng.Equals(System.Object)
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Equals(System.Object)
+  nameWithType: LatLng.Equals(Object)
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.Equals*
+  name: Equals
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_Equals_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.Equals
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Equals
+  nameWithType: LatLng.Equals
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.GetHashCode
+  name: GetHashCode()
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_GetHashCode
+  commentId: M:Tizen.Wearable.CircularUI.Forms.LatLng.GetHashCode
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.GetHashCode()
+  nameWithType: LatLng.GetHashCode()
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.GetHashCode*
+  name: GetHashCode
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_GetHashCode_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.GetHashCode
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.GetHashCode
+  nameWithType: LatLng.GetHashCode
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.Latitude
+  name: Latitude
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_Latitude
+  commentId: P:Tizen.Wearable.CircularUI.Forms.LatLng.Latitude
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Latitude
+  nameWithType: LatLng.Latitude
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.Latitude*
+  name: Latitude
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_Latitude_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.Latitude
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Latitude
+  nameWithType: LatLng.Latitude
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.Longitude
+  name: Longitude
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_Longitude
+  commentId: P:Tizen.Wearable.CircularUI.Forms.LatLng.Longitude
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Longitude
+  nameWithType: LatLng.Longitude
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.Longitude*
+  name: Longitude
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_Longitude_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.Longitude
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Longitude
+  nameWithType: LatLng.Longitude
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.op_Equality(Tizen.Wearable.CircularUI.Forms.LatLng,Tizen.Wearable.CircularUI.Forms.LatLng)
+  name: Equality(LatLng, LatLng)
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_op_Equality_Tizen_Wearable_CircularUI_Forms_LatLng_Tizen_Wearable_CircularUI_Forms_LatLng_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.LatLng.op_Equality(Tizen.Wearable.CircularUI.Forms.LatLng,Tizen.Wearable.CircularUI.Forms.LatLng)
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Equality(Tizen.Wearable.CircularUI.Forms.LatLng, Tizen.Wearable.CircularUI.Forms.LatLng)
+  nameWithType: LatLng.Equality(LatLng, LatLng)
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.op_Equality*
+  name: Equality
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_op_Equality_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.op_Equality
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Equality
+  nameWithType: LatLng.Equality
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.op_Inequality(Tizen.Wearable.CircularUI.Forms.LatLng,Tizen.Wearable.CircularUI.Forms.LatLng)
+  name: Inequality(LatLng, LatLng)
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_op_Inequality_Tizen_Wearable_CircularUI_Forms_LatLng_Tizen_Wearable_CircularUI_Forms_LatLng_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.LatLng.op_Inequality(Tizen.Wearable.CircularUI.Forms.LatLng,Tizen.Wearable.CircularUI.Forms.LatLng)
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Inequality(Tizen.Wearable.CircularUI.Forms.LatLng, Tizen.Wearable.CircularUI.Forms.LatLng)
+  nameWithType: LatLng.Inequality(LatLng, LatLng)
+- uid: Tizen.Wearable.CircularUI.Forms.LatLng.op_Inequality*
+  name: Inequality
+  href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html#Tizen_Wearable_CircularUI_Forms_LatLng_op_Inequality_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.LatLng.op_Inequality
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.LatLng.Inequality
+  nameWithType: LatLng.Inequality
 - uid: Tizen.Wearable.CircularUI.Forms.LayoutCanvas
   name: LayoutCanvas
   href: api/Tizen.Wearable.CircularUI.Forms.LayoutCanvas.html
@@ -2180,6 +2564,140 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.LayoutCanvas.OnUnrealize
   nameWithType: LayoutCanvas.OnUnrealize
+- uid: Tizen.Wearable.CircularUI.Forms.Marker
+  name: Marker
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Marker
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker
+  nameWithType: Marker
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Address
+  name: Address
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Address
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Marker.Address
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Address
+  nameWithType: Marker.Address
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Address*
+  name: Address
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Address_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.Address
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Address
+  nameWithType: Marker.Address
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.AddressProperty
+  name: AddressProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_AddressProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.Marker.AddressProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.AddressProperty
+  nameWithType: Marker.AddressProperty
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Description
+  name: Description
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Description
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Marker.Description
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Description
+  nameWithType: Marker.Description
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Description*
+  name: Description
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Description_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.Description
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Description
+  nameWithType: Marker.Description
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.DescriptionProperty
+  name: DescriptionProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_DescriptionProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.Marker.DescriptionProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.DescriptionProperty
+  nameWithType: Marker.DescriptionProperty
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Equals_System_Object_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Marker.Equals(System.Object)
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Equals(System.Object)
+  nameWithType: Marker.Equals(Object)
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Equals*
+  name: Equals
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Equals_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.Equals
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Equals
+  nameWithType: Marker.Equals
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.GetHashCode
+  name: GetHashCode()
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_GetHashCode
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Marker.GetHashCode
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.GetHashCode()
+  nameWithType: Marker.GetHashCode()
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.GetHashCode*
+  name: GetHashCode
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_GetHashCode_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.GetHashCode
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.GetHashCode
+  nameWithType: Marker.GetHashCode
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpened
+  name: IsPopupOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_IsPopupOpened
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpened
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpened
+  nameWithType: Marker.IsPopupOpened
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpened*
+  name: IsPopupOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_IsPopupOpened_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpened
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpened
+  nameWithType: Marker.IsPopupOpened
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpenedProperty
+  name: IsPopupOpenedProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_IsPopupOpenedProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpenedProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.IsPopupOpenedProperty
+  nameWithType: Marker.IsPopupOpenedProperty
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.op_Equality(Tizen.Wearable.CircularUI.Forms.Marker,Tizen.Wearable.CircularUI.Forms.Marker)
+  name: Equality(Marker, Marker)
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_op_Equality_Tizen_Wearable_CircularUI_Forms_Marker_Tizen_Wearable_CircularUI_Forms_Marker_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Marker.op_Equality(Tizen.Wearable.CircularUI.Forms.Marker,Tizen.Wearable.CircularUI.Forms.Marker)
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Equality(Tizen.Wearable.CircularUI.Forms.Marker, Tizen.Wearable.CircularUI.Forms.Marker)
+  nameWithType: Marker.Equality(Marker, Marker)
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.op_Equality*
+  name: Equality
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_op_Equality_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.op_Equality
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Equality
+  nameWithType: Marker.Equality
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.op_Inequality(Tizen.Wearable.CircularUI.Forms.Marker,Tizen.Wearable.CircularUI.Forms.Marker)
+  name: Inequality(Marker, Marker)
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_op_Inequality_Tizen_Wearable_CircularUI_Forms_Marker_Tizen_Wearable_CircularUI_Forms_Marker_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Marker.op_Inequality(Tizen.Wearable.CircularUI.Forms.Marker,Tizen.Wearable.CircularUI.Forms.Marker)
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Inequality(Tizen.Wearable.CircularUI.Forms.Marker, Tizen.Wearable.CircularUI.Forms.Marker)
+  nameWithType: Marker.Inequality(Marker, Marker)
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.op_Inequality*
+  name: Inequality
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_op_Inequality_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.op_Inequality
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Inequality
+  nameWithType: Marker.Inequality
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Position
+  name: Position
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Position
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Marker.Position
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Position
+  nameWithType: Marker.Position
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.Position*
+  name: Position
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_Position_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Marker.Position
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.Position
+  nameWithType: Marker.Position
+- uid: Tizen.Wearable.CircularUI.Forms.Marker.PositionProperty
+  name: PositionProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.Marker.html#Tizen_Wearable_CircularUI_Forms_Marker_PositionProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.Marker.PositionProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.Marker.PositionProperty
+  nameWithType: Marker.PositionProperty
 - uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer
   name: MediaPlayer
   href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html
@@ -3654,6 +4172,12 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init()
   nameWithType: FormsCircularUI.Init()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)
+  name: Init(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html#Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)
+  nameWithType: FormsCircularUI.Init(String)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init*
   name: Init
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html#Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_
@@ -3680,6 +4204,41 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Tag
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Tag
   nameWithType: FormsCircularUI.Tag
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer
+  name: GoogleMapViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer
+  nameWithType: GoogleMapViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_GoogleMapViewRenderer_Dispose_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose(System.Boolean)
+  nameWithType: GoogleMapViewRenderer.Dispose(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose*
+  name: Dispose
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_GoogleMapViewRenderer_Dispose_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose
+  nameWithType: GoogleMapViewRenderer.Dispose
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.GoogleMapView})
+  name: OnElementChanged(ElementChangedEventArgs<GoogleMapView>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_GoogleMapViewRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_GoogleMapView__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.GoogleMapView})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of GoogleMapView))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.GoogleMapView>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.GoogleMapView))
+  nameWithType: GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs<GoogleMapView>)
+  nameWithType.vb: GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs(Of GoogleMapView))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged*
+  name: OnElementChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_GoogleMapViewRenderer_OnElementChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged
+  nameWithType: GoogleMapViewRenderer.OnElementChanged
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass
   name: HeaderOrFooterItemClass
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html
@@ -5479,6 +6038,60 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.VideoOuputType.Overlay
   fullName: Tizen.Wearable.CircularUI.Forms.VideoOuputType.Overlay
   nameWithType: VideoOuputType.Overlay
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition
+  name: ZoomControlPosition
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition
+  nameWithType: ZoomControlPosition
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.BottomCenter
+  name: BottomCenter
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_BottomCenter
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.BottomCenter
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.BottomCenter
+  nameWithType: ZoomControlPosition.BottomCenter
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftBottom
+  name: LeftBottom
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_LeftBottom
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftBottom
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftBottom
+  nameWithType: ZoomControlPosition.LeftBottom
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftCenter
+  name: LeftCenter
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_LeftCenter
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftCenter
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftCenter
+  nameWithType: ZoomControlPosition.LeftCenter
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftTop
+  name: LeftTop
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_LeftTop
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftTop
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.LeftTop
+  nameWithType: ZoomControlPosition.LeftTop
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightBottom
+  name: RightBottom
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_RightBottom
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightBottom
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightBottom
+  nameWithType: ZoomControlPosition.RightBottom
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightCenter
+  name: RightCenter
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_RightCenter
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightCenter
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightCenter
+  nameWithType: ZoomControlPosition.RightCenter
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightTop
+  name: RightTop
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_RightTop
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightTop
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.RightTop
+  nameWithType: ZoomControlPosition.RightTop
+- uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.TopCenter
+  name: TopCenter
+  href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html#Tizen_Wearable_CircularUI_Forms_ZoomControlPosition_TopCenter
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.TopCenter
+  fullName: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.TopCenter
+  nameWithType: ZoomControlPosition.TopCenter
 - uid: Tizen.Wearable.CircularUI.Renderer
   name: Tizen.Wearable.CircularUI.Renderer
   href: api/Tizen.Wearable.CircularUI.Renderer.html
