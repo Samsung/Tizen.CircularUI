@@ -13,36 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-using System;
-using System.Diagnostics;
-using ElmSharp;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public static class FormsCircularUI
+    internal static class GoogleMaps
     {
-        public static readonly string Tag = "CircularUI";
+        private static string _apiKey;
 
-        public static bool IsInitialized { get; private set; }
+        internal static bool IsInitialized { get; private set; }
 
-        public static void Init()
+
+        /// <summary>
+        /// Initialize Map service with authentication key value.
+        /// </summary>
+        public static void Init(string apiKey)
         {
-            if (IsInitialized) return;
+            if (IsInitialized)
+                return;
+
+            _apiKey = apiKey;
             IsInitialized = true;
         }
 
-        public static void Init(string apiKey)
+        public static string GetKey()
         {
-            if (!string.IsNullOrEmpty(apiKey))
-            {
-                GoogleMaps.Init(apiKey);
-            }
-            else
-            {
-                Debug.Assert(!string.IsNullOrEmpty(apiKey), "apiKey is null or empty!");
-            }
-
-            Init();
+            return _apiKey;
         }
     }
 }

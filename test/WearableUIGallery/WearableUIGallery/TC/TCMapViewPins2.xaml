@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage 
+    x:Class="WearableUIGallery.TC.TCMapViewPins2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <w:CirclePage.Content>
+        <w:CircleScrollView Orientation="Vertical">
+            <StackLayout Margin="0, 20">
+                <w:GoogleMapView x:Name="mapview"
+                    ItemsSource="{Binding Locations}"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    WidthRequest="300"
+                    HeightRequest="220">
+                    <w:GoogleMapView.ItemTemplate>
+                        <DataTemplate>
+                            <w:Marker Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Description="{Binding Description}"
+                              IsPopupOpened="{Binding IsShowPopup}"/>
+                        </DataTemplate>
+                    </w:GoogleMapView.ItemTemplate>
+                </w:GoogleMapView>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Add"
+                        AutomationId="add"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Command="{Binding AddLocationCommand}" />
+                    <Button Text="Remove"
+                        AutomationId="remove"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Command="{Binding RemoveLocationCommand}" />
+                </StackLayout>
+                <Button Text="Clear"
+                    AutomationId="clear"
+                    FontSize="Micro"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    Command="{Binding ClearLocationsCommand}"/>
+                </StackLayout>
+        </w:CircleScrollView>
+    </w:CirclePage.Content>
+</w:CirclePage>
