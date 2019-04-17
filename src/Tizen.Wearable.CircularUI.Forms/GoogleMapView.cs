@@ -55,7 +55,6 @@ namespace Tizen.Wearable.CircularUI.Forms
             MapOption = option;
         }
 
-        [EditorBrowsable(EditorBrowsableState.Never)]
         internal GoogleMapOption MapOption
         {
             get
@@ -67,7 +66,6 @@ namespace Tizen.Wearable.CircularUI.Forms
                 if (_option.Equals(value))
                     return;
                 _option = value;
-
             }
         }
 

@@ -38,22 +38,22 @@ namespace WearableUIGallery.TC
 
             var marker1 = new Marker
             {
-                Location = new LatLng(40.711493, -74.011351),
-                Label = "Westfield World Trade Center",
+                Position = new LatLng(40.711493, -74.011351),
+                Description = "Westfield World Trade Center",
                 Address = "185 Greenwich St, New York, NY 10007",
             };
 
             var marker2 = new Marker
             {
-                Location = new LatLng(40.689651, -74.045412),
-                Label = "Statue of Liberty National Monument",
+                Position = new LatLng(40.689651, -74.045412),
+                Description = "Statue of Liberty National Monument",
                 Address = "New York, NY 10004",
             };
 
             var marker3 = new Marker
             {
-                Location = new LatLng(40.748368, -73.985560),
-                Label = "Empire State Building",
+                Position = new LatLng(40.748368, -73.985560),
+                Description = "Empire State Building",
                 Address = "20 W 34th St, New York, NY 10001",
             };
 

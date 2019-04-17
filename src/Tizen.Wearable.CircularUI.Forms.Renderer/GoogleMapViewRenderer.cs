@@ -201,11 +201,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             foreach (var marker in Element.Markers)
             {
                 _sb.AppendLine();
-                _sb.Append($"    var marker{index} = new google.maps.Marker({{position: new google.maps.LatLng({marker.Location.Latitude}, {marker.Location.Longitude}), title:\"{marker.Label}\" }}); ");
+                _sb.Append($"    var marker{index} = new google.maps.Marker({{position: new google.maps.LatLng({marker.Position.Latitude}, {marker.Position.Longitude}), title:\"{marker.Description}\" }}); ");
                 _sb.AppendLine();
                 _sb.Append($"    marker{index}.setMap(map);");
                 _sb.AppendLine();
-                _sb.Append($"    var infowindow{index} = new google.maps.InfoWindow({{ content: \"{marker.Label}\" }});");
+                _sb.Append($"    var infowindow{index} = new google.maps.InfoWindow({{ content: \"{marker.Description}\" }});");
                 _sb.AppendLine();
                 if (marker.IsPopupOpened == true)
                 {

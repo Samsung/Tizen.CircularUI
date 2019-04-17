@@ -35,7 +35,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             IsInitialized = true;
         }
 
-        internal static string GetKey()
+        public static string GetKey()
         {
             return _apiKey;
         }

@@ -119,7 +119,7 @@ namespace WearableUIGallery.TC
                 Location location = _locator.GetLocation();
                 var current = new LatLng(location.Latitude, location.Longitude);
                 Tizen.Log.Debug("CircularUI", $"Current:[{location.Latitude},{location.Longitude} ]");
-                marker.Location = current;
+                marker.Position = current;
             }
             catch (Exception ex)
             {
@@ -133,10 +133,10 @@ namespace WearableUIGallery.TC
                 LocatorDispose();
             }
 
-            marker.Label = "Current position";
-            _option.Center = marker.Location;
+            marker.Description = "Current position";
+            _option.Center = marker.Position;
             _option.Zoom = 14;
-            positionLabel.Text = $"Position({marker.Location.Latitude}, {marker.Location.Longitude})";
+            positionLabel.Text = $"Position({marker.Position.Latitude}, {marker.Position.Longitude})";
             positionLabel.IsVisible = true;
             mapviewPosition.Update(_option);
             if(mapviewPosition.Markers.Count > 0)

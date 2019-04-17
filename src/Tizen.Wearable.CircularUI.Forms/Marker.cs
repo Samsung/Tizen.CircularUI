@@ -25,9 +25,9 @@ namespace Tizen.Wearable.CircularUI.Forms
 	public class Marker : Element
     {
         /// <summary>
-        /// BindableProperty. Identifies the Location bindable property.
+        /// BindableProperty. Identifies the Position bindable property.
         /// </summary>
-        public static readonly BindableProperty LocationProperty = BindableProperty.Create("Location", typeof(LatLng), typeof(Marker), default(LatLng));
+        public static readonly BindableProperty PositionProperty = BindableProperty.Create("Position", typeof(LatLng), typeof(Marker), default(LatLng));
 
         /// <summary>
         /// BindableProperty. Identifies the Address bindable property.
@@ -35,9 +35,9 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty AddressProperty = BindableProperty.Create("Address", typeof(string), typeof(Marker), default(string));
 
         /// <summary>
-        /// BindableProperty. Identifies the Label bindable property.
+        /// BindableProperty. Identifies the Description bindable property.
         /// </summary>
-        public static readonly BindableProperty LabelProperty = BindableProperty.Create("Label", typeof(string), typeof(Marker), default(string));
+        public static readonly BindableProperty DescriptionProperty = BindableProperty.Create("Description", typeof(string), typeof(Marker), default(string));
 
         /// <summary>
         /// BindableProperty. Identifies the IsPopupOpened bindable property.
@@ -56,19 +56,19 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a label string of Marker pop-up.
         /// </summary>
-        public string Label
+        public string Description
         {
-            get { return (string)GetValue(LabelProperty); }
-            set { SetValue(LabelProperty, value); }
+            get { return (string)GetValue(DescriptionProperty); }
+            set { SetValue(DescriptionProperty, value); }
         }
 
         /// <summary>
-        /// Gets or sets a location coordinate of Marker.
+        /// Gets or sets a position of Marker.
         /// </summary>
-        public LatLng Location
+        public LatLng Position
         {
-            get { return (LatLng)GetValue(LocationProperty); }
-            set { SetValue(LocationProperty, value); }
+            get { return (LatLng)GetValue(PositionProperty); }
+            set { SetValue(PositionProperty, value); }
         }
 
         /// <summary>
@@ -95,8 +95,8 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             unchecked
             {
-                int hashCode = Label?.GetHashCode() ?? 0;
-                hashCode = (hashCode * 397) ^ Location.GetHashCode();
+                int hashCode = Position.GetHashCode();
+                hashCode = (hashCode * 397) ^ (Description?.GetHashCode() ?? 0);
                 hashCode = (hashCode * 397) ^ (Address?.GetHashCode() ?? 0);
                 hashCode = (hashCode * 397) ^ IsPopupOpened.GetHashCode();
                 return hashCode;
@@ -115,7 +115,7 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         bool Equals(Marker other)
         {
-            return string.Equals(Label, other.Label) && Equals(Location, other.Location) && string.Equals(Address, other.Address) && bool.Equals(IsPopupOpened, other.IsPopupOpened);
+            return string.Equals(Description, other.Description) && Equals(Position, other.Position) && string.Equals(Address, other.Address) && bool.Equals(IsPopupOpened, other.IsPopupOpened);
         }
     }
 }

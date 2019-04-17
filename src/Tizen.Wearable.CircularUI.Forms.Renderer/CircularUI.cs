@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 using System;
+using System.Diagnostics;
 using ElmSharp;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
@@ -32,13 +33,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public static void Init(string apiKey)
         {
-            if (IsInitialized) return;
-            IsInitialized = true;
-
-            if (apiKey != null)
+            if (!string.IsNullOrEmpty(apiKey))
             {
                 GoogleMaps.Init(apiKey);
             }
+            else
+            {
+                Debug.Assert(!string.IsNullOrEmpty(apiKey), "apiKey is null or empty!");
+            }
+
+            Init();
         }
     }
 }

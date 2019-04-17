@@ -15,9 +15,9 @@
                     HeightRequest="220">
                     <w:GoogleMapView.ItemTemplate>
                         <DataTemplate>
-                            <w:Marker Location="{Binding Position}"
+                            <w:Marker Position="{Binding Position}"
                               Address="{Binding Address}"
-                              Label="{Binding Description}"
+                              Description="{Binding Description}"
                               IsPopupOpened="{Binding IsShowPopup}"/>
                         </DataTemplate>
                     </w:GoogleMapView.ItemTemplate>
