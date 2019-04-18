@@ -17,8 +17,8 @@ The binaries are available via NuGet (package name **Tizen.Wearable.CircularUI**
 
 _Xamarin Forms provides cross-platform APIs, but this project are only worked on the Samsung Gear device that support Tizen .NET._ 
 
-
 ## Controls
+
 The Tizen Wearable CircularUI project provides you the following UI controls:
 
 - Check : A subclass of Xamarin.Forms.Switch control supports Tizen specific style.
@@ -31,25 +31,29 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
 - CircleStackLayout : A container to layout children linear in the circular area.
 - CircleStepper : A control to select a number of steps fits in the circular screen.
 - CircleSurfaceEffectBehavior : The CircleSurfaceEffectBehavior is an effect which allows you to insert views that require CircleSurface.
-- TwoButtonPopup : A popup has two buttons on the left and right side of the circular screen.
 - ContextPopupEffectBehavior : the behavior to show a small popup has one or two button sticky with any control.
 - IndexPage : A subclass of multiple pages that can slide child page horizontal and has dots on top of the screen for the number of child pages.
 - InformationPopup : A popup has a control to show progress and one button on the bottom side of the circular screen.
 - IRotationReceiver : A event receiver for using the bezel action.
 - Radio : A radio control.
+- GoogleMapView : A GoogleMapView is used to display google javascript map.
+- MediaView : A MediaView is used to display a video on the screen.
 - PopupEntry : The PopupEntry is a class that extends Xamarin.Forms.Entry. It makes a new layer when editing text on the entry.
 - Toast : A popup for simple feedback.
+- TwoButtonPopup : A popup has two buttons on the left and right side of the circular screen.
 - TwoButtonPage : A subclass of Xamarin.Forms.Page has two buttons on the left and right side of the circular screen.
 
 ![widgets](doc/design/data/widgets.png)
 
 ## Prerequisite
+
  - Visual Studio 2017
  - Visual Studio Tools for Tizen
      - [How to install Visual Studio Tools for Tizen](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen)
  - Installing Tizen Wearable emulator image (WEARABLE-4.0-Emulator or WEARABLE-5.0-Emulator)
 
 ## How to use CircularUI
+
 - [QuickStart](doc/guide/Quickstart.md)
 
 - The [API Reference](https://samsung.github.io/Tizen.CircularUI/api/index.html) is available on the web to browse.
@@ -89,8 +93,6 @@ The Tizen Wearable CircularUI project provides you the following UI controls:
         <a href="https://github.com/Samsung/Tizen.CircularUI/tree/master/sample/XUIComponents">Source</a></td>
   </tr>
 </table>
-
-
 
 ## Tip and Tech
 
