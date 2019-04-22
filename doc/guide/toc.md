@@ -25,6 +25,7 @@
 ## [IndexPage](IndexPage.md)
 ## [InformationPopup](InformationPopup.md)
 ## [IRotaryEventReceiver](IRotaryEventReceiver.md)
+## [GoogleMapView](GoogleMapView.md)
 ## [MediaView](MediaView.md)
 ## [PopupEntry](PopupEntry.md)
 ## [Radio](Radio.md)
