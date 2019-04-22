@@ -14,28 +14,22 @@
  * limitations under the License.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCIRotaryEventReceiver : CirclePage, IRotaryEventReceiver
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCIRotaryEventReceiver : CirclePage, IRotaryEventReceiver
+    {
         bool _rotating;
         double _angle;
-		public TCIRotaryEventReceiver ()
-		{
-			InitializeComponent ();
+        public TCIRotaryEventReceiver ()
+        {
+            InitializeComponent ();
             _angle = 0;
-		}
+        }
 
         public void Rotate(RotaryEventArgs args)
         {

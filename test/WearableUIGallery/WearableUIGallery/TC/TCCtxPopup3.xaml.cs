@@ -19,8 +19,6 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Globalization;
 
 namespace WearableUIGallery.TC

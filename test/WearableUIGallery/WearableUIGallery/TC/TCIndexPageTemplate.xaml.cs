@@ -20,13 +20,13 @@ using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCIndexPageTemplate : IndexPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCIndexPageTemplate : IndexPage
+    {
 
         public TCIndexPageTemplate()
-		{
-			InitializeComponent ();
+        {
+            InitializeComponent ();
         }
 
         private void OnCurrentPageChanged(object sender, EventArgs e)

@@ -26,7 +26,6 @@ namespace WearableUIGallery.TC
     {
         TitleText2Button popup;
 
-
         public TCTwoButtonPopupCmd()
         {
             InitializeComponent();

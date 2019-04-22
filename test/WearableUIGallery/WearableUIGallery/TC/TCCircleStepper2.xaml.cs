@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
@@ -22,7 +21,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCircleStepper2 : CirclePage
+    public partial class TCCircleStepper2 : CirclePage
     {
         public TCCircleStepper2()
         {
