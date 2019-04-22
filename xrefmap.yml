@@ -37,6 +37,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.GettingTheCertificates
   name: Getting the Certificates
   href: guide/GettingTheCertificates.html
+- uid: Tizen.Wearable.CircularUI.doc.GoogleMapView
+  name: GoogleMapView
+  href: guide/GoogleMapView.html
 - uid: Tizen.Wearable.CircularUI.doc.IndexPage
   name: IndexPage
   href: guide/IndexPage.html

@@ -172,6 +172,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/GoogleMapView.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/GoogleMapView.html",
+          "hash": "6Xdqgipr4O3X1+O7tVqTxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/HowToSetTheCustomFont.md",
       "output": {
         ".html": {
@@ -1225,6 +1237,61 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/googlemapview_add_pins.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/googlemapview_add_pins.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/googlemapview_current_position.gif",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/googlemapview_current_position.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/googlemapview_default.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/googlemapview_default.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/googlemapview_googlemapoption.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/googlemapview_googlemapoption.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/googlemapview_privilege.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/googlemapview_privilege.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/information_popup1.png",
       "output": {
         "resource": {
@@ -1691,7 +1758,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "7WPIrsO3Emz+XNYVkLlj9A=="
+          "hash": "Xat4klnXcR7oe5Tga23WdA=="
         }
       },
       "is_incremental": false,
@@ -1722,6 +1789,7 @@
     },
     {
       "log_codes": [
+        "UidNotFound",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1729,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "xNT7hcFV/oaAurVpIuBTAg=="
+          "hash": "n00ivnmrzQYxWHuIrucDNw=="
         }
       },
       "is_incremental": false,
@@ -2852,17 +2920,17 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
