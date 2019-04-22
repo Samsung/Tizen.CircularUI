@@ -21,14 +21,14 @@ using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCMediaViewAbsoluteLayout : CirclePage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCMediaViewAbsoluteLayout : CirclePage
+    {
         double _x, _y;
 
         public TCMediaViewAbsoluteLayout()
-		{
-			InitializeComponent ();
+        {
+            InitializeComponent ();
         }
 
         void OnPanUpdate(object sender, PanUpdatedEventArgs e)

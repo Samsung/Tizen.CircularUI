@@ -18,12 +18,12 @@ using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCMediaViewStackLayout : CirclePage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCMediaViewStackLayout : CirclePage
+    {
         public TCMediaViewStackLayout()
-		{
-			InitializeComponent ();
+        {
+            InitializeComponent ();
         }
     }
 }

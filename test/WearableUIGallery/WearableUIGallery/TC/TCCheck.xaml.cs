@@ -15,20 +15,19 @@
  */
 
 using System;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TCCheck : CirclePage
-	{
-		public TCCheck ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCCheck : CirclePage
+    {
+        public TCCheck ()
+        {
+            InitializeComponent ();
+        }
 
         public void OnToggledDefault(object sender, ToggledEventArgs e)
         {
