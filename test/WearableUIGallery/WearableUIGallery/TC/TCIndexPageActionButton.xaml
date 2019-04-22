@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:IndexPage
+    x:Class="WearableUIGallery.TC.TCIndexPageActionButton"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <w:CirclePage>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="InsertText1" />
+            <w:PopupEntry />
+        </StackLayout>
+        <w:CirclePage.ActionButton>
+            <w:ActionButtonItem
+                x:Name="Button1"
+                Text="Button1"/>
+        </w:CirclePage.ActionButton>
+    </w:CirclePage>
+
+    <w:CirclePage>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="InsertText2" />
+            <w:PopupEntry />
+        </StackLayout>
+
+        <w:CirclePage.ActionButton>
+            <w:ActionButtonItem
+                x:Name="Button2"
+                Text="Button2"/>
+        </w:CirclePage.ActionButton>
+    </w:CirclePage>
+
+    <w:CirclePage>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="InsertText3" />
+            <w:PopupEntry />
+        </StackLayout>
+        <w:CirclePage.ActionButton>
+            <w:ActionButtonItem
+                x:Name="Button3"
+                Text="Button3"/>
+        </w:CirclePage.ActionButton>
+    </w:CirclePage>
+</w:IndexPage>

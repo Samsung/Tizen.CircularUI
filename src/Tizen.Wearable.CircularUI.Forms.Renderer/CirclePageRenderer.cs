@@ -208,7 +208,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var btnRect = _actionButton.Geometry;
                 var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
                 var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
-                var btnX = (rect.Width - btnW) / 2;
+                var btnX = rect.X + (rect.Width - btnW)/2;
                 var btnY = rect.Height - btnH;
                 _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
                 _actionButton.StackAbove(prev);
@@ -221,7 +221,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             if (_moreOption != null)
             {
-                _moreOption.Geometry = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+                _moreOption.Geometry = rect;
                 _moreOption.StackAbove(prev);
             }
         }
