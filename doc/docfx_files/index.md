@@ -27,6 +27,6 @@ The binaries are available via NuGet (package name CircularUI) with the source a
 | [](xref:Tizen.Wearable.CircularUI.Forms.Toast)                         | A popup for simple feedback. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.TwoButtonPage)                 | A subclass of Xamarin.Forms.Page has two buttons on the left and right side of the circular screen. |
 | [](xref:Tizen.Wearable.CircularUI.Forms.MediaView)                     | The MediaView class is used to display the video output on the screen. |
-| [](xref:Tizen.Wearable.CircularUI.Forms.MapView)                       | The MapView class is used to display the google map on the screen. |
+| [](xref:Tizen.Wearable.CircularUI.Forms.GoogleMapView)                 | The GoogleMapView class is used to display the google javascript API map on the screen. |
 
 ![widgets](widgets.png)
