@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="org.tizen.example.SimpleWidgetApp" version="1.0.0">
+	<profile name="wearable" />
+    <widget-application appid="org.tizen.example.SimpleWidgetApp"
+					exec="SimpleWidgetApp.dll"
+					type="dotnet"
+					main="true"
+					update-period="0">
+  <label>SimpleWidgetApp</label>
+	<icon>SimpleWidgetApp.png</icon>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+        <support-size preview="SimpleWidgetApp.png">2x2</support-size>
+    </widget-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/widget.viewer</privilege>
+    </privileges>
+</manifest>

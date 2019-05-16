@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="SimpleWidgetApp.MainPage">
+    <c:CirclePage.Content>
+        <StackLayout x:Name="layout"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+                <Label Text="Simplge Widget"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+         </StackLayout>
+    </c:CirclePage.Content>
+    <c:CirclePage.ActionButton>
+        <c:ActionButtonItem 
+            Clicked = "OnButtonClicked"
+            Text="Change Color" />
+    </c:CirclePage.ActionButton>
+</c:CirclePage>
