@@ -456,6 +456,12 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.ValueTypeProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.ValueTypeProperty
   nameWithType: CircleDateTimeSelector.ValueTypeProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleImage
+  name: CircleImage
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleImage.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.CircleImage
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleImage
+  nameWithType: CircleImage
 - uid: Tizen.Wearable.CircularUI.Forms.CircleListView
   name: CircleListView
   href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html
@@ -6140,3 +6146,57 @@ references:
   fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
   nameWithType: MediaViewRenderer.IMediaViewProvider.GetMediaView
   nameWithType.vb: MediaViewRenderer.Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
+- uid: UIComponents.Tizen.Wearable.Renderers
+  name: UIComponents.Tizen.Wearable.Renderers
+  href: api/UIComponents.Tizen.Wearable.Renderers.html
+  commentId: N:UIComponents.Tizen.Wearable.Renderers
+  fullName: UIComponents.Tizen.Wearable.Renderers
+  nameWithType: UIComponents.Tizen.Wearable.Renderers
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer
+  name: CircleImageRenderer
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html
+  commentId: T:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer
+  nameWithType: CircleImageRenderer
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleImage})
+  name: OnElementChanged(ElementChangedEventArgs<CircleImage>)
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleImage__
+  commentId: M:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleImage})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleImage))
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleImage>)
+  fullName.vb: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleImage))
+  nameWithType: CircleImageRenderer.OnElementChanged(ElementChangedEventArgs<CircleImage>)
+  nameWithType.vb: CircleImageRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleImage))
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged*
+  name: OnElementChanged
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_OnElementChanged_
+  commentId: Overload:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged
+  isSpec: "True"
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged
+  nameWithType: CircleImageRenderer.OnElementChanged
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  name: OnElementPropertyChanged(Object, PropertyChangedEventArgs)
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_OnElementPropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_
+  commentId: M:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementPropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)
+  nameWithType: CircleImageRenderer.OnElementPropertyChanged(Object, PropertyChangedEventArgs)
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementPropertyChanged*
+  name: OnElementPropertyChanged
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_OnElementPropertyChanged_
+  commentId: Overload:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementPropertyChanged
+  isSpec: "True"
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementPropertyChanged
+  nameWithType: CircleImageRenderer.OnElementPropertyChanged
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.UpdateAfterLoading
+  name: UpdateAfterLoading()
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_UpdateAfterLoading
+  commentId: M:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.UpdateAfterLoading
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.UpdateAfterLoading()
+  nameWithType: CircleImageRenderer.UpdateAfterLoading()
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.UpdateAfterLoading*
+  name: UpdateAfterLoading
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_UpdateAfterLoading_
+  commentId: Overload:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.UpdateAfterLoading
+  isSpec: "True"
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.UpdateAfterLoading
+  nameWithType: CircleImageRenderer.UpdateAfterLoading
