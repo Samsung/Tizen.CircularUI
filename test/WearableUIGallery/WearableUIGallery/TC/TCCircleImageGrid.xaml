@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WearableUIGallery.TC.TCCircleImageGrid"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
+        <Grid
+            HeightRequest="360"
+            VerticalOptions="Center"
+            BackgroundColor="White"
+            WidthRequest="360">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            <w:CircleImage
+                Grid.Row="1"
+                Grid.Column="1"
+                WidthRequest="150"
+                HeightRequest="150"
+                Source="image/100_1.jpg"
+                Aspect="AspectFill"/>
+            <w:CircleImage
+                Grid.Row="1"
+                Grid.Column="3"
+                WidthRequest="150"
+                HeightRequest="150"
+                Source="image/100_2.jpg"
+                Aspect="AspectFill"/>
+            <w:CircleImage
+                Grid.Row="3"
+                Grid.Column="1"
+                WidthRequest="150"
+                HeightRequest="150"
+                Source="image/100_3.jpg"
+                Aspect="AspectFill"/>
+            <w:CircleImage
+                Grid.Row="3"
+                Grid.Column="3"
+                WidthRequest="150"
+                HeightRequest="150"
+                Source="image/100_4.jpg"
+                Aspect="AspectFill"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

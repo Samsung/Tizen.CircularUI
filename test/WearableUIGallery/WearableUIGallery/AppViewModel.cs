@@ -157,6 +157,17 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "MapView display static current position", Class = typeof(TCMapViewCurrentPosition) },
                 }
             });
+            TCs.Add(new TCDescribe
+            {
+                Title = "CircleImage",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "One Page", Class = typeof(TCCircleImage) },
+                    new TCDescribe { Title = "Multi Page", Class = typeof(TCCircleImageIndexPage) },
+                    new TCDescribe { Title = "Grid", Class = typeof(TCCircleImageGrid) },
+                    new TCDescribe { Title = "ListView", Class = typeof(TCCircleImageListView) },
+                }
+            });
         }
 
         public IList<TCDescribe> TCs { get; private set; }
