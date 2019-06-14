@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="res\circle.png" />
+    <EmbeddedResource Include="res\circle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Tizen.NET" Version="4.0.0" />
   </ItemGroup>
 

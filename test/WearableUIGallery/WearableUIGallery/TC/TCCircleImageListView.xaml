@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleImageListView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference mylist}">
+    <w:CirclePage.Content>
+        <w:CircleListView x:Name="mylist" >
+            <w:CircleListView.ItemsSource>
+                <x:Array x:Key="array" Type="{x:Type sys:String}">
+                    <x:String>image/100_1.jpg</x:String>
+                    <x:String>image/100_2.jpg</x:String>
+                    <x:String>image/100_3.jpg</x:String>
+                    <x:String>image/100_4.jpg</x:String>
+                    <x:String>image/100_5.jpg</x:String>
+                    <x:String>image/100_6.jpg</x:String>
+                </x:Array>
+            </w:CircleListView.ItemsSource>
+            <w:CircleListView.Header>
+                <x:String>Header</x:String>
+            </w:CircleListView.Header>
+            <w:CircleListView.Footer>
+                <x:String>Footer</x:String>
+            </w:CircleListView.Footer>
+            <w:CircleListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="30,10,30,10">
+                            <w:CircleImage
+                                Source="{Binding .}" 
+                                Aspect="AspectFill"
+                                VerticalOptions="Center"
+                                HorizontalOptions="StartAndExpand"
+                                WidthRequest="80"
+                                HeightRequest="80"/>
+                            <Label Text="{Binding .}"
+                                VerticalOptions="Center"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                HeightRequest="50"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </w:CircleListView.ItemTemplate>
+            <w:CircleListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="Red" />
+                </DataTemplate>
+            </w:CircleListView.HeaderTemplate>
+            <w:CircleListView.FooterTemplate>
+                <DataTemplate>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="Red" />
+                </DataTemplate>
+            </w:CircleListView.FooterTemplate>
+        </w:CircleListView>
+    </w:CirclePage.Content>
+</w:CirclePage>
