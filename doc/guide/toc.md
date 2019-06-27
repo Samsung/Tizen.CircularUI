@@ -13,6 +13,7 @@
 # User Interface
 ## [Check](Check.md)
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
+## [CircleImage](CircleImage.md)
 ## [CircleListView](CircleListView.md)
 ## [CirclePage](CirclePage.md)
 ### [CircleProgressBarSurfaceItem](https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#add-circleprogressbarsurfaceitem-in-circlepage)
