@@ -18,6 +18,10 @@ using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+    /// <summary>
+    /// The CircleImage is view that hold an image with circle shape.
+    /// The CircleImage is extension of Xamarin.Forms.Image.
+    /// </summary>
     public class CircleImage : Image
     {
     }
