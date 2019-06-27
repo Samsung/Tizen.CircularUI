@@ -7,6 +7,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector
   name: CircleDateTimeSelector
   href: guide/CircleDateTimeSelector.html
+- uid: Tizen.Wearable.CircularUI.doc.CircleImage
+  name: CircleImage
+  href: guide/CircleImage.html
 - uid: Tizen.Wearable.CircularUI.doc.CircleListView
   name: CircleListView
   href: guide/CircleListView.html

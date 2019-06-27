@@ -49,6 +49,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../guide/CircleImage.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/CircleImage.html",
+          "hash": "CfIUOd025zIXq2L3zJ+kmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../guide/CircleListView.md",
       "output": {
         ".html": {
@@ -1149,6 +1161,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "../guide/data/circle_image.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/circle_image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../guide/data/circle_image_listview.png",
+      "output": {
+        "resource": {
+          "relative_path": "guide/data/circle_image_listview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "../guide/data/circle_progressbar.png",
       "output": {
         "resource": {
@@ -1758,7 +1792,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "Xat4klnXcR7oe5Tga23WdA=="
+          "hash": "+mcN+YnSs/Ir71OuVHTBmg=="
         }
       },
       "is_incremental": false,
@@ -1879,7 +1913,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.CircleImage.html",
-          "hash": "3iWH4g0vl8Cr+jY+Y6OrgQ=="
+          "hash": "HHgUXLSHbmyhz67TZ16ORw=="
         }
       },
       "is_incremental": false,
@@ -2863,7 +2897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "JLfQao32U3amIA6gJxDwCA=="
+          "hash": "zi8U1YaBOXqtQeZ3BBxv2A=="
         }
       },
       "is_incremental": false,
@@ -2950,22 +2984,22 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

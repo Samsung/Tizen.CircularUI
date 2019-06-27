@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CircleImage </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CircleImage ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleImage">
+<h1 id="circleimage">CircleImage</h1>
+
+<p><code>CircleImage</code> is view that hold an image with circle shape.
+<code>CircleImage</code> derives from <a href="https://docs.microsoft.com/en-US/dotnet/api/Xamarin.Forms.Image?view=xamarin-forms">Xamarin.Forms.Image</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="data/circle_image.png" alt="circleImage"></th>
+<th style="text-align:center"><img src="data/circle_image_listview.png" alt="circleImage2"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Page</td>
+<td style="text-align:center">ListView Item</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-circleimage">Create CircleImage</h2>
+<p>You can easily add <code>CircleImage</code> control with C# or XAML file.
+Following example show the way how to use <code>CircleImage</code> control.</p>
+<p><strong>C# file</strong></p>
+<pre><code class="lang-cs"> var circleImage = new CircleImage
+ {
+     HorizontalOptions = LayoutOptions.Center,
+     VerticalOptions = LayoutOptions.Center,
+     Source = &quot;image.jpg&quot;
+ };
+
+ StackLayout layout = new StackLayout
+ {
+      BackgroundColor = Color.Transparent,
+      Children =
+      {
+        circleImage
+      }
+ };
+</code></pre><p><strong>XAML file</strong></p>
+<p><em>Refer to TCCircleImage code at the test\WearableUIGallery\WearableUIGallery\TC\TCCircleImage.xaml</em></p>
+<pre><code class="lang-xml">&lt;ContentPage
+    x:Class=&quot;WearableUIGallery.TC.TCCircleImage&quot;
+    xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+    xmlns:local=&quot;clr-namespace:WearableUIGallery&quot;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    &lt;ContentPage.Content&gt;
+        &lt;StackLayout HorizontalOptions=&quot;Center&quot; VerticalOptions=&quot;Center&quot;&gt;
+            &lt;w:CircleImage
+                Source=&quot;image/100_1.jpg&quot; 
+                Aspect=&quot;AspectFill&quot;
+                WidthRequest=&quot;200&quot;
+                HeightRequest=&quot;200&quot;
+                BackgroundColor=&quot;Black&quot;/&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ContentPage.Content&gt;
+&lt;/ContentPage&gt;
+</code></pre><p><strong>Inserting CircleImage in ListView Item</strong></p>
+<p>Following example show the way how to insert <code>CircleImage</code> control in CircleListView Item.</p>
+<p><em>Refer to TCCircleImageListView code at the test\WearableUIGallery\WearableUIGallery\TC\TCCircleImageListView.xaml</em></p>
+<pre><code class="lang-xml">    &lt;w:CircleListView.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;ViewCell&gt;
+                &lt;StackLayout Orientation=&quot;Horizontal&quot; HorizontalOptions=&quot;FillAndExpand&quot; VerticalOptions=&quot;Center&quot; Padding=&quot;30,10,30,10&quot;&gt;
+                    &lt;w:CircleImage
+                        Source=&quot;{Binding .}&quot; 
+                        Aspect=&quot;AspectFill&quot;
+                        VerticalOptions=&quot;Center&quot;
+                        HorizontalOptions=&quot;StartAndExpand&quot;
+                        WidthRequest=&quot;80&quot;
+                        HeightRequest=&quot;80&quot;/&gt;
+                    &lt;Label Text=&quot;{Binding .}&quot;
+                        VerticalOptions=&quot;Center&quot;
+                        HorizontalOptions=&quot;CenterAndExpand&quot;
+                        VerticalTextAlignment=&quot;Center&quot;
+                        HorizontalTextAlignment=&quot;Center&quot;
+                        HeightRequest=&quot;50&quot;/&gt;
+                &lt;/StackLayout&gt;
+            &lt;/ViewCell&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/w:CircleListView.ItemTemplate&gt;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
