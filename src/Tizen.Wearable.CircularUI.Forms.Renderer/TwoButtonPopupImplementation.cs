@@ -89,6 +89,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     _secondButton.Unrealize();
                     _secondButton = null;
                 }
+
                 if (_nativeContent != null)
                 {
                     _nativeContent.Unrealize();
@@ -355,14 +356,38 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Dismiss()
         {
+            if (_firstButton != null)
+            {
+                _firstButton.Unrealize();
+                _firstButton = null;
+                _popUp.SetPartContent("button1", null);
+            }
+
+            if (_secondButton != null)
+            {
+                _secondButton.Unrealize();
+                _secondButton = null;
+                _popUp.SetPartContent("button2", null);
+            }
+
+            if (_nativeContent != null)
+            {
+                _nativeContent.Unrealize();
+                _nativeContent = null;
+            }
+
             if (_popUp != null)
             {
-                _popUp.Dismiss();
+                _layout.Unrealize();
+                _layout = null;
+                _popUp.Unrealize();
+                _popUp = null;
             }
         }
 
         void OnDismissed(object sender, EventArgs e)
         {
+            Log.Debug(FormsCircularUI.Tag, $"OnDismissed called");
             Dispose();
         }
     }
