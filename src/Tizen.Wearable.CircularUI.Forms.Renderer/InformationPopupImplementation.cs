@@ -102,6 +102,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     _layout.Unrealize();
                     _layout = null;
+                    _popUp.BackButtonPressed -= BackButtonPressedHandler;
                     _popUp.Unrealize();
                     _popUp = null;
                 }
@@ -260,7 +261,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     ((IMenuItemController)BottomButton).Activate();
                 };
 
-                if(_buttonBgColor != Color.Default)
+                if (_buttonBgColor != Color.Default)
                 {
                     Log.Debug(FormsCircularUI.Tag, $"InformationPopup set button background color:{_buttonBgColor.ToNative()}");
                     _bottomButton.BackgroundColor = _buttonBgColor.ToNative();
@@ -268,6 +269,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
+                _bottomButton.Unrealize();
                 _bottomButton = null;
             }
 
@@ -329,14 +331,46 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Dismiss()
         {
+            _popUp.Hide();
+
+            if (_bottomButton != null)
+            {
+                _bottomButton.Unrealize();
+                _bottomButton = null;
+                _popUp.SetPartContent("button1", null);
+            }
+
+            if (_box != null)
+            {
+                _box.Unrealize();
+                _box = null;
+            }
+
+            if (_progress != null)
+            {
+                _progress.Unrealize();
+                _progress = null;
+            }
+
+            if (_progressLabel != null)
+            {
+                _progressLabel.Unrealize();
+                _progressLabel = null;
+            }
+
             if (_popUp != null)
             {
-                _popUp.Dismiss();
+                _layout.Unrealize();
+                _layout = null;
+                _popUp.BackButtonPressed -= BackButtonPressedHandler;
+                _popUp.Unrealize();
+                _popUp = null;
             }
         }
 
         void OnDismissed(object sender, EventArgs e)
         {
+            Log.Debug(FormsCircularUI.Tag, $"OnDismissed called");
             Dispose();
         }
     }

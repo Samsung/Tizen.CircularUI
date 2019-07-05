@@ -17,6 +17,8 @@
 using System;
 using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
@@ -47,6 +49,8 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty BottomButtonProperty = BindableProperty.Create(nameof(BottomButton), typeof(MenuItem), typeof(InformationPopup), null);
 
         IInformationPopup _popUp;
+
+        static IList<IInformationPopup> _popUpList = new ObservableCollection<IInformationPopup>();
 
         /// <summary>
         /// Occurs when the device's back button is pressed.
@@ -117,6 +121,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         public void Show()
         {
             _popUp.Show();
+            _popUpList.Add(_popUp);
         }
 
         /// <summary>
@@ -126,6 +131,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         public void Dismiss()
         {
             _popUp.Dismiss();
+            _popUpList.Remove(_popUp);
         }
     }
 }
