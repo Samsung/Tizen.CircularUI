@@ -18,6 +18,9 @@ using ElmSharp;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using Xamarin.Forms.Platform.Tizen.Native;
+using EColor = ElmSharp.Color;
+using ELayout = ElmSharp.Layout;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.PopupEntry), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer))]
 
@@ -25,8 +28,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class PopupEntryRenderer : EntryRenderer
     {
-        ElmSharp.Background _editorPopup;
-        ElmSharp.Color _popupBackgroundColor;
+        Background _editorPopup;
+        EColor _popupBackgroundColor;
 
         Xamarin.Forms.Platform.Tizen.Native.Entry _editor;
 
@@ -34,13 +37,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         Interop.EFL.InputPanelState _IMEState;
 
-        ElmSharp.Color DefaultColor { get; set; }
+        EColor DefaultColor { get; set; }
 
         bool _IsPopupOpened = false;
 
         public PopupEntryRenderer()
         {
-            DefaultColor = new ElmSharp.Color(40, 40, 40, 255); //editfield bg default color
+            DefaultColor = new EColor(40, 40, 40, 255); //editfield bg default color
             RegisterPropertyHandler(PopupEntry.PopupBackgroundColorProperty, UpdatePopupBackgroundColor);
             RegisterPropertyHandler(PopupEntry.IsPopupOpenedProperty, UpdateIsPopupOpened);
         }
@@ -91,12 +94,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             var root = FindWindow(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
 
-            _editorPopup = new ElmSharp.Background(root)
+            _editorPopup = new Background(root)
             {
                 Geometry = rect
             };
 
-            var layout = new ElmSharp.Layout(_editorPopup);
+            var layout = new ELayout(_editorPopup);
             layout.SetTheme("layout", "entry", "default");
             layout.Show();
 
@@ -109,7 +112,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.AllowFocus(true);
             _editor.Show();
 
-            _editor.SetInputPanelReturnKeyType(ElmSharp.InputPanelReturnKeyType.Done);
+            _editor.SetInputPanelReturnKeyType(InputPanelReturnKeyType.Done);
 
             _editor.UpdateKeyboard(Element.Keyboard, Element.IsSpellCheckEnabled, Element.IsTextPredictionEnabled);
 
@@ -137,7 +140,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void HidePopup()
         {
-            Control.TextChanged -= OnTextChanged;
+            if (Control is IEntry ie)
+            {
+                ie.TextChanged -= OnTextChanged;
+            }
 
             if (_IMEState != Interop.EFL.InputPanelState.Hide)
             {
@@ -160,7 +166,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 CreatePopup();
             }
             _editor.IsPassword = Control.IsPassword;
-            _editor.HorizontalTextAlignment = Control.HorizontalTextAlignment;
+            if (Control is IEntry ie)
+            {
+                _editor.HorizontalTextAlignment = ie.HorizontalTextAlignment;
+                ie.TextChanged += OnTextChanged;
+            }
 
             _editor.Text = Control.Text;
             _editor.TextChanged += PopupEntryTextChanged;
@@ -172,7 +182,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.MoveCursorEnd();
             _editor.ShowInputPanel();
 
-            Control.TextChanged += OnTextChanged;
             _IsPopupOpened = true;
             ((PopupEntry)Element).IsPopupOpened = true;
         }
