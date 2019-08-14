@@ -102,6 +102,7 @@ When Page is added/removed at Multipage. circular index is added/removed automat
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
     <div><span class="xref">Xamarin.Forms.IAnimatable</span></div>
+    <div><span class="xref">Xamarin.Forms.ITabStopElement</span></div>
     <div><span class="xref">Xamarin.Forms.ILayout</span></div>
     <div><span class="xref">Xamarin.Forms.IPageController</span></div>
     <div><span class="xref">Xamarin.Forms.IVisualElementController</span></div>
@@ -184,7 +185,7 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.Page.ActionSheetSignalName</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.BackgroundImageProperty</span>
+      <span class="xref">Xamarin.Forms.Page.BackgroundImageSourceProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.IsBusyProperty</span>
@@ -196,7 +197,7 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.Page.TitleProperty</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.IconProperty</span>
+      <span class="xref">Xamarin.Forms.Page.IconImageSourceProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.DisplayActionSheet(System.String, System.String, System.String, System.String[])</span>
@@ -241,10 +242,10 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.Page.On&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.BackgroundImage</span>
+      <span class="xref">Xamarin.Forms.Page.BackgroundImageSource</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.Icon</span>
+      <span class="xref">Xamarin.Forms.Page.IconImageSource</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.IsBusy</span>
@@ -266,6 +267,12 @@ When Page is added/removed at Multipage. circular index is added/removed automat
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.Disappearing</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.StyleProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
@@ -478,19 +485,10 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.VisualElement.ScaleY</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.Style</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.TranslationX</span>
@@ -532,13 +530,16 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleClass</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
@@ -607,22 +608,16 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
@@ -634,16 +629,22 @@ When Page is added/removed at Multipage. circular index is added/removed automat
       <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -671,7 +672,7 @@ When Page is added/removed at Multipage. circular index is added/removed automat
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_IndexPage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IndexPage : MultiPage&lt;ContentPage&gt;, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, ILayout, IPageController, IVisualElementController, IElementController, IElementConfiguration&lt;Page&gt;, IPaddingElement, IViewContainer&lt;ContentPage&gt;, IPageContainer&lt;ContentPage&gt;, IItemsView&lt;ContentPage&gt;, IMultiPageController&lt;ContentPage&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class IndexPage : MultiPage&lt;ContentPage&gt;, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, ITabStopElement, IStyleSelectable, IStylable, ILayout, IPageController, IVisualElementController, IElementController, IElementConfiguration&lt;Page&gt;, IPaddingElement, IViewContainer&lt;ContentPage&gt;, IPageContainer&lt;ContentPage&gt;, IItemsView&lt;ContentPage&gt;, IMultiPageController&lt;ContentPage&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -723,6 +724,9 @@ When Page is added/removed at Multipage. circular index is added/removed automat
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IAnimatable</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.ITabStopElement</span>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.ILayout</span>

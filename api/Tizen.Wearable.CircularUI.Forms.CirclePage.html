@@ -103,6 +103,7 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
     <div><span class="xref">Xamarin.Forms.IAnimatable</span></div>
+    <div><span class="xref">Xamarin.Forms.ITabStopElement</span></div>
     <div><span class="xref">Xamarin.Forms.ILayout</span></div>
     <div><span class="xref">Xamarin.Forms.IPageController</span></div>
     <div><span class="xref">Xamarin.Forms.IVisualElementController</span></div>
@@ -121,6 +122,15 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.TemplatedPage.ControlTemplateProperty</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.TemplatedPage.OnApplyTemplate()</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.TemplatedPage.OnChildRemoved(Xamarin.Forms.Element)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.TemplatedPage.GetTemplateChild(System.String)</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.TemplatedPage.ControlTemplate</span>
     </div>
     <div>
@@ -133,7 +143,7 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.Page.ActionSheetSignalName</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.BackgroundImageProperty</span>
+      <span class="xref">Xamarin.Forms.Page.BackgroundImageSourceProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.IsBusyProperty</span>
@@ -145,7 +155,7 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.Page.TitleProperty</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.IconProperty</span>
+      <span class="xref">Xamarin.Forms.Page.IconImageSourceProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.DisplayActionSheet(System.String, System.String, System.String, System.String[])</span>
@@ -190,10 +200,10 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.Page.On&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.BackgroundImage</span>
+      <span class="xref">Xamarin.Forms.Page.BackgroundImageSource</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.Page.Icon</span>
+      <span class="xref">Xamarin.Forms.Page.IconImageSource</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.IsBusy</span>
@@ -215,6 +225,12 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Page.Disappearing</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.StyleProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
@@ -343,9 +359,6 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.OnChildAdded(Xamarin.Forms.Element)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.OnChildRemoved(Xamarin.Forms.Element)</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.OnChildrenReordered()</span>
     </div>
     <div>
@@ -430,19 +443,10 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.ScaleY</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.Style</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.TranslationX</span>
@@ -484,13 +488,16 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleClass</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
@@ -562,22 +569,16 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
@@ -589,16 +590,22 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
       <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -626,7 +633,7 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_CirclePage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CirclePage : ContentPage, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, ILayout, IPageController, IVisualElementController, IElementController, IElementConfiguration&lt;Page&gt;, IPaddingElement, IControlTemplated</code></pre>
+    <pre><code class="lang-csharp hljs">public class CirclePage : ContentPage, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, ITabStopElement, IStyleSelectable, IStylable, ILayout, IPageController, IVisualElementController, IElementController, IElementConfiguration&lt;Page&gt;, IPaddingElement, IControlTemplated</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -779,6 +786,9 @@ It has an ActionButton, and can use the MenuItem type as text, icon, command, an
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IAnimatable</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.ITabStopElement</span>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.ILayout</span>

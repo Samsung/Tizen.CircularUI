@@ -102,6 +102,7 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
     <div><span class="xref">Xamarin.Forms.IAnimatable</span></div>
+    <div><span class="xref">Xamarin.Forms.ITabStopElement</span></div>
     <div><span class="xref">Xamarin.Forms.Internals.IGestureController</span></div>
     <div><span class="xref">Xamarin.Forms.IImageController</span></div>
     <div><span class="xref">Xamarin.Forms.IViewController</span></div>
@@ -170,6 +171,12 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.View.VerticalOptions</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.StyleProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
@@ -388,19 +395,10 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
       <span class="xref">Xamarin.Forms.VisualElement.ScaleY</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.Style</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.TranslationX</span>
@@ -442,16 +440,19 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
       <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.NavigableElement.OnParentSet()</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleClass</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
@@ -523,22 +524,16 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
       <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
@@ -550,16 +545,22 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
       <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -587,7 +588,7 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_CircleImage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CircleImage : Image, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, IGestureController, IImageController, IViewController, IVisualElementController, IElementController, IElementConfiguration&lt;Image&gt;, IImageElement</code></pre>
+    <pre><code class="lang-csharp hljs">public class CircleImage : Image, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, ITabStopElement, IStyleSelectable, IStylable, IGestureController, IImageController, IViewController, IVisualElementController, IElementController, IElementConfiguration&lt;Image&gt;, IImageElement</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
@@ -595,6 +596,9 @@ The CircleImage is extension of Xamarin.Forms.Image.</p>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IAnimatable</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.ITabStopElement</span>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.Internals.IGestureController</span>

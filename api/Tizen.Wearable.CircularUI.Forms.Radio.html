@@ -100,6 +100,7 @@
     <h5>Implements</h5>
     <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
     <div><span class="xref">Xamarin.Forms.IAnimatable</span></div>
+    <div><span class="xref">Xamarin.Forms.ITabStopElement</span></div>
     <div><span class="xref">Xamarin.Forms.IViewController</span></div>
     <div><span class="xref">Xamarin.Forms.IVisualElementController</span></div>
     <div><span class="xref">Xamarin.Forms.IElementController</span></div>
@@ -139,6 +140,12 @@
     </div>
     <div>
       <span class="xref">Xamarin.Forms.View.VerticalOptions</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.NavigationProperty</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.VisualElement.StyleProperty</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.InputTransparentProperty</span>
@@ -357,19 +364,10 @@
       <span class="xref">Xamarin.Forms.VisualElement.ScaleY</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.VisualElement.Style</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.VisualElement.TabIndex</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.IsTabStop</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.StyleClass</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.VisualElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.VisualElement.TranslationX</span>
@@ -411,16 +409,19 @@
       <span class="xref">Xamarin.Forms.VisualElement.Unfocused</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.NavigationProperty</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.NavigableElement.StyleProperty</span>
-    </div>
-    <div>
       <span class="xref">Xamarin.Forms.NavigableElement.OnParentSet()</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.NavigableElement.Navigation</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.Style</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.StyleClass</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.NavigableElement.class</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.Element.MenuProperty</span>
@@ -492,22 +493,16 @@
       <span class="xref">Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindablePropertyKey)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)</span>
+      <span class="xref">Xamarin.Forms.BindableObject.IsSet(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.RemoveBinding(Xamarin.Forms.BindableProperty)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty, Xamarin.Forms.BindingBase)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.ApplyBindings()</span>
@@ -519,16 +514,22 @@
       <span class="xref">Xamarin.Forms.BindableObject.UnapplyBindings()</span>
     </div>
     <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey, System.Object)</span>
+    </div>
+    <div>
       <span class="xref">Xamarin.Forms.BindableObject.BindingContext</span>
     </div>
     <div>
       <span class="xref">Xamarin.Forms.BindableObject.PropertyChanged</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
+      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
     </div>
     <div>
-      <span class="xref">Xamarin.Forms.BindableObject.PropertyChanging</span>
+      <span class="xref">Xamarin.Forms.BindableObject.BindingContextChanged</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -556,7 +557,7 @@
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Radio_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Radio : View, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, IStyleSelectable, IStylable, IViewController, IVisualElementController, IElementController, IGestureController</code></pre>
+    <pre><code class="lang-csharp hljs">public class Radio : View, INotifyPropertyChanged, IDynamicResourceHandler, IElement, INameScope, INavigationProxy, IAnimatable, IResourcesProvider, IStyleElement, IFlowDirectionController, IPropertyPropagationController, IVisualController, ITabStopElement, IStyleSelectable, IStylable, IViewController, IVisualElementController, IElementController, IGestureController</code></pre>
   </div>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Radio_examples"><strong>Examples</strong></h5>
   <pre><code>var radio1 = new Radio
@@ -808,6 +809,9 @@ This is a bindable property.</p>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IAnimatable</span>
+  </div>
+  <div>
+      <span class="xref">Xamarin.Forms.ITabStopElement</span>
   </div>
   <div>
       <span class="xref">Xamarin.Forms.IViewController</span>
