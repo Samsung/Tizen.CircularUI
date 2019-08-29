@@ -15,16 +15,17 @@
  */
 
 using System;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Text;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
-using Xamarin.Forms.Platform.Tizen.Native;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using Xamarin.Forms.Platform.Tizen.Native;
 using TChromium = Tizen.WebView.Chromium;
 using TWebView = Tizen.WebView.WebView;
-using XForms = Xamarin.Forms.Platform.Tizen.Forms;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(GoogleMapView), typeof(GoogleMapViewRenderer))]
 

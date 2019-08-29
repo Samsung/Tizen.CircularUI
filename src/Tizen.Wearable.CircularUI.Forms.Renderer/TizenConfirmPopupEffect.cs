@@ -15,14 +15,11 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Windows.Input;
 using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ResolutionGroupName("CircleUI")]
 [assembly: ExportEffect(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect), "ContextPopupEffectBehavior")]
@@ -90,7 +87,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             if (parent == null)
             {
-                parent = Xamarin.Forms.Platform.Tizen.Forms.NativeParent;
+                parent = XForms.NativeParent;
             }
 
             _popup = new SelectContextPopup(parent);
@@ -122,22 +119,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             switch (option)
             {
                 case PositionOption.Absolute:
-                    x = Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
-                    y = Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
+                    x = XForms.ConvertToPixel(offset.X);
+                    y = XForms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.BottomOfView:
                     rect = Control.Geometry;
-                    x = rect.X + rect.Width / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
-                    y = rect.Y + rect.Height + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
+                    x = rect.X + rect.Width / 2 + XForms.ConvertToPixel(offset.X);
+                    y = rect.Y + rect.Height + XForms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.CenterOfParent:
-                    rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+                    rect = XForms.NativeParent.Geometry;
 
-                    x = rect.Width / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.X);
-                    y = rect.Height / 2 - ctxRect.Height / 2 + Xamarin.Forms.Platform.Tizen.Forms.ConvertToPixel(offset.Y);
+                    x = rect.Width / 2 + XForms.ConvertToPixel(offset.X);
+                    y = rect.Height / 2 - ctxRect.Height / 2 + XForms.ConvertToPixel(offset.Y);
                     break;
                 case PositionOption.Relative:
-                    rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+                    rect = XForms.NativeParent.Geometry;
                     x = (int)(rect.Width * offset.X);
                     y = (int)(rect.Height * offset.Y);
                     break;
@@ -147,7 +144,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     break;
             }
 
-            var window = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+            var window = XForms.NativeParent.Geometry;
             if (y + ctxRect.Height > window.Height)
             {
                 y = window.Height - ctxRect.Height;

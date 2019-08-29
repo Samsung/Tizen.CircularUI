@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-using Tizen.Applications;
-using ElmSharp;
-using Tizen.Wearable.CircularUI.Forms.Renderer.Watchface;
 using System;
+using Tizen.Applications;
+using Tizen.Wearable.CircularUI.Forms.Renderer.Watchface;
+using Xamarin.Forms;
 
 namespace SimpleTextWatchface
 {
@@ -73,7 +73,7 @@ namespace SimpleTextWatchface
         static void Main(string[] args)
         {
             App app = new App();
-            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            Forms.Init(app);
             Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init();
             app.Run(args);
         }

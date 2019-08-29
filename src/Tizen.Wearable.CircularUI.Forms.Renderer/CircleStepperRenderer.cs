@@ -19,6 +19,7 @@ using ESpinner = ElmSharp.Wearable.CircleSpinner;
 using ESize = ElmSharp.Size;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleStepper), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer))]
 
@@ -48,7 +49,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    var spinner = new ESpinner(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface);
+                    var spinner = new ESpinner(XForms.NativeParent, surface);
                     spinner.Style = "circle";
 
                     SetNativeControl(spinner);
