@@ -16,11 +16,10 @@
 
 using System;
 using Xamarin.Forms;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
-using XForms = Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
-[assembly: XForms.Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation))]
+[assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -30,8 +29,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         StackLayout _contentView;
         MenuItem _firstMenuItem;
         MenuItem _secondMenuItem;
-        XForms.Color _firstButtonBgColor;
-        XForms.Color _secondButtonBgColor;
+        Color _firstButtonBgColor;
+        Color _secondButtonBgColor;
 
         ElmSharp.Popup _popUp;
         ElmSharp.Layout _layout;
@@ -47,7 +46,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public TwoButtonPopupImplementation()
         {
-            _popUp = new ElmSharp.Popup(TForms.NativeParent);
+            _popUp = new ElmSharp.Popup(XForms.NativeParent);
             _popUp.Style = "circle";
 
             _layout = new ElmSharp.Layout(_popUp);
@@ -204,7 +203,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateContent()
         {
-            if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
+            if (!XForms.IsInitialized)
             {
                 Log.Debug(FormsCircularUI.Tag, "Tizen Forms is not initialized");
                 return;
@@ -217,7 +216,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 var renderer = Xamarin.Forms.Platform.Tizen.Platform.GetOrCreateRenderer(_contentView);
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
-                var sizeRequest = _contentView.Measure(TForms.NativeParent.Geometry.Width, TForms.NativeParent.Geometry.Height).Request.ToPixel();
+                var sizeRequest = _contentView.Measure(XForms.NativeParent.Geometry.Width, XForms.NativeParent.Geometry.Height).Request.ToPixel();
 
                 _nativeContent = renderer.NativeView;
                 _nativeContent.MinimumHeight = sizeRequest.Height;
@@ -343,7 +342,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Show()
         {
-            if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
+            if (!XForms.IsInitialized)
             {
                 throw new InvalidOperationException("When the Application's Platform is not initialized, it can not show the Dialog.");
             }

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2018 Samsung Electronics Co., Ltd All Rights Reserved
  *
  * Licensed under the Flora License, Version 1.1 (the "License");
@@ -15,9 +15,11 @@
  */
 
 using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using EDateTimeFieldType = ElmSharp.DateTimeFieldType;
+using XForms = Xamarin.Forms.Forms;
 using ECircleDateTimeSelector = ElmSharp.Wearable.CircleDateTimeSelector;
+using EDateTimeFieldType = ElmSharp.DateTimeFieldType;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer))]
 
@@ -51,7 +53,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    SetNativeControl(new ECircleDateTimeSelector(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
+                    SetNativeControl(new ECircleDateTimeSelector(XForms.NativeParent, surface));
                     Control.DateTimeChanged += OnDateTimeChanged;
                 }
                 else

@@ -16,13 +16,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
+using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using ElmSharp;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
-using System.Collections.Specialized;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(IndexPage), typeof(IndexPageRenderer))]
 
@@ -88,7 +88,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void Initialize()
         {
-            _outterLayout = new ElmSharp.Layout(TForms.NativeParent)
+            _outterLayout = new ElmSharp.Layout(XForms.NativeParent)
             {
                 AlignmentX = -1,
                 AlignmentY = -1,

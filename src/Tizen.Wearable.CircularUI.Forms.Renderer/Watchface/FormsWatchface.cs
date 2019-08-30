@@ -22,6 +22,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Tizen;
 using XApplication = Xamarin.Forms.Application;
+using XForms = Xamarin.Forms.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
 {
@@ -32,7 +33,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
 
         public FormsWatchface()
         {
-            Xamarin.Forms.Platform.Tizen.Forms.SetFlags("LightweightPlatform_Experimental");
+            XForms.SetFlags("LightweightPlatform_Experimental");
             _isInitialStart = true;
         }
 
@@ -118,7 +119,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
         Xamarin.Forms.Internals.DeviceOrientation GetDeviceOrientation()
         {
             Xamarin.Forms.Internals.DeviceOrientation orientation;
-            var isPortraitDevice = Xamarin.Forms.Platform.Tizen.Forms.NaturalOrientation.IsPortrait();
+            var isPortraitDevice = XForms.NaturalOrientation.IsPortrait();
             switch (Window.Rotation)
             {
                 case 0:

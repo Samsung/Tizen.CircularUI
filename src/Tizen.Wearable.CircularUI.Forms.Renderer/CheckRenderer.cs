@@ -15,12 +15,12 @@
  */
 
 using System;
-using Xamarin.Forms;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using ECheck = ElmSharp.Check;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Check), typeof(CheckRenderer))]
 
@@ -45,7 +45,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (Control == null)
             {
-                SetNativeControl(new ECheck(TForms.NativeParent)
+                SetNativeControl(new ECheck(XForms.NativeParent)
                 {
                     PropagateEvents = false,
                     Style = CheckStyle.Default

@@ -15,12 +15,11 @@
  */
 
 using System;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
 using Xamarin.Forms;
-using XForms = Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
-[assembly: XForms.Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation))]
+[assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -45,7 +44,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public InformationPopupImplementation()
         {
-            _popUp = new ElmSharp.Popup(TForms.NativeParent);
+            _popUp = new ElmSharp.Popup(XForms.NativeParent);
             _popUp.Style = "circle";
 
             _layout = new ElmSharp.Layout(_popUp);
@@ -182,7 +181,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateProcessVisibility()
         {
-            if(!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
+            if(!XForms.IsInitialized)
             {
                 Log.Debug(FormsCircularUI.Tag, "Tizen Forms is not initialized");
                 return;
@@ -190,10 +189,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             if (_isProgressRunning)
             {
-                _box = new ElmSharp.Box(TForms.NativeParent);
+                _box = new ElmSharp.Box(XForms.NativeParent);
                 _box.Show();
 
-                _progress = new ElmSharp.ProgressBar(TForms.NativeParent)
+                _progress = new ElmSharp.ProgressBar(XForms.NativeParent)
                 {
                     Style = "process/popup/small",
                 };
@@ -301,7 +300,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     if (_progressLabel == null)
                     {
-                        _progressLabel = new ElmSharp.Label(TForms.NativeParent)
+                        _progressLabel = new ElmSharp.Label(XForms.NativeParent)
                         {
                             TextStyle = "DEFAULT ='font=Tizen:style=Light color=#F9F9F9FF font_size=32 align=center valign=top wrap=word'",
                         };
@@ -318,7 +317,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Show()
         {
-            if (!Xamarin.Forms.Platform.Tizen.Forms.IsInitialized)
+            if (!XForms.IsInitialized)
             {
                 throw new InvalidOperationException("When the Application's Platform is not initialized, it can not show the Dialog.");
             }

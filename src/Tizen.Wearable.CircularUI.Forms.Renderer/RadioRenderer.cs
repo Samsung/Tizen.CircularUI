@@ -19,9 +19,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using ERadio = ElmSharp.Radio;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Radio), typeof(RadioRenderer))]
 
@@ -44,7 +45,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (Control == null)
             {
-                var radio = new ERadio(TForms.NativeParent) { StateValue = 1 };
+                var radio = new ERadio(XForms.NativeParent) { StateValue = 1 };
                 SetNativeControl(radio);
                 Control.ValueChanged += ChangedEventHandler;
             }

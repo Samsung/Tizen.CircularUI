@@ -20,6 +20,7 @@ using System.Collections.Specialized;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 using CCircularListView = global::Tizen.Wearable.CircularUI.Forms.CircleListView;
 
@@ -49,7 +50,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (Control == null)
             {
                 var surface = this.GetSurface();
-                SetNativeControl(new CircleListView(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
+                SetNativeControl(new CircleListView(XForms.NativeParent, surface));
 
                 Control.ItemSelected += OnListViewItemSelected;
             }

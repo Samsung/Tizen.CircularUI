@@ -21,6 +21,7 @@ using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 using EColor = ElmSharp.Color;
 using ELayout = ElmSharp.Layout;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.PopupEntry), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer))]
 
@@ -90,9 +91,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void CreatePopup()
         {
-            var rect = Xamarin.Forms.Platform.Tizen.Forms.NativeParent.Geometry;
+            var rect = XForms.NativeParent.Geometry;
 
-            var root = FindWindow(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
+            var root = FindWindow(XForms.NativeParent);
 
             _editorPopup = new Background(root)
             {

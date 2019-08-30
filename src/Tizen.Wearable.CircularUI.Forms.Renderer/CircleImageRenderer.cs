@@ -18,7 +18,6 @@ using System;
 using UIComponents.Tizen.Wearable.Renderers;
 using Xamarin.Forms.Platform.Tizen;
 using FormsNative = Xamarin.Forms.Platform.Tizen.Native;
-using XForms = Xamarin.Forms;
 using System.ComponentModel;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;

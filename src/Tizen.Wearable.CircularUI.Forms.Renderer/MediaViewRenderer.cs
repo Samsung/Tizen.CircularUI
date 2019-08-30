@@ -16,8 +16,10 @@
 
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Renderer;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using MMView = Tizen.Multimedia.MediaView;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(MediaView), typeof(MediaViewRenderer))]
 namespace Tizen.Wearable.CircularUI.Renderer
@@ -29,8 +31,8 @@ namespace Tizen.Wearable.CircularUI.Renderer
         {
             if (Control == null)
             {
-                _mediaView = new MMView(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
-                SetNativeControl(new LayoutCanvas(Xamarin.Forms.Platform.Tizen.Forms.NativeParent));
+                _mediaView = new MMView(XForms.NativeParent);
+                SetNativeControl(new LayoutCanvas(XForms.NativeParent));
                 Control.LayoutUpdated += (s, evt) => OnLayout();
                 Control.Children.Add(_mediaView);
                 Control.AllowFocus(true);

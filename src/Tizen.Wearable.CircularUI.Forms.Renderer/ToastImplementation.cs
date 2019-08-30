@@ -16,12 +16,11 @@
 
 using System;
 using Xamarin.Forms;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
-using XForms = Xamarin.Forms;
-using EPopup = ElmSharp.Popup;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
+using EPopup = ElmSharp.Popup;
 
-[assembly: XForms.Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ToastImplementation))]
+[assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ToastImplementation))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -38,7 +37,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public ToastImplementation()
         {
-            _control = new ElmSharp.Popup(TForms.NativeParent)
+            _control = new ElmSharp.Popup(XForms.NativeParent)
             {
                 Style = DefaultStyle,
                 AllowEvents = false,

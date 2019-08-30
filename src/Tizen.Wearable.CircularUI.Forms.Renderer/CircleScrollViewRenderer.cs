@@ -22,6 +22,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 using ERect = ElmSharp.Rect;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleScrollView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer))]
 
@@ -50,7 +51,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (Control == null)
             {
                 var surface = this.GetSurface();
-                SetNativeControl(new ElmSharp.Wearable.CircleScroller(Xamarin.Forms.Platform.Tizen.Forms.NativeParent, surface));
+                SetNativeControl(new ElmSharp.Wearable.CircleScroller(XForms.NativeParent, surface));
                 InitControl();
                 Control.Scrolled += OnScrolled;
                 _scrollCanvas = new Xamarin.Forms.Platform.Tizen.Native.Box(Control);
@@ -192,8 +193,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateContentSize()
         {
-            _scrollCanvas.MinimumWidth = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Width + Element.Padding.HorizontalThickness);
-            _scrollCanvas.MinimumHeight = Xamarin.Forms.Platform.Tizen.Forms.ConvertToScaledPixel(Element.ContentSize.Height + Element.Padding.VerticalThickness);
+            _scrollCanvas.MinimumWidth = XForms.ConvertToScaledPixel(Element.ContentSize.Width + Element.Padding.HorizontalThickness);
+            _scrollCanvas.MinimumHeight = XForms.ConvertToScaledPixel(Element.ContentSize.Height + Element.Padding.VerticalThickness);
 
             Device.BeginInvokeOnMainThread(() =>
             {

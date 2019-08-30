@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-using ElmSharp;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using ElmSharp;
 using Tizen.Wearable.CircularUI.Forms;
-using Xamarin.Forms.Platform.Tizen;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen.Native;
 
 [assembly: ExportRenderer(typeof(CirclePage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer))]

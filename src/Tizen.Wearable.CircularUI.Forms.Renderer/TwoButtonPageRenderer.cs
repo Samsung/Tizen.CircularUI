@@ -19,6 +19,7 @@ using System;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(TwoButtonPage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer))]
 
@@ -41,7 +42,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_widget == null)
             {
-                _widget = new TwoButtonPageWidget(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
+                _widget = new TwoButtonPageWidget(XForms.NativeParent);
                 _widget.Canvas.LayoutUpdated += OnLayoutUpdated;
                 SetNativeView(_widget);
             }

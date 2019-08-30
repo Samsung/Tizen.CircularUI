@@ -25,6 +25,7 @@ using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
+using XForms = Xamarin.Forms.Forms;
 
 using XToolbarItem = Xamarin.Forms.ToolbarItem;
 
@@ -147,7 +148,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
         void OnRealized()
         {
-            _box = new ObservableBox(Xamarin.Forms.Platform.Tizen.Forms.NativeParent);
+            _box = new ObservableBox(XForms.NativeParent);
             _box.SetLayoutCallback(OnLayout);
 
             _bgColorObject = new ElmSharp.Rectangle(_box)
