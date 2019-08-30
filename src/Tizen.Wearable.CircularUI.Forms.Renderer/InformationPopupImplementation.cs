@@ -243,16 +243,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (!string.IsNullOrEmpty(BottomButton.Text))_bottomButton.Text = BottomButton.Text;
 
-                if (BottomButton.Icon != null)
+                if (!BottomButton.IconImageSource.IsNullOrEmpty())
                 {
-                    var iconPath = BottomButton.Icon.File;
-                    if (!string.IsNullOrEmpty(iconPath))
-                    {
-                        var buttonImage = new ElmSharp.Image(_bottomButton);
-                        buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
-                        buttonImage.Show();
-                        _bottomButton.SetPartContent("elm.swallow.content", buttonImage);
-                    }
+                    var iconSource = BottomButton.IconImageSource as FileImageSource;
+                    var buttonImage = new ElmSharp.Image(_bottomButton);
+                    buttonImage.LoadAsync(ResourcePath.GetPath(iconSource));
+                    buttonImage.Show();
+                    _bottomButton.SetPartContent("elm.swallow.content", buttonImage);
                 }
 
                 _bottomButton.Clicked += (s, e) =>

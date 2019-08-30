@@ -41,10 +41,7 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new MenuItem
                 {
-                    Icon = new FileImageSource
-                    {
-                        File = "image/b_option_list_icon_delete.png",
-                    },
+                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_delete.png"),
                     Command = _viewModel.Command1
                 };
 
@@ -58,10 +55,7 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new MenuItem
                 {
-                    Icon = new FileImageSource
-                    {
-                        File = "image/b_option_list_icon_share.png",
-                    },
+                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png"),
                     Command = _viewModel.Command2
                 };
                 SecondButton = newItem;
@@ -112,10 +106,7 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new ColorMenuItem
                 {
-                    Icon = new FileImageSource
-                    {
-                        File = "image/b_option_list_icon_delete.png",
-                    },
+                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_delete.png"),
                     BackgroundColor = Color.Green,
                     Command = _viewModel.Command1
                 };
@@ -130,10 +121,7 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new ColorMenuItem
                 {
-                    Icon = new FileImageSource
-                    {
-                        File = "image/b_option_list_icon_share.png",
-                    },
+                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png"),
                     BackgroundColor = Color.Blue,
                     Command = _viewModel.Command2
                 };

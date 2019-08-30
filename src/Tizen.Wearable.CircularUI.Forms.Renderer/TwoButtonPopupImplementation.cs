@@ -244,13 +244,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (!string.IsNullOrEmpty(FirstButton.Text)) _firstButton.Text = FirstButton.Text;
 
-                if (FirstButton.Icon != null)
+                if (!FirstButton.IconImageSource.IsNullOrEmpty())
                 {
-                    var iconPath = FirstButton.Icon.File;
-                    if (!string.IsNullOrEmpty(iconPath))
+                    var iconSource = FirstButton.IconImageSource as FileImageSource;
+                    if (!iconSource.IsNullOrEmpty())
                     {
                         var buttonImage = new ElmSharp.Image(_firstButton);
-                        buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
+                        buttonImage.LoadAsync(ResourcePath.GetPath(iconSource));
                         buttonImage.Show();
                         _firstButton.SetPartContent("elm.swallow.content", buttonImage);
                     }
@@ -290,13 +290,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (!string.IsNullOrEmpty(SecondButton.Text)) _secondButton.Text = SecondButton.Text;
 
-                if (SecondButton.Icon != null)
+                if (!SecondButton.IconImageSource.IsNullOrEmpty())
                 {
-                    var iconPath = SecondButton.Icon.File;
-                    if (!string.IsNullOrEmpty(iconPath))
+                    var iconSource = SecondButton.IconImageSource as FileImageSource;
+                    if (!iconSource.IsNullOrEmpty())
                     {
                         var buttonImage = new ElmSharp.Image(_secondButton);
-                        buttonImage.LoadAsync(ResourcePath.GetPath(iconPath));
+                        buttonImage.LoadAsync(ResourcePath.GetPath(iconSource));
                         buttonImage.Show();
                         _secondButton.SetPartContent("elm.swallow.content", buttonImage);
                     }

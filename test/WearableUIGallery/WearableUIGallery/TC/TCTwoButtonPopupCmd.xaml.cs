@@ -71,10 +71,7 @@ namespace WearableUIGallery.TC
             FirstButton = new MenuItem()
             {
                 // Set icon
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_delete.png"),
                 //Set command
                 Command = new Command(() =>
                 {
@@ -86,10 +83,7 @@ namespace WearableUIGallery.TC
             SecondButton = new MenuItem()
             {
                 // Set icon
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_check.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_check.png"),
                 //Set command
                 Command = new Command(() =>
                 {

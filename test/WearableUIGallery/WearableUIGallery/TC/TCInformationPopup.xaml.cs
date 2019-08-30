@@ -50,10 +50,7 @@ namespace WearableUIGallery.TC
 
             _iconBottomButton = new MenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_delete.png"),
                 Command = new Command(() =>
                 {
                     Console.WriteLine("icon bottom button Command!!");
@@ -65,10 +62,7 @@ namespace WearableUIGallery.TC
             _textIconBottomButton = new MenuItem
             {
                 Text = "OK",
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_delete.png"),
                 Command = new Command(() =>
                 {
                     Console.WriteLine("text&icon bottom button Command!!");
