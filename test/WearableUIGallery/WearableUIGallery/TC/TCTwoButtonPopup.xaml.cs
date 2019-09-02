@@ -44,7 +44,9 @@ namespace WearableUIGallery.TC
 
             _leftButton = new MenuItem
             {
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
                 Icon = new FileImageSource
+#pragma warning restore CS0618
                 {
                     File = "image/b_option_list_icon_share.png",
                 },
@@ -58,7 +60,9 @@ namespace WearableUIGallery.TC
 
             _rightButton = new MenuItem
             {
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
                 Icon = new FileImageSource
+#pragma warning restore CS0618
                 {
                     File = "image/b_option_list_icon_delete.png",
                 },
@@ -186,10 +190,7 @@ height. This has two button in action area and title text in title area";
         {
             var leftButton2 = new MenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_check.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_check.png"),
                 Command = new Command(() =>
                 {
                     Console.WriteLine("left button2 Command!!");
@@ -200,10 +201,7 @@ height. This has two button in action area and title text in title area";
 
             var rightButton2 = new MenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/tw_ic_popup_btn_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_delete.png"),
                 Command = new Command(() =>
                 {
                     Console.WriteLine("right button2 Command!!");
@@ -233,10 +231,7 @@ height. This has two button in action area and title text in title area";
         {
             _jpgIconButton1 = new MenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/a.jpg",
-                },
+                IconImageSource = ImageSource.FromFile("image/a.jpg"),
                 Command = new Command(() =>
                 {
                     Console.WriteLine("jpg button1 Command!!");
@@ -247,10 +242,7 @@ height. This has two button in action area and title text in title area";
 
             _jpgIconButton2 = new MenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/b.jpg",
-                },
+                IconImageSource = ImageSource.FromFile("image/b.jpg"),
                 Command = new Command(() =>
                 {
                     Console.WriteLine("jpg button2 Command!!");
@@ -351,10 +343,7 @@ height. This has two button in action area and title text in title area";
 
             _colorleftButton = new ColorMenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/b_option_list_icon_share.png",
-                },
+                IconImageSource= ImageSource.FromFile("image/b_option_list_icon_share.png"),
                 BackgroundColor = Color.Green,
                 Command = new Command(() =>
                 {
@@ -375,10 +364,7 @@ height. This has two button in action area and title text in title area";
 
             _colorRightButton = new ColorMenuItem
             {
-                Icon = new FileImageSource
-                {
-                    File = "image/b_option_list_icon_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("image/b_option_list_icon_delete.png"),
                 BackgroundColor = Color.Blue,
                 Command = new Command(() =>
                 {

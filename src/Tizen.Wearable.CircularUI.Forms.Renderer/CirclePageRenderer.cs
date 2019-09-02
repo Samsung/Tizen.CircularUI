@@ -41,7 +41,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         ElmSharp.EvasImage _bgImageObject;
         ElmSharp.Layout _surfaceLayout;
         ElmSharp.Button _actionButton;
-        string _bgImage;
+        ImageSource _bgImage;
 
         ElmSharp.Wearable.CircleSurface _surface;
         IRotaryFocusable _currentRotaryFocusObject;
@@ -52,7 +52,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public CirclePageRenderer()
         {
-            RegisterPropertyHandler(Xamarin.Forms.Page.BackgroundImageProperty, UpdateBackgroundImage);
+            RegisterPropertyHandler(Xamarin.Forms.Page.BackgroundImageSourceProperty, UpdateBackgroundImage);
             RegisterPropertyHandler(CirclePage.ActionButtonProperty, UpdateActionButton);
             RegisterPropertyHandler(CirclePage.RotaryFocusObjectProperty, UpdateRotaryFocusObject);
         }
@@ -112,17 +112,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
         protected void UpdateBackgroundImage(bool initialize)
         {
-            if (initialize && string.IsNullOrWhiteSpace(Element.BackgroundImage))
+            if (initialize && Element.BackgroundImageSource.IsNullOrEmpty())
                 return;
-            if (string.IsNullOrWhiteSpace(Element.BackgroundImage))
+
+            var bgImageSource = Element.BackgroundImageSource as FileImageSource;
+            if (bgImageSource.IsNullOrEmpty())
             {
                 _bgImageObject.File = null;
                 _bgImage = null;
             }
             else
             {
-                _bgImageObject.File = ResourcePath.GetPath(Element.BackgroundImage);
-                _bgImage = Element.BackgroundImage;
+                _bgImageObject.File = ResourcePath.GetPath(bgImageSource);
+                _bgImage = Element.BackgroundImageSource;
             }
             UpdateBackground();
         }
@@ -229,7 +231,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateBackground()
         {
-            if (string.IsNullOrEmpty(_bgImage))
+            if (_bgImage.IsNullOrEmpty())
             {
                 _bgImageObject.Hide();
             }
@@ -257,9 +259,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
                 _actionButton.Text = Element.ActionButton.Text;
                 _actionButton.IsEnabled = Element.ActionButton.IsEnable;
-                if (Element.ActionButton.Icon != null)
+                if (!Element.ActionButton.IconImageSource.IsNullOrEmpty())
                 {
-                    var path = ResourcePath.GetPath(Element.ActionButton.Icon);
+                    var imageSource = Element.ActionButton.IconImageSource as FileImageSource;
+                    var path = ResourcePath.GetPath(imageSource);
                     var buttonImage = new ElmSharp.Image(_actionButton);
                     buttonImage.LoadAsync(path);
                     buttonImage.Show();
@@ -325,11 +328,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void AddToolbarItem(XToolbarItem item)
         {
             var moreOptionItem = new ActionMoreOptionItem();
-            var icon = item.Icon;
-            if (!string.IsNullOrEmpty(icon.File))
+            var icon = item.IconImageSource;
+            if (!icon.IsNullOrEmpty())
             {
+                var iconSource = icon as FileImageSource;
                 var img = new ElmSharp.Image(_moreOption);
-                img.LoadAsync(ResourcePath.GetPath(icon.File));
+                img.LoadAsync(ResourcePath.GetPath(iconSource));
                 moreOptionItem.Icon = img;
             }
             var text = item.Text;

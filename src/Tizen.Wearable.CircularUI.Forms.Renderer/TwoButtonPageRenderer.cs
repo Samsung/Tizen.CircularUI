@@ -32,7 +32,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public TwoButtonPageRenderer()
         {
-            RegisterPropertyHandler(TwoButtonPage.BackgroundImageProperty, UpdateBackgroundImage);
+            RegisterPropertyHandler(TwoButtonPage.BackgroundImageSourceProperty, UpdateBackgroundImage);
             RegisterPropertyHandler(TwoButtonPage.FirstButtonProperty, UpdateFirstButton);
             RegisterPropertyHandler(TwoButtonPage.SecondButtonProperty, UpdateSecondButton);
             RegisterPropertyHandler(TwoButtonPage.OverlapProperty, UpdateOverlap);
@@ -98,13 +98,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateBackgroundImage(bool initialize)
         {
-            if (initialize && string.IsNullOrEmpty(Element.BackgroundImage))
+            if (initialize && Element.BackgroundImageSource.IsNullOrEmpty())
                 return;
 
-            if (string.IsNullOrEmpty(Element.BackgroundImage))
+            var bgImage = Element.BackgroundImageSource as FileImageSource;
+            if (bgImage.IsNullOrEmpty())
                 _widget.File = null;
             else
-                _widget.File = ResourcePath.GetPath(Element.BackgroundImage);
+                _widget.File = ResourcePath.GetPath(bgImage);
         }
 
         void UpdateSecondButton(bool initialize)
@@ -115,12 +116,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.SecondButton is ColorMenuItem)
                 {
                     var item = ((ColorMenuItem)Element.SecondButton);
-                    _widget.ShowButton2(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton2(item.Text, item.IconImageSource as FileImageSource, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
                 }
                 else
                 {
                     var item = Element.SecondButton;
-                    _widget.ShowButton2(item.Text, item.Icon, () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton2(item.Text, item.IconImageSource as FileImageSource, () => ((IMenuItemController)item).Activate());
                 }
             }
             else
@@ -137,12 +138,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.FirstButton is ColorMenuItem)
                 {
                     var item = ((ColorMenuItem)Element.FirstButton);
-                    _widget.ShowButton1(item.Text, item.Icon, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton1(item.Text, item.IconImageSource as FileImageSource, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
                 }
                 else
                 {
                     var item = Element.FirstButton;
-                    _widget.ShowButton1(item.Text, item.Icon, () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton1(item.Text, item.IconImageSource as FileImageSource, () => ((IMenuItemController)item).Activate());
                 }
             }
             else

@@ -41,7 +41,9 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new MenuItem
                 {
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
                     Icon = new FileImageSource
+#pragma warning restore CS0618
                     {
                         File = "image/b_option_list_icon_delete.png",
                     },
@@ -58,7 +60,9 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new MenuItem
                 {
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
                     Icon = new FileImageSource
+#pragma warning restore CS0618
                     {
                         File = "image/b_option_list_icon_share.png",
                     },
@@ -112,10 +116,7 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new ColorMenuItem
                 {
-                    Icon = new FileImageSource
-                    {
-                        File = "image/b_option_list_icon_delete.png",
-                    },
+                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_delete.png"),
                     BackgroundColor = Color.Green,
                     Command = _viewModel.Command1
                 };
@@ -130,10 +131,7 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new ColorMenuItem
                 {
-                    Icon = new FileImageSource
-                    {
-                        File = "image/b_option_list_icon_share.png",
-                    },
+                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png"),
                     BackgroundColor = Color.Blue,
                     Command = _viewModel.Command2
                 };

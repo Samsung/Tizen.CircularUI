@@ -17,9 +17,7 @@
 using ElmSharp;
 using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 
@@ -105,15 +103,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             base.OnUnrealize();
         }
 
-        public void ShowButton1(string text, string image, Color backgroundColor, Action action) => ShowButton(0, "popup/circle/left", "actionbtn1", text, backgroundColor, image, action);
-        public void ShowButton1(string text, string image, Action action) => ShowButton1(text, image, Color.Default, action);
+        public void ShowButton1(string text, FileImageSource image, ElmSharp.Color backgroundColor, Action action) => ShowButton(0, "popup/circle/left", "actionbtn1", text, backgroundColor, image, action);
+        public void ShowButton1(string text, FileImageSource image, Action action) => ShowButton1(text, image, ElmSharp.Color.Default, action);
         public void ShowButton1(string text, Action action) => ShowButton1(text, null, action);
         public void ShowButton1(string text) => ShowButton1(text, null, null);
 
         public void HideButton1() => HideButton(0);
-        public void ShowButton2(string text, string image, Color backgroundColor, Action action) => ShowButton(1, "popup/circle/right", "actionbtn2", text, backgroundColor, image, action);
-        public void ShowButton2(string text, string image, Action action) => ShowButton2(text, image, Color.Default, action);
-        public void ShowButton2(string text, string image) => ShowButton2(text, image, null);
+        public void ShowButton2(string text, FileImageSource image, ElmSharp.Color backgroundColor, Action action) => ShowButton(1, "popup/circle/right", "actionbtn2", text, backgroundColor, image, action);
+        public void ShowButton2(string text, FileImageSource image, Action action) => ShowButton2(text, image, ElmSharp.Color.Default, action);
+        public void ShowButton2(string text, FileImageSource image) => ShowButton2(text, image, null);
         public void ShowButton2(string text) => ShowButton2(text, null, null);
         public void HideButton2() => HideButton(1);
 
@@ -134,7 +132,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Canvas.Geometry = rect;
         }
 
-        void ShowButton(int id, string style, string part, string text, Color buttonBgColor, string image = null, Action action = null)
+        void ShowButton(int id, string style, string part, string text, ElmSharp.Color buttonBgColor, FileImageSource image = null, Action action = null)
         {
             HideButton(id);
 
@@ -143,7 +141,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 Text = text,
                 Style = style
             };
-            if (!string.IsNullOrEmpty(image))
+            if (!image.IsNullOrEmpty())
             {
                 var path = ResourcePath.GetPath(image);
                 var buttonImage = new ElmSharp.Image(_buttons[id]);
@@ -152,7 +150,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _buttons[id].SetPartContent("elm.swallow.content", buttonImage);
             }
 
-            if (buttonBgColor != Color.Default)
+            if (buttonBgColor != ElmSharp.Color.Default)
             {
                 _buttons[id].BackgroundColor = buttonBgColor;
             }
