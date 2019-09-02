@@ -21,7 +21,8 @@ using UIComponents.Tizen.Wearable.Renderers;
 using Xamarin.Forms.Platform.Tizen;
 using ELayout = ElmSharp.Layout;
 using EBackgroundOptions = ElmSharp.BackgroundOptions;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
+using TForms = Xamarin.Forms.Forms;
+using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(NoContentView), typeof(NoContentViewRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers

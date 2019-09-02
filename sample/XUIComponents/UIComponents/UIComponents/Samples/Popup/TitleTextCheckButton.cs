@@ -34,10 +34,7 @@ namespace UIComponents.Samples.Popup
             FirstButton = new MenuItem()
             {
                 // Set icon
-                Icon = new FileImageSource
-                {
-                    File = "b_option_list_icon_share.png",
-                },
+                IconImageSource = ImageSource.FromFile("b_option_list_icon_share.png"),
                 //Set command
                 Command = new Command(() =>
                 {
@@ -50,10 +47,7 @@ namespace UIComponents.Samples.Popup
             SecondButton = new MenuItem()
             {
                 // Set icon
-                Icon = new FileImageSource
-                {
-                    File = "b_option_list_icon_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("b_option_list_icon_delete.png"),
                 //Set command
                 Command = new Command(() =>
                 {

@@ -18,10 +18,11 @@ using System;
 using System.ComponentModel;
 using UIComponents.Extensions;
 using UIComponents.Tizen.Wearable.Renderers;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using EBackground = ElmSharp.Background;
 using EBackgroundOptions = ElmSharp.BackgroundOptions;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
+using TForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Background), typeof(BackgroundRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers
