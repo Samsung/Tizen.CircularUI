@@ -116,12 +116,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.SecondButton is ColorMenuItem)
                 {
                     var item = ((ColorMenuItem)Element.SecondButton);
-                    _widget.ShowButton2(item.Text, item.IconImageSource, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton2(item.Text, item.IconImageSource as FileImageSource, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
                 }
                 else
                 {
                     var item = Element.SecondButton;
-                    _widget.ShowButton2(item.Text, item.IconImageSource, () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton2(item.Text, item.IconImageSource as FileImageSource, () => ((IMenuItemController)item).Activate());
                 }
             }
             else
@@ -138,12 +138,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.FirstButton is ColorMenuItem)
                 {
                     var item = ((ColorMenuItem)Element.FirstButton);
-                    _widget.ShowButton1(item.Text, item.IconImageSource, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton1(item.Text, item.IconImageSource as FileImageSource, item.BackgroundColor.ToNative(), () => ((IMenuItemController)item).Activate());
                 }
                 else
                 {
                     var item = Element.FirstButton;
-                    _widget.ShowButton1(item.Text, item.IconImageSource, () => ((IMenuItemController)item).Activate());
+                    _widget.ShowButton1(item.Text, item.IconImageSource as FileImageSource, () => ((IMenuItemController)item).Activate());
                 }
             }
             else

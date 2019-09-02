@@ -62,7 +62,12 @@ namespace WearableUIGallery.TC
             _textIconBottomButton = new MenuItem
             {
                 Text = "OK",
-                IconImageSource = ImageSource.FromFile("image/tw_ic_popup_btn_delete.png"),
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
+                Icon = new FileImageSource
+#pragma warning restore CS0618
+                {
+                    File = "image/tw_ic_popup_btn_delete.png",
+                },
                 Command = new Command(() =>
                 {
                     Console.WriteLine("text&icon bottom button Command!!");

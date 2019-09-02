@@ -41,7 +41,12 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new MenuItem
                 {
-                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_delete.png"),
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
+                    Icon = new FileImageSource
+#pragma warning restore CS0618
+                    {
+                        File = "image/b_option_list_icon_delete.png",
+                    },
                     Command = _viewModel.Command1
                 };
 
@@ -55,7 +60,12 @@ namespace WearableUIGallery.TC
             {
                 var newItem = new MenuItem
                 {
-                    IconImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png"),
+#pragma warning disable CS0618 // Icon is obsolete. This code is for checking backword compatibility.
+                    Icon = new FileImageSource
+#pragma warning restore CS0618
+                    {
+                        File = "image/b_option_list_icon_share.png",
+                    },
                     Command = _viewModel.Command2
                 };
                 SecondButton = newItem;
