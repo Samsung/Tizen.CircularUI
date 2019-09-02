@@ -5284,18 +5284,18 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.Action)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.Action)
   nameWithType: TwoButtonPageWidget.ShowButton1(String, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,ElmSharp.Color,System.Action)
-  name: ShowButton1(String, String, Color, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_ElmSharp_Color_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,ElmSharp.Color,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.String, ElmSharp.Color, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton1(String, String, Color, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,System.Action)
-  name: ShowButton1(String, String, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_String_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.String,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.String, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton1(String, String, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
+  name: ShowButton1(String, FileImageSource, Color, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_Xamarin_Forms_FileImageSource_ElmSharp_Color_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, Xamarin.Forms.FileImageSource, ElmSharp.Color, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, FileImageSource, Color, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,System.Action)
+  name: ShowButton1(String, FileImageSource, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_Xamarin_Forms_FileImageSource_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, Xamarin.Forms.FileImageSource, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, FileImageSource, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1*
   name: ShowButton1
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_
@@ -5309,24 +5309,24 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
   nameWithType: TwoButtonPageWidget.ShowButton2(String)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String)
-  name: ShowButton2(String, String)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, System.String)
-  nameWithType: TwoButtonPageWidget.ShowButton2(String, String)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,ElmSharp.Color,System.Action)
-  name: ShowButton2(String, String, Color, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_ElmSharp_Color_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,ElmSharp.Color,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, System.String, ElmSharp.Color, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton2(String, String, Color, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,System.Action)
-  name: ShowButton2(String, String, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_System_String_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,System.String,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, System.String, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton2(String, String, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource)
+  name: ShowButton2(String, FileImageSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Xamarin_Forms_FileImageSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Xamarin.Forms.FileImageSource)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
+  name: ShowButton2(String, FileImageSource, Color, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Xamarin_Forms_FileImageSource_ElmSharp_Color_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Xamarin.Forms.FileImageSource, ElmSharp.Color, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource, Color, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,System.Action)
+  name: ShowButton2(String, FileImageSource, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Xamarin_Forms_FileImageSource_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Xamarin.Forms.FileImageSource, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2*
   name: ShowButton2
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_
