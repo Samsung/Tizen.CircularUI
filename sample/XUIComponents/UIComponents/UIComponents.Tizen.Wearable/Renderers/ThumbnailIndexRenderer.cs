@@ -20,8 +20,9 @@ using UIComponents.Tizen.Wearable.Renderers;
 using Xamarin.Forms.Platform.Tizen;
 using ElmSharp;
 using Elayout = ElmSharp.Layout;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
+using TForms = Xamarin.Forms.Forms;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(ThumbnailIndex), typeof(ThumbnailIndexRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers

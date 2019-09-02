@@ -39,10 +39,7 @@ height. This has two button in action area and title text in title area";
             FirstButton = new MenuItem()
             {
                 // Set icon
-                Icon = new FileImageSource
-                {
-                    File = "tw_ic_popup_btn_delete.png",
-                },
+                IconImageSource = ImageSource.FromFile("tw_ic_popup_btn_delete.png"),
                 //Set command
                 Command = new Command(() =>
                 {
@@ -55,10 +52,7 @@ height. This has two button in action area and title text in title area";
             SecondButton = new MenuItem()
             {
                 // Set icon
-                Icon = new FileImageSource
-                {
-                    File = "tw_ic_popup_btn_check.png",
-                },
+                IconImageSource = ImageSource.FromFile("tw_ic_popup_btn_check.png"),
                 //Set command
                 Command = new Command(() =>
                 {

@@ -18,9 +18,10 @@ using System;
 using System.ComponentModel;
 using UIComponents.Extensions;
 using UIComponents.Tizen.Wearable.Renderers;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using EProgressBar = ElmSharp.ProgressBar;
-using TForms = Xamarin.Forms.Platform.Tizen.Forms;
+using TForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(CircleProgress), typeof(CircleProgressRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers

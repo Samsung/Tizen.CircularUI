@@ -9,7 +9,7 @@
         <StackLayout VerticalOptions="Center">
             <w:Check DisplayStyle="Default" HorizontalOptions="CenterAndExpand" />
             <w:Check DisplayStyle="Small" HorizontalOptions="CenterAndExpand" />
-            <w:Check DisplayStyle="Onoff" HorizontalOptions="FillAndExpand" />
+            <w:Check DisplayStyle="Onoff" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </w:CirclePage.Content>
 </w:CirclePage>
