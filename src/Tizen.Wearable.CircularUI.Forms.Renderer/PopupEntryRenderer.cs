@@ -113,7 +113,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.AllowFocus(true);
             _editor.Show();
 
-            _editor.SetInputPanelReturnKeyType(InputPanelReturnKeyType.Done);
+            _editor.SetInputPanelReturnKeyType(Element.ReturnType.ToInputPanelReturnKeyType());
 
             _editor.UpdateKeyboard(Element.Keyboard, Element.IsSpellCheckEnabled, Element.IsTextPredictionEnabled);
 
@@ -246,6 +246,30 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else
             {
                 HidePopup();
+            }
+        }
+    }
+
+    internal static class EntryExtensions
+    {
+        internal static InputPanelReturnKeyType ToInputPanelReturnKeyType(this ReturnType returnType)
+        {
+            switch (returnType)
+            {
+                case ReturnType.Go:
+                    return InputPanelReturnKeyType.Go;
+                case ReturnType.Next:
+                    return InputPanelReturnKeyType.Next;
+                case ReturnType.Send:
+                    return InputPanelReturnKeyType.Send;
+                case ReturnType.Search:
+                    return InputPanelReturnKeyType.Search;
+                case ReturnType.Done:
+                    return InputPanelReturnKeyType.Done;
+                case ReturnType.Default:
+                    return InputPanelReturnKeyType.Default;
+                default:
+                    throw new NotImplementedException($"ReturnType {returnType} not supported");
             }
         }
     }

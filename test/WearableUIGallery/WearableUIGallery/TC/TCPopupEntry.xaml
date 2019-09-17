@@ -18,6 +18,7 @@
                     Placeholder="Foobar"
                     PlaceholderColor="Blue"
                     VerticalOptions="CenterAndExpand"
+                    ReturnType="Search"
                     x:Name="PopupEntry1"/>
                 <w:PopupEntry
                     AutomationId="popupEntry2"
