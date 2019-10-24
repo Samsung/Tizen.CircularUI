@@ -5630,6 +5630,137 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.Run
   nameWithType: FormsWatchface.Run
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget
+  name: Tizen.Wearable.CircularUI.Forms.Renderer.Widget
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.html
+  commentId: N:Tizen.Wearable.CircularUI.Forms.Renderer.Widget
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget
+  nameWithType: Tizen.Wearable.CircularUI.Forms.Renderer.Widget
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication
+  name: FormsWidgetApplication
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication
+  nameWithType: FormsWidgetApplication
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.#ctor(System.Collections.Generic.IDictionary{System.Type,System.String})
+  name: FormsWidgetApplication(IDictionary<Type, String>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetApplication__ctor_System_Collections_Generic_IDictionary_System_Type_System_String__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.#ctor(System.Collections.Generic.IDictionary{System.Type,System.String})
+  name.vb: FormsWidgetApplication(IDictionary(Of Type, String))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.FormsWidgetApplication(System.Collections.Generic.IDictionary<System.Type, System.String>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.FormsWidgetApplication(System.Collections.Generic.IDictionary(Of System.Type, System.String))
+  nameWithType: FormsWidgetApplication.FormsWidgetApplication(IDictionary<Type, String>)
+  nameWithType.vb: FormsWidgetApplication.FormsWidgetApplication(IDictionary(Of Type, String))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.#ctor(System.Type)
+  name: FormsWidgetApplication(Type)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetApplication__ctor_System_Type_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.#ctor(System.Type)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.FormsWidgetApplication(System.Type)
+  nameWithType: FormsWidgetApplication.FormsWidgetApplication(Type)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.#ctor*
+  name: FormsWidgetApplication
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetApplication__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.FormsWidgetApplication
+  nameWithType: FormsWidgetApplication.FormsWidgetApplication
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.Exit
+  name: Exit()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetApplication_Exit
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.Exit
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.Exit()
+  nameWithType: FormsWidgetApplication.Exit()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.Exit*
+  name: Exit
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetApplication_Exit_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.Exit
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetApplication.Exit
+  nameWithType: FormsWidgetApplication.Exit
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase
+  name: FormsWidgetBase
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase
+  nameWithType: FormsWidgetBase
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
+  name: LoadApplication(Application)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_LoadApplication_Xamarin_Forms_Application_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
+  nameWithType: FormsWidgetBase.LoadApplication(Application)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication*
+  name: LoadApplication
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_LoadApplication_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication
+  nameWithType: FormsWidgetBase.LoadApplication
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Tizen.Applications.Bundle,System.Int32,System.Int32)
+  name: OnCreate(Bundle, Int32, Int32)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnCreate_Tizen_Applications_Bundle_System_Int32_System_Int32_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Tizen.Applications.Bundle,System.Int32,System.Int32)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Tizen.Applications.Bundle, System.Int32, System.Int32)
+  nameWithType: FormsWidgetBase.OnCreate(Bundle, Int32, Int32)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate*
+  name: OnCreate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnCreate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate
+  nameWithType: FormsWidgetBase.OnCreate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(Tizen.Applications.WidgetBase.WidgetDestroyType,Tizen.Applications.Bundle)
+  name: OnDestroy(WidgetBase.WidgetDestroyType, Bundle)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnDestroy_Tizen_Applications_WidgetBase_WidgetDestroyType_Tizen_Applications_Bundle_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(Tizen.Applications.WidgetBase.WidgetDestroyType,Tizen.Applications.Bundle)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(Tizen.Applications.WidgetBase.WidgetDestroyType, Tizen.Applications.Bundle)
+  nameWithType: FormsWidgetBase.OnDestroy(WidgetBase.WidgetDestroyType, Bundle)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy*
+  name: OnDestroy
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnDestroy_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy
+  nameWithType: FormsWidgetBase.OnDestroy
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnPause
+  name: OnPause()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnPause
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnPause
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnPause()
+  nameWithType: FormsWidgetBase.OnPause()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnPause*
+  name: OnPause
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnPause_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnPause
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnPause
+  nameWithType: FormsWidgetBase.OnPause
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume
+  name: OnResume()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnResume
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume()
+  nameWithType: FormsWidgetBase.OnResume()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume*
+  name: OnResume
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnResume_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume
+  nameWithType: FormsWidgetBase.OnResume
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(ElmSharp.EvasObject)
+  name: OnRootViewUpdated(EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnRootViewUpdated_ElmSharp_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(ElmSharp.EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(ElmSharp.EvasObject)
+  nameWithType: FormsWidgetBase.OnRootViewUpdated(EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated*
+  name: OnRootViewUpdated
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnRootViewUpdated_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated
+  nameWithType: FormsWidgetBase.OnRootViewUpdated
 - uid: Tizen.Wearable.CircularUI.Forms.RotaryEventArgs
   name: RotaryEventArgs
   href: api/Tizen.Wearable.CircularUI.Forms.RotaryEventArgs.html
