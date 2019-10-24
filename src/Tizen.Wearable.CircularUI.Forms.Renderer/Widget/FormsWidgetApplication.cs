@@ -24,12 +24,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Widget
     {
         protected FormsWidgetApplication(Type type) : base(type)
         {
-            Xamarin.Forms.Platform.Tizen.Forms.SetFlags("LightweightPlatform_Experimental");
+            Xamarin.Forms.Forms.SetFlags("LightweightPlatform_Experimental");
         }
 
         protected FormsWidgetApplication(IDictionary<Type, string> typeInfo) : base(typeInfo)
         {
-            Xamarin.Forms.Platform.Tizen.Forms.SetFlags("LightweightPlatform_Experimental");
+            Xamarin.Forms.Forms.SetFlags("LightweightPlatform_Experimental");
         }
 
         public override void Exit()

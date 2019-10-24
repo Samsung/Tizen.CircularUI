@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SimpleWidgetApp
@@ -15,8 +9,7 @@ namespace SimpleWidgetApp
         public WidgetApplication()
         {
             InitializeComponent();
-
-            MainPage = new SimpleWidgetApp.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

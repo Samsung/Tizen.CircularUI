@@ -48,7 +48,15 @@ namespace SimpleWidgetApp
 
         void OnButtonClicked(object sender, EventArgs args)
         {
-            layout.BackgroundColor = _colors[index++];
+            layout.BackgroundColor = _colors[index];
+            if (index == _colors.Length-1)
+            {
+                index = 0;
+            }
+            else
+            {
+                index++;
+            }
         }
     }
 }
