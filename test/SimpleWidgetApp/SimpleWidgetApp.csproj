@@ -1,0 +1,19 @@
+﻿<Project Sdk="Tizen.NET.Sdk/1.0.5">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TizenNetPackageVersion>4.0.0</TizenNetPackageVersion>
+    <TargetFramework>tizen40</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj" />
+    <ProjectReference Include="..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
+  </ItemGroup>
+
+</Project>
+
