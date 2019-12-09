@@ -189,7 +189,7 @@ When `Value` property is increased or decreased, circle object extends or shrink
 - `BarLineWidth`: Gets or sets the bar line width value.
 - `BackgroundLineWidth`: Gets or sets the background line width value.
 - `BarColor`: Gets or sets the bar color value.
-- `BackgroundLineWidth`: Gets or sets the background color value.
+- `BackgroundColor`: Gets or sets the background color value.
 
 For more information, see the following links:
 
@@ -268,7 +268,7 @@ The `Increment` property is the incremental or decremental change as you rotates
 - `BarLineWidth`: Gets or sets the bar line width value.
 - `BackgroundLineWidth`: Gets or sets the background line width value.
 - `BarColor`: Gets or sets the bar color value.
-- `BackgroundLineWidth`: Gets or sets the background color value.
+- `BackgroundColor`: Gets or sets the background color value.
 
 For more information, see the following links:
 - [CircleSurfaceItem  API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceItem.html)
