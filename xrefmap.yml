@@ -496,11 +496,11 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
   nameWithType: CircleListView.CancelEffectProperty
-- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(Xamarin.Forms.BindableObject)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
   name: GetCancelEffect(BindableObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_GetCancelEffect_Xamarin_Forms_BindableObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(Xamarin.Forms.BindableObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(Xamarin.Forms.BindableObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_GetCancelEffect_BindableObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
   nameWithType: CircleListView.GetCancelEffect(BindableObject)
 - uid: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect*
   name: GetCancelEffect
@@ -509,11 +509,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect
   nameWithType: CircleListView.GetCancelEffect
-- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(Xamarin.Forms.BindableObject,System.Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject,System.Boolean)
   name: SetCancelEffect(BindableObject, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_SetCancelEffect_Xamarin_Forms_BindableObject_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(Xamarin.Forms.BindableObject,System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(Xamarin.Forms.BindableObject, System.Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_SetCancelEffect_BindableObject_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject,System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject, System.Boolean)
   nameWithType: CircleListView.SetCancelEffect(BindableObject, Boolean)
 - uid: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect*
   name: SetCancelEffect
@@ -876,11 +876,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
   fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
   nameWithType: CircleSurfaceEffectBehavior
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(Xamarin.Forms.BindableObject)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
   name: GetRotaryFocusObject(BindableObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_Xamarin_Forms_BindableObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(Xamarin.Forms.BindableObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(Xamarin.Forms.BindableObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_GetRotaryFocusObject_BindableObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
   nameWithType: CircleSurfaceEffectBehavior.GetRotaryFocusObject(BindableObject)
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject*
   name: GetRotaryFocusObject
@@ -889,11 +889,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.GetRotaryFocusObject
   nameWithType: CircleSurfaceEffectBehavior.GetRotaryFocusObject
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Page)
   name: OnAttachedTo(Page)
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Xamarin_Forms_Page_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Xamarin.Forms.Page)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnAttachedTo_Page_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Page)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo(Page)
   nameWithType: CircleSurfaceEffectBehavior.OnAttachedTo(Page)
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo*
   name: OnAttachedTo
@@ -902,11 +902,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnAttachedTo
   nameWithType: CircleSurfaceEffectBehavior.OnAttachedTo
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Page)
   name: OnDetachingFrom(Page)
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_Xamarin_Forms_Page_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Xamarin.Forms.Page)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_OnDetachingFrom_Page_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Page)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom(Page)
   nameWithType: CircleSurfaceEffectBehavior.OnDetachingFrom(Page)
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.OnDetachingFrom*
   name: OnDetachingFrom
@@ -921,11 +921,11 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
   nameWithType: CircleSurfaceEffectBehavior.RotaryFocusObjectProperty
-- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(Xamarin.Forms.BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
+- uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
   name: SetRotaryFocusObject(BindableObject, IRotaryFocusable)
-  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_Xamarin_Forms_BindableObject_Tizen_Wearable_CircularUI_Forms_IRotaryFocusable_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(Xamarin.Forms.BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
-  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(Xamarin.Forms.BindableObject, Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_CircleSurfaceEffectBehavior_SetRotaryFocusObject_BindableObject_Tizen_Wearable_CircularUI_Forms_IRotaryFocusable_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject,Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject, Tizen.Wearable.CircularUI.Forms.IRotaryFocusable)
   nameWithType: CircleSurfaceEffectBehavior.SetRotaryFocusObject(BindableObject, IRotaryFocusable)
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.SetRotaryFocusObject*
   name: SetRotaryFocusObject
@@ -1395,11 +1395,11 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OffsetProperty
   fullName: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OffsetProperty
   nameWithType: ContextPopupEffectBehavior.OffsetProperty
-- uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo(Xamarin.Forms.View)
+- uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo(View)
   name: OnAttachedTo(View)
-  href: api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_ContextPopupEffectBehavior_OnAttachedTo_Xamarin_Forms_View_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo(Xamarin.Forms.View)
-  fullName: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo(Xamarin.Forms.View)
+  href: api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_ContextPopupEffectBehavior_OnAttachedTo_View_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo(View)
+  fullName: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo(View)
   nameWithType: ContextPopupEffectBehavior.OnAttachedTo(View)
 - uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo*
   name: OnAttachedTo
@@ -1408,11 +1408,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnAttachedTo
   nameWithType: ContextPopupEffectBehavior.OnAttachedTo
-- uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom(Xamarin.Forms.View)
+- uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom(View)
   name: OnDetachingFrom(View)
-  href: api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_ContextPopupEffectBehavior_OnDetachingFrom_Xamarin_Forms_View_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom(Xamarin.Forms.View)
-  fullName: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom(Xamarin.Forms.View)
+  href: api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html#Tizen_Wearable_CircularUI_Forms_ContextPopupEffectBehavior_OnDetachingFrom_View_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom(View)
+  fullName: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom(View)
   nameWithType: ContextPopupEffectBehavior.OnDetachingFrom(View)
 - uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.OnDetachingFrom*
   name: OnDetachingFrom
@@ -2531,11 +2531,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.LayoutCanvas
   fullName: Tizen.Wearable.CircularUI.Forms.LayoutCanvas
   nameWithType: LayoutCanvas
-- uid: Tizen.Wearable.CircularUI.Forms.LayoutCanvas.#ctor(ElmSharp.EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.LayoutCanvas.#ctor(EvasObject)
   name: LayoutCanvas(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.LayoutCanvas.html#Tizen_Wearable_CircularUI_Forms_LayoutCanvas__ctor_ElmSharp_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.LayoutCanvas.#ctor(ElmSharp.EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.LayoutCanvas.LayoutCanvas(ElmSharp.EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.LayoutCanvas.html#Tizen_Wearable_CircularUI_Forms_LayoutCanvas__ctor_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.LayoutCanvas.#ctor(EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.LayoutCanvas.LayoutCanvas(EvasObject)
   nameWithType: LayoutCanvas.LayoutCanvas(EvasObject)
 - uid: Tizen.Wearable.CircularUI.Forms.LayoutCanvas.#ctor*
   name: LayoutCanvas
@@ -3549,13 +3549,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.Dispose
   nameWithType: CheckRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Switch})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(ElementChangedEventArgs{Switch})
   name: OnElementChanged(ElementChangedEventArgs<Switch>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CheckRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Xamarin_Forms_Switch__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Switch})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CheckRenderer_OnElementChanged_ElementChangedEventArgs_Switch__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(ElementChangedEventArgs{Switch})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of Switch))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Xamarin.Forms.Switch>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Xamarin.Forms.Switch))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(ElementChangedEventArgs<Switch>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged(ElementChangedEventArgs(Of Switch))
   nameWithType: CheckRenderer.OnElementChanged(ElementChangedEventArgs<Switch>)
   nameWithType.vb: CheckRenderer.OnElementChanged(ElementChangedEventArgs(Of Switch))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.OnElementChanged*
@@ -3610,13 +3610,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.MinimumSize
   nameWithType: CircleDateTimeSelectorRenderer.MinimumSize
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector})
   name: OnElementChanged(ElementChangedEventArgs<CircleDateTimeSelector>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleDateTimeSelectorRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleDateTimeSelector__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleDateTimeSelectorRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleDateTimeSelector__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleDateTimeSelector))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector))
   nameWithType: CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs<CircleDateTimeSelector>)
   nameWithType.vb: CircleDateTimeSelectorRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleDateTimeSelector))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged*
@@ -3632,11 +3632,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView
   nameWithType: CircleListView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor(ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor(EvasObject,CircleSurface)
   name: CircleListView(EvasObject, CircleSurface)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView__ctor_ElmSharp_EvasObject_ElmSharp_Wearable_CircleSurface_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor(ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.CircleListView(ElmSharp.EvasObject, ElmSharp.Wearable.CircleSurface)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView__ctor_EvasObject_CircleSurface_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor(EvasObject,CircleSurface)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.CircleListView(EvasObject, CircleSurface)
   nameWithType: CircleListView.CircleListView(EvasObject, CircleSurface)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor*
   name: CircleListView
@@ -3645,13 +3645,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.CircleListView
   nameWithType: CircleListView.CircleListView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList{ItemsView{Cell},Cell})
   name: AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddGroup_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: CircleListView.AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup*
@@ -3661,13 +3661,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup
   nameWithType: CircleListView.AddGroup
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
   name: AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddItem_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddItem_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: CircleListView.AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem*
@@ -3683,28 +3683,28 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable)
   nameWithType: CircleListView.AddSource(IEnumerable)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Cell)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Cell)
   name: AddSource(IEnumerable, Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_Xamarin_Forms_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Cell)
   nameWithType: CircleListView.AddSource(IEnumerable, Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell})
   name: AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell},Cell)
   name: AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__Xamarin_Forms_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_TemplatedItemsList_ItemsView_Cell__Cell__Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell},Cell)
   name.vb: AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>, Xamarin.Forms.Cell)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell), Xamarin.Forms.Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
   nameWithType: CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
   nameWithType.vb: CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource*
@@ -3714,12 +3714,12 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource
   nameWithType: CircleListView.AddSource
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Xamarin.Forms.Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
-  name: ApplyScrollTo(Cell, ScrollToPosition, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplyScrollTo_Xamarin_Forms_Cell_Xamarin_Forms_ScrollToPosition_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Xamarin.Forms.Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Xamarin.Forms.Cell, Xamarin.Forms.ScrollToPosition, System.Boolean)
-  nameWithType: CircleListView.ApplyScrollTo(Cell, ScrollToPosition, Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
+  name: ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplyScrollTo_Cell_Xamarin_Forms_ScrollToPosition_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, System.Boolean)
+  nameWithType: CircleListView.ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, Boolean)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo*
   name: ApplyScrollTo
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplyScrollTo_
@@ -3727,11 +3727,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo
   nameWithType: CircleListView.ApplyScrollTo
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Xamarin.Forms.Cell)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Cell)
   name: ApplySelectedItem(Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplySelectedItem_Xamarin_Forms_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Xamarin.Forms.Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Xamarin.Forms.Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplySelectedItem_Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Cell)
   nameWithType: CircleListView.ApplySelectedItem(Cell)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem*
   name: ApplySelectedItem
@@ -3792,13 +3792,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
   nameWithType: CircleListView.HeaderRowHeight
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList{ItemsView{Cell},Cell},Cell)
   name: InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__Xamarin_Forms_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},Xamarin.Forms.Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertGroup_TemplatedItemsList_ItemsView_Cell__Cell__Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList{ItemsView{Cell},Cell},Cell)
   name.vb: InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>, Xamarin.Forms.Cell)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell), Xamarin.Forms.Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
   nameWithType: CircleListView.InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
   nameWithType.vb: CircleListView.InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup*
@@ -3808,13 +3808,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup
   nameWithType: CircleListView.InsertGroup
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Xamarin.Forms.Cell,Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell,Cell,TemplatedItemsList{ItemsView{Cell},Cell})
   name: InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertItem_Xamarin_Forms_Cell_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Xamarin.Forms.Cell,Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertItem_Cell_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell,Cell,TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Xamarin.Forms.Cell, Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Xamarin.Forms.Cell, Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: CircleListView.InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem*
@@ -3837,19 +3837,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized
   nameWithType: CircleListView.OnRealized
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Cell)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Cell)
   name: Remove(Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_Xamarin_Forms_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Cell)
   nameWithType: CircleListView.Remove(Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList{ItemsView{Cell},Cell})
   name: Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: CircleListView.Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove*
@@ -3872,13 +3872,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource
   nameWithType: CircleListView.RemoveSource
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList{ItemsView{Cell},Cell})
   name: ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ResetGroup_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ResetGroup_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: CircleListView.ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: CircleListView.ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup*
@@ -3920,13 +3920,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose
   nameWithType: CircleListViewRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleListView})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleListView})
   name: OnElementChanged(ElementChangedEventArgs<CircleListView>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleListView__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleListView})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleListView__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleListView})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleListView))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleListView>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleListView))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleListView>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleListView))
   nameWithType: CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs<CircleListView>)
   nameWithType.vb: CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleListView))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged*
@@ -3981,13 +3981,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Dispose
   nameWithType: CirclePageRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})
   name: OnElementChanged(ElementChangedEventArgs<CirclePage>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CirclePage__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CirclePage__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CirclePage))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CirclePage>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CirclePage))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CirclePage>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CirclePage))
   nameWithType: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<CirclePage>)
   nameWithType.vb: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of CirclePage))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged*
@@ -4029,11 +4029,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements
   nameWithType: CircleSliderSurfaceItemImplements
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.#ctor(Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem,ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.#ctor(Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem,EvasObject,CircleSurface)
   name: CircleSliderSurfaceItemImplements(CircleSliderSurfaceItem, EvasObject, CircleSurface)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSliderSurfaceItemImplements__ctor_Tizen_Wearable_CircularUI_Forms_CircleSliderSurfaceItem_ElmSharp_EvasObject_ElmSharp_Wearable_CircleSurface_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.#ctor(Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem,ElmSharp.EvasObject,ElmSharp.Wearable.CircleSurface)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.CircleSliderSurfaceItemImplements(Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem, ElmSharp.EvasObject, ElmSharp.Wearable.CircleSurface)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleSliderSurfaceItemImplements__ctor_Tizen_Wearable_CircularUI_Forms_CircleSliderSurfaceItem_EvasObject_CircleSurface_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.#ctor(Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem,EvasObject,CircleSurface)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.CircleSliderSurfaceItemImplements(Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem, EvasObject, CircleSurface)
   nameWithType: CircleSliderSurfaceItemImplements.CircleSliderSurfaceItemImplements(CircleSliderSurfaceItem, EvasObject, CircleSurface)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.#ctor*
   name: CircleSliderSurfaceItemImplements
@@ -4100,13 +4100,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.MinimumSize
   nameWithType: CircleStepperRenderer.MinimumSize
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleStepper})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleStepper})
   name: OnElementChanged(ElementChangedEventArgs<CircleStepper>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleStepper__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleStepper})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleStepper__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleStepper})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleStepper))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleStepper>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleStepper))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleStepper>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleStepper))
   nameWithType: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<CircleStepper>)
   nameWithType.vb: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleStepper))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged*
@@ -4159,11 +4159,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler
   nameWithType: FileMediaSourceHandler
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Tizen.Multimedia.Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
   name: SetSource(Player, MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_FileMediaSourceHandler_SetSource_Tizen_Multimedia_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Tizen.Multimedia.Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Tizen.Multimedia.Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_FileMediaSourceHandler_SetSource_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
   nameWithType: FileMediaSourceHandler.SetSource(Player, MediaSource)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource*
   name: SetSource
@@ -4235,13 +4235,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.Dispose
   nameWithType: GoogleMapViewRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.GoogleMapView})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.GoogleMapView})
   name: OnElementChanged(ElementChangedEventArgs<GoogleMapView>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_GoogleMapViewRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_GoogleMapView__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.GoogleMapView})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_GoogleMapViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_GoogleMapView__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.GoogleMapView})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of GoogleMapView))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.GoogleMapView>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.GoogleMapView))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.GoogleMapView>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.GoogleMapView))
   nameWithType: GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs<GoogleMapView>)
   nameWithType.vb: GoogleMapViewRenderer.OnElementChanged(ElementChangedEventArgs(Of GoogleMapView))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged*
@@ -4295,11 +4295,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler
   nameWithType: IMediaSourceHandler
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Tizen.Multimedia.Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
   name: SetSource(Player, MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_IMediaSourceHandler_SetSource_Tizen_Multimedia_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Tizen.Multimedia.Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Tizen.Multimedia.Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_IMediaSourceHandler_SetSource_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
   nameWithType: IMediaSourceHandler.SetSource(Player, MediaSource)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource*
   name: SetSource
@@ -4327,13 +4327,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.Dispose
   nameWithType: IndexPageRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.IndexPage})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.IndexPage})
   name: OnElementChanged(ElementChangedEventArgs<IndexPage>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_IndexPage__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.IndexPage})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IndexPageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_IndexPage__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.IndexPage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of IndexPage))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.IndexPage>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.IndexPage))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.IndexPage>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.IndexPage))
   nameWithType: IndexPageRenderer.OnElementChanged(ElementChangedEventArgs<IndexPage>)
   nameWithType.vb: IndexPageRenderer.OnElementChanged(ElementChangedEventArgs(Of IndexPage))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.OnElementChanged*
@@ -4497,17 +4497,17 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
   nameWithType: ListViewCache
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Xamarin.Forms.Cell)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
   name: Get(Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Xamarin_Forms_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Xamarin.Forms.Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Xamarin.Forms.Cell)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Cell_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
   nameWithType: ListViewCache.Get(Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Xamarin.Forms.Cell,System.Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell,System.Boolean)
   name: Get(Cell, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Xamarin_Forms_Cell_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Xamarin.Forms.Cell,System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Xamarin.Forms.Cell, System.Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Cell_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell,System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell, System.Boolean)
   nameWithType: ListViewCache.Get(Cell, Boolean)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get*
   name: Get
@@ -4561,31 +4561,31 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
   nameWithType: ListViewItemContext
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
   name: ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},System.Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell},System.Boolean)
   name: ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Xamarin_Forms_Cell_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Cell,Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell},System.Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Cell_TemplatedItemsList_ItemsView_Cell__Cell__System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell},System.Boolean)
   name.vb: ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>, System.Boolean)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Cell, Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell), System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, System.Boolean)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), System.Boolean)
   nameWithType: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, Boolean)
   nameWithType.vb: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(TemplatedItemsList{ItemsView{Cell},Cell})
   name: ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Xamarin_Forms_Internals_TemplatedItemsList_Xamarin_Forms_ItemsView_Xamarin_Forms_Cell__Xamarin_Forms_Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Xamarin.Forms.Internals.TemplatedItemsList{Xamarin.Forms.ItemsView{Xamarin.Forms.Cell},Xamarin.Forms.Cell})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_TemplatedItemsList_ItemsView_Cell__Cell__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(TemplatedItemsList{ItemsView{Cell},Cell})
   name.vb: ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Internals.TemplatedItemsList<Xamarin.Forms.ItemsView<Xamarin.Forms.Cell>, Xamarin.Forms.Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Xamarin.Forms.Internals.TemplatedItemsList(Of Xamarin.Forms.ItemsView(Of Xamarin.Forms.Cell), Xamarin.Forms.Cell))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
   nameWithType: ListViewItemContext.ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
   nameWithType.vb: ListViewItemContext.ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor*
@@ -4878,11 +4878,11 @@ references:
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions
   nameWithType: MultimediaConvertExtensions
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
-  name: ToMultimedia(Rect)
+  name: ToMultimedia(ElmSharp.Rect)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html#Tizen_Wearable_CircularUI_Forms_Renderer_MultimediaConvertExtensions_ToMultimedia_ElmSharp_Rect_
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
-  nameWithType: MultimediaConvertExtensions.ToMultimedia(Rect)
+  nameWithType: MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia*
   name: ToMultimedia
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html#Tizen_Wearable_CircularUI_Forms_Renderer_MultimediaConvertExtensions_ToMultimedia_
@@ -4954,15 +4954,15 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.Dispose
   nameWithType: PopupEntryRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Entry})
-  name: OnElementChanged(ElementChangedEventArgs<Entry>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Xamarin_Forms_Entry__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Xamarin.Forms.Entry})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of Entry))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Xamarin.Forms.Entry>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Xamarin.Forms.Entry))
-  nameWithType: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Entry>)
-  nameWithType.vb: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Entry))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Entry})
+  name: OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_ElementChangedEventArgs_Xamarin_Forms_Entry__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Entry})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Entry))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Entry))
+  nameWithType: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry>)
+  nameWithType.vb: PopupEntryRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Entry))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.OnElementChanged*
   name: OnElementChanged
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PopupEntryRenderer_OnElementChanged_
@@ -5002,13 +5002,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.Dispose
   nameWithType: RadioRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.Radio})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.Radio})
   name: OnElementChanged(ElementChangedEventArgs<Radio>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_RadioRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_Radio__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.Radio})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_RadioRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_Radio__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.Radio})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of Radio))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.Radio>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.Radio))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.Radio>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.Radio))
   nameWithType: RadioRenderer.OnElementChanged(ElementChangedEventArgs<Radio>)
   nameWithType.vb: RadioRenderer.OnElementChanged(ElementChangedEventArgs(Of Radio))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged*
@@ -5127,13 +5127,13 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.GetNativeContentGeometry
   nameWithType: TwoButtonPageRenderer.GetNativeContentGeometry
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.TwoButtonPage})
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.TwoButtonPage})
   name: OnElementChanged(ElementChangedEventArgs<TwoButtonPage>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_TwoButtonPage__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.TwoButtonPage})
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_TwoButtonPage__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.TwoButtonPage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of TwoButtonPage))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.TwoButtonPage>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.TwoButtonPage))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.TwoButtonPage>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.TwoButtonPage))
   nameWithType: TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs<TwoButtonPage>)
   nameWithType.vb: TwoButtonPageRenderer.OnElementChanged(ElementChangedEventArgs(Of TwoButtonPage))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer.OnElementChanged*
@@ -5175,11 +5175,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget
   nameWithType: TwoButtonPageWidget
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.#ctor(ElmSharp.EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.#ctor(EvasObject)
   name: TwoButtonPageWidget(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget__ctor_ElmSharp_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.#ctor(ElmSharp.EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.TwoButtonPageWidget(ElmSharp.EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget__ctor_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.#ctor(EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.TwoButtonPageWidget(EvasObject)
   nameWithType: TwoButtonPageWidget.TwoButtonPageWidget(EvasObject)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.#ctor*
   name: TwoButtonPageWidget
@@ -5278,24 +5278,24 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String)
   nameWithType: TwoButtonPageWidget.ShowButton1(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,FileImageSource,ElmSharp.Color,System.Action)
+  name: ShowButton1(String, FileImageSource, ElmSharp.Color, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_FileImageSource_ElmSharp_Color_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,FileImageSource,ElmSharp.Color,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, FileImageSource, ElmSharp.Color, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, FileImageSource, ElmSharp.Color, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,FileImageSource,System.Action)
+  name: ShowButton1(String, FileImageSource, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_FileImageSource_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,FileImageSource,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, FileImageSource, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton1(String, FileImageSource, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.Action)
   name: ShowButton1(String, Action)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_System_Action_
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,System.Action)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, System.Action)
   nameWithType: TwoButtonPageWidget.ShowButton1(String, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
-  name: ShowButton1(String, FileImageSource, Color, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_Xamarin_Forms_FileImageSource_ElmSharp_Color_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, Xamarin.Forms.FileImageSource, ElmSharp.Color, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton1(String, FileImageSource, Color, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,System.Action)
-  name: ShowButton1(String, FileImageSource, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_System_String_Xamarin_Forms_FileImageSource_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String,Xamarin.Forms.FileImageSource,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1(System.String, Xamarin.Forms.FileImageSource, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton1(String, FileImageSource, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton1*
   name: ShowButton1
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton1_
@@ -5309,23 +5309,23 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String)
   nameWithType: TwoButtonPageWidget.ShowButton2(String)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,FileImageSource)
   name: ShowButton2(String, FileImageSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Xamarin_Forms_FileImageSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Xamarin.Forms.FileImageSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_FileImageSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,FileImageSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, FileImageSource)
   nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
-  name: ShowButton2(String, FileImageSource, Color, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Xamarin_Forms_FileImageSource_ElmSharp_Color_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,ElmSharp.Color,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Xamarin.Forms.FileImageSource, ElmSharp.Color, System.Action)
-  nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource, Color, Action)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,System.Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,FileImageSource,ElmSharp.Color,System.Action)
+  name: ShowButton2(String, FileImageSource, ElmSharp.Color, Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_FileImageSource_ElmSharp_Color_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,FileImageSource,ElmSharp.Color,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, FileImageSource, ElmSharp.Color, System.Action)
+  nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource, ElmSharp.Color, Action)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,FileImageSource,System.Action)
   name: ShowButton2(String, FileImageSource, Action)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_Xamarin_Forms_FileImageSource_System_Action_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,Xamarin.Forms.FileImageSource,System.Action)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, Xamarin.Forms.FileImageSource, System.Action)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.html#Tizen_Wearable_CircularUI_Forms_Renderer_TwoButtonPageWidget_ShowButton2_System_String_FileImageSource_System_Action_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String,FileImageSource,System.Action)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2(System.String, FileImageSource, System.Action)
   nameWithType: TwoButtonPageWidget.ShowButton2(String, FileImageSource, Action)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageWidget.ShowButton2*
   name: ShowButton2
@@ -5488,11 +5488,11 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler
   nameWithType: UriMediaSourceHandler
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Tizen.Multimedia.Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
   name: SetSource(Player, MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_UriMediaSourceHandler_SetSource_Tizen_Multimedia_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Tizen.Multimedia.Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Tizen.Multimedia.Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_UriMediaSourceHandler_SetSource_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
   nameWithType: UriMediaSourceHandler.SetSource(Player, MediaSource)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource*
   name: SetSource
@@ -5527,11 +5527,11 @@ references:
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.FormsWatchface
   nameWithType: FormsWatchface.FormsWatchface
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
-  name: LoadWatchface(Application)
+  name: LoadWatchface(Xamarin.Forms.Application)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html#Tizen_Wearable_CircularUI_Forms_Renderer_Watchface_FormsWatchface_LoadWatchface_Xamarin_Forms_Application_
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
-  nameWithType: FormsWatchface.LoadWatchface(Application)
+  nameWithType: FormsWatchface.LoadWatchface(Xamarin.Forms.Application)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.LoadWatchface*
   name: LoadWatchface
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html#Tizen_Wearable_CircularUI_Forms_Renderer_Watchface_FormsWatchface_LoadWatchface_
@@ -5539,11 +5539,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.LoadWatchface
   nameWithType: FormsWatchface.LoadWatchface
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
   name: OnAppControlReceived(AppControlReceivedEventArgs)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html#Tizen_Wearable_CircularUI_Forms_Renderer_Watchface_FormsWatchface_OnAppControlReceived_Tizen_Applications_AppControlReceivedEventArgs_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html#Tizen_Wearable_CircularUI_Forms_Renderer_Watchface_FormsWatchface_OnAppControlReceived_AppControlReceivedEventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
   nameWithType: FormsWatchface.OnAppControlReceived(AppControlReceivedEventArgs)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnAppControlReceived*
   name: OnAppControlReceived
@@ -5591,11 +5591,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnResume
   nameWithType: FormsWatchface.OnResume
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated(ElmSharp.EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated(EvasObject)
   name: OnRootViewUpdated(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html#Tizen_Wearable_CircularUI_Forms_Renderer_Watchface_FormsWatchface_OnRootViewUpdated_ElmSharp_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated(ElmSharp.EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated(ElmSharp.EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.html#Tizen_Wearable_CircularUI_Forms_Renderer_Watchface_FormsWatchface_OnRootViewUpdated_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated(EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated(EvasObject)
   nameWithType: FormsWatchface.OnRootViewUpdated(EvasObject)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.OnRootViewUpdated*
   name: OnRootViewUpdated
@@ -5684,11 +5684,11 @@ references:
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase
   nameWithType: FormsWidgetBase
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
-  name: LoadApplication(Application)
+  name: LoadApplication(Xamarin.Forms.Application)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_LoadApplication_Xamarin_Forms_Application_
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
-  nameWithType: FormsWidgetBase.LoadApplication(Application)
+  nameWithType: FormsWidgetBase.LoadApplication(Xamarin.Forms.Application)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication*
   name: LoadApplication
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_LoadApplication_
@@ -5696,11 +5696,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.LoadApplication
   nameWithType: FormsWidgetBase.LoadApplication
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Tizen.Applications.Bundle,System.Int32,System.Int32)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Bundle,System.Int32,System.Int32)
   name: OnCreate(Bundle, Int32, Int32)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnCreate_Tizen_Applications_Bundle_System_Int32_System_Int32_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Tizen.Applications.Bundle,System.Int32,System.Int32)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Tizen.Applications.Bundle, System.Int32, System.Int32)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnCreate_Bundle_System_Int32_System_Int32_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Bundle,System.Int32,System.Int32)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate(Bundle, System.Int32, System.Int32)
   nameWithType: FormsWidgetBase.OnCreate(Bundle, Int32, Int32)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate*
   name: OnCreate
@@ -5709,12 +5709,12 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnCreate
   nameWithType: FormsWidgetBase.OnCreate
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(Tizen.Applications.WidgetBase.WidgetDestroyType,Tizen.Applications.Bundle)
-  name: OnDestroy(WidgetBase.WidgetDestroyType, Bundle)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnDestroy_Tizen_Applications_WidgetBase_WidgetDestroyType_Tizen_Applications_Bundle_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(Tizen.Applications.WidgetBase.WidgetDestroyType,Tizen.Applications.Bundle)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(Tizen.Applications.WidgetBase.WidgetDestroyType, Tizen.Applications.Bundle)
-  nameWithType: FormsWidgetBase.OnDestroy(WidgetBase.WidgetDestroyType, Bundle)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(WidgetDestroyType,Bundle)
+  name: OnDestroy(WidgetDestroyType, Bundle)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnDestroy_WidgetDestroyType_Bundle_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(WidgetDestroyType,Bundle)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy(WidgetDestroyType, Bundle)
+  nameWithType: FormsWidgetBase.OnDestroy(WidgetDestroyType, Bundle)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnDestroy*
   name: OnDestroy
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnDestroy_
@@ -5748,11 +5748,11 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnResume
   nameWithType: FormsWidgetBase.OnResume
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(ElmSharp.EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(EvasObject)
   name: OnRootViewUpdated(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnRootViewUpdated_ElmSharp_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(ElmSharp.EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(ElmSharp.EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.html#Tizen_Wearable_CircularUI_Forms_Renderer_Widget_FormsWidgetBase_OnRootViewUpdated_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated(EvasObject)
   nameWithType: FormsWidgetBase.OnRootViewUpdated(EvasObject)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget.FormsWidgetBase.OnRootViewUpdated*
   name: OnRootViewUpdated
@@ -5837,17 +5837,17 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.Toast
   fullName: Tizen.Wearable.CircularUI.Forms.Toast
   nameWithType: Toast
-- uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,Xamarin.Forms.FileImageSource)
+- uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource)
   name: DisplayIconText(String, FileImageSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayIconText_System_String_Xamarin_Forms_FileImageSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,Xamarin.Forms.FileImageSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String, Xamarin.Forms.FileImageSource)
+  href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayIconText_System_String_FileImageSource_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource)
+  fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String, FileImageSource)
   nameWithType: Toast.DisplayIconText(String, FileImageSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,Xamarin.Forms.FileImageSource,System.Int32)
+- uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource,System.Int32)
   name: DisplayIconText(String, FileImageSource, Int32)
-  href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayIconText_System_String_Xamarin_Forms_FileImageSource_System_Int32_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,Xamarin.Forms.FileImageSource,System.Int32)
-  fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String, Xamarin.Forms.FileImageSource, System.Int32)
+  href: api/Tizen.Wearable.CircularUI.Forms.Toast.html#Tizen_Wearable_CircularUI_Forms_Toast_DisplayIconText_System_String_FileImageSource_System_Int32_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String,FileImageSource,System.Int32)
+  fullName: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText(System.String, FileImageSource, System.Int32)
   nameWithType: Toast.DisplayIconText(String, FileImageSource, Int32)
 - uid: Tizen.Wearable.CircularUI.Forms.Toast.DisplayIconText*
   name: DisplayIconText
@@ -6247,13 +6247,13 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer
   fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer
   nameWithType: MediaViewRenderer
-- uid: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.MediaView})
+- uid: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.MediaView})
   name: OnElementChanged(ElementChangedEventArgs<MediaView>)
-  href: api/Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.html#Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_MediaView__
-  commentId: M:Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.MediaView})
+  href: api/Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.html#Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_MediaView__
+  commentId: M:Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.MediaView})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of MediaView))
-  fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.MediaView>)
-  fullName.vb: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.MediaView))
+  fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.MediaView>)
+  fullName.vb: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.MediaView))
   nameWithType: MediaViewRenderer.OnElementChanged(ElementChangedEventArgs<MediaView>)
   nameWithType.vb: MediaViewRenderer.OnElementChanged(ElementChangedEventArgs(Of MediaView))
 - uid: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged*
@@ -6292,13 +6292,13 @@ references:
   commentId: T:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer
   fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer
   nameWithType: CircleImageRenderer
-- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleImage})
+- uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleImage})
   name: OnElementChanged(ElementChangedEventArgs<CircleImage>)
-  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_OnElementChanged_Xamarin_Forms_Platform_Tizen_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleImage__
-  commentId: M:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleImage})
+  href: api/UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.html#UIComponents_Tizen_Wearable_Renderers_CircleImageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleImage__
+  commentId: M:UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleImage})
   name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleImage))
-  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleImage>)
-  fullName.vb: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Tizen.ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleImage))
+  fullName: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleImage>)
+  fullName.vb: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleImage))
   nameWithType: CircleImageRenderer.OnElementChanged(ElementChangedEventArgs<CircleImage>)
   nameWithType.vb: CircleImageRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleImage))
 - uid: UIComponents.Tizen.Wearable.Renderers.CircleImageRenderer.OnElementChanged*
