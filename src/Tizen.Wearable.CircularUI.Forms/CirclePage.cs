@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -62,6 +62,9 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public IList<ICircleSurfaceItem> CircleSurfaceItems { get; }
 
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public bool Appeared { get; set; }
+
         /// <summary>
         /// Gets or sets ActionButton that presents a menu item and associates it with a command
         /// </summary>
@@ -90,6 +93,18 @@ namespace Tizen.Wearable.CircularUI.Forms
                 if (element != null)
                     SetInheritedBindingContext(element, BindingContext);
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Appeared = true;
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            Appeared = false;
         }
 
         void OnSurfaceItemsChanged(object sender, NotifyCollectionChangedEventArgs args)

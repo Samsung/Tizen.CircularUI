@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xaminals.Controls"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             xmlns:views="clr-namespace:Xaminals.Views"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="Xaminals.Views.BearsPage"
+             RotaryFocusObject="{x:Reference ListView}"
+             Title="Bears">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#546DFE" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <Shell.SearchHandler>
+        <controls:AnimalSearchHandler Placeholder="Enter search term"
+                                      ShowsResults="true"
+                                      ItemTemplate="{StaticResource AnimalSearchTemplate}"
+                                      Animals="{x:Static data:BearData.Bears}"
+                                      SelectedItemNavigationTarget="{x:Type views:BearDetailPage}" />
+    </Shell.SearchHandler>
+    <w:CircleListView x:Name="ListView" ItemsSource="{x:Static data:BearData.Bears}"
+              ItemTemplate="{StaticResource AnimalListViewTemplate}"
+              SelectionMode="Single" ItemTapped="OnItemSelected"/>
+    
+</w:CirclePage>

@@ -96,6 +96,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             base.OnElementChanged(e);
         }
+
+        protected override void OnElementReady()
+        {
+            base.OnElementReady();
+            // A Page created by with ContentTemplate of ShellContent, was appered before create a renderer
+            // So need to call OnPageAppearing if page already appeared
+            if (Element.Appeared)
+            {
+                OnPageAppearing(Element, EventArgs.Empty);
+            }
+        }
+
         protected override void UpdateBackgroundColor(bool initialize)
         {
             if (initialize && Element.BackgroundColor.IsDefault) return;
@@ -189,6 +201,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             SetNativeView(_box);
         }
+
         void OnLayout()
         {
             var rect = _box.Geometry;
