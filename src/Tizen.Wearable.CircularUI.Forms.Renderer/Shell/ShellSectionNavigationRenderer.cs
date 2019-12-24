@@ -39,7 +39,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 InternalStack.Remove(tobeRemoved);
                 UnPack(tobeRemoved);
                 UpdateTopView();
-                tobeRemoved.Unrealize();
+
+                // if Pop was called by removed page,
+                // Unrealize cause deletation of NativeCallback, it could be a cause of crash
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    tobeRemoved.Unrealize();
+                });
             }
         }
 
@@ -65,6 +71,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             InternalStack.Remove(view);
             UnPack(view);
             UpdateTopView();
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                view?.Unrealize();
+            });
         }
 
         void UpdateTopView()
