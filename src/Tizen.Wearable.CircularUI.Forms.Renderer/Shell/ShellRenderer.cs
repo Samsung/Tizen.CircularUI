@@ -143,7 +143,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             ((IShellController)Element).OnFlyoutItemSelected(e.SelectedItem as Element);
-            _drawer.IsOpen = false;
         }
 
         void UpdateCurrentItem()
