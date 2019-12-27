@@ -123,6 +123,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
+                _bgImageObject.IsFilled = true;
                 _bgImageObject.File = ResourcePath.GetPath(bgImageSource);
                 _bgImage = Element.BackgroundImageSource;
             }
