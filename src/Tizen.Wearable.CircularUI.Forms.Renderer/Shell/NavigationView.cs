@@ -10,6 +10,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class NavigationView : ELayout
     {
+        readonly int _dafaultIconSize = 60;
+
         class Item
         {
             public Element Source { get; set; } 
@@ -60,7 +62,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 }
             }
             _naviMenu.Append(_defaultClass, new Item { Text = "" });
-            
         }
 
         public void Activate()
@@ -99,7 +100,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _surfaceLayout.StackAbove(_naviMenu);
 
-
             _defaultClass = new GenItemClass("1icon_2text")
             {
                 GetTextHandler = (obj, part) =>
@@ -120,6 +120,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                             AlignmentY = -1,
                             WeightX = 1.0,
                             WeightY = 1.0,
+                            MinimumWidth = _dafaultIconSize,
+                            MinimumHeight = _dafaultIconSize,
                         };
                         icon.Show();
                         icon.Load(menuItem.Icon);
