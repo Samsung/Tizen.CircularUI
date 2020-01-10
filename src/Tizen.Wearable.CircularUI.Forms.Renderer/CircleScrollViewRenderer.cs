@@ -28,7 +28,7 @@ using XForms = Xamarin.Forms.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    class CircleScrollViewRenderer : ViewRenderer<CircleScrollView, ElmSharp.Wearable.CircleScroller>
+    public class CircleScrollViewRenderer : ViewRenderer<CircleScrollView, ElmSharp.Wearable.CircleScroller>
     {
         Xamarin.Forms.Platform.Tizen.Native.Box _scrollCanvas;
         ElmSharp.SmartEvent _scrollAnimationStart, _scrollAnimationStop;
