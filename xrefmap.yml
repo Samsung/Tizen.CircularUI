@@ -4023,6 +4023,80 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage
   nameWithType: CirclePageRenderer.UpdateBackgroundImage
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer
+  name: CircleScrollViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer
+  nameWithType: CircleScrollViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.#ctor
+  name: CircleScrollViewRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleScrollViewRenderer()
+  nameWithType: CircleScrollViewRenderer.CircleScrollViewRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.#ctor*
+  name: CircleScrollViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleScrollViewRenderer
+  nameWithType: CircleScrollViewRenderer.CircleScrollViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_Dispose_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)
+  nameWithType: CircleScrollViewRenderer.Dispose(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose*
+  name: Dispose
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_Dispose_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose
+  nameWithType: CircleScrollViewRenderer.Dispose
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
+  name: GetNativeContentGeometry()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_GetNativeContentGeometry
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry()
+  nameWithType: CircleScrollViewRenderer.GetNativeContentGeometry()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry*
+  name: GetNativeContentGeometry
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_GetNativeContentGeometry_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
+  nameWithType: CircleScrollViewRenderer.GetNativeContentGeometry
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleScrollView})
+  name: OnElementChanged(ElementChangedEventArgs<CircleScrollView>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleScrollView__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleScrollView})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleScrollView))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleScrollView>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleScrollView))
+  nameWithType: CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs<CircleScrollView>)
+  nameWithType.vb: CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleScrollView))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged*
+  name: OnElementChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged
+  nameWithType: CircleScrollViewRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  name: OnElementPropertyChanged(Object, PropertyChangedEventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementPropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)
+  nameWithType: CircleScrollViewRenderer.OnElementPropertyChanged(Object, PropertyChangedEventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged*
+  name: OnElementPropertyChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementPropertyChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged
+  nameWithType: CircleScrollViewRenderer.OnElementPropertyChanged
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements
   name: CircleSliderSurfaceItemImplements
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.html
