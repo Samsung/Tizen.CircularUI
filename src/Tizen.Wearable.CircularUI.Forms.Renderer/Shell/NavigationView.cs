@@ -25,6 +25,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         CircleGenList _naviMenu;
 
         GenItemClass _defaultClass;
+        SmartEvent _draggedUpCallback;
+        SmartEvent _draggedDownCallback;
+
+        GenListItem _header;
+        GenListItem _footer;
 
         public NavigationView(EvasObject parent) : base(parent)
         {
@@ -33,11 +38,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
 
+        public event EventHandler<DraggedEventArgs> Dragged;
+
         public void Build(List<List<Element>> items)
         {
             _naviMenu.Clear();
             // header
-            _naviMenu.Append(_defaultClass, new Item { Text = "" });
+            _header = _naviMenu.Append(_defaultClass, new Item { Text = "" });
 
             // TODO. need to improve, need to support group
             foreach (var group in items)
@@ -61,7 +68,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
                 }
             }
-            _naviMenu.Append(_defaultClass, new Item { Text = "" });
+            _footer = _naviMenu.Append(_defaultClass, new Item { Text = "" });
         }
 
         public void Activate()
@@ -94,6 +101,32 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 BackgroundColor = ElmSharp.Color.Gray
             };
             _naviMenu.Show();
+
+            _draggedUpCallback = new SmartEvent(_naviMenu, "drag,start,up");
+            _draggedUpCallback.On += (s, e) =>
+            {
+                if (_footer.TrackObject.IsVisible)
+                {
+                    Dragged?.Invoke(this, new DraggedEventArgs(DraggedState.EdgeBottom));
+                }
+                else
+                {
+                    Dragged?.Invoke(this, new DraggedEventArgs(DraggedState.Up));
+                }
+            };
+
+            _draggedDownCallback = new SmartEvent(_naviMenu, "drag,start,down");
+            _draggedDownCallback.On += (s, e) =>
+            {
+                if(_header.TrackObject.IsVisible)
+                {
+                    Dragged?.Invoke(this, new DraggedEventArgs(DraggedState.EdgeTop));
+                }
+                else
+                {
+                    Dragged?.Invoke(this, new DraggedEventArgs(DraggedState.Down));
+                }
+            };
 
             _outterBox.PackEnd(_naviMenu);
             _outterBox.PackEnd(_surfaceLayout);
@@ -144,6 +177,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             _surfaceLayout.Geometry = Geometry;
             _naviMenu.Geometry = Geometry;
+        }
+    }
+    public enum DraggedState
+    {
+        EdgeTop,
+        Up,
+        Down,
+        EdgeBottom,
+    }
+
+    public class DraggedEventArgs
+    {
+        public DraggedState State { get; private set; }
+
+        public DraggedEventArgs(DraggedState state)
+        {
+            State = state;
         }
     }
 
