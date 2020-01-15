@@ -118,7 +118,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _draggedDownCallback = new SmartEvent(_naviMenu, "drag,start,down");
             _draggedDownCallback.On += (s, e) =>
             {
-                if(_header.TrackObject.IsVisible)
+                if (_header.TrackObject.IsVisible)
                 {
                     Dragged?.Invoke(this, new DraggedEventArgs(DraggedState.EdgeTop));
                 }
