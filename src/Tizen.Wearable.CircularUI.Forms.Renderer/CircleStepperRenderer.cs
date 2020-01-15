@@ -40,6 +40,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
             RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.IncrementProperty, UpdateIncrement);
+            RegisterPropertyHandler(CircleStepper.IsWrapEnabledProperty, UpdateWrapEnabled);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircleStepper> e)
@@ -181,6 +182,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (null != Control && null != Element)
             {
                 Control.Step = Element.Increment;
+            }
+        }
+
+        void UpdateWrapEnabled()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.IsWrapEnabled = Element.IsWrapEnabled;
             }
         }
     }
