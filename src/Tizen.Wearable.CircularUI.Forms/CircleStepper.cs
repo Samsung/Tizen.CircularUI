@@ -53,7 +53,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies whether min/max value is wrapped or not.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty IsWrapEnabledProperty = BindableProperty.CreateAttached(nameof(IsWrapEnabled), typeof(bool), typeof(CircleStepper), true);
+        public static readonly BindableProperty IsWrapEnabledProperty = BindableProperty.Create(nameof(IsWrapEnabled), typeof(bool), typeof(CircleStepper), true);
 
         /// <summary>
         /// Gets or sets Marker color
