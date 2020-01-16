@@ -794,6 +794,25 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleStepper
   fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper
   nameWithType: CircleStepper
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled
+  name: IsWrapEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_IsWrapEnabled
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled
+  nameWithType: CircleStepper.IsWrapEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled*
+  name: IsWrapEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_IsWrapEnabled_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled
+  nameWithType: CircleStepper.IsWrapEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabledProperty
+  name: IsWrapEnabledProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_IsWrapEnabledProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabledProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabledProperty
+  nameWithType: CircleStepper.IsWrapEnabledProperty
 - uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.LabelFormat
   name: LabelFormat
   href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_LabelFormat
