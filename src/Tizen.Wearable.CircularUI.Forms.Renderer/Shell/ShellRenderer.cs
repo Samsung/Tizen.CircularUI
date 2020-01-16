@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using EColor = ElmSharp.Color;
 using XForms = Xamarin.Forms.Forms;
 using XShell = Xamarin.Forms.Shell;
 
@@ -76,7 +75,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 InitializeNavigationDrawer();
                 _navigationView.Build(flyoutItems);
-                OnLayout();
             }
             else
             {
@@ -107,6 +105,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _drawer.IsOpen = Element.FlyoutIsPresented;
             _drawer.Toggled += OnNavigationDrawerToggled;
+
+            _mainLayout.PackEnd(_drawer);
         }
 
         void OnNavigationDrawerToggled(object sender, EventArgs e)
@@ -180,7 +180,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (_currentItem != null)
             {
                 _currentItem.Geometry = _mainLayout.Geometry;
-                _currentItem.StackAbove(_drawer);
             }
             if (_drawer != null)
             {
