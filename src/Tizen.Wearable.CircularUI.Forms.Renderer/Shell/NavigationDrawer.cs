@@ -65,15 +65,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Initialize();
         }
 
-        public void BatchBegin()
+        void IAnimatable.BatchBegin()
         {
         }
 
-        public void BatchCommit()
+        void IAnimatable.BatchCommit()
         {
         }
 
-        public new void SetContent(EvasObject content)
+        public void SetDrawerContent(EvasObject content)
         {
             _contentBox.PackEnd(content);
 
@@ -117,7 +117,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        public async Task<bool> ShowAsync(EWidget target, Easing easing = null, uint length = 300, CancellationToken cancelltaionToken = default(CancellationToken))
+        async Task<bool> ShowAsync(EWidget target, Easing easing = null, uint length = 300, CancellationToken cancelltaionToken = default(CancellationToken))
         {
             var tcs = new TaskCompletionSource<bool>();
 
@@ -144,7 +144,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return await tcs.Task;
         }
 
-        public async Task<bool> HideAsync(EWidget target, Easing easing = null, uint length = 300)
+        async Task<bool> HideAsync(EWidget target, Easing easing = null, uint length = 300)
         {
             var tcs = new TaskCompletionSource<bool>();
 
@@ -215,10 +215,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         async void OnRotateEventReceived(EventArgs args)
         {
-            if (_fadeInCancelTokenSource != null)
-            {
-                _fadeInCancelTokenSource.Cancel();
-            }
+            _fadeInCancelTokenSource?.Cancel();
 
             _fadeInCancelTokenSource = new CancellationTokenSource();
             var token = _fadeInCancelTokenSource.Token;
@@ -234,18 +231,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void OnLayout()
         {
             var geometry = Geometry;
-            geometry.Y = (_isOpen) ? 0 : (geometry.Height - _iconHeight);
-
             _mainLayout.Geometry = Geometry;
+
+            geometry.Y = (_isOpen) ? 0 : (geometry.Height - _iconHeight);
             _drawer.Geometry = geometry;
         }
 
         void OnContentLayout()
         {
             var geometry = _drawer.Geometry;
-            geometry.Height = _iconHeight;
-
             _contentBox.Geometry = _drawer.Geometry;
+
+            geometry.Height = _iconHeight;
             _iconBox.Geometry = geometry;
 
             _iconBox.StackAbove(_contentBox);
@@ -253,11 +250,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnContentDragStarted(GestureLayer.MomentumData moment)
         {
-            if (_fadeInCancelTokenSource != null)
-            {
-                _fadeInCancelTokenSource.Cancel();
-                _fadeInCancelTokenSource = null;
-            }
+            _fadeInCancelTokenSource?.Cancel();
+            _fadeInCancelTokenSource = null;
 
             if (!_isOpen)
             {
@@ -267,11 +261,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnContentDragEnded(GestureLayer.MomentumData moment)
         {
-            if (_fadeInCancelTokenSource == null)
-            {
-                _fadeInCancelTokenSource = new CancellationTokenSource();
-            }
-
+            _fadeInCancelTokenSource = new CancellationTokenSource();
             var token = _fadeInCancelTokenSource.Token;
 
             _ = ShowAsync(_drawer, cancelltaionToken:token);

@@ -101,7 +101,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _drawer = new NavigationDrawer(XForms.NativeParent);
             _drawer.Show();
-            _drawer.SetContent(_navigationView);
+            _drawer.SetDrawerContent(_navigationView);
 
             _drawer.IsOpen = Element.FlyoutIsPresented;
             _drawer.Toggled += OnNavigationDrawerToggled;
@@ -192,6 +192,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _currentItem = item;
             _currentItem.Show();
             _mainLayout.PackEnd(_currentItem);
+            if (_drawer != null)
+            {
+                _drawer.StackAbove(_currentItem);
+            }
         }
 
         void ResetCurrentItem()
