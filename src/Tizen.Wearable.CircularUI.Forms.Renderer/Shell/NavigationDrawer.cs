@@ -21,6 +21,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         GestureLayer _mainLayoutGesture;
         GestureLayer _drawerGesture;
         bool _isOpen;
+        bool _isDrawerDragging;
 
         CancellationTokenSource _fadeInCancelTokenSource = null;
 
@@ -131,6 +132,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             target.Show();
             var opacity = target.Opacity;
 
+            if (opacity == 255 || opacity == -1)
+                return true;
+
             new Animation((progress) =>
             {
                 target.Opacity = opacity + (int)((255 - opacity) * progress);
@@ -203,12 +207,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _drawerGesture = new GestureLayer(_drawer);
             _drawerGesture.Attach(_drawer);
 
+            _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.Start, OnDrawerStarted);
             _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.Move, OnDrawerDragged);
             _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.End, OnDrawerDragEnded);
             _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.Abort, OnDrawerDragEnded);
 
             _mainLayout.SetLayoutCallback(OnLayout);
             _drawer.SetLayoutCallback(OnContentLayout);
+            _mainLayout.PackEnd(_drawer);
 
             RotaryEventManager.Rotated += OnRotateEventReceived;
         }
@@ -220,7 +226,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _fadeInCancelTokenSource = new CancellationTokenSource();
             var token = _fadeInCancelTokenSource.Token;
 
-            if (!_isOpen)
+            if (!_isOpen && !_isDrawerDragging)
             {
                 await HideAsync(_drawer);
 
@@ -262,9 +268,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void OnContentDragEnded(GestureLayer.MomentumData moment)
         {
             _fadeInCancelTokenSource = new CancellationTokenSource();
-            var token = _fadeInCancelTokenSource.Token;
 
-            _ = ShowAsync(_drawer, cancelltaionToken:token);
+            _ = ShowAsync(_drawer, cancelltaionToken: _fadeInCancelTokenSource.Token);
+        }
+
+        void OnDrawerStarted(GestureLayer.MomentumData moment)
+        {
+            _isDrawerDragging = true;
         }
 
         void OnDrawerDragged(GestureLayer.MomentumData moment)
@@ -277,6 +287,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnDrawerDragEnded(GestureLayer.MomentumData moment)
         {
+            _isDrawerDragging = false;
             if (_drawer.Geometry.Y < (_mainLayout.Geometry.Height / 2))
             {
                 Open();
