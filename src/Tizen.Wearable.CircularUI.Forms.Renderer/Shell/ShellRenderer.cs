@@ -12,8 +12,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class ShellRenderer : VisualElementRenderer<CircularShell>
     {
-        Box _mainLayout;
-        EvasObject _currentItem;
         NavigationDrawer _drawer;
         NavigationView _navigationView;
 
@@ -53,12 +51,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void InitializeComponent()
         {
-            if (_mainLayout == null)
+            if (_drawer == null)
             {
-                _mainLayout = new Box(XForms.NativeParent);
-                _mainLayout.SetLayoutCallback(OnLayout);
+                _drawer = new NavigationDrawer(XForms.NativeParent);
+                _drawer.IsOpen = Element.FlyoutIsPresented;
+                _drawer.Toggled += OnNavigationDrawerToggled;
 
-                SetNativeView(_mainLayout);
+                SetNativeView(_drawer);
             }
         }
 
@@ -78,13 +77,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
-                DeinitializeNavigationDrawer();
+                DeinitializeNavigationView();
             }
         }
 
         void InitializeNavigationDrawer()
         {
-            if (_drawer != null)
+            if (_navigationView != null)
             {
                 return;
             }
@@ -99,14 +98,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _navigationView.Show();
             _navigationView.ItemSelected += OnMenuItemSelected;
 
-            _drawer = new NavigationDrawer(XForms.NativeParent);
-            _drawer.Show();
             _drawer.SetDrawerContent(_navigationView);
-
-            _drawer.IsOpen = Element.FlyoutIsPresented;
-            _drawer.Toggled += OnNavigationDrawerToggled;
-
-            _mainLayout.PackEnd(_drawer);
         }
 
         void OnNavigationDrawerToggled(object sender, EventArgs e)
@@ -137,15 +129,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Element.SetValueFromRenderer(XShell.FlyoutIsPresentedProperty, _drawer.IsOpen);
         }
 
-        void DeinitializeNavigationDrawer()
+        void DeinitializeNavigationView()
         {
-            if (_drawer == null)
+            if (_navigationView == null)
                 return;
 
-            _mainLayout.UnPack(_drawer);
-            _drawer.Unrealize();
             _navigationView.Unrealize();
-            _drawer = null;
+            _navigationView = null;
         }
 
         void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -169,43 +159,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateFlyoutIsPresented()
         {
-            if (_drawer != null)
-            {
-                _drawer.IsOpen = Element.FlyoutIsPresented;
-            }
-        }
-
-        void OnLayout()
-        {
-            if (_currentItem != null)
-            {
-                _currentItem.Geometry = _mainLayout.Geometry;
-            }
-            if (_drawer != null)
-            {
-                _drawer.Geometry = _mainLayout.Geometry;
-            }
+            _drawer.IsOpen = Element.FlyoutIsPresented;
         }
 
         void SetCurrentItem(EvasObject item)
         {
-            _currentItem = item;
-            _currentItem.Show();
-            _mainLayout.PackEnd(_currentItem);
-            if (_drawer != null)
-            {
-                _drawer.StackAbove(_currentItem);
-            }
+            _drawer.SetMainContent(item);
         }
 
         void ResetCurrentItem()
         {
-            if (_currentItem != null)
-            {
-                _mainLayout.UnPack(_currentItem);
-                _currentItem.Hide();
-                _currentItem = null;
-            }
+            _drawer.SetMainContent(null);
         }
     }
 }
