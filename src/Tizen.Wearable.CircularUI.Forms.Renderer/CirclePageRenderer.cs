@@ -59,6 +59,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public ElmSharp.Wearable.CircleSurface CircleSurface => _surface;
 
+        public void UpdateRotaryFocusObject(bool initialize)
+        {
+            if (initialize)
+            {
+                _currentRotaryFocusObject = Element.RotaryFocusObject;
+            }
+            else
+            {
+                DeactivateRotaryWidget();
+                _currentRotaryFocusObject = Element.RotaryFocusObject;
+                ActivateRotaryWidget();
+            }
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<CirclePage> e)
         {
             if (_box == null)
@@ -384,19 +398,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             _moreOption.IsOpened = false;
         }
-        void UpdateRotaryFocusObject(bool initialize)
-        {
-            if (initialize)
-            {
-                _currentRotaryFocusObject = Element.RotaryFocusObject;
-            }
-            else
-            {
-                DeactivateRotaryWidget();
-                _currentRotaryFocusObject = Element.RotaryFocusObject;
-                ActivateRotaryWidget();
-            }
-        }
+
         void OnPageDisappearing(object sender, EventArgs e)
         {
             DeactivateRotaryWidget();

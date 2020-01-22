@@ -1,27 +1,25 @@
 ﻿using ElmSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
 using XShell = Xamarin.Forms.Shell;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircularShell), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer))]
-
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class ShellRenderer : VisualElementRenderer<CircularShell>
     {
-        Box _mainLayout;
-        EvasObject _currentItem;
-        Panel _drawer;
+        NavigationDrawer _drawer;
         NavigationView _navigationView;
 
         Dictionary<BaseShellItem, IShellItemRenderer> _rendererCache = new Dictionary<BaseShellItem, IShellItemRenderer>();
 
         public ShellRenderer()
         {
-            RegisterPropertyHandler(XShell.CurrentItemProperty , UpdateCurrentItem);
+            RegisterPropertyHandler(XShell.CurrentItemProperty, UpdateCurrentItem);
             RegisterPropertyHandler(XShell.FlyoutIsPresentedProperty, UpdateFlyoutIsPresented);
         }
 
@@ -53,11 +51,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void InitializeComponent()
         {
-            if (_mainLayout == null)
+            if (_drawer == null)
             {
-                _mainLayout = new Box(XForms.NativeParent);
-                _mainLayout.SetLayoutCallback(OnLayout);
-                SetNativeView(_mainLayout);
+                _drawer = new NavigationDrawer(XForms.NativeParent);
+                _drawer.IsOpen = Element.FlyoutIsPresented;
+                _drawer.Toggled += OnNavigationDrawerToggled;
+
+                SetNativeView(_drawer);
             }
         }
 
@@ -77,54 +77,31 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
-                DeinitializeNavigationDrawer();
+                DeinitializeNavigationView();
             }
         }
 
         void InitializeNavigationDrawer()
         {
-            if (_drawer != null)
+            if (_navigationView != null)
             {
                 return;
             }
 
-            // TODO. Need to improve, Change to high level component, implement without Panel
-            _drawer = new Panel(XForms.NativeParent);
-            _drawer.Show();
-            _drawer.IsOpen = false;
-            _drawer.Direction = PanelDirection.Bottom;
-            _drawer.Toggled += OnDrawerToggled;
-            _drawer.SetScrollable(true);
-            _drawer.SetScrollableArea(1.0);
-            _mainLayout.PackEnd(_drawer);
             _navigationView = new NavigationView(XForms.NativeParent)
             {
                 AlignmentX = -1,
                 AlignmentY = -1,
                 WeightX = 1,
-                WeightY = 1
+                WeightY = 1,
             };
             _navigationView.Show();
-            _drawer.SetContent(_navigationView);
-            if (_currentItem != null)
-            {
-                _drawer.StackAbove(_currentItem);
-            }
             _navigationView.ItemSelected += OnMenuItemSelected;
+
+            _drawer.SetDrawerContent(_navigationView);
         }
 
-        void DeinitializeNavigationDrawer()
-        {
-            if (_drawer == null)
-                return;
-
-            _mainLayout.UnPack(_drawer);
-            _drawer.Unrealize();
-            _drawer = null;
-            _navigationView = null;
-        }
-
-        void OnDrawerToggled(object sender, EventArgs e)
+        void OnNavigationDrawerToggled(object sender, EventArgs e)
         {
             if (_drawer.IsOpen)
             {
@@ -132,12 +109,33 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
-                //TODO. need to fix, 
-                // It has bug, Rotary event was sent to a widget that called the Activate() method at last, 
-                // so, if a CurrentItem was not changed, Activate method was not called and anybody can't receive Rotary event
                 _navigationView.Deactivate();
+
+                var stack = (Element.CurrentItem.CurrentItem as ShellSection)?.Stack;
+                var currentPage = stack?.LastOrDefault<Page>();
+
+                if (currentPage == null)
+                {
+                   currentPage = (Element.CurrentItem.CurrentItem.CurrentItem as IShellContentController)?.Page;
+                }
+
+                if (currentPage != null)
+                {
+                    var renderer = Platform.GetOrCreateRenderer(currentPage);
+                    (renderer as CirclePageRenderer)?.UpdateRotaryFocusObject(false);
+                }
             }
-            Element.SetValueFromRenderer(Shell.FlyoutIsPresentedProperty, _drawer.IsOpen);
+
+            Element.SetValueFromRenderer(XShell.FlyoutIsPresentedProperty, _drawer.IsOpen);
+        }
+
+        void DeinitializeNavigationView()
+        {
+            if (_navigationView == null)
+                return;
+
+            _navigationView.Unrealize();
+            _navigationView = null;
         }
 
         void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -161,43 +159,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateFlyoutIsPresented()
         {
-            if (_drawer != null)
-            {
-                _drawer.IsOpen = Element.FlyoutIsPresented;
-            }
-        }
-
-        void OnLayout()
-        {
-            if (_currentItem != null)
-            {
-                _currentItem.Geometry = _mainLayout.Geometry;
-            }
-            if (_drawer != null)
-            {
-                _drawer.Geometry = _mainLayout.Geometry;
-            }
+            _drawer.IsOpen = Element.FlyoutIsPresented;
         }
 
         void SetCurrentItem(EvasObject item)
         {
-            _currentItem = item;
-            _currentItem.Show();
-            _mainLayout.PackEnd(_currentItem);
-            if (_drawer != null)
-            {
-                _drawer.StackAbove(_currentItem);
-            }
+            _drawer.SetMainContent(item);
         }
 
         void ResetCurrentItem()
         {
-            if (_currentItem != null)
-            {
-                _mainLayout.UnPack(_currentItem);
-                _currentItem.Hide();
-                _currentItem = null;
-            }
+            _drawer.SetMainContent(null);
         }
     }
 }
