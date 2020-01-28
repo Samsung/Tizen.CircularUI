@@ -31,6 +31,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         GenListItem _header;
         GenListItem _footer;
 
+        List<List<Element>> _itemCache;
+
         public NavigationView(EvasObject parent) : base(parent)
         {
             InitializeComponent();
@@ -42,6 +44,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void Build(List<List<Element>> items)
         {
+            // Only update when items was changed
+            if (!IsUpdated(items))
+            {
+                return;
+            }
+            _itemCache = items;
+
             _naviMenu.Clear();
             // header
             _header = _naviMenu.Append(_defaultClass, new Item { Text = "" });
@@ -88,7 +97,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void InitializeComponent()
         {
-            _outterBox.PassEvents = false;
             _outterBox.SetLayoutCallback(OnLayout);
 
             _surfaceLayout = new ELayout(this);
@@ -178,6 +186,29 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _surfaceLayout.Geometry = Geometry;
             _naviMenu.Geometry = Geometry;
         }
+
+        bool IsUpdated(List<List<Element>> items)
+        {
+            if (_itemCache == null)
+                return true;
+
+            if (_itemCache.Count != items.Count)
+                return true;
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (_itemCache[i].Count != items[i].Count)
+                    return true;
+
+                for (int j = 0; j < items[i].Count; j++)
+                {
+                    if (_itemCache[i][j] != items[i][j])
+                        return true;
+                }
+            }
+            return false;
+        }
+
     }
     public enum DraggedState
     {
@@ -204,6 +235,4 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return ResourcePath.GetPath(source.File);
         }
     }
-
-
 }

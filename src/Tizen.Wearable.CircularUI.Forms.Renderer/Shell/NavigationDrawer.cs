@@ -6,23 +6,30 @@ using ElmSharp;
 using ElmSharp.Wearable;
 using EWidget = ElmSharp.Widget;
 using ELayout = ElmSharp.Layout;
-using EColor = ElmSharp.Color;
+using NImage = Xamarin.Forms.Platform.Tizen.Native.Image;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class NavigationDrawer : ELayout, IAnimatable
     {
-        int _iconHeight = 50;
+
+        static readonly string DefaultIcon = "Tizen.Wearable.CircularUI.Forms.Renderer.res.drag_handle_white_18dp.png";
+
+        int _iconHeight = 40;
 
         Box _mainLayout;
         Box _contentBox;
-        EvasObject _content;
         Box _drawerBox;
         Box _drawerContentBox;
-        EvasObject _drawerContent;
         Box _drawerIconBox;
+
+        EvasObject _content;
+        EvasObject _drawerContent;
+        NImage _drawerIcon;
+
         GestureLayer _contentGesture;
         GestureLayer _drawerGesture;
+
         bool _isOpen;
 
         CancellationTokenSource _fadeInCancelTokenSource = null;
@@ -109,6 +116,38 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
+        public void UpdateDrawerIcon(ImageSource source)
+        {
+            if (source == null)
+            {
+                _drawerIcon.LoadFromImageSourceAsync(ImageSource.FromResource(DefaultIcon, GetType().Assembly));
+            }
+            else
+            {
+                _drawerIconBox.UnPack(_drawerIcon);
+                _drawerIcon.Unrealize();
+
+                _drawerIcon = new NImage(this)
+                {
+                    AlignmentY = -1,
+                    AlignmentX = -1,
+                    WeightX = 1,
+                    WeightY = 1
+                };
+                _drawerIcon.Show();
+                _drawerIconBox.PackEnd(_drawerIcon);
+
+                if (source is FileImageSource fsource)
+                {
+                    _drawerIcon.Load(fsource.ToAbsPath());
+                }
+                else
+                {
+                    _drawerIcon.LoadFromImageSourceAsync(source);
+                }
+            }
+        }
+
         public async void Open(uint length = 300)
         {
             var toMove = _drawerBox.Geometry;
@@ -172,8 +211,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _drawerIconBox = new Box(_drawerBox);
             _drawerBox.PackEnd(_drawerIconBox);
 
-            //TODO remove it
-            _drawerIconBox.BackgroundColor = EColor.Pink;
+            _drawerIcon = new NImage(this)
+            {
+                AlignmentY = -1,
+                AlignmentX = -1,
+                WeightX = 1,
+                WeightY = 1
+            };
+            _drawerIcon.Show();
+            using (var stream = GetType().Assembly.GetManifestResourceStream(DefaultIcon))
+            {
+                _drawerIcon.Load(stream);
+            }
+
+            _drawerIconBox.PackEnd(_drawerIcon);
 
             _contentGesture = new GestureLayer(_contentBox);
             _contentGesture.Attach(_contentBox);
@@ -258,6 +309,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             var tcs = new TaskCompletionSource<bool>();
 
             var opacity = target.Opacity;
+            if (opacity == -1)
+                opacity = 255;
+
             new Animation((progress) =>
             {
                 target.Opacity = opacity - (int)(progress * opacity);
@@ -337,7 +391,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var toMove = dest;
                 toMove.X += (int)(dx * (1 - progress));
                 toMove.Y += (int)(dy * (1 - progress));
-
                 target.Geometry = toMove;
             }).Commit(this, "Move", length: length, finished: (s, e) =>
             {

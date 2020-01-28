@@ -21,6 +21,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             RegisterPropertyHandler(XShell.CurrentItemProperty, UpdateCurrentItem);
             RegisterPropertyHandler(XShell.FlyoutIsPresentedProperty, UpdateFlyoutIsPresented);
+            RegisterPropertyHandler(XShell.FlyoutBehaviorProperty, UpdateFlyoutBehavior);
+            RegisterPropertyHandler(XShell.FlyoutIconProperty, UpdateFlyoutIcon);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircularShell> e)
@@ -56,21 +58,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _drawer = new NavigationDrawer(XForms.NativeParent);
                 _drawer.IsOpen = Element.FlyoutIsPresented;
                 _drawer.Toggled += OnNavigationDrawerToggled;
-
                 SetNativeView(_drawer);
             }
         }
 
         void OnNavigationStructureChanged(object sender, EventArgs e)
         {
-            // TODO. Need to optimize, this event was called evey time when CurrentItem was changed even if structure of menu was not changed
             UpdateFlyoutMenu();
         }
 
         void UpdateFlyoutMenu()
         {
+            if (Element.FlyoutBehavior == FlyoutBehavior.Disabled)
+                return;
+
             var flyoutItems = (Element as IShellController).GenerateFlyoutGrouping();
-            if (flyoutItems.Count > 0)
+            if (flyoutItems.Count > 1)
             {
                 InitializeNavigationDrawer();
                 _navigationView.Build(flyoutItems);
@@ -155,6 +158,30 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 }
                 SetCurrentItem(renderer.NativeView);
             }
+        }
+
+        void UpdateFlyoutBehavior()
+        {
+            if (Element.FlyoutBehavior == FlyoutBehavior.Disabled)
+            {
+                DeinitializeNavigationView();
+            }
+            else if (Element.FlyoutBehavior == FlyoutBehavior.Flyout)
+            {
+                UpdateFlyoutMenu();
+            }
+            else if (Element.FlyoutBehavior == FlyoutBehavior.Locked)
+            {
+                // Locked behavior is not supported on circularshell
+            }
+        }
+
+        void UpdateFlyoutIcon(bool init)
+        {
+            if (init && Element.FlyoutIcon == null)
+                return;
+
+            _drawer.UpdateDrawerIcon(Element.FlyoutIcon);
         }
 
         void UpdateFlyoutIsPresented()
