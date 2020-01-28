@@ -136,7 +136,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_navigationView == null)
                 return;
-
+            _drawer.SetDrawerContent(null);
             _navigationView.Unrealize();
             _navigationView = null;
         }
