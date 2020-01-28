@@ -7,10 +7,10 @@ using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
 using XShell = Xamarin.Forms.Shell;
 
-[assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircularShell), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer))]
+[assembly: ExportRenderer(typeof(XShell), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer))]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class ShellRenderer : VisualElementRenderer<CircularShell>
+    public class ShellRenderer : VisualElementRenderer<XShell>
     {
         NavigationDrawer _drawer;
         NavigationView _navigationView;
@@ -25,7 +25,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(XShell.FlyoutIconProperty, UpdateFlyoutIcon);
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<CircularShell> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<XShell> e)
         {
             InitializeComponent();
             base.OnElementChanged(e);
