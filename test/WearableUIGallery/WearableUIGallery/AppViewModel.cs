@@ -94,7 +94,8 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "Grid", Class = typeof(TCCircleStepper) },
                     new TCDescribe { Title = "AbsoluteLayout", Class = typeof(TCCircleStepper2) },
                     new TCDescribe { Title = "Title", Class = typeof(TCCircleStepper3) },
-                    new TCDescribe { Title = "LabelFormat", Class = typeof(TCCircleStepper4) }
+                    new TCDescribe { Title = "LabelFormat", Class = typeof(TCCircleStepper4) },
+                    new TCDescribe { Title = "Wrap", Class = typeof(TCCircleStepper5) }
                 }
             });
             TCs.Add(new TCDescribe

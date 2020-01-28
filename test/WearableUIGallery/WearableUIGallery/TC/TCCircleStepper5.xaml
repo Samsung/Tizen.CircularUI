@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleStepper5"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference StepperUnit}">
+    <w:CirclePage.Content>
+        <StackLayout
+            VerticalOptions="CenterAndExpand"
+            Orientation="Vertical">
+            <w:CircleStepper
+                    AutomationId="stepper"
+                    x:Name="StepperUnit"
+                    HeightRequest="350"
+                    Title="stepper"
+                    HorizontalOptions="CenterAndExpand"
+                    Increment="1"
+                    LabelFormat="%1.1f"
+                    Maximum="100.0"
+                    Minimum="0.0"
+                    IsWrapEnabled="False"
+                    Value="50" />
+        </StackLayout>
+    </w:CirclePage.Content>
+    <w:CirclePage.ActionButton>
+        <w:ActionButtonItem x:Name="Button1" Text="Wrap Disable" Clicked="ActionButtonClicked"/>
+    </w:CirclePage.ActionButton>
+</w:CirclePage>
