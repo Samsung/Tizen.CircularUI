@@ -74,7 +74,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                         data.Text = menuItem.Text;
                         data.Icon = (menuItem.IconImageSource as FileImageSource)?.ToAbsPath();
                     }
-                    _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
+                    var genitem = _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
+                    genitem.SetPartColor("bg", ElmSharp.Color.Gray);
                 }
             }
             _footer = _naviMenu.Append(_defaultClass, new Item { Text = "" });
@@ -141,7 +142,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _surfaceLayout.StackAbove(_naviMenu);
 
-            _defaultClass = new GenItemClass("1icon_2text")
+            _defaultClass = new GenItemClass("1icon_1text")
             {
                 GetTextHandler = (obj, part) =>
                 {
