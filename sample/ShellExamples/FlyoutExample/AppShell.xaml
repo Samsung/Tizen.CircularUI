@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CircularShell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:local="clr-namespace:FlyoutExample"
+             x:Class="FlyoutExample.AppShell" FlyoutIcon="favorite.png">
+    <ShellItem Route="Main" Title="Main" Icon="home.png">
+        <ShellContent Route="content" ContentTemplate="{DataTemplate local:SimplePage}"/>
+    </ShellItem>
+    <ShellItem Route="Config" Title="Config" Icon="play.png">
+        <ShellContent Route="content" ContentTemplate="{DataTemplate local:ConfigPage}"/>
+    </ShellItem>
+    <ShellItem Route="Level0" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellSection Route="Level1-1" Title="Level1-1" Icon="favorite.png">
+            <ShellContent Route="Level2" ContentTemplate="{DataTemplate local:SimplePage}"/>
+        </ShellSection>
+        <ShellSection Route="Level1-2" Title="Level1-2" FlyoutDisplayOptions="AsMultipleItems">
+            <ShellContent Route="Level2-0" Title="Level2-0" Icon="work.png" ContentTemplate="{DataTemplate local:RandomColorPage}"/>
+            <ShellContent Route="Level2-1" Title="Level2-1" Icon="play.png" ContentTemplate="{DataTemplate local:RandomColorPage}"/>
+            <ShellContent Route="Level2-2" Title="Level2-2" Icon="inbox.png" ContentTemplate="{DataTemplate local:RandomColorPage}"/>
+            <ShellContent Route="Level2-3" Title="Level2-3" Icon="work.png" ContentTemplate="{DataTemplate local:RandomColorPage}"/>
+            <ShellContent Route="Level2-4" Title="Level2-4" Icon="play.png" ContentTemplate="{DataTemplate local:RandomColorPage}"/>
+            <ShellContent Route="Level2-5" Title="Level2-5" Icon="inbox.png" ContentTemplate="{DataTemplate local:RandomColorPage}"/>
+            <ShellContent Route="Level2-6" Title="Level2-6" Icon="inbox.png">
+                <ContentPage>
+                    <StackLayout>
+                        <Button Text="Click"/>
+                    </StackLayout>
+                </ContentPage>
+            </ShellContent>
+        </ShellSection>
+        <ShellContent Route="Level1-3" Title="Level1-3" ContentTemplate="{DataTemplate local:SimplePage}"/>
+    </ShellItem>
+    <MenuItem Text="Menu1" Command="{Binding OnMenu1}"/>
+    <MenuItem Text="Menu2" Command="{Binding OnMenu2}"/>
+</w:CircularShell>

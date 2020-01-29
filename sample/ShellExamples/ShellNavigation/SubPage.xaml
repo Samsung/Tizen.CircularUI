@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="ShellNavigation.SubPage">
+    <Page.ToolbarItems>
+        <ToolbarItem Text="Main" Command="{Binding OnMain}"/>
+        <ToolbarItem Text="Setting" Command="{Binding OnSetting}"/>
+    </Page.ToolbarItems>
+    <StackLayout>
+        <Label Text="{Binding From, StringFormat='from : {0}'}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Sub Page"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" />
+        <Label x:Name="Current" FontSize="Small"/>
+        <Button Text="Pop" Clicked="OnClicked"/>
+    </StackLayout>
+</w:CirclePage>

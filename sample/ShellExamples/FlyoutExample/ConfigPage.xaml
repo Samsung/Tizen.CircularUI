@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutExample.ConfigPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Label> Flyout enable</Label>
+                <Switch x:Name="FlyoutSwitch" Toggled="Switch_Toggled"/>
+            </StackLayout>
+            <Button Text="Change Icon" Clicked="Button_Clicked"/>
+            <Button Text="Set Default" Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

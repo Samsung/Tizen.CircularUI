@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CircularShell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:local="clr-namespace:ShellNavigation"
+             x:Class="ShellNavigation.AppShell">
+    <ShellContent Route="Main" Title="Main">
+        <local:Main />
+    </ShellContent>
+    <ShellContent Route="Setting" Title="Setting">
+        <local:Setting />
+    </ShellContent>
+</w:CircularShell>
