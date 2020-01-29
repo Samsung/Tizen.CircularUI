@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CirclePageRenderer
+    <title>Class ShellSectionNavigationRenderer
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CirclePageRenderer
+    <meta name="title" content="Class ShellSectionNavigationRenderer
    ">
     <meta name="generator" content="docfx 1.0.0.0">
     
@@ -78,43 +78,89 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer" class="text-break">Class CirclePageRenderer
+  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer" class="text-break">Class ShellSectionNavigationRenderer
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CirclePageRenderer</span></div>
+    <div class="level1"><span class="xref">ShellSectionNavigationRenderer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html">IShellItemRenderer</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_syntax">Syntax</h5>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CirclePageRenderer : VisualElementRenderer&lt;CirclePage&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ShellSectionNavigationRenderer : IShellItemRenderer, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer__ctor_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.#ctor*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer__ctor" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.#ctor">CirclePageRenderer()</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer__ctor_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.#ctor*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer__ctor_ShellSection_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.#ctor(ShellSection)">ShellSectionNavigationRenderer(ShellSection)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CirclePageRenderer()</code></pre>
+    <pre><code class="lang-csharp hljs">public ShellSectionNavigationRenderer(ShellSection item)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ShellSection</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_CircleSurface_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.CircleSurface*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_CircleSurface" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.CircleSurface">CircleSurface</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Item_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Item" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item">Item</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ElmSharp.Wearable.CircleSurface CircleSurface { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseShellItem Item { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,20 +172,74 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://developer.tizen.org/dev-guide/csapi/api/ElmSharp.Wearable.CircleSurface.html">ElmSharp.Wearable.CircleSurface</a></td>
+        <td><span class="xref">BaseShellItem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_NativeView_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_NativeView" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView">NativeView</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EvasObject NativeView { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EvasObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_ShellSection_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_ShellSection" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection">ShellSection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellSection ShellSection { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ShellSection</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Dispose_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Dispose*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Dispose_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,114 +258,13 @@
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CirclePage__" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})">OnElementChanged(ElementChangedEventArgs&lt;CirclePage&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;CirclePage&gt; e)</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html">IShellItemRenderer</a>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ElementChangedEventArgs</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.CirclePage.html">CirclePage</a>&gt;</td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementReady_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementReady*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementReady" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementReady">OnElementReady()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementReady()</code></pre>
+  <div>
+      <span class="xref">System.IDisposable</span>
   </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundColor_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundColor_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor(System.Boolean)">UpdateBackgroundColor(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void UpdateBackgroundColor(bool initialize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">initialize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundImage_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundImage_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage(System.Boolean)">UpdateBackgroundImage(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void UpdateBackgroundImage(bool initialize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">initialize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject(System.Boolean)">UpdateRotaryFocusObject(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateRotaryFocusObject(bool initialize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">initialize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
