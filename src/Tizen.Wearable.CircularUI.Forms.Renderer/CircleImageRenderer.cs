@@ -130,7 +130,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
 
         void UpdateAspect()
         {
-            Control.Aspect = Element.Aspect;
+            Control.ApplyAspect(Element.Aspect);
         }
 
         void UpdateIsOpaque()
