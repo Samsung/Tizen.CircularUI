@@ -2,11 +2,12 @@
 using System.Threading.Tasks;
 using System.Threading;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Tizen;
 using ElmSharp;
 using ElmSharp.Wearable;
 using EWidget = ElmSharp.Widget;
 using ELayout = ElmSharp.Layout;
-using NImage = Xamarin.Forms.Platform.Tizen.Native.Image;
+using EImage = ElmSharp.Image;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -25,7 +26,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         EvasObject _content;
         EvasObject _drawerContent;
-        NImage _drawerIcon;
+        EImage _drawerIcon;
 
         GestureLayer _contentGesture;
         GestureLayer _drawerGesture;
@@ -127,7 +128,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _drawerIconBox.UnPack(_drawerIcon);
                 _drawerIcon.Unrealize();
 
-                _drawerIcon = new NImage(this)
+                _drawerIcon = new EImage(this)
                 {
                     AlignmentY = -1,
                     AlignmentX = -1,
@@ -211,7 +212,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _drawerIconBox = new Box(_drawerBox);
             _drawerBox.PackEnd(_drawerIconBox);
 
-            _drawerIcon = new NImage(this)
+            _drawerIcon = new EImage(this)
             {
                 AlignmentY = -1,
                 AlignmentX = -1,
