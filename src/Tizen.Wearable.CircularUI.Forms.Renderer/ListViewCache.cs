@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using Xamarin.Forms.Internals;
+using XForms = Xamarin.Forms.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -50,7 +50,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
-                renderer = Registrar.Registered.GetHandler<CellRenderer>(type);
+                renderer = XForms.GetHandler<CellRenderer>(type);
                 if (renderer == null)
                 {
                     throw new ArgumentNullException("Unsupported cell type");

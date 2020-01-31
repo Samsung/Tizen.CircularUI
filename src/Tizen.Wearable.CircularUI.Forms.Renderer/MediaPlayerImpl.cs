@@ -21,8 +21,8 @@ using System.Threading.Tasks;
 using Tizen.Multimedia;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: Xamarin.Forms.Dependency(typeof(MediaPlayerImpl))]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
@@ -270,7 +270,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 return;
             }
-            IMediaSourceHandler handler = Registrar.Registered.GetHandlerForObject<IMediaSourceHandler>(_source);
+            IMediaSourceHandler handler = XForms.GetHandlerForObject<IMediaSourceHandler>(_source);
             await handler.SetSource(_player, _source);
         }
 
