@@ -73,7 +73,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 return;
 
             var flyoutItems = (Element as IShellController).GenerateFlyoutGrouping();
-            if (flyoutItems.Count > 1)
+            int itemCount = 0;
+            foreach (var item in flyoutItems)
+            {
+                itemCount += item.Count;
+            }
+
+            if (itemCount > 1)
             {
                 InitializeNavigationDrawer();
                 _navigationView.Build(flyoutItems);
