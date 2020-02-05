@@ -1,22 +1,23 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using ElmSharp;
+using ElmSharp.Wearable;
+using System;
 using System.Threading;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using ElmSharp;
-using ElmSharp.Wearable;
-using EWidget = ElmSharp.Widget;
-using ELayout = ElmSharp.Layout;
+using EColor = ElmSharp.Color;
 using EImage = ElmSharp.Image;
+using ELayout = ElmSharp.Layout;
+using EWidget = ElmSharp.Widget;
+using EButton = ElmSharp.Button;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class NavigationDrawer : ELayout, IAnimatable
     {
-
-        static readonly string DefaultIcon = "Tizen.Wearable.CircularUI.Forms.Renderer.res.drag_handle_white_18dp.png";
-
-        int _iconHeight = 40;
+        static readonly int TouchWidth = 50;
+        static readonly int IconSize = 40;
+        static readonly string DefaultIcon = "Tizen.Wearable.CircularUI.Forms.Renderer.res.wc_visual_cue.png";
 
         Box _mainLayout;
         Box _contentBox;
@@ -26,30 +27,28 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         EvasObject _content;
         EvasObject _drawerContent;
-        EImage _drawerIcon;
 
-        GestureLayer _contentGesture;
-        GestureLayer _drawerGesture;
+        EImage _drawerIcon;
+        EButton _touchArea;
+
+        GestureLayer _gestureOnContent;
+        GestureLayer _gestureOnDrawer;
 
         ImageSource _drawerIconSource;
 
         bool _isOpen;
+        bool _isDefaultIcon;
 
         CancellationTokenSource _fadeInCancelTokenSource = null;
 
         bool HasDrawer => _drawerBox != null;
 
-        public int IconHeight
+        public NavigationDrawer(EvasObject parent) : base(parent)
         {
-            get
-            {
-                return _iconHeight;
-            }
-            set
-            {
-                _iconHeight = value;
-            }
+            Initialize();
         }
+
+        public int HandlerHeight { get; set; } = 40;
 
         public bool IsOpen
         {
@@ -73,12 +72,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        public event EventHandler Toggled;
-
-        public NavigationDrawer(EvasObject parent) : base(parent)
+        EColor _handlerBackgroundColor = EColor.Transparent;
+        public EColor HandlerBackgroundColor
         {
-            Initialize();
+            get => _handlerBackgroundColor;
+            set
+            {
+                _handlerBackgroundColor = value;
+                UpdateHandlerBackgroundColor();
+            }
         }
+
+        public event EventHandler Toggled;
 
         public void SetMainContent(EvasObject content)
         {
@@ -96,7 +101,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void SetDrawerContent(EvasObject content)
         {
-            InitilizeDrawerBox();
+            InitializeDrawerBox();
 
             if (content == null)
             {
@@ -132,25 +137,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void SetDrawerIcon(ImageSource source)
-        {
-            if (source == null)
-            {
-                _drawerIcon.LoadFromImageSourceAsync(ImageSource.FromResource(DefaultIcon, GetType().Assembly));
-            }
-            else
-            {
-                if (source is FileImageSource fsource)
-                {
-                    _drawerIcon.Load(fsource.ToAbsPath());
-                }
-                else
-                {
-                    _drawerIcon.LoadFromImageSourceAsync(source);
-                }
-            }
-        }
-
         public async void Open(uint length = 300)
         {
             if (!HasDrawer)
@@ -166,6 +152,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _isOpen = true;
                 Toggled?.Invoke(this, EventArgs.Empty);
             }
+            OnLayout();
+            OnDrawerLayout();
+            FlipIcon();
         }
 
         public async void Close(uint length = 300)
@@ -174,7 +163,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 return;
 
             var toMove = _drawerBox.Geometry;
-            toMove.Y = Geometry.Height - _iconHeight;
+            toMove.Y = Geometry.Height - HandlerHeight;
 
             await RunMoveAnimation(_drawerBox, toMove, length);
 
@@ -183,12 +172,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _isOpen = false;
                 Toggled?.Invoke(this, EventArgs.Empty);
             }
-        }
-
-        protected override IntPtr CreateHandle(EvasObject parent)
-        {
-            _mainLayout = new Box(parent);
-            return _mainLayout.Handle;
+            OnLayout();
+            OnDrawerLayout();
+            ResetIcon();
+            StartHighlightAnimation(_drawerIcon);
         }
 
         void IAnimatable.BatchBegin()
@@ -197,6 +184,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void IAnimatable.BatchCommit()
         {
+        }
+
+        protected override IntPtr CreateHandle(EvasObject parent)
+        {
+            _mainLayout = new Box(parent);
+            return _mainLayout.Handle;
         }
 
         void Initialize()
@@ -209,47 +202,98 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _mainLayout.PackEnd(_contentBox);
         }
 
-        void InitilizeDrawerBox()
+        void InitializeDrawerBox()
         {
             if (_drawerBox != null)
                 return;
 
             _drawerBox = new Box(_mainLayout);
-            _drawerBox.SetLayoutCallback(OnDrawerContentLayout);
+            _drawerBox.SetLayoutCallback(OnDrawerLayout);
             _drawerBox.Show();
             _mainLayout.PackEnd(_drawerBox);
 
             _drawerContentBox = new Box(_drawerBox);
             _drawerBox.PackEnd(_drawerContentBox);
 
-            _drawerIconBox = new Box(_drawerBox);
+            _drawerIconBox = new Box(_drawerBox)
+            {
+                BackgroundColor = _handlerBackgroundColor
+            };
             _drawerBox.PackEnd(_drawerIconBox);
 
-            _drawerIcon = new EImage(this)
+            _drawerIcon = new EImage(_drawerIconBox)
             {
-                AlignmentY = -1,
-                AlignmentX = -1,
-                WeightX = 1,
-                WeightY = 1
+                AlignmentY = 0.5,
+                AlignmentX = 0.5,
+                MinimumHeight = IconSize,
+                MinimumWidth = IconSize,
             };
             _drawerIcon.Show();
             _drawerIconBox.PackEnd(_drawerIcon);
-
             SetDrawerIcon(_drawerIconSource);
 
-            _contentGesture = new GestureLayer(_contentBox);
-            _contentGesture.SetMomentumCallback(GestureLayer.GestureState.Start, OnContentDragStarted);
-            _contentGesture.SetMomentumCallback(GestureLayer.GestureState.End, OnContentDragEnded);
-            _contentGesture.SetMomentumCallback(GestureLayer.GestureState.Abort, OnContentDragEnded);
-            _contentGesture.Attach(_contentBox);
+            _touchArea = new EButton(_drawerBox)
+            {
+                Color = EColor.Transparent,
+                BackgroundColor = EColor.Transparent,
+            };
+            _touchArea.SetPartColor("effect", EColor.Transparent);
+            _touchArea.Show();
+            _touchArea.RepeatEvents = true;
+            _touchArea.Clicked += OnIconClicked;
 
-            _drawerGesture = new GestureLayer(_drawerIconBox);
-            _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.Move, OnDrawerDragged);
-            _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.End, OnDrawerDragEnded);
-            _drawerGesture.SetMomentumCallback(GestureLayer.GestureState.Abort, OnDrawerDragEnded);
-            _drawerGesture.Attach(_drawerIconBox);
+            _drawerBox.PackEnd(_touchArea);
+
+            _gestureOnContent = new GestureLayer(_contentBox);
+            _gestureOnContent.SetMomentumCallback(GestureLayer.GestureState.Start, OnContentDragStarted);
+            _gestureOnContent.SetMomentumCallback(GestureLayer.GestureState.End, OnContentDragEnded);
+            _gestureOnContent.SetMomentumCallback(GestureLayer.GestureState.Abort, OnContentDragEnded);
+            _gestureOnContent.Attach(_contentBox);
+
+            _gestureOnDrawer = new GestureLayer(_drawerIconBox);
+            _gestureOnDrawer.SetMomentumCallback(GestureLayer.GestureState.Move, OnDrawerDragged);
+            _gestureOnDrawer.SetMomentumCallback(GestureLayer.GestureState.End, OnDrawerDragEnded);
+            _gestureOnDrawer.SetMomentumCallback(GestureLayer.GestureState.Abort, OnDrawerDragEnded);
+            _gestureOnDrawer.Attach(_drawerIconBox);
 
             RotaryEventManager.Rotated += OnRotateEventReceived;
+        }
+
+        void SetDrawerIcon(ImageSource source)
+        {
+            if (source == null)
+            {
+                _drawerIcon.LoadFromImageSourceAsync(ImageSource.FromResource(DefaultIcon, GetType().Assembly));
+                _isDefaultIcon = true;
+            }
+            else
+            {
+                _isDefaultIcon = false;
+                if (source is FileImageSource fsource)
+                {
+                    _drawerIcon.Load(fsource.ToAbsPath());
+                }
+                else
+                {
+                    _drawerIcon.LoadFromImageSourceAsync(source);
+                }
+            }
+        }
+
+        void UpdateHandlerBackgroundColor()
+        {
+            if (_drawerIconBox != null)
+            {
+                _drawerIconBox.BackgroundColor = _handlerBackgroundColor;
+            }
+        }
+
+        void OnIconClicked(object sender, EventArgs e)
+        {
+            if (IsOpen)
+                Close();
+            else
+                Open();
         }
 
         async Task<bool> ShowAsync(EWidget target, Easing easing = null, uint length = 300, CancellationToken cancelltaionToken = default(CancellationToken))
@@ -277,6 +321,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 target.Opacity = 255;
                 tcs.SetResult(true);
+                StartHighlightAnimation(_drawerIcon);
             });
 
             return await tcs.Task;
@@ -284,13 +329,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnLayout()
         {
-            var geometry = Geometry;
-            _contentBox.Geometry = geometry;
-
+            var bound = Geometry;
+            _contentBox.Geometry = bound;
             if (_drawerBox != null)
             {
-                geometry.Y = (_isOpen) ? 0 : (geometry.Height - _iconHeight);
-                _drawerBox.Geometry = geometry;
+                bound.Y = _isOpen ? 0 : (bound.Height - HandlerHeight);
+                _drawerBox.Geometry = bound;
             }
         }
 
@@ -302,15 +346,27 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void OnDrawerContentLayout()
+        void OnDrawerLayout()
         {
-            var geometry = _drawerBox.Geometry;
-            _drawerContentBox.Geometry = _drawerBox.Geometry;
+            this.AbortAnimation("HighlightAnimation");
 
-            geometry.Height = _iconHeight;
-            _drawerIconBox.Geometry = geometry;
+            var bound = _drawerBox.Geometry;
 
-            _drawerIconBox.StackAbove(_drawerContentBox);
+            var currentY = bound.Y;
+            var ratio = currentY / (double)(Geometry.Height - HandlerHeight);
+
+            var contentBound = bound;
+            contentBound.Y += (int)(HandlerHeight * ratio);
+            _drawerContentBox.Geometry = contentBound;
+
+            var drawerHandleBound = bound;
+            drawerHandleBound.Height = HandlerHeight;
+            _drawerIconBox.Geometry = drawerHandleBound;
+
+            var drawerTouchBound = drawerHandleBound;
+            drawerTouchBound.Width = TouchWidth;
+            drawerTouchBound.X = drawerHandleBound.X + (drawerHandleBound.Width - TouchWidth) / 2;
+            _touchArea.Geometry = drawerTouchBound;
         }
 
         async Task<bool> HideAsync(EWidget target, Easing easing = null, uint length = 300)
@@ -335,17 +391,48 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return await tcs.Task;
         }
 
+        void StartHighlightAnimation(EWidget target)
+        {
+            if (!_isDefaultIcon || this.AnimationIsRunning("HighlightAnimation"))
+                return;
+
+            int count = 2;
+            var bound = target.Geometry;
+            var y = bound.Y;
+            var dy = bound.Y - bound.Height / 3;
+
+            var anim = new Animation();
+
+            var transfAnim = new Animation((f) =>
+            {
+                bound.Y = (int)f;
+                var map = new EvasMap(4);
+                map.PopulatePoints(bound, 0);
+                target.IsMapEnabled = true;
+                target.EvasMap = map;
+            }, y, dy);
+
+            var opacityAnim = new Animation(f => target.Opacity = (int)f, 255, 40);
+
+            anim.Add(0, 1, opacityAnim);
+            anim.Add(0, 1, transfAnim);
+
+            anim.Commit(this, "HighlightAnimation", 16, 800, finished: (f, b) =>
+            {
+                target.Opacity = 255;
+                target.IsMapEnabled = false;
+            }, repeat:() => --count > 0);
+        }
+
         async void OnRotateEventReceived(EventArgs args)
         {
             _fadeInCancelTokenSource?.Cancel();
-
             _fadeInCancelTokenSource = new CancellationTokenSource();
-            var token = _fadeInCancelTokenSource.Token;
 
             if (!_isOpen)
             {
+                var token = _fadeInCancelTokenSource.Token;
                 await HideAsync(_drawerBox);
-
                 _ = ShowAsync(_drawerBox, cancelltaionToken: token);
             }
         }
@@ -364,7 +451,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void OnContentDragEnded(GestureLayer.MomentumData moment)
         {
             _fadeInCancelTokenSource = new CancellationTokenSource();
-
             _ = ShowAsync(_drawerBox, cancelltaionToken: _fadeInCancelTokenSource.Token);
         }
 
@@ -372,8 +458,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             var toMove = _drawerBox.Geometry;
             toMove.Y = (moment.Y2 < 0) ? 0 : moment.Y2;
-
             _drawerBox.Geometry = toMove;
+            OnDrawerLayout();
         }
 
         void OnDrawerDragEnded(GestureLayer.MomentumData moment)
@@ -386,6 +472,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 Close();
             }
+        }
+
+        void FlipIcon()
+        {
+            if (_isDefaultIcon)
+            {
+                _drawerIcon.Orientation = ImageOrientation.FlipVertical;
+            }
+        }
+
+        void ResetIcon()
+        {
+            _drawerIcon.Orientation = ImageOrientation.None;
         }
 
         Task RunMoveAnimation(EvasObject target, Rect dest, uint length, Easing easing = null)
@@ -401,6 +500,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 toMove.X += (int)(dx * (1 - progress));
                 toMove.Y += (int)(dy * (1 - progress));
                 target.Geometry = toMove;
+                OnDrawerLayout();
             }).Commit(this, "Move", length: length, finished: (s, e) =>
             {
                 target.Geometry = dest;
