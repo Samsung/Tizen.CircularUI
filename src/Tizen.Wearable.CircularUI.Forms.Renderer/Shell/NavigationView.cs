@@ -46,14 +46,24 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
 
         EColor _backgroundColor = EColor.Black;
-
         public override EColor BackgroundColor
         {
             get => _backgroundColor;
             set
             {
                 _backgroundColor = value;
-                UpdateBackground();
+                UpdateBackgroundColor();
+            }
+        }
+
+        EColor _foregroundColor = EColor.Default;
+        public EColor ForegroundColor
+        {
+            get => _foregroundColor;
+            set
+            {
+                _foregroundColor = value;
+                UpdateForegroundColor();
             }
         }
 
@@ -166,7 +176,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     if (part == "elm.text")
                     {
-                        return (obj as Item).Text;
+                        var text = (obj as Item).Text;
+                        if (_foregroundColor != EColor.Default)
+                            return $"<span color='{_foregroundColor.ToHex()}'>{text}</span>";
+                        else
+                            return text;
                     }
                     return null;
                 },
@@ -206,12 +220,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _naviMenu.Geometry = Geometry;
         }
 
-        void UpdateBackground()
+        void UpdateBackgroundColor()
         {
             _naviMenu.BackgroundColor = _backgroundColor;
             foreach (var item in _items)
             {
                 item.SetPartColor("bg", _backgroundColor);
+            }
+        }
+
+        void UpdateForegroundColor()
+        {
+            foreach (var item in _items)
+            {
+                item.Update();
             }
         }
 
@@ -261,6 +283,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public static string ToAbsPath(this FileImageSource source)
         {
             return ResourcePath.GetPath(source.File);
+        }
+    }
+
+    static class ColorEX
+    {
+        public static string ToHex(this EColor c)
+        {
+            return string.Format("#{0:X2}{1:X2}{2:X2}{3:X2}", c.R, c.G, c.B, c.A);
         }
     }
 }

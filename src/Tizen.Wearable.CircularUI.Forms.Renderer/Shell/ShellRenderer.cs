@@ -25,6 +25,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(XShell.FlyoutIconProperty, UpdateFlyoutIcon);
             RegisterPropertyHandler(XShell.FlyoutBackgroundColorProperty, UpdateFlyoutBackgroundColor);
             RegisterPropertyHandler(CircularShell.FlyoutIconBackgroundColorProperty, UpdateFlyoutIconBackgroundColor);
+            RegisterPropertyHandler(CircularShell.FlyoutForegroundColorProperty, UpdateFlyoutForegroundColor);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<XShell> e)
@@ -197,6 +198,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (_navigationView != null)
             {
                 _navigationView.BackgroundColor = Element.FlyoutBackgroundColor.ToNative();
+            }
+        }
+
+        void UpdateFlyoutForegroundColor()
+        {
+            if (_navigationView != null)
+            {
+                _navigationView.ForegroundColor = CircularShell.GetFlyoutForegroundColor(Element).ToNative();
             }
         }
 
