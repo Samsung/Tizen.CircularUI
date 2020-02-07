@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -40,6 +35,24 @@ namespace FlyoutExample
         void Button_Clicked_1(object sender, EventArgs e)
         {
             Shell.Current.FlyoutIcon = null;
+        }
+
+        void Button_Clicked_2(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            Shell.Current.FlyoutBackgroundColor = Color.FromRgb(rnd.Next(255), rnd.Next(255), rnd.Next(255));
+        }
+
+        void Button_Clicked_3(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor(Shell.Current, Color.FromRgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
+        }
+
+        void Button_Clicked_4(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor(Shell.Current, Color.FromRgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
         }
     }
 }
