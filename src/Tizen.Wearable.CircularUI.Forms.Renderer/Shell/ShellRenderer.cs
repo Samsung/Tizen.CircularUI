@@ -169,8 +169,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateFlyoutBehavior()
+        void UpdateFlyoutBehavior(bool init)
         {
+            if (init)
+                return;
+
             if (Element.FlyoutBehavior == FlyoutBehavior.Disabled)
             {
                 DeinitializeNavigationView();
@@ -193,16 +196,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _drawer.UpdateDrawerIcon(Element.FlyoutIcon);
         }
 
-        void UpdateFlyoutBackgroundColor()
+        void UpdateFlyoutBackgroundColor(bool init)
         {
+            if (init && Element.FlyoutBackgroundColor.IsDefault)
+                return;
+
             if (_navigationView != null)
             {
                 _navigationView.BackgroundColor = Element.FlyoutBackgroundColor.ToNative();
             }
         }
 
-        void UpdateFlyoutForegroundColor()
+        void UpdateFlyoutForegroundColor(bool init)
         {
+            if (init && CircularShell.GetFlyoutForegroundColor(Element).IsDefault)
+                return;
+
             if (_navigationView != null)
             {
                 _navigationView.ForegroundColor = CircularShell.GetFlyoutForegroundColor(Element).ToNative();

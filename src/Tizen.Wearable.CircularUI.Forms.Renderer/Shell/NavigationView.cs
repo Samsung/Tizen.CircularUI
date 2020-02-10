@@ -51,7 +51,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             get => _backgroundColor;
             set
             {
-                _backgroundColor = value;
+                _backgroundColor = value.IsDefault ? EColor.Black : value;
                 UpdateBackgroundColor();
             }
         }
