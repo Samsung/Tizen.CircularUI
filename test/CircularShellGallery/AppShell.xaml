@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:test="clr-namespace:CircularShellGallery"
+             x:Class="CircularShellGallery.AppShell">
+    <ShellItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Route="List" Title="List" ContentTemplate="{DataTemplate test:MainPage}" />
+        <ShellContent Route="FlyoutIcon" Title="FlyoutIcon" ContentTemplate="{DataTemplate test:FlyoutIconTest}" />
+        <ShellContent Route="FlyoutIconBackgroundColor" Title="FlyoutIconBackgroundColor" ContentTemplate="{DataTemplate test:FlyoutIconBackgroundColorTest}" />
+        <ShellContent Route="FlyoutBackgroundColor" Title="FlyoutBackgroundColor" ContentTemplate="{DataTemplate test:FlyoutBackgroundColorTest}" />
+        <ShellContent Route="FlyoutForegroundColor" Title="FlyoutForegroundColor" ContentTemplate="{DataTemplate test:FlyoutForegroundColorTest}" />
+        <ShellSection Route="Section" Title="Section">
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate test:RandomColorPage}"/>
+        </ShellSection>
+    </ShellItem>
+</Shell>
