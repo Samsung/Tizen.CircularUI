@@ -30,7 +30,7 @@ namespace CircularShellGallery
 
         void Button_Clicked_2(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//List");
+            Shell.Current.GoToAsync("//Main");
         }
     }
 }

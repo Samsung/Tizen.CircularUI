@@ -3,22 +3,10 @@
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:sys="clr-namespace:System;assembly=netstandard"
               xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-              x:Class="CircularShellGallery.MainPage"
-              RotaryFocusObject="{x:Reference TestCases}">
-    <w:CircleListView x:Name="TestCases">
-        <w:CircleListView.ItemsSource>
-            <x:Array x:Key="array" Type="{x:Type sys:String}">
-                <x:String>FlyoutIcon</x:String>
-                <x:String>FlyoutIconBackgroundColor</x:String>
-                <x:String>FlyoutBackgroundColor</x:String>
-                <x:String>FlyoutForegroundColor</x:String>
-                <x:String>Section</x:String>
-            </x:Array>
-        </w:CircleListView.ItemsSource>
-        <w:CircleListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell AutomationId="{Binding .}" Text="{Binding .}"/>
-            </DataTemplate>
-        </w:CircleListView.ItemTemplate>
-    </w:CircleListView>
+              x:Class="CircularShellGallery.MainPage">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="TCName"/>
+        <Entry AutomationId="TCName" x:Name="TCName" />
+        <Button AutomationId="Go" Text="Go" Clicked="Button_Clicked"/>
+    </StackLayout>
 </w:CirclePage>

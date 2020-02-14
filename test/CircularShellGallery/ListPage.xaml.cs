@@ -5,16 +5,17 @@ using Tizen.Wearable.CircularUI.Forms;
 namespace CircularShellGallery
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : CirclePage
+    public partial class ListPage : CirclePage
     {
-        public MainPage ()
+        public ListPage ()
         {
             InitializeComponent();
+            TestCases.ItemTapped += OnItemTapped;
         }
 
-        void Button_Clicked(object sender, System.EventArgs e)
+        void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Shell.Current.GoToAsync($"//{TCName.Text}");
+            Shell.Current.GoToAsync($"//{(e.Item as string)}");
         }
     }
 }

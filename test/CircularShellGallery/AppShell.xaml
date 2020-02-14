@@ -4,7 +4,10 @@
              xmlns:test="clr-namespace:CircularShellGallery"
              x:Class="CircularShellGallery.AppShell">
     <ShellItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Route="List" Title="List" ContentTemplate="{DataTemplate test:MainPage}" />
+        <ShellSection Route="Main" Title="Main" >
+            <ShellContent ContentTemplate="{DataTemplate test:MainPage}" />
+            <ShellContent ContentTemplate="{DataTemplate test:ListPage}" />
+        </ShellSection>
         <ShellContent Route="FlyoutIcon" Title="FlyoutIcon" ContentTemplate="{DataTemplate test:FlyoutIconTest}" />
         <ShellContent Route="FlyoutIconBackgroundColor" Title="FlyoutIconBackgroundColor" ContentTemplate="{DataTemplate test:FlyoutIconBackgroundColorTest}" />
         <ShellContent Route="FlyoutBackgroundColor" Title="FlyoutBackgroundColor" ContentTemplate="{DataTemplate test:FlyoutBackgroundColorTest}" />
