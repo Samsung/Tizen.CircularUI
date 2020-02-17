@@ -20,6 +20,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         static readonly string DefaultIcon = "Tizen.Wearable.CircularUI.Forms.Renderer.res.wc_visual_cue.png";
 
         Box _mainLayout;
+        Box _contentGestureBox;
         Box _contentBox;
         Box _drawerBox;
         Box _drawerContentBox;
@@ -196,6 +197,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             _mainLayout.SetLayoutCallback(OnLayout);
 
+            _contentGestureBox = new Box(_mainLayout);
+            _contentGestureBox.Show();
+            _mainLayout.PackEnd(_contentGestureBox);
+
             _contentBox = new Box(_mainLayout);
             _contentBox.SetLayoutCallback(OnContentLayout);
             _contentBox.Show();
@@ -244,11 +249,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _drawerBox.PackEnd(_touchArea);
 
-            _gestureOnContent = new GestureLayer(_contentBox);
+            _gestureOnContent = new GestureLayer(_contentGestureBox);
             _gestureOnContent.SetMomentumCallback(GestureLayer.GestureState.Start, OnContentDragStarted);
             _gestureOnContent.SetMomentumCallback(GestureLayer.GestureState.End, OnContentDragEnded);
             _gestureOnContent.SetMomentumCallback(GestureLayer.GestureState.Abort, OnContentDragEnded);
-            _gestureOnContent.Attach(_contentBox);
+            _gestureOnContent.Attach(_contentGestureBox);
+            _contentBox.RepeatEvents = true;
 
             _gestureOnDrawer = new GestureLayer(_drawerIconBox);
             _gestureOnDrawer.SetMomentumCallback(GestureLayer.GestureState.Move, OnDrawerDragged);
@@ -330,6 +336,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void OnLayout()
         {
             var bound = Geometry;
+            _contentGestureBox.Geometry = bound;
             _contentBox.Geometry = bound;
             if (_drawerBox != null)
             {
