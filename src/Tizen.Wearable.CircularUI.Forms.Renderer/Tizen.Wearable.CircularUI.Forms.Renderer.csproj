@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>tizen40</TargetFramework>
+    <TargetFrameworkIdentifier>Tizen</TargetFrameworkIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
