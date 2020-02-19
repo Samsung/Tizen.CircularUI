@@ -25,6 +25,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(XShell.FlyoutIconProperty, UpdateFlyoutIcon);
         }
 
+        public NavigationView NavigationView
+        {
+            get
+            {
+                return _navigationView;
+            }
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<XShell> e)
         {
             InitializeComponent();

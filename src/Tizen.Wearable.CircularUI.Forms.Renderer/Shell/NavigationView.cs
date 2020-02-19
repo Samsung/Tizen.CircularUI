@@ -12,9 +12,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         readonly int _dafaultIconSize = 60;
 
-        class Item
+        public class ItemContext
         {
-            public Element Source { get; set; } 
+            public Element Source { get; set; }
+            public GenListItem Item { get; set; }
             public string Text { get; set; }
             public string Icon { get; set; }
         }
@@ -39,7 +40,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
 
         public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
-
+        public event EventHandler<GenListItemEventArgs> ItemRealized;
+        public event EventHandler<GenListItemEventArgs> ItemUnrealized;
         public event EventHandler<DraggedEventArgs> Dragged;
 
         public void Build(List<List<Element>> items)
@@ -53,14 +55,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             _naviMenu.Clear();
             // header
-            _header = _naviMenu.Append(_defaultClass, new Item { Text = "" });
+            _header = _naviMenu.Append(_defaultClass, new ItemContext { Text = "" });
 
             // TODO. need to improve, need to support group
             foreach (var group in items)
             {
                 foreach (var item in group)
                 {
-                    var data = new Item
+                    var data = new ItemContext
                     {
                         Source = item
                     };
@@ -74,11 +76,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                         data.Text = menuItem.Text;
                         data.Icon = (menuItem.IconImageSource as FileImageSource)?.ToAbsPath();
                     }
-                    var genitem = _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
-                    genitem.SetPartColor("bg", ElmSharp.Color.Gray);
+                    data.Item = _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
+                    data.Item.SetPartColor("bg", ElmSharp.Color.Gray);
                 }
             }
-            _footer = _naviMenu.Append(_defaultClass, new Item { Text = "" });
+            _footer = _naviMenu.Append(_defaultClass, new ItemContext { Text = "" });
         }
 
         public void Activate()
@@ -148,13 +150,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     if (part == "elm.text")
                     {
-                        return (obj as Item).Text;
+                        return (obj as ItemContext).Text;
                     }
                     return null;
                 },
                 GetContentHandler = (obj, part) =>
                 {
-                    if (part == "elm.swallow.icon" && obj is Item menuItem && !string.IsNullOrEmpty(menuItem.Icon))
+                    if (part == "elm.swallow.icon" && obj is ItemContext menuItem && !string.IsNullOrEmpty(menuItem.Icon))
                     {
                         var icon = new ElmSharp.Image(Xamarin.Forms.Forms.NativeParent)
                         {
@@ -174,12 +176,30 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             };
 
             _naviMenu.ItemSelected += OnItemSelected;
+            _naviMenu.ItemRealized += OnItemRealized;
+            _naviMenu.ItemUnrealized += OnItemUnrealized;
 
+        }
+
+        void OnItemRealized(object sender, GenListItemEventArgs e)
+        {
+            if ((e.Item.Data as ItemContext).Source != null)
+            {
+                ItemRealized?.Invoke(this, e);
+            }
+        }
+
+        void OnItemUnrealized(object sender, GenListItemEventArgs e)
+        {
+            if ((e.Item.Data as ItemContext).Source != null)
+            {
+                ItemUnrealized?.Invoke(this, e);
+            }
         }
 
         void OnItemSelected(object sender, GenListItemEventArgs e)
         {
-            ItemSelected?.Invoke(this, new SelectedItemChangedEventArgs((e.Item.Data as Item).Source, -1));
+            ItemSelected?.Invoke(this, new SelectedItemChangedEventArgs((e.Item.Data as ItemContext).Source, -1));
         }
 
         void OnLayout()
