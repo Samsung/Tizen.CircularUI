@@ -6,9 +6,9 @@
 
   <ItemGroup>
     <None Remove="res\circle.png" />
-    <None Remove="res\drag_handle_white_18dp.png" />
+    <None Remove="res\wc_visual_cue.png" />
     <EmbeddedResource Include="res\circle.png" />
-    <EmbeddedResource Include="res\drag_handle_white_18dp.png" />
+    <EmbeddedResource Include="res\wc_visual_cue.png" />
   </ItemGroup>
 
   <ItemGroup>

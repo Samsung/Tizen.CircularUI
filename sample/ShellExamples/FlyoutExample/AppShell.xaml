@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CircularShell xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-             xmlns:local="clr-namespace:FlyoutExample"
-             x:Class="FlyoutExample.AppShell" FlyoutIcon="favorite.png">
+             xmlns:local="clr-namespace:FlyoutExample" x:Class="FlyoutExample.AppShell">
     <ShellItem Route="Main" Title="Main" Icon="home.png">
-        <ShellContent Route="content" ContentTemplate="{DataTemplate local:SimplePage}"/>
+        <ShellContent Route="content" Title="Main" ContentTemplate="{DataTemplate local:SimplePage}"/>
     </ShellItem>
     <ShellItem Route="Config" Title="Config" Icon="play.png">
         <ShellContent Route="content" ContentTemplate="{DataTemplate local:ConfigPage}"/>
@@ -33,4 +32,4 @@
     </ShellItem>
     <MenuItem Text="Menu1" Command="{Binding OnMenu1}"/>
     <MenuItem Text="Menu2" Command="{Binding OnMenu2}"/>
-</w:CircularShell>
+</Shell>

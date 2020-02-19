@@ -3,14 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlyoutExample.ConfigPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand">
-            <StackLayout Orientation="Horizontal">
-                <Label> Flyout enable</Label>
-                <Switch x:Name="FlyoutSwitch" Toggled="Switch_Toggled"/>
+        <ScrollView>
+            <StackLayout VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+                <BoxView HeightRequest="100" Color="Transparent"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="End"> Flyout enable</Label>
+                    <Switch x:Name="FlyoutSwitch" Toggled="Switch_Toggled"/>
+                </StackLayout>
+                <Button Text="Change Icon" Clicked="Button_Clicked"/>
+                <Button Text="Set Default" Clicked="Button_Clicked_1"/>
+                <Button Text="Change Color" Clicked="Button_Clicked_2"/>
+                <Button Text="Change Icon BG Color" Clicked="Button_Clicked_3"/>
+                <Button Text="Change Foreground Color" Clicked="Button_Clicked_4"/>
+                <BoxView HeightRequest="100" Color="Transparent"/>
             </StackLayout>
-            <Button Text="Change Icon" Clicked="Button_Clicked"/>
-            <Button Text="Set Default" Clicked="Button_Clicked_1"/>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
