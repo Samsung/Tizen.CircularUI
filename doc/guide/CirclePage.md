@@ -133,10 +133,59 @@ For more information, see the following links:
 
 **XAML file**
 ```xml
-    <w:CirclePage.ActionButton>
-        <w:ActionButtonItem Command="{Binding ProgressBarVisibleCommand}" Text="OK" />
-    </w:CirclePage.ActionButton>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="TizenWearableXamlApp.MainPage" >
+    <c:CirclePage.Content>
+        <StackLayout Padding="0,30" Orientation="Vertical">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                Text="Bottom Buttton"
+                TextColor="#0FB4EF" />
+        </StackLayout>
+    </c:CirclePage.Content>
+    <c:CirclePage.ActionButton>
+        <c:ActionButtonItem Text="BOTTOM"  Command="{Binding ActionButtonCommand}"/>
+    </c:CirclePage.ActionButton>
+</c:CirclePage>
 ```
+
+**WARNING: If you add CirclePage to NavigationPage stack, you should add `NavigationPage.HasNavigationBar="False"` in XAML or `NavigationPage.SetHasNavigationBar(targetPage, false)` in code for preventing abnormal behavior of bottom button. Because NavigationPage has title area and it occupied top area, it change bottom button area. This is native framework constraint.**
+
+|NavigationPage issue screenshot | Normal behavior screenshot |
+|:------------------------------:|:--------------------------------:|
+|![bottom_button_issue](data/navigationPage_Bottom_button_issue.png)|![bottom_button_navigation](data/navigationPage_Bottom_button.png)|
+
+
+**XAML for NavigationPage**
+```xml
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="TizenWearableXamlApp.MainPage"
+             NavigationPage.HasNavigationBar="False">
+```
+
+**Code for NavigationPage**
+```cs
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+
+           // Application.Current.MainPage = new NavigationPage(new MainPage());
+            var page =new MainPage();
+            NavigationPage.SetHasNavigationBar(page, false);
+            Application.Current.MainPage = new NavigationPage(page);
+        }
+```
+
+
+
 
 ## Add ToolbarItems in CirclePage
 CirclePage `ToolbarItems` set items of rotary selector views. You can set each item with `CircleToolbarItem` property.
