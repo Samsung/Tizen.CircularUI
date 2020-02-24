@@ -11,31 +11,22 @@ namespace Appium.CircularShell.Tests
         [Test]
         public void SetBlueViolet()
         {
-            Thread.Sleep(1000);
-            Driver.Click("BlueViolet");
-            Thread.Sleep(1000);
-            Driver.Click("default");
-            Thread.Sleep(1000);
+            FindAndClick("BlueViolet");
+            FindAndClick("default");
         }
 
         [Test]
         public void SetBrown()
         {
-            Thread.Sleep(1000);
-            Driver.Click("Brown");
-            Thread.Sleep(1000);
-            Driver.Click("default");
-            Thread.Sleep(1000);
+            FindAndClick("Brown");
+            FindAndClick("default");
         }
 
         [Test]
         public void SetFuchsia()
         {
-            Thread.Sleep(1000);
-            Driver.Click("Fuchsia");
-            Thread.Sleep(1000);
-            Driver.Click("default");
-            Thread.Sleep(1000);
+            FindAndClick("Fuchsia");
+            FindAndClick("default");
         }
     }
 }
