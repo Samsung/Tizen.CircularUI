@@ -14,31 +14,22 @@ namespace Appium.CircularShell.Tests
         [Test]
         public void SetIcon1()
         {
-            Thread.Sleep(1000);
-            Driver.Click("icon1");
-            Thread.Sleep(1000);
-            Driver.Click("default");
-            Thread.Sleep(1000);
+            FindAndClick("icon1");
+            FindAndClick("default");
         }
 
         [Test]
         public void SetIcon2()
         {
-            Thread.Sleep(1000);
-            Driver.Click("icon2");
-            Thread.Sleep(1000);
-            Driver.Click("default");
-            Thread.Sleep(1000);
+            FindAndClick("icon2");
+            FindAndClick("default");
         }
 
         [Test]
         public void SetIcon3()
         {
-            Thread.Sleep(1000);
-            Driver.Click("icon3");
-            Thread.Sleep(1000);
-            Driver.Click("default");
-            Thread.Sleep(1000);
+            FindAndClick("icon3");
+            FindAndClick("default");
         }
     }
 }

@@ -1,22 +1,17 @@
 ﻿using NUnit.Framework;
 using System.Threading;
 
-
 namespace Appium.CircularShell.Tests
 {
     [TestFixture]
-    public class TCFlyoutBackgroundColor : TestCaseBase
+    public class TCFlyoutForeBackgroundColor : TestCaseBase
     {
-        public TCFlyoutBackgroundColor() : base("FlyoutBackgroundColor")
-        {
-        }
+        public TCFlyoutForeBackgroundColor() : base("FlyoutForegroundColor") { }
 
         [Test]
         public void SetBlueViolet()
         {
             FindAndClick("BlueViolet");
-            FindAndClick("Open");
-            GoBack();
             FindAndClick("default");
         }
 
@@ -24,8 +19,6 @@ namespace Appium.CircularShell.Tests
         public void SetBrown()
         {
             FindAndClick("Brown");
-            FindAndClick("Open");
-            GoBack();
             FindAndClick("default");
         }
 
@@ -33,10 +26,7 @@ namespace Appium.CircularShell.Tests
         public void SetFuchsia()
         {
             FindAndClick("Fuchsia");
-            FindAndClick("Open");
-            GoBack();
             FindAndClick("default");
         }
-
     }
 }
