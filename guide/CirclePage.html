@@ -201,57 +201,9 @@ If the value is not set properly, the control will not receive the <a href="http
 <li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/">Xamarin.Forms.MenuItem API reference</a></li>
 </ul>
 <p><strong>XAML file</strong></p>
-<pre><code class="lang-xml">&lt;c:CirclePage xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
-             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
-             xmlns:c=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-             x:Class=&quot;TizenWearableXamlApp.MainPage&quot; &gt;
-    &lt;c:CirclePage.Content&gt;
-        &lt;StackLayout Padding=&quot;0,30&quot; Orientation=&quot;Vertical&quot;&gt;
-            &lt;Label
-                FontAttributes=&quot;Bold&quot;
-                FontSize=&quot;Medium&quot;
-                HorizontalOptions=&quot;Center&quot;
-                Text=&quot;Bottom Buttton&quot;
-                TextColor=&quot;#0FB4EF&quot; /&gt;
-        &lt;/StackLayout&gt;
-    &lt;/c:CirclePage.Content&gt;
-    &lt;c:CirclePage.ActionButton&gt;
-        &lt;c:ActionButtonItem Text=&quot;BOTTOM&quot;  Command=&quot;{Binding ActionButtonCommand}&quot;/&gt;
-    &lt;/c:CirclePage.ActionButton&gt;
-&lt;/c:CirclePage&gt;
-</code></pre><p><strong>WARNING: If you add CirclePage to NavigationPage stack, you should add <code>NavigationPage.HasNavigationBar=&quot;False&quot;</code> in XAML or <code>NavigationPage.SetHasNavigationBar(targetPage, false)</code> in code for preventing abnormal behavior of bottom button. Because NavigationPage has title area and it occupied top area, it change bottom button area. This is native framework constraint.</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">NavigationPage issue screenshot</th>
-<th style="text-align:center">Normal behavior screenshot</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><img src="data/navigationPage_Bottom_button_issue.png" alt="bottom_button_issue"></td>
-<td style="text-align:center"><img src="data/navigationPage_Bottom_button.png" alt="bottom_button_navigation"></td>
-</tr>
-</tbody>
-</table>
-<p><strong>XAML for NavigationPage</strong></p>
-<pre><code class="lang-xml">&lt;c:CirclePage xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
-             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
-             xmlns:c=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-             x:Class=&quot;TizenWearableXamlApp.MainPage&quot;
-             NavigationPage.HasNavigationBar=&quot;False&quot;&gt;
-</code></pre><p><strong>Code for NavigationPage</strong></p>
-<pre><code class="lang-cs">    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
-
-           // Application.Current.MainPage = new NavigationPage(new MainPage());
-            var page =new MainPage();
-            NavigationPage.SetHasNavigationBar(page, false);
-            Application.Current.MainPage = new NavigationPage(page);
-        }
+<pre><code class="lang-xml">    &lt;w:CirclePage.ActionButton&gt;
+        &lt;w:ActionButtonItem Command=&quot;{Binding ProgressBarVisibleCommand}&quot; Text=&quot;OK&quot; /&gt;
+    &lt;/w:CirclePage.ActionButton&gt;
 </code></pre><h2 id="add-toolbaritems-in-circlepage">Add ToolbarItems in CirclePage</h2>
 <p>CirclePage <code>ToolbarItems</code> set items of rotary selector views. You can set each item with <code>CircleToolbarItem</code> property.
 CircleToolbarItem derives from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/">Xamarin.Forms.ToolbarItem</a>.</p>
