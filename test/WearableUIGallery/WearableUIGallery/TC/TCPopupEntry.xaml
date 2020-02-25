@@ -34,11 +34,14 @@
                     Placeholder="Password"
                     VerticalOptions="CenterAndExpand" />
                 <w:PopupEntry
+                    x:Name="hostname_entry"
                     AutomationId="popupEntry4"
                     BackgroundColor="DarkCyan"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="CenterAndExpand"
-                    PopupBackgroundColor="Red"
+                    PopupBackgroundColor="DarkCyan"
+                    Text="hostname"
+                    TextChanged ="OnTextChanged"
                     HorizontalTextAlignment="Center"/>
                 <w:PopupEntry
                     AutomationId="popupEntry5"

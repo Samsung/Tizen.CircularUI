@@ -17,12 +17,15 @@
 using System;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCPopupEntry : CirclePage
     {
+        static string Validname = "hostname";
+
         public TCPopupEntry()
         {
             InitializeComponent();
@@ -32,6 +35,24 @@ namespace WearableUIGallery.TC
         {
             this.PopupEntry2.IsPopupOpened = !this.PopupEntry2.IsPopupOpened;
             Console.WriteLine("ButtonClicked = " + this.PopupEntry1.IsPopupOpened);
+        }
+
+        private void OnTextChanged(object sender, EventArgs e)
+        {
+            if (Validname.Equals(hostname_entry.Text))
+            {
+                hostname_entry.TextColor = Color.White;
+                hostname_entry.PopupBackgroundColor = Color.DarkCyan;
+                hostname_entry.FontAttributes = FontAttributes.Bold;
+            }
+            else
+            {
+                hostname_entry.TextColor = Color.Red;
+                hostname_entry.PopupBackgroundColor = Color.Green;
+                hostname_entry.FontAttributes = FontAttributes.Italic;
+            }
+
+            hostname_entry.BackgroundColor = hostname_entry.PopupBackgroundColor;
         }
     }
 }

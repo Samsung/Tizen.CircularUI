@@ -16,12 +16,14 @@
 
 using ElmSharp;
 using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 using EColor = ElmSharp.Color;
 using ELayout = ElmSharp.Layout;
 using XForms = Xamarin.Forms.Forms;
+using XEntry = Xamarin.Forms.Entry;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.PopupEntry), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer))]
 
@@ -61,6 +63,21 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 // Set Text again for apply text style because IsEditable reset the style of text
                 Control.Text = string.Empty;
                 Control.Text = Element.Text;
+            }
+        }
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+            if (_IsPopupOpened && _editor != null)
+            {
+                if (e.PropertyName == XEntry.TextColorProperty.PropertyName ||
+                    e.PropertyName == XEntry.FontSizeProperty.PropertyName ||
+                    e.PropertyName == XEntry.FontFamilyProperty.PropertyName ||
+                    e.PropertyName == XEntry.FontAttributesProperty.PropertyName)
+                {
+                    _editor.TextStyle = Control.TextStyle;
+                }
             }
         }
 
@@ -166,6 +183,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 CreatePopup();
             }
+
             _editor.IsPassword = Control.IsPassword;
             if (Control is IEntry ie)
             {
@@ -212,6 +230,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else
             {
                 _popupBackgroundColor = bgColor.ToNative();
+            }
+
+            if (_IsPopupOpened == true && _editorPopup != null)
+            {
+                _editorPopup.Color = _popupBackgroundColor;
             }
         }
 
