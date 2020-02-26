@@ -31,6 +31,14 @@
                         HorizontalOptions="CenterAndExpand"
                         Clicked="OnClickChangeColor"/>
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Set icon image"
+                        AutomationId="iconimage"
+                        FontSize="Small"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="OnClickSetIcon"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </w:CirclePage>

@@ -270,6 +270,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
         void UpdateActionButton(bool initialize)
         {
+
             if (Element.ActionButton != null)
             {
                 if (_actionButton == null)
@@ -285,7 +286,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 SetVisibleActionButton(Element.ActionButton.IsVisible);
 
                 Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
-                _actionButton.Text = Element.ActionButton.Text;
+                _actionButton.Text = Element.ActionButton.Text?.Replace("&", "&amp;")
+                           .Replace("<", "&lt;")
+                           .Replace(">", "&gt;")
+                           .Replace(Environment.NewLine, "<br>");
+
                 _actionButton.IsEnabled = Element.ActionButton.IsEnable;
                 if (!Element.ActionButton.IconImageSource.IsNullOrEmpty())
                 {
@@ -296,11 +301,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     buttonImage.Show();
                     _actionButton.SetPartContent("elm.swallow.content", buttonImage);
                 }
-
-                if (Element.ActionButton.BackgroundColor != Xamarin.Forms.Color.Default)
+                else
                 {
-                    _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
+                    _actionButton.SetPartContent("elm.swallow.content", null);
                 }
+
+                 _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
             }
             else
             {
@@ -313,6 +319,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 }
             }
         }
+
         void OnActionButtonItemChanged(object sender, PropertyChangedEventArgs e)
         {
             if (_actionButton == null)
