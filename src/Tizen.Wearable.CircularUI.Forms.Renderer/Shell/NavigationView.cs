@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using ELayout = ElmSharp.Layout;
+using EColor = ElmSharp.Color;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -32,6 +33,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         GenListItem _footer;
 
         List<List<Element>> _itemCache;
+        List<GenListItem> _items = new List<GenListItem>();
 
         public NavigationView(EvasObject parent) : base(parent)
         {
@@ -41,6 +43,30 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
 
         public event EventHandler<DraggedEventArgs> Dragged;
+
+
+        EColor _backgroundColor = EColor.Black;
+        public override EColor BackgroundColor
+        {
+            get => _backgroundColor;
+            set
+            {
+                _backgroundColor = value.IsDefault ? EColor.Black : value;
+                UpdateBackgroundColor();
+            }
+        }
+
+        EColor _foregroundColor = EColor.Default;
+        public EColor ForegroundColor
+        {
+            get => _foregroundColor;
+            set
+            {
+                _foregroundColor = value;
+                UpdateForegroundColor();
+            }
+        }
+
 
         public void Build(List<List<Element>> items)
         {
@@ -52,6 +78,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _itemCache = items;
 
             _naviMenu.Clear();
+            _items.Clear();
             // header
             _header = _naviMenu.Append(_defaultClass, new Item { Text = "" });
 
@@ -75,7 +102,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                         data.Icon = (menuItem.IconImageSource as FileImageSource)?.ToAbsPath();
                     }
                     var genitem = _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
-                    genitem.SetPartColor("bg", ElmSharp.Color.Gray);
+                    genitem.SetPartColor("bg", _backgroundColor);
+                    _items.Add(genitem);
                 }
             }
             _footer = _naviMenu.Append(_defaultClass, new Item { Text = "" });
@@ -107,7 +135,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _naviMenu = new CircleGenList(this, _surface)
             {
                 Homogeneous = true,
-                BackgroundColor = ElmSharp.Color.Gray
+                BackgroundColor = _backgroundColor
             };
             _naviMenu.Show();
 
@@ -148,7 +176,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 {
                     if (part == "elm.text")
                     {
-                        return (obj as Item).Text;
+                        var text = (obj as Item).Text;
+                        if (_foregroundColor != EColor.Default)
+                            return $"<span color='{_foregroundColor.ToHex()}'>{text}</span>";
+                        else
+                            return text;
                     }
                     return null;
                 },
@@ -186,6 +218,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             _surfaceLayout.Geometry = Geometry;
             _naviMenu.Geometry = Geometry;
+        }
+
+        void UpdateBackgroundColor()
+        {
+            _naviMenu.BackgroundColor = _backgroundColor;
+            foreach (var item in _items)
+            {
+                item.SetPartColor("bg", _backgroundColor);
+            }
+        }
+
+        void UpdateForegroundColor()
+        {
+            foreach (var item in _items)
+            {
+                item.Update();
+            }
         }
 
         bool IsUpdated(List<List<Element>> items)
@@ -234,6 +283,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public static string ToAbsPath(this FileImageSource source)
         {
             return ResourcePath.GetPath(source.File);
+        }
+    }
+
+    static class ColorEX
+    {
+        public static string ToHex(this EColor c)
+        {
+            return string.Format("#{0:X2}{1:X2}{2:X2}{3:X2}", c.R, c.G, c.B, c.A);
         }
     }
 }

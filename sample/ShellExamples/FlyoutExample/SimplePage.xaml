@@ -5,7 +5,7 @@
              BackgroundImageSource="bg.jpg"
              x:Class="FlyoutExample.SimplePage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="#222222" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <Label x:Name="Title"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

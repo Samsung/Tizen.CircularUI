@@ -23,6 +23,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(XShell.FlyoutIsPresentedProperty, UpdateFlyoutIsPresented);
             RegisterPropertyHandler(XShell.FlyoutBehaviorProperty, UpdateFlyoutBehavior);
             RegisterPropertyHandler(XShell.FlyoutIconProperty, UpdateFlyoutIcon);
+            RegisterPropertyHandler(XShell.FlyoutBackgroundColorProperty, UpdateFlyoutBackgroundColor);
+            RegisterPropertyHandler(CircularShell.FlyoutIconBackgroundColorProperty, UpdateFlyoutIconBackgroundColor);
+            RegisterPropertyHandler(CircularShell.FlyoutForegroundColorProperty, UpdateFlyoutForegroundColor);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<XShell> e)
@@ -73,7 +76,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 return;
 
             var flyoutItems = (Element as IShellController).GenerateFlyoutGrouping();
-            if (flyoutItems.Count > 1)
+            int itemCount = 0;
+            foreach (var item in flyoutItems)
+            {
+                itemCount += item.Count;
+            }
+
+            if (itemCount > 1)
             {
                 InitializeNavigationDrawer();
                 _navigationView.Build(flyoutItems);
@@ -160,8 +169,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateFlyoutBehavior()
+        void UpdateFlyoutBehavior(bool init)
         {
+            if (init)
+                return;
+
             if (Element.FlyoutBehavior == FlyoutBehavior.Disabled)
             {
                 DeinitializeNavigationView();
@@ -182,6 +194,33 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 return;
 
             _drawer.UpdateDrawerIcon(Element.FlyoutIcon);
+        }
+
+        void UpdateFlyoutBackgroundColor(bool init)
+        {
+            if (init && Element.FlyoutBackgroundColor.IsDefault)
+                return;
+
+            if (_navigationView != null)
+            {
+                _navigationView.BackgroundColor = Element.FlyoutBackgroundColor.ToNative();
+            }
+        }
+
+        void UpdateFlyoutForegroundColor(bool init)
+        {
+            if (init && CircularShell.GetFlyoutForegroundColor(Element).IsDefault)
+                return;
+
+            if (_navigationView != null)
+            {
+                _navigationView.ForegroundColor = CircularShell.GetFlyoutForegroundColor(Element).ToNative();
+            }
+        }
+
+        void UpdateFlyoutIconBackgroundColor()
+        {
+            _drawer.HandlerBackgroundColor = CircularShell.GetFlyoutIconBackgroundColor(Element).ToNative();
         }
 
         void UpdateFlyoutIsPresented()
