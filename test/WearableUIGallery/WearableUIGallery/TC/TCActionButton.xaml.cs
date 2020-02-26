@@ -79,7 +79,12 @@ namespace WearableUIGallery.TC
 
         void OnClickChangeColor(object sender, EventArgs args)
         {
-            ActionButton = new ActionButtonItem { Text = "Action", BackgroundColor = Color.Green };
+            ActionButton = new ActionButtonItem { Text = "~!@#$%^&" + Environment.NewLine + "*()@+-", BackgroundColor = Color.Green };
+        }
+
+        void OnClickSetIcon(object sender, EventArgs args)
+        {
+            ActionButton = new ActionButtonItem { IconImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png") };
         }
     }
 }
