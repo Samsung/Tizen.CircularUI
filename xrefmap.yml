@@ -1282,6 +1282,70 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircularShell
   fullName: Tizen.Wearable.CircularUI.Forms.CircularShell
   nameWithType: CircularShell
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColor
+  name: FlyoutForegroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_FlyoutForegroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColor
+  nameWithType: CircularShell.FlyoutForegroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColor*
+  name: FlyoutForegroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_FlyoutForegroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColor
+  nameWithType: CircularShell.FlyoutForegroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColorProperty
+  name: FlyoutForegroundColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_FlyoutForegroundColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutForegroundColorProperty
+  nameWithType: CircularShell.FlyoutForegroundColorProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColor
+  name: FlyoutIconBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_FlyoutIconBackgroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColor
+  nameWithType: CircularShell.FlyoutIconBackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColor*
+  name: FlyoutIconBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_FlyoutIconBackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColor
+  nameWithType: CircularShell.FlyoutIconBackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColorProperty
+  name: FlyoutIconBackgroundColorProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_FlyoutIconBackgroundColorProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColorProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.FlyoutIconBackgroundColorProperty
+  nameWithType: CircularShell.FlyoutIconBackgroundColorProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutForegroundColor(BindableObject)
+  name: GetFlyoutForegroundColor(BindableObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_GetFlyoutForegroundColor_BindableObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutForegroundColor(BindableObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutForegroundColor(BindableObject)
+  nameWithType: CircularShell.GetFlyoutForegroundColor(BindableObject)
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutForegroundColor*
+  name: GetFlyoutForegroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_GetFlyoutForegroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutForegroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutForegroundColor
+  nameWithType: CircularShell.GetFlyoutForegroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutIconBackgroundColor(BindableObject)
+  name: GetFlyoutIconBackgroundColor(BindableObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_GetFlyoutIconBackgroundColor_BindableObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutIconBackgroundColor(BindableObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutIconBackgroundColor(BindableObject)
+  nameWithType: CircularShell.GetFlyoutIconBackgroundColor(BindableObject)
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutIconBackgroundColor*
+  name: GetFlyoutIconBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_GetFlyoutIconBackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutIconBackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.GetFlyoutIconBackgroundColor
+  nameWithType: CircularShell.GetFlyoutIconBackgroundColor
 - uid: Tizen.Wearable.CircularUI.Forms.CircularShell.OnBackButtonPressed
   name: OnBackButtonPressed()
   href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_OnBackButtonPressed
@@ -1295,6 +1359,32 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.OnBackButtonPressed
   nameWithType: CircularShell.OnBackButtonPressed
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor(BindableObject,Color)
+  name: SetFlyoutForegroundColor(BindableObject, Color)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_SetFlyoutForegroundColor_BindableObject_Color_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor(BindableObject,Color)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor(BindableObject, Color)
+  nameWithType: CircularShell.SetFlyoutForegroundColor(BindableObject, Color)
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor*
+  name: SetFlyoutForegroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_SetFlyoutForegroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor
+  nameWithType: CircularShell.SetFlyoutForegroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor(BindableObject,Color)
+  name: SetFlyoutIconBackgroundColor(BindableObject, Color)
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_SetFlyoutIconBackgroundColor_BindableObject_Color_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor(BindableObject,Color)
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor(BindableObject, Color)
+  nameWithType: CircularShell.SetFlyoutIconBackgroundColor(BindableObject, Color)
+- uid: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor*
+  name: SetFlyoutIconBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.CircularShell.html#Tizen_Wearable_CircularUI_Forms_CircularShell_SetFlyoutIconBackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutIconBackgroundColor
+  nameWithType: CircularShell.SetFlyoutIconBackgroundColor
 - uid: Tizen.Wearable.CircularUI.Forms.ColorMenuItem
   name: ColorMenuItem
   href: api/Tizen.Wearable.CircularUI.Forms.ColorMenuItem.html
@@ -5206,19 +5296,32 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle
   nameWithType: NavigationDrawer.CreateHandle
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IconHeight
-  name: IconHeight
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_IconHeight
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IconHeight
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IconHeight
-  nameWithType: NavigationDrawer.IconHeight
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IconHeight*
-  name: IconHeight
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_IconHeight_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IconHeight
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
+  name: HandlerBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerBackgroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
+  nameWithType: NavigationDrawer.HandlerBackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor*
+  name: HandlerBackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerBackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IconHeight
-  nameWithType: NavigationDrawer.IconHeight
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
+  nameWithType: NavigationDrawer.HandlerBackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
+  name: HandlerHeight
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerHeight
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
+  nameWithType: NavigationDrawer.HandlerHeight
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight*
+  name: HandlerHeight
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerHeight_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
+  nameWithType: NavigationDrawer.HandlerHeight
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen
   name: IsOpen
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_IsOpen
@@ -5322,6 +5425,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate
   nameWithType: NavigationView.Activate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
+  name: BackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_BackgroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
+  nameWithType: NavigationView.BackgroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor*
+  name: BackgroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_BackgroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
+  nameWithType: NavigationView.BackgroundColor
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build(System.Collections.Generic.List{System.Collections.Generic.List{Element}})
   name: Build(List<List<Element>>)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Build_System_Collections_Generic_List_System_Collections_Generic_List_Element___
@@ -5370,6 +5486,19 @@ references:
   commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Dragged
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Dragged
   nameWithType: NavigationView.Dragged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
+  name: ForegroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_ForegroundColor
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
+  nameWithType: NavigationView.ForegroundColor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor*
+  name: ForegroundColor
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_ForegroundColor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
+  nameWithType: NavigationView.ForegroundColor
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ItemSelected
   name: ItemSelected
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_ItemSelected
