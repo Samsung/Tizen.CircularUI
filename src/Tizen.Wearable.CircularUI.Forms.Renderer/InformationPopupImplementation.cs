@@ -274,9 +274,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateTitle()
         {
+            string title = _title?.Replace("&", "&amp;")
+                                  .Replace("<", "&lt;")
+                                  .Replace(">", "&gt;")
+                                  .Replace(Environment.NewLine, "<br>");
+
             if (!_isProgressRunning)
             {
-                _layout.SetPartText("elm.text.title", _title);
+                _layout.SetPartText("elm.text.title", title);
             }
             else
             {
@@ -286,14 +291,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateText()
         {
+            string text = _text?.Replace("&", "&amp;")
+                                .Replace("<", "&lt;")
+                                .Replace(">", "&gt;")
+                                .Replace(Environment.NewLine, "<br>");
+
             if (!_isProgressRunning)
             {
-                _layout.SetPartText("elm.text", _text);
+                _layout.SetPartText("elm.text", text);
             }
             else
             {
                 _layout.SetPartText("elm.text", null);
-                if (!string.IsNullOrEmpty(_text))
+                if (!string.IsNullOrEmpty(text))
                 {
                     if (_progressLabel == null)
                     {
@@ -302,7 +312,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                             TextStyle = "DEFAULT ='font=Tizen:style=Light color=#F9F9F9FF font_size=32 align=center valign=top wrap=word'",
                         };
                     }
-                    _progressLabel.Text = _text;
+                    _progressLabel.Text = text;
                     _progressLabel.Show();
                     if (_box != null)
                     {
