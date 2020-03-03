@@ -332,12 +332,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateTitle()
         {
-            _layout.SetPartText("elm.text.title", _title);
+            string title = _title?.Replace("&", "&amp;")
+                                  .Replace("<", "&lt;")
+                                  .Replace(">", "&gt;")
+                                  .Replace(Environment.NewLine, "<br>");
+            _layout.SetPartText("elm.text.title", title);
         }
 
         void UpdateText()
         {
-            _layout.SetPartText("elm.text", _text);
+            string text = _text?.Replace("&", "&amp;")
+                                .Replace("<", "&lt;")
+                                .Replace(">", "&gt;")
+                                .Replace(Environment.NewLine, "<br>");
+            _layout.SetPartText("elm.text", text);
         }
 
         public void Show()
