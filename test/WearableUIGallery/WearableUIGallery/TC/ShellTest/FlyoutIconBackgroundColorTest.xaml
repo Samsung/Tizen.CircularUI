@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="WearableUIGallery.TC.FlyoutIconBackgroundColorTest">
+    <w:CircleScrollView>
+        <StackLayout>
+            <Button AutomationId="GoToMain" Text="GoToMain" Clicked="Button_Clicked_2"/>
+            <Button AutomationId="default" Text="default" Clicked="Button_Clicked"/>
+            <Button AutomationId="BlueViolet" BackgroundColor="BlueViolet" Text="BlueViolet" Clicked="Button_Clicked_1"/>
+            <Button AutomationId="Brown" BackgroundColor="Brown" Text="Brown" Clicked="Button_Clicked_1"/>
+            <Button AutomationId="Fuchsia" BackgroundColor="Fuchsia" Text="Fuchsia" Clicked="Button_Clicked_1"/>
+            <BoxView HeightRequest="50"/>
+        </StackLayout>
+    </w:CircleScrollView>
+</w:CirclePage>

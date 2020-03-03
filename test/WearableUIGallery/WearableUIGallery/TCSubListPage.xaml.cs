@@ -15,18 +15,35 @@
  */
 
 using System;
+using System.Linq;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery
 {
+    [QueryProperty("TCName", "tc")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCSubListPage : CirclePage
     {
+        string _tcName = "";
+
         public TCSubListPage()
         {
             InitializeComponent ();
+        }
+
+        public string TCName
+        {
+            set
+            {
+                _tcName = value;
+                var desc = TCData.TCs.FirstOrDefault(tc => tc.Title == Uri.UnescapeDataString(value));
+                if(desc != null)
+                {
+                    BindingContext = desc.Class;
+                }
+            }
         }
 
         public void OnItemTapped(object sender, ItemTappedEventArgs args)
@@ -34,23 +51,7 @@ namespace WearableUIGallery
             if (args.Item == null) return;
 
             var desc = args.Item as TCDescribe;
-            if (desc != null && desc.Class != null)
-            {
-                Page page;
-                if (desc.Class.Count == 1)
-                {
-                    Type pageType = desc.Class;
-                    page = Activator.CreateInstance(pageType) as Page;
-                }
-                else
-                {
-                    var types = desc.Class;
-                    page = new TCSubListPage();
-                    page.BindingContext = types;
-                }
-                NavigationPage.SetHasNavigationBar(page, false);
-                App.MainNavigation.PushAsync(page);
-            }
+            Shell.Current.GoToAsync(_tcName + "/" + desc.Title);
         }
     }
 

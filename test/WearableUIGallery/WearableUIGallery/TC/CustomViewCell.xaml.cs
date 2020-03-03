@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,6 +26,7 @@ namespace WearableUIGallery.TC
         public CustomViewCell ()
         {
             InitializeComponent ();
+            Console.WriteLine($"location = {Shell.Current.CurrentState.Location.ToString()}");
         }
     }
 }

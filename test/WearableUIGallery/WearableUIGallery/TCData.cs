@@ -19,11 +19,24 @@ using WearableUIGallery.TC;
 
 namespace WearableUIGallery
 {
-    public class AppViewModel
+    public static class TCData
     {
-        public AppViewModel()
+        public static IList<TCDescribe> TCs { get; private set; }
+
+        static TCData()
         {
             TCs = new ObservableCollection<TCDescribe>();
+            TCs.Add(new TCDescribe
+            {
+                Title = "ShellTest",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "FlyoutIconTest", Class = typeof(FlyoutIconTest) },
+                    new TCDescribe { Title = "FlyoutIconBackgroundColorTest", Class = typeof(FlyoutIconBackgroundColorTest) },
+                    new TCDescribe { Title = "FlyoutBackgroundColorTest", Class = typeof(FlyoutBackgroundColorTest) },
+                    new TCDescribe { Title = "FlyoutForegroundColorTest", Class = typeof(FlyoutForegroundColorTest) },
+                }
+            });
             TCs.Add(new TCDescribe
             {
                 Title = "ListView",
@@ -76,7 +89,8 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "Label with TapCtx", Class = typeof(TCCtxPopup4) }
                 }
             });
-            TCs.Add(new TCDescribe {
+            TCs.Add(new TCDescribe
+            {
                 Title = "CircleScroller",
                 Class = new TCTypes
                 {
@@ -170,7 +184,5 @@ namespace WearableUIGallery
                 }
             });
         }
-
-        public IList<TCDescribe> TCs { get; private set; }
     }
 }
