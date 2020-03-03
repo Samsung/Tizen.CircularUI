@@ -34,7 +34,7 @@ namespace WearableUIGallery.Tizen.Wearable
         {
             base.OnTerminate();
 #if UITEST
-            //global::Tizen.Appium.TizenAppium.StopService();
+            global::Tizen.Appium.TizenAppium.StopService();
 #endif
         }
 
@@ -44,7 +44,7 @@ namespace WearableUIGallery.Tizen.Wearable
             Forms.Init(app);
             FormsCircularUI.Init(APIKEY);
 #if UITEST
-            //global::Tizen.Appium.TizenAppium.StartService();
+            global::Tizen.Appium.TizenAppium.StartService();
 #endif
             app.Run(args);
         }

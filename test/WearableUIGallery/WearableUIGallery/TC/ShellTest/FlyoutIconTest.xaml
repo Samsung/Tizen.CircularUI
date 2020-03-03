@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="WearableUIGallery.TC.FlyoutIconTest">
+    <w:CircleScrollView>
+        <StackLayout>
+            <Button AutomationId="GoToMain2" Text="GoToMain" Clicked="Button_Clicked_4" />
+            <Button AutomationId="default" Text="default" Clicked="Button_Clicked"/>
+            <Button AutomationId="icon1" Text="icon1" Clicked="Button_Clicked_1"/>
+            <Button AutomationId="icon2" Text="icon2" Clicked="Button_Clicked_2"/>
+            <Button AutomationId="icon3" Text="icon3" Clicked="Button_Clicked_3"/>
+            <BoxView HeightRequest="50"/>
+        </StackLayout>
+    </w:CircleScrollView>
+</w:CirclePage>
