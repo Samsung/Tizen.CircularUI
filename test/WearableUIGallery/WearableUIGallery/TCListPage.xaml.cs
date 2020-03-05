@@ -29,6 +29,7 @@ namespace WearableUIGallery
         {
             InitializeComponent ();
             this.AutomationId = "HomePage";
+            BindingContext = TCData.TCs;
         }
 
         public void OnItemTapped(object sender, ItemTappedEventArgs args)
@@ -36,25 +37,16 @@ namespace WearableUIGallery
             if (args.Item == null) return;
 
             var desc = args.Item as TCDescribe;
-            if (desc != null && desc.Class != null)
+            if(desc != null)
             {
-                Page page;
-                if (desc.Class.Count == 1)
+                if(desc.IsGroup)
                 {
-                    Type pageType = desc.Class;
-                    page = Activator.CreateInstance(pageType) as Page;
+                    Shell.Current.GoToAsync($"TCSubListPage?tc={desc.Title}");
                 }
                 else
                 {
-                    var types = desc.Class;
-                    page = new TCSubListPage
-                    {
-                        AutomationId = desc.Title + "Page"
-                    };
-                    page.BindingContext = types;
+                    Shell.Current.GoToAsync(desc.Title);
                 }
-                NavigationPage.SetHasNavigationBar(page, false);
-                App.MainNavigation.PushAsync(page);
             }
         }
     }

@@ -15,7 +15,7 @@
                 <Button Text="Set Default" Clicked="Button_Clicked_1"/>
                 <Button Text="Change Color" Clicked="Button_Clicked_2"/>
                 <Button Text="Change Icon BG Color" Clicked="Button_Clicked_3"/>
-                <Button Text="Change Foreground Color" Clicked="Button_Clicked_4"/>
+                <Button Text="Change Foreground Color" HeightRequest="100" Clicked="Button_Clicked_4"/>
                 <BoxView HeightRequest="100" Color="Transparent"/>
             </StackLayout>
         </ScrollView>

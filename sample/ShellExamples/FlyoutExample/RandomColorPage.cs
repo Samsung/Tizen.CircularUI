@@ -9,28 +9,23 @@ namespace FlyoutExample
     public class RandomColorPage : ContentPage
     {
         Label Title;
+
         public RandomColorPage()
         {
             Console.WriteLine("Create RandomColorPage");
             var rand = new Random();
-            Title = new Label()
-            {
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-            };
             var color = Color.FromRgb(rand.Next(255), rand.Next(255), rand.Next(255));
+            BackgroundColor = color;
+            Title = new Label();
             Content = new StackLayout
             {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                BackgroundColor = color,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
                 Children =
                 {
                     new Label
                     {
-                        HorizontalOptions = LayoutOptions.Center,
-                        VerticalOptions = LayoutOptions.Center,
-                        Text = $"Color : {color.ToHex()}"
+                        Text = $"Color : {color.ToHex()}",
                     },
                     Title,
                 }

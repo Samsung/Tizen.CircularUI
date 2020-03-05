@@ -20,5 +20,6 @@ namespace WearableUIGallery
     {
         public string Title { get; set; }
         public TCTypes Class { get; set; }
+        public bool IsGroup => (Class.Count > 1);
     }
 }
