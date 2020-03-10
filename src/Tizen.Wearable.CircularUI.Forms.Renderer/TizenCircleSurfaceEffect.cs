@@ -22,6 +22,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportEffect(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect), "CircleSurfaceEffect")]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
@@ -43,7 +44,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             var rect = Control.Geometry;
 
-            _surfaceLayout = new ElmSharp.Layout(Container);
+            _surfaceLayout = new ElmSharp.Layout(XForms.NativeParent);
             _surfaceLayout.Show();
             _surface = new ElmSharp.Wearable.CircleSurface(_surfaceLayout);
             _surfaceLayout.Geometry = rect;
