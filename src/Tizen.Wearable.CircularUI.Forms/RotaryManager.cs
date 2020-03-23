@@ -36,7 +36,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         static IRotaryService ProxyService { get; } = DependencyService.Get<IRotaryService>();
 
         /// <summary>
-        /// Rotated will be triggered when the rotatable device like the Galaxy Watch Bezel is rotated.
+        /// Rotated will be triggered when the rotatable device's Bezel is rotated.
         /// </summary>
         public static event EventHandler<RotaryEventArgs> Rotated
         {

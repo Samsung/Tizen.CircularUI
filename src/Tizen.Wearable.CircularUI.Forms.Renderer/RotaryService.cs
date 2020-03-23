@@ -23,7 +23,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class RotaryService : IRotaryService
     {
-        event EventHandler<RotaryEventArgs> _rotated;
+        EventHandler<RotaryEventArgs> _rotated;
 
         public event EventHandler<RotaryEventArgs> Rotated
         {
