@@ -26,6 +26,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 using XForms = Xamarin.Forms.Forms;
+using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 
 using XToolbarItem = Xamarin.Forms.ToolbarItem;
 
@@ -427,7 +428,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_currentRotaryFocusObject is IRotaryEventReceiver)
             {
-                RotaryEventManager.Rotated += OnRotaryEventChanged;
+                ERotaryEventManager.Rotated += OnRotaryEventChanged;
             }
             else if (_currentRotaryFocusObject is IRotaryFocusable)
             {
@@ -438,7 +439,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_currentRotaryFocusObject is IRotaryEventReceiver)
             {
-                RotaryEventManager.Rotated -= OnRotaryEventChanged;
+                ERotaryEventManager.Rotated -= OnRotaryEventChanged;
             }
             else if (_currentRotaryFocusObject is IRotaryFocusable)
             {

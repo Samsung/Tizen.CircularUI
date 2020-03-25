@@ -20,18 +20,18 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The RotaryManager provides an event for the global rotary event for wearable devices.
+    /// The RotaryEventManager provides an event for the global rotary event for wearable devices.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
-    /// RotaryManager.Rotated += (s, e) =>
+    /// RotaryEventManager.Rotated += (s, e) =>
     /// {
     ///      Console.WriteLine($"Rotated! Rotated direction: ${e.IsClockwise}");
     /// };
     /// </code>
     /// </example>
-    public static class RotaryManager
+    public static class RotaryEventManager
     {
         static IRotaryService ProxyService { get; } = DependencyService.Get<IRotaryService>();
 

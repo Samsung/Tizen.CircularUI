@@ -10,6 +10,7 @@ using EImage = ElmSharp.Image;
 using ELayout = ElmSharp.Layout;
 using EWidget = ElmSharp.Widget;
 using EButton = ElmSharp.Button;
+using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -262,7 +263,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _gestureOnDrawer.SetMomentumCallback(GestureLayer.GestureState.Abort, OnDrawerDragEnded);
             _gestureOnDrawer.Attach(_drawerIconBox);
 
-            RotaryEventManager.Rotated += OnRotateEventReceived;
+            ERotaryEventManager.Rotated += OnRotateEventReceived;
         }
 
         void SetDrawerIcon(ImageSource source)

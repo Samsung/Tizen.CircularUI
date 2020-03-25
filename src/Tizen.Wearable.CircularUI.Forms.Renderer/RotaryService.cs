@@ -15,8 +15,8 @@
  */
 
 using System;
-using ElmSharp.Wearable;
 using Xamarin.Forms;
+using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 
 [assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService))]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 if (_rotated == null)
                 {
-                    RotaryEventManager.Rotated += OnRotaryChanged;
+                    ERotaryEventManager.Rotated += OnRotaryChanged;
                 }
                 _rotated += value;
             }
@@ -40,7 +40,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _rotated -= value;
                 if (_rotated == null)
                 {
-                    RotaryEventManager.Rotated -= OnRotaryChanged;
+                    ERotaryEventManager.Rotated -= OnRotaryChanged;
                 }
             }
         }
