@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<w:CirclePage
+    x:Class="WearableUIGallery.TC.TCCircleListViewNoItemEffect"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    RotaryFocusObject="{x:Reference mylist}">
+    <w:CirclePage.Resources>
+        <DataTemplate x:Key="FlatItem">
+            <w:FlatViewCell>
+                <Grid>
+                    <BoxView HeightRequest="200" BackgroundColor="Blue"/>
+                    <Label Text="Flat ViewCell" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </w:FlatViewCell>
+        </DataTemplate>
+        <DataTemplate x:Key="NormalItem">
+            <TextCell Text="{Binding .}" />
+        </DataTemplate>
+        <local:MyItemSelector x:Key="myItemSelector"
+                              FlatItemTemplate="{StaticResource FlatItem}"
+                              NormalItemTemplate="{StaticResource NormalItem}" />
+    </w:CirclePage.Resources>
+    <w:CirclePage.Content>
+        <w:CircleListView x:Name="mylist" ItemTapped="OnItemTapped" ItemTemplate="{StaticResource myItemSelector}">
+            <w:CircleListView.ItemsSource>
+                <x:Array Type="{x:Type sys:String}">
+                    <x:String>Item 1</x:String>
+                    <x:String>Item 2</x:String>
+                    <x:String>Item 3</x:String>
+                    <x:String>Item 4</x:String>
+                    <x:String>Item 5</x:String>
+                </x:Array>
+            </w:CircleListView.ItemsSource>
+            <w:CircleListView.Header>
+                <x:String>Header</x:String>
+            </w:CircleListView.Header>
+            <w:CircleListView.Footer>
+                <x:String>Footer</x:String>
+            </w:CircleListView.Footer>
+            <w:CircleListView.HeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        w:CircleListView.CancelEffect="True"
+                        HeightRequest="120"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="Red" />
+                </DataTemplate>
+            </w:CircleListView.HeaderTemplate>
+            <w:CircleListView.FooterTemplate>
+                <DataTemplate>
+                    <Label
+                        w:CircleListView.CancelEffect="True"
+                        HeightRequest="120"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Text="{Binding .}"
+                        TextColor="Blue" />
+                </DataTemplate>
+            </w:CircleListView.FooterTemplate>
+        </w:CircleListView>
+    </w:CirclePage.Content>
+</w:CirclePage>
