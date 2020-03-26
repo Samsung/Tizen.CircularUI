@@ -16,13 +16,17 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
-    public class CircleSurfaceView : View
+    public class CircleSurfaceView : View, ICircleSurfaceProvider
     {
         public IList<ICircleSurfaceItem> CircleSurfaceItems { get; internal set; }
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public object CircleSurface { get; set; }
 
         public CircleSurfaceView()
         {

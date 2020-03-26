@@ -23,7 +23,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CircleStepper is a class that extends Xamarin.Forms.Stepper for Circular UI.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class CircleStepper : Xamarin.Forms.Stepper, IRotaryFocusable
+    public class CircleStepper : Stepper, IRotaryFocusable, ICircleSurfaceConsumer
     {
         /// <summary>
         /// BindableProperty. Identifies the MarkerColor bindable property.
@@ -106,5 +106,11 @@ namespace Tizen.Wearable.CircularUI.Forms
             get => (bool)GetValue(IsWrapEnabledProperty);
             set => SetValue(IsWrapEnabledProperty, value);
         }
+
+        /// <summary>
+        /// Gets or sets a CircleSurfaceProvider.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
     }
 }

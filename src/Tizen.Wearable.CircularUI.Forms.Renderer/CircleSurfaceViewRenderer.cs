@@ -51,6 +51,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             if (e.NewElement != null)
             {
+                e.NewElement.CircleSurface = _circleSurface;
                 var items = e.NewElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
                 items.CollectionChanged += OnCircleSurfaceItemsChanged;
                 foreach (var item in items)

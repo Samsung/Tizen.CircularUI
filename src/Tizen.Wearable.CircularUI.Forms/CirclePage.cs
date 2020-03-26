@@ -27,7 +27,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// It has an ActionButton, and can use the MenuItem type as text, icon, command, and so on.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class CirclePage : ContentPage
+    public class CirclePage : ContentPage, ICircleSurfaceProvider
     {
         /// <summary>
         /// BindableProperty. Identifies the ActionButton bindable property.
@@ -64,6 +64,9 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         [EditorBrowsable(EditorBrowsableState.Never)]
         public bool Appeared { get; set; }
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public object CircleSurface { get; set; }
 
         /// <summary>
         /// Gets or sets ActionButton that presents a menu item and associates it with a command
