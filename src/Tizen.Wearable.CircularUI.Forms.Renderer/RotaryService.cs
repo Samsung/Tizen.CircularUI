@@ -17,6 +17,7 @@
 using System;
 using Xamarin.Forms;
 using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
+using ERotaryEventArgs = ElmSharp.Wearable.RotaryEventArgs;
 
 [assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService))]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
@@ -45,7 +46,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void OnRotaryChanged(ElmSharp.Wearable.RotaryEventArgs args)
+        void OnRotaryChanged(ERotaryEventArgs args)
         {
             _rotated?.Invoke(this, new RotaryEventArgs() { IsClockwise = args.IsClockwise });
         }
