@@ -13,12 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-using System;
+using System.ComponentModel;
 using System.Diagnostics;
-using ElmSharp;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
+    using Xamarin.Forms.PlatformConfiguration;
+
     public static class FormsCircularUI
     {
         public static readonly string Tag = "CircularUI";
@@ -43,6 +47,28 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
 
             Init();
+        }
+
+        public static void AddAppPropertyChangedHandler(this Application application)
+        {
+            UpdateOverlayContent();
+            application.PropertyChanged += AppOnPropertyChanged;
+        }
+
+        static void AppOnPropertyChanged(object sender, PropertyChangedEventArgs args)
+        {
+            if (ApplicationExtension.OverlayContentProperty.PropertyName == args.PropertyName)
+            {
+                UpdateOverlayContent();
+            }
+        }
+
+        static void UpdateOverlayContent()
+        {
+            var renderer = Platform.GetOrCreateRenderer(Application.Current.On<Tizen>().GetOverlayContent());
+            (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
+            var nativeView = renderer?.NativeView;
+            XForms.BaseLayout.SetPartContent("elm.swallow.overlay", nativeView);
         }
     }
 }
