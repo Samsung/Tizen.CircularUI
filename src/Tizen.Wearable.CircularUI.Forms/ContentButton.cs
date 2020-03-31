@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the View bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ContentProterty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ContentButton), default(View));
+        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ContentButton), default(View));
 
         /// <summary>
         /// BindableProperty. Identifies the Command bindable property.
@@ -53,8 +53,8 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public View Content
         {
-            get { return (View)GetValue(ContentProterty); }
-            set { SetValue(ContentProterty, value); }
+            get => (View)GetValue(ContentProperty);
+            set => SetValue(ContentProperty, value);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// For internal use.
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public bool IsCommandEnabeld
+        public bool IsCommandEnabled
         {
             get => _isCommandEnabled;
             set => _isCommandEnabled = value;
@@ -111,7 +111,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void SendClicked()
         {
-            if (IsCommandEnabeld)
+            if (IsCommandEnabled)
                 Command?.Execute(CommandParameter);
 
             Clicked?.Invoke(this, EventArgs.Empty);
@@ -140,7 +140,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             ContentButton button = (ContentButton)bindable;
             if (newCommand is ICommand command)
             {
-                button.IsCommandEnabeld = command.CanExecute(button.CommandParameter);
+                button.IsCommandEnabled = command.CanExecute(button.CommandParameter);
                 command.CanExecuteChanged += button.OnCommandCanExecuteChanged;
             }
         }
@@ -159,7 +159,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             var button = (ContentButton)bindable;
             if (button.Command != null)
             {
-                button.IsCommandEnabeld = button.Command.CanExecute(newValue);
+                button.IsCommandEnabled = button.Command.CanExecute(newValue);
             }
         }
 
@@ -168,7 +168,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             ContentButton button = (ContentButton)sender;
             if (button.Command != null)
             {
-                button.IsCommandEnabeld = button.Command.CanExecute(button.CommandParameter);
+                button.IsCommandEnabled = button.Command.CanExecute(button.CommandParameter);
             }
         }
     }

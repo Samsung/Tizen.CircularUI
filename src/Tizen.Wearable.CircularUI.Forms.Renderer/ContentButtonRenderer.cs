@@ -16,27 +16,26 @@
 
 using System;
 using System.ComponentModel;
+using Tizen.Wearable.CircularUI.Forms;
+using Tizen.Wearable.CircularUI.Forms.Renderer;
 using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
-using Tizen.Wearable.CircularUI.Forms;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
-using XForms = Xamarin.Forms.Forms;
-using EBox = ElmSharp.Box;
 using EButton = ElmSharp.Button;
 using EColor = ElmSharp.Color;
+using NBox = Xamarin.Forms.Platform.Tizen.Native.Box;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(ContentButton), typeof(ContentButtonRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class ContentButtonRenderer : VisualElementRenderer<ContentButton>
+    public class ContentButtonRenderer : ViewRenderer<ContentButton, NBox>
     {
         readonly int _defaultMinimumSize = 30;
 
         EvasObject _content;
-        EBox _box;
         EButton _button;
 
         SmartEvent _pressed;
@@ -45,14 +44,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override void OnElementChanged(ElementChangedEventArgs<ContentButton> e)
         {
-            if (NativeView == null)
+            if (Control == null)
             {
-                _box = new EBox(XForms.NativeParent)
+                var box = new NBox(XForms.NativeParent)
                 {
                     MinimumWidth = _defaultMinimumSize,
                     MinimumHeight = _defaultMinimumSize
                 };
-                _box.SetLayoutCallback(OnLayout);
+                box.LayoutUpdated += OnLayout;
 
                 _button = new EButton(XForms.NativeParent);
                 _button.BackgroundColor = EColor.Transparent;
@@ -68,12 +67,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _unpressed.On += OnReleased;
                 _clicked.On += OnClicked;
 
-                _box.PackEnd(_button);
+                box.PackEnd(_button);
 
-                SetNativeView(_box);
+                SetNativeControl(box);
             }
 
-            UpdateView();
+            UpdateContent();
             base.OnElementChanged(e);
         }
 
@@ -90,9 +89,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == ContentButton.ContentProterty.PropertyName)
+            if (e.PropertyName == ContentButton.ContentProperty.PropertyName)
             {
-                UpdateView();
+                UpdateContent();
             }
             base.OnElementPropertyChanged(sender, e);
         }
@@ -100,17 +99,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         protected override Xamarin.Forms.Size MinimumSize()
         {
             var size = base.MinimumSize();
+            var height = XForms.ConvertToScaledPixel(Element.MinimumHeightRequest);
+            var width = XForms.ConvertToScaledPixel(Element.MinimumWidthRequest);
 
-            if (_content != null)
-            {
-                if (_content is IMeasurable im)
-                {
-                    size = im.Measure(_box.MinimumWidth, _box.MinimumHeight).ToDP();
-                }
-            }
-
-            size.Width = (size.Width > _box.MinimumWidth) ? size.Width : _box.MinimumWidth;
-            size.Height = (size.Height > _box.MinimumHeight) ? size.Height : _box.MinimumHeight;
+            size.Width = (size.Width > width) ? size.Width : width;
+            size.Height = (size.Height > height) ? size.Height : height;
 
             return size;
         }
@@ -130,26 +123,32 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Element?.SendClicked();
         }
 
-        void OnLayout()
+        void OnLayout(object sender, LayoutEventArgs args)
         {
-            if (_content != null)
+            if (Element.Content != null)
             {
-                _content.Geometry = _box.Geometry;
+                Element.Content.Layout(args.Geometry.ToDP());
             }
 
-            _button.Geometry = _box.Geometry;
+            _button.Geometry = args.Geometry;
             _button.RaiseTop();
         }
 
-        void UpdateView()
+        void UpdateContent()
         {
+            if (_content != null)
+            {
+                _content.Unrealize();
+                _content = null;
+            }
+
             if (Element.Content != null)
             {
                 var renderer = Platform.GetOrCreateRenderer(Element.Content);
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 _content = renderer.NativeView;
                 _content.Show();
-                _box.PackEnd(_content);
+                Control.PackEnd(_content);
             }
         }
     }

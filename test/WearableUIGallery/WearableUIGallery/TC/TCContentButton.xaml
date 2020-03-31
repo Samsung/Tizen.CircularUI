@@ -8,15 +8,19 @@
                      HorizontalOptions="CenterAndExpand">
             <Label x:Name="label"
                    HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
                    MinimumHeightRequest="100"
                    MinimumWidthRequest="200"
                    Text="Test"/>
             <w:ContentButton x:Name="button"
-                             WidthRequest="90"
                              HeightRequest="70"
-                            Clicked="OnButtonClicked"
-                            Pressed="OnButtonPressed"
-                            Released="OnButtonReleased">
+                             WidthRequest="90"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                             Clicked="OnButtonClicked"
+                             Pressed="OnButtonPressed"
+                             Released="OnButtonReleased"
+                             Command="{Binding ClickCommand, Source={Binding .}}">
                 <w:ContentButton.Content>
                     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                         <Image x:Name="buttonBg" Source="button_bg.png" Opacity="0.25" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
