@@ -15,141 +15,71 @@
  */
 
 using System;
-using System.ComponentModel;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
-using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
+using XForms = Xamarin.Forms.Forms;
+using XFLayout = Xamarin.Forms.Layout;
 using EButton = ElmSharp.Button;
 using EColor = ElmSharp.Color;
-using NBox = Xamarin.Forms.Platform.Tizen.Native.Box;
-using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(ContentButton), typeof(ContentButtonRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class ContentButtonRenderer : ViewRenderer<ContentButton, NBox>
+    public class ContentButtonRenderer : LayoutRenderer
     {
-        readonly int _defaultMinimumSize = 30;
-
-        EvasObject _content;
         EButton _button;
 
-        SmartEvent _pressed;
-        SmartEvent _unpressed;
-        SmartEvent _clicked;
+        ContentButton Button => Element as ContentButton;
 
-        protected override void OnElementChanged(ElementChangedEventArgs<ContentButton> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<XFLayout> e)
         {
-            if (Control == null)
-            {
-                var box = new NBox(XForms.NativeParent)
-                {
-                    MinimumWidth = _defaultMinimumSize,
-                    MinimumHeight = _defaultMinimumSize
-                };
-                box.LayoutUpdated += OnLayout;
+            base.OnElementChanged(e);
+            Initialize();
+        }
 
+        void Initialize()
+        {
+            if (_button == null)
+            {
                 _button = new EButton(XForms.NativeParent);
                 _button.BackgroundColor = EColor.Transparent;
                 _button.SetPartColor("effect", EColor.Transparent);
                 _button.SetPartColor("effect_pressed", EColor.Transparent);
                 _button.Show();
 
-                _pressed = new SmartEvent(_button, "pressed");
-                _unpressed = new SmartEvent(_button, "unpressed");
-                _clicked = new SmartEvent(_button, "clicked");
+                _button.Pressed += OnPressed;
+                _button.Released += OnReleased;
+                _button.Clicked += OnClicked;
 
-                _pressed.On += OnPressed;
-                _unpressed.On += OnReleased;
-                _clicked.On += OnClicked;
+                Control.PackEnd(_button);
 
-                box.PackEnd(_button);
-
-                SetNativeControl(box);
+                Control.LayoutUpdated += OnLayoutUpdated;
             }
-
-            UpdateContent();
-            base.OnElementChanged(e);
         }
 
-        protected override void Dispose(bool disposing)
+        void OnLayoutUpdated(object sender, LayoutEventArgs e)
         {
-            if (disposing)
-            {
-                _pressed.On -= OnPressed;
-                _unpressed.On -= OnReleased;
-                _clicked.On -= OnClicked;
-            }
-            base.Dispose(disposing);
-        }
-
-        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == ContentButton.ContentProperty.PropertyName)
-            {
-                UpdateContent();
-            }
-            base.OnElementPropertyChanged(sender, e);
-        }
-
-        protected override Xamarin.Forms.Size MinimumSize()
-        {
-            var size = base.MinimumSize();
-            var height = XForms.ConvertToScaledPixel(Element.MinimumHeightRequest);
-            var width = XForms.ConvertToScaledPixel(Element.MinimumWidthRequest);
-
-            size.Width = (size.Width > width) ? size.Width : width;
-            size.Height = (size.Height > height) ? size.Height : height;
-
-            return size;
+            _button.Geometry = e.Geometry;
+            _button.RaiseTop();
         }
 
         void OnPressed(object sender, EventArgs args)
         {
-            Element?.SendPressed();
+            Button?.SendPressed();
         }
 
         void OnReleased(object sender, EventArgs args)
         {
-            Element?.SendReleased();
+            Button?.SendReleased();
         }
 
         void OnClicked(object sender, EventArgs args)
         {
-            Element?.SendClicked();
-        }
-
-        void OnLayout(object sender, LayoutEventArgs args)
-        {
-            if (Element.Content != null)
-            {
-                Element.Content.Layout(args.Geometry.ToDP());
-            }
-
-            _button.Geometry = args.Geometry;
-            _button.RaiseTop();
-        }
-
-        void UpdateContent()
-        {
-            if (_content != null)
-            {
-                _content.Unrealize();
-                _content = null;
-            }
-
-            if (Element.Content != null)
-            {
-                var renderer = Platform.GetOrCreateRenderer(Element.Content);
-                (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
-                _content = renderer.NativeView;
-                _content.Show();
-                Control.PackEnd(_content);
-            }
+            Button?.SendClicked();
         }
     }
 }

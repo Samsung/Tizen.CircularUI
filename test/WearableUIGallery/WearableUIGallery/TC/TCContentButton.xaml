@@ -2,30 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core"
              x:Class="WearableUIGallery.TC.ContentButtonTestPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" 
+        <StackLayout VerticalOptions="CenterAndExpand"
                      HorizontalOptions="CenterAndExpand">
             <Label x:Name="label"
                    HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="CenterAndExpand"
-                   MinimumHeightRequest="100"
-                   MinimumWidthRequest="200"
+                   HorizontalTextAlignment="Center"
                    Text="Test"/>
             <w:ContentButton x:Name="button"
-                             HeightRequest="70"
-                             WidthRequest="90"
-                             HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="CenterAndExpand"
                              Clicked="OnButtonClicked"
                              Pressed="OnButtonPressed"
                              Released="OnButtonReleased"
-                             Command="{Binding ClickCommand, Source={Binding .}}">
+                             Command="{Binding ClickCommand}">
                 <w:ContentButton.Content>
                     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                        <Image x:Name="buttonBg" Source="button_bg.png" Opacity="0.25" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
-                        <Image x:Name="buttonBorder" Source="button_border.png" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
-                        <Image x:Name="buttonIcon" Source="home.png" AbsoluteLayout.LayoutBounds=".5,.5,36,36" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        <Image x:Name="buttonBg" Source="button_bg.png" Opacity="0.25" Aspect="AspectFill" tizen:Image.BlendColor="Transparent" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        <Image x:Name="buttonBorder" Source="button_border.png" Aspect="AspectFill" tizen:Image.BlendColor="DarkGreen" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        <Image x:Name="buttonIcon" Source="home.png" tizen:Image.BlendColor="DarkGreen" AbsoluteLayout.LayoutBounds=".5,.5,36,36" AbsoluteLayout.LayoutFlags="PositionProportional" />
                     </AbsoluteLayout>
                 </w:ContentButton.Content>
             </w:ContentButton>

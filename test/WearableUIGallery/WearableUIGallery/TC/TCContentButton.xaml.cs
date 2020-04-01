@@ -11,9 +11,6 @@ namespace WearableUIGallery.TC
         public ContentButtonTestPage()
         {
             InitializeComponent();
-            Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image.SetBlendColor(buttonBorder, Color.DarkGreen);
-            Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image.SetBlendColor(buttonBg, Color.Transparent);
-            Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image.SetBlendColor(buttonIcon, Color.DarkGreen);
 
             ClickCommand = new Command(execute: () =>
             {

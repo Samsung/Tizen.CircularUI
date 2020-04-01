@@ -25,37 +25,21 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The ContentButton is a Button, which allows you to customize the View to be displayed.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class ContentButton : View, IButtonController
+    public class ContentButton : ContentView, IButtonController
     {
-        /// <summary>
-        /// BindableProperty. Identifies the View bindable property.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ContentButton), default(View));
-
         /// <summary>
         /// BindableProperty. Identifies the Command bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty CommandProperty = BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(ContentButton), null, propertyChanging: OnCommandChanging, propertyChanged: OnCommandChanged);
+        public static readonly BindableProperty CommandProperty = BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(ContentButton), null, 
+            propertyChanging: OnCommandChanging, propertyChanged: OnCommandChanged);
 
         /// <summary>
         /// BindableProperty. Identifies the CommandParameter bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(ContentButton), null, propertyChanged: OnCommandParameterChanged);
-
-        bool _isCommandEnabled;
-
-        /// <summary>
-        /// Gets or sets Content
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public View Content
-        {
-            get => (View)GetValue(ContentProperty);
-            set => SetValue(ContentProperty, value);
-        }
+        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(ContentButton), null, 
+            propertyChanged: (bindable, oldvalue, newvalue) => CommandCanExcuteChanged(bindable, EventArgs.Empty));
 
         /// <summary>
         /// Gets or sets command that is executed when the button is clicked.
@@ -95,14 +79,9 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public event EventHandler Released;
 
-        /// <summary>
-        /// For internal use.
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public bool IsCommandEnabled
+        bool IsEnableCore
         {
-            get => _isCommandEnabled;
-            set => _isCommandEnabled = value;
+            set => SetValueCore(IsEnabledProperty, value);
         }
 
         /// <summary>
@@ -111,10 +90,11 @@ namespace Tizen.Wearable.CircularUI.Forms
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void SendClicked()
         {
-            if (IsCommandEnabled)
+            if (IsEnabled)
+            {
                 Command?.Execute(CommandParameter);
-
-            Clicked?.Invoke(this, EventArgs.Empty);
+                Clicked?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         /// <summary>
@@ -123,7 +103,10 @@ namespace Tizen.Wearable.CircularUI.Forms
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void SendPressed()
         {
-            Pressed?.Invoke(this, EventArgs.Empty);
+            if (IsEnabled)
+            {
+                Pressed?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         /// <summary>
@@ -132,7 +115,21 @@ namespace Tizen.Wearable.CircularUI.Forms
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void SendReleased()
         {
-            Released?.Invoke(this, EventArgs.Empty);
+            if (IsEnabled)
+            {
+                Released?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+
+            View content = Content;
+            if (content != null)
+            {
+                SetInheritedBindingContext(content, BindingContext);
+            }
         }
 
         static void OnCommandChanged(BindableObject bindable, object oldCommand, object newCommand)
@@ -140,8 +137,20 @@ namespace Tizen.Wearable.CircularUI.Forms
             ContentButton button = (ContentButton)bindable;
             if (newCommand is ICommand command)
             {
-                button.IsCommandEnabled = command.CanExecute(button.CommandParameter);
                 command.CanExecuteChanged += button.OnCommandCanExecuteChanged;
+            }
+            CommandChanged(button);
+        }
+
+        static void CommandChanged(ContentButton button)
+        {
+            if(button.Command != null)
+            {
+                CommandCanExcuteChanged(button, EventArgs.Empty);
+            }
+            else
+            {
+                button.IsEnableCore = true;
             }
         }
 
@@ -154,12 +163,12 @@ namespace Tizen.Wearable.CircularUI.Forms
             }
         }
 
-        static void OnCommandParameterChanged(BindableObject bindable, object oldValue, object newValue)
+        static void CommandCanExcuteChanged(object sender, EventArgs e)
         {
-            var button = (ContentButton)bindable;
+            var button = (ContentButton)sender;
             if (button.Command != null)
             {
-                button.IsCommandEnabled = button.Command.CanExecute(newValue);
+                button.IsEnableCore = button.Command.CanExecute(button.CommandParameter);
             }
         }
 
@@ -168,7 +177,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             ContentButton button = (ContentButton)sender;
             if (button.Command != null)
             {
-                button.IsCommandEnabled = button.Command.CanExecute(button.CommandParameter);
+                button.IsEnableCore = button.Command.CanExecute(button.CommandParameter);
             }
         }
     }
