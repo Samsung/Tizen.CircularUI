@@ -1455,6 +1455,81 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColorProperty
   fullName: Tizen.Wearable.CircularUI.Forms.ColorMenuItem.BackgroundColorProperty
   nameWithType: ColorMenuItem.BackgroundColorProperty
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton
+  name: ContentButton
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.ContentButton
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton
+  nameWithType: ContentButton
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.Clicked
+  name: Clicked
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_Clicked
+  commentId: E:Tizen.Wearable.CircularUI.Forms.ContentButton.Clicked
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.Clicked
+  nameWithType: ContentButton.Clicked
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.Command
+  name: Command
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_Command
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ContentButton.Command
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.Command
+  nameWithType: ContentButton.Command
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.Command*
+  name: Command
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_Command_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ContentButton.Command
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.Command
+  nameWithType: ContentButton.Command
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameter
+  name: CommandParameter
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_CommandParameter
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameter
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameter
+  nameWithType: ContentButton.CommandParameter
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameter*
+  name: CommandParameter
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_CommandParameter_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameter
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameter
+  nameWithType: ContentButton.CommandParameter
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameterProperty
+  name: CommandParameterProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_CommandParameterProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameterProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandParameterProperty
+  nameWithType: ContentButton.CommandParameterProperty
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandProperty
+  name: CommandProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_CommandProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.ContentButton.CommandProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.CommandProperty
+  nameWithType: ContentButton.CommandProperty
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.OnBindingContextChanged
+  name: OnBindingContextChanged()
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_OnBindingContextChanged
+  commentId: M:Tizen.Wearable.CircularUI.Forms.ContentButton.OnBindingContextChanged
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.OnBindingContextChanged()
+  nameWithType: ContentButton.OnBindingContextChanged()
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.OnBindingContextChanged*
+  name: OnBindingContextChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_OnBindingContextChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ContentButton.OnBindingContextChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.OnBindingContextChanged
+  nameWithType: ContentButton.OnBindingContextChanged
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.Pressed
+  name: Pressed
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_Pressed
+  commentId: E:Tizen.Wearable.CircularUI.Forms.ContentButton.Pressed
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.Pressed
+  nameWithType: ContentButton.Pressed
+- uid: Tizen.Wearable.CircularUI.Forms.ContentButton.Released
+  name: Released
+  href: api/Tizen.Wearable.CircularUI.Forms.ContentButton.html#Tizen_Wearable_CircularUI_Forms_ContentButton_Released
+  commentId: E:Tizen.Wearable.CircularUI.Forms.ContentButton.Released
+  fullName: Tizen.Wearable.CircularUI.Forms.ContentButton.Released
+  nameWithType: ContentButton.Released
 - uid: Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior
   name: ContextPopupEffectBehavior
   href: api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html
@@ -4487,6 +4562,41 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceViewRenderer.OnElementChanged
   nameWithType: CircleSurfaceViewRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer
+  name: ContentButtonRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer
+  nameWithType: ContentButtonRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Layout})
+  name: OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Layout>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ContentButtonRenderer_OnElementChanged_ElementChangedEventArgs_Xamarin_Forms_Layout__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Layout})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Layout))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Layout>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Layout))
+  nameWithType: ContentButtonRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Layout>)
+  nameWithType.vb: ContentButtonRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Layout))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged*
+  name: OnElementChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ContentButtonRenderer_OnElementChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.OnElementChanged
+  nameWithType: ContentButtonRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout
+  name: UpdateLayout()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ContentButtonRenderer_UpdateLayout
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout()
+  nameWithType: ContentButtonRenderer.UpdateLayout()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout*
+  name: UpdateLayout
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ContentButtonRenderer_UpdateLayout_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout
+  nameWithType: ContentButtonRenderer.UpdateLayout
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs
   name: DraggedEventArgs
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.html

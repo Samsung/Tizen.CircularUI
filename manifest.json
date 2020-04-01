@@ -2089,6 +2089,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ContentButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.ContentButton.html",
+          "hash": "snUvUUi7p0ZngK/6emBLuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.yml",
       "output": {
         ".html": {
@@ -2557,6 +2569,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html",
+          "hash": "CWgBjuj+8bv+A1D8cbmsOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.yml",
       "output": {
         ".html": {
@@ -2993,7 +3017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "PYIzji8s9cl+bUV+NHVYHA=="
+          "hash": "uXWztQhcaKsoHnamzye2Xg=="
         }
       },
       "is_incremental": false,
@@ -3113,7 +3137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "52wH5e/DuGp4GFcyYVFidA=="
+          "hash": "ufK/NMjQOFcZng6YKR9K/w=="
         }
       },
       "is_incremental": false,
@@ -3173,7 +3197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "nIzmT0l8z9dk2xdU6om8Zw=="
+          "hash": "/eXTIkwy/+LqS4mYCwjfnw=="
         }
       },
       "is_incremental": false,
@@ -3220,7 +3244,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 110,
+          "total_file_count": 112,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
