@@ -57,8 +57,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 _button.Clicked += OnClicked;
 
                 Control.PackEnd(_button);
-
-                Control.LayoutUpdated += OnLayoutUpdated;
             }
         }
 
@@ -67,12 +65,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             base.UpdateLayout();
 
             _button.Geometry = Control.Geometry;
-            _button.RaiseTop();
-        }
-
-        void OnLayoutUpdated(object sender, LayoutEventArgs e)
-        {
-            _button.Geometry = e.Geometry;
             _button.RaiseTop();
         }
 
