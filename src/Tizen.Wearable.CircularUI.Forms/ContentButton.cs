@@ -79,7 +79,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public event EventHandler Released;
 
-        bool IsEnableCore
+        bool IsEnabledCore
         {
             set => SetValueCore(IsEnabledProperty, value);
         }
@@ -150,7 +150,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             }
             else
             {
-                button.IsEnableCore = true;
+                button.IsEnabledCore = true;
             }
         }
 
@@ -168,7 +168,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             var button = (ContentButton)sender;
             if (button.Command != null)
             {
-                button.IsEnableCore = button.Command.CanExecute(button.CommandParameter);
+                button.IsEnabledCore = button.Command.CanExecute(button.CommandParameter);
             }
         }
 
@@ -177,7 +177,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             ContentButton button = (ContentButton)sender;
             if (button.Command != null)
             {
-                button.IsEnableCore = button.Command.CanExecute(button.CommandParameter);
+                button.IsEnabledCore = button.Command.CanExecute(button.CommandParameter);
             }
         }
     }
