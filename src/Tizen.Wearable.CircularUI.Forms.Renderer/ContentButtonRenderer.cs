@@ -24,6 +24,7 @@ using XForms = Xamarin.Forms.Forms;
 using XFLayout = Xamarin.Forms.Layout;
 using EButton = ElmSharp.Button;
 using EColor = ElmSharp.Color;
+using System.ComponentModel;
 
 [assembly: ExportRenderer(typeof(ContentButton), typeof(ContentButtonRenderer))]
 
@@ -59,6 +60,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 Control.LayoutUpdated += OnLayoutUpdated;
             }
+        }
+
+        protected override void UpdateLayout()
+        {
+            base.UpdateLayout();
+
+            _button.Geometry = Control.Geometry;
+            _button.RaiseTop();
         }
 
         void OnLayoutUpdated(object sender, LayoutEventArgs e)
