@@ -3234,11 +3234,10 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 35,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -3247,10 +3246,11 @@
           "total_file_count": 112,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 35,
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
