@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
              xmlns:local="clr-namespace:FlyoutExample" x:Class="FlyoutExample.AppShell">
-    <ShellItem Route="Main" Title="Main" Icon="home.png">
+    <ShellItem Route="Main" Title="{Binding MainTitle, Mode=OneWay}" Icon="home.png">
         <ShellContent Route="content" Title="Main" ContentTemplate="{DataTemplate local:SimplePage}"/>
     </ShellItem>
     <ShellItem Route="Config" Title="Config" Icon="play.png">

@@ -54,5 +54,11 @@ namespace FlyoutExample
             Random rnd = new Random();
             Tizen.Wearable.CircularUI.Forms.CircularShell.SetFlyoutForegroundColor(Shell.Current, Color.FromRgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
         }
+
+        void Button_Clicked_5(object sender, EventArgs e)
+        {
+            Shell.Current.CurrentItem.Title = "UpdatedTitle";
+            ShellModel.Instance.MainTitle = "MainUpdated";
+        }
     }
 }
