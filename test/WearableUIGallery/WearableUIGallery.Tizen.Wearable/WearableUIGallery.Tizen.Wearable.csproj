@@ -17,13 +17,17 @@
     <Folder Include="lib\" />
   </ItemGroup>
 
-  
   <!-- If solution already has PCL project, will reference -->
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj" />
     <ProjectReference Include="..\WearableUIGallery\WearableUIGallery.csproj" />
   </ItemGroup>
-  
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'tizen40' ">
+    <TizenTpkUserIncludeFiles Include="$(SolutionDir)theme\*.edj">
+      <TizenTpkSubDir>res</TizenTpkSubDir>
+    </TizenTpkUserIncludeFiles>
+  </ItemGroup>
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
