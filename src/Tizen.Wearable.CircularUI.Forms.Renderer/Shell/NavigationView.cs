@@ -2,10 +2,13 @@
 using ElmSharp.Wearable;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using ELayout = ElmSharp.Layout;
 using EColor = ElmSharp.Color;
+using ELayout = ElmSharp.Layout;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -13,11 +16,61 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         readonly int _dafaultIconSize = 60;
 
-        class Item
+        class Item : INotifyPropertyChanged
         {
-            public Element Source { get; set; } 
+            Element _source;
+            public Element Source
+            {
+                get
+                {
+                    return _source;
+                }
+                set
+                {
+                    if (_source != null)
+                    {
+                        _source.PropertyChanged -= OnElementPropertyChanged;
+                    }
+                    _source = value;
+                    _source.PropertyChanged += OnElementPropertyChanged;
+                    UpdateContent();
+                }
+            }
+
             public string Text { get; set; }
             public string Icon { get; set; }
+
+            public event PropertyChangedEventHandler PropertyChanged;
+
+            void UpdateContent()
+            {
+                if (Source is BaseShellItem shellItem)
+                {
+                    Text = shellItem.Title;
+                    Icon = (shellItem.Icon as FileImageSource)?.ToAbsPath();
+                }
+                else if (Source is MenuItem menuItem)
+                {
+                    Text = menuItem.Text;
+                    Icon = (menuItem.IconImageSource as FileImageSource)?.ToAbsPath();
+                }
+                else
+                {
+                    Text = null;
+                    Icon = null;
+                }
+                SendPropertyChanged();
+            }
+
+            void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+            {
+                UpdateContent();
+            }
+
+            void SendPropertyChanged([CallerMemberName] string propertyName = "")
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
         Box _outterBox;
@@ -77,6 +130,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             _itemCache = items;
 
+            ClearItemPropertyChangedHandler();
             _naviMenu.Clear();
             _items.Clear();
             // header
@@ -104,6 +158,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     var genitem = _naviMenu.Append(_defaultClass, data, GenListItemType.Normal);
                     genitem.SetPartColor("bg", _backgroundColor);
                     _items.Add(genitem);
+                    data.PropertyChanged += OnItemPropertyChanged;
                 }
             }
             _footer = _naviMenu.Append(_defaultClass, new Item { Text = "" });
@@ -257,6 +312,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 }
             }
             return false;
+        }
+
+        void ClearItemPropertyChangedHandler()
+        {
+            foreach (var item in _items)
+            {
+                (item.Data as Item).PropertyChanged -= OnItemPropertyChanged;
+            }
+        }
+
+        void OnItemPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            var item = _items.Where((d) => d.Data == sender).FirstOrDefault();
+            item?.Update();
         }
 
     }
