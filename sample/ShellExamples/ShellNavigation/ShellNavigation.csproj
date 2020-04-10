@@ -13,12 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="lib\"/>
-    <Folder Include="res\"/>
+    <Folder Include="lib\" />
+    <Folder Include="res\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
   </ItemGroup>
 
   <ItemGroup>
