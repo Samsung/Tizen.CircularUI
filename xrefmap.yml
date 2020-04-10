@@ -4690,12 +4690,24 @@ references:
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init()
   nameWithType: FormsCircularUI.Init()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(CoreApplication)
+  name: Init(CoreApplication)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html#Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_CoreApplication_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(CoreApplication)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(CoreApplication)
+  nameWithType: FormsCircularUI.Init(CoreApplication)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)
   name: Init(String)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html#Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_System_String_
   commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(System.String)
   nameWithType: FormsCircularUI.Init(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions)
+  name: Init(InitOptions)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html#Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init(Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions)
+  nameWithType: FormsCircularUI.Init(InitOptions)
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init*
   name: Init
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html#Tizen_Wearable_CircularUI_Forms_Renderer_FormsCircularUI_Init_
@@ -4997,6 +5009,57 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation.Title
   nameWithType: InformationPopupImplementation.Title
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions
+  name: InitOptions
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions
+  nameWithType: InitOptions
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.#ctor(CoreApplication)
+  name: InitOptions(CoreApplication)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions__ctor_CoreApplication_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.#ctor(CoreApplication)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.InitOptions(CoreApplication)
+  nameWithType: InitOptions.InitOptions(CoreApplication)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.#ctor(CoreApplication,System.String)
+  name: InitOptions(CoreApplication, String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions__ctor_CoreApplication_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.#ctor(CoreApplication,System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.InitOptions(CoreApplication, System.String)
+  nameWithType: InitOptions.InitOptions(CoreApplication, String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.#ctor*
+  name: InitOptions
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.InitOptions
+  nameWithType: InitOptions.InitOptions
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.Context
+  name: Context
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions_Context
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.Context
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.Context
+  nameWithType: InitOptions.Context
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.Context*
+  name: Context
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions_Context_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.Context
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.Context
+  nameWithType: InitOptions.Context
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey
+  name: GoogleMapsAPIKey
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions_GoogleMapsAPIKey
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey
+  nameWithType: InitOptions.GoogleMapsAPIKey
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey*
+  name: GoogleMapsAPIKey
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html#Tizen_Wearable_CircularUI_Forms_Renderer_InitOptions_GoogleMapsAPIKey_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey
+  nameWithType: InitOptions.GoogleMapsAPIKey
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer
   name: IShellItemRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html
