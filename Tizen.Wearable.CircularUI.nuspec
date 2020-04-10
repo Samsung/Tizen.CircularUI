@@ -23,6 +23,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="Tizen.Wearable.CircularUI.targets" target="build" />
+    <file src="theme\tizen-circular-ui-theme.edj" target="content\theme" />
     <file src="src\Tizen.Wearable.CircularUI.Forms\bin\$configuration$\netstandard2.0\Tizen.Wearable.CircularUI.Forms.dll" target="lib\netstandard2.0" />
     <file src="src\Tizen.Wearable.CircularUI.Forms\bin\$configuration$\netstandard2.0\Tizen.Wearable.CircularUI.Forms.pdb" target="lib\netstandard2.0" />
     <file src="src\Tizen.Wearable.CircularUI.Forms.Renderer\bin\$configuration$\tizen40\Tizen.Wearable.CircularUI.Forms.dll" target="lib\tizen40" />

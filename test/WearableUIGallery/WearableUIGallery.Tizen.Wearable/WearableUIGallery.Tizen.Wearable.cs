@@ -41,8 +41,9 @@ namespace WearableUIGallery.Tizen.Wearable
         static void Main(string[] args)
         {
             var app = new Program();
+            var resourcePath = app.DirectoryInfo.Resource;
             Forms.Init(app);
-            FormsCircularUI.Init(APIKEY);
+            FormsCircularUI.Init(new InitOptions(app, APIKEY));
 #if UITEST
             global::Tizen.Appium.TizenAppium.StartService();
 #endif
