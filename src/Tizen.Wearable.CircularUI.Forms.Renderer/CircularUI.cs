@@ -15,6 +15,8 @@
  */
 using System.ComponentModel;
 using System.Diagnostics;
+using ElmSharp;
+using Tizen.Applications;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
@@ -22,6 +24,24 @@ using XForms = Xamarin.Forms.Forms;
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     using Xamarin.Forms.PlatformConfiguration;
+  
+    public class InitOptions
+    {
+        public CoreApplication Context { get; set; }
+
+        public string GoogleMapsAPIKey { get; set; }
+
+        public InitOptions(CoreApplication application)
+        {
+            Context = application;
+        }
+
+        public InitOptions(CoreApplication application, string googleMapsAPIKey)
+        {
+            Context = application;
+            GoogleMapsAPIKey = googleMapsAPIKey;
+        }
+    }
 
     public static class FormsCircularUI
     {
@@ -37,6 +57,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public static void Init(string apiKey)
         {
+
             if (!string.IsNullOrEmpty(apiKey))
             {
                 GoogleMaps.Init(apiKey);
@@ -48,6 +69,23 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             Init();
         }
+
+        public static void Init(CoreApplication context)
+        {
+            var resPath = context?.DirectoryInfo?.Resource;
+            if (!string.IsNullOrEmpty(resPath))
+                ThemeLoader.Initialize(resPath);
+
+            Init();
+        }
+
+        public static void Init(InitOptions options)
+        {
+            var resPath = options.Context?.DirectoryInfo?.Resource;
+            if (!string.IsNullOrEmpty(resPath))
+                ThemeLoader.Initialize(resPath);
+
+            Init(options.GoogleMapsAPIKey);
 
         public static void AddAppPropertyChangedHandler(this Application application)
         {

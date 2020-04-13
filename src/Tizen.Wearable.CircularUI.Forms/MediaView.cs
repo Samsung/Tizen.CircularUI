@@ -15,6 +15,8 @@
  */
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
+using XVisualElement = Xamarin.Forms.VisualElement;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
@@ -45,7 +47,8 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         public virtual VideoOuputType OuputType => VideoOuputType.Buffer;
 
-        VisualElement IVideoOutput.MediaView => this;
+        XVisualElement IVideoOutput.MediaView => this;
+
         View IVideoOutput.Controller
         {
             get
@@ -67,7 +70,6 @@ namespace Tizen.Wearable.CircularUI.Forms
                 }
             }
         }
-
         protected override void LayoutChildren(double x, double y, double width, double height)
         {
             _controller?.Layout(new Rectangle(x, y, width, height));
