@@ -22,18 +22,26 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+
+    //TODO : This interface sholud be removed when the related bug in Xamarin.Forms is fixed.
+    [EditorBrowsable(EditorBrowsableState.Never)]
+    public interface IPlatformMediaPlayer2 : IPlatformMediaPlayer
+    {
+
+    }
     /// <summary>
     /// MediaPlayer provieds the essential components to play the media contents.
     /// </summary>
-    public class MediaPlayer : Element
+    public class MediaPlayer : Element, IMediaPlayer, IDisposable
     {
         /// <summary>
         /// Identifies the Source bindable property.
         /// </summary>
-        public static readonly BindableProperty SourceProperty = BindableProperty.Create(nameof(Source), typeof(MediaSource), typeof(MediaPlayer), default(MediaSource), propertyChanging: OnSourceChanging, propertyChanged: OnSourceChanged);
+        public static readonly BindableProperty SourceProperty = BindableProperty.Create(nameof(Source), typeof(MediaSource), typeof(MediaPlayer), default(MediaSource), propertyChanged: OnSourceChanged);
         /// <summary>
         /// Identifies the VideoOutput bindable property.
         /// </summary>
@@ -92,7 +100,8 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         public static readonly BindableProperty IsBufferingProperty = IsBufferingPropertyKey.BindableProperty;
 
-        IPlatformMediaPlayer _impl;
+        bool _disposed = false;
+        IPlatformMediaPlayer2 _impl;
         bool _isPlaying;
         bool _controlsAlwaysVisible;
         CancellationTokenSource _hideTimerCTS = new CancellationTokenSource();
@@ -103,27 +112,33 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         public MediaPlayer()
         {
-            _impl = DependencyService.Get<IPlatformMediaPlayer>(fetchTarget: DependencyFetchTarget.NewInstance);
-            _impl.UpdateStreamInfo += OnUpdateStreamInfo;
-            _impl.PlaybackCompleted += SendPlaybackCompleted;
-            _impl.PlaybackStarted += SendPlaybackStarted;
-            _impl.PlaybackPaused += SendPlaybackPaused;
-            _impl.PlaybackStopped += SendPlaybackStopped;
-            _impl.BufferingProgressUpdated += OnUpdateBufferingProgress;
-            _impl.UsesEmbeddingControls = true;
-            _impl.Volume = 1d;
-            _impl.AspectMode = DisplayAspectMode.AspectFit;
-            _impl.AutoPlay = false;
-            _impl.AutoStop = true;
-
-            _controlsAlwaysVisible = false;
-            _controls = new Lazy<View>(() =>
+            //TODO: IPlatformMediaPlayer2 should be replaced to IPlatformMediaPlayer if Xamarin.Forms ready
+            _impl = DependencyService.Get<IPlatformMediaPlayer2>(fetchTarget: DependencyFetchTarget.NewInstance);
+            if (_impl != null)
             {
-                return new EmbeddingControls
+                _impl.UpdateStreamInfo += OnUpdateStreamInfo;
+                _impl.PlaybackCompleted += SendPlaybackCompleted;
+                _impl.PlaybackStarted += SendPlaybackStarted;
+                _impl.PlaybackPaused += SendPlaybackPaused;
+                _impl.PlaybackStopped += SendPlaybackStopped;
+                _impl.BufferingProgressUpdated += OnUpdateBufferingProgress;
+                _impl.UsesEmbeddingControls = true;
+                _impl.Volume = 1d;
+                _impl.AspectMode = DisplayAspectMode.AspectFit;
+                _impl.AutoPlay = false;
+                _impl.AutoStop = true;
+
+                _controlsAlwaysVisible = false;
+                _controls = new Lazy<View>(() =>
                 {
-                    BindingContext = this
-                };
-            });
+                    return _impl.GetEmbeddingControlView(this);
+                });
+            }
+        }
+
+        ~MediaPlayer()
+        {
+            Dispose(false);
         }
 
         /// <summary>
@@ -434,6 +449,31 @@ namespace Tizen.Wearable.CircularUI.Forms
             return _impl.GetMetadata();
         }
 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+            {
+                _impl.UpdateStreamInfo -= OnUpdateStreamInfo;
+                _impl.PlaybackCompleted -= SendPlaybackCompleted;
+                _impl.PlaybackStarted -= SendPlaybackStarted;
+                _impl.PlaybackPaused -= SendPlaybackPaused;
+                _impl.PlaybackStopped -= SendPlaybackStopped;
+                _impl.BufferingProgressUpdated -= OnUpdateBufferingProgress;
+                _impl.Dispose();
+            }
+
+            _disposed = true;
+        }
+
         void UpdateAutoPlay()
         {
             _impl.AutoPlay = AutoPlay;
@@ -501,15 +541,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         void OnSourceChanged(object sender, EventArgs e)
         {
             _impl.SetSource(Source);
-        }
-
-        void OnSourceChanging(MediaSource oldValue, MediaSource newValue)
-        {
-            if (oldValue != null)
-                oldValue.SourceChanged -= OnSourceChanged;
-
-            if (newValue != null)
-                newValue.SourceChanged += OnSourceChanged;
         }
 
         void OnVideoOutputChanged()
@@ -629,11 +660,6 @@ namespace Tizen.Wearable.CircularUI.Forms
             }
         }
 
-
-        static void OnSourceChanging(BindableObject bindable, object oldValue, object newValue)
-        {
-            (bindable as MediaPlayer)?.OnSourceChanging(oldValue as MediaSource, newValue as MediaSource);
-        }
         static void OnSourceChanged(BindableObject bindable, object oldValue, object newValue)
         {
             (bindable as MediaPlayer)?.OnSourceChanged(bindable, EventArgs.Empty);
