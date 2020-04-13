@@ -24,7 +24,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// You can move the list through bezel action.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class CircleListView : ListView, IRotaryFocusable
+    public class CircleListView : ListView, IRotaryFocusable, ICircleSurfaceConsumer
     {
         /// <summary>
         /// BindableProperty. Identifies the Header, Footer cancel the Fish Eye Effect or not.
@@ -60,5 +60,11 @@ namespace Tizen.Wearable.CircularUI.Forms
             get => (Color)GetValue(BarColorProperty);
             set => SetValue(BarColorProperty, value);
         }
+
+        /// <summary>
+        /// Gets or sets a CircleSurfaceProvider.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
     }
 }

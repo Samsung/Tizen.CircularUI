@@ -24,7 +24,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CircleDateTimeSelector is a view that can change the value by bezel action by touching each item of "Year: Month: Day" and "Hour: Minute: AM / PM"
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class CircleDateTimeSelector : Xamarin.Forms.View, IRotaryFocusable
+    public class CircleDateTimeSelector : Xamarin.Forms.View, IRotaryFocusable, ICircleSurfaceConsumer
     {
         /// <summary>
         /// BindableProperty. Identifies the MarkerColor bindable property.
@@ -156,6 +156,7 @@ namespace Tizen.Wearable.CircularUI.Forms
             get => (bool)GetValue(IsVisibleOfMinuteProperty);
             set => SetValue(IsVisibleOfMinuteProperty, value);
         }
+
         /// <summary>
         /// Gets or sets a boolean value that indicates whether the AmPm field type is visible.
         /// </summary>
@@ -165,5 +166,11 @@ namespace Tizen.Wearable.CircularUI.Forms
             get => (bool)GetValue(IsVisibleOfAmPmProperty);
             set => SetValue(IsVisibleOfAmPmProperty, value);
         }
+
+        /// <summary>
+        /// Gets or sets a CircleSurfaceProvider.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
     }
 }

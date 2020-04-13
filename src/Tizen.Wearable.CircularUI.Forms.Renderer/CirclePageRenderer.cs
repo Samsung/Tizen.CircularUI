@@ -81,6 +81,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             if (e.NewElement != null)
             {
+                e.NewElement.CircleSurface = _surface;
                 e.NewElement.Appearing += OnPageAppearing;
                 e.NewElement.Disappearing += OnPageDisappearing;
                 var toolbarItems = e.NewElement.ToolbarItems as ObservableCollection<XToolbarItem>;
