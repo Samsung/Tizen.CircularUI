@@ -157,25 +157,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.ActionButtonItem.IsVisibleProperty
   fullName: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.IsVisibleProperty
   nameWithType: ActionButtonItem.IsVisibleProperty
-- uid: Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs
-  name: BufferingProgressUpdatedEventArgs
-  href: api/Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs
-  fullName: Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs
-  nameWithType: BufferingProgressUpdatedEventArgs
-- uid: Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.Progress
-  name: Progress
-  href: api/Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.html#Tizen_Wearable_CircularUI_Forms_BufferingProgressUpdatedEventArgs_Progress
-  commentId: P:Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.Progress
-  fullName: Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.Progress
-  nameWithType: BufferingProgressUpdatedEventArgs.Progress
-- uid: Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.Progress*
-  name: Progress
-  href: api/Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.html#Tizen_Wearable_CircularUI_Forms_BufferingProgressUpdatedEventArgs_Progress_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.Progress
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.BufferingProgressUpdatedEventArgs.Progress
-  nameWithType: BufferingProgressUpdatedEventArgs.Progress
 - uid: Tizen.Wearable.CircularUI.Forms.Check
   name: Check
   href: api/Tizen.Wearable.CircularUI.Forms.Check.html
@@ -1751,166 +1732,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.DateTimeType.Time
   fullName: Tizen.Wearable.CircularUI.Forms.DateTimeType.Time
   nameWithType: DateTimeType.Time
-- uid: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode
-  name: DisplayAspectMode
-  href: api/Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.DisplayAspectMode
-  fullName: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode
-  nameWithType: DisplayAspectMode
-- uid: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.AspectFill
-  name: AspectFill
-  href: api/Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.html#Tizen_Wearable_CircularUI_Forms_DisplayAspectMode_AspectFill
-  commentId: F:Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.AspectFill
-  fullName: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.AspectFill
-  nameWithType: DisplayAspectMode.AspectFill
-- uid: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.AspectFit
-  name: AspectFit
-  href: api/Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.html#Tizen_Wearable_CircularUI_Forms_DisplayAspectMode_AspectFit
-  commentId: F:Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.AspectFit
-  fullName: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.AspectFit
-  nameWithType: DisplayAspectMode.AspectFit
-- uid: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.Fill
-  name: Fill
-  href: api/Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.html#Tizen_Wearable_CircularUI_Forms_DisplayAspectMode_Fill
-  commentId: F:Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.Fill
-  fullName: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.Fill
-  nameWithType: DisplayAspectMode.Fill
-- uid: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.OrignalSize
-  name: OrignalSize
-  href: api/Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.html#Tizen_Wearable_CircularUI_Forms_DisplayAspectMode_OrignalSize
-  commentId: F:Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.OrignalSize
-  fullName: Tizen.Wearable.CircularUI.Forms.DisplayAspectMode.OrignalSize
-  nameWithType: DisplayAspectMode.OrignalSize
-- uid: Tizen.Wearable.CircularUI.Forms.EmbeddingControls
-  name: EmbeddingControls
-  href: api/Tizen.Wearable.CircularUI.Forms.EmbeddingControls.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.EmbeddingControls
-  fullName: Tizen.Wearable.CircularUI.Forms.EmbeddingControls
-  nameWithType: EmbeddingControls
-- uid: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.#ctor
-  name: EmbeddingControls()
-  href: api/Tizen.Wearable.CircularUI.Forms.EmbeddingControls.html#Tizen_Wearable_CircularUI_Forms_EmbeddingControls__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.EmbeddingControls.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.EmbeddingControls()
-  nameWithType: EmbeddingControls.EmbeddingControls()
-- uid: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.#ctor*
-  name: EmbeddingControls
-  href: api/Tizen.Wearable.CircularUI.Forms.EmbeddingControls.html#Tizen_Wearable_CircularUI_Forms_EmbeddingControls__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.EmbeddingControls.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.EmbeddingControls
-  nameWithType: EmbeddingControls.EmbeddingControls
-- uid: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged
-  name: OnBindingContextChanged()
-  href: api/Tizen.Wearable.CircularUI.Forms.EmbeddingControls.html#Tizen_Wearable_CircularUI_Forms_EmbeddingControls_OnBindingContextChanged
-  commentId: M:Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged
-  fullName: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged()
-  nameWithType: EmbeddingControls.OnBindingContextChanged()
-- uid: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged*
-  name: OnBindingContextChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.EmbeddingControls.html#Tizen_Wearable_CircularUI_Forms_EmbeddingControls_OnBindingContextChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged
-  nameWithType: EmbeddingControls.OnBindingContextChanged
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource
-  name: FileMediaSource
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.FileMediaSource
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource
-  nameWithType: FileMediaSource
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.File
-  name: File
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_File
-  commentId: P:Tizen.Wearable.CircularUI.Forms.FileMediaSource.File
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.File
-  nameWithType: FileMediaSource.File
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.File*
-  name: File
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_File_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.FileMediaSource.File
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.File
-  nameWithType: FileMediaSource.File
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.FileProperty
-  name: FileProperty
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_FileProperty
-  commentId: F:Tizen.Wearable.CircularUI.Forms.FileMediaSource.FileProperty
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.FileProperty
-  nameWithType: FileMediaSource.FileProperty
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.OnPropertyChanged(System.String)
-  name: OnPropertyChanged(String)
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_OnPropertyChanged_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.FileMediaSource.OnPropertyChanged(System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.OnPropertyChanged(System.String)
-  nameWithType: FileMediaSource.OnPropertyChanged(String)
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.OnPropertyChanged*
-  name: OnPropertyChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_OnPropertyChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.FileMediaSource.OnPropertyChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.OnPropertyChanged
-  nameWithType: FileMediaSource.OnPropertyChanged
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.op_Implicit(System.String)~Tizen.Wearable.CircularUI.Forms.FileMediaSource
-  name: Implicit(String to FileMediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_op_Implicit_System_String__Tizen_Wearable_CircularUI_Forms_FileMediaSource
-  commentId: M:Tizen.Wearable.CircularUI.Forms.FileMediaSource.op_Implicit(System.String)~Tizen.Wearable.CircularUI.Forms.FileMediaSource
-  name.vb: Widening(String to FileMediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.Implicit(System.String to Tizen.Wearable.CircularUI.Forms.FileMediaSource)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.FileMediaSource.Widening(System.String to Tizen.Wearable.CircularUI.Forms.FileMediaSource)
-  nameWithType: FileMediaSource.Implicit(String to FileMediaSource)
-  nameWithType.vb: FileMediaSource.Widening(String to FileMediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.op_Implicit(Tizen.Wearable.CircularUI.Forms.FileMediaSource)~System.String
-  name: Implicit(FileMediaSource to String)
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_op_Implicit_Tizen_Wearable_CircularUI_Forms_FileMediaSource__System_String
-  commentId: M:Tizen.Wearable.CircularUI.Forms.FileMediaSource.op_Implicit(Tizen.Wearable.CircularUI.Forms.FileMediaSource)~System.String
-  name.vb: Widening(FileMediaSource to String)
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.Implicit(Tizen.Wearable.CircularUI.Forms.FileMediaSource to System.String)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.FileMediaSource.Widening(Tizen.Wearable.CircularUI.Forms.FileMediaSource to System.String)
-  nameWithType: FileMediaSource.Implicit(FileMediaSource to String)
-  nameWithType.vb: FileMediaSource.Widening(FileMediaSource to String)
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.op_Implicit*
-  name: Implicit
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_op_Implicit_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.FileMediaSource.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.Implicit
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.FileMediaSource.Widening
-  nameWithType: FileMediaSource.Implicit
-  nameWithType.vb: FileMediaSource.Widening
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.ToString
-  name: ToString()
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_ToString
-  commentId: M:Tizen.Wearable.CircularUI.Forms.FileMediaSource.ToString
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.ToString()
-  nameWithType: FileMediaSource.ToString()
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSource.ToString*
-  name: ToString
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSource.html#Tizen_Wearable_CircularUI_Forms_FileMediaSource_ToString_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.FileMediaSource.ToString
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSource.ToString
-  nameWithType: FileMediaSource.ToString
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter
-  name: FileMediaSourceConverter
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter
-  nameWithType: FileMediaSourceConverter
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString(System.String)
-  name: ConvertFromInvariantString(String)
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.html#Tizen_Wearable_CircularUI_Forms_FileMediaSourceConverter_ConvertFromInvariantString_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString(System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString(System.String)
-  nameWithType: FileMediaSourceConverter.ConvertFromInvariantString(String)
-- uid: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString*
-  name: ConvertFromInvariantString
-  href: api/Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.html#Tizen_Wearable_CircularUI_Forms_FileMediaSourceConverter_ConvertFromInvariantString_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.FileMediaSourceConverter.ConvertFromInvariantString
-  nameWithType: FileMediaSourceConverter.ConvertFromInvariantString
 - uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption
   name: GoogleMapOption
   href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html
@@ -2217,25 +2038,6 @@ references:
   commentId: E:Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.LoadMapRequested
   fullName: Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.LoadMapRequested
   nameWithType: IGoogleMapViewController.LoadMapRequested
-- uid: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider
-  name: IMediaViewProvider
-  href: api/Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.IMediaViewProvider
-  fullName: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider
-  nameWithType: IMediaViewProvider
-- uid: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
-  name: GetMediaView()
-  href: api/Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html#Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
-  fullName: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView()
-  nameWithType: IMediaViewProvider.GetMediaView()
-- uid: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView*
-  name: GetMediaView
-  href: api/Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html#Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
-  nameWithType: IMediaViewProvider.GetMediaView
 - uid: Tizen.Wearable.CircularUI.Forms.IndexPage
   name: IndexPage
   href: api/Tizen.Wearable.CircularUI.Forms.IndexPage.html
@@ -2382,256 +2184,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.InformationPopup.TitleProperty
   fullName: Tizen.Wearable.CircularUI.Forms.InformationPopup.TitleProperty
   nameWithType: InformationPopup.TitleProperty
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer
-  name: IPlatformMediaPlayer
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer
-  nameWithType: IPlatformMediaPlayer
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AspectMode
-  name: AspectMode
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_AspectMode
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AspectMode
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AspectMode
-  nameWithType: IPlatformMediaPlayer.AspectMode
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AspectMode*
-  name: AspectMode
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_AspectMode_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AspectMode
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AspectMode
-  nameWithType: IPlatformMediaPlayer.AspectMode
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoPlay
-  name: AutoPlay
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_AutoPlay
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoPlay
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoPlay
-  nameWithType: IPlatformMediaPlayer.AutoPlay
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoPlay*
-  name: AutoPlay
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_AutoPlay_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoPlay
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoPlay
-  nameWithType: IPlatformMediaPlayer.AutoPlay
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoStop
-  name: AutoStop
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_AutoStop
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoStop
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoStop
-  nameWithType: IPlatformMediaPlayer.AutoStop
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoStop*
-  name: AutoStop
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_AutoStop_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoStop
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.AutoStop
-  nameWithType: IPlatformMediaPlayer.AutoStop
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.BufferingProgressUpdated
-  name: BufferingProgressUpdated
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_BufferingProgressUpdated
-  commentId: E:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.BufferingProgressUpdated
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.BufferingProgressUpdated
-  nameWithType: IPlatformMediaPlayer.BufferingProgressUpdated
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Duration
-  name: Duration
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Duration
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Duration
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Duration
-  nameWithType: IPlatformMediaPlayer.Duration
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Duration*
-  name: Duration
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Duration_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Duration
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Duration
-  nameWithType: IPlatformMediaPlayer.Duration
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetAlbumArts
-  name: GetAlbumArts()
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_GetAlbumArts
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetAlbumArts
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetAlbumArts()
-  nameWithType: IPlatformMediaPlayer.GetAlbumArts()
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetAlbumArts*
-  name: GetAlbumArts
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_GetAlbumArts_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetAlbumArts
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetAlbumArts
-  nameWithType: IPlatformMediaPlayer.GetAlbumArts
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetMetadata
-  name: GetMetadata()
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_GetMetadata
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetMetadata
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetMetadata()
-  nameWithType: IPlatformMediaPlayer.GetMetadata()
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetMetadata*
-  name: GetMetadata
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_GetMetadata_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetMetadata
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.GetMetadata
-  nameWithType: IPlatformMediaPlayer.GetMetadata
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.IsMuted
-  name: IsMuted
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_IsMuted
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.IsMuted
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.IsMuted
-  nameWithType: IPlatformMediaPlayer.IsMuted
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.IsMuted*
-  name: IsMuted
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_IsMuted_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.IsMuted
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.IsMuted
-  nameWithType: IPlatformMediaPlayer.IsMuted
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Pause
-  name: Pause()
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Pause
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Pause
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Pause()
-  nameWithType: IPlatformMediaPlayer.Pause()
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Pause*
-  name: Pause
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Pause_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Pause
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Pause
-  nameWithType: IPlatformMediaPlayer.Pause
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackCompleted
-  name: PlaybackCompleted
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_PlaybackCompleted
-  commentId: E:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackCompleted
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackCompleted
-  nameWithType: IPlatformMediaPlayer.PlaybackCompleted
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackPaused
-  name: PlaybackPaused
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_PlaybackPaused
-  commentId: E:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackPaused
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackPaused
-  nameWithType: IPlatformMediaPlayer.PlaybackPaused
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackStarted
-  name: PlaybackStarted
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_PlaybackStarted
-  commentId: E:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackStarted
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackStarted
-  nameWithType: IPlatformMediaPlayer.PlaybackStarted
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackStopped
-  name: PlaybackStopped
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_PlaybackStopped
-  commentId: E:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackStopped
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.PlaybackStopped
-  nameWithType: IPlatformMediaPlayer.PlaybackStopped
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Position
-  name: Position
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Position
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Position
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Position
-  nameWithType: IPlatformMediaPlayer.Position
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Position*
-  name: Position
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Position_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Position
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Position
-  nameWithType: IPlatformMediaPlayer.Position
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Seek(System.Int32)
-  name: Seek(Int32)
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Seek_System_Int32_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Seek(System.Int32)
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Seek(System.Int32)
-  nameWithType: IPlatformMediaPlayer.Seek(Int32)
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Seek*
-  name: Seek
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Seek_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Seek
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Seek
-  nameWithType: IPlatformMediaPlayer.Seek
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetDisplay(Tizen.Wearable.CircularUI.Forms.IVideoOutput)
-  name: SetDisplay(IVideoOutput)
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_SetDisplay_Tizen_Wearable_CircularUI_Forms_IVideoOutput_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetDisplay(Tizen.Wearable.CircularUI.Forms.IVideoOutput)
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetDisplay(Tizen.Wearable.CircularUI.Forms.IVideoOutput)
-  nameWithType: IPlatformMediaPlayer.SetDisplay(IVideoOutput)
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetDisplay*
-  name: SetDisplay
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_SetDisplay_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetDisplay
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetDisplay
-  nameWithType: IPlatformMediaPlayer.SetDisplay
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetSource(Tizen.Wearable.CircularUI.Forms.MediaSource)
-  name: SetSource(MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_SetSource_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetSource(Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetSource(Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: IPlatformMediaPlayer.SetSource(MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetSource*
-  name: SetSource
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_SetSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetSource
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.SetSource
-  nameWithType: IPlatformMediaPlayer.SetSource
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Start
-  name: Start()
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Start
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Start
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Start()
-  nameWithType: IPlatformMediaPlayer.Start()
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Start*
-  name: Start
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Start_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Start
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Start
-  nameWithType: IPlatformMediaPlayer.Start
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Stop
-  name: Stop()
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Stop
-  commentId: M:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Stop
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Stop()
-  nameWithType: IPlatformMediaPlayer.Stop()
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Stop*
-  name: Stop
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Stop_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Stop
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Stop
-  nameWithType: IPlatformMediaPlayer.Stop
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UpdateStreamInfo
-  name: UpdateStreamInfo
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_UpdateStreamInfo
-  commentId: E:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UpdateStreamInfo
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UpdateStreamInfo
-  nameWithType: IPlatformMediaPlayer.UpdateStreamInfo
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UsesEmbeddingControls
-  name: UsesEmbeddingControls
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_UsesEmbeddingControls
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UsesEmbeddingControls
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UsesEmbeddingControls
-  nameWithType: IPlatformMediaPlayer.UsesEmbeddingControls
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UsesEmbeddingControls*
-  name: UsesEmbeddingControls
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_UsesEmbeddingControls_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UsesEmbeddingControls
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.UsesEmbeddingControls
-  nameWithType: IPlatformMediaPlayer.UsesEmbeddingControls
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Volume
-  name: Volume
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Volume
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Volume
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Volume
-  nameWithType: IPlatformMediaPlayer.Volume
-- uid: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Volume*
-  name: Volume
-  href: api/Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.html#Tizen_Wearable_CircularUI_Forms_IPlatformMediaPlayer_Volume_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Volume
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IPlatformMediaPlayer.Volume
-  nameWithType: IPlatformMediaPlayer.Volume
 - uid: Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver
   name: IRotaryEventReceiver
   href: api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html
@@ -2657,51 +2209,6 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.IRotaryFocusable
   fullName: Tizen.Wearable.CircularUI.Forms.IRotaryFocusable
   nameWithType: IRotaryFocusable
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput
-  name: IVideoOutput
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.IVideoOutput
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput
-  nameWithType: IVideoOutput
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  name: Controller
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html#Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  nameWithType: IVideoOutput.Controller
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller*
-  name: Controller
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html#Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  nameWithType: IVideoOutput.Controller
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  name: MediaView
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html#Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  nameWithType: IVideoOutput.MediaView
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView*
-  name: MediaView
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html#Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  nameWithType: IVideoOutput.MediaView
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType
-  name: OuputType
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html#Tizen_Wearable_CircularUI_Forms_IVideoOutput_OuputType
-  commentId: P:Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType
-  nameWithType: IVideoOutput.OuputType
-- uid: Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType*
-  name: OuputType
-  href: api/Tizen.Wearable.CircularUI.Forms.IVideoOutput.html#Tizen_Wearable_CircularUI_Forms_IVideoOutput_OuputType_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.IVideoOutput.OuputType
-  nameWithType: IVideoOutput.OuputType
 - uid: Tizen.Wearable.CircularUI.Forms.LatLng
   name: LatLng
   href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html
@@ -3091,6 +2598,25 @@ references:
   commentId: E:Tizen.Wearable.CircularUI.Forms.MediaPlayer.BufferingStarted
   fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.BufferingStarted
   nameWithType: MediaPlayer.BufferingStarted
+- uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose
+  name: Dispose()
+  href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_Dispose
+  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose
+  fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose()
+  nameWithType: MediaPlayer.Dispose()
+- uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_Dispose_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose(System.Boolean)
+  nameWithType: MediaPlayer.Dispose(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose*
+  name: Dispose
+  href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_Dispose_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Dispose
+  nameWithType: MediaPlayer.Dispose
 - uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Duration
   name: Duration
   href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_Duration
@@ -3110,6 +2636,19 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.MediaPlayer.DurationProperty
   fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.DurationProperty
   nameWithType: MediaPlayer.DurationProperty
+- uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Finalize
+  name: Finalize()
+  href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_Finalize
+  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaPlayer.Finalize
+  fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Finalize()
+  nameWithType: MediaPlayer.Finalize()
+- uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Finalize*
+  name: Finalize
+  href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_Finalize_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaPlayer.Finalize
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.Finalize
+  nameWithType: MediaPlayer.Finalize
 - uid: Tizen.Wearable.CircularUI.Forms.MediaPlayer.GetAlbumArts
   name: GetAlbumArts()
   href: api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html#Tizen_Wearable_CircularUI_Forms_MediaPlayer_GetAlbumArts
@@ -3383,111 +2922,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.MediaPlayer.VolumeProperty
   fullName: Tizen.Wearable.CircularUI.Forms.MediaPlayer.VolumeProperty
   nameWithType: MediaPlayer.VolumeProperty
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource
-  name: MediaSource
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.MediaSource
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource
-  nameWithType: MediaSource
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.#ctor
-  name: MediaSource()
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSource.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.MediaSource()
-  nameWithType: MediaSource.MediaSource()
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.#ctor*
-  name: MediaSource
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaSource.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.MediaSource
-  nameWithType: MediaSource.MediaSource
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.FromFile(System.String)
-  name: FromFile(String)
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_FromFile_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSource.FromFile(System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.FromFile(System.String)
-  nameWithType: MediaSource.FromFile(String)
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.FromFile*
-  name: FromFile
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_FromFile_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaSource.FromFile
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.FromFile
-  nameWithType: MediaSource.FromFile
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.FromUri(System.Uri)
-  name: FromUri(Uri)
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_FromUri_System_Uri_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSource.FromUri(System.Uri)
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.FromUri(System.Uri)
-  nameWithType: MediaSource.FromUri(Uri)
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.FromUri*
-  name: FromUri
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_FromUri_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaSource.FromUri
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.FromUri
-  nameWithType: MediaSource.FromUri
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.OnSourceChanged
-  name: OnSourceChanged()
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_OnSourceChanged
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSource.OnSourceChanged
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.OnSourceChanged()
-  nameWithType: MediaSource.OnSourceChanged()
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.OnSourceChanged*
-  name: OnSourceChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_OnSourceChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaSource.OnSourceChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.OnSourceChanged
-  nameWithType: MediaSource.OnSourceChanged
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.op_Implicit(System.String)~Tizen.Wearable.CircularUI.Forms.MediaSource
-  name: Implicit(String to MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_op_Implicit_System_String__Tizen_Wearable_CircularUI_Forms_MediaSource
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSource.op_Implicit(System.String)~Tizen.Wearable.CircularUI.Forms.MediaSource
-  name.vb: Widening(String to MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.Implicit(System.String to Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.MediaSource.Widening(System.String to Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: MediaSource.Implicit(String to MediaSource)
-  nameWithType.vb: MediaSource.Widening(String to MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.op_Implicit(System.Uri)~Tizen.Wearable.CircularUI.Forms.MediaSource
-  name: Implicit(Uri to MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_op_Implicit_System_Uri__Tizen_Wearable_CircularUI_Forms_MediaSource
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSource.op_Implicit(System.Uri)~Tizen.Wearable.CircularUI.Forms.MediaSource
-  name.vb: Widening(Uri to MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.Implicit(System.Uri to Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.MediaSource.Widening(System.Uri to Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: MediaSource.Implicit(Uri to MediaSource)
-  nameWithType.vb: MediaSource.Widening(Uri to MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSource.op_Implicit*
-  name: Implicit
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_op_Implicit_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaSource.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSource.Implicit
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.MediaSource.Widening
-  nameWithType: MediaSource.Implicit
-  nameWithType.vb: MediaSource.Widening
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSourceConverter
-  name: MediaSourceConverter
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.MediaSourceConverter
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSourceConverter
-  nameWithType: MediaSourceConverter
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.ConvertFromInvariantString(System.String)
-  name: ConvertFromInvariantString(String)
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.html#Tizen_Wearable_CircularUI_Forms_MediaSourceConverter_ConvertFromInvariantString_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.ConvertFromInvariantString(System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.ConvertFromInvariantString(System.String)
-  nameWithType: MediaSourceConverter.ConvertFromInvariantString(String)
-- uid: Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.ConvertFromInvariantString*
-  name: ConvertFromInvariantString
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.html#Tizen_Wearable_CircularUI_Forms_MediaSourceConverter_ConvertFromInvariantString_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.ConvertFromInvariantString
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaSourceConverter.ConvertFromInvariantString
-  nameWithType: MediaSourceConverter.ConvertFromInvariantString
 - uid: Tizen.Wearable.CircularUI.Forms.MediaView
   name: MediaView
   href: api/Tizen.Wearable.CircularUI.Forms.MediaView.html
@@ -3565,64 +2999,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.MediaView.PlayerProperty
   fullName: Tizen.Wearable.CircularUI.Forms.MediaView.PlayerProperty
   nameWithType: MediaView.PlayerProperty
-- uid: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller
-  name: IVideoOutput.Controller
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaView.html#Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller
-  commentId: P:Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller
-  name.vb: Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  nameWithType: MediaView.IVideoOutput.Controller
-  nameWithType.vb: MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-- uid: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller*
-  name: IVideoOutput.Controller
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaView.html#Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller
-  isSpec: "True"
-  name.vb: Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-  nameWithType: MediaView.IVideoOutput.Controller
-  nameWithType.vb: MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.Controller
-- uid: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView
-  name: IVideoOutput.MediaView
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaView.html#Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView
-  name.vb: Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  nameWithType: MediaView.IVideoOutput.MediaView
-  nameWithType.vb: MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-- uid: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView*
-  name: IVideoOutput.MediaView
-  href: api/Tizen.Wearable.CircularUI.Forms.MediaView.html#Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView
-  isSpec: "True"
-  name.vb: Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  fullName: Tizen.Wearable.CircularUI.Forms.MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-  nameWithType: MediaView.IVideoOutput.MediaView
-  nameWithType.vb: MediaView.Tizen.Wearable.CircularUI.Forms.IVideoOutput.MediaView
-- uid: Tizen.Wearable.CircularUI.Forms.PlaybackState
-  name: PlaybackState
-  href: api/Tizen.Wearable.CircularUI.Forms.PlaybackState.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.PlaybackState
-  fullName: Tizen.Wearable.CircularUI.Forms.PlaybackState
-  nameWithType: PlaybackState
-- uid: Tizen.Wearable.CircularUI.Forms.PlaybackState.Paused
-  name: Paused
-  href: api/Tizen.Wearable.CircularUI.Forms.PlaybackState.html#Tizen_Wearable_CircularUI_Forms_PlaybackState_Paused
-  commentId: F:Tizen.Wearable.CircularUI.Forms.PlaybackState.Paused
-  fullName: Tizen.Wearable.CircularUI.Forms.PlaybackState.Paused
-  nameWithType: PlaybackState.Paused
-- uid: Tizen.Wearable.CircularUI.Forms.PlaybackState.Playing
-  name: Playing
-  href: api/Tizen.Wearable.CircularUI.Forms.PlaybackState.html#Tizen_Wearable_CircularUI_Forms_PlaybackState_Playing
-  commentId: F:Tizen.Wearable.CircularUI.Forms.PlaybackState.Playing
-  fullName: Tizen.Wearable.CircularUI.Forms.PlaybackState.Playing
-  nameWithType: PlaybackState.Playing
-- uid: Tizen.Wearable.CircularUI.Forms.PlaybackState.Stopped
-  name: Stopped
-  href: api/Tizen.Wearable.CircularUI.Forms.PlaybackState.html#Tizen_Wearable_CircularUI_Forms_PlaybackState_Stopped
-  commentId: F:Tizen.Wearable.CircularUI.Forms.PlaybackState.Stopped
-  fullName: Tizen.Wearable.CircularUI.Forms.PlaybackState.Stopped
-  nameWithType: PlaybackState.Stopped
 - uid: Tizen.Wearable.CircularUI.Forms.PopupEntry
   name: PopupEntry
   href: api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html
@@ -4659,25 +4035,25 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Up
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Up
   nameWithType: DraggedState.Up
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler
-  name: FileMediaSourceHandler
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler
-  nameWithType: FileMediaSourceHandler
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  name: SetSource(Player, MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_FileMediaSourceHandler_SetSource_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource(Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: FileMediaSourceHandler.SetSource(Player, MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource*
-  name: SetSource
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_FileMediaSourceHandler_SetSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
+  name: EmbeddingControls2
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
+  nameWithType: EmbeddingControls2
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor
+  name: EmbeddingControls2()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html#Tizen_Wearable_CircularUI_Forms_Renderer_EmbeddingControls2__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.EmbeddingControls2()
+  nameWithType: EmbeddingControls2.EmbeddingControls2()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor*
+  name: EmbeddingControls2
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html#Tizen_Wearable_CircularUI_Forms_Renderer_EmbeddingControls2__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FileMediaSourceHandler.SetSource
-  nameWithType: FileMediaSourceHandler.SetSource
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.EmbeddingControls2
+  nameWithType: EmbeddingControls2.EmbeddingControls2
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI
   name: FormsCircularUI
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html
@@ -4807,25 +4183,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent
   nameWithType: HeaderOrFooterItemClass.OnGetContent
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler
-  name: IMediaSourceHandler
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler
-  nameWithType: IMediaSourceHandler
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  name: SetSource(Player, MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_IMediaSourceHandler_SetSource_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource(Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: IMediaSourceHandler.SetSource(Player, MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource*
-  name: SetSource
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_IMediaSourceHandler_SetSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IMediaSourceHandler.SetSource
-  nameWithType: IMediaSourceHandler.SetSource
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer
   name: IndexPageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html
@@ -5228,282 +4585,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.MediaPlayerImpl
   nameWithType: MediaPlayerImpl.MediaPlayerImpl
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AspectMode
-  name: AspectMode
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_AspectMode
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AspectMode
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AspectMode
-  nameWithType: MediaPlayerImpl.AspectMode
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AspectMode*
-  name: AspectMode
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_AspectMode_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AspectMode
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
+  name: GetEmbeddingControlView(IMediaPlayer)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetEmbeddingControlView_IMediaPlayer_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
+  nameWithType: MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView*
+  name: GetEmbeddingControlView
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetEmbeddingControlView_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AspectMode
-  nameWithType: MediaPlayerImpl.AspectMode
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoPlay
-  name: AutoPlay
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_AutoPlay
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoPlay
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoPlay
-  nameWithType: MediaPlayerImpl.AutoPlay
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoPlay*
-  name: AutoPlay
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_AutoPlay_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoPlay
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoPlay
-  nameWithType: MediaPlayerImpl.AutoPlay
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoStop
-  name: AutoStop
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_AutoStop
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoStop
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoStop
-  nameWithType: MediaPlayerImpl.AutoStop
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoStop*
-  name: AutoStop
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_AutoStop_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoStop
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.AutoStop
-  nameWithType: MediaPlayerImpl.AutoStop
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.BufferingProgressUpdated
-  name: BufferingProgressUpdated
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_BufferingProgressUpdated
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.BufferingProgressUpdated
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.BufferingProgressUpdated
-  nameWithType: MediaPlayerImpl.BufferingProgressUpdated
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Duration
-  name: Duration
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Duration
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Duration
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Duration
-  nameWithType: MediaPlayerImpl.Duration
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Duration*
-  name: Duration
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Duration_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Duration
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Duration
-  nameWithType: MediaPlayerImpl.Duration
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetAlbumArts
-  name: GetAlbumArts()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetAlbumArts
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetAlbumArts
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetAlbumArts()
-  nameWithType: MediaPlayerImpl.GetAlbumArts()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetAlbumArts*
-  name: GetAlbumArts
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetAlbumArts_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetAlbumArts
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetAlbumArts
-  nameWithType: MediaPlayerImpl.GetAlbumArts
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetMetadata
-  name: GetMetadata()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetMetadata
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetMetadata
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetMetadata()
-  nameWithType: MediaPlayerImpl.GetMetadata()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetMetadata*
-  name: GetMetadata
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetMetadata_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetMetadata
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetMetadata
-  nameWithType: MediaPlayerImpl.GetMetadata
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.IsMuted
-  name: IsMuted
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_IsMuted
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.IsMuted
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.IsMuted
-  nameWithType: MediaPlayerImpl.IsMuted
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.IsMuted*
-  name: IsMuted
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_IsMuted_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.IsMuted
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.IsMuted
-  nameWithType: MediaPlayerImpl.IsMuted
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Pause
-  name: Pause()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Pause
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Pause
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Pause()
-  nameWithType: MediaPlayerImpl.Pause()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Pause*
-  name: Pause
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Pause_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Pause
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Pause
-  nameWithType: MediaPlayerImpl.Pause
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackCompleted
-  name: PlaybackCompleted
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_PlaybackCompleted
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackCompleted
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackCompleted
-  nameWithType: MediaPlayerImpl.PlaybackCompleted
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackPaused
-  name: PlaybackPaused
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_PlaybackPaused
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackPaused
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackPaused
-  nameWithType: MediaPlayerImpl.PlaybackPaused
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackStarted
-  name: PlaybackStarted
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_PlaybackStarted
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackStarted
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackStarted
-  nameWithType: MediaPlayerImpl.PlaybackStarted
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackStopped
-  name: PlaybackStopped
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_PlaybackStopped
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackStopped
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.PlaybackStopped
-  nameWithType: MediaPlayerImpl.PlaybackStopped
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Position
-  name: Position
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Position
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Position
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Position
-  nameWithType: MediaPlayerImpl.Position
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Position*
-  name: Position
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Position_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Position
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Position
-  nameWithType: MediaPlayerImpl.Position
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Seek(System.Int32)
-  name: Seek(Int32)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Seek_System_Int32_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Seek(System.Int32)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Seek(System.Int32)
-  nameWithType: MediaPlayerImpl.Seek(Int32)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Seek*
-  name: Seek
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Seek_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Seek
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Seek
-  nameWithType: MediaPlayerImpl.Seek
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetDisplay(Tizen.Wearable.CircularUI.Forms.IVideoOutput)
-  name: SetDisplay(IVideoOutput)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_SetDisplay_Tizen_Wearable_CircularUI_Forms_IVideoOutput_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetDisplay(Tizen.Wearable.CircularUI.Forms.IVideoOutput)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetDisplay(Tizen.Wearable.CircularUI.Forms.IVideoOutput)
-  nameWithType: MediaPlayerImpl.SetDisplay(IVideoOutput)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetDisplay*
-  name: SetDisplay
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_SetDisplay_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetDisplay
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetDisplay
-  nameWithType: MediaPlayerImpl.SetDisplay
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetSource(Tizen.Wearable.CircularUI.Forms.MediaSource)
-  name: SetSource(MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_SetSource_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetSource(Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetSource(Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: MediaPlayerImpl.SetSource(MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetSource*
-  name: SetSource
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_SetSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetSource
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.SetSource
-  nameWithType: MediaPlayerImpl.SetSource
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Start
-  name: Start()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Start
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Start
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Start()
-  nameWithType: MediaPlayerImpl.Start()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Start*
-  name: Start
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Start_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Start
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Start
-  nameWithType: MediaPlayerImpl.Start
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Stop
-  name: Stop()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Stop
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Stop
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Stop()
-  nameWithType: MediaPlayerImpl.Stop()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Stop*
-  name: Stop
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Stop_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Stop
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Stop
-  nameWithType: MediaPlayerImpl.Stop
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UpdateStreamInfo
-  name: UpdateStreamInfo
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_UpdateStreamInfo
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UpdateStreamInfo
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UpdateStreamInfo
-  nameWithType: MediaPlayerImpl.UpdateStreamInfo
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UsesEmbeddingControls
-  name: UsesEmbeddingControls
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_UsesEmbeddingControls
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UsesEmbeddingControls
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UsesEmbeddingControls
-  nameWithType: MediaPlayerImpl.UsesEmbeddingControls
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UsesEmbeddingControls*
-  name: UsesEmbeddingControls
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_UsesEmbeddingControls_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UsesEmbeddingControls
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.UsesEmbeddingControls
-  nameWithType: MediaPlayerImpl.UsesEmbeddingControls
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Volume
-  name: Volume
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Volume
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Volume
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Volume
-  nameWithType: MediaPlayerImpl.Volume
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Volume*
-  name: Volume
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_Volume_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Volume
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.Volume
-  nameWithType: MediaPlayerImpl.Volume
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions
-  name: MultimediaConvertExtensions
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions
-  nameWithType: MultimediaConvertExtensions
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
-  name: ToMultimedia(ElmSharp.Rect)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html#Tizen_Wearable_CircularUI_Forms_Renderer_MultimediaConvertExtensions_ToMultimedia_ElmSharp_Rect_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
-  nameWithType: MultimediaConvertExtensions.ToMultimedia(ElmSharp.Rect)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia*
-  name: ToMultimedia
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html#Tizen_Wearable_CircularUI_Forms_Renderer_MultimediaConvertExtensions_ToMultimedia_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimedia
-  nameWithType: MultimediaConvertExtensions.ToMultimedia
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimeida(Tizen.Wearable.CircularUI.Forms.DisplayAspectMode)
-  name: ToMultimeida(DisplayAspectMode)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html#Tizen_Wearable_CircularUI_Forms_Renderer_MultimediaConvertExtensions_ToMultimeida_Tizen_Wearable_CircularUI_Forms_DisplayAspectMode_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimeida(Tizen.Wearable.CircularUI.Forms.DisplayAspectMode)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimeida(Tizen.Wearable.CircularUI.Forms.DisplayAspectMode)
-  nameWithType: MultimediaConvertExtensions.ToMultimeida(DisplayAspectMode)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimeida*
-  name: ToMultimeida
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.html#Tizen_Wearable_CircularUI_Forms_Renderer_MultimediaConvertExtensions_ToMultimeida_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimeida
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MultimediaConvertExtensions.ToMultimeida
-  nameWithType: MultimediaConvertExtensions.ToMultimeida
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView
+  nameWithType: MediaPlayerImpl.GetEmbeddingControlView
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer
   name: NavigationDrawer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html
@@ -6776,25 +5870,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation.Title
   nameWithType: TwoButtonPopupImplementation.Title
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler
-  name: UriMediaSourceHandler
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler
-  nameWithType: UriMediaSourceHandler
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  name: SetSource(Player, MediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_UriMediaSourceHandler_SetSource_Player_Tizen_Wearable_CircularUI_Forms_MediaSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Player,Tizen.Wearable.CircularUI.Forms.MediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource(Player, Tizen.Wearable.CircularUI.Forms.MediaSource)
-  nameWithType: UriMediaSourceHandler.SetSource(Player, MediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource*
-  name: SetSource
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.html#Tizen_Wearable_CircularUI_Forms_Renderer_UriMediaSourceHandler_SetSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.UriMediaSourceHandler.SetSource
-  nameWithType: UriMediaSourceHandler.SetSource
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
   name: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.html
@@ -7378,103 +6453,6 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.TitleProperty
   fullName: Tizen.Wearable.CircularUI.Forms.TwoButtonPopup.TitleProperty
   nameWithType: TwoButtonPopup.TitleProperty
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource
-  name: UriMediaSource
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.UriMediaSource
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource
-  nameWithType: UriMediaSource
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged(System.String)
-  name: OnPropertyChanged(String)
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_OnPropertyChanged_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged(System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged(System.String)
-  nameWithType: UriMediaSource.OnPropertyChanged(String)
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged*
-  name: OnPropertyChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_OnPropertyChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged
-  nameWithType: UriMediaSource.OnPropertyChanged
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit(System.Uri)~Tizen.Wearable.CircularUI.Forms.UriMediaSource
-  name: Implicit(Uri to UriMediaSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_System_Uri__Tizen_Wearable_CircularUI_Forms_UriMediaSource
-  commentId: M:Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit(System.Uri)~Tizen.Wearable.CircularUI.Forms.UriMediaSource
-  name.vb: Widening(Uri to UriMediaSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Implicit(System.Uri to Tizen.Wearable.CircularUI.Forms.UriMediaSource)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Widening(System.Uri to Tizen.Wearable.CircularUI.Forms.UriMediaSource)
-  nameWithType: UriMediaSource.Implicit(Uri to UriMediaSource)
-  nameWithType.vb: UriMediaSource.Widening(Uri to UriMediaSource)
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit(Tizen.Wearable.CircularUI.Forms.UriMediaSource)~System.String
-  name: Implicit(UriMediaSource to String)
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_Tizen_Wearable_CircularUI_Forms_UriMediaSource__System_String
-  commentId: M:Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit(Tizen.Wearable.CircularUI.Forms.UriMediaSource)~System.String
-  name.vb: Widening(UriMediaSource to String)
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Implicit(Tizen.Wearable.CircularUI.Forms.UriMediaSource to System.String)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Widening(Tizen.Wearable.CircularUI.Forms.UriMediaSource to System.String)
-  nameWithType: UriMediaSource.Implicit(UriMediaSource to String)
-  nameWithType.vb: UriMediaSource.Widening(UriMediaSource to String)
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit*
-  name: Implicit
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Implicit
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Widening
-  nameWithType: UriMediaSource.Implicit
-  nameWithType.vb: UriMediaSource.Widening
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString
-  name: ToString()
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_ToString
-  commentId: M:Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString()
-  nameWithType: UriMediaSource.ToString()
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString*
-  name: ToString
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_ToString_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString
-  nameWithType: UriMediaSource.ToString
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri
-  name: Uri
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_Uri
-  commentId: P:Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri
-  nameWithType: UriMediaSource.Uri
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri*
-  name: Uri
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_Uri_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri
-  nameWithType: UriMediaSource.Uri
-- uid: Tizen.Wearable.CircularUI.Forms.UriMediaSource.UriProperty
-  name: UriProperty
-  href: api/Tizen.Wearable.CircularUI.Forms.UriMediaSource.html#Tizen_Wearable_CircularUI_Forms_UriMediaSource_UriProperty
-  commentId: F:Tizen.Wearable.CircularUI.Forms.UriMediaSource.UriProperty
-  fullName: Tizen.Wearable.CircularUI.Forms.UriMediaSource.UriProperty
-  nameWithType: UriMediaSource.UriProperty
-- uid: Tizen.Wearable.CircularUI.Forms.VideoOuputType
-  name: VideoOuputType
-  href: api/Tizen.Wearable.CircularUI.Forms.VideoOuputType.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.VideoOuputType
-  fullName: Tizen.Wearable.CircularUI.Forms.VideoOuputType
-  nameWithType: VideoOuputType
-- uid: Tizen.Wearable.CircularUI.Forms.VideoOuputType.Buffer
-  name: Buffer
-  href: api/Tizen.Wearable.CircularUI.Forms.VideoOuputType.html#Tizen_Wearable_CircularUI_Forms_VideoOuputType_Buffer
-  commentId: F:Tizen.Wearable.CircularUI.Forms.VideoOuputType.Buffer
-  fullName: Tizen.Wearable.CircularUI.Forms.VideoOuputType.Buffer
-  nameWithType: VideoOuputType.Buffer
-- uid: Tizen.Wearable.CircularUI.Forms.VideoOuputType.Overlay
-  name: Overlay
-  href: api/Tizen.Wearable.CircularUI.Forms.VideoOuputType.html#Tizen_Wearable_CircularUI_Forms_VideoOuputType_Overlay
-  commentId: F:Tizen.Wearable.CircularUI.Forms.VideoOuputType.Overlay
-  fullName: Tizen.Wearable.CircularUI.Forms.VideoOuputType.Overlay
-  nameWithType: VideoOuputType.Overlay
 - uid: Tizen.Wearable.CircularUI.Forms.ZoomControlPosition
   name: ZoomControlPosition
   href: api/Tizen.Wearable.CircularUI.Forms.ZoomControlPosition.html
@@ -7557,23 +6535,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged
   nameWithType: MediaViewRenderer.OnElementChanged
-- uid: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView
-  name: IMediaViewProvider.GetMediaView()
-  href: api/Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.html#Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView
-  commentId: M:Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView
-  name.vb: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView()
-  fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView()
-  nameWithType: MediaViewRenderer.IMediaViewProvider.GetMediaView()
-  nameWithType.vb: MediaViewRenderer.Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView()
-- uid: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView*
-  name: IMediaViewProvider.GetMediaView
-  href: api/Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.html#Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView
-  isSpec: "True"
-  name.vb: Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
-  fullName: Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
-  nameWithType: MediaViewRenderer.IMediaViewProvider.GetMediaView
-  nameWithType.vb: MediaViewRenderer.Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.GetMediaView
 - uid: UIComponents.Tizen.Wearable.Renderers
   name: UIComponents.Tizen.Wearable.Renderers
   href: api/UIComponents.Tizen.Wearable.Renderers.html
