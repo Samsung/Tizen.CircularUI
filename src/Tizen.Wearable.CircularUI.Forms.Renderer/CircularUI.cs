@@ -15,11 +15,11 @@
  */
 using System.ComponentModel;
 using System.Diagnostics;
-using ElmSharp;
 using Tizen.Applications;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using XApplication = Xamarin.Forms.Application;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -57,7 +57,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public static void Init(string apiKey)
         {
-
             if (!string.IsNullOrEmpty(apiKey))
             {
                 GoogleMaps.Init(apiKey);
@@ -66,7 +65,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 Debug.Assert(!string.IsNullOrEmpty(apiKey), "apiKey is null or empty!");
             }
-
             Init();
         }
 
@@ -86,8 +84,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 ThemeLoader.Initialize(resPath);
 
             Init(options.GoogleMapsAPIKey);
+        }
 
-        public static void AddAppPropertyChangedHandler(this Application application)
+        public static void AddAppPropertyChangedHandler(this XApplication application)
         {
             UpdateOverlayContent();
             application.PropertyChanged += AppOnPropertyChanged;
@@ -103,7 +102,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         static void UpdateOverlayContent()
         {
-            var renderer = Platform.GetOrCreateRenderer(Application.Current.On<Tizen>().GetOverlayContent());
+            var renderer = Platform.GetOrCreateRenderer(XApplication.Current.On<Tizen>().GetOverlayContent());
             (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
             var nativeView = renderer?.NativeView;
             XForms.BaseLayout.SetPartContent("elm.swallow.overlay", nativeView);
