@@ -231,6 +231,19 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector
   fullName: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector
   nameWithType: CircleDateTimeSelector
+- uid: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.CircleSurfaceProvider
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html#Tizen_Wearable_CircularUI_Forms_CircleDateTimeSelector_CircleSurfaceProvider
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.CircleSurfaceProvider
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.CircleSurfaceProvider
+  nameWithType: CircleDateTimeSelector.CircleSurfaceProvider
+- uid: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.CircleSurfaceProvider*
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html#Tizen_Wearable_CircularUI_Forms_CircleDateTimeSelector_CircleSurfaceProvider_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.CircleSurfaceProvider
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.CircleSurfaceProvider
+  nameWithType: CircleDateTimeSelector.CircleSurfaceProvider
 - uid: Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.DateTime
   name: DateTime
   href: api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html#Tizen_Wearable_CircularUI_Forms_CircleDateTimeSelector_DateTime
@@ -477,6 +490,19 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.CancelEffectProperty
   nameWithType: CircleListView.CancelEffectProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.CircleSurfaceProvider
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_CircleSurfaceProvider
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleListView.CircleSurfaceProvider
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.CircleSurfaceProvider
+  nameWithType: CircleListView.CircleSurfaceProvider
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.CircleSurfaceProvider*
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_CircleSurfaceProvider_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleListView.CircleSurfaceProvider
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.CircleSurfaceProvider
+  nameWithType: CircleListView.CircleSurfaceProvider
 - uid: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect(BindableObject)
   name: GetCancelEffect(BindableObject)
   href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_GetCancelEffect_BindableObject_
@@ -681,6 +707,19 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColorProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView.BarColorProperty
   nameWithType: CircleScrollView.BarColorProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleScrollView.CircleSurfaceProvider
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html#Tizen_Wearable_CircularUI_Forms_CircleScrollView_CircleSurfaceProvider
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleScrollView.CircleSurfaceProvider
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView.CircleSurfaceProvider
+  nameWithType: CircleScrollView.CircleSurfaceProvider
+- uid: Tizen.Wearable.CircularUI.Forms.CircleScrollView.CircleSurfaceProvider*
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html#Tizen_Wearable_CircularUI_Forms_CircleScrollView_CircleSurfaceProvider_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleScrollView.CircleSurfaceProvider
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleScrollView.CircleSurfaceProvider
+  nameWithType: CircleScrollView.CircleSurfaceProvider
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem
   name: CircleSliderSurfaceItem
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSliderSurfaceItem.html
@@ -801,6 +840,19 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.CircleStepper
   fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper
   nameWithType: CircleStepper
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.CircleSurfaceProvider
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_CircleSurfaceProvider
+  commentId: P:Tizen.Wearable.CircularUI.Forms.CircleStepper.CircleSurfaceProvider
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.CircleSurfaceProvider
+  nameWithType: CircleStepper.CircleSurfaceProvider
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.CircleSurfaceProvider*
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_CircleSurfaceProvider_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.CircleStepper.CircleSurfaceProvider
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.CircleSurfaceProvider
+  nameWithType: CircleStepper.CircleSurfaceProvider
 - uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.IsWrapEnabled
   name: IsWrapEnabled
   href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_IsWrapEnabled
@@ -2007,6 +2059,25 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update
   nameWithType: GoogleMapView.Update
+- uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer
+  name: ICircleSurfaceConsumer
+  href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer
+  fullName: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer
+  nameWithType: ICircleSurfaceConsumer
+- uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.CircleSurfaceProvider
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.html#Tizen_Wearable_CircularUI_Forms_ICircleSurfaceConsumer_CircleSurfaceProvider
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.CircleSurfaceProvider
+  fullName: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.CircleSurfaceProvider
+  nameWithType: ICircleSurfaceConsumer.CircleSurfaceProvider
+- uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.CircleSurfaceProvider*
+  name: CircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.html#Tizen_Wearable_CircularUI_Forms_ICircleSurfaceConsumer_CircleSurfaceProvider_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.CircleSurfaceProvider
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.CircleSurfaceProvider
+  nameWithType: ICircleSurfaceConsumer.CircleSurfaceProvider
 - uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceItem
   name: ICircleSurfaceItem
   href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceItem.html
@@ -2026,6 +2097,12 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceItem.IsVisible
   nameWithType: ICircleSurfaceItem.IsVisible
+- uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceProvider
+  name: ICircleSurfaceProvider
+  href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceProvider.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.ICircleSurfaceProvider
+  fullName: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceProvider
+  nameWithType: ICircleSurfaceProvider
 - uid: Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController
   name: IGoogleMapViewController
   href: api/Tizen.Wearable.CircularUI.Forms.IGoogleMapViewController.html
