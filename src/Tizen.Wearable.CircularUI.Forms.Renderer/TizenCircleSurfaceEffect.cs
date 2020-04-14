@@ -23,6 +23,7 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 
 [assembly: ExportEffect(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect), "CircleSurfaceEffect")]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
@@ -151,7 +152,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (focusable is IRotaryEventReceiver)
             {
                 _rotaryReceiver = focusable as IRotaryEventReceiver;
-                RotaryEventManager.Rotated += OnRotaryEventChanged;
+                ERotaryEventManager.Rotated += OnRotaryEventChanged;
             }
             else if (focusable is IRotaryFocusable)
             {
@@ -169,7 +170,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (focusable is IRotaryEventReceiver)
             {
                 _rotaryReceiver = null;
-                RotaryEventManager.Rotated -= OnRotaryEventChanged;
+                ERotaryEventManager.Rotated -= OnRotaryEventChanged;
             }
             else if (focusable is IRotaryFocusable)
             {
