@@ -2113,6 +2113,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.FlatViewCell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.FlatViewCell.html",
+          "hash": "y9BZHTYuh5pbaS3+VpeO5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.yml",
       "output": {
         ".html": {
@@ -2509,6 +2521,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.html",
+          "hash": "oIaGDqAnfwRq7+O3y/3UFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.yml",
       "output": {
         ".html": {
@@ -2682,6 +2706,18 @@
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.html",
           "hash": "Dz8Hawt9dXpaM3RKHt9d+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.html",
+          "hash": "v8FU9hsIAjkzsy2TQdgdSg=="
         }
       },
       "is_incremental": false,
@@ -2885,7 +2921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "rNhMz2/uh7+08DP0sgQ83Q=="
+          "hash": "KFP1cFUP90a5ZP0MvByTxQ=="
         }
       },
       "is_incremental": false,
@@ -2910,6 +2946,18 @@
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.RotaryEventHandler.html",
           "hash": "Z2rWgdPxcXm+cCexIiccEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.RotaryEventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.RotaryEventManager.html",
+          "hash": "kQ9KJttaRVBa4HVyHx+/BQ=="
         }
       },
       "is_incremental": false,
@@ -2981,7 +3029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "CcUrNkarT+b26MESWAdg9Q=="
+          "hash": "dKCTYfX5mm7NkoUKGcsYdA=="
         }
       },
       "is_incremental": false,
@@ -3041,7 +3089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "frXlOsoLX+6WfAc0FzjGbg=="
+          "hash": "IZSt24NDDIadwKoRSp8dbA=="
         }
       },
       "is_incremental": false,
@@ -3078,13 +3126,6 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -3094,7 +3135,14 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 99,
+          "total_file_count": 103,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

@@ -1784,6 +1784,12 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.DateTimeType.Time
   fullName: Tizen.Wearable.CircularUI.Forms.DateTimeType.Time
   nameWithType: DateTimeType.Time
+- uid: Tizen.Wearable.CircularUI.Forms.FlatViewCell
+  name: FlatViewCell
+  href: api/Tizen.Wearable.CircularUI.Forms.FlatViewCell.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.FlatViewCell
+  fullName: Tizen.Wearable.CircularUI.Forms.FlatViewCell
+  nameWithType: FlatViewCell
 - uid: Tizen.Wearable.CircularUI.Forms.GoogleMapOption
   name: GoogleMapOption
   href: api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.html
@@ -4131,6 +4137,25 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.EmbeddingControls2
   nameWithType: EmbeddingControls2.EmbeddingControls2
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer
+  name: FlatViewCellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer
+  nameWithType: FlatViewCellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.#ctor
+  name: FlatViewCellRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_FlatViewCellRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.FlatViewCellRenderer()
+  nameWithType: FlatViewCellRenderer.FlatViewCellRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.#ctor*
+  name: FlatViewCellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_FlatViewCellRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.FlatViewCellRenderer
+  nameWithType: FlatViewCellRenderer.FlatViewCellRenderer
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI
   name: FormsCircularUI
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html
@@ -5057,6 +5082,18 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioRenderer.OnElementChanged
   nameWithType: RadioRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService
+  name: RotaryService
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService
+  nameWithType: RotaryService
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.Rotated
+  name: Rotated
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.html#Tizen_Wearable_CircularUI_Forms_Renderer_RotaryService_Rotated
+  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.Rotated
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.Rotated
+  nameWithType: RotaryService.Rotated
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer
   name: ShellContentRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html
@@ -6232,6 +6269,18 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.RotaryEventHandler
   fullName: Tizen.Wearable.CircularUI.Forms.RotaryEventHandler
   nameWithType: RotaryEventHandler
+- uid: Tizen.Wearable.CircularUI.Forms.RotaryEventManager
+  name: RotaryEventManager
+  href: api/Tizen.Wearable.CircularUI.Forms.RotaryEventManager.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.RotaryEventManager
+  fullName: Tizen.Wearable.CircularUI.Forms.RotaryEventManager
+  nameWithType: RotaryEventManager
+- uid: Tizen.Wearable.CircularUI.Forms.RotaryEventManager.Rotated
+  name: Rotated
+  href: api/Tizen.Wearable.CircularUI.Forms.RotaryEventManager.html#Tizen_Wearable_CircularUI_Forms_RotaryEventManager_Rotated
+  commentId: E:Tizen.Wearable.CircularUI.Forms.RotaryEventManager.Rotated
+  fullName: Tizen.Wearable.CircularUI.Forms.RotaryEventManager.Rotated
+  nameWithType: RotaryEventManager.Rotated
 - uid: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs
   name: SelectedEventArgs
   href: api/Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.html
