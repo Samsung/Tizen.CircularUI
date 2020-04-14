@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Tizen.Wearable.CircularUI.Chart</id>
+    <version>$version$</version>
+    <authors>Samsung Electronics</authors>
+    <owners>Samsung Electronics</owners>
+    <tags>xamarin forms xamarinforms xamarin.forms circular circularui wearable gear tizen chart</tags>
+    <licenseUrl>http://floralicense.org/license/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/Samsung/Tizen.CircularUI/master/assets/circularui_rgb_64_64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description> Xamarin forms UI components optimized for round screen and bezel like Samsung gear products </description>
+    <projectUrl>https://github.com/Samsung/Tizen.CircularUI</projectUrl>
+    <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="Xamarin.Forms" version="4.6.0.494-pre2" />
+        <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre4" />
+        <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.2-preview.45" />
+      </group>
+      <group targetFramework="tizen40">
+        <dependency id="Xamarin.Forms" version="4.6.0.494-pre2" />
+        <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre4" />
+        <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.2-preview.45" />
+        <dependency id="Tizen.NET" version="4.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="src\Tizen.Wearable.CircularUI.Chart.Forms\bin\$configuration$\netstandard2.0\Tizen.Wearable.CircularUI.Chart.Forms.dll" target="lib\netstandard2.0" />
+    <file src="src\Tizen.Wearable.CircularUI.Chart.Forms\bin\$configuration$\netstandard2.0\Tizen.Wearable.CircularUI.Chart.Forms.pdb" target="lib\netstandard2.0" />
+    <file src="src\Tizen.Wearable.CircularUI.Chart.Forms.Renderer\bin\$configuration$\tizen40\Tizen.Wearable.CircularUI.Chart.Forms.dll" target="lib\tizen40" />
+    <file src="src\Tizen.Wearable.CircularUI.Chart.Forms.Renderer\bin\$configuration$\tizen40\Tizen.Wearable.CircularUI.Chart.Forms.pdb" target="lib\tizen40" />
+    <file src="src\Tizen.Wearable.CircularUI.Chart.Forms.Renderer\bin\$configuration$\tizen40\Tizen.Wearable.CircularUI.Chart.Forms.Renderer.dll" target="lib\tizen40" />
+    <file src="src\Tizen.Wearable.CircularUI.Chart.Forms.Renderer\bin\$configuration$\tizen40\Tizen.Wearable.CircularUI.Chart.Forms.Renderer.pdb" target="lib\tizen40" />
+  </files>
+</package>
