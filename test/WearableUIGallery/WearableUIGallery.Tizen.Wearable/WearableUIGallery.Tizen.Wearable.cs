@@ -15,6 +15,7 @@
  */
 
 using System;
+using Tizen.Wearable.CircularUI.Chart.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
 using Xamarin.Forms;
 
@@ -44,6 +45,7 @@ namespace WearableUIGallery.Tizen.Wearable
 
             Forms.Init(app);
             FormsCircularUI.Init(new InitOptions(app, APIKEY));
+            FormsCircularUIChart.Init();
 #if UITEST
             global::Tizen.Appium.TizenAppium.StartService();
 #endif
