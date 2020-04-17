@@ -3,7 +3,7 @@ using SkiaSharp.Views.Forms;
 using SkiaSharp;
 using Xamarin.Forms.Internals;
 
-namespace Tizen.Wearable.CircularUI.Chart.Forms
+namespace Tizen.Wearable.CircularUI.Forms
 {
     public class RadialProgress : SKCanvasView
     {
