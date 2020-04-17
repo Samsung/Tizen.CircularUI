@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             mc:Ignorable="d"
+             x:Class="WearableUIGallery.TC.TCRadialProgress">
+    <ContentPage.Content>
+        <AbsoluteLayout
+            VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0">
+            <controls:RadialProgress x:Name="Progress"
+                                  Thickness="40"
+                                  RadialBackgroundColor="#340914"
+                                  RadialStartColor="#ff1509"
+                                  RadialMiddleColor="#f8009e"
+                                  RadialEndColor="#f707e3"
+                                  TextColor="White"
+                                  HasLabel="True"
+                                  AbsoluteLayout.LayoutBounds="0.5, 0.5, 360, 360"
+                                  AbsoluteLayout.LayoutFlags="PositionProportional">
+                <controls:RadialProgress.TextFormat>
+                    <x:String>
+                        <![CDATA[{0:P0} Complete]]>
+                    </x:String>
+                </controls:RadialProgress.TextFormat>
+            </controls:RadialProgress>
+            <controls:RadialProgress x:Name="Progress2" HasLabel="False"
+                                  Thickness="40"
+                                  StartAngle="0"
+                                  StartStrokeCap="Butt"
+                                  EndStrokeCap="Round"
+                                  RadialBackgroundColor="#2c4204"
+                                  RadialStartColor="#aaff00"
+                                  RadialMiddleColor="#d8fe00"
+                                  RadialEndColor="#d8fe00"
+                                  AbsoluteLayout.LayoutBounds="0.5, 0.5, 276, 276"
+                                  AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+            <controls:RadialProgress x:Name="Progress3" HasLabel="False"
+                                  Thickness="40"
+                                  StartAngle="0"
+                                  RadialBackgroundColor="#112a2e"
+                                  RadialStartColor="#5bfeeb"
+                                  RadialMiddleColor="#65e9ed"
+                                  RadialEndColor="#6ae9f8"
+                                  AbsoluteLayout.LayoutBounds="0.5, 0.5, 192, 192"
+                                  AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

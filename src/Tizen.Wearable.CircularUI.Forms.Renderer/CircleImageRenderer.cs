@@ -22,6 +22,8 @@ using System.ComponentModel;
 using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
 using Xamarin.Forms;
+using TLog = Tizen.Log;
+using FormsCircularUI = Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI;
 
 [assembly: ExportRenderer(typeof(CircleImage), typeof(CircleImageRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers
@@ -94,7 +96,7 @@ namespace UIComponents.Tizen.Wearable.Renderers
                     }
                     else
                     {
-                        global::Tizen.Log.Error(FormsCircularUI.Tag, $"streamImage == null ");
+                        TLog.Error(FormsCircularUI.Tag, $"streamImage == null ");
                     }
                 }
             }
