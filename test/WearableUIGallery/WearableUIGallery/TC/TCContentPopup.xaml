@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WearableUIGallery.TC.TCContentPopupTest"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference myscroller}">
+    <ContentPage.Behaviors>
+        <w:CircleSurfaceEffectBehavior/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
+            <StackLayout Padding="0,50,0,50">
+                <Label
+                    x:Name="label1"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="ContentPopup test"
+                    VerticalOptions="Start" />
+                <Button
+                    AutomationId="dismisstest1"
+                    x:Name="button1"
+                    Clicked="OnContentPopupDismissBackKeyClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Dismiss test 1"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+                <Button
+                    AutomationId="dismisstest2"
+                    x:Name="button2"
+                    Clicked="OnContentPopupDismissButtonClicked"
+                    FontSize="Small"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Dismiss test 2"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300" />
+            </StackLayout>
+        </w:CircleScrollView>
+    </ContentPage.Content>
+</ContentPage>
