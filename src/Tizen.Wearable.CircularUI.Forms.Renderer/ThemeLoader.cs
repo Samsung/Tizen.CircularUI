@@ -15,6 +15,7 @@
  */
 using ElmSharp;
 using System.IO;
+using Circular = Tizen.Wearable.CircularUI.Forms.FormsCircularUI;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -40,7 +41,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (!IsInitialized)
             {
-                Log.Error(FormsCircularUI.Tag, $"ThemeLoader is not initialized properly");
+                Log.Error(Circular.Tag, $"ThemeLoader is not initialized properly");
                 return;
             }
             Elementary.AddThemeOverlay(Path.Combine(AppResourcePath, themeFilePath));

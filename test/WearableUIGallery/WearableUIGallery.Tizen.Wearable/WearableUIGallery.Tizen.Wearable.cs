@@ -16,7 +16,7 @@
 
 using System;
 using Tizen.Wearable.CircularUI.Chart.Forms;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 
 namespace WearableUIGallery.Tizen.Wearable

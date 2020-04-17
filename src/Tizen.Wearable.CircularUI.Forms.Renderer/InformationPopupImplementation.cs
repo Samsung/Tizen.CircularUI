@@ -18,6 +18,7 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using Circular = Tizen.Wearable.CircularUI.Forms.FormsCircularUI;
 
 [assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.InformationPopupImplementation))]
 
@@ -183,7 +184,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if(!XForms.IsInitialized)
             {
-                Log.Debug(FormsCircularUI.Tag, "Tizen Forms is not initialized");
+                Log.Debug(Circular.Tag, "Tizen Forms is not initialized");
                 return;
             }
 
@@ -259,7 +260,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 if (_buttonBgColor != Color.Default)
                 {
-                    Log.Debug(FormsCircularUI.Tag, $"InformationPopup set button background color:{_buttonBgColor.ToNative()}");
+                    Log.Debug(Circular.Tag, $"InformationPopup set button background color:{_buttonBgColor.ToNative()}");
                     _bottomButton.BackgroundColor = _buttonBgColor.ToNative();
                 }
             }
@@ -376,7 +377,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnDismissed(object sender, EventArgs e)
         {
-            Log.Debug(FormsCircularUI.Tag, $"OnDismissed called");
+            Log.Debug(Circular.Tag, $"OnDismissed called");
             Dispose();
         }
     }
