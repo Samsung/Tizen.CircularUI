@@ -1849,6 +1849,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Chart.Forms.FormsCircularUIChart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Chart.Forms.FormsCircularUIChart.html",
+          "hash": "Hq0G/xQ5z9wS45AeutJpew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Chart.Forms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Chart.Forms.html",
+          "hash": "ctDsTjoqC7JW3b16P2O9Hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.ActionButtonItem.yml",
       "output": {
         ".html": {
@@ -2125,6 +2149,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.FormsCircularUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.FormsCircularUI.html",
+          "hash": "2P/o/8yTOc8kDyrBoOEJyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.GoogleMapOption.yml",
       "output": {
         ".html": {
@@ -2257,6 +2293,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.InitOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.InitOptions.html",
+          "hash": "C71qk7Yp7M51HlrWZDHGAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.LatLng.yml",
       "output": {
         ".html": {
@@ -2334,6 +2382,30 @@
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.PositionOption.html",
           "hash": "wb+o7S4EflB5DzDt/Mwv4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.RadialProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.RadialProgress.html",
+          "hash": "QHhamFZd2Wc9mCDAtoM4yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.RadialProgressStrokeCap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.RadialProgressStrokeCap.html",
+          "hash": "3F7fhF1yhJnzlSsXpp2tCg=="
         }
       },
       "is_incremental": false,
@@ -2537,7 +2609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.html",
-          "hash": "d2jyUWuv+GLk57P9c8jlqw=="
+          "hash": "oYR9qmszTaUPphVN135Fmg=="
         }
       },
       "is_incremental": false,
@@ -2609,7 +2681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.html",
-          "hash": "uZ59qRpkcMi7fyzgWn/yJA=="
+          "hash": "wNKh90xH7Cg/nkYuc1L7eg=="
         }
       },
       "is_incremental": false,
@@ -3029,7 +3101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.html",
-          "hash": "dKCTYfX5mm7NkoUKGcsYdA=="
+          "hash": "RXJuTeh1DHjdPYXPAy3/Ug=="
         }
       },
       "is_incremental": false,
@@ -3089,7 +3161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "IZSt24NDDIadwKoRSp8dbA=="
+          "hash": "7bqxIi7Zs50HRVEM9GVSIg=="
         }
       },
       "is_incremental": false,
@@ -3119,6 +3191,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -3135,14 +3214,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 103,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 109,
           "skipped_file_count": 0
         }
       }
