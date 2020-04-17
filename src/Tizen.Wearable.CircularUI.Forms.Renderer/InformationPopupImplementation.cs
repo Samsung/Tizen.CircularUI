@@ -255,7 +255,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _bottomButton.Clicked += (s, e) =>
                 {
-                    ((IMenuItemController)BottomButton).Activate();
+                    ((IMenuItemController)BottomButton)?.Activate();
                 };
 
                 if (_buttonBgColor != Color.Default)
@@ -266,7 +266,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
-                _bottomButton.Unrealize();
+                _bottomButton?.Unrealize();
                 _bottomButton = null;
             }
 

@@ -259,7 +259,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _firstButton.Clicked += (s, e) =>
                 {
-                    ((IMenuItemController)FirstButton).Activate();
+                    ((IMenuItemController)FirstButton)?.Activate();
                 };
 
                 if (_firstButtonBgColor != Color.Default)
@@ -305,7 +305,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _secondButton.Clicked += (s, e) =>
                 {
-                    ((IMenuItemController)SecondButton).Activate();
+                    ((IMenuItemController)SecondButton)?.Activate();
                 };
 
                 if (_secondButtonBgColor != Color.Default)
