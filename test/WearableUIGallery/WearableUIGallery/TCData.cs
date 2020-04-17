@@ -185,6 +185,15 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "ListView", Class = typeof(TCCircleImageListView) },
                 }
             });
+            TCs.Add(new TCDescribe
+            {
+                Title = "Chart",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "RadialProgress", Class = typeof(TCRadialProgress) },
+                    new TCDescribe { Title = "RadialProgress2", Class = typeof(TCRadialProgress2) },
+                }
+            });
         }
     }
 }

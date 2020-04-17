@@ -1,7 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Tizen.Applications;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
+using Tizen.Wearable.CircularUI.Forms;
 using Tizen.Wearable.CircularUI.Forms.Renderer.Widget;
 
 namespace SimpleWidgetApp

@@ -16,7 +16,7 @@ namespace FlyoutExample
         {
             var app = new Program();
             Forms.Init(app);
-            global::Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI.Init();
+            Tizen.Wearable.CircularUI.Forms.FormsCircularUI.Init();
             app.Run(args);
         }
     }
