@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using Tizen.Applications;
+using Circular = Tizen.Wearable.CircularUI.Forms.FormsCircularUI;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer.Widget
 {
@@ -35,7 +36,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Widget
         public override void Exit()
         {
             // It is intended, disable to terminate.
-            Log.Debug(FormsCircularUI.Tag, "Exit() called!");
+            Log.Debug(Circular.Tag, "Exit() called!");
         }
     }
 }

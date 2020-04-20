@@ -26,6 +26,7 @@ using Xamarin.Forms.Platform.Tizen.Native;
 using TChromium = Tizen.WebView.Chromium;
 using TWebView = Tizen.WebView.WebView;
 using XForms = Xamarin.Forms.Forms;
+using Circular = Tizen.Wearable.CircularUI.Forms.FormsCircularUI;
 
 [assembly: ExportRenderer(typeof(GoogleMapView), typeof(GoogleMapViewRenderer))]
 
@@ -94,19 +95,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         private void OnLoadError(object sender, global::Tizen.WebView.SmartCallbackLoadErrorArgs e)
         {
             string url = e.Url;
-            Log.Error(FormsCircularUI.Tag, $"OnLoadError() url:{url}");
+            Log.Error(Circular.Tag, $"OnLoadError() url:{url}");
         }
 
         private void OnLoadStarted(object sender, EventArgs e)
         {
             string url = NativeWebView.Url;
-            Log.Debug(FormsCircularUI.Tag, "OnLoadStarted()");
+            Log.Debug(Circular.Tag, "OnLoadStarted()");
         }
 
         private void OnLoadFinished(object sender, EventArgs e)
         {
             string url = NativeWebView.Url;
-            Log.Debug(FormsCircularUI.Tag, "OnLoadFinished()");
+            Log.Debug(Circular.Tag, "OnLoadFinished()");
             NativeWebView.SetFocus(true);
         }
 
@@ -198,7 +199,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             int index = 1;
             if (_sb == null || _sb.Length == 0) return _sb;
 
-            Log.Debug(FormsCircularUI.Tag, $"Markers count:{Element.Markers.Count}");
+            Log.Debug(Circular.Tag, $"Markers count:{Element.Markers.Count}");
             foreach (var marker in Element.Markers)
             {
                 _sb.AppendLine();
@@ -224,7 +225,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            Log.Debug(FormsCircularUI.Tag, $"e.Action:{e.Action}");
+            Log.Debug(Circular.Tag, $"e.Action:{e.Action}");
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
@@ -241,7 +242,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         private void OnLoadMapRequested(object sender, EventArgs eventArgs)
         {
-            Log.Debug(FormsCircularUI.Tag, $"Load Requested");
+            Log.Debug(Circular.Tag, $"Load Requested");
             LoadMap();
         }
     }
