@@ -37,11 +37,11 @@ namespace UIComponents.Tizen.Wearable.Renderers
         {
             if (Control == null)
             {
-                _circleImage = new ElmSharp.EvasImage(XForms.BaseLayout);
+                _circleImage = new ElmSharp.EvasImage(XForms.NativeParent);
                 _circleImage.IsFilled = true;
                 GetClipImage();
 
-                var image = new FormsNative.Image(XForms.BaseLayout);
+                var image = new FormsNative.Image(XForms.NativeParent);
                 SetNativeControl(image);
                 Control.Resized += Control_Resized;
                 Control.Moved += Control_Moved;

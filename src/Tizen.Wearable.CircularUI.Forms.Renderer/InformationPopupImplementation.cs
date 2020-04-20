@@ -255,7 +255,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _bottomButton.Clicked += (s, e) =>
                 {
-                    ((IMenuItemController)BottomButton)?.Activate();
+                    (BottomButton as IMenuItemController)?.Activate();
                 };
 
                 if (_buttonBgColor != Color.Default)
