@@ -5,9 +5,9 @@ namespace Appium.UITests
     [TestFixture, Order(8)]
     public class ContextPopupBehavior : TestTemplate
     {
-        static string PositionTestName = "Position";
-        static string CommandParameterTestName = "CommandParameter";
-        static string AttachDettachTestName = "Attach/Detach/Visibility";
+        static string PositionTestName = "ContextPopupBehavior/Position";
+        static string CommandParameterTestName = "ContextPopupBehavior/CommandParameter";
+        static string AttachDettachTestName = "ContextPopupBehavior/Attach/Detach/Visibility";
 
         [Test]
         public void PositionTest()
@@ -17,24 +17,24 @@ namespace Appium.UITests
             var changeOptionBtnId = "changePositionOption";
             var changeOffsetBtnId = "changeOffset";
 
-            Driver.FindTC(PositionTestName);
+            Driver.RunTC(PositionTestName);
 
             var option1 = Driver.GetText(labelPostionElementId);
 
-            Driver.Click(changeOptionBtnId);
+            FindAndClick(changeOptionBtnId);
             Driver.Click(320, 180);  //click outside of ctx pop-up
 
             var option2 = Driver.GetText(labelPostionElementId);
             Assert.AreNotEqual(option1, option2);
 
-            Driver.Click(changeOptionBtnId);
+            FindAndClick(changeOptionBtnId);
             Driver.Click(320, 180);
             var expacted = "Relative";
             var result = Driver.GetText(labelPostionElementId);
             Assert.AreEqual(expacted, result);
 
             var offsetY1 = Driver.GetText(labelOffsetYElementId);
-            Driver.Click(changeOffsetBtnId);
+            FindAndClick(changeOffsetBtnId);
             Driver.Click(320, 180);
             var offsetY2 = Driver.GetText(labelOffsetYElementId);
             Assert.AreNotEqual(offsetY1, offsetY2);
@@ -46,11 +46,11 @@ namespace Appium.UITests
             var labelElementId = "label";
             var checkBtnId = "check";
 
-            Driver.FindTC(CommandParameterTestName);
+            Driver.RunTC(CommandParameterTestName);
 
             var result1 = Driver.GetText(labelElementId);
             Driver.Click(checkBtnId, 3000);
-            Driver.Click(checkBtnId);
+            FindAndClick(checkBtnId);
 
             var result2 = Driver.GetText(labelElementId);
             Assert.AreNotEqual(result1, result2);
@@ -63,17 +63,17 @@ namespace Appium.UITests
             var detachBtnId = "detach";
             var visibleBtnId = "visible";
 
-            Driver.FindTC(AttachDettachTestName);
+            Driver.RunTC(AttachDettachTestName);
 
-            Driver.Click(attachBtnId);
-            Driver.Click(visibleBtnId);
+            FindAndClick(attachBtnId);
+            FindAndClick(visibleBtnId);
 #if WATCH_DEVICE
             var image = "CtxPopup_AttachVisible.png";
             Driver.CheckScreenshot(image);
 #endif
             Driver.Click(180, 200);
-            Driver.Click(detachBtnId);
-            Driver.Click(visibleBtnId);
+            FindAndClick(detachBtnId);
+            FindAndClick(visibleBtnId);
 #if WATCH_DEVICE
             var image2 = "CtxPopup_DetachVisible.png";
             Driver.CheckScreenshot(image2);

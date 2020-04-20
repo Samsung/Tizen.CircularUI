@@ -5,19 +5,19 @@ namespace Appium.UITests
     [TestFixture, Order(1)]
     public class ListView : TestTemplate
     {
-        static string NoFishEyeHeaderTestName = "NoFishEyeHeaderList";
-        static string CircleListBehaviorTestName = "CircleListBehavior";
-        static string GroupListTestName = "GroupList";
-        static string CircleListViewTestName = "CircleListView";
-        static string ViewCellTestName = "ViewCell";
-        static string HeaderWithGroupTestName = "HeaderWithGroup";
-        static string HeaderWithoutGroupTestName = "HeaderWithoutGroup";
-        static string ChangeBarColorTestName = "ChangeBarColor";
+        static string NoFishEyeHeaderTestName = "ListView/NoFishEyeHeaderList";
+        static string CircleListBehaviorTestName = "ListView/CircleListBehavior";
+        static string GroupListTestName = "ListView/GroupList";
+        static string CircleListViewTestName = "ListView/CircleListView";
+        static string ViewCellTestName = "ListView/ViewCell";
+        static string HeaderWithGroupTestName = "ListView/HeaderWithGroup";
+        static string HeaderWithoutGroupTestName = "ListView/HeaderWithoutGroup";
+        static string ChangeBarColorTestName = "ListView/ChangeBarColor";
 
         [Test]
         public void NoFishEyeHeaderTest()
         {
-            Driver.FindTC(NoFishEyeHeaderTestName);
+            Driver.RunTC(NoFishEyeHeaderTestName);
 
 #if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
@@ -32,9 +32,12 @@ namespace Appium.UITests
         [Test]
         public void CircleListBehaviorTest()
         {
-            Driver.FindTC(CircleListBehaviorTestName);
+            Driver.RunTC(CircleListBehaviorTestName);
 
+            Driver.Flick(0, SpeedY * 2, 3000);
             Driver.Click(30, 180);
+
+            Driver.Flick(0, SpeedY * 2, 3000);
             Driver.Flick(0, SpeedY * 2, 3000);
 
             var text = Driver.GetText("TestItem4");
@@ -50,7 +53,7 @@ namespace Appium.UITests
         [Test]
         public void GroupListTest()
         {
-            Driver.FindTC(GroupListTestName);
+            Driver.RunTC(GroupListTestName);
 
 #if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
@@ -65,7 +68,7 @@ namespace Appium.UITests
         [Test]
         public void CircleListViewTest()
         {
-            Driver.FindTC(CircleListViewTestName);
+            Driver.RunTC(CircleListViewTestName);
 
 #if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
@@ -81,7 +84,7 @@ namespace Appium.UITests
         [Test]
         public void ViewCellTest()
         {
-            Driver.FindTC(ViewCellTestName);
+            Driver.RunTC(ViewCellTestName);
 
 #if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
@@ -96,7 +99,7 @@ namespace Appium.UITests
         [Test]
         public void HeaderWithGroupTest()
         {
-            Driver.FindTC(HeaderWithGroupTestName);
+            Driver.RunTC(HeaderWithGroupTestName);
 
 #if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
@@ -111,7 +114,7 @@ namespace Appium.UITests
         [Test]
         public void HeaderWithoutGroupTest()
         {
-            Driver.FindTC(HeaderWithoutGroupTestName);
+            Driver.RunTC(HeaderWithoutGroupTestName);
 
 #if WATCH_DEVICE
             System.Threading.Thread.Sleep(3000);
@@ -126,7 +129,7 @@ namespace Appium.UITests
         [Test]
         public void ChangeBarColorTest()
         {
-            Driver.FindTC(ChangeBarColorTestName);
+            Driver.RunTC(ChangeBarColorTestName);
             var listId = "list";
 
             var result = Driver.GetAttribute<string>(listId, "BarColor");

@@ -5,20 +5,20 @@ namespace Appium.UITests
     [TestFixture, Order(11)]
     public class IndexPage : TestTemplate
     {
-        static string AddMoveTestName = "Add/Move";
-        static string TemplateTestName = "Template";
+        static string AddMoveTestName = "IndexPage/Add/Move";
+        static string TemplateTestName = "IndexPage/Template";
 
         [Test]
         public void AddMoveTest()
         {
             var speedX = SpeedX * 2;
-            Driver.FindTC(AddMoveTestName);
+            Driver.RunTC(AddMoveTestName);
 
             Driver.Flick(speedX, 0);
             Driver.Flick(speedX, 0);
             Driver.Flick(speedX, 0);
             Driver.Flick(speedX, 0);
-            Driver.Click("addButton");
+            FindAndClick("addButton");
             Driver.Flick(speedX, 0);
             var result = Driver.GetText("label0");
             var expect = "Added Page(0)";
@@ -29,7 +29,7 @@ namespace Appium.UITests
         public void TemplateTest()
         {
             var speedX = SpeedX * 2;
-            Driver.FindTC(TemplateTestName);
+            Driver.RunTC(TemplateTestName);
 
             Driver.Flick(speedX, 0);
             Driver.Flick(speedX, 0);

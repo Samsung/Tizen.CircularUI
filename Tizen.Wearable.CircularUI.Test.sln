@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xaminals", "sample\ShellExa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xaminals.Tizen", "sample\ShellExamples\Xaminals\Xaminals.Tizen\Xaminals.Tizen.csproj", "{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appium.CircularUI.Tests", "test\Appium.CircularUI.Tests\Appium.CircularUI.Tests.csproj", "{0E0F2148-45F2-43F7-99E6-08977C30570A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0F2148-45F2-43F7-99E6-08977C30570A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0F2148-45F2-43F7-99E6-08977C30570A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0F2148-45F2-43F7-99E6-08977C30570A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0F2148-45F2-43F7-99E6-08977C30570A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{C65D5BE2-4E42-44B9-B0F7-3F736F2EF1D7} = {36C35271-6B8F-412E-B87F-5C7F41D60A60}
 		{BC74C370-A520-4116-B57E-18B44BE04F1E} = {318DE803-3D8C-44F9-8C27-4DED4504DC94}
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD} = {318DE803-3D8C-44F9-8C27-4DED4504DC94}
+		{0E0F2148-45F2-43F7-99E6-08977C30570A} = {9F1AB8B9-03B0-40A7-AB49-522B741F570A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3736C77A-08ED-442D-ADE1-5779254463ED}

@@ -1,17 +1,17 @@
-using System;
-using System.IO;
-using System.Drawing;
-using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Appium.Tizen;
-using OpenQA.Selenium;
-
-using OpenQA.Selenium.Appium.Android;
 using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.MultiTouch;
+using OpenQA.Selenium.Appium.Tizen;
+using OpenQA.Selenium.Remote;
+using System;
+using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Diagnostics;
 
 namespace Appium.UITests
 {
@@ -24,7 +24,7 @@ namespace Appium.UITests
         RemoteTouchScreen _touchScreen;
         static bool createFolder;
 
-        public int FlickSpeedX{ get; private set; }
+        public int FlickSpeedX { get; private set; }
         public int FlickSpeedY { get; private set; }
 
         public static UITestDriver Instance
@@ -68,7 +68,7 @@ namespace Appium.UITests
             option.AddAdditionalCapability("platformName", Config.PLATFORM);
             option.AddAdditionalCapability("deviceName", Config.DEVICE_NAME);
             option.AddAdditionalCapability("appPackage", Config.APP_PACKAGE_NAME);
-            option.AddAdditionalCapability("app", Config.APP_NAME);
+            //option.AddAdditionalCapability("app", Config.APP_NAME);
             _driver = new TizenDriver<AppiumWebElement>(new Uri(Config.APPIUM_SERVER_URI), option);
             _touchScreen = new RemoteTouchScreen(_driver);
             createFolder = false;
@@ -95,74 +95,13 @@ namespace Appium.UITests
             System.Threading.Thread.Sleep(1000);
         }
 
-        public void GoHomePage()
+        public void RunTC(string tcName)
         {
-            var currentPage = GetAttribute<string>("MainPage", "CurrentPage");
-            while (currentPage.IndexOf("TCListPage") == -1)
-            {
-                _driver.Navigate().Back();
-                System.Threading.Thread.Sleep(1000);
-                currentPage = GetAttribute<string>("MainPage", "CurrentPage");
-            }
-
-            System.Threading.Thread.Sleep(1000);
+            var element = _driver.FindElementByAccessibilityId("TCNameEntry");
+            (element as TizenElement)?.SetAttribute("Text", tcName);
+            Click("Go");
         }
 
-        public void FindTC(string testName)
-        {
-            int flickCount = 0;
-            bool isFound;
-            bool isForward = true;
-
-            while (true) {
-                ReadOnlyCollection<AppiumWebElement> resultByAccessibilityId = _driver.FindElementsByAccessibilityId(testName);
-                if (resultByAccessibilityId.Count == 0)
-                {
-                    Flick(0, isForward ? FlickSpeedY : -FlickSpeedY);
-                    flickCount++;
-
-                    if (isForward == false && flickCount >= 20)
-                    {
-                        isFound = false;
-                        break;
-                    }
-                    else if(flickCount >= 20)
-                    {
-                        flickCount = 0;
-                        isForward = false;
-                    }
-                }
-                else
-                {
-                    var element = _driver.FindElementByAccessibilityId(testName) as TizenElement;
-                    if (element != null)
-                    {
-                        element.Click();
-                        System.Threading.Thread.Sleep(1000);
-                        isFound = true;
-#if EMUL
-                        //Emulator behavior is different to real watch target.
-                        //In first click move to center. the second click goes to item content.
-                        ReadOnlyCollection<AppiumWebElement> resultByAccessibilityId2 = _driver.FindElementsByAccessibilityId(testName);
-                        if (resultByAccessibilityId2.Count == 0)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            element.Click();
-                            System.Threading.Thread.Sleep(1000);
-                            break;
-                        }
-#else
-                        break;
-#endif
-                    }
-                }
-            }
-
-            Assert.True(isFound, testName + " Test should be found, but isFound is " + isFound);
-        }
         public void Flick(int speedX, int speedY)
         {
             Flick(speedX, speedY, DelayTime);
@@ -214,7 +153,7 @@ namespace Appium.UITests
             _touchScreen.Up(endX, endX);
         }
 
-        public void SetText(string automationId, string text)
+        public void InputText(string automationId, string text)
         {
             SetText(automationId, text, DelayTime);
         }
@@ -263,7 +202,7 @@ namespace Appium.UITests
             {
                 element = _driver.FindElementByAccessibilityId(automationId);
             }
-            catch(Exception ee)
+            catch (Exception ee)
             {
                 return string.Format("Exception {0} ", ee);
             }
@@ -275,6 +214,12 @@ namespace Appium.UITests
         {
             var element = _driver.FindElementByAccessibilityId(automationId);
             return element.Size;
+        }
+
+        public AppiumWebElement GetElement(string automationId)
+        {
+            var element = _driver.FindElementByAccessibilityId(automationId);
+            return element;
         }
 
         public void SetAttribute(string automationId, string attribute, object value)
