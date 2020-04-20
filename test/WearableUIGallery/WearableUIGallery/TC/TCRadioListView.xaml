@@ -31,7 +31,9 @@
                                 IsSelected="{Binding IsSelected, Mode=TwoWay}"
                                 Selected="OnSelected"
                                 VerticalOptions="Center"
-                                Value="{Binding Value}" />
+                                Value="{Binding Value}"
+                                WidthRequest="80"
+                                HeightRequest="80" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

@@ -17,6 +17,10 @@
     <Folder Include="lib\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Tizen.Appium.Forms" Version="1.0.0-preview3" />
+  </ItemGroup>
+
   <!-- If solution already has PCL project, will reference -->
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj" />
@@ -28,10 +32,4 @@
       <TizenTpkSubDir>res</TizenTpkSubDir>
     </TizenTpkUserIncludeFiles>
   </ItemGroup>
-
-  <!-- Include Nuget Package for Tizen Project building -->
-  <ItemGroup>
-    <PackageReference Include="Tizen.Appium.Forms" Version="1.0.0-preview2" />
-  </ItemGroup>
-
 </Project>

@@ -13,11 +13,6 @@ namespace WearableUIGallery.TC
             InitializeComponent ();
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
-
         void Button_Clicked(object sender, EventArgs e)
         {
             Shell.Current.FlyoutIcon = null;

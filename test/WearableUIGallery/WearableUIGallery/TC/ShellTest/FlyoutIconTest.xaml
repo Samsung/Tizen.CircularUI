@@ -5,7 +5,7 @@
              x:Class="WearableUIGallery.TC.FlyoutIconTest">
     <w:CircleScrollView>
         <StackLayout>
-            <Button AutomationId="GoToMain2" Text="GoToMain" Clicked="Button_Clicked_4" />
+            <Button AutomationId="GoToMain" Text="GoToMain" Clicked="Button_Clicked_4" />
             <Button AutomationId="default" Text="default" Clicked="Button_Clicked"/>
             <Button AutomationId="icon1" Text="icon1" Clicked="Button_Clicked_1"/>
             <Button AutomationId="icon2" Text="icon2" Clicked="Button_Clicked_2"/>

@@ -15,7 +15,13 @@ namespace WearableUIGallery
 
         void Button_Clicked(object sender, System.EventArgs e)
         {
-            Shell.Current.GoToAsync(TCName.Text);
+            Shell.Current.GoToAsync(TCNameEntry.Text);
         }
+
+        void Switch_Toggled(object sender, ToggledEventArgs e)
+        {
+            Shell.Current.FlyoutBehavior = e.Value ? FlyoutBehavior.Flyout : FlyoutBehavior.Disabled;
+        }
+
     }
 }
