@@ -6,12 +6,12 @@ using Tizen.Wearable.CircularUI.Forms;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FlyoutBackgroundColorTest : CirclePage
-	{
-		public FlyoutBackgroundColorTest ()
-		{
-			InitializeComponent ();
-		}
+    public partial class FlyoutBackgroundColorTest : CirclePage
+    {
+        public FlyoutBackgroundColorTest ()
+        {
+            InitializeComponent ();
+        }
 
         void Button_Clicked(object sender, EventArgs e)
         {

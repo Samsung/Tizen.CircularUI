@@ -8,6 +8,7 @@ namespace Appium.UITests
         [Test]
         public void CircleStackLayoutTest()
         {
+            Driver.RunTC(this.GetType().Name);
 #if EMUL_40
             var speedX = SpeedX * 3;
 #else

@@ -5,16 +5,16 @@ namespace Appium.UITests
     [TestFixture, Order(16)]
     public class Radio : TestTemplate
     {
-        static string StackLayoutTestName = "StackLayout";
-        static string ListViewTestName = "ListView";
+        static string StackLayoutTestName = "Radio/StackLayout";
+        static string ListViewTestName = "Radio/ListView";
 
         [Test]
         public void StackLayoutTest()
         {
-            Driver.FindTC(StackLayoutTestName);
+            Driver.RunTC(StackLayoutTestName);
 
             Driver.Click("radioValueVibrator", 3000);
-            Driver.Click("radioValueMute");
+            FindAndClick("radioValueMute");
 
             var result = Driver.GetText("labelMode");
             var expect = "SoundMode:Mute";
@@ -22,36 +22,41 @@ namespace Appium.UITests
 
             Driver.Flick(0, SpeedY);
             Driver.Flick(0, SpeedY);
-            Driver.Click("radioValueStrong");
+            FindAndClick("radioValueStrong");
 
             var result2 = Driver.GetText("labelStrength");
             var expect2 = "Vib strength:Strong";
             Assert.AreEqual(expect2, result2);
 
             var resultColor = Driver.GetAttribute<string>("radioValueStrong", "Color");
+#if EMUL_50
+            var expectColor = "[Color: A=1, R=0, G=0, B=1, Hue=0.6666666865348816, Saturation=1, Luminosity=0.5]";
+#else
             var expectColor = "[Color: A=1, R=0, G=0, B=1, Hue=0.666666686534882, Saturation=1, Luminosity=0.5]";
+#endif
             Assert.AreEqual(expectColor, resultColor);
+
         }
 
         [Test]
         public void ListViewTest()
         {
-            Driver.FindTC(ListViewTestName);
+            Driver.RunTC(ListViewTestName);
 
-            Driver.Click("NoOff");
+            FindAndClick("NoOff");
             Driver.Flick(0, SpeedY);
-#if EMUL_40
-            Driver.Click("30s");
+#if EMUL_50
+            FindAndClick("30s");
             Driver.Flick(0, SpeedY);
-            Driver.Click("5m");
+            FindAndClick("5m");
             Driver.Flick(0, SpeedY);
-            Driver.Click("15m");
+            FindAndClick("10m");
 #else
-            Driver.Click("15s");
+            FindAndClick("15s");
             Driver.Flick(0, SpeedY);
-            Driver.Click("30s");
+            FindAndClick("30s");
             Driver.Flick(0, SpeedY);
-            Driver.Click("1m");
+            FindAndClick("1m");
 #endif
         }
     }

@@ -9,7 +9,7 @@ namespace Appium.UITests
         [Test]
         public void DateTimeSelectorTest()
         {
-
+            Driver.RunTC(this.GetType().Name);
         }
     }
 }

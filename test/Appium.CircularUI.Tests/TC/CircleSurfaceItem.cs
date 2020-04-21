@@ -5,14 +5,14 @@ namespace Appium.UITests
     [TestFixture, Order(4)]
     public class CircleSurfaceItem : TestTemplate
     {
-        static string CircleProgressBarTestName = "CircleProgressBar2";
-        static string CircleSlider1TestName = "CircleSlider1";
-        static string CircleSlider2TestName = "CircleSlider2";
+        static string CircleProgressBarTestName = "CircleSurfaceItem/CircleProgressBar2";
+        static string CircleSlider1TestName = "CircleSurfaceItem/CircleSlider1";
+        static string CircleSlider2TestName = "CircleSurfaceItem/CircleSlider2";
 
         [Test]
         public void CircleProgressBarTest()
         {
-            Driver.FindTC(CircleProgressBarTestName);
+            Driver.RunTC(CircleProgressBarTestName);
 
             var startBtnId = "start";
 
@@ -27,7 +27,7 @@ namespace Appium.UITests
         [Test]
         public void CircleSliderTest1()
         {
-            Driver.FindTC(CircleSlider1TestName);
+            Driver.RunTC(CircleSlider1TestName);
 
             var enableBtnId = "enable";
 
@@ -36,7 +36,7 @@ namespace Appium.UITests
             Driver.CheckScreenshot(image);
 #endif
 
-            Driver.Click(enableBtnId);
+            FindAndClick(enableBtnId);
 
 #if WATCH_DEVICE
             var image2 = "CircleSurfaceItem_CircleSliderEnable.png";
@@ -47,15 +47,15 @@ namespace Appium.UITests
         [Test]
         public void CircleSliderTest2()
         {
-            Driver.FindTC(CircleSlider2TestName);
+            Driver.RunTC(CircleSlider2TestName);
 
             var changeBtnId = "change";
-            Driver.Click(changeBtnId);
+            FindAndClick(changeBtnId);
 #if WATCH_DEVICE
             var image = "CircleSurfaceItem_CircleSliderChangeFocus1.png";
             Driver.CheckScreenshot(image);
 #endif
-            Driver.Click(changeBtnId);
+            FindAndClick(changeBtnId);
 #if WATCH_DEVICE
             var image2 = "CircleSurfaceItem_CircleSliderChangeFocus2.png";
             Driver.CheckScreenshot(image2);

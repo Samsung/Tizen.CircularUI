@@ -7,6 +7,8 @@ namespace WearableUIGallery
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppShell : Shell
     {
+        public string CurrentUri { get; set; }
+
         public AppShell()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace WearableUIGallery
                         Routing.RegisterRoute(route, desc.Class);
                     }
                 }
-            }            
+            }
         }
 
         protected override bool OnBackButtonPressed()
@@ -38,6 +40,12 @@ namespace WearableUIGallery
                 return true;
             }
             return base.OnBackButtonPressed();
+        }
+
+        void OnNavigated(object sender, ShellNavigatedEventArgs arg)
+        {
+            if(arg.Current != null)
+                CurrentUri = arg.Current.Location.ToString();
         }
     }
 }

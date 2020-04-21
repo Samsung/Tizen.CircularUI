@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <w:TwoButtonPage
-	x:Class="WearableUIGallery.TC.TCTwoButtonPage"
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:WearableUIGallery.TC"
-	xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    x:Class="WearableUIGallery.TC.TCTwoButtonPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference myscroller}"
-	Title="{Binding Title}}">
+    Title="{Binding Title}}">
     <w:TwoButtonPage.Behaviors>
         <w:CircleSurfaceEffectBehavior />
     </w:TwoButtonPage.Behaviors>
     <w:TwoButtonPage.BindingContext>
-		<local:TCTwoButtonPageViewModel />
-	</w:TwoButtonPage.BindingContext>
-	<w:TwoButtonPage.Content>
+        <local:TCTwoButtonPageViewModel />
+    </w:TwoButtonPage.BindingContext>
+    <w:TwoButtonPage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical" VerticalScrollBarVisibility="Never">
-			<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-				<Label
-					HorizontalOptions="FillAndExpand"
-					HorizontalTextAlignment="Center"
-					Text="{Binding Text}"
-					VerticalOptions="FillAndExpand" />
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Text}"
+                    VerticalOptions="FillAndExpand" />
                 <Button AutomationId="change1" Clicked="OnChange1" Text="change icon 1" />
                 <Button AutomationId="change2" Clicked="OnChange2" Text="change icon 2" />
                 <Button AutomationId="remove1" Clicked="OnRemove1" Text="Remove 1" />
@@ -29,12 +29,12 @@
                 <Button AutomationId="changeColor1" Clicked="OnChangeColor1" Text="change color 1" />
                 <Button AutomationId="changeColor2" Clicked="OnChangeColor2" Text="change color 2" />
             </StackLayout>
-		</w:CircleScrollView>
-	</w:TwoButtonPage.Content>
-	<w:TwoButtonPage.FirstButton>
-		<MenuItem Command="{Binding Command1}" Icon="image/tw_ic_popup_btn_check.png" />
-	</w:TwoButtonPage.FirstButton>
-	<w:TwoButtonPage.SecondButton>
-		<MenuItem Command="{Binding Command2}" Icon="image/tw_ic_popup_btn_delete.png" />
-	</w:TwoButtonPage.SecondButton>
+        </w:CircleScrollView>
+    </w:TwoButtonPage.Content>
+    <w:TwoButtonPage.FirstButton>
+        <MenuItem Command="{Binding Command1}" Icon="image/tw_ic_popup_btn_check.png" />
+    </w:TwoButtonPage.FirstButton>
+    <w:TwoButtonPage.SecondButton>
+        <MenuItem Command="{Binding Command2}" Icon="image/tw_ic_popup_btn_delete.png" />
+    </w:TwoButtonPage.SecondButton>
 </w:TwoButtonPage>

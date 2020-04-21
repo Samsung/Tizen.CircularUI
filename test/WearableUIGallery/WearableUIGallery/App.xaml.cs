@@ -27,7 +27,5 @@ namespace WearableUIGallery
             InitializeComponent();
             MainPage = new AppShell();
         }
-
-        public static NavigationPage MainNavigation { get; set; }
     }
 }

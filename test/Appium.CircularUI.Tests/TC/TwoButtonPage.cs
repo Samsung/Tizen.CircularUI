@@ -5,21 +5,21 @@ namespace Appium.UITests
     [TestFixture, Order(12)]
     public class TwoButtonPage : TestTemplate
     {
-        static string TwoButtonPageBehaviorTestName = "TwoButtonPageBehavior";
-        static string TwoButtonPageListTestName = "TwoButtonPageListView";
-        static string TwoButtonPopupTestName = "TwoButtonPopup";
+        static string TwoButtonPageBehaviorTestName = "TwoButtonPage/TwoButtonPageBehavior";
+        static string TwoButtonPageListTestName = "TwoButtonPage/TwoButtonPageListView";
+        static string TwoButtonPopupTestName = "TwoButtonPage/TwoButtonPopup";
 
         [Test]
         public void TwoButtonPageBehaviorTest()
         {
-            Driver.FindTC(TwoButtonPageBehaviorTestName);
+            Driver.RunTC(TwoButtonPageBehaviorTestName);
 
-            for (int i = 0; i < 5; i++)
-                Driver.Flick(0, SpeedY);
-            Driver.Click("change2");
+            //for (int i = 0; i < 5; i++)
+            //    Driver.Flick(0, SpeedY);
+            FindAndClick("change2");
             Driver.Flick(0, SpeedY);
-            Driver.Click("remove1");
-            Driver.Click("changeColor2");
+            FindAndClick("remove1");
+            FindAndClick("changeColor2");
 #if WATCH_DEVICE
             var image = "TwoButtonPage_Behavior.png";
             Driver.CheckScreenshot(image);
@@ -29,7 +29,7 @@ namespace Appium.UITests
         [Test]
         public void TwoButtonPageListTest()
         {
-            Driver.FindTC(TwoButtonPageListTestName);
+            Driver.RunTC(TwoButtonPageListTestName);
 
             for (int i = 0; i < 6; i++)
                 Driver.Flick(0, SpeedY);
@@ -42,9 +42,9 @@ namespace Appium.UITests
         [Test]
         public void TwoButtonPopupTest()
         {
-            Driver.FindTC(TwoButtonPopupTestName);
+            Driver.RunTC(TwoButtonPopupTestName);
 
-            Driver.Click("text");
+            FindAndClick("text");
 #if WATCH_DEVICE
             var image = "TwoButtonPopup_Text.png";
             Driver.CheckScreenshot(image);
@@ -54,7 +54,7 @@ namespace Appium.UITests
             for (int i = 0; i < 4; i++)
                 Driver.Flick(0, SpeedY);
 
-            Driver.Click("changeRightButtonColor");
+            FindAndClick("changeRightButtonColor");
 #if WATCH_DEVICE
             var image2 = "TwoButtonPopup_ChangeIconColor.png";
             Driver.CheckScreenshot(image2);

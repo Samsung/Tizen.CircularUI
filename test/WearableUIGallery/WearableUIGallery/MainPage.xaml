@@ -3,10 +3,15 @@
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:sys="clr-namespace:System;assembly=netstandard"
               xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-              x:Class="WearableUIGallery.MainPage">
+              x:Class="WearableUIGallery.MainPage"
+              AutomationId="MainPage">
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
         <Label Text="TCName" HorizontalOptions="CenterAndExpand"/>
-        <Entry AutomationId="TCName" x:Name="TCName"  HorizontalOptions="FillAndExpand"/>
-        <Button AutomationId="Go" Text="Go"  HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+        <Entry AutomationId="TCNameEntry" x:Name="TCNameEntry" HorizontalOptions="FillAndExpand"/>
+            <Button AutomationId="Go" Text="Go"  HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="End">Flyout enable</Label>
+            <Switch x:Name="FlyoutSwitch" AutomationId="FlyoutSwitch" Toggled="Switch_Toggled"/>
+        </StackLayout>
     </StackLayout>
 </w:CirclePage>
