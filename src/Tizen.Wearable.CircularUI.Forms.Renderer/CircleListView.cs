@@ -358,7 +358,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _itemContexts[cell] = item;
 
 
-            if (Header != null && item == FirstItem.Next)
+            if (Header != null && item == FirstItem?.Next)
             {
                 UpdateHeaderHeightForGroup(IsGroup);
             }

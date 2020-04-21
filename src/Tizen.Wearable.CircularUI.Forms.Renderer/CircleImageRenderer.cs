@@ -24,6 +24,7 @@ using Tizen.Wearable.CircularUI.Forms.Renderer;
 using Xamarin.Forms;
 using TLog = Tizen.Log;
 using FormsCircularUI = Tizen.Wearable.CircularUI.Forms.Renderer.FormsCircularUI;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(CircleImage), typeof(CircleImageRenderer))]
 namespace UIComponents.Tizen.Wearable.Renderers
@@ -31,18 +32,16 @@ namespace UIComponents.Tizen.Wearable.Renderers
     public class CircleImageRenderer : ViewRenderer<CircleImage, FormsNative.Image>
     {
         ElmSharp.EvasImage _circleImage;
-        ElmSharp.EvasObject _nativeParent;
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircleImage> e)
         {
             if (Control == null)
             {
-                _nativeParent = Platform.GetRenderer(Element.Parent).NativeView;
-                _circleImage = new ElmSharp.EvasImage(_nativeParent);
+                _circleImage = new ElmSharp.EvasImage(XForms.NativeParent);
                 _circleImage.IsFilled = true;
                 GetClipImage();
 
-                var image = new FormsNative.Image(_nativeParent);
+                var image = new FormsNative.Image(XForms.NativeParent);
                 SetNativeControl(image);
                 Control.Resized += Control_Resized;
                 Control.Moved += Control_Moved;
@@ -142,12 +141,12 @@ namespace UIComponents.Tizen.Wearable.Renderers
 
         void UpdateBackgroundColor()
         {
-            if (_nativeParent == null) return;
+            if (Control == null) return;
 
             if (Element.BackgroundColor.ToNative() != ElmSharp.Color.Transparent
                     && Element.BackgroundColor.ToNative() != ElmSharp.Color.Default)
             {
-                _nativeParent.Color = Element.BackgroundColor.ToNative();
+                Control.Color = Element.BackgroundColor.ToNative();
             }
         }
 

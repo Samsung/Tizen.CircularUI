@@ -103,10 +103,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 e.OldElement.Appearing -= OnPageAppearing;
                 e.OldElement.Disappearing -= OnPageDisappearing;
-                var toolbarItems = e.NewElement.ToolbarItems as ObservableCollection<XToolbarItem>;
+                var toolbarItems = e.OldElement.ToolbarItems as ObservableCollection<XToolbarItem>;
                 if (toolbarItems != null)
                     toolbarItems.CollectionChanged -= OnToolbarItemChanged;
-                var circleSurfaceItems = e.NewElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
+                var circleSurfaceItems = e.OldElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
                 if (circleSurfaceItems != null)
                     circleSurfaceItems.CollectionChanged -= OnCircleSurfaceItemsChanged;
             }
