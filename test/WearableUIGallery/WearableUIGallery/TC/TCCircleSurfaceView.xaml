@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WearableUIGallery.TC.TCCircleSurfaceView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WearableUIGallery.TC"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="Black" x:Name="RootView">
+            <w:CircleSurfaceView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" InputTransparent="True">
+                <w:CircleSurfaceView.CircleSurfaceItems>
+                    <w:CircleProgressBarSurfaceItem x:Name="progress1" Value="1" />
+                    <w:CircleProgressBarSurfaceItem
+                        BackgroundColor="Green"
+                        BackgroundLineWidth="20"
+                        BackgroundRadius="90"
+                        BarColor="Red"
+                        BarLineWidth="15"
+                        BarRadius="90"
+                        Value="0.5" />
+                    <w:CircleSliderSurfaceItem
+                        x:Name="AlertSlider"
+                        BackgroundColor="Green"
+                        BackgroundLineWidth="20"
+                        BackgroundRadius="150"
+                        BarColor="SkyBlue"
+                        BarLineWidth="15"
+                        BarRadius="150"
+                        Increment="2"
+                        Maximum="20"
+                        Minimum="0"
+                        Value="10" />
+                    <w:CircleSliderSurfaceItem
+                        x:Name="RingtoneSlider"
+                        Increment="1"
+                        Maximum="15"
+                        Minimum="0"
+                        Value="8" />
+                </w:CircleSurfaceView.CircleSurfaceItems>
+            </w:CircleSurfaceView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="ToolbarItem"
+            Icon="image/tizen.png"
+            Text="MainText"/>
+        <w:CircleToolbarItem
+            x:Name="CircleToolbarItem"
+            Icon="image/tizen.png"
+            Text="MainText"
+            SubText="SubText"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

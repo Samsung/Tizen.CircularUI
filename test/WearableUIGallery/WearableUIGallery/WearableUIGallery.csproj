@@ -15,6 +15,11 @@
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="TC\TCCircleSurfaceView.xaml.cs">
+      <DependentUpon>TCCircleSurfaceView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Update="TC\TCRadialProgress.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
