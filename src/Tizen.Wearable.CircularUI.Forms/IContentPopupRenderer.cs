@@ -20,33 +20,25 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The IContentPopup is an interface to describe confirmation pop-up which has content area
+    /// Base interface for ContentPopup renderer.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    internal interface IContentPopup
+    public interface IContentPopupRenderer : IDisposable
     {
         /// <summary>
-        /// Occurs when the Back button is pressed.
+        /// Shows the popup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        event EventHandler BackButtonPressed;
-
-        /// <summary>
-        /// Gets or sets content view of the Popup.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        View Content { get; set; }
-
-        /// <summary>
-        /// Shows the Popup
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         void Show();
 
         /// <summary>
-        /// Dismisses the Popup
+        /// Dismisses the popup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         void Dismiss();
+
+        /// <summary>
+        /// Sets the Element associated with this renderer.
+        /// </summary>
+        /// <param name="element">New element.</param>
+        void SetElement(Element element);
     }
 }

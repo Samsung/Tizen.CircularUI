@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -23,15 +24,27 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The ContentPopup is a Popup, which allows you to customize the View to be displayed.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class ContentPopup : BindableObject
+    public class ContentPopup : Element, IDisposable
     {
+        IContentPopupRenderer _renderer;
+
         /// <summary>
-        /// BindableProperty. Identifies the content bindable property.
+        /// For internal use.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public static Func<IContentPopupRenderer> RendererFunc { get; set; } = null;
+
+        /// <summary>
+        /// BindableProperty. Identifies the Content bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ContentPopup), null);
 
-        IContentPopup _popUp;
+        /// <summary>
+        /// BindableProperty. Identifies the IsShow bindable property.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty IsShowProperty = BindableProperty.Create(nameof(IsShow), typeof(bool), typeof(ContentPopup), false, propertyChanged:(b, o, n) => ((ContentPopup)b).UpdateRenderer());
 
         /// <summary>
         /// Occurs when the device's back button is pressed.
@@ -40,22 +53,10 @@ namespace Tizen.Wearable.CircularUI.Forms
         public event EventHandler BackButtonPressed;
 
         /// <summary>
-        /// Creates and initializes a new instance of the ContentPopup class.
+        /// Occurs when the popup is dismissed.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public ContentPopup()
-        {
-            _popUp = DependencyService.Get<IContentPopup>(DependencyFetchTarget.NewInstance);
-            if (_popUp == null)
-                throw new InvalidOperationException("Object reference not set to an instance of a Popup.");
-
-            _popUp.BackButtonPressed += (s, e) =>
-            {
-                BackButtonPressed?.Invoke(this, EventArgs.Empty);
-            };
-
-            SetBinding(ContentProperty, new Binding(nameof(Content), mode: BindingMode.OneWayToSource, source: _popUp));
-        }
+        public event EventHandler Dismissed;
 
         /// <summary>
         /// Gets or sets content view of the Popup.
@@ -68,21 +69,67 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Shows the ContentPopup.
+        /// Gets or sets the popup is shown.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsShow
+        {
+            get { return (bool)GetValue(IsShowProperty); }
+            set { SetValue(IsShowProperty, value); }
+        }
+
+        /// <summary>
+        /// Shows the popup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public void Show()
         {
-            _popUp.Show();
+            IsShow = true;
         }
 
         /// <summary>
-        /// Dismisses the ContentPopup.
+        /// Dismisses the popup.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public void Dismiss(object result = null)
+        public void Dismiss()
         {
-            _popUp.Dismiss();
+            IsShow = false;
+        }
+
+        /// <summary>
+        /// For internal use.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void SendDismissed()
+        {
+            Dismissed?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// For internal use.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void SendBackButtonPressed()
+        {
+            BackButtonPressed?.Invoke(this, EventArgs.Empty);
+        }
+
+        void UpdateRenderer()
+        {
+            if (_renderer == null)
+            {
+                _renderer = RendererFunc();
+                _renderer.SetElement(this);
+            }
+        }
+
+        public void Dispose()
+        {
+            if (_renderer != null)
+            {
+                _renderer.Dispose();
+                _renderer = null;
+            }
         }
     }
 }
