@@ -5459,6 +5459,25 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.PaddingItemClass
   nameWithType: PaddingItemClass.PaddingItemClass
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer
+  name: PageRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer
+  nameWithType: PageRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem(ToolbarItem)
+  name: CreateMoreOptionItem(ToolbarItem)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_CreateMoreOptionItem_ToolbarItem_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem(ToolbarItem)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem(ToolbarItem)
+  nameWithType: PageRenderer.CreateMoreOptionItem(ToolbarItem)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem*
+  name: CreateMoreOptionItem
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_CreateMoreOptionItem_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem
+  nameWithType: PageRenderer.CreateMoreOptionItem
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer
   name: PopupEntryRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.html

@@ -2761,6 +2761,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html",
+          "hash": "ghWZYc2LkGk7bais8aEFZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.PopupEntryRenderer.yml",
       "output": {
         ".html": {
@@ -2993,7 +3005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "KFP1cFUP90a5ZP0MvByTxQ=="
+          "hash": "cjE0bQPdw+LtT9DhPtuL5w=="
         }
       },
       "is_incremental": false,
@@ -3161,7 +3173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "7bqxIi7Zs50HRVEM9GVSIg=="
+          "hash": "UmRsOFj26FbzC+PHMsdCgg=="
         }
       },
       "is_incremental": false,
@@ -3214,7 +3226,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 109,
+          "total_file_count": 110,
           "skipped_file_count": 0
         }
       }
