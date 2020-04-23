@@ -23,7 +23,7 @@ _The code example of this guide uses TCInformationPopup code of WearableUIGaller
 
 **C# file**
 ```cs
-            _textPopUp = new InformationPopup();
+            var _textPopUp = new InformationPopup();
             _textPopUp.Text = "This is text popup test";
 
             _textPopUp.BackButtonPressed += (s, e) =>
@@ -31,6 +31,7 @@ _The code example of this guide uses TCInformationPopup code of WearableUIGaller
                 _textPopUp.Dismiss();
                 label1.Text = "text popup is dismissed";
             };
+            _textPopUp.show();
 ```
 
 ## Create bottom button InformationPopup
@@ -49,7 +50,7 @@ When you click the bottom button, `BottomButton.Clicked` event occurs.
                 })
             };
 
-            _textButtonPopUp = new InformationPopup();
+            var _textButtonPopUp = new InformationPopup();
             _textButtonPopUp.Title = "Popup title";
             _textButtonPopUp.Text = "This is text and button popup test";
             _textButtonPopUp.BottomButton = bottomButton;
@@ -59,6 +60,7 @@ When you click the bottom button, `BottomButton.Clicked` event occurs.
                 _textButtonPopUp.Dismiss();
                 label1.Text = "text&button is dismissed";
             };
+            _textButtonPopUp.show();
 ```
 
 ## Create progress InformationPopup
@@ -66,8 +68,9 @@ When you click the bottom button, `BottomButton.Clicked` event occurs.
 
 **C# file**
 ```cs
-            _progressPopUp = new InformationPopup();
+            var _progressPopUp = new InformationPopup();
             _progressPopUp.Title = "Popup title";
             _progressPopUp.Text = "This is progress test";
             _progressPopUp.IsProgressRunning = true;
+            _progressPopUp.show();
 ```
