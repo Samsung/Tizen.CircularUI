@@ -33,9 +33,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public void SetElement(Element element)
         {
-            element.Parent = Application.Current.Parent;
+            if (element.Parent == null)
+                element.Parent = Application.Current;
             element.PropertyChanged += OnElementPropertyChanged;
-
             _element = element as ContentPopup;
 
             UpdateContent();
@@ -65,7 +65,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public void Dismiss()
         {
             _popup?.Hide();
-            _popup?.Dismiss();
         }
 
         public void Show()
@@ -122,8 +121,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var renderer = Platform.GetOrCreateRenderer(_element.Content);
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 var native = renderer.NativeView;
-                var sizeRequest = _element.Content.Measure(XForms.NativeParent.Geometry.Width, XForms.NativeParent.Geometry.Height).Request.ToPixel();
-                native.MinimumHeight = sizeRequest.Height;
+                native.MinimumHeight = 360;
                 _popup.SetContent(native, false);
             }
             else

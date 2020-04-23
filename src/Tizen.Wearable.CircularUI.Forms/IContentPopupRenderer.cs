@@ -26,16 +26,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     public interface IContentPopupRenderer : IDisposable
     {
         /// <summary>
-        /// Shows the popup.
-        /// </summary>
-        void Show();
-
-        /// <summary>
-        /// Dismisses the popup.
-        /// </summary>
-        void Dismiss();
-
-        /// <summary>
         /// Sets the Element associated with this renderer.
         /// </summary>
         /// <param name="element">New element.</param>

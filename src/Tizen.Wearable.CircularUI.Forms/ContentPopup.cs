@@ -38,7 +38,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the Content bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ContentPopup), null);
+        public static readonly BindableProperty ContentProperty = BindableProperty.Create(nameof(Content), typeof(View), typeof(ContentPopup), null, propertyChanged: (b, o, n) => ((ContentPopup)b).UpdateContent());
 
         /// <summary>
         /// BindableProperty. Identifies the IsShow bindable property.
@@ -114,6 +114,37 @@ namespace Tizen.Wearable.CircularUI.Forms
             BackButtonPressed?.Invoke(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// Dispose the popup.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing && _renderer != null)
+            {
+                _renderer.Dispose();
+                _renderer = null;
+            }
+        }
+
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+            if (Content != null)
+                SetInheritedBindingContext(Content, BindingContext);
+        }
+
+        void UpdateContent()
+        {
+            if (Content != null)
+                OnChildAdded(Content);
+        }
+
         void UpdateRenderer()
         {
             if (_renderer == null)
@@ -123,13 +154,5 @@ namespace Tizen.Wearable.CircularUI.Forms
             }
         }
 
-        public void Dispose()
-        {
-            if (_renderer != null)
-            {
-                _renderer.Dispose();
-                _renderer = null;
-            }
-        }
     }
 }
