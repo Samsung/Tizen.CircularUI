@@ -18,6 +18,7 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using Circular = Tizen.Wearable.CircularUI.Forms.FormsCircularUI;
 
 [assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPopupImplementation))]
 
@@ -205,7 +206,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (!XForms.IsInitialized)
             {
-                Log.Debug(FormsCircularUI.Tag, "Tizen Forms is not initialized");
+                Log.Debug(Circular.Tag, "Tizen Forms is not initialized");
                 return;
             }
 
@@ -258,12 +259,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _firstButton.Clicked += (s, e) =>
                 {
-                    ((IMenuItemController)FirstButton).Activate();
+                    (FirstButton as IMenuItemController)?.Activate();
                 };
 
                 if (_firstButtonBgColor != Color.Default)
                 {
-                    Log.Debug(FormsCircularUI.Tag, $"TwoButtonPopup set first button background color:{_firstButtonBgColor.ToNative()}");
+                    Log.Debug(Circular.Tag, $"TwoButtonPopup set first button background color:{_firstButtonBgColor.ToNative()}");
                     _firstButton.BackgroundColor = _firstButtonBgColor.ToNative();
                 }
             }
@@ -304,12 +305,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                 _secondButton.Clicked += (s, e) =>
                 {
-                    ((IMenuItemController)SecondButton).Activate();
+                    (SecondButton as IMenuItemController)?.Activate();
                 };
 
                 if (_secondButtonBgColor != Color.Default)
                 {
-                    Log.Debug(FormsCircularUI.Tag, $"TwoButtonPopup set second button background color:{_secondButtonBgColor.ToNative()}");
+                    Log.Debug(Circular.Tag, $"TwoButtonPopup set second button background color:{_secondButtonBgColor.ToNative()}");
                     _secondButton.BackgroundColor = _secondButtonBgColor.ToNative();
                 }
 
@@ -332,12 +333,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateTitle()
         {
-            _layout.SetPartText("elm.text.title", _title);
+            string title = _title?.Replace("&", "&amp;")
+                                  .Replace("<", "&lt;")
+                                  .Replace(">", "&gt;")
+                                  .Replace(Environment.NewLine, "<br>");
+            _layout.SetPartText("elm.text.title", title);
         }
 
         void UpdateText()
         {
-            _layout.SetPartText("elm.text", _text);
+            string text = _text?.Replace("&", "&amp;")
+                                .Replace("<", "&lt;")
+                                .Replace(">", "&gt;")
+                                .Replace(Environment.NewLine, "<br>");
+            _layout.SetPartText("elm.text", text);
         }
 
         public void Show()
@@ -386,7 +395,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnDismissed(object sender, EventArgs e)
         {
-            Log.Debug(FormsCircularUI.Tag, $"OnDismissed called");
+            Log.Debug(Circular.Tag, $"OnDismissed called");
             Dispose();
         }
     }

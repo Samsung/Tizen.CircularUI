@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             mc:Ignorable="d"
+             x:Class="WearableUIGallery.TC.TCRadialProgress2">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <chart:RadialProgress AbsoluteLayout.LayoutBounds="0.5, 0.5, 295, 295" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                  Thickness="30"
+                                  RadialBackgroundColor="#4f4f4f"
+                                  Progress="0.00"
+                                  HasLabel="False"
+                                  StartAngle="-130"
+                                  SweepAngle="260"/>
+            <chart:RadialProgress x:Name="_progress" AbsoluteLayout.LayoutBounds="0.5, 0.5, 284, 284" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                  Thickness="18"
+                                  RadialBackgroundColor="#4f4f4f"
+                                  RadialStartColor="#1ede7d"
+                                  RadialMiddleColor="#1ede7d"
+                                  RadialEndColor="#1ede7d"
+                                  Progress="0.03"
+                                  HasLabel="False"
+                                  StartAngle="-130"
+                                  SweepAngle="260"/>
+            <Label TextColor="White" AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   Text="{Binding Progress, Source={x:Reference _progress}, StringFormat='{0:P0}'}" FontSize="13"/>
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

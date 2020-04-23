@@ -5,15 +5,14 @@ namespace Appium.UITests
     [TestFixture, Order(2)]
     public class CirclePage : TestTemplate
     {
-        static string CirclePageTestName = "CirclePageBehavior";
-        static string RotaryFocusTestName = "RotaryFocus";
-        static string ActionButtonTestName = "ActionButton";
-
+        static string CirclePageTestName = "CirclePage/CirclePageBehavior";
+        static string RotaryFocusTestName = "CirclePage/RotaryFocus";
+        static string ActionButtonTestName = "CirclePage/ActionButton";
 
         [Test]
         public void CirclePageBehaviorTest()
         {
-            Driver.FindTC(CirclePageTestName);
+            Driver.RunTC(CirclePageTestName);
             Driver.Click(350, 180, 3000);
 #if WATCH_DEVICE
             var image = "CirclePage_ToolbarItems.png";
@@ -24,7 +23,7 @@ namespace Appium.UITests
         [Test]
         public void RotaryFocusTest()
         {
-            Driver.FindTC(RotaryFocusTestName);
+            Driver.RunTC(RotaryFocusTestName);
 
 #if WATCH_DEVICE
             var image = "CirclePage_RotaryFocusEnable.png";
@@ -35,23 +34,23 @@ namespace Appium.UITests
         [Test]
         public void ActionButtonTest()
         {
-            Driver.FindTC(ActionButtonTestName);
+            Driver.RunTC(ActionButtonTestName);
 
             var setBtnId = "set";
             var enableBtnId = "enable";
             var changeColorBtnId = "changeColor";
-            Driver.Click(setBtnId);
+            FindAndClick(setBtnId);
 #if WATCH_DEVICE
             var image = "CirclePage_SetActionButton.png";
             Driver.CheckScreenshot(image);
 #endif
-            Driver.Click(enableBtnId);
+            FindAndClick(enableBtnId);
 #if WATCH_DEVICE
             var image2 = "CirclePage_DisableActionButton.png";
             Driver.CheckScreenshot(image2);
 #endif
-            Driver.Click(enableBtnId);
-            Driver.Click(changeColorBtnId);
+            FindAndClick(enableBtnId);
+            FindAndClick(changeColorBtnId);
 #if WATCH_DEVICE
             var image3 = "CirclePage_ChangeColorActionButton.png";
             Driver.CheckScreenshot(image3);

@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -23,7 +24,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CircleStepper is a class that extends Xamarin.Forms.Stepper for Circular UI.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class CircleStepper : Xamarin.Forms.Stepper, IRotaryFocusable
+    public class CircleStepper : Stepper, IRotaryFocusable, ICircleSurfaceConsumer
     {
         /// <summary>
         /// BindableProperty. Identifies the MarkerColor bindable property.
@@ -50,26 +51,97 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(CircleStepper), null);
 
         /// <summary>
+        /// BindableProperty. Identifies whether min/max value is wrapped or not.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public static readonly BindableProperty IsWrapEnabledProperty = BindableProperty.Create(nameof(IsWrapEnabled), typeof(bool), typeof(CircleStepper), true);
+
+        /// <summary>
         /// Gets or sets Marker color
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         [Obsolete("MarkerColor is obsolete as of Tizen.NET version 4.0.0 and is no longer supported")]
-        public Color MarkerColor { get => (Color)GetValue(MarkerColorProperty); set => SetValue(MarkerColorProperty, value); }
+        public Color MarkerColor
+        {
+            get => (Color)GetValue(MarkerColorProperty);
+            set => SetValue(MarkerColorProperty, value);
+        }
+
         /// <summary>
         /// Gets or sets length of Marker
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         [Obsolete("MarkerLineWidth is obsolete as of Tizen.NET version 4.0.0 and is no longer supported")]
-        public int MarkerLineWidth { get => (int)GetValue(MarkerLineWidthProperty); set => SetValue(MarkerLineWidthProperty, value); }
+        public int MarkerLineWidth
+        {
+            get => (int)GetValue(MarkerLineWidthProperty);
+            set => SetValue(MarkerLineWidthProperty, value);
+        }
+
         /// <summary>
         /// Gets or sets format in which Value is shown
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public string LabelFormat { get => (string)GetValue(LabelFormatProperty); set => SetValue(LabelFormatProperty, value); }
+        public string LabelFormat
+        {
+            get => (string)GetValue(LabelFormatProperty);
+            set => SetValue(LabelFormatProperty, value);
+        }
+
         /// <summary>
         /// Gets or sets title
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public string Title { get => (string)GetValue(TitleProperty); set => SetValue(TitleProperty, value); }
+        public string Title
+        {
+            get => (string)GetValue(TitleProperty);
+            set => SetValue(TitleProperty, value);
+        }
+
+        /// <summary>
+        /// Gets or sets a status of Value is wrapped.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public bool IsWrapEnabled
+        {
+            get => (bool)GetValue(IsWrapEnabledProperty);
+            set => SetValue(IsWrapEnabledProperty, value);
+        }
+
+        /// <summary>
+        /// Gets or sets a CircleSurfaceProvider.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
+
+        /// <summary>
+        /// Occurs when the circle stepper's wheel is appeared.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public event EventHandler WheelAppeared;
+
+        /// <summary>
+        /// Occurs when the circle stepper's wheel is disappeared.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public event EventHandler WheelDisappeared;
+
+        /// <summary>
+        /// Internal use only, initializes a new instance of the EmbeddingControls.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void SendWheelAppeared()
+        {
+            WheelAppeared?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Internal use only, initializes a new instance of the EmbeddingControls.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void SendWheelDisappeared()
+        {
+            WheelDisappeared?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

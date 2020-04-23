@@ -2,11 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>tizen40</TargetFramework>
+    <TargetFrameworkIdentifier>Tizen</TargetFrameworkIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="res\circle.png" />
+    <None Remove="res\wc_visual_cue.png" />
     <EmbeddedResource Include="res\circle.png" />
+    <EmbeddedResource Include="res\wc_visual_cue.png" />
   </ItemGroup>
 
   <ItemGroup>

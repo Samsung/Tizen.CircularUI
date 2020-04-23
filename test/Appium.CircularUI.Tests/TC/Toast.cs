@@ -9,15 +9,17 @@ namespace Appium.UITests
         [Test]
         public void ToastTest()
         {
-            Driver.Click("text", 1000);
+            Driver.RunTC(this.GetType().Name);
+
+            FindAndClick("text");
             Driver.GoBack();
-            Driver.Click("longText", 1000);
+            FindAndClick("longText");
             Driver.GoBack();
-            Driver.Click("iconText", 1000);
+            FindAndClick("iconText");
             Driver.GoBack();
-            Driver.Click("iconSize", 1000);
+            FindAndClick("iconSize");
             Driver.GoBack();
-            Driver.Click("iconJpg", 1000);
+            FindAndClick("iconJpg");
         }
     }
 }

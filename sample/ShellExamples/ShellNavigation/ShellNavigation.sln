@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShellNavigation", "ShellNavigation.csproj", "{5216EC27-5B70-4297-A075-178F8B19D3A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms", "..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj", "{8BB17722-2678-4E13-B577-650C11C3F8D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms.Renderer", "..\..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{2838585B-8FEF-431B-BB01-185AEC8762AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5216EC27-5B70-4297-A075-178F8B19D3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5216EC27-5B70-4297-A075-178F8B19D3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5216EC27-5B70-4297-A075-178F8B19D3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5216EC27-5B70-4297-A075-178F8B19D3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB17722-2678-4E13-B577-650C11C3F8D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB17722-2678-4E13-B577-650C11C3F8D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB17722-2678-4E13-B577-650C11C3F8D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB17722-2678-4E13-B577-650C11C3F8D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2838585B-8FEF-431B-BB01-185AEC8762AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2838585B-8FEF-431B-BB01-185AEC8762AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2838585B-8FEF-431B-BB01-185AEC8762AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2838585B-8FEF-431B-BB01-185AEC8762AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F7C81E8-7CE6-4E7E-8D1C-21937BC7F0A8}
+	EndGlobalSection
+EndGlobal

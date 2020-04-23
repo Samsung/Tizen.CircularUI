@@ -23,7 +23,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CircleScrollView is extension of Xamarin.Forms.ScrollView.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class CircleScrollView : ScrollView, IRotaryFocusable
+    public class CircleScrollView : ScrollView, IRotaryFocusable, ICircleSurfaceConsumer
     {
         /// <summary>
         /// BindableProperty. Identifies the Header, Footer cancel the Fish Eye Effect or not.
@@ -40,5 +40,11 @@ namespace Tizen.Wearable.CircularUI.Forms
             get => (Color)GetValue(BarColorProperty);
             set => SetValue(BarColorProperty, value);
         }
+
+        /// <summary>
+        /// Gets or sets a CircleSurfaceProvider.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
     }
 }

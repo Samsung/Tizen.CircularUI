@@ -26,6 +26,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 using XForms = Xamarin.Forms.Forms;
+using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 
 using XToolbarItem = Xamarin.Forms.ToolbarItem;
 
@@ -59,6 +60,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         public ElmSharp.Wearable.CircleSurface CircleSurface => _surface;
 
+        public void UpdateRotaryFocusObject(bool initialize)
+        {
+            if (initialize)
+            {
+                _currentRotaryFocusObject = Element.RotaryFocusObject;
+            }
+            else
+            {
+                DeactivateRotaryWidget();
+                _currentRotaryFocusObject = Element.RotaryFocusObject;
+                ActivateRotaryWidget();
+            }
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<CirclePage> e)
         {
             if (_box == null)
@@ -67,6 +82,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             if (e.NewElement != null)
             {
+                e.NewElement.CircleSurface = _surface;
                 e.NewElement.Appearing += OnPageAppearing;
                 e.NewElement.Disappearing += OnPageDisappearing;
                 var toolbarItems = e.NewElement.ToolbarItems as ObservableCollection<XToolbarItem>;
@@ -87,15 +103,27 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 e.OldElement.Appearing -= OnPageAppearing;
                 e.OldElement.Disappearing -= OnPageDisappearing;
-                var toolbarItems = e.NewElement.ToolbarItems as ObservableCollection<XToolbarItem>;
+                var toolbarItems = e.OldElement.ToolbarItems as ObservableCollection<XToolbarItem>;
                 if (toolbarItems != null)
                     toolbarItems.CollectionChanged -= OnToolbarItemChanged;
-                var circleSurfaceItems = e.NewElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
+                var circleSurfaceItems = e.OldElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
                 if (circleSurfaceItems != null)
                     circleSurfaceItems.CollectionChanged -= OnCircleSurfaceItemsChanged;
             }
             base.OnElementChanged(e);
         }
+
+        protected override void OnElementReady()
+        {
+            base.OnElementReady();
+            // A Page created by with ContentTemplate of ShellContent, was appered before create a renderer
+            // So need to call OnPageAppearing if page already appeared
+            if (Element.Appeared)
+            {
+                OnPageAppearing(Element, EventArgs.Empty);
+            }
+        }
+
         protected override void UpdateBackgroundColor(bool initialize)
         {
             if (initialize && Element.BackgroundColor.IsDefault) return;
@@ -123,6 +151,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else
             {
+                _bgImageObject.IsFilled = true;
                 _bgImageObject.File = ResourcePath.GetPath(bgImageSource);
                 _bgImage = Element.BackgroundImageSource;
             }
@@ -189,6 +218,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
             SetNativeView(_box);
         }
+
         void OnLayout()
         {
             var rect = _box.Geometry;
@@ -211,8 +241,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var btnRect = _actionButton.Geometry;
                 var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
                 var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
-                var btnX = rect.X + (rect.Width - btnW)/2;
-                var btnY = rect.Height - btnH;
+                var btnX = rect.X + (rect.Width - btnW) / 2;
+                var btnY = rect.Y + rect.Height - btnH;
                 _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
                 _actionButton.StackAbove(prev);
                 prev = _actionButton;
@@ -242,6 +272,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
         void UpdateActionButton(bool initialize)
         {
+
             if (Element.ActionButton != null)
             {
                 if (_actionButton == null)
@@ -257,7 +288,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 SetVisibleActionButton(Element.ActionButton.IsVisible);
 
                 Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
-                _actionButton.Text = Element.ActionButton.Text;
+                _actionButton.Text = Element.ActionButton.Text?.Replace("&", "&amp;")
+                           .Replace("<", "&lt;")
+                           .Replace(">", "&gt;")
+                           .Replace(Environment.NewLine, "<br>");
+
                 _actionButton.IsEnabled = Element.ActionButton.IsEnable;
                 if (!Element.ActionButton.IconImageSource.IsNullOrEmpty())
                 {
@@ -268,11 +303,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     buttonImage.Show();
                     _actionButton.SetPartContent("elm.swallow.content", buttonImage);
                 }
-
-                if (Element.ActionButton.BackgroundColor != Xamarin.Forms.Color.Default)
+                else
                 {
-                    _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
+                    _actionButton.SetPartContent("elm.swallow.content", null);
                 }
+
+                 _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
             }
             else
             {
@@ -285,6 +321,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 }
             }
         }
+
         void OnActionButtonItemChanged(object sender, PropertyChangedEventArgs e)
         {
             if (_actionButton == null)
@@ -370,19 +407,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             _moreOption.IsOpened = false;
         }
-        void UpdateRotaryFocusObject(bool initialize)
-        {
-            if (initialize)
-            {
-                _currentRotaryFocusObject = Element.RotaryFocusObject;
-            }
-            else
-            {
-                DeactivateRotaryWidget();
-                _currentRotaryFocusObject = Element.RotaryFocusObject;
-                ActivateRotaryWidget();
-            }
-        }
+
         void OnPageDisappearing(object sender, EventArgs e)
         {
             DeactivateRotaryWidget();
@@ -404,7 +429,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_currentRotaryFocusObject is IRotaryEventReceiver)
             {
-                RotaryEventManager.Rotated += OnRotaryEventChanged;
+                ERotaryEventManager.Rotated += OnRotaryEventChanged;
             }
             else if (_currentRotaryFocusObject is IRotaryFocusable)
             {
@@ -415,7 +440,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             if (_currentRotaryFocusObject is IRotaryEventReceiver)
             {
-                RotaryEventManager.Rotated -= OnRotaryEventChanged;
+                ERotaryEventManager.Rotated -= OnRotaryEventChanged;
             }
             else if (_currentRotaryFocusObject is IRotaryFocusable)
             {

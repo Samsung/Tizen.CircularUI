@@ -9,27 +9,27 @@ namespace Appium.UITests
         [Test]
         public void InformationPopupTest()
         {
-            Driver.Click("text");
+            Driver.RunTC(this.GetType().Name);
+
+            FindAndClick("text");
             Driver.GoBack();
-            Driver.Click("longText");
+            FindAndClick("longText");
             Driver.GoBack();
-            Driver.Click("titleTextButton");
+            FindAndClick("titleTextButton");
 #if WATCH_DEVICE
             var image = "InformationPopup_TextButton.png";
             Driver.CheckScreenshot(image);
 #endif
             Driver.GoBack();
-            Driver.Flick(0, SpeedY);
-            Driver.Flick(0, SpeedY);
-            Driver.Click("longTextButton");
+            FindAndClick("longTextButton");
             Driver.GoBack();
-            Driver.Click("titleTextButton2");
+            FindAndClick("titleTextButton2");
             Driver.GoBack();
-            Driver.Click("process");
+            FindAndClick("process");
             Driver.GoBack();
-            Driver.Click("process2");
+            FindAndClick("process2");
             Driver.GoBack();
-            Driver.Click("changeButtonColor");
+            FindAndClick("changeButtonColor");
 #if WATCH_DEVICE
             var image2 = "InformationPopup_ChangeButtonColor.png";
             Driver.CheckScreenshot(image2);

@@ -15,11 +15,11 @@
  */
 
 using System;
-using ESpinner = ElmSharp.Wearable.CircleSpinner;
-using ESize = ElmSharp.Size;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using ESpinner = ElmSharp.Wearable.CircleSpinner;
+using ESize = ElmSharp.Size;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleStepper), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer))]
 
@@ -28,6 +28,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class CircleStepperRenderer : ViewRenderer<CircleStepper, ESpinner>
     {
+        ElmSharp.SmartEvent _listShow, _listHide;
+
         public CircleStepperRenderer()
         {
 #pragma warning disable CS0618 // MarkerColorProperty and MarkerLineWidthProperty are obsolete
@@ -40,6 +42,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
             RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
             RegisterPropertyHandler(Stepper.IncrementProperty, UpdateIncrement);
+            RegisterPropertyHandler(CircleStepper.IsWrapEnabledProperty, UpdateWrapEnabled);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircleStepper> e)
@@ -54,6 +57,19 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
                     SetNativeControl(spinner);
                     Control.ValueChanged += OnValueChanged;
+
+                    if (Tizen.Common.DotnetUtil.TizenAPIVersion == 4)
+                    {
+                        _listShow = new ElmSharp.SmartEvent(Control, "genlist,show");
+                        _listHide = new ElmSharp.SmartEvent(Control, "genlist,hide");
+                    }
+                    else
+                    {
+                        _listShow = new ElmSharp.SmartEvent(Control, "list,show");
+                        _listHide = new ElmSharp.SmartEvent(Control, "list,hide");
+                    }
+                    _listShow.On += OnListShow;
+                    _listHide.On += OnListHide;
                 }
                 else
                 {
@@ -114,6 +130,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         protected override ESize Measure(int availableWidth, int availableHeight)
         {
             return new ESize(360, 110);
+        }
+
+        void OnListShow(object sender, EventArgs args)
+        {
+            Element.SendWheelAppeared();
+        }
+
+        void OnListHide(object sender, EventArgs args)
+        {
+            Element.SendWheelDisappeared();
         }
 
         void UpdateMarkerColor()
@@ -181,6 +207,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             if (null != Control && null != Element)
             {
                 Control.Step = Element.Increment;
+            }
+        }
+
+        void UpdateWrapEnabled()
+        {
+            if (null != Control && null != Element)
+            {
+                Control.IsWrapEnabled = Element.IsWrapEnabled;
             }
         }
     }

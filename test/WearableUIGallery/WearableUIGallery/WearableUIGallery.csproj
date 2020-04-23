@@ -6,12 +6,26 @@
 
   <ItemGroup>
     <PackageReference Include="Tizen.NET" Version="4.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
   </ItemGroup>
 
   <!-- Include Nuget Package for Xamarin building -->
   <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Chart.Forms\Tizen.Wearable.CircularUI.Chart.Forms.csproj" />
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="TC\TCCircleSurfaceView.xaml.cs">
+      <DependentUpon>TCCircleSurfaceView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="TC\TCRadialProgress.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TC\TCRadialProgress2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

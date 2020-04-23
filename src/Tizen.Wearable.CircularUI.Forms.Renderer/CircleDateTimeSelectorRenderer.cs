@@ -105,6 +105,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (Element.ValueType == DateTimeType.Date)
                 {
                     Control.Style = "datepicker/circle";
+                    Control.Format = "%d/%b/%Y";
                 }
                 else if (Element.ValueType == DateTimeType.Time)
                 {

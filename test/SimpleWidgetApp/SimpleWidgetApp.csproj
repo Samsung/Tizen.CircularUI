@@ -1,13 +1,13 @@
-﻿<Project Sdk="Tizen.NET.Sdk/1.0.5">
+﻿<Project Sdk="Tizen.NET.Sdk/1.0.9">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TizenNetPackageVersion>4.0.0</TizenNetPackageVersion>
     <TargetFramework>tizen40</TargetFramework>
   </PropertyGroup>
 
+
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
   </ItemGroup>
 
   <ItemGroup>

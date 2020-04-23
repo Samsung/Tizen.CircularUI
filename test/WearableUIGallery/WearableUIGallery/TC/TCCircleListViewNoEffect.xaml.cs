@@ -27,6 +27,7 @@ namespace WearableUIGallery.TC
         public TCCircleListViewNoEffect()
         {
             InitializeComponent ();
+            Console.WriteLine($"location = {Shell.Current.CurrentState.Location.ToString()}");
         }
 
         public void OnItemTapped(object sender, ItemTappedEventArgs args)

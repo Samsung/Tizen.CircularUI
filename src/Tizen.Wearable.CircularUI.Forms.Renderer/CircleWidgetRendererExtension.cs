@@ -14,38 +14,53 @@
  * limitations under the License.
  */
 
-using System;
+using ElmSharp.Wearable;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using XForms = Xamarin.Forms.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     static class CircleWidgetRendererExtension
     {
-        internal static ElmSharp.Wearable.CircleSurface GetSurface(this IVisualElementRenderer renderer)
+        internal static CircleSurface GetSurface(this IVisualElementRenderer renderer)
         {
-            if (null != renderer.Element)
+            Element element = renderer.Element;
+            CircleSurface circleSurface = null;
+            if (element is ICircleSurfaceConsumer circleElement)
             {
-                Element element = renderer.Element;
-                while (element != null)
+                var provider = circleElement.CircleSurfaceProvider;
+                if (provider != null)
                 {
-                    if (element is CirclePage)
-                    {
-                        var circlePageRenderer = Platform.GetRenderer(element) as CirclePageRenderer;
-                        return circlePageRenderer?.CircleSurface;
-                    }
-                    foreach (var effect in element.Effects)
-                    {
-                        if (effect is TizenCircleSurfaceEffect)
-                        {
-                            return CircleSurfaceEffectBehavior.GetSurface(element) as ElmSharp.Wearable.CircleSurface;
-                        }
-                    }
-
-                    element = element.Parent;
+                    circleSurface = (CircleSurface)provider.CircleSurface;
+                }
+                else
+                {
+                    circleSurface = GetSurfaceRecursively(element);
                 }
             }
-            throw new CircleSurfaceNotFoundException();
+            return circleSurface??XForms.CircleSurface;
+        }
+
+        internal static CircleSurface GetSurfaceRecursively(Element element)
+        {
+            while (element != null)
+            {
+                if (element is CirclePage)
+                {
+                    var circlePageRenderer = Platform.GetRenderer(element) as CirclePageRenderer;
+                    return circlePageRenderer?.CircleSurface;
+                }
+                foreach (var effect in element.Effects)
+                {
+                    if (effect is TizenCircleSurfaceEffect)
+                    {
+                        return CircleSurfaceEffectBehavior.GetSurface(element) as CircleSurface;
+                    }
+                }
+                element = element.Parent;
+            }
+            return null;
         }
     }
 }

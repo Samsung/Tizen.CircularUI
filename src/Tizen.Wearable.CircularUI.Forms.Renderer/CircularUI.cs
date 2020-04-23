@@ -15,10 +15,29 @@
  */
 using System;
 using System.Diagnostics;
-using ElmSharp;
+using Tizen.Applications;
+using Tizen.Wearable.CircularUI.Forms.Renderer;
 
-namespace Tizen.Wearable.CircularUI.Forms.Renderer
+namespace Tizen.Wearable.CircularUI.Forms
 {
+    public class InitOptions
+    {
+        public CoreApplication Context { get; set; }
+
+        public string GoogleMapsAPIKey { get; set; }
+
+        public InitOptions(CoreApplication application)
+        {
+            Context = application;
+        }
+
+        public InitOptions(CoreApplication application, string googleMapsAPIKey)
+        {
+            Context = application;
+            GoogleMapsAPIKey = googleMapsAPIKey;
+        }
+    }
+
     public static class FormsCircularUI
     {
         public static readonly string Tag = "CircularUI";
@@ -41,8 +60,92 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 Debug.Assert(!string.IsNullOrEmpty(apiKey), "apiKey is null or empty!");
             }
+            Init();
+        }
+
+        public static void Init(CoreApplication context)
+        {
+            var resPath = context?.DirectoryInfo?.Resource;
+            if (!string.IsNullOrEmpty(resPath))
+                ThemeLoader.Initialize(resPath);
 
             Init();
+        }
+
+        public static void Init(InitOptions options)
+        {
+            var resPath = options.Context?.DirectoryInfo?.Resource;
+            if (!string.IsNullOrEmpty(resPath))
+                ThemeLoader.Initialize(resPath);
+
+            Init(options.GoogleMapsAPIKey);
+        }
+    }
+}
+
+namespace Tizen.Wearable.CircularUI.Forms.Renderer
+{
+    [Obsolete("This class is obsolete as of version 1.5.0. Please use Tizen.Wearable.CircularUI.Forms.InitOptions instead.")]
+    public class InitOptions
+    {
+        public CoreApplication Context { get; set; }
+
+        public string GoogleMapsAPIKey { get; set; }
+
+        public InitOptions(CoreApplication application)
+        {
+            Context = application;
+        }
+
+        public InitOptions(CoreApplication application, string googleMapsAPIKey)
+        {
+            Context = application;
+            GoogleMapsAPIKey = googleMapsAPIKey;
+        }
+    }
+
+    [Obsolete("This class is obsolete as of version 1.5.0. Please use Tizen.Wearable.CircularUI.Forms.FormsCircularUI instead.")]
+    public static class FormsCircularUI
+    {
+        public static readonly string Tag = "CircularUI";
+
+        public static bool IsInitialized { get; private set; }
+
+        public static void Init()
+        {
+            if (IsInitialized) return;
+            IsInitialized = true;
+        }
+
+        public static void Init(string apiKey)
+        {
+            if (!string.IsNullOrEmpty(apiKey))
+            {
+                GoogleMaps.Init(apiKey);
+            }
+            else
+            {
+                Debug.Assert(!string.IsNullOrEmpty(apiKey), "apiKey is null or empty!");
+            }
+            Init();
+        }
+
+        public static void Init(CoreApplication context)
+        {
+            var resPath = context?.DirectoryInfo?.Resource;
+            if (!string.IsNullOrEmpty(resPath))
+                ThemeLoader.Initialize(resPath);
+
+            Init();
+        }
+
+        public static void Init(InitOptions options)
+        {
+            var resPath = options.Context?.DirectoryInfo?.Resource;
+            if (!string.IsNullOrEmpty(resPath))
+                ThemeLoader.Initialize(resPath);
+
+            Init(options.GoogleMapsAPIKey);
         }
     }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xaminals.Controls"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             xmlns:views="clr-namespace:Xaminals.Views"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             RotaryFocusObject="{x:Reference ListView}"
+             x:Class="Xaminals.Views.DogsPage"
+             Title="Dogs">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#039BE6" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <w:CircleListView x:Name="ListView" ItemsSource="{x:Static data:DogData.Dogs}"
+              ItemTemplate="{StaticResource AnimalListViewTemplate}"
+              SelectionMode="Single"  ItemTapped="OnItemSelected"/>
+    
+</w:CirclePage>

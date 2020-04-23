@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellNavigation.Main">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MainPage"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="Current" FontSize="Small"/>
+            <Button Text="GoTo Setting" Clicked="OnClicked"/>
+            <Button Text="GoTo SubPage" Clicked="OnClicked2"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
