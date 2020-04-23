@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -112,5 +113,35 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
+
+        /// <summary>
+        /// Occurs when the circle stepper's wheel is appeared.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public event EventHandler WheelAppeared;
+
+        /// <summary>
+        /// Occurs when the circle stepper's wheel is disappeared.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public event EventHandler WheelDisappeared;
+
+        /// <summary>
+        /// Internal use only, initializes a new instance of the EmbeddingControls.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void SendWheelAppeared()
+        {
+            WheelAppeared?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Internal use only, initializes a new instance of the EmbeddingControls.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void SendWheelDisappeared()
+        {
+            WheelDisappeared?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
