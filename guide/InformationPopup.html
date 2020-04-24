@@ -103,7 +103,7 @@
 <p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html">InformationPopup  API reference</a>.</p>
 <p><em>The code example of this guide uses TCInformationPopup code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCInformationPopup.xaml.cs</em></p>
 <p><strong>C# file</strong></p>
-<pre><code class="lang-cs">            _textPopUp = new InformationPopup();
+<pre><code class="lang-cs">            var _textPopUp = new InformationPopup();
             _textPopUp.Text = &quot;This is text popup test&quot;;
 
             _textPopUp.BackButtonPressed += (s, e) =&gt;
@@ -111,6 +111,7 @@
                 _textPopUp.Dismiss();
                 label1.Text = &quot;text popup is dismissed&quot;;
             };
+            _textPopUp.show();
 </code></pre><h2 id="create-bottom-button-informationpopup">Create bottom button InformationPopup</h2>
 <p>You can set <code>BottomButton</code> property with <code>MenuItem</code>. The bottom button is used for confirmation dialog purpose, that asks user to approve requested operation.
 InformationPopup has <code>Title</code> property for displaying title.
@@ -125,7 +126,7 @@ When you click the bottom button, <code>BottomButton.Clicked</code> event occurs
                 })
             };
 
-            _textButtonPopUp = new InformationPopup();
+            var _textButtonPopUp = new InformationPopup();
             _textButtonPopUp.Title = &quot;Popup title&quot;;
             _textButtonPopUp.Text = &quot;This is text and button popup test&quot;;
             _textButtonPopUp.BottomButton = bottomButton;
@@ -135,13 +136,15 @@ When you click the bottom button, <code>BottomButton.Clicked</code> event occurs
                 _textButtonPopUp.Dismiss();
                 label1.Text = &quot;text&amp;button is dismissed&quot;;
             };
+            _textButtonPopUp.show();
 </code></pre><h2 id="create-progress-informationpopup">Create progress InformationPopup</h2>
 <p><code>InformationPopup</code>  has <code>IsProgressRunning</code> property. If this property sets <code>true</code>, small circle progress bar is displayed in the center of the screen.</p>
 <p><strong>C# file</strong></p>
-<pre><code class="lang-cs">            _progressPopUp = new InformationPopup();
+<pre><code class="lang-cs">            var _progressPopUp = new InformationPopup();
             _progressPopUp.Title = &quot;Popup title&quot;;
             _progressPopUp.Text = &quot;This is progress test&quot;;
             _progressPopUp.IsProgressRunning = true;
+            _progressPopUp.show();
 </code></pre></article>
           </div>
           

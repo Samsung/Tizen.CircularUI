@@ -992,6 +992,18 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.CircleStepper.TitleProperty
   fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.TitleProperty
   nameWithType: CircleStepper.TitleProperty
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.WheelAppeared
+  name: WheelAppeared
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_WheelAppeared
+  commentId: E:Tizen.Wearable.CircularUI.Forms.CircleStepper.WheelAppeared
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.WheelAppeared
+  nameWithType: CircleStepper.WheelAppeared
+- uid: Tizen.Wearable.CircularUI.Forms.CircleStepper.WheelDisappeared
+  name: WheelDisappeared
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html#Tizen_Wearable_CircularUI_Forms_CircleStepper_WheelDisappeared
+  commentId: E:Tizen.Wearable.CircularUI.Forms.CircleStepper.WheelDisappeared
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleStepper.WheelDisappeared
+  nameWithType: CircleStepper.WheelDisappeared
 - uid: Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior
   name: CircleSurfaceEffectBehavior
   href: api/Tizen.Wearable.CircularUI.Forms.CircleSurfaceEffectBehavior.html
