@@ -427,6 +427,9 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void ActivateRotaryWidget()
         {
+            if (!Element.Appeared)
+                return;
+
             if (_currentRotaryFocusObject is IRotaryEventReceiver)
             {
                 ERotaryEventManager.Rotated += OnRotaryEventChanged;
