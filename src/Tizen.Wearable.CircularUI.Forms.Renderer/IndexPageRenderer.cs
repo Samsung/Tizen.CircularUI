@@ -148,9 +148,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 (nativeView as ElmSharp.Widget)?.AllowFocus(true);
                 index++;
             }
-            _innerContainer.MinimumWidth = Element.Children.Count * bound.Width;
 
-            if (_scroller.HorizontalPageIndex != _pageIndex)
+            var widthRequest = Element.Children.Count * bound.Width;
+            _innerContainer.MinimumWidth = widthRequest;
+            if (_innerContainer.Geometry.Width == widthRequest  && _scroller.HorizontalPageIndex != _pageIndex)
             {
                 _scroller.ScrollTo(_pageIndex, 0, false);
             }
@@ -242,8 +243,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             _pageIndex = Element.Children.IndexOf(Element.CurrentPage);
             _isUpdateCarousel = true;
-            _scroller.ScrollTo(_pageIndex, 0, false);
             Element.UpdateFocusTreePolicy();
+            _scroller.ScrollTo(_pageIndex, 0, false);
             _isUpdateCarousel = false;
         }
 
