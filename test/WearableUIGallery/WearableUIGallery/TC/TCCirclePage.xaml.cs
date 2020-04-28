@@ -29,5 +29,10 @@ namespace WearableUIGallery.TC
 
             ChangeName.SubText = "SubText";
         }
+
+        void CircleToolbarItem_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new TCCircleScroller());
+        }
     }
 }

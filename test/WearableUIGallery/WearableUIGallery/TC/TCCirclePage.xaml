@@ -100,5 +100,9 @@
             x:Name="ChangeName"
             Icon="image/question.png"
             Text="MainText"/>
+        <w:CircleToolbarItem
+            Clicked="CircleToolbarItem_Clicked"
+            Icon="image/question.png"
+            Text="Popup"/>
     </w:CirclePage.ToolbarItems>
 </w:CirclePage>
