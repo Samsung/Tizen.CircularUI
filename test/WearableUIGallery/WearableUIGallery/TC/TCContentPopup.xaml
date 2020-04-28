@@ -20,7 +20,7 @@
                 <Button
                     AutomationId="dismisstest1"
                     x:Name="button1"
-                    Clicked="OnContentPopupDismissBackKeyClicked"
+                    Clicked="OnContentPopupTest1Clicked"
                     FontSize="Small"
                     HeightRequest="50"
                     HorizontalOptions="Center"
@@ -30,7 +30,7 @@
                 <Button
                     AutomationId="dismisstest2"
                     x:Name="button2"
-                    Clicked="OnContentPopupDismissButtonClicked"
+                    Clicked="OnContentPopupTest2Clicked"
                     FontSize="Small"
                     HeightRequest="50"
                     HorizontalOptions="Center"

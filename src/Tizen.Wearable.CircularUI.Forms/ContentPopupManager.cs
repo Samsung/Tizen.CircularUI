@@ -14,27 +14,32 @@
  * limitations under the License.
  */
 
-using System;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
-    /// <summary>
-    /// Base interface for ContentPopup renderer.
-    /// </summary>
-    /// <since_tizen> 4 </since_tizen>
-    public interface IContentPopupRenderer : IDisposable
+    public static class ContentPopupManager
     {
-        /// <summary>
-        /// Sets the Element associated with this renderer.
-        /// </summary>
-        /// <param name="element">New element.</param>
-        void SetElement(ContentPopup element);
+        public static async Task ShowPopup(this INavigation navigation, ContentPopup popup)
+        {
+            await ShowPopup(popup);
+        }
 
-        /// <summary>
-        /// Open a popup.
-        /// </summary>
-        /// <returns>Returns a Task with the dismiss result of the popup.</returns>
-        Task Open();
+        public static async Task ShowPopup(ContentPopup popup)
+        {
+            if (popup == null)
+                await Task.FromResult(false);
+
+            using (var renderer = DependencyService.Get<IContentPopupRenderer>(DependencyFetchTarget.NewInstance))
+            {
+                if (renderer == null)
+                    await Task.FromResult(false);
+
+                renderer.SetElement(popup);
+
+                await renderer.Open();
+            }
+        }
     }
 }

@@ -16,13 +16,12 @@
 
 using System;
 using System.ComponentModel;
-using Tizen.Wearable.CircularUI.Forms;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
 
-[assembly: ExportRenderer(typeof(ContentPopup), typeof(ContentPopupRenderer))]
+[assembly: Dependency(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.ContentPopupRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -30,23 +29,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
     {
         ElmSharp.Popup _popup;
         ContentPopup _element;
-
-        public void SetElement(Element element)
-        {
-            if (element.Parent == null)
-                element.Parent = Application.Current;
-            element.PropertyChanged += OnElementPropertyChanged;
-            _element = element as ContentPopup;
-
-            UpdateContent();
-            UpdateIsShow();
-        }
+        TaskCompletionSource<bool> _tcs;
 
         public ContentPopupRenderer()
         {
             _popup = new ElmSharp.Popup(XForms.NativeParent);
             _popup.Style = "circle";
-
             _popup.BackButtonPressed += OnBackButtonPressed;
             _popup.Dismissed += OnDismissed;
         }
@@ -56,32 +44,37 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             Dispose(false);
         }
 
+        public void SetElement(ContentPopup element)
+        {
+            if (element.Parent == null)
+                element.Parent = Application.Current;
+            element.PropertyChanged += OnElementPropertyChanged;
+            _element = element;
+
+            UpdateContent();
+        }
+
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
-        public void Dismiss()
+        public Task Open()
         {
-            _popup?.Hide();
-        }
-
-        public void Show()
-        {
-            _popup?.Show();
+            _popup.Show();
+            _element.IsOpen = true;
+            _tcs = new TaskCompletionSource<bool>();
+            return _tcs.Task;
         }
 
         protected void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == ContentPopup.ContentProperty.PropertyName)
-            {
                 UpdateContent();
-            }
-            if (e.PropertyName == ContentPopup.IsShowProperty.PropertyName)
-            {
-                UpdateIsShow();
-            }
+
+            if (e.PropertyName == ContentPopup.IsOpenProperty.PropertyName)
+                UpdateIsOpen();
         }
 
         protected virtual void Dispose(bool disposing)
@@ -105,13 +98,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnBackButtonPressed(object sender, EventArgs e)
         {
-            _element.SendBackButtonPressed();
+            if (!_element.SendBackButtonPressed())
+                _popup?.Hide();
         }
 
         void OnDismissed(object sender, EventArgs e)
         {
             _element.SendDismissed();
-            Dispose();
+            _tcs?.SetResult(true);
         }
 
         void UpdateContent()
@@ -121,7 +115,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var renderer = Platform.GetOrCreateRenderer(_element.Content);
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 var native = renderer.NativeView;
-                native.MinimumHeight = 360;
+                native.MinimumHeight = XForms.NativeParent.Geometry.Height;
                 _popup.SetContent(native, false);
             }
             else
@@ -130,12 +124,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateIsShow()
+        void UpdateIsOpen()
         {
-            if (_element.IsShow)
-                Show();
-            else
-                Dismiss();
+            if (!_element.IsOpen)
+                _popup?.Hide();
         }
     }
 }

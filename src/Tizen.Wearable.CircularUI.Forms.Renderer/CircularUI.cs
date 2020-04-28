@@ -48,7 +48,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             if (IsInitialized) return;
             IsInitialized = true;
-            ContentPopup.RendererFunc = () => new ContentPopupRenderer();
         }
 
         public static void Init(string apiKey)

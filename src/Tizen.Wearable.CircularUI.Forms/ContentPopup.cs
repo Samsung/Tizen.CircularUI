@@ -24,16 +24,8 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The ContentPopup is a Popup, which allows you to customize the View to be displayed.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class ContentPopup : Element, IDisposable
+    public class ContentPopup : Element
     {
-        IContentPopupRenderer _renderer;
-
-        /// <summary>
-        /// For internal use.
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static Func<IContentPopupRenderer> RendererFunc { get; set; } = null;
-
         /// <summary>
         /// BindableProperty. Identifies the Content bindable property.
         /// </summary>
@@ -44,13 +36,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the IsShow bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty IsShowProperty = BindableProperty.Create(nameof(IsShow), typeof(bool), typeof(ContentPopup), false, propertyChanged:(b, o, n) => ((ContentPopup)b).UpdateRenderer());
-
-        /// <summary>
-        /// Occurs when the device's back button is pressed.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public event EventHandler BackButtonPressed;
+        public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(ContentPopup), false);
 
         /// <summary>
         /// Occurs when the popup is dismissed.
@@ -69,22 +55,13 @@ namespace Tizen.Wearable.CircularUI.Forms
         }
 
         /// <summary>
-        /// Gets or sets the popup is shown.
+        /// Gets or sets the popup is opened.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public bool IsShow
+        public bool IsOpen
         {
-            get { return (bool)GetValue(IsShowProperty); }
-            set { SetValue(IsShowProperty, value); }
-        }
-
-        /// <summary>
-        /// Shows the popup.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public void Show()
-        {
-            IsShow = true;
+            get { return (bool)GetValue(IsOpenProperty); }
+            set { SetValue(IsOpenProperty, value); }
         }
 
         /// <summary>
@@ -93,7 +70,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <since_tizen> 4 </since_tizen>
         public void Dismiss()
         {
-            IsShow = false;
+            IsOpen = false;
         }
 
         /// <summary>
@@ -109,27 +86,18 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// For internal use.
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public void SendBackButtonPressed()
+        public bool SendBackButtonPressed()
         {
-            BackButtonPressed?.Invoke(this, EventArgs.Empty);
+            return OnBackButtonPressed();
         }
 
         /// <summary>
-        /// Dispose the popup.
+        /// To change the default behavior of the BackButton. Default behavior is dismiss.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public void Dispose()
+        /// <returns>Default is false</returns>
+        protected virtual bool OnBackButtonPressed()
         {
-            Dispose(true);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposing && _renderer != null)
-            {
-                _renderer.Dispose();
-                _renderer = null;
-            }
+            return false;
         }
 
         protected override void OnBindingContextChanged()
@@ -144,15 +112,5 @@ namespace Tizen.Wearable.CircularUI.Forms
             if (Content != null)
                 OnChildAdded(Content);
         }
-
-        void UpdateRenderer()
-        {
-            if (_renderer == null)
-            {
-                _renderer = RendererFunc();
-                _renderer.SetElement(this);
-            }
-        }
-
     }
 }

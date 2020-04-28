@@ -29,34 +29,34 @@ namespace WearableUIGallery.TC
             InitializeComponent();
         }
 
-        private void OnContentPopupDismissBackKeyClicked(object sender, EventArgs e)
+        async void OnContentPopupTest1Clicked(object sender, EventArgs e)
         {
-            ContentPopup _popup = new ContentPopup();
-            _popup.BackButtonPressed += (s, ee) =>
+            ContentPopup popup = new ContentPopup();
+
+            var label = new Label
             {
-                _popup?.Dismiss();
-                label1.Text = "Test1 Dismissed";
+                Text = "This ContentPopup is dismissed as a back key.",
+                HorizontalTextAlignment = TextAlignment.Center,
             };
 
-            string _longText = "This ContentPopup is dismissed as a back key.";
-            var content = new Label { Text = _longText, HorizontalTextAlignment = TextAlignment.Center };
+            popup.Content = label;
 
-            _popup.Content = content;
-            _popup.Show();
+            await ContentPopupManager.ShowPopup(popup);
         }
 
-        private void OnContentPopupDismissButtonClicked(object sender, EventArgs e)
+        async void OnContentPopupTest2Clicked(object sender, EventArgs e)
         {
-            ContentPopup _popup = new ContentPopup();
+            MyPopup popup = new MyPopup();
+
             var dismiss = new Button
             {
                 Text = "Dismiss",
+                MinimumHeightRequest = 75,
             };
-            dismiss.Clicked += (s, ee) => {
-                _popup?.Dismiss();
-                label1.Text = "Test2 Dismissed";
+            dismiss.Clicked += (s, ee) =>
+            {
+                popup?.Dismiss();
             };
-
             var label = new Label
             {
                 Text = "This ContentPopup is dismissed as a below dismiss button.",
@@ -74,8 +74,17 @@ namespace WearableUIGallery.TC
             grid.Children.Add(label, 0, 1, 1, 3);
             grid.Children.Add(dismiss, 0, 1, 3, 4);
 
-            _popup.Content = grid;
-            _popup.Show();
+            popup.Content = grid;
+
+            await ContentPopupManager.ShowPopup(popup);
+        }
+    }
+
+    public class MyPopup : ContentPopup
+    {
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
         }
     }
 }
