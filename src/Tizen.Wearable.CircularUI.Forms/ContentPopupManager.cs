@@ -29,12 +29,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static async Task ShowPopup(ContentPopup popup)
         {
             if (popup == null)
-                await Task.FromResult(false);
+                return;
 
             using (var renderer = DependencyService.Get<IContentPopupRenderer>(DependencyFetchTarget.NewInstance))
             {
                 if (renderer == null)
-                    await Task.FromResult(false);
+                    return;
 
                 renderer.SetElement(popup);
 

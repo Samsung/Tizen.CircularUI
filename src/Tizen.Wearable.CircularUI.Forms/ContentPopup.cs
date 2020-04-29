@@ -36,7 +36,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the IsShow bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(ContentPopup), false);
+        public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(ContentPopup), false, defaultBindingMode: BindingMode.TwoWay);
 
         /// <summary>
         /// Occurs when the popup is dismissed.

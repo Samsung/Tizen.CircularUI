@@ -63,7 +63,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public Task Open()
         {
             _popup.Show();
-            _element.IsOpen = true;
+            _element.SetValueFromRenderer(ContentPopup.IsOpenProperty, true);
             _tcs = new TaskCompletionSource<bool>();
             return _tcs.Task;
         }
@@ -116,6 +116,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
                 var native = renderer.NativeView;
                 native.MinimumHeight = XForms.NativeParent.Geometry.Height;
+                native.MinimumWidth = XForms.NativeParent.Geometry.Width;
                 _popup.SetContent(native, false);
             }
             else
