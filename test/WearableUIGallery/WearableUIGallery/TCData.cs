@@ -63,7 +63,8 @@ namespace WearableUIGallery
                 {
                     new TCDescribe { Title = "CirclePageBehavior", Class = typeof(TCCirclePage) },
                     new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) },
-                    new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) }
+                    new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) },
+                    new TCDescribe { Title = "Background", Class = typeof(TCCirclePageBackground) }
                 }
             });
             TCs.Add(new TCDescribe { Title = "DateTimeSelector", Class = typeof(TCCircleDateTimeSelector) });
