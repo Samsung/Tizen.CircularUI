@@ -18,47 +18,40 @@ using ElmSharp;
 using ElmSharp.Wearable;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Linq;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
-using XForms = Xamarin.Forms.Forms;
 using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
-
-using XToolbarItem = Xamarin.Forms.ToolbarItem;
+using NPage = Xamarin.Forms.Platform.Tizen.Native.Page;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(CirclePage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class CirclePageRenderer : VisualElementRenderer<CirclePage>
+    public class CirclePageRenderer : PageRenderer
     {
-        ObservableBox _box;
-
-        ElmSharp.Rectangle _bgColorObject;
-        ElmSharp.EvasImage _bgImageObject;
-        ElmSharp.Layout _surfaceLayout;
         ElmSharp.Button _actionButton;
-        ImageSource _bgImage;
-
-        ElmSharp.Wearable.CircleSurface _surface;
+        ActionButtonItem _actionButtonItem;
+        ElmSharp.Layout _surfaceLayout;
+        Dictionary<ICircleSurfaceItem, ICircleWidget> _circleSurfaceItems;
         IRotaryFocusable _currentRotaryFocusObject;
 
-        ElmSharp.Wearable.MoreOption _moreOption;
-        Dictionary<XToolbarItem, ElmSharp.Wearable.MoreOptionItem> _toolbarItemMap;
-        Dictionary<ICircleSurfaceItem, ElmSharp.Wearable.ICircleWidget> _circleSurfaceItems;
+        NPage Control => (NativeView as NPage);
+
+        new CirclePage Element => base.Element as CirclePage;
 
         public CirclePageRenderer()
         {
-            RegisterPropertyHandler(Xamarin.Forms.Page.BackgroundImageSourceProperty, UpdateBackgroundImage);
             RegisterPropertyHandler(CirclePage.ActionButtonProperty, UpdateActionButton);
             RegisterPropertyHandler(CirclePage.RotaryFocusObjectProperty, UpdateRotaryFocusObject);
         }
 
-        public ElmSharp.Wearable.CircleSurface CircleSurface => _surface;
+        public CircleSurface CircleSurface { get; private set; }
 
         public void UpdateRotaryFocusObject(bool initialize)
         {
@@ -74,43 +67,31 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<CirclePage> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page> e)
         {
-            if (_box == null)
-            {
-                OnRealized();
-            }
-            if (e.NewElement != null)
-            {
-                e.NewElement.CircleSurface = _surface;
-                e.NewElement.Appearing += OnPageAppearing;
-                e.NewElement.Disappearing += OnPageDisappearing;
-                var toolbarItems = e.NewElement.ToolbarItems as ObservableCollection<XToolbarItem>;
-                if (toolbarItems != null)
-                    toolbarItems.CollectionChanged += OnToolbarItemChanged;
-                var circleSurfaceItems = e.NewElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
-                if (circleSurfaceItems != null)
-                {
-                    circleSurfaceItems.CollectionChanged += OnCircleSurfaceItemsChanged;
-
-                    foreach (var item in circleSurfaceItems)
-                    {
-                        AddCircleSurfaceItem(item);
-                    }
-                }
-            }
-            if (e.OldElement != null)
-            {
-                e.OldElement.Appearing -= OnPageAppearing;
-                e.OldElement.Disappearing -= OnPageDisappearing;
-                var toolbarItems = e.OldElement.ToolbarItems as ObservableCollection<XToolbarItem>;
-                if (toolbarItems != null)
-                    toolbarItems.CollectionChanged -= OnToolbarItemChanged;
-                var circleSurfaceItems = e.OldElement.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
-                if (circleSurfaceItems != null)
-                    circleSurfaceItems.CollectionChanged -= OnCircleSurfaceItemsChanged;
-            }
+            // It will create NativeView and it will be Native.Page
             base.OnElementChanged(e);
+
+            Control.LayoutUpdated += OnLayoutUpdated;
+
+            _surfaceLayout = new ElmSharp.Layout(XForms.NativeParent);
+            CircleSurface = new CircleSurface(_surfaceLayout);
+            Control.Children.Add(_surfaceLayout);
+            _surfaceLayout.Show();
+            _circleSurfaceItems = new Dictionary<ICircleSurfaceItem, ICircleWidget>();
+
+            var newElement = e.NewElement as CirclePage;
+            newElement.Appearing += OnPageAppearing;
+            newElement.Disappearing += OnPageDisappearing;
+            newElement.CircleSurface = CircleSurface;
+            foreach (var item in newElement.CircleSurfaceItems)
+            {
+                AddCircleSurfaceItem(item);
+            }
+            if (newElement.CircleSurfaceItems is INotifyCollectionChanged collectionChanged)
+            {
+                collectionChanged.CollectionChanged += OnCircleSurfaceItemsChanged;
+            }
         }
 
         protected override void OnElementReady()
@@ -124,201 +105,114 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        protected override void UpdateBackgroundColor(bool initialize)
-        {
-            if (initialize && Element.BackgroundColor.IsDefault) return;
-
-            if (Element.BackgroundColor.A == 0)
-            {
-                _bgColorObject.Color = ElmSharp.Color.Transparent;
-            }
-            else
-            {
-                _bgColorObject.Color = Element.BackgroundColor.ToNative();
-            }
-            UpdateBackground();
-        }
-        protected void UpdateBackgroundImage(bool initialize)
-        {
-            if (initialize && Element.BackgroundImageSource.IsNullOrEmpty())
-                return;
-
-            var bgImageSource = Element.BackgroundImageSource as FileImageSource;
-            if (bgImageSource.IsNullOrEmpty())
-            {
-                _bgImageObject.File = null;
-                _bgImage = null;
-            }
-            else
-            {
-                _bgImageObject.IsFilled = true;
-                _bgImageObject.File = ResourcePath.GetPath(bgImageSource);
-                _bgImage = Element.BackgroundImageSource;
-            }
-            UpdateBackground();
-        }
         protected override void Dispose(bool disposing)
         {
-            if (Element != null)
+            if (disposing)
             {
-                Element.Appearing -= OnPageAppearing;
-                Element.Disappearing -= OnPageDisappearing;
-                if (Element.ActionButton != null)
+                if (Element != null)
                 {
-                    Element.ActionButton.PropertyChanged -= OnActionButtonItemChanged;
+                    Element.Appearing -= OnPageAppearing;
+                    Element.Disappearing -= OnPageDisappearing;
+                    Element.CircleSurface = null;
+                    if (_actionButtonItem != null)
+                    {
+                        _actionButtonItem.PropertyChanged -= OnActionButtonItemChanged;
+                    }
+                    if (Element.CircleSurfaceItems is INotifyCollectionChanged collectionChanged)
+                    {
+                        collectionChanged.CollectionChanged -= OnCircleSurfaceItemsChanged;
+                    }
                 }
-                var toolbarItems = Element.ToolbarItems as ObservableCollection<XToolbarItem>;
-                if (toolbarItems != null)
-                    toolbarItems.CollectionChanged -= OnToolbarItemChanged;
-
-                var circleSurfaceItems = Element.CircleSurfaceItems as ObservableCollection<ICircleSurfaceItem>;
-                if (circleSurfaceItems != null)
-                    circleSurfaceItems.CollectionChanged -= OnCircleSurfaceItemsChanged;
             }
             base.Dispose(disposing);
         }
-        void OnRealized()
+
+        void UpdateActionButton(bool init)
         {
-            _box = new ObservableBox(XForms.NativeParent);
-            _box.SetLayoutCallback(OnLayout);
-
-            _bgColorObject = new ElmSharp.Rectangle(_box)
+            if (_actionButtonItem != null)
             {
-                Color = ElmSharp.Color.Transparent
-            };
-            _bgImageObject = new EvasImage(_box);
-            _surfaceLayout = new ElmSharp.Layout(_box);
-            _surface = new ElmSharp.Wearable.CircleSurface(_surfaceLayout);
-
-
-            _toolbarItemMap = new Dictionary<XToolbarItem, ElmSharp.Wearable.MoreOptionItem>();
-            _circleSurfaceItems = new Dictionary<ICircleSurfaceItem, ICircleWidget>();
-
-            _box.PackEnd(_bgColorObject);
-            _box.PackEnd(_bgImageObject);
-            _box.PackEnd(_surfaceLayout);
-
-            _bgColorObject.Show();
-            _bgImageObject.Hide();
-            _surfaceLayout.Show();
-
-            if (Element.ToolbarItems.Count > 0)
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    SetVisibleMoreOption(true);
-
-                    foreach (var item in Element.ToolbarItems)
-                    {
-                        AddToolbarItem(item);
-                    }
-                });
-
+                _actionButtonItem.PropertyChanged -= OnActionButtonItemChanged;
+                _actionButtonItem = null;
             }
 
-            SetNativeView(_box);
+            if (Element.ActionButton != null)
+            {
+                if (_actionButton == null)
+                {
+                    InitializeActionButton();
+                }
+
+                UpdateActionButtonVisible(Element.ActionButton.IsVisible);
+                UpdateActionButtonText(Element.ActionButton.Text);
+                UpdateActionButtonIcon(Element.ActionButton.IconImageSource);
+                _actionButton.IsEnabled = Element.ActionButton.IsEnable;
+                _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
+
+                _actionButtonItem = Element.ActionButton;
+                _actionButtonItem.PropertyChanged += OnActionButtonItemChanged;
+            }
+            else
+            {
+                if (_actionButton != null)
+                {
+                    DeinitializeActionButton();
+                }
+            }
+            if (!init)
+            {
+                Device.BeginInvokeOnMainThread(() => OnLayout());
+            }
+        }
+
+        void OnPageDisappearing(object sender, EventArgs e)
+        {
+            DeactivateRotaryWidget();
+        }
+
+        void OnPageAppearing(object sender, EventArgs e)
+        {
+            ActivateRotaryWidget();
+        }
+
+        void OnLayoutUpdated(object sender, LayoutEventArgs e)
+        {
+            OnLayout();
         }
 
         void OnLayout()
         {
-            var rect = _box.Geometry;
-            Element.Layout(rect.ToDP());
-            _bgColorObject.Geometry = rect;
-            _bgImageObject.Geometry = rect;
+            // Page layout was updated on base class
+            // It only update ActionButton
 
-            _bgImageObject.StackAbove(_bgColorObject);
-            EvasObject prev = _bgImageObject;
+            var content = (Element as IElementController).LogicalChildren.FirstOrDefault();
+            if (content == null)
+                return;
 
-            IContainable<EvasObject> container = _box;
-            foreach (var obj in container.Children)
-            {
-                obj.StackAbove(prev);
-                prev = obj;
-            }
+            var topmostView = Platform.GetRenderer(content)?.NativeView;
+
+            var bound = Control.Geometry;
 
             if (_actionButton != null)
             {
                 var btnRect = _actionButton.Geometry;
                 var btnW = Math.Max(_actionButton.MinimumWidth, btnRect.Width);
                 var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
-                var btnX = rect.X + (rect.Width - btnW) / 2;
-                var btnY = rect.Y + rect.Height - btnH;
+                var btnX = bound.X + (bound.Width - btnW) / 2;
+                var btnY = bound.Y + bound.Height - btnH;
                 _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
-                _actionButton.StackAbove(prev);
-                prev = _actionButton;
+                _actionButton.StackAbove(topmostView);
+                topmostView = _actionButton;
             }
 
-            _surfaceLayout.Geometry = rect;
-            _surfaceLayout.StackAbove(prev);
-            prev = _surfaceLayout;
-
-            if (_moreOption != null)
-            {
-                _moreOption.Geometry = rect;
-                _moreOption.StackAbove(prev);
-            }
+            _surfaceLayout.Geometry = bound;
+            _surfaceLayout.StackAbove(topmostView);
         }
 
-        void UpdateBackground()
+        void OnActionButtonClicked(object sender, EventArgs e)
         {
-            if (_bgImage.IsNullOrEmpty())
-            {
-                _bgImageObject.Hide();
-            }
-            else
-            {
-                _bgImageObject.Show();
-            }
-        }
-        void UpdateActionButton(bool initialize)
-        {
-
             if (Element.ActionButton != null)
             {
-                if (_actionButton == null)
-                {
-                    _actionButton = new ElmSharp.Button(_box)
-                    {
-                        Style = "bottom"
-                    };
-                    _actionButton.Clicked += OnActionButtonClicked;
-                    _box.PackEnd(_actionButton);
-                }
-
-                SetVisibleActionButton(Element.ActionButton.IsVisible);
-
-                Element.ActionButton.PropertyChanged += OnActionButtonItemChanged;
-                _actionButton.Text = Element.ActionButton.Text?.Replace("&", "&amp;")
-                           .Replace("<", "&lt;")
-                           .Replace(">", "&gt;")
-                           .Replace(Environment.NewLine, "<br>");
-
-                _actionButton.IsEnabled = Element.ActionButton.IsEnable;
-                if (!Element.ActionButton.IconImageSource.IsNullOrEmpty())
-                {
-                    var imageSource = Element.ActionButton.IconImageSource as FileImageSource;
-                    var path = ResourcePath.GetPath(imageSource);
-                    var buttonImage = new ElmSharp.Image(_actionButton);
-                    buttonImage.LoadAsync(path);
-                    buttonImage.Show();
-                    _actionButton.SetPartContent("elm.swallow.content", buttonImage);
-                }
-                else
-                {
-                    _actionButton.SetPartContent("elm.swallow.content", null);
-                }
-
-                 _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
-            }
-            else
-            {
-                if (_actionButton != null)
-                {
-                    _actionButton.Clicked -= OnActionButtonClicked;
-                    _box.UnPack(_actionButton);
-                    _actionButton.Unrealize();
-                    _actionButton = null;
-                }
+                ((IMenuItemController)Element.ActionButton).Activate();
             }
         }
 
@@ -330,7 +224,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             if (e.PropertyName == MenuItem.TextProperty.PropertyName)
             {
-                _actionButton.Text = Element.ActionButton.Text;
+                UpdateActionButtonText(Element.ActionButton.Text);
             }
             else if (e.PropertyName == ActionButtonItem.IsEnableProperty.PropertyName)
             {
@@ -338,124 +232,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             else if (e.PropertyName == ActionButtonItem.IsVisibleProperty.PropertyName)
             {
-                SetVisibleActionButton(Element.ActionButton.IsVisible);
+                UpdateActionButtonVisible(Element.ActionButton.IsVisible);
             }
-        }
-        void OnActionButtonClicked(object sender, EventArgs e)
-        {
-            if (Element.ActionButton != null)
+            else if (e.PropertyName == ActionButtonItem.BackgroundColorProperty.PropertyName)
             {
-                ((IMenuItemController)Element.ActionButton).Activate();
+                _actionButton.BackgroundColor = Element.ActionButton.BackgroundColor.ToNative();
             }
-        }
-        void OnToolbarItemChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {
-            SetVisibleMoreOption(Element.ToolbarItems.Count > 0);
-            if (e.Action == NotifyCollectionChangedAction.Add ||
-                e.Action == NotifyCollectionChangedAction.Replace)
+            else if (e.PropertyName == MenuItem.IconImageSourceProperty.PropertyName)
             {
-                foreach (XToolbarItem item in e.NewItems) AddToolbarItem(item);
-            }
-            if (e.Action == NotifyCollectionChangedAction.Remove ||
-                e.Action == NotifyCollectionChangedAction.Replace)
-            {
-                foreach (XToolbarItem item in e.OldItems) RemoveToolbarITem(item);
-            }
-        }
-        void AddToolbarItem(XToolbarItem item)
-        {
-            var moreOptionItem = new ActionMoreOptionItem();
-            var icon = item.IconImageSource;
-            if (!icon.IsNullOrEmpty())
-            {
-                var iconSource = icon as FileImageSource;
-                var img = new ElmSharp.Image(_moreOption);
-                img.LoadAsync(ResourcePath.GetPath(iconSource));
-                moreOptionItem.Icon = img;
-            }
-            var text = item.Text;
-            if (!string.IsNullOrEmpty(text))
-            {
-                moreOptionItem.MainText = text;
-            }
-            if (item is CircleToolbarItem)
-            {
-                var subText = ((CircleToolbarItem)item).SubText;
-                if (!string.IsNullOrEmpty(subText))
-                {
-                    moreOptionItem.SubText = subText;
-                }
-            }
-            moreOptionItem.Action = () => ((IMenuItemController)item).Activate();
-            _moreOption.Items.Add(moreOptionItem);
-            _toolbarItemMap[item] = moreOptionItem;
-        }
-        void RemoveToolbarITem(XToolbarItem item)
-        {
-            if (_toolbarItemMap.TryGetValue(item, out var moreOptionItem))
-            {
-                _moreOption?.Items.Remove(moreOptionItem);
-                _toolbarItemMap.Remove(item);
-            }
-        }
-        void OnMoreOptionClicked(object sender, ElmSharp.Wearable.MoreOptionItemEventArgs e)
-        {
-            var item = e.Item as ActionMoreOptionItem;
-            if (item != null)
-            {
-                item.Action?.Invoke();
-            }
-            _moreOption.IsOpened = false;
-        }
-
-        void OnPageDisappearing(object sender, EventArgs e)
-        {
-            DeactivateRotaryWidget();
-        }
-        void OnPageAppearing(object sender, EventArgs e)
-        {
-            ActivateRotaryWidget();
-        }
-        void ToolbarClosed(object sender, EventArgs e)
-        {
-            ActivateRotaryWidget();
-        }
-        void ToolbarOpened(object sender, EventArgs e)
-        {
-            DeactivateRotaryWidget();
-        }
-
-        void ActivateRotaryWidget()
-        {
-            if (!Element.Appeared)
-                return;
-
-            if (_currentRotaryFocusObject is IRotaryEventReceiver)
-            {
-                ERotaryEventManager.Rotated += OnRotaryEventChanged;
-            }
-            else if (_currentRotaryFocusObject is IRotaryFocusable)
-            {
-                GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
-            }
-        }
-        void DeactivateRotaryWidget()
-        {
-            if (_currentRotaryFocusObject is IRotaryEventReceiver)
-            {
-                ERotaryEventManager.Rotated -= OnRotaryEventChanged;
-            }
-            else if (_currentRotaryFocusObject is IRotaryFocusable)
-            {
-                GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
-            }
-        }
-        void OnRotaryEventChanged(ElmSharp.Wearable.RotaryEventArgs e)
-        {
-            if (_currentRotaryFocusObject is IRotaryEventReceiver)
-            {
-                var receiver = _currentRotaryFocusObject as IRotaryEventReceiver;
-                receiver.Rotate(new RotaryEventArgs { IsClockwise = e.IsClockwise });
+                UpdateActionButtonIcon(Element.ActionButton.IconImageSource);
             }
         }
 
@@ -477,42 +262,72 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void AddCircleSurfaceItem(ICircleSurfaceItem item)
         {
-            if (item is CircleProgressBarSurfaceItem)
+            if (item is CircleProgressBarSurfaceItem progressbar)
             {
-                var widget = new CircleProgressBarSurfaceItemImplements(item as CircleProgressBarSurfaceItem, _surfaceLayout, _surface);
-                _circleSurfaceItems[item] = widget;
+                _circleSurfaceItems[item] = new CircleProgressBarSurfaceItemImplements(progressbar, _surfaceLayout, CircleSurface);
             }
-            else if (item is CircleSliderSurfaceItem)
+            else if (item is CircleSliderSurfaceItem slider)
             {
-                var widget = new CircleSliderSurfaceItemImplements(item as CircleSliderSurfaceItem, _surfaceLayout, _surface);
-                _circleSurfaceItems[item] = widget;
+                _circleSurfaceItems[item] = new CircleSliderSurfaceItemImplements(slider, _surfaceLayout, CircleSurface);
             }
         }
+
         void RemoveCircleSurfaceItem(ICircleSurfaceItem item)
         {
             if (_circleSurfaceItems.TryGetValue(item, out var widget))
             {
-                ElmSharp.EvasObject obj = widget as ElmSharp.EvasObject;
-                obj?.Unrealize();
+                (widget as EvasObject)?.Unrealize();
                 _circleSurfaceItems.Remove(item);
+            }
+        }
+
+        void ActivateRotaryWidget()
+        {
+            if (!Element.Appeared)
+                return;
+
+            if (_currentRotaryFocusObject is IRotaryEventReceiver)
+            {
+                ERotaryEventManager.Rotated += OnRotaryEventChanged;
+            }
+            else
+            {
+                GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
+            }
+        }
+
+        void DeactivateRotaryWidget()
+        {
+            if (_currentRotaryFocusObject is IRotaryEventReceiver)
+            {
+                ERotaryEventManager.Rotated -= OnRotaryEventChanged;
+            }
+            else if (_currentRotaryFocusObject is IRotaryFocusable)
+            {
+                GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
+            }
+        }
+
+        void OnRotaryEventChanged(ElmSharp.Wearable.RotaryEventArgs e)
+        {
+            if (_currentRotaryFocusObject is IRotaryEventReceiver receiver)
+            {
+                receiver.Rotate(new RotaryEventArgs { IsClockwise = e.IsClockwise });
             }
         }
 
         IRotaryActionWidget GetRotaryWidget(IRotaryFocusable focusable)
         {
-            var consumer = focusable as BindableObject;
             IRotaryActionWidget rotaryWidget = null;
-            if (consumer != null)
+            if (focusable is BindableObject consumer)
             {
-                if (consumer is CircleSliderSurfaceItem)
+                if (consumer is CircleSliderSurfaceItem circleSlider)
                 {
-                    ICircleSurfaceItem item = consumer as ICircleSurfaceItem;
-                    rotaryWidget = GetCircleWidget(item) as IRotaryActionWidget;
+                    rotaryWidget = GetCircleWidget(circleSlider) as IRotaryActionWidget;
                 }
                 else
                 {
-                    var consumerRenderer = Xamarin.Forms.Platform.Tizen.Platform.GetRenderer(consumer);
-                    rotaryWidget = consumerRenderer?.NativeView as IRotaryActionWidget;
+                    rotaryWidget = Platform.GetRenderer(consumer)?.NativeView as IRotaryActionWidget;
                 }
             }
             return rotaryWidget;
@@ -520,7 +335,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         ICircleWidget GetCircleWidget(ICircleSurfaceItem item)
         {
-            ElmSharp.Wearable.ICircleWidget widget;
+            ICircleWidget widget;
             if (_circleSurfaceItems.TryGetValue(item, out widget))
             {
                 return widget;
@@ -528,7 +343,25 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return null;
         }
 
-        void SetVisibleActionButton(bool visible)
+        void InitializeActionButton()
+        {
+            _actionButton = new ElmSharp.Button(XForms.NativeParent)
+            {
+                Style = "bottom"
+            };
+            _actionButton.Clicked += OnActionButtonClicked;
+            Control.Children.Add(_actionButton);
+        }
+
+        void DeinitializeActionButton()
+        {
+            _actionButton.Clicked -= OnActionButtonClicked;
+            Control.Children.Remove(_actionButton);
+            _actionButton.Unrealize();
+            _actionButton = null;
+        }
+
+        void UpdateActionButtonVisible(bool visible)
         {
             if (_actionButton == null)
             {
@@ -538,23 +371,28 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             else _actionButton.Hide();
         }
 
-        void SetVisibleMoreOption(bool visible)
+        void UpdateActionButtonText(string text)
         {
-            if (_moreOption == null)
-            {
-                _moreOption = new ElmSharp.Wearable.MoreOption(_box);
-                _moreOption.Clicked += OnMoreOptionClicked;
-                _moreOption.Opened += ToolbarOpened;
-                _moreOption.Closed += ToolbarClosed;
-                _box.PackEnd(_moreOption);
-            }
-            if (visible) _moreOption.Show();
-            else _moreOption.Hide();
+            _actionButton.Text = text?.Replace("&", "&amp;")
+           .Replace("<", "&lt;")
+           .Replace(">", "&gt;")
+           .Replace(Environment.NewLine, "<br>") ?? string.Empty;
         }
 
-        class ActionMoreOptionItem : MoreOptionItem
+        void UpdateActionButtonIcon(ImageSource source)
         {
-            public Action Action { get; set; }
+            if (source is FileImageSource filesource)
+            {
+                var path = ResourcePath.GetPath(filesource);
+                var buttonImage = new ElmSharp.Image(_actionButton);
+                buttonImage.Load(path);
+                buttonImage.Show();
+                _actionButton.SetPartContent("elm.swallow.content", buttonImage);
+            }
+            else
+            {
+                _actionButton.SetPartContent("elm.swallow.content", null);
+            }
         }
     }
 }
