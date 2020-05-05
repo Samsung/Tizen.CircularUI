@@ -14,13 +14,13 @@
     <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
-        <dependency id="Xamarin.Forms" version="4.6.0.494-pre2" />
-        <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre4" />
+        <dependency id="Xamarin.Forms" version="4.6.0.726" />
+        <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre6" />
         <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.2-preview.45" />
       </group>
       <group targetFramework="tizen40">
-        <dependency id="Xamarin.Forms" version="4.6.0.494-pre2" />
-        <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre4" />
+        <dependency id="Xamarin.Forms" version="4.6.0.726" />
+        <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre6" />
         <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.2-preview.45" />
         <dependency id="Tizen.NET" version="4.0.0" />
       </group>
