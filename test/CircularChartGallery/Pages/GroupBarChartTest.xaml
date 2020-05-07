@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.GroupBarChartTest">
+    <c:CirclePage.BindingContext>
+        <local:MainPageModel/>
+    </c:CirclePage.BindingContext>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="groupBarChartTest Default"
+                    FontSize="Micro"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="GroupDataCount = 2, Maximum = 10"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="GroupBarTest"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="7"
+                    GroupBarMargin ="4"
+                    GroupDataCount="2"
+                    Maximum="10"
+                    DataSetArray="{Binding GroupDummyData}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    WidthRequest="340"
+                    HeightRequest="150"/>
+                <Label
+                    Text="GroupDataCount = 3, Maximum = 10"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="GroupBarTest1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="7"
+                    GroupBarMargin ="4"
+                    GroupDataCount="3"
+                    Maximum="10"
+                    DataSetArray="{Binding GroupDummyData}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    BarBackgroundColorIsVisible="True"
+                    WidthRequest="340"
+                    HeightRequest="150"/>
+                <Label
+                    Text="GroupDataCount = 4, Maximum = 20"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="groupBarTest2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="7"
+                    GroupBarMargin ="4"
+                    GroupDataCount="4"
+                    Maximum="20"
+                    DataSetArray="{Binding GroupDummyData}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    BarBackgroundColorIsVisible="True"
+                    WidthRequest="340"
+                    HeightRequest="150"/>
+                <Label
+                    Text="GroupDataCount = 5, Maximum = 10"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="groupBarTest3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="7"
+                    GroupBarMargin ="4"
+                    GroupDataCount="5"
+                    Maximum="10"
+                    DataSetArray="{Binding GroupDummyData}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    BarBackgroundColorIsVisible="True"
+                    WidthRequest="340"
+                    HeightRequest="150"/>
+                <Label
+                    Text="GroupDataCount = 6, Maximum = 10, BG Color Grey"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="groupBarTest4"
+                    Margin="0, 0, 0, 50"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="7"
+                    GroupBarMargin ="4"
+                    GroupDataCount="6"
+                    Maximum="10"
+                    DataSetArray="{Binding GroupDummyData}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    BackgroundColor="DarkGray"
+                    WidthRequest="340"
+                    HeightRequest="150"/>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>

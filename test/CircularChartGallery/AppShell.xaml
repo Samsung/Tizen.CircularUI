@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="CircularUIChartGallery.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:CircularUIChartGallery.Pages">
+    <FlyoutItem Route="Main" Title="Main">
+        <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+        </ShellSection>
+    </FlyoutItem>
+    <FlyoutItem Route="VerticalBarChartTest" Title="Vertical Bar Chart TC">
+        <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:BarChartTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:BarChartAxisTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:BarChartRadiusTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:BarChartBarBackgroundColorTest}"/>
+        </ShellSection>
+    </FlyoutItem>
+    <FlyoutItem Route="HorizontalBarChartTest" Title="Horizontal Bar Chart TC">
+        <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:HorizontalBarChartTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:HorizontalBarChartAxisTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:HorizontalBarChartRadiusTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:HorizontalBarChartBarBackgroundColorTest}"/>
+        </ShellSection>
+    </FlyoutItem>
+    <FlyoutItem Route="GroupBarChartTest" Title="Group Bar Chart TC">
+        <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:GroupBarChartTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:GroupBarChartRadiusTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:HorizontalGroupBarChartTest}"/>
+        </ShellSection>
+    </FlyoutItem>
+</Shell>
