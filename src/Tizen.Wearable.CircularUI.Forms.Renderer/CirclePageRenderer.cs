@@ -212,8 +212,10 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void InitializeBgImageObject()
         {
-            _bgImageObject = new EvasImage(XForms.NativeParent);
-            _bgImageObject.IsFilled = true;
+            _bgImageObject = new EvasImage(XForms.NativeParent)
+            {
+                IsFilled = true
+            };
             _bgImageObject.Show();
             Children.Add(_bgImageObject);
             _bgImageObject.Lower();
@@ -265,7 +267,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        void UpdateActionButton(bool init)
+        void UpdateActionButton()
         {
             if (_actionButtonItem != null)
             {
