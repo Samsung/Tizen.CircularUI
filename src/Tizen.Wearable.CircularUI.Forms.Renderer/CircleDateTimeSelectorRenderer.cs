@@ -17,16 +17,17 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
+using Xamarin.Forms.Platform.Tizen.Native;
+using Xamarin.Forms.Platform.Tizen.Native.Watch;
 using XForms = Xamarin.Forms.Forms;
-using ECircleDateTimeSelector = ElmSharp.Wearable.CircleDateTimeSelector;
 using EDateTimeFieldType = ElmSharp.DateTimeFieldType;
+
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer))]
 
-
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class CircleDateTimeSelectorRenderer : ViewRenderer<CircleDateTimeSelector, ECircleDateTimeSelector>
+    public class CircleDateTimeSelectorRenderer : ViewRenderer<CircleDateTimeSelector, WatchDateTimePicker>
     {
         public CircleDateTimeSelectorRenderer()
         {
@@ -53,7 +54,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var surface = this.GetSurface();
                 if (null != surface)
                 {
-                    SetNativeControl(new ECircleDateTimeSelector(XForms.NativeParent, surface));
+                    SetNativeControl(new WatchDateTimePicker(XForms.NativeParent, surface));
                     Control.DateTimeChanged += OnDateTimeChanged;
                 }
                 else
@@ -76,23 +77,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateMinimum()
         {
-            if (null != Control && null != Element)
-            {
-                Control.MinimumDateTime = Element.MinimumDate;
-            }
+            Control.MinimumDateTime = Element.MinimumDate;
         }
 
         void UpdateMaximum()
         {
-            if (null != Control && null != Element)
-            {
-                Control.MaximumDateTime = Element.MaximumDate;
-            }
+            Control.MaximumDateTime = Element.MaximumDate;
         }
 
         void UpdateDateTime()
         {
-            if (null != Control && null != Element && Element.DateTime != Control.DateTime)
+            if (Element.DateTime != Control.DateTime)
             {
                 Control.DateTime = Element.DateTime;
             }
@@ -100,25 +95,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateValueType()
         {
-            if (null != Control && null != Element)
-            {
-                if (Element.ValueType == DateTimeType.Date)
-                {
-                    Control.Style = "datepicker/circle";
-                    Control.Format = "%d/%b/%Y";
-                }
-                else if (Element.ValueType == DateTimeType.Time)
-                {
-                    Control.Style = "timepicker/circle";
-                    Control.Format = "%d/%b/%Y%I:%M%p";
-                }
-            }
+            Control.Mode = Element.ValueType.ToNative();
         }
 
         void UpdateMarkerColor()
         {
 #pragma warning disable CS0618 // MarkerColor is obsolete
-            if (null != Control && null != Element && Element.MarkerColor != Xamarin.Forms.Color.Default)
+            if (Element.MarkerColor != Xamarin.Forms.Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
             }
@@ -127,57 +110,52 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnDateTimeChanged(object sender, EventArgs e)
         {
-            if (null != Control && null != Element)
-            {
-                Element.DateTime = Control.DateTime;
-            }
+            Element.DateTime = Control.DateTime;
         }
 
         void UpdateFieldVisibilityOfYear()
         {
-            if (null != Control && null != Element)
-            {
-                Control.SetFieldVisible(EDateTimeFieldType.Year, Element.IsVisibleOfYear);
-            }
+            Control.SetFieldVisible(EDateTimeFieldType.Year, Element.IsVisibleOfYear);
         }
 
         void UpdateFieldVisibilityOfMonth()
         {
-            if (null != Control && null != Element)
-            {
-                Control.SetFieldVisible(EDateTimeFieldType.Month, Element.IsVisibleOfMonth);
-            }
+            Control.SetFieldVisible(EDateTimeFieldType.Month, Element.IsVisibleOfMonth);
         }
 
         void UpdateFieldVisibilityOfDate()
         {
-            if (null != Control && null != Element)
-            {
-                Control.SetFieldVisible(EDateTimeFieldType.Date, Element.IsVisibleOfDate);
-            }
+            Control.SetFieldVisible(EDateTimeFieldType.Date, Element.IsVisibleOfDate);
         }
 
         void UpdateFieldVisibilityOfHour()
         {
-            if (null != Control && null != Element)
-            {
-                Control.SetFieldVisible(EDateTimeFieldType.Hour, Element.IsVisibleOfHour);
-            }
+            Control.SetFieldVisible(EDateTimeFieldType.Hour, Element.IsVisibleOfHour);
         }
 
         void UpdateFieldVisibilityOfMinute()
         {
-            if (null != Control && null != Element)
-            {
-                Control.SetFieldVisible(EDateTimeFieldType.Minute, Element.IsVisibleOfMinute);
-            }
+            Control.SetFieldVisible(EDateTimeFieldType.Minute, Element.IsVisibleOfMinute);
         }
 
         void UpdateFieldVisibilityOfAmPm()
         {
-            if (null != Control && null != Element)
+            Control.SetFieldVisible(EDateTimeFieldType.AmPm, Element.IsVisibleOfAmPm);
+        }
+    }
+
+    internal static class DateTimeTypeEntensions
+    {
+        internal static DateTimePickerMode ToNative(this DateTimeType type)
+        {
+            switch (type)
             {
-                Control.SetFieldVisible(EDateTimeFieldType.AmPm, Element.IsVisibleOfAmPm);
+                case DateTimeType.Date:
+                    return DateTimePickerMode.Date;
+                case DateTimeType.Time:
+                    return DateTimePickerMode.Time;
+                default:
+                    throw new NotImplementedException($"DateTimeType {type} not supported");
             }
         }
     }
