@@ -28,7 +28,7 @@
                     BarWidth="15"
                     Maximum ="10"
                     Minimum="0"
-                    DataSetArray="{Binding ColorDummyData}"
+                    Data="{Binding ColorDummyData}"
                     AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>
@@ -46,7 +46,7 @@
                     BarWidth="15"
                     Maximum ="10"
                     Minimum="0"
-                    DataSetArray="{Binding ColorDummyData}"
+                    Data="{Binding ColorDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>
@@ -69,7 +69,7 @@
                     BarWidth="15"
                     Maximum ="10"
                     Minimum="0"
-                    DataSetArray="{Binding BarBGColorDummyData}"
+                    Data="{Binding BarBGColorDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>

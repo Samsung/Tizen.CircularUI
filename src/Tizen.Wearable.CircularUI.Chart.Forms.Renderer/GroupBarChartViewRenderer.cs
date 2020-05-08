@@ -23,7 +23,6 @@ using SkiaSharp;
 using System.Linq;
 using System.Collections.Generic;
 using XForms = Xamarin.Forms.Forms;
-using CLabel = Tizen.Wearable.CircularUI.Chart.Forms.Label;
 
 [assembly: ExportRenderer(typeof(GroupBarChartView), typeof(GroupBarChartViewRenderer))]
 
@@ -38,7 +37,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         double[,] _groupBarChartDataTable;
         SKColor[] _barColor;
         SKColor[] _barBackgroundColor;
-        IList<DataSet> _prevDataSetArray;
+        IList<DataItemGroup> _prevDataSetArray;
 
         public GroupBarChartViewRenderer()
         {
@@ -56,9 +55,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected override void DrawContent(SKCanvas canvas)
         {
-            if (Element == null || Element.DataSetArray == null)
+            if (Element == null || Element.Data == null)
             {
-                Log.Debug(FormsCircularUIChart.Tag, "GroupBar Chart Element == null || Element.DataSetArray == null");
+                Log.Debug(FormsCircularUIChart.Tag, "GroupBar Chart Element == null || Element.Data == null");
                 return;
             }
 
@@ -114,8 +113,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             int entriesMaxCount = 0;
             for (int i = 0; i < _dataSetArrayCount; i++)
             {
-                var dataSet = Element.DataSetArray[i];
-                int entryCount = dataSet.Entries.Count();
+                var dataSet = Element.Data[i];
+                int entryCount = dataSet.DataItems.Count();
                 if (entriesMaxCount < entryCount)
                     entriesMaxCount = entryCount;
             }
@@ -125,30 +124,30 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected override void GenerateDataTable()
         {
-            if (Element.DataSetArray == _prevDataSetArray)
+            if (Element.Data == _prevDataSetArray)
                 return;
 
             _groupBarChartDataTable = new double[_groupDataCount, _categoryCount];
             for (int i = 0; i < _groupDataCount; i++)
             {
-                if (Element.DataSetArray.Count <= i) break;
-                var entries = Element.DataSetArray[i].Entries;
-                for (int j = 0; j < entries.Count; j++)
+                if (Element.Data.Count <= i) break;
+                var items = Element.Data[i].DataItems;
+                for (int j = 0; j < items.Count; j++)
                 {
-                    var index = entries[j].Key == 0 ? j : entries[j].Key - 1;
+                    var index = items[j].Key == 0 ? j : items[j].Key - 1;
                     index = index < _categoryCount ? index : _categoryCount - 1;
-                    _groupBarChartDataTable[i, index] = entries[j].Value;
+                    _groupBarChartDataTable[i, index] = items[j].Value;
                 }
             }
 
-            _prevDataSetArray = Element.DataSetArray;
+            _prevDataSetArray = Element.Data;
         }
 
         protected override SKSize CalculateBarSize()
         {
             var groupChart = Element as GroupBarChartView;
             _groupDataCount = groupChart != null ? groupChart.GroupDataCount : 1;
-            _dataSetArrayCount = Element.DataSetArray.Count();
+            _dataSetArrayCount = Element.Data.Count();
             float barWidth = (float)XForms.ConvertToScaledPixel(Element.BarWidth);
             _groupBarMargin = groupChart != null ? (float)XForms.ConvertToScaledPixel(groupChart.GroupBarMargin) : 0;
             float barHeight = 0;
@@ -268,7 +267,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             bool IsVertical = Element.BarChartType == BarChartType.Vertical ? true : false;
             float x = 0;
             float y = 0;
-            CLabel label;
+            TextItem label;
 
             for (int i = 0; i < _categoryLabelCount; i++)
             {
@@ -446,7 +445,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 if (_dataSetArrayCount > i)
                 {
-                    var dataSet = Element.DataSetArray[i];
+                    var dataSet = Element.Data[i];
                     if (dataSet != null && dataSet.Color != Color.Default)
                     {
                         var color = dataSet.Color;
@@ -468,17 +467,17 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 if (_dataSetArrayCount > i)
                 {
-                    var dataSet = Element.DataSetArray[i];
-                    var barDataSet = dataSet as BarDataSet;
+                    var dataSet = Element.Data[i];
+                    var barDataSet = dataSet as BarDataItemGroup;
                     if (barDataSet != null && barDataSet.BarBackgroundColor != Color.Default)
                     {
-                        //If barDataSet is not null and BarBackgroundColor is set. set BarDataSet bg color.
+                        //If barDataSet is not null and BarBackgroundColor is set. set BarDataItemGroup bg color.
                         color = barDataSet.BarBackgroundColor;
                         bgColor = SkiaSharp.Views.Forms.Extensions.ToSKColor(color);
                     }
                     else
                     {
-                        //If barDataSet is null. set DataSet color for Bar bg color.
+                        //If barDataSet is null. set DataItemGroup color for Bar bg color.
                         var dataSetColor = dataSet.Color;
                         color = dataSetColor == Color.Default ? color : dataSetColor;
                         bgColor = SkiaSharp.Views.Forms.Extensions.ToSKColor(color).WithAlpha(BarBackgroundAlpha);

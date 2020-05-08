@@ -28,7 +28,7 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="20"
                     Maximum="10"
-                    DataSetArray="{Binding DummyData}"
+                    Data="{Binding DummyData}"
                     WidthRequest="300"
                     HeightRequest="150"/>
                 <Label
@@ -43,7 +43,7 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="10"
                     Maximum="20"
-                    DataSetArray="{Binding ColorDummyData}"
+                    Data="{Binding ColorDummyData}"
                     WidthRequest="300"
                     HeightRequest="150"/>
                 <Label
@@ -59,7 +59,7 @@
                     BackgroundColor="White"
                     BarWidth="30"
                     Maximum="10"
-                    DataSetArray="{Binding ColorDummyData}"
+                    Data="{Binding ColorDummyData}"
                     WidthRequest="300"
                     HeightRequest="150"/>
             </StackLayout>

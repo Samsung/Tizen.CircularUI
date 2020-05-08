@@ -14,31 +14,50 @@
  * limitations under the License.
  */
 
+using Xamarin.Forms;
+
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// IEntry is an interface to describe Entry.
+    /// The DataItem class represents a single data in the chart.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public interface IEntry
+    public class DataItem : IDataItem
     {
+        public DataItem()
+        {
+        }
+
+        public DataItem(int key, double value)
+        {
+            Key = key;
+            Value = value;
+        }
+
         /// <summary>
         /// Gets or sets a key.
         /// Key represents the position of a chart. if the key is 3, this value set 3rd data in a chart.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        int Key { get; set; }
+        public int Key { get; set; } = 0;
 
         /// <summary>
         /// Gets or sets a value.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        double Value { get; set; }
+        public double Value { get; set; }
 
         /// <summary>
-        /// Gets or sets a label of entry.
+        /// Gets or sets a color of each DataItem.
+        /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        Label ValueLabel { get; set; }
+        public Color Color { get; set; } = Color.Default;
+
+        /// <summary>
+        /// Gets or sets a value text of DataItem.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public TextItem ValueText { get; set; }
     }
 }

@@ -20,37 +20,23 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// DataSet is a set of entries to be displayed in a chart.
+    /// BarDataItemGroup is an inheritance type of DataItemGroup for the BarChartView.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class DataSet
+    public class BarDataItemGroup : DataItemGroup
     {
-        public DataSet() 
+        public BarDataItemGroup() : base()
         {
         }
-        public DataSet(IList<IEntry> entries, string label = null)
+
+        public BarDataItemGroup(IList<IDataItem> items, string label) : base(items, label)
         {
-            Entries = entries;
-            Label = label;
         }
 
         /// <summary>
-        /// Gets or sets a list of Entry.
+        /// Gets or sets a color of bar background.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public IList<IEntry> Entries { get; set; }
-
-        /// <summary>
-        /// Gets or sets a color of data set.
-        /// If a chart is BarChartView, it set a whole bar color. If a chart is LineChartView, It set a line color.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public Color Color { get; set; } = Color.Default;
-
-        /// <summary>
-        /// Gets or sets a string value of data set.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public string Label { get; set; }
+        public Color BarBackgroundColor { get; set; } = Color.Default;
     }
 }

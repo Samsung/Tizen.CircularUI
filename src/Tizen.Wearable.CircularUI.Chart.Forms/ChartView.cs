@@ -28,10 +28,10 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     public abstract class ChartView : View
     {
         /// <summary>
-        /// BindableProperty. Identifies the DataSetArray bindable property.
+        /// BindableProperty. Identifies the Data bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty DataSetArrayProperty = BindableProperty.Create(nameof(DataSetArray), typeof(IList<DataSet>), typeof(ChartView), defaultValue: null);
+        public static readonly BindableProperty DataProperty = BindableProperty.Create(nameof(Data), typeof(IList<DataItemGroup>), typeof(ChartView), defaultValue: null);
 
         /// <summary>
         /// BindableProperty. Identifies the Maximum bindable property.
@@ -87,10 +87,10 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Gets or sets a list of data set.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public IList<DataSet> DataSetArray
+        public IList<DataItemGroup> Data
         {
-            get { return (IList<DataSet>)GetValue(DataSetArrayProperty); }
-            set { SetValue(DataSetArrayProperty, value); }
+            get { return (IList<DataItemGroup>)GetValue(DataProperty); }
+            set { SetValue(DataProperty, value); }
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]

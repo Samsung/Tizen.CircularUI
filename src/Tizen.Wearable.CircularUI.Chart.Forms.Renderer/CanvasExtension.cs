@@ -16,7 +16,7 @@
 
 using SkiaSharp;
 using Xamarin.Forms;
-using CLabel = Tizen.Wearable.CircularUI.Chart.Forms.Label;
+using Tizen.Wearable.CircularUI.Chart.Forms;
 
 namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 {
@@ -60,16 +60,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             }
         }
 
-        internal static void DrawText(this SKCanvas canvas, float x, float y, CLabel label, bool isEndOfBoundX = false, bool isEndOfBoundY = false)
+        internal static void DrawText(this SKCanvas canvas, float x, float y, TextItem textItem, bool isEndOfBoundX = false, bool isEndOfBoundY = false)
         {
             using (var paint = new SKPaint())
             {
-                paint.TextSize = (float)(label.FontSize * FontCovertConst);
+                paint.TextSize = (float)(textItem.FontSize * FontCovertConst);
                 paint.IsAntialias = true;
-                var color = label.TextColor == Color.Default ? Color.White : label.TextColor;
+                var color = textItem.TextColor == Color.Default ? Color.White : textItem.TextColor;
                 paint.Color = SkiaSharp.Views.Forms.Extensions.ToSKColor(color);
                 paint.IsStroke = false;
-                var text = label.Text;
+                var text = textItem.Text;
                 var bounds = new SKRect();
                 paint.MeasureText(text, ref bounds);
                 x = x - (isEndOfBoundX ? bounds.Width : bounds.Width / 2);

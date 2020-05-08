@@ -14,50 +14,43 @@
  * limitations under the License.
  */
 
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// The Entry class represents a single data in the chart.
+    /// DataItemGroup is a set of DataItem to be displayed in a chart.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class Entry : IEntry
+    public class DataItemGroup
     {
-        public Entry()
+        public DataItemGroup() 
         {
         }
-
-        public Entry(int key, double value)
+        public DataItemGroup(IList<IDataItem> items, string label = null)
         {
-            Key = key;
-            Value = value;
+            DataItems = items;
+            Label = label;
         }
 
         /// <summary>
-        /// Gets or sets a key.
-        /// Key represents the position of a chart. if the key is 3, this value set 3rd data in a chart.
+        /// Gets or sets a list of DataItem.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public int Key { get; set; } = 0;
+        public IList<IDataItem> DataItems { get; set; }
 
         /// <summary>
-        /// Gets or sets a value.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public double Value { get; set; }
-
-        /// <summary>
-        /// Gets or sets a color of each entry.
-        /// If Entry.Color is not set, the color is set DataSet.Color.
+        /// Gets or sets a color of data set.
+        /// If a chart is BarChartView, it set a whole bar color. If a chart is LineChartView, It set a line color.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public Color Color { get; set; } = Color.Default;
 
         /// <summary>
-        /// Gets or sets a label of entry.
+        /// Gets or sets a string value of data set.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public Label ValueLabel { get; set; }
+        public string Label { get; set; }
     }
 }

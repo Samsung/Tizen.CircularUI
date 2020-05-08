@@ -19,16 +19,16 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// BarEntry is an inheritance type of Entry for the BarChartView..
+    /// BarDataItem is an inheritance type of DataItem for the BarChartView..
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class BarEntry : Entry
+    public class BarDataItem : DataItem
     {
-        public BarEntry(): base()
+        public BarDataItem(): base()
         {
         }
 
-        public BarEntry(int key, double value): base(key, value)
+        public BarDataItem(int key, double value): base(key, value)
         {
         }
 

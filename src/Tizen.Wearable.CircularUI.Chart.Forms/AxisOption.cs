@@ -41,7 +41,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             IsVisibleOfReferenceLine = isVisibleOfReferenceLine;
             AxisLineColor = Color.White;
             CategoryLabels = new List<CategoryLabel>();
-            ReferenceDatas = new List<Entry>();
+            ReferenceDataItems = new List<DataItem>();
         }
 
         /// <summary>
@@ -94,10 +94,10 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         public IList<CategoryLabel> CategoryLabels { get; set; }
 
         /// <summary>
-        /// Gets or sets a list of reference datas.
+        /// Gets or sets a list of reference DataItem.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public IList<Entry> ReferenceDatas { get; set; }
+        public IList<DataItem> ReferenceDataItems { get; set; }
 
         public static implicit operator AxisOption(bool uniformValue)
         {
@@ -120,7 +120,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
                 return false;
             if (!CategoryLabels.Equals(other.CategoryLabels))
                 return false;
-            if (!ReferenceDatas.Equals(other.ReferenceDatas))
+            if (!ReferenceDataItems.Equals(other.ReferenceDataItems))
                 return false;
             return true;
         }
@@ -144,7 +144,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
                 hashCode = (hashCode * 397) ^ IsVisibleOfReferenceLine.GetHashCode();
                 hashCode = (hashCode * 397) ^ AxisLineColor.GetHashCode();
                 hashCode = (hashCode * 397) ^ CategoryLabels.GetHashCode();
-                hashCode = (hashCode * 397) ^ ReferenceDatas.GetHashCode();
+                hashCode = (hashCode * 397) ^ ReferenceDataItems.GetHashCode();
                 return hashCode;
             }
         }
@@ -166,7 +166,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
                                 out bool isVisibleOfReferenceLine,
                                 out Color axisLineColor,
                                 out IList<CategoryLabel> categoryLabels,
-                                out IList<Entry> referenceDatas
+                                out IList<DataItem> referenceDatas
                                 )
         {
             isVisibleOfMajorAxisLine = IsVisibleOfMajorAxisLine;
@@ -176,7 +176,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             isVisibleOfReferenceLine = IsVisibleOfReferenceLine;
             axisLineColor = AxisLineColor;
             categoryLabels = CategoryLabels;
-            referenceDatas = ReferenceDatas;
+            referenceDatas = ReferenceDataItems;
         }
     }
 }

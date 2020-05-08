@@ -14,29 +14,31 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using Xamarin.Forms;
-
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// BarDataSet is an inheritance type of DataSet for the BarChartView.
+    /// IDataItem is an interface to describe DataItem.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class BarDataSet : DataSet
+    public interface IDataItem
     {
-        public BarDataSet() : base()
-        {
-        }
-
-        public BarDataSet(IList<IEntry> entries, string label) : base(entries, label)
-        {
-        }
-
         /// <summary>
-        /// Gets or sets a color of bar background.
+        /// Gets or sets a key.
+        /// Key represents the position of a chart. if the key is 3, this value set 3rd data in a chart.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public Color BarBackgroundColor { get; set; } = Color.Default;
+        int Key { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        double Value { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value text of DataItem.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        TextItem ValueText { get; set; }
     }
 }

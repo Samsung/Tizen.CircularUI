@@ -24,7 +24,7 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="20"
                     Maximum="10"
-                    DataSetArray="{Binding ColorDummyData}"
+                    Data="{Binding ColorDummyData}"
                     AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>
@@ -43,7 +43,7 @@
                     BarWidth="15"
                     Maximum ="10"
                     Minimum="0"
-                    DataSetArray="{Binding ColorDummyData}"
+                    Data="{Binding ColorDummyData}"
                     AxisOption="{Binding MajorMinorAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>
@@ -60,7 +60,7 @@
                     BarWidth="8"
                     Maximum ="3000"
                     Minimum="500"
-                    DataSetArray="{Binding MonthlyDummyData}"
+                    Data="{Binding MonthlyDummyData}"
                     AxisOption="{Binding MontlyMajorMinorAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>

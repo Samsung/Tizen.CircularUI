@@ -28,10 +28,10 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         public CategoryLabel(int key, string text)
         {
             Key = key;
-            Label = new Label(text);
+            Label = new TextItem(text);
         }
 
-        public CategoryLabel(int key, Label label)
+        public CategoryLabel(int key, TextItem label)
         {
             Key = key;
             Label = label;
@@ -48,6 +48,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Gets or sets a label of category.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public Label Label { get; set; }
+        public TextItem Label { get; set; }
     }
 }

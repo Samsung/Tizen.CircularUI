@@ -50,8 +50,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         protected SKSize _referenceItemSize;
 
         SKCanvas _canvas;
-        Entry[] _barChartDataTable;
-        IList<DataSet> _prevDataSetArray;
+        DataItem[] _barChartDataTable;
+        IList<DataItemGroup> _prevDataSetArray;
 
         public BarChartViewRenderer()
         {
@@ -108,9 +108,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected virtual void DrawContent(SKCanvas canvas)
         {
-            if (Element == null || Element.DataSetArray == null)
+            if (Element == null || Element.Data == null)
             {
-                Log.Debug(FormsCircularUIChart.Tag, "Bar Chart Element == null || Element.DataSetArray == null");
+                Log.Debug(FormsCircularUIChart.Tag, "Bar Chart Element == null || Element.Data == null");
                 return;
             }
 
@@ -168,19 +168,19 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected virtual void GenerateDataTable()
         {
-            if (Element.DataSetArray == _prevDataSetArray)
+            if (Element.Data == _prevDataSetArray)
                 return;
 
-            _barChartDataTable = new Entry[_categoryCount];
-            var entries = Element.DataSetArray[0].Entries;
-            for (int i = 0; i < entries.Count; i++)
+            _barChartDataTable = new DataItem[_categoryCount];
+            var items = Element.Data[0].DataItems;
+            for (int i = 0; i < items.Count; i++)
             {
-                var index = entries[i].Key == 0 ? i : entries[i].Key - 1;
+                var index = items[i].Key == 0 ? i : items[i].Key - 1;
                 index = index < _categoryCount ? index : _categoryCount - 1;
-                _barChartDataTable[index] = entries[i] as Entry;
+                _barChartDataTable[index] = items[i] as DataItem;
             }
 
-            _prevDataSetArray = Element.DataSetArray;
+            _prevDataSetArray = Element.Data;
         }
 
         protected void CaculateAxisSize(SKCanvas canvas)
@@ -260,16 +260,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         {
             using (var paint = new SKPaint())
             {
-                return Element.AxisOption.ReferenceDatas.Select(e =>
+                return Element.AxisOption.ReferenceDataItems.Select(e =>
                 {
-                    if (string.IsNullOrEmpty(e.ValueLabel.Text))
+                    if (string.IsNullOrEmpty(e.ValueText.Text))
                     {
                         return SKRect.Empty;
                     }
 
                     var bounds = new SKRect();
-                    var text = e.ValueLabel.Text;
-                    paint.TextSize = (float)(e.ValueLabel.FontSize * FontCovertConst);
+                    var text = e.ValueText.Text;
+                    paint.TextSize = (float)(e.ValueText.FontSize * FontCovertConst);
                     paint.MeasureText(text, ref bounds);
                     return bounds;
                 }).ToArray();
@@ -278,7 +278,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         private void CalculateReferenceItemSize()
         {
-            int itemCount = Element.AxisOption.ReferenceDatas.Count;
+            int itemCount = Element.AxisOption.ReferenceDataItems.Count;
             var referenceLabelSizes = MeasureReferenceLabels();
             var maxLabelWidth = referenceLabelSizes.Max(x => x.Width);
             var maxLabelHeight = referenceLabelSizes.Max(x => x.Height);
@@ -300,7 +300,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected virtual SKSize CalculateBarSize()
         {
-            _dataCount = Element.DataSetArray[0].Entries.Count();
+            _dataCount = Element.Data[0].DataItems.Count();
             float barWidth = (float)XForms.ConvertToScaledPixel(Element.BarWidth);
             float barHeight = 0;
 
@@ -441,11 +441,11 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             bool isEndOfBoundX = false;
             bool isEndOfBoundY = false;
             bool IsVertical = Element.BarChartType == BarChartType.Vertical ? true : false;
-            int refCount = Element.AxisOption.ReferenceDatas.Count();
+            int refCount = Element.AxisOption.ReferenceDataItems.Count();
 
             for (int i = 0; i < refCount; i++)
             {
-                var data = Element.AxisOption.ReferenceDatas.ElementAt(i);
+                var data = Element.AxisOption.ReferenceDataItems.ElementAt(i);
                 if (IsVertical)
                 {
                     y = (float)(((Element.Maximum - data.Value) / Element.ValueRange) * barSize.Height);
@@ -472,14 +472,14 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     y = _canvasSize.Height - (_minorAxisSize.Height / 2);
                 }
 
-                canvas.DrawText(x, y, data.ValueLabel, isEndOfBoundX, isEndOfBoundY);
+                canvas.DrawText(x, y, data.ValueText, isEndOfBoundX, isEndOfBoundY);
             }
         }
 
         protected void DrawReferenceLines(SKCanvas canvas, SKSize barSize)
         {
             bool IsVertical = Element.BarChartType == BarChartType.Vertical ? true : false;
-            var refCount = Element.AxisOption.ReferenceDatas.Count();
+            var refCount = Element.AxisOption.ReferenceDataItems.Count();
             float startX = 0;
             float startY = 0;
             float endX = 0;
@@ -489,7 +489,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             for (int i = 0; i < refCount; i++)
             {
 
-                var data = Element.AxisOption.ReferenceDatas.ElementAt(i);
+                var data = Element.AxisOption.ReferenceDataItems.ElementAt(i);
                 if (data.Value == Element.Minimum)  //skip min value.
                     continue;
 
@@ -523,15 +523,15 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
             if (points.Length > 0)
             {
-                var dataSet = Element.DataSetArray[0];
-                var barDataSet = dataSet as BarDataSet;
+                var dataSet = Element.Data[0];
+                var barDataSet = dataSet as BarDataItemGroup;
                 for (int i = 0; i < _categoryCount; i++)
                 {
                     if (_barChartDataTable[i] == null)
                         continue;
 
                     var entry = _barChartDataTable[i];
-                    var barEntry = entry as BarEntry;
+                    var barEntry = entry as BarDataItem;
                     var point = points[i];
                     if (barEntry != null)
                     {
@@ -593,7 +593,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 if (Element.BarChartType == BarChartType.Vertical)
                 {
-                    var dataSet = Element.DataSetArray[0];
+                    var dataSet = Element.Data[0];
                     for (int i = 0; i < _categoryCount; i++)
                     {
                         if (_barChartDataTable[i] == null)
@@ -643,7 +643,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 }
                 else
                 {
-                    var dataSet = Element.DataSetArray[0];
+                    var dataSet = Element.Data[0];
                     for (int i = 0; i < _categoryCount; i++)
                     {
                         if (_barChartDataTable[i] == null)
@@ -707,7 +707,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     continue;
 
                 var entry = _barChartDataTable[i];
-                if (entry.ValueLabel != null && !string.IsNullOrEmpty(entry.ValueLabel.Text))
+                if (entry.ValueText != null && !string.IsNullOrEmpty(entry.ValueText.Text))
                 {
                     if (IsVertical)
                     {
@@ -736,7 +736,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                         }
                     }
 
-                    canvas.DrawText(x, y, entry.ValueLabel, endOfBoundX, endOfBoundY);
+                    canvas.DrawText(x, y, entry.ValueText, endOfBoundX, endOfBoundY);
                 }
             }
         }
