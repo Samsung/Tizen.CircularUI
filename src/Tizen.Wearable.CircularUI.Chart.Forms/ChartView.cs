@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// BindableProperty. Identifies the Data bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty DataProperty = BindableProperty.Create(nameof(Data), typeof(IList<DataItemGroup>), typeof(ChartView), defaultValue: null);
+        public static readonly BindableProperty DataProperty = BindableProperty.Create(nameof(Data), typeof(Data), typeof(ChartView), defaultValue: null);
 
         /// <summary>
         /// BindableProperty. Identifies the Maximum bindable property.
@@ -74,7 +74,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         }
 
         /// <summary>
-        /// Gets or sets a value range of data set.
+        /// Gets a value range of data set.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public double ValueRange
@@ -87,9 +87,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Gets or sets a list of data set.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public IList<DataItemGroup> Data
+        public Data Data
         {
-            get { return (IList<DataItemGroup>)GetValue(DataProperty); }
+            get { return (Data)GetValue(DataProperty); }
             set { SetValue(DataProperty, value); }
         }
 

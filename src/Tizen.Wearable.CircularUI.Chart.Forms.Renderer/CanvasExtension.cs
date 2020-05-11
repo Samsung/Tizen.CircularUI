@@ -16,20 +16,19 @@
 
 using SkiaSharp;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Chart.Forms;
+using XForms = Xamarin.Forms.Forms;
+using SkiaSharp.Views.Forms;
 
 namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 {
     internal static class CanvasExtension
     {
-        internal const float FontCovertConst = 3;
-
         internal static void DrawAxisLine(this SKCanvas canvas, SKRect rect, Color color)
         {
             using (var paint = new SKPaint
             {
                 Style = SKPaintStyle.Fill,
-                Color = SkiaSharp.Views.Forms.Extensions.ToSKColor(color),
+                Color = color.ToSKColor(),
             })
             {
                 canvas.DrawRect(rect, paint);
@@ -42,7 +41,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 Style = SKPaintStyle.Stroke,
                 StrokeWidth = lineSize,
-                Color = SkiaSharp.Views.Forms.Extensions.ToSKColor(color),
+                Color = color.ToSKColor(),
                 IsAntialias = true,
             })
             {
@@ -64,10 +63,10 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         {
             using (var paint = new SKPaint())
             {
-                paint.TextSize = (float)(textItem.FontSize * FontCovertConst);
+                paint.TextSize = (float)(XForms.ConvertToEflFontPoint(textItem.FontSize));
                 paint.IsAntialias = true;
                 var color = textItem.TextColor == Color.Default ? Color.White : textItem.TextColor;
-                paint.Color = SkiaSharp.Views.Forms.Extensions.ToSKColor(color);
+                paint.Color = color.ToSKColor();
                 paint.IsStroke = false;
                 var text = textItem.Text;
                 var bounds = new SKRect();

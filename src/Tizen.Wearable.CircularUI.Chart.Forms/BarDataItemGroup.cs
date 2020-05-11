@@ -33,10 +33,14 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         {
         }
 
+        public BarDataItemGroup(IList<double> values, string label = null) : base(values, label)
+        {
+        }
+
         /// <summary>
         /// Gets or sets a color of bar background.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public Color BarBackgroundColor { get; set; } = Color.Default;
+        public Color BarBackgroundColor { get; set; } = Color.Transparent;
     }
 }

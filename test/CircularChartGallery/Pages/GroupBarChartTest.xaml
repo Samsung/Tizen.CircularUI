@@ -18,7 +18,7 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <Label
-                    Text="GroupDataCount = 2, Maximum = 10"
+                    Text="Group Count = 3, Maximum = 10"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -29,14 +29,13 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="7"
                     GroupBarMargin ="4"
-                    GroupDataCount="2"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
                     WidthRequest="340"
                     HeightRequest="150"/>
                 <Label
-                    Text="GroupDataCount = 3, Maximum = 10"
+                    Text="GroupDataCount = 6, Maximum = 10"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -47,69 +46,9 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="7"
                     GroupBarMargin ="4"
-                    GroupDataCount="3"
                     Maximum="10"
-                    Data="{Binding GroupDummyData}"
+                    Data="{Binding GroupDummyData2}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
-                    WidthRequest="340"
-                    HeightRequest="150"/>
-                <Label
-                    Text="GroupDataCount = 4, Maximum = 20"
-                    FontSize="Micro"
-                    Margin="0, 50, 0, 10"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand" />
-                <chart:GroupBarChartView
-                    x:Name="groupBarTest2"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    BarWidth="7"
-                    GroupBarMargin ="4"
-                    GroupDataCount="4"
-                    Maximum="20"
-                    Data="{Binding GroupDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
-                    WidthRequest="340"
-                    HeightRequest="150"/>
-                <Label
-                    Text="GroupDataCount = 5, Maximum = 10"
-                    FontSize="Micro"
-                    Margin="0, 50, 0, 10"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand" />
-                <chart:GroupBarChartView
-                    x:Name="groupBarTest3"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    BarWidth="7"
-                    GroupBarMargin ="4"
-                    GroupDataCount="5"
-                    Maximum="10"
-                    Data="{Binding GroupDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
-                    WidthRequest="340"
-                    HeightRequest="150"/>
-                <Label
-                    Text="GroupDataCount = 6, Maximum = 10, BG Color Grey"
-                    FontSize="Micro"
-                    Margin="0, 50, 0, 10"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand" />
-                <chart:GroupBarChartView
-                    x:Name="groupBarTest4"
-                    Margin="0, 0, 0, 50"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    BarWidth="7"
-                    GroupBarMargin ="4"
-                    GroupDataCount="6"
-                    Maximum="10"
-                    Data="{Binding GroupDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BackgroundColor="DarkGray"
                     WidthRequest="340"
                     HeightRequest="150"/>
             </StackLayout>

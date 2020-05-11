@@ -4,11 +4,17 @@
              xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
              xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
              xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             xmlns:converters="clr-namespace:CircularUIChartGallery.Converters"
              RotaryFocusObject="{x:Reference Scroller}"
              x:Class="CircularUIChartGallery.Pages.MainPage">
     <c:CirclePage.BindingContext>
         <local:MainPageModel/>
     </c:CirclePage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:MontlyDataColorConverter x:Key="MontlyDataColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <c:CirclePage.Content>
         <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
             <StackLayout>
@@ -22,7 +28,7 @@
                     x:Name="verticalMajorMinorAxis"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    BarWidth="10"
+                    BarWidth="15"
                     Maximum="10"
                     Data="{Binding DummyData}"
                     AxisOption="{Binding MajorMinorAxisOption}"
@@ -34,8 +40,6 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    ValueLabelIsVisible="True"
-                    ValueLabelPosition="Start"
                     BarWidth="10"
                     Maximum="10"
                     Data="{Binding ColorDummyData}"
@@ -50,8 +54,6 @@
                         x:Name="HorizontalBarTest1"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
-                        ValueLabelIsVisible="True"
-                        ValueLabelPosition="Start"
                         BarChartType="Horizontal"
                         BarWidth="33"
                         BarTopRadius="16.5"
@@ -70,8 +72,6 @@
                     x:Name="radiusBarV"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    ValueLabelIsVisible="True"
-                    ValueLabelPosition="End"
                     BarTopRadius="9"
                     BarBottomRadius="9"
                     BarWidth="19"
@@ -91,8 +91,6 @@
                     <Image Source ="Black_BG.png"  Aspect="Fill" AbsoluteLayout.LayoutBounds="0, 0, 300, 150" AbsoluteLayout.LayoutFlags="PositionProportional"/>
                     <chart:BarChartView
                         x:Name="radiusBar2"
-                        ValueLabelIsVisible="True"
-                        ValueLabelPosition="End"
                         BarTopRadius="7.5"
                         BarBottomRadius="7.5"
                         BarWidth="15"
@@ -113,7 +111,6 @@
                     x:Name="radiusBarBG"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    BarBackgroundColorIsVisible="True"
                     BarTopRadius="9"
                     BarBottomRadius="9"
                     BarWidth="19"
@@ -129,9 +126,6 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    ValueLabelIsVisible="True"
-                    ValueLabelPosition="End"
-                    BarBackgroundColorIsVisible="True"
                     BarTopRadius="9"
                     BarBottomRadius="9"
                     BarWidth="19"
@@ -154,7 +148,7 @@
                     BarWidth="8"
                     Maximum ="3000"
                     Minimum="500"
-                    Data="{Binding MonthlyDummyData}"
+                    Data="{Binding MonthlyDummyData, Converter={StaticResource MontlyDataColorConverter}}"
                     AxisOption="{Binding MontlyMajorMinorAxisOption}"
                     WidthRequest="300"
                     HeightRequest="250"/>
@@ -167,7 +161,7 @@
                     BarWidth="8"
                     Maximum ="3000"
                     Minimum="500"
-                    Data="{Binding MonthlyDummyData}"
+                    Data="{Binding MonthlyDummyData, Converter={StaticResource MontlyDataColorConverter}}"
                     AxisOption="{Binding MontlyMajorMinorAxisOption}"
                     WidthRequest="300"
                     HeightRequest="250"/>
@@ -184,13 +178,11 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="7"
                     GroupBarMargin ="4"
-                    GroupDataCount="3"
                     BarTopRadius="3.5"
                     BarBottomRadius="3.5"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
                     WidthRequest="340"
                     HeightRequest="100"/>
                 <chart:GroupBarChartView
@@ -201,13 +193,11 @@
                     BarChartType="Horizontal"
                     BarWidth="7"
                     GroupBarMargin ="4"
-                    GroupDataCount="3"
                     BarTopRadius="3.5"
                     BarBottomRadius="3.5"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
                     WidthRequest="100"
                     HeightRequest="300"/>
             </StackLayout>

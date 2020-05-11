@@ -14,23 +14,28 @@
  * limitations under the License.
  */
 
+using Xamarin.Forms;
+
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// Enumeration for position of value label
+    /// BarDataItem is an inheritance type of DataItem for the BarChartView..
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public enum ValueLabelPosition
+    public class BarDataItem : DataItem
     {
+        public BarDataItem(): base()
+        {
+        }
+
+        public BarDataItem(int key, double value): base(key, value)
+        {
+        }
+
         /// <summary>
-        /// The Start position. 
-        /// If a chart is BarChartView, Start position is bottom of bar.
+        /// Gets or sets a color of bar background.
         /// </summary>
-        Start,
-        /// <summary>
-        /// The End position
-        /// If a chart is BarChartView, End position is top of bar.
-        /// </summary>
-        End,
+        /// <since_tizen> 4 </since_tizen>
+        public Color BarBackgroundColor { get; set; } = Color.Transparent;
     }
 }

@@ -40,8 +40,6 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    ValueLabelIsVisible="True"
-                    ValueLabelPosition="Start"
                     BarWidth="15"
                     Maximum ="10"
                     Minimum="0"

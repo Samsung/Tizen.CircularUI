@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Chart.Forms
@@ -23,34 +26,83 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// DataItemGroup is a set of DataItem to be displayed in a chart.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
-    public class DataItemGroup
+    public class DataItemGroup : INotifyPropertyChanged
     {
+        IList<IDataItem> _dataItems;
+        Color _color;
+
         public DataItemGroup() 
         {
+            _color = Color.Default;
         }
+
         public DataItemGroup(IList<IDataItem> items, string label = null)
         {
             DataItems = items;
             Label = label;
+            _color = Color.Default;
+        }
+
+        public DataItemGroup(IList<double> values, string label = null)
+        {
+            DataItems = new List<IDataItem>();
+            Label = label;
+            for (int i = 0; i < values.Count; i++)
+            {
+                var item = new DataItem(i, values[i]);
+                DataItems.Add(item);
+            }
         }
 
         /// <summary>
         /// Gets or sets a list of DataItem.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public IList<IDataItem> DataItems { get; set; }
+        public IList<IDataItem> DataItems
+        {
+            get
+            {
+                return _dataItems;
+            }
+            set
+            {
+                if (_dataItems == value) return;
+                _dataItems = value;
+                Console.WriteLine("DataItemGroup.DataItems set value");
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         /// Gets or sets a color of data set.
         /// If a chart is BarChartView, it set a whole bar color. If a chart is LineChartView, It set a line color.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public Color Color { get; set; } = Color.Default;
+        public Color Color
+        {
+            get
+            {
+                return _color;
+            }
+            set
+            {
+                if (_color == value) return;
+                _color = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         /// Gets or sets a string value of data set.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public string Label { get; set; }
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

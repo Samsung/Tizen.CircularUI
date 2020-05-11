@@ -28,20 +28,19 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Constructor a new AxisOption structure
         /// </summary>
-        public AxisOption(bool uniformValue) : this(uniformValue, uniformValue, uniformValue, uniformValue, uniformValue)
+        public AxisOption(bool itemVisible) : this(itemVisible, itemVisible, itemVisible, itemVisible)
         {
         }
 
-        public AxisOption(bool isVisibleOfMajorAxisLine, bool isVisibleOfMinorAxisLine, bool isVisibleOfCategoryLabel = false, bool isVisibleOfReferenceLabel = false, bool isVisibleOfReferenceLine = false)
+        public AxisOption(bool isVisibleOfMajorAxisLine, bool isVisibleOfMinorAxisLine, bool isVisibleOfReferenceLabel = false, bool isVisibleOfReferenceLine = false)
         {
             IsVisibleOfMajorAxisLine = isVisibleOfMajorAxisLine;
             IsVisibleOfMinorAxisLine = isVisibleOfMinorAxisLine;
-            IsVisibleOfCategoryLabel = isVisibleOfCategoryLabel;
             IsVisibleOfReferenceLabel = isVisibleOfReferenceLabel;
             IsVisibleOfReferenceLine = isVisibleOfReferenceLine;
             AxisLineColor = Color.White;
             CategoryLabels = new List<CategoryLabel>();
-            ReferenceDataItems = new List<DataItem>();
+            ReferenceDataItems = new List<IDataItem>();
         }
 
         /// <summary>
@@ -59,14 +58,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public bool IsVisibleOfMinorAxisLine { get; set; }
-
-        /// <summary>
-        /// Gets or sets the visibility of category label.
-        /// Category label display data's category in major axis.
-        /// For example, If the chart represents a change in the value of a week, each category becomes the day of the week.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public bool IsVisibleOfCategoryLabel { get; set; }
 
         /// <summary>
         /// Gets or sets the visibility of reference label.
@@ -89,6 +80,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
 
         /// <summary>
         /// Gets or sets a list of category labels.
+        /// Category label display data's category in major axis.
+        /// For example, If the chart represents a change in the value of a week, each category becomes the day of the week.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public IList<CategoryLabel> CategoryLabels { get; set; }
@@ -97,7 +90,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Gets or sets a list of reference DataItem.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        public IList<DataItem> ReferenceDataItems { get; set; }
+        public IList<IDataItem> ReferenceDataItems { get; set; }
 
         public static implicit operator AxisOption(bool uniformValue)
         {
@@ -109,8 +102,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             if (IsVisibleOfMajorAxisLine != other.IsVisibleOfMajorAxisLine)
                 return false;
             if (IsVisibleOfMinorAxisLine != other.IsVisibleOfMinorAxisLine)
-                return false;
-            if (IsVisibleOfCategoryLabel != other.IsVisibleOfCategoryLabel)
                 return false;
             if (IsVisibleOfReferenceLabel != other.IsVisibleOfReferenceLabel)
                 return false;
@@ -139,7 +130,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             {
                 int hashCode = IsVisibleOfMajorAxisLine.GetHashCode();
                 hashCode = (hashCode * 397) ^ IsVisibleOfMinorAxisLine.GetHashCode();
-                hashCode = (hashCode * 397) ^ IsVisibleOfCategoryLabel.GetHashCode();
                 hashCode = (hashCode * 397) ^ IsVisibleOfReferenceLabel.GetHashCode();
                 hashCode = (hashCode * 397) ^ IsVisibleOfReferenceLine.GetHashCode();
                 hashCode = (hashCode * 397) ^ AxisLineColor.GetHashCode();
@@ -161,17 +151,15 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
 
         public void Deconstruct(out bool isVisibleOfMajorAxisLine,
                                 out bool isVisibleOfMinorAxisLine,
-                                out bool isVisibleOfCategoryLabel,
                                 out bool isVisibleOfReferenceLabe,
                                 out bool isVisibleOfReferenceLine,
                                 out Color axisLineColor,
                                 out IList<CategoryLabel> categoryLabels,
-                                out IList<DataItem> referenceDatas
+                                out IList<IDataItem> referenceDatas
                                 )
         {
             isVisibleOfMajorAxisLine = IsVisibleOfMajorAxisLine;
             isVisibleOfMinorAxisLine = IsVisibleOfMinorAxisLine;
-            isVisibleOfCategoryLabel = IsVisibleOfCategoryLabel;
             isVisibleOfReferenceLabe = IsVisibleOfReferenceLabel;
             isVisibleOfReferenceLine = IsVisibleOfReferenceLine;
             axisLineColor = AxisLineColor;

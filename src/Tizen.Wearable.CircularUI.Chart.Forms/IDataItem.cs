@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+using Xamarin.Forms;
+
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
@@ -36,9 +38,22 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         double Value { get; set; }
 
         /// <summary>
+        /// Gets or sets a color of each DataItem.
+        /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        Color Color { get; set; }
+
+        /// <summary>
         /// Gets or sets a value text of DataItem.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         TextItem ValueText { get; set; }
+
+        /// <summary>
+        /// Gets or sets a position of data ValueText.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        ValueTextPosition ValueTextPosition { get; set; }
     }
 }

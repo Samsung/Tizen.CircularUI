@@ -37,12 +37,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         public static readonly BindableProperty BarWidthProperty = BindableProperty.Create(nameof(BarWidth), typeof(double), typeof(BarChartView), 10d);
 
         /// <summary>
-        /// BindableProperty. Identifies the BarBackgroundColorIsVisible bindable property.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty BarBackgroundColorIsVisibleProperty = BindableProperty.Create(nameof(BarBackgroundColorIsVisible), typeof(bool), typeof(BarChartView), false);
-
-        /// <summary>
         /// BindableProperty. Identifies the BarTopRadius bindable property.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
@@ -59,18 +53,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty AxisOptionProperty = BindableProperty.Create(nameof(AxisOption), typeof(AxisOption), typeof(BarChartView), default(AxisOption));
-
-        /// <summary>
-        /// BindableProperty. Identifies the ValueLabelPosition bindable property.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ValueLabelPositionProperty = BindableProperty.Create(nameof(ValueLabelPosition), typeof(ValueLabelPosition), typeof(BarChartView), ValueLabelPosition.End);
-
-        /// <summary>
-        /// BindableProperty. Identifies the ValueLabelIsVisible bindable property.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public static readonly BindableProperty ValueLabelIsVisibleProperty = BindableProperty.Create(nameof(ValueLabelIsVisible), typeof(bool), typeof(BarChartView), false);
 
         /// <summary>
         /// Gets or sets type of bar chart.
@@ -90,16 +72,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         {
             get { return (double)GetValue(BarWidthProperty); }
             set { SetValue(BarWidthProperty, value); }
-        }
-
-        /// <summary>
-        /// Gets or sets the visibility of bar background color.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public bool BarBackgroundColorIsVisible
-        {
-            get { return (bool)GetValue(BarBackgroundColorIsVisibleProperty); }
-            set { SetValue(BarBackgroundColorIsVisibleProperty, value); }
         }
 
         /// <summary>
@@ -130,26 +102,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         {
             get { return (AxisOption)GetValue(AxisOptionProperty); }
             set { SetValue(AxisOptionProperty, value); }
-        }
-
-        /// <summary>
-        /// Gets or sets a position of data value label.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public ValueLabelPosition ValueLabelPosition
-        {
-            get { return (ValueLabelPosition)GetValue(ValueLabelPositionProperty); }
-            set { SetValue(ValueLabelPositionProperty, value); }
-        }
-
-        /// <summary>
-        /// Gets or sets the visibility of value label.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public bool ValueLabelIsVisible
-        {
-            get { return (bool)GetValue(ValueLabelIsVisibleProperty); }
-            set { SetValue(ValueLabelIsVisibleProperty, value); }
         }
     }
 }

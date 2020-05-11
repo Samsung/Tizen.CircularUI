@@ -17,29 +17,45 @@
 using Tizen.Wearable.CircularUI.Chart.Forms;
 using System.Collections.Generic;
 using Xamarin.Forms;
-using System.Linq;
+using System.Windows.Input;
+using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace CircularUIChartGallery.ViewModel
 {
-    class MainPageModel
+    class MainPageModel : INotifyPropertyChanged
     {
-        public IList<DataItemGroup> DummyData { get; set; }
+        Data _monthlyData;
 
-        public IList<DataItemGroup> HRMDummyData { get; set; }
+        public Data DummyData { get; set; }
 
-        public IList<DataItemGroup> ColorDummyData { get; set; }
+        public Data HRMDummyData { get; set; }
 
-        public IList<DataItemGroup> BarBGColorDummyData { get; set; }
+        public Data ColorDummyData { get; set; }
 
-        public IList<DataItemGroup> MonthlyDummyData { get; set; }
+        public Data BarBGColorDummyData { get; set; }
 
-        public IList<DataItemGroup> GroupDummyData { get; set; }
+        public Data MonthlyDummyData
+        {
+            get => _monthlyData;
+            set
+            {
+                if (_monthlyData == value) return;
+                _monthlyData = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public IList<DataItem> ReferenceData1 { get; set; }
+        public Data GroupDummyData { get; set; }
 
-        public IList<DataItem> ReferenceData2 { get; set; }
+        public Data GroupDummyData2 { get; set; }
 
-        public IList<DataItem> MontlyReferenceData { get; set; }
+        public IList<IDataItem> ReferenceData1 { get; set; }
+
+        public IList<IDataItem> ReferenceData2 { get; set; }
+
+        public IList<IDataItem> MontlyReferenceData { get; set; }
 
         public IList<CategoryLabel> WeeklyLabel { get; set; }
 
@@ -55,34 +71,36 @@ namespace CircularUIChartGallery.ViewModel
 
         public AxisOption MontlyMajorMinorAxisOption { get; set; }
 
+        public ICommand MontlyDataChangeCommand { get; private set; }
+
         public MainPageModel()
         {
-            var dummyEntries = new List<IDataItem>
+            var dummyDataItems = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 5, ValueText = new TextItem { Text = "5", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Key = 2, Value = 8, ValueText = new TextItem { Text = "8", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Key = 4, Value = 4, ValueText = new TextItem { Text = "4", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Key = 6, Value = 10, ValueText = new TextItem { Text = "10", FontSize = 5, TextColor = Color.White } },
+                new DataItem { Key = 1, Value = 5, ValueText = new TextItem { Text = "5", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Key = 2, Value = 8, ValueText = new TextItem { Text = "8", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Key = 4, Value = 4, ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Key = 6, Value = 10, ValueText = new TextItem { Text = "10", FontSize = 4, TextColor = Color.Red } },
             };
 
-            var colorDummyEntries = new List<IDataItem>
+            var colorDummyDataItems = new List<IDataItem>
             {
                 new DataItem { Value = 5, Color = Color.FromHex("#00C7FF") },
                 new DataItem { Value = 8, Color = Color.FromHex("#00C7FF") },
-                new DataItem { Value = 4, Color = Color.FromHex("#A3B3BA"), ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.White } },
-                new DataItem { Value = 9, Color = Color.FromHex("#4CBA2A"), ValueText = new TextItem { Text = "9", FontSize = 4, TextColor = Color.White } },
+                new DataItem { Value = 4, Color = Color.FromHex("#A3B3BA"), ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.White }, ValueTextPosition = ValueTextPosition.Start },
+                new DataItem { Value = 9, Color = Color.FromHex("#4CBA2A"), ValueText = new TextItem { Text = "9", FontSize = 4, TextColor = Color.White }, ValueTextPosition = ValueTextPosition.Start },
                 new DataItem() { Value = 7, Color = Color.FromHex("#00C7FF") },
                 new DataItem() { Value = 8, Color = Color.FromHex("#00C7FF") }
             };
 
-            var HRMEntries = new List<IDataItem>
+            var HRMDataItems = new List<IDataItem>
             {
                 new DataItem { Value = 3, Color = Color.DarkRed, ValueText = new TextItem { Text = "12m", FontSize = 9, TextColor = Color.White } },
                 new DataItem { Value = 9, Color = Color.OrangeRed, ValueText = new TextItem { Text = "1h 3m", FontSize = 9, TextColor = Color.White } },
                 new DataItem { Value = 4, Color = Color.Orange, ValueText = new TextItem { Text = "17m", FontSize = 9, TextColor = Color.White } }
             };
 
-            var barBGDummyEntries = new List<IDataItem>
+            var barBGDummyDataItems = new List<IDataItem>
             {
                 new BarDataItem { Value = 5, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
                 new BarDataItem { Key = 3, Value = 8, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
@@ -92,50 +110,8 @@ namespace CircularUIChartGallery.ViewModel
                 new BarDataItem { Key = 7, Value = 7, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") }
             };
 
-            var monthlyDummyEntries = new List<IDataItem>
-            {
-                new DataItem { Value = 2340 },
-                new DataItem { Value = 2650 },
-                new DataItem { Value = 2000 },
-                new DataItem { Value = 2810 },
-                new DataItem { Value = 2760 },
-                new DataItem { Value = 2100 },
-                new DataItem { Value = 1850 },
-                new DataItem { Value = 1710 },
-                new DataItem { Value = 1300 },
-                new DataItem { Value = 1460 },
-                new DataItem { Value = 1300 },
-                new DataItem { Value = 2100 },
-            };
-
-            var monthlyDummyEntries2 = new List<IDataItem>
-            {
-                new DataItem { Value = 1200 },
-                new DataItem { Value = 1340 },
-                new DataItem { Value = 1490 },
-                new DataItem { Value = 1550 },
-                new DataItem { Value = 1630 },
-                new DataItem { Value = 1800 },
-                new DataItem { Value = 2200 },
-                new DataItem { Value = 2370 },
-                new DataItem { Value = 2400 },
-                new DataItem { Value = 2450 },
-                new DataItem { Value = 2300 },
-                new DataItem { Value = 2650 },
-            };
-
-            //set Color at dummy data
-            var count = monthlyDummyEntries.Count();
-            for (int i = 0; i < count; i++)
-            {
-                monthlyDummyEntries.ElementAt(i).SetMonthlyDummyColor();
-            }
-
-            count = monthlyDummyEntries2.Count();
-            for (int i = 0; i < count; i++)
-            {
-                monthlyDummyEntries2.ElementAt(i).SetMonthlyDummyColor();
-            }
+            var monthlyDummyData = new double[12] {2340, 2650, 2000, 2810, 2760, 2100, 1850, 1710, 1300, 1460, 1300, 2100};
+            var monthlyDummyData2 = new double[12] {1200, 1340, 1490, 1550, 1630, 1800, 2200, 2370, 2400, 2450, 2300, 2650};
 
             WeeklyLabel = new List<CategoryLabel>
             {
@@ -155,19 +131,19 @@ namespace CircularUIChartGallery.ViewModel
                 new CategoryLabel{Key = 12,  Label = new TextItem { Text = "DEC", FontSize = 5, TextColor = Color.White } }
             };
 
-            ReferenceData1 = new List<DataItem>
+            ReferenceData1 = new List<IDataItem>
             {
                 new DataItem { Value = 0, ValueText = new TextItem{ Text = "0", FontSize = 5, TextColor = Color.White } },
                 new DataItem { Value = 5, ValueText = new TextItem{ Text = "5", FontSize = 5, TextColor = Color.White } },
                 new DataItem { Value = 10, ValueText = new TextItem{ Text = "10", FontSize = 5,  TextColor = Color.White } }
             };
 
-            ReferenceData2 = new List<DataItem>
+            ReferenceData2 = new List<IDataItem>
             {
                 new DataItem { Value = 5},
             };
 
-            MontlyReferenceData = new List<DataItem>
+            MontlyReferenceData = new List<IDataItem>
             {
                 new DataItem { Value = 1500, ValueText = new TextItem{ Text = "1.5K", FontSize = 5, TextColor = Color.FromHex("#EF751D") } },
                 new DataItem { Value = 2000, ValueText = new TextItem{ Text = "2.0K", FontSize = 5, TextColor = Color.FromHex("#EBF51D") } },
@@ -175,16 +151,16 @@ namespace CircularUIChartGallery.ViewModel
                 new DataItem { Value = 3000, ValueText = new TextItem{ Text = "3.0K", FontSize = 5,  TextColor = Color.FromHex("#41C7D1") } }
             };
 
-            var groupDummyEntries1 = new List<IDataItem>
+            var groupDummyDataItems1 = new List<IDataItem>
             {
-                new DataItem { Value = 6, ValueText = new TextItem { Text = "6", FontSize = 4 } },
-                new DataItem { Value = 8, ValueText = new TextItem { Text = "8", FontSize = 4 } },
-                new DataItem { Value = 7, ValueText = new TextItem { Text = "7", FontSize = 4 } },
-                new DataItem { Value = 8, ValueText = new TextItem { Text = "8", FontSize = 4 } },
+                new DataItem { Value = 6 },
+                new DataItem { Value = 8 },
+                new DataItem { Value = 7 },
+                new DataItem { Value = 8 },
                 new DataItem { Value = 9, ValueText = new TextItem { Text = "9", FontSize = 4 } },
             };
 
-            var groupDummyEntries2 = new List<IDataItem>
+            var groupDummyDataItems2 = new List<IDataItem>
             {
                 new DataItem { Key = 1, Value = 8 },
                 new DataItem { Key = 2, Value = 7 },
@@ -192,60 +168,95 @@ namespace CircularUIChartGallery.ViewModel
                 new DataItem { Key = 5, Value = 8 },
             };
 
-            var groupDummyEntries3 = new List<IDataItem>
+            var groupDummyDataItems3 = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 4, ValueText = new TextItem { Text = "4", FontSize = 4 } },
+                new DataItem { Key = 1, Value = 4 },
                 new DataItem { Key = 2, Value = 5 },
                 new DataItem { Key = 4, Value = 6 },
                 new DataItem { Key = 6, Value = 6 },
                 new DataItem { Key = 7, Value = 7, ValueText = new TextItem { Text = "7", FontSize = 4 } },
             };
 
+            var groupDummyDataItems4 = new List<IDataItem>
+            {
+                new DataItem { Key = 1, Value = 6 },
+                new DataItem { Key = 2, Value = 2 },
+                new DataItem { Key = 3, Value = 2 },
+                new DataItem { Key = 4, Value = 3 },
+                new DataItem { Key = 5, Value = 4 },
+            };
 
-            DummyData = new List<DataItemGroup>();
-            HRMDummyData = new List<DataItemGroup>();
-            ColorDummyData = new List<DataItemGroup>();
-            BarBGColorDummyData = new List<DataItemGroup>();
-            MonthlyDummyData = new List<DataItemGroup>();
-            GroupDummyData = new List<DataItemGroup>();
+            var groupDummyDataItems5 = new List<IDataItem>
+            {
+                new DataItem { Key = 1, Value = 3 },
+                new DataItem { Key = 2, Value = 3 },
+            };
+
+            var groupDummyDataItems6 = new List<IDataItem>
+            {
+                new DataItem { Key = 1, Value = 3 },
+                new DataItem { Key = 2, Value = 3 },
+                new DataItem { Key = 3, Value = 2 },
+                new DataItem { Key = 4, Value = 3 },
+                new DataItem { Key = 5, Value = 5 },
+            };
 
             //Single Bar Chart dataset
-            var dataSet = new DataItemGroup(dummyEntries, "Weekly data");
-            dataSet.Color = Color.Yellow;
-            DummyData.Add(dataSet);
-
-            var HRMDataSet = new DataItemGroup(HRMEntries, "HRM data");
-            HRMDummyData.Add(HRMDataSet);
-
-            var colorDataSet = new DataItemGroup(colorDummyEntries, "Weekly data with each entry color");
-            colorDataSet.Color = Color.Green;
-            ColorDummyData.Add(colorDataSet);
-
-            var barBGColorDataSet = new DataItemGroup(barBGDummyEntries, "Weekly data with entry color and bar background color");
-            BarBGColorDummyData.Add(barBGColorDataSet);
-
-            var montlyDataSet = new DataItemGroup(monthlyDummyEntries, "Monthly data");
-            MonthlyDummyData.Add(montlyDataSet);
+            var dummyDataItemGroup = new DataItemGroup(dummyDataItems, "Weekly data");
+            dummyDataItemGroup.Color = Color.Yellow;
+            var HRMDataItemGroup = new DataItemGroup(HRMDataItems, "HRM data");
+            var colorDataItemGroup = new DataItemGroup(colorDummyDataItems, "Weekly data with each entry color");
+            colorDataItemGroup.Color = Color.Green;
+            var barBGColorItemGroup = new DataItemGroup(barBGDummyDataItems, "Weekly data with entry color and bar background color");
+            var montlyDataItemGroup = new DataItemGroup(monthlyDummyData, "Monthly data");
+            var montlyDataItemGroup2 = new DataItemGroup(monthlyDummyData2, "Monthly data2");
 
             //Group-Bar Chart dataset
-            var groupDataSet1 = new BarDataItemGroup(groupDummyEntries1, "Group data 1");
-            groupDataSet1.Color = Color.FromHex("#FF49BF");
-            groupDataSet1.BarBackgroundColor = Color.FromHex("#3F1933");
-            GroupDummyData.Add(groupDataSet1);
+            var dataItemGroupList1 = new List<DataItemGroup>();
+            var dataItemGroupList2 = new List<DataItemGroup>();
+            var groupDataItemGroup1 = new BarDataItemGroup(groupDummyDataItems1, "Group data 1");
+            groupDataItemGroup1.Color = Color.FromHex("#FF49BF");
+            groupDataItemGroup1.BarBackgroundColor = Color.FromHex("#3F1933");
+            dataItemGroupList1.Add(groupDataItemGroup1);
+            dataItemGroupList2.Add(groupDataItemGroup1);
 
-            var groupDataSet2 = new BarDataItemGroup(groupDummyEntries2, "Group data 2");
-            groupDataSet2.Color = Color.FromHex("#7EF954");
-            groupDataSet2.BarBackgroundColor = Color.FromHex("#142D00");
-            GroupDummyData.Add(groupDataSet2);
+            var groupDataItemGroup2 = new BarDataItemGroup(groupDummyDataItems2, "Group data 2");
+            groupDataItemGroup2.Color = Color.FromHex("#7EF954");
+            groupDataItemGroup2.BarBackgroundColor = Color.FromHex("#142D00");
+            dataItemGroupList1.Add(groupDataItemGroup2);
+            dataItemGroupList2.Add(groupDataItemGroup2);
 
-            var groupDataSet3 = new BarDataItemGroup(groupDummyEntries3, "Group data 3");
-            groupDataSet3.Color = Color.FromHex("#2176FF");
-            groupDataSet3.BarBackgroundColor = Color.FromHex("#0E2751");
-            GroupDummyData.Add(groupDataSet3);
+            var groupDataItemGroup3 = new BarDataItemGroup(groupDummyDataItems3, "Group data 3");
+            groupDataItemGroup3.Color = Color.FromHex("#2176FF");
+            groupDataItemGroup3.BarBackgroundColor = Color.FromHex("#0E2751");
+            dataItemGroupList1.Add(groupDataItemGroup3);
+            dataItemGroupList2.Add(groupDataItemGroup3);
+
+            var groupDataItemGroup4 = new BarDataItemGroup(groupDummyDataItems4, "Group data 4");
+            groupDataItemGroup4.Color = Color.Red;
+            dataItemGroupList2.Add(groupDataItemGroup3);
+
+            var groupDataItemGroup5 = new BarDataItemGroup(groupDummyDataItems5, "Group data 5");
+            groupDataItemGroup5.Color = Color.Yellow;
+            dataItemGroupList2.Add(groupDataItemGroup5);
+
+            var groupDataItemGroup6 = new BarDataItemGroup(groupDummyDataItems6, "Group data 6");
+            groupDataItemGroup6.Color = Color.Yellow;
+            dataItemGroupList2.Add(groupDataItemGroup6);
+
+            DummyData = new Data(dummyDataItemGroup);
+            HRMDummyData = new Data(HRMDataItemGroup);
+            ColorDummyData = new Data(colorDataItemGroup);
+            BarBGColorDummyData = new Data(barBGColorItemGroup);
+            GroupDummyData = new Data(dataItemGroupList1);
+            GroupDummyData2 = new Data(dataItemGroupList2);
+
+            var MontlyData1 = new Data(montlyDataItemGroup);
+            var MontlyData2 = new Data(montlyDataItemGroup2);
+            MonthlyDummyData = MontlyData1;
 
             var option1 = new AxisOption(true, false);
             option1.CategoryLabels = WeeklyLabel;
-            option1.IsVisibleOfCategoryLabel = true;
             option1.AxisLineColor = Color.White;
             MajorOnlyAxisOption = option1;
 
@@ -255,40 +266,33 @@ namespace CircularUIChartGallery.ViewModel
             option1.IsVisibleOfReferenceLine = true;
             CategoryReferenceLineAxisOption = option1;
 
-            var option2 = new AxisOption(true, true, true, true, true);
+            var option2 = new AxisOption(true, true, true, true);
             option2.CategoryLabels = WeeklyLabel;
             option2.ReferenceDataItems = ReferenceData1;
             option2.AxisLineColor = Color.White;
             MajorMinorAxisOption = option2;
 
-            var option3 = new AxisOption(true, true, true, true, true);
+            var option3 = new AxisOption(true, true, true, true);
             option3.CategoryLabels = MonthlyLabel;
             option3.ReferenceDataItems = MontlyReferenceData;
             option3.AxisLineColor = Color.White;
             MontlyMajorMinorAxisOption = option3;
-        }
-    }
 
-    public static class EntryExtension
-    {
-        public static void SetMonthlyDummyColor(this IDataItem entry)
-        {
-            if (entry.Value <= 1500)
+            MontlyDataChangeCommand = new Command((obj) =>
             {
-                (entry as DataItem).Color = Color.FromHex("#EF751D");
-            }
-            else if (entry.Value <= 2000)
-            {
-                (entry as DataItem).Color = Color.FromHex("#EBF51D");
-            }
-            else if (entry.Value <= 2500)
-            {
-                (entry as DataItem).Color = Color.FromHex("#72E61D");
-            }
-            else
-            {
-                (entry as DataItem).Color = Color.FromHex("#41C7D1");
-            }
+                Console.WriteLine("MontlyDataChangeCommand");
+                if (MonthlyDummyData == MontlyData1)
+                    MonthlyDummyData = MontlyData2;
+                else
+                    MonthlyDummyData = MontlyData1;
+            });
         }
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

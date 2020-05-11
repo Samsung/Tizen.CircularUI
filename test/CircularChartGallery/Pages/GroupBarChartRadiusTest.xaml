@@ -18,7 +18,7 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <Label
-                    Text="GroupDataCount = 3, Maximum = 10"
+                    Text="Group Count = 3, Maximum = 10"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -29,34 +29,29 @@
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="7"
                     GroupBarMargin ="4"
-                    GroupDataCount="3"
                     BarTopRadius="3.5"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
                     WidthRequest="340"
                     HeightRequest="150"/>
                 <Label
-                    Text="GroupDataCount = 4, Maximum = 20"
+                    Text="Group Count = 6, Maximum = 10"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <chart:GroupBarChartView
                     x:Name="groupBarRadiusTest2"
-                    Margin="0, 0, 0, 50"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="7"
                     GroupBarMargin ="4"
-                    GroupDataCount="4"
                     BarTopRadius="3.5"
                     BarBottomRadius="3.5"
-                    Maximum="20"
-                    Data="{Binding GroupDummyData}"
+                    Maximum="10"
+                    Data="{Binding GroupDummyData2}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
-                    BarBackgroundColorIsVisible="True"
                     WidthRequest="340"
                     HeightRequest="150"/>
             </StackLayout>

@@ -59,5 +59,11 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
         public TextItem ValueText { get; set; }
+
+        /// <summary>
+        /// Gets or sets a position of data ValueText.
+        /// </summary>
+        /// <since_tizen> 4 </since_tizen>
+        public ValueTextPosition ValueTextPosition { get; set; } = ValueTextPosition.End;
     }
 }
