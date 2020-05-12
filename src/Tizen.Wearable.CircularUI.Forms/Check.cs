@@ -38,6 +38,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// }
     /// </code>
     /// </example>
+    [Obsolete("Check is obsolete as of version 1.5.0. Please use Xamarin.Forms.Switch instead.")]
     public class Check : Switch
     {
         /// <summary>

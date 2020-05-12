@@ -20,7 +20,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleListViewGroupHeader : CirclePage
+    public partial class TCCircleListViewGroupHeader : BezelInteractionPage
     {
         public TCCircleListViewGroupHeader ()
         {

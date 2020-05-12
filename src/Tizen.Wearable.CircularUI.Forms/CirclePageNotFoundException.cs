@@ -24,6 +24,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CirclePageNotFoundException is an Exception class that occurs when a CircleSurface has no child.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
+    /// [Obsolete("CirclePageNotFoundException is obsolete as of version 1.5.0. Please do not use.")]
     public class CirclePageNotFoundException : Exception
     {
         /// <summary>

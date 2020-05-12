@@ -56,16 +56,6 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "ChangeBarColor", Class = typeof(TCCircleListViewBarColor) },
                 }
             });
-            TCs.Add(new TCDescribe
-            {
-                Title = "CirclePage",
-                Class = new TCTypes
-                {
-                    new TCDescribe { Title = "CirclePageBehavior", Class = typeof(TCCirclePage) },
-                    new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) },
-                    new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) }
-                }
-            });
             TCs.Add(new TCDescribe { Title = "BezelInteraction", Class = typeof(TCBezelInteractionPage) });
             TCs.Add(new TCDescribe { Title = "DateTimeSelector", Class = typeof(TCCircleDateTimeSelector) });
             TCs.Add(new TCDescribe
@@ -118,18 +108,6 @@ namespace WearableUIGallery
             });
             TCs.Add(new TCDescribe
             {
-                Title = "IndexPage",
-                Class = new TCTypes
-                {
-                    new TCDescribe { Title = "Add/Move", Class = typeof(TCIndexPage) },
-                    new TCDescribe { Title = "Add (base 1)", Class = typeof(TCIndexPageSingleStart) },
-                    new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) },
-                    new TCDescribe { Title = "Focus", Class = typeof(TCIndexPageFocus) },
-                    new TCDescribe { Title = "ActionButton", Class = typeof(TCIndexPageActionButton) }
-                }
-            });
-            TCs.Add(new TCDescribe
-            {
                 Title = "TwoButtonPage",
                 Class = new TCTypes
                 {
@@ -142,16 +120,6 @@ namespace WearableUIGallery
             TCs.Add(new TCDescribe { Title = "InformationPopup", Class = typeof(TCInformationPopup) });
             TCs.Add(new TCDescribe { Title = "Toast", Class = typeof(TCToast) });
             TCs.Add(new TCDescribe { Title = "RotationReceiver", Class = typeof(TCIRotaryEventReceiver) });
-            TCs.Add(new TCDescribe { Title = "Check", Class = typeof(TCCheck) });
-            TCs.Add(new TCDescribe
-            {
-                Title = "Radio",
-                Class = new TCTypes
-                {
-                    new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) },
-                    new TCDescribe { Title = "ListView", Class = typeof(TCRadioListView) }
-                }
-            });
             TCs.Add(new TCDescribe { Title = "Performance", Class = typeof(TCPerformance) });
             TCs.Add(new TCDescribe
             {
@@ -194,6 +162,38 @@ namespace WearableUIGallery
                 {
                     new TCDescribe { Title = "RadialProgress", Class = typeof(TCRadialProgress) },
                     new TCDescribe { Title = "RadialProgress2", Class = typeof(TCRadialProgress2) },
+                }
+            });
+            TCs.Add(new TCDescribe
+            {
+                Title = "CirclePage (Deprecated)",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "CirclePageBehavior", Class = typeof(TCCirclePage) },
+                    new TCDescribe { Title = "RotaryFocus", Class = typeof(TCRotaryFocus) },
+                    new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) }
+                }
+            });
+            TCs.Add(new TCDescribe
+            {
+                Title = "IndexPage (Deprecated)",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "Add/Move", Class = typeof(TCIndexPage) },
+                    new TCDescribe { Title = "Add (base 1)", Class = typeof(TCIndexPageSingleStart) },
+                    new TCDescribe { Title = "Template", Class = typeof(TCIndexPageTemplate) },
+                    new TCDescribe { Title = "Focus", Class = typeof(TCIndexPageFocus) },
+                    new TCDescribe { Title = "ActionButton", Class = typeof(TCIndexPageActionButton) }
+                }
+            });
+            TCs.Add(new TCDescribe { Title = "Check (Deprecated)", Class = typeof(TCCheck) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "Radio (Deprecated)",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "StackLayout", Class = typeof(TCRadioStackLayout) },
+                    new TCDescribe { Title = "ListView", Class = typeof(TCRadioListView) }
                 }
             });
         }

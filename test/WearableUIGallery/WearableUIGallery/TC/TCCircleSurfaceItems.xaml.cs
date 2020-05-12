@@ -23,7 +23,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleSurfaceItems : CirclePage
+    public partial class TCCircleSurfaceItems : ContentPage
     {
         static Color[] colors = new Color[] {
             Color.IndianRed,
@@ -98,11 +98,11 @@ namespace WearableUIGallery.TC
                 item.SetBinding(CircleProgressBarSurfaceItem.ValueProperty, "Value", BindingMode.Default, new MultiConverter(convFuncs[index]));
                 item.BindingContext = this;
 
-                CircleSurfaceItems.Add(item);
+                circleSurfaceView.CircleSurfaceItems.Add(item);
             }
             else
             {
-                CircleSurfaceItems.RemoveAt(index-1);
+                circleSurfaceView.CircleSurfaceItems.RemoveAt(index-1);
             }
 
             index += inc;

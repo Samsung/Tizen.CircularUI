@@ -1,14 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCInformationPopup"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference myscroller}">
-    <ContentPage.Behaviors>
-        <w:CircleSurfaceEffectBehavior/>
-    </ContentPage.Behaviors>
+    RotaryFocusObject="{x:Reference myscroller}">
     <ContentPage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Padding="0,50,0,50">
@@ -97,4 +93,4 @@
             </StackLayout>
         </w:CircleScrollView>
     </ContentPage.Content>
-</ContentPage>
+</w:BezelInteractionPage>

@@ -1,30 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCCircleStepper5"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
+    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference StepperUnit}">
-    <w:CirclePage.Content>
-        <StackLayout
-            VerticalOptions="CenterAndExpand"
-            Orientation="Vertical">
-            <w:CircleStepper
-                    AutomationId="stepper"
-                    x:Name="StepperUnit"
-                    HeightRequest="350"
-                    Title="stepper"
-                    HorizontalOptions="CenterAndExpand"
-                    Increment="1"
-                    LabelFormat="%1.1f"
-                    Maximum="100.0"
-                    Minimum="0.0"
-                    IsWrapEnabled="False"
-                    Value="50" />
-        </StackLayout>
-    </w:CirclePage.Content>
-    <w:CirclePage.ActionButton>
-        <w:ActionButtonItem x:Name="Button1" Text="Wrap Disable" Clicked="ActionButtonClicked"/>
-    </w:CirclePage.ActionButton>
-</w:CirclePage>
+    <w:BezelInteractionPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 360, 360"
+                VerticalOptions="CenterAndExpand"
+                Orientation="Vertical">
+                <w:CircleStepper
+                        AutomationId="stepper"
+                        x:Name="StepperUnit"
+                        HeightRequest="350"
+                        Title="stepper"
+                        HorizontalOptions="CenterAndExpand"
+                        Increment="1"
+                        LabelFormat="%1.1f"
+                        Maximum="100.0"
+                        Minimum="0.0"
+                        IsWrapEnabled="False"
+                        Value="50" />
+            </StackLayout>
+            <Button x:Name="Button1"
+                    Text="Wrap Disable"
+                    AbsoluteLayout.LayoutBounds="75, 268, 210, 92"
+                    tizen:VisualElement.Style="bottom"
+                    Clicked="ActionButtonClicked"/>
+        </AbsoluteLayout>
+    </w:BezelInteractionPage.Content>
+</w:BezelInteractionPage>

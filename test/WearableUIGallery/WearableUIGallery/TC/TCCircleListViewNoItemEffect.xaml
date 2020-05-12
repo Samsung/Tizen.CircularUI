@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCCircleListViewNoItemEffect"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -7,7 +7,7 @@
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference mylist}">
-    <w:CirclePage.Resources>
+    <w:BezelInteractionPage.Resources>
         <DataTemplate x:Key="FlatItem">
             <w:FlatViewCell>
                 <Grid>
@@ -22,8 +22,8 @@
         <local:MyItemSelector x:Key="myItemSelector"
                               FlatItemTemplate="{StaticResource FlatItem}"
                               NormalItemTemplate="{StaticResource NormalItem}" />
-    </w:CirclePage.Resources>
-    <w:CirclePage.Content>
+    </w:BezelInteractionPage.Resources>
+    <w:BezelInteractionPage.Content>
         <w:CircleListView x:Name="mylist" ItemTapped="OnItemTapped" ItemTemplate="{StaticResource myItemSelector}">
             <w:CircleListView.ItemsSource>
                 <x:Array Type="{x:Type sys:String}">
@@ -67,5 +67,5 @@
                 </DataTemplate>
             </w:CircleListView.FooterTemplate>
         </w:CircleListView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </w:BezelInteractionPage.Content>
+</w:BezelInteractionPage>

@@ -22,7 +22,7 @@ using Tizen.Wearable.CircularUI.Forms;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCheck : CirclePage
+    public partial class TCCheck : ContentPage
     {
         public TCCheck ()
         {

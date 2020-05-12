@@ -22,7 +22,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleSliderSurfaceItem1 : CirclePage
+    public partial class TCCircleSliderSurfaceItem1 : BezelInteractionPage
     {
 
         public TCCircleSliderSurfaceItem1()

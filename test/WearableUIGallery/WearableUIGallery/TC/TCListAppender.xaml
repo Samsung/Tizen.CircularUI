@@ -3,21 +3,17 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
                  x:Class="WearableUIGallery.TC.TCListAppender"
-                 x:Name="MyPage"
-                 w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference mylist}">
-    <w:TwoButtonPage.Behaviors>
-        <w:CircleSurfaceEffectBehavior/>
-    </w:TwoButtonPage.Behaviors>
+                 x:Name="MyPage">
     <w:TwoButtonPage.Content>
-        <w:CircleListView
+        <ListView
             x:Name="mylist"
             AutomationId="list"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
-            <w:CircleListView.Header>
+            <ListView.Header>
                 <x:String>Head</x:String>
-            </w:CircleListView.Header>
-            <w:CircleListView.HeaderTemplate>
+            </ListView.Header>
+            <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Label
                         HeightRequest="120"
@@ -27,8 +23,8 @@
                         Text="{Binding .}"
                         TextColor="Red" />
                 </DataTemplate>
-            </w:CircleListView.HeaderTemplate>
-        </w:CircleListView>
+            </ListView.HeaderTemplate>
+        </ListView>
     </w:TwoButtonPage.Content>
     <w:TwoButtonPage.FirstButton>
         <MenuItem

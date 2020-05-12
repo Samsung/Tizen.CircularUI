@@ -15,26 +15,27 @@
  */
 
 using System;
-using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCRadioListView : CirclePage
+    public partial class TCRadioListView : ContentPage
     {
         public TCRadioListView()
         {
             InitializeComponent();
         }
 
-        public void OnSelected(object sender, SelectedEventArgs args)
+        public void OnSelected(object sender, CheckedChangedEventArgs args)
         {
-            Radio radio = sender as Radio;
+            RadioButton radio = sender as RadioButton;
             if (radio != null)
             {
-                Console.WriteLine($"<<OnSelected>>  args.Value:{args.Value}, args.IsSelected:{args.IsSelected}");
-                Console.WriteLine($"<<OnSelected>>  Radio Value:{radio.Value}, IsSelected:{radio.IsSelected}, GroupName:{radio.GroupName}");
+                Console.WriteLine($"<<OnSelected>>  args.Value:{args.Value}");
+                Console.WriteLine($"<<OnSelected>>  Radio Text:{radio.Text}, IsChecked:{radio.IsChecked}, GroupName:{radio.GroupName}");
             }
         }
     }

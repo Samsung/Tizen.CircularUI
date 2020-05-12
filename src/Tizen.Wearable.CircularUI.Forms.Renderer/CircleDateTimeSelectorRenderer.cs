@@ -56,10 +56,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     SetNativeControl(new ECircleDateTimeSelector(XForms.NativeParent, surface));
                     Control.DateTimeChanged += OnDateTimeChanged;
                 }
-                else
-                {
-                    throw new CirclePageNotFoundException();
-                }
             }
             base.OnElementChanged(e);
         }

@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core"
              x:Class="WearableUIGallery.TC.TCActionButton">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical"
-            VerticalOptions="Center">
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Set"
-                        AutomationId="set"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        Clicked="OnClickSet"/>
-                <Button Text="Enable"
-                        AutomationId="enable"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        Clicked="OnClickEnable"/>
-                <Button Text="Visible"
-                        AutomationId="visible"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        Clicked="OnClickVisible"/>
+        <AbsoluteLayout>
+            <StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds="0, 60, 360, 300">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Enable"
+                            AutomationId="enable"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="OnClickEnable"/>
+                    <Button Text="Visible"
+                            AutomationId="visible"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="OnClickVisible"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Change button color"
+                            AutomationId="changeColor"
+                            FontSize="Small"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="OnClickChangeColor"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Set icon image"
+                            AutomationId="iconimage"
+                            FontSize="Small"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="OnClickSetIcon"/>
+                </StackLayout>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Change button color"
-                        AutomationId="changeColor"
-                        FontSize="Small"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        Clicked="OnClickChangeColor"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Set icon image"
-                        AutomationId="iconimage"
-                        FontSize="Small"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        Clicked="OnClickSetIcon"/>
-            </StackLayout>
-        </StackLayout>
+            <Button x:Name="ActionButton"
+                    Text="Action"
+                    AbsoluteLayout.LayoutBounds="75, 268, 210, 92"
+                    tizen:VisualElement.Style="bottom" />
+        </AbsoluteLayout>
     </ContentPage.Content>
-</w:CirclePage>
+</ContentPage>

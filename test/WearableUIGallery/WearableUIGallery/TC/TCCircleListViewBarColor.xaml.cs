@@ -22,7 +22,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleListViewBarColor : CirclePage
+    public partial class TCCircleListViewBarColor : BezelInteractionPage
     {
         public TCCircleListViewBarColor()
         {

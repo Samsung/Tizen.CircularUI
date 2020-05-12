@@ -24,7 +24,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleDateTimeSelector : IndexPage
+    public partial class TCCircleDateTimeSelector : CarouselPage
     {
         DateTimeType type;
         LabelColorRotaryProxy colorRotaryProxy;
@@ -34,17 +34,6 @@ namespace WearableUIGallery.TC
             InitializeComponent ();
 
             colorRotaryProxy = new LabelColorRotaryProxy(SettingColorLabel);
-
-            SettingColorLabel.GestureRecognizers.Add(new TapGestureRecognizer
-            {
-                Command = new Command(() => SettingPage.SetValue(CircleSurfaceEffectBehavior.RotaryFocusObjectProperty, colorRotaryProxy))
-            });
-
-            SettingScroller.GestureRecognizers.Add(new TapGestureRecognizer
-            {
-                Command = new Command(() => SettingPage.SetValue(CircleSurfaceEffectBehavior.RotaryFocusObjectProperty, SettingScroller))
-            });
-
             type = DateTimeType.Date;
 
             SettingValueTypeLabel.Text = type.ToString();

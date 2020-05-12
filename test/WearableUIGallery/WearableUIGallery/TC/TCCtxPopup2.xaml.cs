@@ -22,7 +22,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCtxPopup2 : CirclePage
+    public partial class TCCtxPopup2 : ContentPage
     {
         public TCCtxPopup2()
         {
@@ -45,7 +45,7 @@ namespace WearableUIGallery.TC
 
             CtxCheck1.PropertyChanged += (s, e) =>
             {
-                if (e.PropertyName == Check.IsToggledProperty.PropertyName)
+                if (e.PropertyName == Switch.IsToggledProperty.PropertyName)
                     System.Diagnostics.Debug.WriteLine($"IsToggled of CtxCheck1= {CtxCheck1.IsToggled}");
             };
         }

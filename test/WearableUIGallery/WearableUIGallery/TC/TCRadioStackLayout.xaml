@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCRadioStackLayout"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference myscroller}">
-    <w:CirclePage.BindingContext>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.BindingContext>
         <local:TCRadioViewModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
-        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Padding="0,50" Orientation="Vertical">
                 <Label
                     AutomationId="labelMode"
@@ -107,6 +106,6 @@
                         Value="{Binding Weak.Value}" />
                 </StackLayout>
             </StackLayout>
-        </w:CircleScrollView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -21,7 +21,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCRotaryFocus : CirclePage
+    public partial class TCRotaryFocus : BezelInteractionPage
     {
         TapGestureRecognizer _universeClicked;
         TapGestureRecognizer _spacemanClicked;

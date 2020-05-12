@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+<w:BezelInteractionPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
               xmlns:local="clr-namespace:WearableUIGallery.TC"
@@ -7,15 +7,9 @@
               RotaryFocusObject="{x:Reference Spaceman}}">
     <ContentPage.Content>
         <AbsoluteLayout>
-            <Image x:Name="Universe" Source="image/stars_background.png" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
-            <local:RotaryFocusImage x:Name="Spaceman" Source="image/spaceman.png" AbsoluteLayout.LayoutBounds="0.5, 0.2" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                    AnchorX="0.5" AnchorY="1.5"/>
-            <Image x:Name="SliderTarget" Source="image/tw_ic_popup_btn_check.png" AbsoluteLayout.LayoutBounds="0.5, 0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                    AutomationId="check"/>
-        </AbsoluteLayout>
-    </ContentPage.Content>
-    <w:CirclePage.CircleSurfaceItems>
-        <w:CircleSliderSurfaceItem x:Name="Slider"
+            <w:CircleSurfaceView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <w:CircleSurfaceView.CircleSurfaceItems>
+                    <w:CircleSliderSurfaceItem x:Name="Slider"
                                    BackgroundColor="Blue"
                                    BackgroundLineWidth="12"
                                    BackgroundRadius="168"
@@ -26,5 +20,13 @@
                                    Minimum="0"
                                    Maximum="11"
                                    Value="0"/>
-    </w:CirclePage.CircleSurfaceItems>
-</w:CirclePage>
+                </w:CircleSurfaceView.CircleSurfaceItems>
+            </w:CircleSurfaceView>
+            <Image x:Name="Universe" Source="image/stars_background.png" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+            <local:RotaryFocusImage x:Name="Spaceman" Source="image/spaceman.png" AbsoluteLayout.LayoutBounds="0.5, 0.2" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                    AnchorX="0.5" AnchorY="1.5"/>
+            <Image x:Name="SliderTarget" Source="image/tw_ic_popup_btn_check.png" AbsoluteLayout.LayoutBounds="0.5, 0.5" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                    AutomationId="check"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</w:BezelInteractionPage>

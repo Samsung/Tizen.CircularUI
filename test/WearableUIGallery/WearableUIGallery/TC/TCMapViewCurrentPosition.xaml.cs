@@ -24,7 +24,7 @@ using System;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCMapViewCurrentPosition : CirclePage
+    public partial class TCMapViewCurrentPosition : ContentPage
     {
         GoogleMapOption _option;
         Locator _locator;

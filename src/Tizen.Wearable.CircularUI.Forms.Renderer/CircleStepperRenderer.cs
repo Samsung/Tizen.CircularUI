@@ -71,10 +71,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     _listShow.On += OnListShow;
                     _listHide.On += OnListHide;
                 }
-                else
-                {
-                    throw new CirclePageNotFoundException();
-                }
             }
 
             base.OnElementChanged(e);

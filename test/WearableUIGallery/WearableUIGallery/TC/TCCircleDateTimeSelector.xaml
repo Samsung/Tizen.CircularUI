@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:IndexPage xmlns="http://xamarin.com/schemas/2014/forms"
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
              xmlns:local="clr-namespace:WearableUIGallery.TC"
+             xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core"
              x:Class="WearableUIGallery.TC.TCCircleDateTimeSelector">
-    <w:CirclePage x:Name="SelectorPage" RotaryFocusObject="{x:Reference TimeSelector}">
-        <w:CirclePage.Resources>
+    <w:BezelInteractionPage x:Name="SelectorPage" RotaryFocusObject="{x:Reference TimeSelector}">
+        <ContentPage.Resources>
             <local:ValueTypeConverter x:Key="VTypeConverter"/>
-        </w:CirclePage.Resources>
-        <w:CirclePage.Content>
+        </ContentPage.Resources>
+        <ContentPage.Content>
             <w:CircleDateTimeSelector x:Name="TimeSelector"
                                       ValueType="{Binding IsToggled, Source={x:Reference SettingValueType}, Converter={StaticResource VTypeConverter}}"
                                       IsVisibleOfYear="{Binding IsToggled, Source={x:Reference SettingOptionYear}}"
@@ -18,12 +19,9 @@
                                       IsVisibleOfMinute="{Binding IsToggled, Source={x:Reference SettingOptionMinute}}"
                                       IsVisibleOfAmPm="{Binding IsToggled, Source={x:Reference SettingOptionAmPm}}"
                                       DateTime="{Binding Text, Source={x:Reference SettingOptionDateTime}, Mode=OneWayToSource}"/>
-        </w:CirclePage.Content>
-    </w:CirclePage>
-    <ContentPage x:Name="SettingPage" w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference SettingScroller}">
-        <ContentPage.Behaviors>
-            <w:CircleSurfaceEffectBehavior/>
-        </ContentPage.Behaviors>
+        </ContentPage.Content>
+    </w:BezelInteractionPage>
+    <w:BezelInteractionPage x:Name="SettingPage" RotaryFocusObject="{x:Reference SettingScroller}">
         <ContentPage.Resources>
             <local:ColorHexConverter x:Key="colorHexInverter"/>
             <local:ReverseColor x:Key="colorReverser"/>
@@ -52,28 +50,28 @@
                         <Switch x:Name="SettingValueType" Grid.Row="1" Grid.Column="1"/>
 
                         <Label Text="Year" Grid.Row="2" Grid.Column="0"/>
-                        <w:Check x:Name="SettingOptionYear" Grid.Row="2" Grid.Column="1" IsToggled="True"/>
+                        <Switch x:Name="SettingOptionYear"  tizen:VisualElement.Style="default" Grid.Row="2" Grid.Column="1" IsToggled="True"/>
                         <Label Text="Month"  Grid.Row="3" Grid.Column="0"/>
-                        <w:Check x:Name="SettingOptionMonth" Grid.Row="3" Grid.Column="1" IsToggled="True"/>
+                        <Switch x:Name="SettingOptionMonth"  tizen:VisualElement.Style="default" Grid.Row="3" Grid.Column="1" IsToggled="True"/>
                         <Label Text="Date"  Grid.Row="4" Grid.Column="0"/>
-                        <w:Check x:Name="SettingOptionDate"  Grid.Row="4" Grid.Column="1" IsToggled="True"/>
+                        <Switch x:Name="SettingOptionDate" tizen:VisualElement.Style="default" Grid.Row="4" Grid.Column="1" IsToggled="True"/>
                         <Label Text="Hour" Grid.Row="5" Grid.Column="0"/>
-                        <w:Check x:Name="SettingOptionHour" Grid.Row="5" Grid.Column="1" IsToggled="True"/>
+                        <Switch x:Name="SettingOptionHour" tizen:VisualElement.Style="default" Grid.Row="5" Grid.Column="1" IsToggled="True"/>
                         <Label Text="Minute"  Grid.Row="6" Grid.Column="0"/>
-                        <w:Check x:Name="SettingOptionMinute" Grid.Row="6" Grid.Column="1" IsToggled="True"/>
+                        <Switch x:Name="SettingOptionMinute" tizen:VisualElement.Style="default" Grid.Row="6" Grid.Column="1" IsToggled="True"/>
                         <Label Text="AmPm"  Grid.Row="7" Grid.Column="0"/>
-                        <w:Check x:Name="SettingOptionAmPm"  Grid.Row="7" Grid.Column="1" IsToggled="True"/>
+                        <Switch x:Name="SettingOptionAmPm" tizen:VisualElement.Style="default" Grid.Row="7" Grid.Column="1" IsToggled="True"/>
 
                         <Label x:Name="SettingOptionDateTime" Grid.Row="8" Grid.ColumnSpan="2"/>
                     </Grid>
                 </StackLayout>
             </w:CircleScrollView>
         </ContentPage.Content>
-    </ContentPage>
+    </w:BezelInteractionPage>
     <ContentPage x:Name="TimeTextPage">
         <Label x:Name="TimeText"
                BackgroundColor="White" TextColor="Black"
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"/>
     </ContentPage>
-</w:IndexPage>
+</CarouselPage>

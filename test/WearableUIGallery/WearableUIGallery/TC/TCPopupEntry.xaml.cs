@@ -22,7 +22,7 @@ using Xamarin.Forms;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCPopupEntry : CirclePage
+    public partial class TCPopupEntry : BezelInteractionPage
     {
         static string Validname = "hostname";
 

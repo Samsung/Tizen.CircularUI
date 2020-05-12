@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCCheck"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference myscroller}">
-    <w:CirclePage.Content>
-        <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
+    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core">
+    <ContentPage.Content>
+        <ScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout Orientation="Vertical">
                 <Label HorizontalOptions="CenterAndExpand" Text="Default" />
                 <w:Check
@@ -15,19 +15,18 @@
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
                     Toggled="OnToggledDefault" />
-
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff" />
-                <w:Check
+                <Switch
                     AutomationId="onOff"
-                    DisplayStyle="Onoff"
+                    tizen:VisualElement.Style="on&amp;off"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
                     Toggled="OnToggledOnOff" />
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Small" />
-                <w:Check
+                <Switch
                     AutomationId="small"
-                    DisplayStyle="Small"
+                    tizen:VisualElement.Style="small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
                     Toggled="OnToggledSmall" />
@@ -38,23 +37,23 @@
                     DisplayStyle="Default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
-                    Color="Blue"
+                    OnColor="Blue"
                     Toggled="OnToggledDefault" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Default Color Red" />
-                <w:Check
+                <Switch
                     AutomationId="defaultColorRed"
-                    DisplayStyle="Default"
+                    tizen:VisualElement.Style="default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
-                    Color="Red"
+                    OnColor="Red"
                     Toggled="OnToggledDefault" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Default Color Green" />
-                <w:Check
+                <Switch
                     AutomationId="defaultColorGreen"
-                    DisplayStyle="Default"
+                    tizen:VisualElement.Style="default"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
-                    Color="Green"
+                    OnColor="Green"
                     Toggled="OnToggledDefault" />
 
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color blue" />
@@ -63,49 +62,49 @@
                     DisplayStyle="Onoff"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
-                    Color ="Blue"
+                    OnColor ="Blue"
                     Toggled="OnToggledOnOff" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color Red" />
-                <w:Check
+                <Switch
                     AutomationId="onOffColorRed"
-                    DisplayStyle="Onoff"
+                    tizen:VisualElement.Style="on&amp;off"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
-                    Color ="Red"
+                    OnColor ="Red"
                     Toggled="OnToggledOnOff" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Onoff Color Green" />
-                <w:Check
+                <Switch
                     AutomationId="onOffColorGreen"
-                    DisplayStyle="Onoff"
+                    tizen:VisualElement.Style="on&amp;off"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="True"
-                    Color ="Green"
+                    OnColor ="Green"
                     Toggled="OnToggledOnOff" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Small Color Blue" />
                 <w:Check
                     AutomationId="smallColorBlue"
-                    DisplayStyle="Small"
+                    tizen:VisualElement.Style="small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
-                    Color="Blue"
+                    BackgroundColor="Blue"
                     Toggled="OnToggledSmall" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Small Color Purple" />
-                <w:Check
+                <Switch
                     AutomationId="smallColorPurple"
-                    DisplayStyle="Small"
+                    tizen:VisualElement.Style="small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
-                    Color="Purple"
+                    BackgroundColor="Purple"
                     Toggled="OnToggledSmall" />
                 <Label HorizontalOptions="CenterAndExpand" Text="Small Color Yellow" />
-                <w:Check
+                <Switch
                     AutomationId="smallColorYellow"
-                    DisplayStyle="Small"
+                    tizen:VisualElement.Style="small"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
-                    Color="Yellow"
+                    BackgroundColor="Yellow"
                     Toggled="OnToggledSmall" />
             </StackLayout>
-        </w:CircleScrollView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

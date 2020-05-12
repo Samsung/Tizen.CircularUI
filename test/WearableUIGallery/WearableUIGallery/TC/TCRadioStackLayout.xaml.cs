@@ -15,13 +15,14 @@
  */
 
 using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCRadioStackLayout : CirclePage
+    public partial class TCRadioStackLayout : ContentPage
     {
         public TCRadioStackLayout()
         {

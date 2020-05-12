@@ -21,7 +21,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleStepper2 : CirclePage
+    public partial class TCCircleStepper2 : BezelInteractionPage
     {
         public TCCircleStepper2()
         {

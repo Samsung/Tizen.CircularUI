@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCCircleStepper2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference StepperT1}">
-    <w:CirclePage.Content>
+    <w:BezelInteractionPage.Content>
         <AbsoluteLayout BackgroundColor="#B878B8">
             <Label
                 AbsoluteLayout.LayoutBounds="0.5, 0.2, 1, 0.25"
@@ -77,5 +76,5 @@
                 Minimum="0"
                 Value="0" />
         </AbsoluteLayout>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </w:BezelInteractionPage.Content>
+</w:BezelInteractionPage>

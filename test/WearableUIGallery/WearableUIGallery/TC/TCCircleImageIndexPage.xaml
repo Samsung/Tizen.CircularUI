@@ -1,38 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:IndexPage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCCircleImageIndexPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <ContentPage>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <w:CircleImage  x:Name="Image1" Source="image/100_1.jpg" WidthRequest="100" HeightRequest="100" BackgroundColor="Black"/>
-        </StackLayout>
-    </ContentPage>
-    <ContentPage>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <w:CircleImage x:Name="Image2" Source="image/100_2.jpg" WidthRequest="200" HeightRequest="200" BackgroundColor="Black"/>
-        </StackLayout>
-    </ContentPage>
-    <ContentPage BackgroundColor="Green">
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-            <w:CircleImage x:Name="Image3" Source="image/100_3.jpg" WidthRequest="200" HeightRequest="200" BackgroundColor="Green"/>
-        </StackLayout>
-    </ContentPage>
-    <ContentPage BackgroundColor="LightSkyBlue">
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <w:CircleImage x:Name="Image4" Source="image/100_4.jpg"   WidthRequest="200" HeightRequest="200" BackgroundColor="LightSkyBlue"/>
-        </StackLayout>
-    </ContentPage>
-    <ContentPage>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <w:CircleImage x:Name="Image5" Source="image/100_5.jpg"/>
-        </StackLayout>
-    </ContentPage>
-    <ContentPage>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <w:CircleImage x:Name="Image6" Source="image/100_6.jpg" />
-        </StackLayout>
-    </ContentPage>
-</w:IndexPage>
+    <AbsoluteLayout>
+        <CarouselView x:Name="carouselView" ItemsSource="{Binding CircleImageItems}" AbsoluteLayout.LayoutBounds="0,0,360,360" IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <w:CircleImage  x:Name="{Binding Name}" Source="{Binding ImageUrl}" WidthRequest="{Binding Width}" HeightRequest="{Binding Height}" BackgroundColor="{Binding BGColor}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                   AbsoluteLayout.LayoutBounds="0,0,360,360"
+                   HorizontalOptions="CenterAndExpand" />
+    </AbsoluteLayout>
+</ContentPage>

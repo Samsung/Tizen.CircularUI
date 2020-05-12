@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCGroupList"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <w:CirclePage.BindingContext>
+    <ContentPage.BindingContext>
         <local:GroupModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
         <w:CircleListView
             x:Name="mylist"
             GroupDisplayBinding="{Binding Name}"
@@ -29,5 +29,5 @@
                 </DataTemplate>
             </w:CircleListView.HeaderTemplate>
         </w:CircleListView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>

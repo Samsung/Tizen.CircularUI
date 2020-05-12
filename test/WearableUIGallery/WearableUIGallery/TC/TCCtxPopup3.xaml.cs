@@ -24,7 +24,7 @@ using System.Globalization;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCtxPopup3 : CirclePage
+    public partial class TCCtxPopup3 : BezelInteractionPage
     {
         ContextPopupEffectBehavior _behavior;
         bool _visibility;
@@ -61,7 +61,7 @@ namespace WearableUIGallery.TC
 
             CtxCheck1.PropertyChanged += (s, e) =>
             {
-                if (e.PropertyName == Check.IsToggledProperty.PropertyName)
+                if (e.PropertyName == Switch.IsToggledProperty.PropertyName)
                     System.Diagnostics.Debug.WriteLine($"IsToggled of CtxCheck1= {CtxCheck1.IsToggled}");
             };
         }

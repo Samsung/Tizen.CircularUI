@@ -21,7 +21,7 @@ using System;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleStepper5 : CirclePage
+    public partial class TCCircleStepper5 : BezelInteractionPage
     {
 
         public TCCircleStepper5()

@@ -24,7 +24,7 @@ namespace WearableUIGallery
 {
     [QueryProperty("TCName", "tc")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCSubListPage : CirclePage
+    public partial class TCSubListPage : ContentPage
     {
         string _tcName = "";
 

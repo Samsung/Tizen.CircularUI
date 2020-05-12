@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCMediaViewStackLayout : CirclePage
+    public partial class TCMediaViewStackLayout : ContentPage
     {
         public TCMediaViewStackLayout()
         {

@@ -23,7 +23,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleSliderSurfaceItem2 : CirclePage
+    public partial class TCCircleSliderSurfaceItem2 : BezelInteractionPage
     {
         CircleSliderSurfaceItem _slider1;
         CircleSliderSurfaceItem _slider2;
@@ -69,8 +69,8 @@ namespace WearableUIGallery.TC
             label1.BindingContext = _slider1;
             label2.BindingContext = _slider2;
 
-            CircleSurfaceItems.Add(_slider1);
-            CircleSurfaceItems.Add(_slider2);
+            circleSurfaceView.CircleSurfaceItems.Add(_slider1);
+            circleSurfaceView.CircleSurfaceItems.Add(_slider2);
 
             _focusedItem = "slider1";
             RotaryFocusObject = _slider1;

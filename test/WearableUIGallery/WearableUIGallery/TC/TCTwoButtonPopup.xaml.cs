@@ -18,6 +18,9 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
+using Label = Xamarin.Forms.Label;
+using Switch = Xamarin.Forms.Switch;
 
 namespace WearableUIGallery.TC
 {
@@ -96,6 +99,9 @@ namespace WearableUIGallery.TC
                 })
             };
 
+            var mySwitch = new Switch();
+            mySwitch.On<Xamarin.Forms.PlatformConfiguration.Tizen>().SetStyle("small");
+
             _content = new StackLayout
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -112,10 +118,7 @@ namespace WearableUIGallery.TC
                         Padding = new Thickness(0, 40, 0, 40),
                         Children =
                         {
-                            new Check
-                            {
-                                DisplayStyle = CheckDisplayStyle.Small
-                            },
+                            mySwitch,
                             new Label
                             {
                                 Text = "Do not repeat",
@@ -134,13 +137,8 @@ height. This has two button in action area and title text in title area";
 
         void createPopup1()
         {
-
-
-            var checkbox = new Check
-            {
-                DisplayStyle = CheckDisplayStyle.Small
-            };
-
+            var checkbox = new Switch();
+            checkbox.On<Xamarin.Forms.PlatformConfiguration.Tizen>().SetStyle("small");
             checkbox.Toggled += (s, e) =>
             {
                 Console.WriteLine($"checkbox toggled. checkbox.IsToggled:{checkbox.IsToggled}");

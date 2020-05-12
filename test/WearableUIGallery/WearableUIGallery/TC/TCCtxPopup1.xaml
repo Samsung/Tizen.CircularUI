@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCCtxPopup1"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core"
     x:Name="mypage"
     RotaryFocusObject="{x:Reference myscrollview}">
     <ContentPage.Content>
         <w:CircleScrollView x:Name="myscrollview" Orientation="Vertical">
             <StackLayout Padding="0,30,0,30" Orientation="Vertical">
-                <w:Check
+                <Switch
                     x:Name="CtxCheck1"
                     HorizontalOptions="CenterAndExpand"
                     IsToggled="False"
+                    tizen:VisualElement.Style="default"
                     VerticalOptions="StartAndExpand">
-                    <w:Check.Behaviors>
+                    <Switch.Behaviors>
                         <w:ContextPopupEffectBehavior
                             x:Name="CtxCheck1EffectBehavior"
                             AcceptCommand="{Binding CtxCheck1AcceptedCommand, Source={x:Reference mypage}}"
@@ -24,8 +26,8 @@
                             PositionOption="BottomOfView"
                             Visibility="{Binding IsToggled, Source={x:Reference CtxCheck1}, Mode=TwoWay}"
                             Offset="0,0" />
-                    </w:Check.Behaviors>
-                </w:Check>
+                    </Switch.Behaviors>
+                </Switch>
                 <Button
                     AutomationId="changePositionOption"
                     Clicked="OnClickPositionOption"
@@ -93,4 +95,4 @@
             </StackLayout>
         </w:CircleScrollView>
     </ContentPage.Content>
-</w:CirclePage>
+</w:BezelInteractionPage>

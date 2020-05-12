@@ -21,7 +21,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCIRotaryEventReceiver : CirclePage, IRotaryEventReceiver
+    public partial class TCIRotaryEventReceiver : BezelInteractionPage, IRotaryEventReceiver
     {
         bool _rotating;
         double _angle;
