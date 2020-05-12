@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -27,6 +28,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// It has an ActionButton, and can use the MenuItem type as text, icon, command, and so on.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
+    [Obsolete("CirclePage is obsolete as of version 1.5.0. Please use Xamarin.Forms.ContentPage, CircleSurfaceView, and BezelInteracationPage instead.")]
     public class CirclePage : ContentPage, ICircleSurfaceProvider
     {
         /// <summary>

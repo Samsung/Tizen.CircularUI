@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -23,6 +24,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// When Page is added/removed at Multipage. circular index is added/removed automatically at the top of window.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
+    [Obsolete("IndexPage is obsolete as of version 1.5.0. Please use Xamarin.Forms.CarouselView and Xamarin.Forms.IndicatorView instead.")]
     public class IndexPage : MultiPage<ContentPage>
     {
         protected override ContentPage CreateDefault(object item)
