@@ -66,6 +66,7 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "ActionButton", Class = typeof(TCActionButton) }
                 }
             });
+            TCs.Add(new TCDescribe { Title = "BezelInteraction", Class = typeof(TCBezelInteractionPage) });
             TCs.Add(new TCDescribe { Title = "DateTimeSelector", Class = typeof(TCCircleDateTimeSelector) });
             TCs.Add(new TCDescribe
             {
