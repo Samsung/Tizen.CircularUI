@@ -201,6 +201,57 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Forms.ActionButtonItem.IsVisibleProperty
   fullName: Tizen.Wearable.CircularUI.Forms.ActionButtonItem.IsVisibleProperty
   nameWithType: ActionButtonItem.IsVisibleProperty
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage
+  name: BezelInteractionPage
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage
+  nameWithType: BezelInteractionPage
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnAppearing
+  name: OnAppearing()
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_OnAppearing
+  commentId: M:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnAppearing
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnAppearing()
+  nameWithType: BezelInteractionPage.OnAppearing()
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnAppearing*
+  name: OnAppearing
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_OnAppearing_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnAppearing
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnAppearing
+  nameWithType: BezelInteractionPage.OnAppearing
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnDisappearing
+  name: OnDisappearing()
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_OnDisappearing
+  commentId: M:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnDisappearing
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnDisappearing()
+  nameWithType: BezelInteractionPage.OnDisappearing()
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnDisappearing*
+  name: OnDisappearing
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_OnDisappearing_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnDisappearing
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.OnDisappearing
+  nameWithType: BezelInteractionPage.OnDisappearing
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObject
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_RotaryFocusObject
+  commentId: P:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObject
+  nameWithType: BezelInteractionPage.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObject*
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_RotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObject
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObject
+  nameWithType: BezelInteractionPage.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObjectProperty
+  name: RotaryFocusObjectProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_RotaryFocusObjectProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObjectProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.RotaryFocusObjectProperty
+  nameWithType: BezelInteractionPage.RotaryFocusObjectProperty
 - uid: Tizen.Wearable.CircularUI.Forms.Check
   name: Check
   href: api/Tizen.Wearable.CircularUI.Forms.Check.html
@@ -2177,6 +2228,38 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.GoogleMapView.Update
   nameWithType: GoogleMapView.Update
+- uid: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter
+  name: IBezelInteractionRouter
+  href: api/Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter
+  fullName: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter
+  nameWithType: IBezelInteractionRouter
+- uid: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared
+  name: Appeared
+  href: api/Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.html#Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_Appeared
+  commentId: P:Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared
+  fullName: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared
+  nameWithType: IBezelInteractionRouter.Appeared
+- uid: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared*
+  name: Appeared
+  href: api/Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.html#Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_Appeared_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared
+  nameWithType: IBezelInteractionRouter.Appeared
+- uid: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.html#Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_RotaryFocusObject
+  commentId: P:Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject
+  nameWithType: IBezelInteractionRouter.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject*
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.html#Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_RotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject
+  nameWithType: IBezelInteractionRouter.RotaryFocusObject
 - uid: Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer
   name: ICircleSurfaceConsumer
   href: api/Tizen.Wearable.CircularUI.Forms.ICircleSurfaceConsumer.html
@@ -3748,6 +3831,118 @@ references:
   commentId: N:Tizen.Wearable.CircularUI.Forms.Renderer
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer
   nameWithType: Tizen.Wearable.CircularUI.Forms.Renderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer
+  name: BezelInteractionPageRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer
+  nameWithType: BezelInteractionPageRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.#ctor
+  name: BezelInteractionPageRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.BezelInteractionPageRenderer()
+  nameWithType: BezelInteractionPageRenderer.BezelInteractionPageRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.#ctor*
+  name: BezelInteractionPageRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.BezelInteractionPageRenderer
+  nameWithType: BezelInteractionPageRenderer.BezelInteractionPageRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Dispose_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Dispose(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Dispose(System.Boolean)
+  nameWithType: BezelInteractionPageRenderer.Dispose(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Dispose*
+  name: Dispose
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Dispose_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Dispose
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Dispose
+  nameWithType: BezelInteractionPageRenderer.Dispose
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged(ElementChangedEventArgs{Page})
+  name: OnElementChanged(ElementChangedEventArgs<Page>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnElementChanged_ElementChangedEventArgs_Page__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged(ElementChangedEventArgs{Page})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Page))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged(ElementChangedEventArgs<Page>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged(ElementChangedEventArgs(Of Page))
+  nameWithType: BezelInteractionPageRenderer.OnElementChanged(ElementChangedEventArgs<Page>)
+  nameWithType.vb: BezelInteractionPageRenderer.OnElementChanged(ElementChangedEventArgs(Of Page))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged*
+  name: OnElementChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnElementChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementChanged
+  nameWithType: BezelInteractionPageRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady
+  name: OnElementReady()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnElementReady
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady()
+  nameWithType: BezelInteractionPageRenderer.OnElementReady()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady*
+  name: OnElementReady
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnElementReady_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady
+  nameWithType: BezelInteractionPageRenderer.OnElementReady
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
+  name: IBezelInteractionController.Activate()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+  nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.Activate()
+  nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate*
+  name: IBezelInteractionController.Activate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
+  isSpec: "True"
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.Activate
+  nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate
+  name: IBezelInteractionController.Deactivate()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+  nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.Deactivate()
+  nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate*
+  name: IBezelInteractionController.Deactivate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate
+  isSpec: "True"
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.Deactivate
+  nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject
+  name: IBezelInteractionController.RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject*
+  name: IBezelInteractionController.RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject
+  isSpec: "True"
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer
   name: CheckRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.html
@@ -4783,6 +4978,51 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent
   nameWithType: HeaderOrFooterItemClass.OnGetContent
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController
+  name: IBezelInteractionController
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController
+  nameWithType: IBezelInteractionController
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  name: Activate()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html#Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+  nameWithType: IBezelInteractionController.Activate()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate*
+  name: Activate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html#Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  nameWithType: IBezelInteractionController.Activate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  name: Deactivate()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html#Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+  nameWithType: IBezelInteractionController.Deactivate()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate*
+  name: Deactivate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html#Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  nameWithType: IBezelInteractionController.Deactivate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html#Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType: IBezelInteractionController.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject*
+  name: RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html#Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType: IBezelInteractionController.RotaryFocusObject
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer
   name: IndexPageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IndexPageRenderer.html

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class PageRenderer
+    <title>Interface IBezelInteractionRouter
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class PageRenderer
+    <meta name="title" content="Interface IBezelInteractionRouter
    ">
     <meta name="generator" content="docfx 1.0.0.0">
     
@@ -78,53 +78,53 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer" class="text-break">Class PageRenderer
+  <h1 id="Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter" data-uid="Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter" class="text-break">Interface IBezelInteractionRouter
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">PageRenderer</span></div>
-      <div class="level2"><a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html">BezelInteractionPageRenderer</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
-  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
+  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PageRenderer : Xamarin.Forms.Platform.Tizen.PageRenderer</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IBezelInteractionRouter</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_CreateMoreOptionItem_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_CreateMoreOptionItem_ToolbarItem_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.CreateMoreOptionItem(ToolbarItem)">CreateMoreOptionItem(ToolbarItem)</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_Appeared_" data-uid="Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_Appeared" data-uid="Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.Appeared">Appeared</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override FormsMoreOptionItem CreateMoreOptionItem(ToolbarItem item)</code></pre>
+    <pre><code class="lang-csharp hljs">bool Appeared { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ToolbarItem</span></td>
-        <td><span class="parametername">item</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <a id="Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_RotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_IBezelInteractionRouter_RotaryFocusObject" data-uid="Tizen.Wearable.CircularUI.Forms.IBezelInteractionRouter.RotaryFocusObject">RotaryFocusObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRotaryFocusable RotaryFocusObject { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -134,7 +134,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">FormsMoreOptionItem</span></td>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IRotaryFocusable.html">IRotaryFocusable</a></td>
         <td></td>
       </tr>
     </tbody>
