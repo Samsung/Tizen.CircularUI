@@ -16,7 +16,7 @@
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public interface IRotaryInteractionController
+    public interface IBezelInteractionController
     {
         IRotaryFocusable RotaryFocusObject { get; }
 

@@ -20,7 +20,7 @@ using Xamarin.Forms;
 namespace Tizen.Wearable.CircularUI.Forms
 {
     /// <summary>
-    /// The RotaryInteractionPage is a ContentPage, which allows you to interact with Bezel rotation
+    /// The BezelInteractionPage is a ContentPage, which allows you to interact with Bezel rotation
     /// </summary>
     public class BezelInteractionPage : ContentPage, IBezelInteractionRouter
     {

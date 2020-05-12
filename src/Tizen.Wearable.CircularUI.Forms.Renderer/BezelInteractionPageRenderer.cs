@@ -25,7 +25,7 @@ using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class BezelInteractionPageRenderer : PageRenderer, IRotaryInteractionController
+    public class BezelInteractionPageRenderer : PageRenderer, IBezelInteractionController
     {
         IRotaryFocusable _currentRotaryFocusObject;
 
@@ -36,14 +36,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             RegisterPropertyHandler(BezelInteractionPage.RotaryFocusObjectProperty, UpdateRotaryFocusObject);
         }
 
-        IRotaryFocusable IRotaryInteractionController.RotaryFocusObject => _currentRotaryFocusObject;
+        IRotaryFocusable IBezelInteractionController.RotaryFocusObject => _currentRotaryFocusObject;
 
-        void IRotaryInteractionController.Activate()
+        void IBezelInteractionController.Activate()
         {
             ActivateRotaryWidget();
         }
 
-        void IRotaryInteractionController.Deactivate()
+        void IBezelInteractionController.Deactivate()
         {
             DeactivateRotaryWidget();
         }
@@ -69,7 +69,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             base.OnElementReady();
             // A Page created by with ContentTemplate of ShellContent, was appered before create a renderer
-            // So need to call OnPageAppearing if page already appeared
+            // So need to call ActivateRotaryWidget() if page already appeared
             if (Element.Appeared)
             {
                 ActivateRotaryWidget();
