@@ -46,10 +46,16 @@ namespace Tizen.Wearable.CircularUI.Forms
 
         void OnCircleObjectItemsCollectionChanged(object sender, NotifyCollectionChangedEventArgs args)
         {
-            if (args.Action != NotifyCollectionChangedAction.Add)
-                return;
-            foreach (Element item in args.NewItems)
-                item.Parent = this;
+            if (args.Action == NotifyCollectionChangedAction.Add)
+            {
+                foreach (Element item in args.NewItems)
+                    item.Parent = this;
+            }
+            else if (args.Action == NotifyCollectionChangedAction.Remove)
+            {
+                foreach (Element item in args.OldItems)
+                    item.Parent = null;
+            }
         }
     }
 }

@@ -28,12 +28,20 @@ using ELayout = ElmSharp.Layout;
 [assembly: ExportRenderer(typeof(CircleSurfaceView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceViewRenderer))]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class CircleSurfaceViewRenderer : ViewRenderer<CircleSurfaceView, Box>
+    public class CircleSurfaceViewRenderer : ViewRenderer<CircleSurfaceView, Box>, ICircleSurfaceItemRenderer
     {
-
         Dictionary<ICircleSurfaceItem, ICircleWidget> _circleSurfaceItems;
         ELayout _surfaceLayout;
         CircleSurface _circleSurface;
+
+        ICircleWidget ICircleSurfaceItemRenderer.GetCircleWidget(ICircleSurfaceItem item)
+        {
+            if (_circleSurfaceItems.TryGetValue(item, out ICircleWidget widget))
+            {
+                return widget;
+            }
+            return null;
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<CircleSurfaceView> e)
         {
