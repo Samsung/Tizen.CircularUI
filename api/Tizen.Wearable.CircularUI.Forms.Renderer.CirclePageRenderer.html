@@ -88,13 +88,20 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CirclePageRenderer</span></div>
+    <div class="level1"><a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html">PageRenderer</a></div>
+    <div class="level2"><span class="xref">CirclePageRenderer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_CreateMoreOptionItem_ToolbarItem_">PageRenderer.CreateMoreOptionItem(ToolbarItem)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CirclePageRenderer : VisualElementRenderer&lt;CirclePage&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CirclePageRenderer : PageRenderer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -114,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ElmSharp.Wearable.CircleSurface CircleSurface { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CircleSurface CircleSurface { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +133,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://developer.tizen.org/dev-guide/csapi/api/ElmSharp.Wearable.CircleSurface.html">ElmSharp.Wearable.CircleSurface</a></td>
+        <td><span class="xref">CircleSurface</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -159,12 +166,12 @@
     </tbody>
   </table>
   <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CirclePage__" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})">OnElementChanged(ElementChangedEventArgs&lt;CirclePage&gt;)</h4>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_Xamarin_Forms_Page__" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Page})">OnElementChanged(ElementChangedEventArgs&lt;Xamarin.Forms.Page&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;CirclePage&gt; e)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;Xamarin.Forms.Page&gt; e)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +184,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ElementChangedEventArgs</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.CirclePage.html">CirclePage</a>&gt;</td>
+        <td><span class="xref">ElementChangedEventArgs</span>&lt;<span class="xref">Xamarin.Forms.Page</span>&gt;</td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -191,56 +198,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void OnElementReady()</code></pre>
   </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundColor_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundColor_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor(System.Boolean)">UpdateBackgroundColor(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void UpdateBackgroundColor(bool initialize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">initialize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundImage_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundImage_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage(System.Boolean)">UpdateBackgroundImage(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void UpdateBackgroundImage(bool initialize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">initialize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject*"></a>
   <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject(System.Boolean)">UpdateRotaryFocusObject(Boolean)</h4>
   <div class="markdown level1 summary"></div>

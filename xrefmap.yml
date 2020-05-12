@@ -4407,15 +4407,15 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Dispose
   nameWithType: CirclePageRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})
-  name: OnElementChanged(ElementChangedEventArgs<CirclePage>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CirclePage__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CirclePage})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of CirclePage))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CirclePage>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CirclePage))
-  nameWithType: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<CirclePage>)
-  nameWithType.vb: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of CirclePage))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Page})
+  name: OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_ElementChangedEventArgs_Xamarin_Forms_Page__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Page})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Page))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Page))
+  nameWithType: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page>)
+  nameWithType.vb: CirclePageRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Page))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementChanged*
   name: OnElementChanged
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnElementChanged_
@@ -4436,32 +4436,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementReady
   nameWithType: CirclePageRenderer.OnElementReady
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor(System.Boolean)
-  name: UpdateBackgroundColor(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundColor_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor(System.Boolean)
-  nameWithType: CirclePageRenderer.UpdateBackgroundColor(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor*
-  name: UpdateBackgroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundColor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundColor
-  nameWithType: CirclePageRenderer.UpdateBackgroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage(System.Boolean)
-  name: UpdateBackgroundImage(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundImage_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage(System.Boolean)
-  nameWithType: CirclePageRenderer.UpdateBackgroundImage(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage*
-  name: UpdateBackgroundImage
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateBackgroundImage_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateBackgroundImage
-  nameWithType: CirclePageRenderer.UpdateBackgroundImage
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject(System.Boolean)
   name: UpdateRotaryFocusObject(Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_System_Boolean_

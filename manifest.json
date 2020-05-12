@@ -2513,7 +2513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html",
-          "hash": "58yT3Q5JO9QR2dovnAdqlA=="
+          "hash": "DeE+kaTptwp6Kwal/UabJw=="
         }
       },
       "is_incremental": false,
@@ -2813,7 +2813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html",
-          "hash": "yJKCi648aaAKMfvspCuy4g=="
+          "hash": "svGi3lZLvtv/iBRW/j7MVA=="
         }
       },
       "is_incremental": false,
@@ -3251,17 +3251,18 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 114,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -3270,11 +3271,10 @@
           "total_file_count": 35,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 114,
           "skipped_file_count": 0
         }
       }
