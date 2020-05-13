@@ -30,14 +30,12 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// BindableProperty. Identifies the Header, Footer cancel the Fish Eye Effect or not.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        [Obsolete("BarColor is obsolete as of version 1.5.0. Please use Xamarin.Forms.PlatformConfiguration.TizenSpecific.ScrollView.BarColorProperty instead.")]
-        public static readonly BindableProperty BarColorProperty = Xamarin.Forms.PlatformConfiguration.TizenSpecific.ScrollView.BarColorProperty;
+        public static readonly BindableProperty BarColorProperty = BindableProperty.CreateAttached("BarColor", typeof(Color), typeof(CircleScrollView), Color.Default);
 
         /// <summary>
         /// Gets or sets a scroll bar color value.
         /// </summary>
         /// <since_tizen> 4 </since_tizen>
-        [Obsolete("BarColor is obsolete as of version 1.5.0. Please use Xamarin.Forms.PlatformConfiguration.TizenSpecific.ScrollView.BarColorProperty instead.")]
         public Color BarColor
         {
             get => (Color)GetValue(BarColorProperty);

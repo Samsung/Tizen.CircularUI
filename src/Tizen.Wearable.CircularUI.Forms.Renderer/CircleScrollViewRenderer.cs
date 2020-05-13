@@ -15,8 +15,9 @@
  */
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
-using Watch = Xamarin.Forms.Platform.Tizen.Native.Watch;
+using WatchScroller = Xamarin.Forms.Platform.Tizen.Native.Watch.WatchScroller;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleScrollView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer))]
 
@@ -24,9 +25,27 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class CircleScrollViewRenderer : ScrollViewRenderer
     {
+        public CircleScrollView CircleElement => Element as CircleScrollView;
+        WatchScroller _scroller;
+
+        public CircleScrollViewRenderer()
+        {
+            RegisterPropertyHandler(CircleScrollView.BarColorProperty, UpdateBarColor);
+        }
+
         protected override Xamarin.Forms.Platform.Tizen.Native.Scroller CreateNativeControl()
         {
-            return new Watch.WatchScroller(XForms.NativeParent, this.GetSurface());
+            return _scroller = new WatchScroller(XForms.NativeParent, this.GetSurface());
+        }
+
+        void UpdateBarColor()
+        {
+            var color = CircleElement.BarColor;
+            if (!color.IsDefault)
+            {
+                _scroller.CircleScroller.VerticalScrollBarColor = color.ToNative();
+                _scroller.CircleScroller.HorizontalScrollBarColor = color.ToNative();
+            }
         }
     }
 }
