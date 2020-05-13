@@ -118,17 +118,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        //// TODO.Need to update
-        //protected virtual void OnMoreOptionClosed()
-        //{
-        //    DeactivateRotaryWidget();
-        //}
 
-        //// TODO. Need to update
-        //protected virtual void OnMoreOptionOpened()
-        //{
-        //    ActivateRotaryWidget();
-        //}
+        protected override void OnMoreOptionClosed()
+        {
+            DeactivateRotaryWidget();
+        }
+
+
+        protected override void OnMoreOptionOpened()
+        {
+            ActivateRotaryWidget();
+        }
 
         protected override void Dispose(bool disposing)
         {
