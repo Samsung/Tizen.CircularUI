@@ -188,6 +188,20 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
             return null;
         }
+
+        public static IBezelInteractionController FindBezelController(this Element element)
+        {
+            while (element != null)
+            {
+                if (element is IBezelInteractionRouter router)
+                {
+                    return Platform.GetRenderer(element) as IBezelInteractionController;
+                }
+                element = element.Parent;
+            }
+            return null;
+        }
+
     }
 
 }
