@@ -20,6 +20,7 @@ using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
+using AppSpecific = Xamarin.Forms.PlatformConfiguration.TizenSpecific.Application;
 
 [assembly: ExportRenderer(typeof(BezelInteractionPage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer))]
 
@@ -113,6 +114,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
             }
+            AppSpecific.SetActiveBezelInteractionElement(Application.Current, base.Element);
         }
 
         void DeactivateRotaryWidget()
@@ -125,6 +127,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
             }
+            if (AppSpecific.GetActiveBezelInteractionElement(Application.Current) == base.Element)
+                AppSpecific.SetActiveBezelInteractionElement(Application.Current, null);
         }
 
         void OnPageDisappearing(object sender, EventArgs e)
