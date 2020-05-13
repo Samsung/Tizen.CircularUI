@@ -18,31 +18,32 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
 
-using CCircularListView = global::Tizen.Wearable.CircularUI.Forms.CircleListView;
+using CircleListView = Tizen.Wearable.CircularUI.Forms.CircleListView;
 
-[assembly: ExportRenderer(typeof(CCircularListView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer))]
+[assembly: ExportRenderer(typeof(CircleListView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class CircleListViewRenderer : ListViewRenderer
     {
-        new CCircularListView Element => base.Element as CircleListView;
+        new CircleListView Element => base.Element as CircleListView;
+        WatchListView _listView;
 
         public CircleListViewRenderer()
         {
-            RegisterPropertyHandler(CCircularListView.BarColorProperty, UpdateBarColor);
+            RegisterPropertyHandler(CircleListView.BarColorProperty, UpdateBarColor);
         }
 
         protected override Xamarin.Forms.Platform.Tizen.Native.ListView CreateNativeControl()
         {
-            return new WatchListView(XForms.NativeParent, this.GetSurface());
+            return _listView = new WatchListView(XForms.NativeParent, this.GetSurface());
         }
 
         void UpdateBarColor()
         {
             if (!Element.BarColor.IsDefault)
             {
-                (Control as WatchListView).CircleGenList.VerticalScrollBarColor = Element.BarColor.ToNative();
+                _listView.CircleGenList.VerticalScrollBarColor = Element.BarColor.ToNative();
             }
         }
     }
