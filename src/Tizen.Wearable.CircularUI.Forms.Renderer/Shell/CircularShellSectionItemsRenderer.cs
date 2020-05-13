@@ -13,12 +13,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Shell
 
         protected override bool OnRotated(bool isClockwise)
         {
-            if (GetCurrentPage(ShellSection) is CirclePage circlePage)
+            var currentPage = GetCurrentPage(ShellSection);
+            if (currentPage is IBezelInteractionRouter)
             {
-                var renderer = Platform.GetOrCreateRenderer(circlePage);
-                if (renderer is CirclePageRenderer circlePageRenderer)
+                var renderer = Platform.GetOrCreateRenderer(currentPage);
+                if (renderer is IBezelInteractionController bezelController)
                 {
-                    circlePageRenderer.UpdateRotaryFocusObject(false);
+                    bezelController.Activate();
                     return false;
                 }
             } 
