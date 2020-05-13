@@ -33,7 +33,7 @@ using XForms = Xamarin.Forms.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class CirclePageRenderer : PageRenderer
+    public class CirclePageRenderer : PageRenderer, IBezelInteractionController
     {
         ElmSharp.Button _actionButton;
         ActionButtonItem _actionButtonItem;
@@ -54,6 +54,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
 
         public CircleSurface CircleSurface => _circleSurface;
+
+        IRotaryFocusable IBezelInteractionController.RotaryFocusObject => _currentRotaryFocusObject;
+
+        void IBezelInteractionController.Activate()
+        {
+            ActivateRotaryWidget();
+        }
+
+        void IBezelInteractionController.Deactivate()
+        {
+            DeactivateRotaryWidget();
+        }
 
         public void UpdateRotaryFocusObject(bool initialize)
         {
@@ -106,17 +118,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        //// TODO.Need to update
-        //protected virtual void OnMoreOptionClosed()
-        //{
-        //    DeactivateRotaryWidget();
-        //}
 
-        //// TODO. Need to update
-        //protected virtual void OnMoreOptionOpened()
-        //{
-        //    ActivateRotaryWidget();
-        //}
+        protected override void OnMoreOptionClosed()
+        {
+            DeactivateRotaryWidget();
+        }
+
+
+        protected override void OnMoreOptionOpened()
+        {
+            ActivateRotaryWidget();
+        }
 
         protected override void Dispose(bool disposing)
         {
