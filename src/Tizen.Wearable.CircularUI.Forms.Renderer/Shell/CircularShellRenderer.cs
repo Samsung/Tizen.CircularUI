@@ -42,7 +42,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (currentPage != null)
                 {
                     var renderer = Platform.GetOrCreateRenderer(currentPage);
-                    (renderer as CirclePageRenderer)?.UpdateRotaryFocusObject(false);
+                    (renderer as IBezelInteractionController)?.Activate();
                 }
             }
         }
