@@ -18,11 +18,10 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native.Watch;
-using ElmSharp.Wearable;
 using ESize = ElmSharp.Size;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleStepper), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer))]
-
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
@@ -42,6 +41,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         protected new WatchSpinner Control => base.Control as WatchSpinner;
 
         protected new CircleStepper Element => base.Element as CircleStepper;
+
+        protected override ElmSharp.Spinner CreateNativeControl()
+        {
+            return new WatchSpinner(XForms.NativeParent, this.GetSurface());
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Stepper> e)
         {
