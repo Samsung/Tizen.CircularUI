@@ -75,6 +75,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return new ElmSharp.Size(300, 290);
         }
 
+        protected override void UpdateRotaryInteraction(bool enable)
+        {
+            if (Element.FindBezelRouter() == null)
+            {
+                base.UpdateRotaryInteraction(enable);
+            }
+        }
+
         void UpdateMinimum()
         {
             Control.MinimumDateTime = Element.MinimumDate;
