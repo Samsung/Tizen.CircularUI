@@ -18,7 +18,7 @@ using Xamarin.Forms;
 using XStepperRenderer = Xamarin.Forms.Platform.Tizen.StepperRenderer;
 using CStepperRenderer = Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer;
 
-[assembly: ExportRenderer(typeof(ListView), typeof(CStepperRenderer))]
+[assembly: ExportRenderer(typeof(Stepper), typeof(CStepperRenderer))]
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class StepperRenderer : XStepperRenderer
