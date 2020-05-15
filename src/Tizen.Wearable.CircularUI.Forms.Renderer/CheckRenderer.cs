@@ -38,7 +38,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public CheckRenderer()
         {
             RegisterPropertyHandler(Check.DisplayStyleProperty, UpdateStyle);
-            RegisterPropertyHandler(Check.ColorProperty, UpdateColor);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Switch> e)
@@ -83,15 +82,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                     break;
             }
             ((IVisualElementController)Element).NativeSizeChanged();
-        }
-
-        void UpdateColor()
-        {
-            var color = ((Check)Element).Color;
-            if(color != Color.Default)
-            {
-                Control.Color = ((Check)Element).Color.ToNative();
-            }
         }
 
         void OnStateChanged(object sender, EventArgs e)
