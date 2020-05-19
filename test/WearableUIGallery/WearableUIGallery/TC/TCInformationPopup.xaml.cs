@@ -22,7 +22,8 @@ using Tizen.Wearable.CircularUI.Forms;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCInformationPopup : ContentPage
+    public partial class TCInformationPopup : BezelInteractionPage
+
     {
         InformationPopup _textPopUp;
         InformationPopup _textButtonPopUp;

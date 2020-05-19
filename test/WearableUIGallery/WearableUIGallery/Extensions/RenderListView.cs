@@ -16,11 +16,10 @@
 
 using System;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.Extensions
 {
-    public class RenderCircleListView : CircleListView
+    public class RenderCircleListView : ListView
     {
         public event EventHandler Changed;
         public event EventHandler RenderPost;

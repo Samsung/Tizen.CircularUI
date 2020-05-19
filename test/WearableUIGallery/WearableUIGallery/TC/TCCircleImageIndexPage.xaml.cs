@@ -14,22 +14,98 @@
  * limitations under the License.
  */
 
-using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleImageIndexPage : IndexPage
+    public partial class TCCircleImageIndexPage : ContentPage
     {
         public TCCircleImageIndexPage()
         {
-            InitializeComponent ();
+            InitializeComponent();
+            BindingContext = new CircleImageViewModel();
+        }
+    }
 
-            Image5.BackgroundColor = Color.Black;
+    public class CircleImageItem
+    {
+        public string Name { get; set; }
+        public string ImageUrl { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
+        public Color BGColor { get; set; }
+    }
+
+    public class CircleImageViewModel : INotifyPropertyChanged
+    {
+        public ObservableCollection<CircleImageItem> CircleImageItems { get; private set; } = new ObservableCollection<CircleImageItem>();
+
+        public CircleImageViewModel()
+        {
+            AddItems();
+        }
+
+        public void AddItems()
+        {
+            CircleImageItems.Add(new CircleImageItem
+            {
+                Name = "Image1",
+                ImageUrl = "image/100_1.jpg",
+                Width = 100,
+                Height = 100,
+                BGColor = Color.Black
+            });
+            CircleImageItems.Add(new CircleImageItem
+            {
+                Name = "Image2",
+                ImageUrl = "image/100_2.jpg",
+                Width = 100,
+                Height = 100,
+                BGColor = Color.Black
+            });
+            CircleImageItems.Add(new CircleImageItem
+            {
+                Name = "Image3",
+                ImageUrl = "image/100_3.jpg",
+                Width = 200,
+                Height = 200,
+                BGColor = Color.Green
+            });
+            CircleImageItems.Add(new CircleImageItem
+            {
+                Name = "Image4",
+                ImageUrl = "image/100_4.jpg",
+                Width = 200,
+                Height = 200,
+                BGColor = Color.LightSkyBlue
+            });
+            CircleImageItems.Add(new CircleImageItem
+            {
+                Name = "Image5",
+                ImageUrl = "image/100_5.jpg",
+                Width = 200,
+                Height = 200,
+                BGColor = Color.Black
+            });
+            CircleImageItems.Add(new CircleImageItem
+            {
+                Name = "Image6",
+                ImageUrl = "image/100_6.jpg",
+                Width = 200,
+                Height = 200,
+            });
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

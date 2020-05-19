@@ -1,22 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCRadioListView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery.TC"
     xmlns:local2="clr-namespace:WearableUIGallery"
-    xmlns:sys="clr-namespace:System;assembly=netstandard"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference mylist}">
-    <w:CirclePage.BindingContext>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.BindingContext>
         <local:TCRadioViewModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
-        <w:CircleListView
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView
             x:Name="mylist"
             HasUnevenRows="True"
             ItemsSource="{Binding SampleData}">
-            <w:CircleListView.ItemTemplate>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout HeightRequest="120" Orientation="Horizontal">
@@ -24,24 +22,24 @@
                                 HorizontalOptions="CenterAndExpand"
                                 Text="{Binding Text}"
                                 VerticalOptions="Center" />
-                            <w:Radio
+                            <RadioButton
                                 local2:AutomationBinding.AutomationId="{Binding Value}"
                                 GroupName="{Binding GroupName}"
                                 HorizontalOptions="End"
-                                IsSelected="{Binding IsSelected, Mode=TwoWay}"
-                                Selected="OnSelected"
+                                IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                                CheckedChanged="OnSelected"
                                 VerticalOptions="Center"
-                                Value="{Binding Value}"
+                                Text="{Binding Value}"
                                 WidthRequest="80"
                                 HeightRequest="80" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
-            </w:CircleListView.ItemTemplate>
-            <w:CircleListView.Header>
+            </ListView.ItemTemplate>
+            <ListView.Header>
                 <x:String>Screen timeout</x:String>
-            </w:CircleListView.Header>
-            <w:CircleListView.HeaderTemplate>
+            </ListView.Header>
+            <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Label
                         FontAttributes="Bold"
@@ -51,7 +49,7 @@
                         Text="{Binding .}"
                         TextColor="#0FB4EF" />
                 </DataTemplate>
-            </w:CircleListView.HeaderTemplate>
-        </w:CircleListView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+            </ListView.HeaderTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

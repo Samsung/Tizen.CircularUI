@@ -22,7 +22,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCActionButton : CirclePage
+    public partial class TCActionButton : ContentPage
     {
         public TCActionButton ()
         {
@@ -36,12 +36,13 @@ namespace WearableUIGallery.TC
             if (btn.Text == "Enable")
             {
                 btn.Text = "Disable";
-                ActionButton.SetValue(ActionButtonItem.IsEnableProperty, false);
+                ActionButton.IsEnabled = false;
+
             }
             else
             {
                 btn.Text = "Enable";
-                ActionButton.IsEnable = true;
+                ActionButton.IsEnabled = true;
             }
         }
 
@@ -52,7 +53,7 @@ namespace WearableUIGallery.TC
             if (btn.Text == "Invisible")
             {
                 btn.Text = "Visible";
-                ActionButton.SetValue(ActionButtonItem.IsVisibleProperty, true);
+                ActionButton.IsVisible = true;
             }
             else
             {
@@ -61,30 +62,15 @@ namespace WearableUIGallery.TC
             }
         }
 
-
-        void OnClickSet(object sender, EventArgs args)
-        {
-            var btn = sender as Button;
-            if (btn.Text == "Set")
-            {
-                btn.Text = "Unset";
-                ActionButton = new ActionButtonItem { Text = "Action" };
-            }
-            else
-            {
-                btn.Text = "Set";
-                ActionButton = null;
-            }
-        }
-
         void OnClickChangeColor(object sender, EventArgs args)
         {
-            ActionButton = new ActionButtonItem { Text = "~!@#$%^&" + Environment.NewLine + "*()@+-", BackgroundColor = Color.Green };
+            ActionButton.Text = "~!@#$%^&" + Environment.NewLine + "*()@+-";
+            ActionButton.BackgroundColor = Color.Green;
         }
 
         void OnClickSetIcon(object sender, EventArgs args)
         {
-            ActionButton = new ActionButtonItem { IconImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png") };
+            ActionButton.ImageSource = ImageSource.FromFile("image/b_option_list_icon_share.png");
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage 
+<ContentPage 
     x:Class="WearableUIGallery.TC.TCMapViewCurrentPosition"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <w:CirclePage.Content>
+    <ContentPage.Content>
         <w:CircleScrollView Orientation="Vertical">
             <StackLayout >
                 <w:GoogleMapView x:Name="mapviewPosition"
@@ -23,5 +23,5 @@
                     VerticalTextAlignment="Center"/>
             </StackLayout >
          </w:CircleScrollView>
-     </w:CirclePage.Content>
-</w:CirclePage>
+     </ContentPage.Content>
+</ContentPage>

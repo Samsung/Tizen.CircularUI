@@ -23,7 +23,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleProgressBarSurfaceItem2 : CirclePage
+    public partial class TCCircleProgressBarSurfaceItem2 : ContentPage
     {
         double _incValue = 0.02;
         double _progressValue;
@@ -66,7 +66,7 @@ namespace WearableUIGallery.TC
             item1.BindingContext = this;
             percent.BindingContext = this;
 
-            CircleSurfaceItems.Add(item1);
+            circleSurfaceView.CircleSurfaceItems.Add(item1);
             _startProgress = false;
         }
 

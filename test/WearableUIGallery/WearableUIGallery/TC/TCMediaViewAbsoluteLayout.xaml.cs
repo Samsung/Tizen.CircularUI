@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCMediaViewAbsoluteLayout : CirclePage
+    public partial class TCMediaViewAbsoluteLayout : ContentPage
     {
         double _x, _y;
 

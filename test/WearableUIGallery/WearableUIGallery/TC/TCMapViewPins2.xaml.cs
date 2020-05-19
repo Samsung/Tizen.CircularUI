@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
-using System;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCMapViewPins2 : CirclePage
+    public partial class TCMapViewPins2 : ContentPage
     {
         private static double Latitude = 40.7157961;
         private static double Longitude = -74.0252194;

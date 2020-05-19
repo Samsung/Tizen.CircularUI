@@ -23,7 +23,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCListPage : CirclePage
+    public partial class TCListPage : ContentPage
     {
         public TCListPage ()
         {

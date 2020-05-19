@@ -22,7 +22,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleProgressBarSurfaceItem1 : CirclePage
+    public partial class TCCircleProgressBarSurfaceItem1 : ContentPage
     {
         bool _timerFinished;
         double _increment = 0.02;

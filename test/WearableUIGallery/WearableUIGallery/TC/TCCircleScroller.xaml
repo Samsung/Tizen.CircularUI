@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCCircleScroller"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference myscroller}">
-    <w:CirclePage.Content>
+    <w:BezelInteractionPage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Vertical">
             <StackLayout
                 HorizontalOptions="FillAndExpand"
@@ -174,5 +174,5 @@
                     Text="Label #40" />
             </StackLayout>
         </w:CircleScrollView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </w:BezelInteractionPage.Content>
+</w:BezelInteractionPage>

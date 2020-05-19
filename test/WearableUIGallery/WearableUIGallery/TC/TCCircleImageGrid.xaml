@@ -3,7 +3,6 @@
     x:Class="WearableUIGallery.TC.TCCircleImageGrid"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <ContentPage.Content>
         <Grid

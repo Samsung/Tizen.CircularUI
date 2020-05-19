@@ -1,17 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCViewCell"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearableUIGallery"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:tc="clr-namespace:WearableUIGallery.TC"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference mylist}">
-    <w:CirclePage.Content>
-        <w:CircleListView x:Name="mylist"
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
+        <ListView x:Name="mylist"
             ItemTapped="OnItemTapped">
-            <w:CircleListView.ItemsSource>
+            <ListView.ItemsSource>
                 <x:Array x:Key="array" Type="{x:Type sys:String}">
                     <x:String>Item 1</x:String>
                     <x:String>Item 2</x:String>
@@ -26,19 +24,19 @@
                     <x:String>Item 11</x:String>
                     <x:String>Item 12</x:String>
                 </x:Array>
-            </w:CircleListView.ItemsSource>
-            <w:CircleListView.Header>
+            </ListView.ItemsSource>
+            <ListView.Header>
                 <x:String>Header</x:String>
-            </w:CircleListView.Header>
-            <w:CircleListView.Footer>
+            </ListView.Header>
+            <ListView.Footer>
                 <x:String>Footer</x:String>
-            </w:CircleListView.Footer>
-            <w:CircleListView.ItemTemplate>
+            </ListView.Footer>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <tc:CustomViewCell />
                 </DataTemplate>
-            </w:CircleListView.ItemTemplate>
-            <w:CircleListView.HeaderTemplate>
+            </ListView.ItemTemplate>
+            <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Label
                         FontAttributes="Bold"
@@ -47,8 +45,8 @@
                         HeightRequest="120"
                         TextColor="Red" />
                 </DataTemplate>
-            </w:CircleListView.HeaderTemplate>
-            <w:CircleListView.FooterTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.FooterTemplate>
                 <DataTemplate>
                     <Label
                         FontAttributes="Bold"
@@ -57,7 +55,7 @@
                         HeightRequest="120"
                         TextColor="Blue" />
                 </DataTemplate>
-            </w:CircleListView.FooterTemplate>
-        </w:CircleListView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+            </ListView.FooterTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

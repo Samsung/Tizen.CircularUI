@@ -1,12 +1,10 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Tizen.Wearable.CircularUI.Forms;
-using System;
 
 namespace WearableUIGallery
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : CirclePage
+    public partial class MainPage : ContentPage
     {
         public MainPage ()
         {
@@ -15,7 +13,10 @@ namespace WearableUIGallery
 
         void Button_Clicked(object sender, System.EventArgs e)
         {
-            Shell.Current.GoToAsync(TCNameEntry.Text);
+            if (string.IsNullOrEmpty(TCNameEntry.Text))
+                Shell.Current.GoToAsync("//Main/TCList/TCListPage");
+            else
+                Shell.Current.GoToAsync(TCNameEntry.Text);
         }
 
         void Switch_Toggled(object sender, ToggledEventArgs e)

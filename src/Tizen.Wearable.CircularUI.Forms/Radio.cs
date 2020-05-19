@@ -50,6 +50,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// };
     /// </code>
     /// </example>
+    [Obsolete("Radio is obsolete as of version 1.5.0. Please use Xamarin.Forms.RadioButton instead.")]
     public class Radio : View
     {
         /// <summary>

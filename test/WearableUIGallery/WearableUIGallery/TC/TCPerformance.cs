@@ -26,7 +26,7 @@ namespace WearableUIGallery.TC
     {
     }
 
-    public class TCPerformance : CirclePage
+    public class TCPerformance : ContentPage
     {
         const int TestItemMax = 2000;
         const double TimeSet = 5.0;

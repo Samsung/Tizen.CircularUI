@@ -42,7 +42,7 @@ namespace WearableUIGallery.TC
     }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleListViewNoItemEffect : CirclePage
+    public partial class TCCircleListViewNoItemEffect : BezelInteractionPage
     {
         public TCCircleListViewNoItemEffect()
         {

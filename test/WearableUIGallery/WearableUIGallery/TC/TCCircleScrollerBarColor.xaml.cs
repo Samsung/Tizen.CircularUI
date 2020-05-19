@@ -21,7 +21,7 @@ using Xamarin.Forms.Xaml;
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCircleScrollerBarColor : CirclePage
+    public partial class TCCircleScrollerBarColor : BezelInteractionPage
     {
 
         static Color[] _colors = new Color[] {

@@ -26,11 +26,11 @@ using ElmSharp;
 
 namespace Tizen.Extension.Sample
 {
-    public class RenderListViewRenderer : CircleListViewRenderer
+    public class RenderListViewRenderer : ListViewRenderer
     {
         new RenderCircleListView Element => base.Element as RenderCircleListView;
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleListView> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)
         {
             base.OnElementChanged(e);
 

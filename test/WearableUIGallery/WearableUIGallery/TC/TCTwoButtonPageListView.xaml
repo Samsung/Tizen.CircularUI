@@ -4,14 +4,10 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    w:CircleSurfaceEffectBehavior.RotaryFocusObject="{x:Reference circleList}">
-    <w:TwoButtonPage.Behaviors>
-        <w:CircleSurfaceEffectBehavior />
-    </w:TwoButtonPage.Behaviors>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
     <w:TwoButtonPage.Content>
-        <w:CircleListView x:Name="circleList" ItemTapped="OnItemTapped">
-            <w:CircleListView.ItemsSource>
+        <ListView x:Name="circleList" ItemTapped="OnItemTapped">
+            <ListView.ItemsSource>
                 <x:Array x:Key="array" Type="{x:Type sys:String}">
                     <x:String>Item 1</x:String>
                     <x:String>Item 2</x:String>
@@ -20,13 +16,13 @@
                     <x:String>Item 5</x:String>
                     <x:String>Item 6</x:String>
                 </x:Array>
-            </w:CircleListView.ItemsSource>
-            <w:CircleListView.ItemTemplate>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding .}" />
                 </DataTemplate>
-            </w:CircleListView.ItemTemplate>
-        </w:CircleListView>
+            </ListView.ItemTemplate>
+        </ListView>
     </w:TwoButtonPage.Content>
     <w:TwoButtonPage.FirstButton>
         <MenuItem Icon="image/tw_ic_popup_btn_check.png" />

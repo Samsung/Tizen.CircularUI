@@ -16,13 +16,12 @@
 
 using System.Windows.Input;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCCtxPopup4 : CirclePage
+    public partial class TCCtxPopup4 : ContentPage
     {
         public TCCtxPopup4()
         {

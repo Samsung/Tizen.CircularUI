@@ -19,7 +19,7 @@
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj" />

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage 
+<ContentPage 
     x:Class="WearableUIGallery.TC.TCMapViewPins2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
-    <w:CirclePage.Content>
-        <w:CircleScrollView Orientation="Vertical">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
             <StackLayout Margin="0, 20">
                 <w:GoogleMapView x:Name="mapview"
                     ItemsSource="{Binding Locations}"
@@ -46,6 +46,6 @@
                     HeightRequest="50"
                     Command="{Binding ClearLocationsCommand}"/>
                 </StackLayout>
-        </w:CircleScrollView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

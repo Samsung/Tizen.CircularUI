@@ -1,12 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:CirclePage
+<w:BezelInteractionPage
     x:Class="WearableUIGallery.TC.TCCircleSliderSurfaceItem1"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
     RotaryFocusObject="{x:Reference slider}">
-    <w:CirclePage.Content>
+    <w:BezelInteractionPage.Content>
         <AbsoluteLayout>
+            <w:CircleSurfaceView
+                 AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                 AbsoluteLayout.LayoutFlags="All">
+                <w:CircleSurfaceView.CircleSurfaceItems>
+                    <w:CircleSliderSurfaceItem
+                        x:Name="slider"
+                        BackgroundAngle="180"
+                        BackgroundAngleOffset="90"
+                        BackgroundColor="DeepSkyBlue"
+                        BackgroundLineWidth="20"
+                        BackgroundRadius="170"
+                        BarAngle="120"
+                        BarAngleMaximum="180"
+                        BarAngleMinimum="10"
+                        BarAngleOffset="90"
+                        BarColor="OrangeRed"
+                        BarLineWidth="20"
+                        BarRadius="170"
+                        Increment="1.0"
+                        IsEnabled="False"
+                        Maximum="18"
+                        Minimum="1" />
+                </w:CircleSurfaceView.CircleSurfaceItems>
+            </w:CircleSurfaceView>
             <Button
                 AutomationId="enable"
                 AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.5, 0.2"
@@ -15,25 +39,5 @@
                 FontSize="Small"
                 Text="Enable" />
         </AbsoluteLayout>
-    </w:CirclePage.Content>
-    <w:CirclePage.CircleSurfaceItems>
-        <w:CircleSliderSurfaceItem
-            x:Name="slider"
-            BackgroundAngle="180"
-            BackgroundAngleOffset="90"
-            BackgroundColor="DeepSkyBlue"
-            BackgroundLineWidth="20"
-            BackgroundRadius="170"
-            BarAngle="120"
-            BarAngleMaximum="180"
-            BarAngleMinimum="10"
-            BarAngleOffset="90"
-            BarColor="OrangeRed"
-            BarLineWidth="20"
-            BarRadius="170"
-            Increment="1.0"
-            IsEnabled="False"
-            Maximum="18"
-            Minimum="1" />
-    </w:CirclePage.CircleSurfaceItems>
-</w:CirclePage>
+    </w:BezelInteractionPage.Content>
+</w:BezelInteractionPage>

@@ -43,6 +43,7 @@ namespace WearableUIGallery.Tizen.Wearable
         {
             var app = new Program();
 
+            Forms.SetFlags("IndicatorView_Experimental", "RadioButton_Experimental");
             Forms.Init(app);
             FormsCircularUI.Init(new InitOptions(app, APIKEY));
             FormsCircularUIChart.Init();

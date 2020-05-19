@@ -1,22 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<w:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="WearableUIGallery.TCListPage"
               xmlns:local="clr-namespace:WearableUIGallery"
-              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-              RotaryFocusObject="{x:Reference TCList}">
-    <w:CirclePage.Resources>
+              xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Resources>
         <ResourceDictionary>
             <local:DetailTextConveter x:Key="DetailTextConverter"/>
         </ResourceDictionary>
-    </w:CirclePage.Resources>
-    <w:CirclePage.Content>
+    </ContentPage.Resources>
+    <ContentPage.Content>
         <w:CircleListView ItemTapped="OnItemTapped" x:Name="TCList" ItemsSource="{Binding .}">
-            <w:CircleListView.ItemTemplate>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell  local:AutomationBinding.AutomationId="{Binding Title}" Text="{Binding Title}" Detail="{Binding Class.Count, Converter={x:StaticResource DetailTextConverter} }"/>
                 </DataTemplate>
-            </w:CircleListView.ItemTemplate>
+            </ListView.ItemTemplate>
         </w:CircleListView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>

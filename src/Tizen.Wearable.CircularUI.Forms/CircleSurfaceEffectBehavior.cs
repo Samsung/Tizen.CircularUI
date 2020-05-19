@@ -26,6 +26,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CircleSurfaceEffectBehavior is a behavior which allows you to add views that require CircleSurface.
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
+    /// [Obsolete("CircleSurfaceEffectBehavior is obsolete as of version 1.5.0. Please use BezelInteracationPage instead.")]
     public class CircleSurfaceEffectBehavior : Behavior<Page>
     {
         internal static readonly BindableProperty SurfaceProperty = BindableProperty.CreateAttached("CircleSurface", typeof(object), typeof(CircleSurfaceEffectBehavior), null);

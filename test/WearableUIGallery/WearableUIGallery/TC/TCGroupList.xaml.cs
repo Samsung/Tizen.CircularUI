@@ -15,13 +15,13 @@
  */
 
 using System.Collections.Generic;
-using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCGroupList : CirclePage
+    public partial class TCGroupList : ContentPage
     {
         public TCGroupList()
         {
