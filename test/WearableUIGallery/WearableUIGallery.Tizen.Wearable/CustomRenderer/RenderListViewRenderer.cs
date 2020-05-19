@@ -19,14 +19,13 @@ using WearableUIGallery.Extensions;
 using Tizen.Extension.Sample;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
-using ElmSharp;
+using CListViewRenderer = Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer;
 
 [assembly: ExportCell(typeof(RenderCircleListView), typeof(RenderListViewRenderer))]
 
 namespace Tizen.Extension.Sample
 {
-    public class RenderListViewRenderer : ListViewRenderer
+    public class RenderListViewRenderer : CListViewRenderer
     {
         new RenderCircleListView Element => base.Element as RenderCircleListView;
 

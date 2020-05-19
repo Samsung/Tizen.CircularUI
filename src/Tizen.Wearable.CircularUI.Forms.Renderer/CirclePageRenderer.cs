@@ -28,12 +28,13 @@ using Xamarin.Forms.Platform.Tizen.Native;
 using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
 using NPage = Xamarin.Forms.Platform.Tizen.Native.Page;
 using XForms = Xamarin.Forms.Forms;
+using AppSpecific = Xamarin.Forms.PlatformConfiguration.TizenSpecific.Application;
 
 [assembly: ExportRenderer(typeof(CirclePage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer))]
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class CirclePageRenderer : PageRenderer
+    public class CirclePageRenderer : PageRenderer, IBezelInteractionController
     {
         ElmSharp.Button _actionButton;
         ActionButtonItem _actionButtonItem;
@@ -54,6 +55,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         }
 
         public CircleSurface CircleSurface => _circleSurface;
+
+        IRotaryFocusable IBezelInteractionController.RotaryFocusObject => _currentRotaryFocusObject;
+
+        void IBezelInteractionController.Activate()
+        {
+            ActivateRotaryWidget();
+        }
+
+        void IBezelInteractionController.Deactivate()
+        {
+            DeactivateRotaryWidget();
+        }
 
         public void UpdateRotaryFocusObject(bool initialize)
         {
@@ -106,17 +119,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        //// TODO.Need to update
-        //protected virtual void OnMoreOptionClosed()
-        //{
-        //    DeactivateRotaryWidget();
-        //}
 
-        //// TODO. Need to update
-        //protected virtual void OnMoreOptionOpened()
-        //{
-        //    ActivateRotaryWidget();
-        //}
+        protected override void OnMoreOptionClosed()
+        {
+            DeactivateRotaryWidget();
+        }
+
+
+        protected override void OnMoreOptionOpened()
+        {
+            ActivateRotaryWidget();
+        }
 
         protected override void Dispose(bool disposing)
         {
@@ -377,6 +390,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
             }
+            AppSpecific.SetActiveBezelInteractionElement(Application.Current, base.Element);
         }
 
         void DeactivateRotaryWidget()
@@ -389,6 +403,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
             }
+            if (AppSpecific.GetActiveBezelInteractionElement(Application.Current) == base.Element)
+                AppSpecific.SetActiveBezelInteractionElement(Application.Current, null);
         }
 
         IRotaryActionWidget GetRotaryWidget(IRotaryFocusable focusable)

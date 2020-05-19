@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms

@@ -29,7 +29,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// </summary>
     /// <since_tizen> 4 </since_tizen>
     [Obsolete("CirclePage is obsolete as of version 1.5.0. Please use Xamarin.Forms.ContentPage, CircleSurfaceView, and BezelInteracationPage instead.")]
-    public class CirclePage : ContentPage, ICircleSurfaceProvider
+    public class CirclePage : ContentPage, ICircleSurfaceProvider, IBezelInteractionRouter
     {
         /// <summary>
         /// BindableProperty. Identifies the ActionButton bindable property.

@@ -17,6 +17,7 @@ using System;
 using System.Diagnostics;
 using Tizen.Applications;
 using Tizen.Wearable.CircularUI.Forms.Renderer;
+using Tizen.Wearable.CircularUI.Forms.Renderer.Shell;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
@@ -48,6 +49,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         {
             if (IsInitialized) return;
             IsInitialized = true;
+            CircularShellRendererFactory.Setup();
         }
 
         public static void Init(string apiKey)

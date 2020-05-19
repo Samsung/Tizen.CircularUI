@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2020 Samsung Electronics Co., Ltd All Rights Reserved
  *
  * Licensed under the Flora License, Version 1.1 (the "License");
@@ -20,6 +20,7 @@ using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
+using AppSpecific = Xamarin.Forms.PlatformConfiguration.TizenSpecific.Application;
 
 [assembly: ExportRenderer(typeof(BezelInteractionPage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer))]
 
@@ -76,17 +77,15 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             }
         }
 
-        //// TODO.Need to update
-        //protected virtual void OnMoreOptionClosed()
-        //{
-        //    DeactivateRotaryWidget();
-        //}
+        protected override void OnMoreOptionClosed()
+        {
+            DeactivateRotaryWidget();
+        }
 
-        //// TODO. Need to update 
-        //protected virtual void OnMoreOptionOpened()
-        //{
-        //    ActivateRotaryWidget();
-        //}
+        protected override void OnMoreOptionOpened()
+        {
+            ActivateRotaryWidget();
+        }
 
         void UpdateRotaryFocusObject(bool initialize)
         {
@@ -115,6 +114,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetRotaryWidget(_currentRotaryFocusObject)?.Activate();
             }
+            AppSpecific.SetActiveBezelInteractionElement(Application.Current, base.Element);
         }
 
         void DeactivateRotaryWidget()
@@ -127,6 +127,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetRotaryWidget(_currentRotaryFocusObject)?.Deactivate();
             }
+            if (AppSpecific.GetActiveBezelInteractionElement(Application.Current) == base.Element)
+                AppSpecific.SetActiveBezelInteractionElement(Application.Current, null);
         }
 
         void OnPageDisappearing(object sender, EventArgs e)
@@ -171,4 +173,35 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             return (Platform.GetRenderer(item.Parent) as ICircleSurfaceItemRenderer)?.GetCircleWidget(item);
         }
     }
+
+    public static class BezelInteractionExtension
+    {
+        public static IBezelInteractionRouter FindBezelRouter(this Element element)
+        {
+            while (element != null)
+            {
+                if (element is IBezelInteractionRouter router)
+                {
+                    return router;
+                }
+                element = element.Parent;
+            }
+            return null;
+        }
+
+        public static IBezelInteractionController FindBezelController(this Element element)
+        {
+            while (element != null)
+            {
+                if (element is IBezelInteractionRouter router)
+                {
+                    return Platform.GetRenderer(element) as IBezelInteractionController;
+                }
+                element = element.Parent;
+            }
+            return null;
+        }
+
+    }
+
 }

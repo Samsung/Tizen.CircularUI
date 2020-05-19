@@ -17,19 +17,16 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
-using XForms = Xamarin.Forms.Forms;
-using ESpinner = ElmSharp.Wearable.CircleSpinner;
+using Xamarin.Forms.Platform.Tizen.Native.Watch;
 using ESize = ElmSharp.Size;
+using XForms = Xamarin.Forms.Forms;
 
 [assembly: ExportRenderer(typeof(Tizen.Wearable.CircularUI.Forms.CircleStepper), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer))]
 
-
 namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
-    public class CircleStepperRenderer : ViewRenderer<CircleStepper, ESpinner>
+    public class CircleStepperRenderer : StepperRenderer
     {
-        ElmSharp.SmartEvent _listShow, _listHide;
-
         public CircleStepperRenderer()
         {
 #pragma warning disable CS0618 // MarkerColorProperty and MarkerLineWidthProperty are obsolete
@@ -38,71 +35,24 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 #pragma warning restore CS0618 // MarkerColorProperty and MarkerLineWidthProperty are obsolete
             RegisterPropertyHandler(CircleStepper.LabelFormatProperty, UpdateLabelFormat);
             RegisterPropertyHandler(CircleStepper.TitleProperty, UpdateTitle);
-            RegisterPropertyHandler(Stepper.MinimumProperty, UpdateMinimum);
-            RegisterPropertyHandler(Stepper.MaximumProperty, UpdateMaximum);
-            RegisterPropertyHandler(Stepper.ValueProperty, UpdateValue);
-            RegisterPropertyHandler(Stepper.IncrementProperty, UpdateIncrement);
             RegisterPropertyHandler(CircleStepper.IsWrapEnabledProperty, UpdateWrapEnabled);
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<CircleStepper> e)
+        protected new WatchSpinner Control => base.Control as WatchSpinner;
+
+        protected new CircleStepper Element => base.Element as CircleStepper;
+
+        protected override ElmSharp.Spinner CreateNativeControl()
         {
-            if (Control == null)
-            {
-                var surface = this.GetSurface();
-                if (null != surface)
-                {
-                    var spinner = new ESpinner(XForms.NativeParent, surface);
-                    spinner.Style = "circle";
-
-                    SetNativeControl(spinner);
-                    Control.ValueChanged += OnValueChanged;
-
-                    if (Tizen.Common.DotnetUtil.TizenAPIVersion == 4)
-                    {
-                        _listShow = new ElmSharp.SmartEvent(Control, "genlist,show");
-                        _listHide = new ElmSharp.SmartEvent(Control, "genlist,hide");
-                    }
-                    else
-                    {
-                        _listShow = new ElmSharp.SmartEvent(Control, "list,show");
-                        _listHide = new ElmSharp.SmartEvent(Control, "list,hide");
-                    }
-                    _listShow.On += OnListShow;
-                    _listHide.On += OnListHide;
-                }
-            }
-
-            base.OnElementChanged(e);
+            return new WatchSpinner(XForms.NativeParent, this.GetSurface());
         }
 
-        private void OnValueChanged(object sender, EventArgs e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Stepper> e)
         {
-            double newValue = Control.Value;
-            ((IElementController)Element).SetValueFromRenderer(Stepper.ValueProperty, newValue);
+            base.OnElementChanged(e);
 
-            if (Element.LabelFormat == null)
-            {
-                // Determines how many decimal places are there in current Stepper's value.
-                // The 15 pound characters below correspond to the maximum precision of Double type.
-                var decimalValue = Decimal.Parse(newValue.ToString("0.###############"));
-
-                // GetBits() method returns an array of four 32-bit integer values.
-                // The third (0-indexing) element of an array contains the following information:
-                //     bits 00-15: unused, required to be 0
-                //     bits 16-23: an exponent between 0 and 28 indicating the power of 10 to divide the integer number passed as a parameter.
-                //                 Conversely this is the number of decimal digits in the number as well.
-                //     bits 24-30: unused, required to be 0
-                //     bit     31: indicates the sign. 0 means positive number, 1 is for negative numbers.
-                //
-                // The precision information needs to be extracted from bits 16-23 of third element of an array
-                // returned by GetBits() call. Right-shifting by 16 bits followed by zeroing anything else results
-                // in a nice conversion of this data to integer variable.
-                var precision = (Decimal.GetBits(decimalValue)[3] >> 16) & 0x000000FF;
-
-                // Sets Stepper's inner label decimal format to use exactly as many decimal places as needed:
-                Control.LabelFormat = string.Format("%.{0}f", precision);
-            }
+            Control.WheelAppeared += OnListShow;
+            Control.WheelDisappeared += OnListHide;
         }
 
         protected override void Dispose(bool disposing)
@@ -141,7 +91,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void UpdateMarkerColor()
         {
 #pragma warning disable CS0618 // MarkerColor is obsolete
-            if (null != Control && null != Element && Element.MarkerColor != Color.Default)
+            if (Element.MarkerColor != Color.Default)
             {
                 Control.MarkerColor = Element.MarkerColor.ToNative();
             }
@@ -150,68 +100,29 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void UpdateMarkerLineWidth()
         {
-            if (null != Control && null != Element)
-            {
 #pragma warning disable CS0618 // MarkerLineWidth is obsolete
-                Control.MarkerLineWidth = Element.MarkerLineWidth;
+            Control.MarkerLineWidth = Element.MarkerLineWidth;
 #pragma warning restore CS0618 // MarkerLineWidth is obsolete
-            }
         }
 
         void UpdateLabelFormat()
         {
-            if (null != Control && null != Element)
-            {
-                Control.LabelFormat = Element.LabelFormat;
-            }
+            Control.LabelFormat = Element.LabelFormat;
         }
 
         void UpdateTitle()
         {
-            if (null != Control && null != Element)
-            {
-                Control.SetPartText("elm.text", Element.Title);
-            }
-        }
-
-        void UpdateValue()
-        {
-            if (null != Control && null != Element)
-            {
-                Control.Value = Element.Value;
-            }
-        }
-
-        void UpdateMaximum()
-        {
-            if (null != Control && null != Element)
-            {
-                Control.Maximum = Element.Maximum;
-            }
-        }
-
-        void UpdateMinimum()
-        {
-            if (null != Control && null != Element)
-            {
-                Control.Minimum = Element.Minimum;
-            }
+            Control.SetPartText("elm.text", Element.Title);
         }
 
         void UpdateIncrement()
         {
-            if (null != Control && null != Element)
-            {
-                Control.Step = Element.Increment;
-            }
+            Control.Step = Element.Increment;
         }
 
         void UpdateWrapEnabled()
         {
-            if (null != Control && null != Element)
-            {
-                Control.IsWrapEnabled = Element.IsWrapEnabled;
-            }
+            Control.IsWrapEnabled = Element.IsWrapEnabled;
         }
     }
 }
