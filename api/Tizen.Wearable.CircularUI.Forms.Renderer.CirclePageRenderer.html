@@ -91,6 +91,10 @@
     <div class="level1"><a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html">PageRenderer</a></div>
     <div class="level2"><span class="xref">CirclePageRenderer</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html">IBezelInteractionController</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -101,7 +105,7 @@
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CirclePageRenderer : PageRenderer</code></pre>
+    <pre><code class="lang-csharp hljs">public class CirclePageRenderer : PageRenderer, IBezelInteractionController</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -198,6 +202,22 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void OnElementReady()</code></pre>
   </div>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionClosed_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionClosed" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed">OnMoreOptionClosed()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMoreOptionClosed()</code></pre>
+  </div>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionOpened_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionOpened" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened">OnMoreOptionOpened()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnMoreOptionOpened()</code></pre>
+  </div>
   <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject*"></a>
   <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject(System.Boolean)">UpdateRotaryFocusObject(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -223,6 +243,51 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate">IBezelInteractionController.Activate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IBezelInteractionController.Activate()</code></pre>
+  </div>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate">IBezelInteractionController.Deactivate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IBezelInteractionController.Deactivate()</code></pre>
+  </div>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject">IBezelInteractionController.RotaryFocusObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRotaryFocusable IBezelInteractionController.RotaryFocusObject { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IRotaryFocusable.html">IRotaryFocusable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html">IBezelInteractionController</a>
+  </div>
 </article>
           </div>
           

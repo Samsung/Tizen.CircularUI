@@ -3831,6 +3831,38 @@ references:
   commentId: N:Tizen.Wearable.CircularUI.Forms.Renderer
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer
   nameWithType: Tizen.Wearable.CircularUI.Forms.Renderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension
+  name: BezelInteractionExtension
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension
+  nameWithType: BezelInteractionExtension
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelController(Element)
+  name: FindBezelController(Element)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionExtension_FindBezelController_Element_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelController(Element)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelController(Element)
+  nameWithType: BezelInteractionExtension.FindBezelController(Element)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelController*
+  name: FindBezelController
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionExtension_FindBezelController_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelController
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelController
+  nameWithType: BezelInteractionExtension.FindBezelController
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelRouter(Element)
+  name: FindBezelRouter(Element)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionExtension_FindBezelRouter_Element_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelRouter(Element)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelRouter(Element)
+  nameWithType: BezelInteractionExtension.FindBezelRouter(Element)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelRouter*
+  name: FindBezelRouter
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionExtension_FindBezelRouter_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelRouter
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionExtension.FindBezelRouter
+  nameWithType: BezelInteractionExtension.FindBezelRouter
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer
   name: BezelInteractionPageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html
@@ -3892,6 +3924,32 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnElementReady
   nameWithType: BezelInteractionPageRenderer.OnElementReady
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionClosed
+  name: OnMoreOptionClosed()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnMoreOptionClosed
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionClosed
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionClosed()
+  nameWithType: BezelInteractionPageRenderer.OnMoreOptionClosed()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionClosed*
+  name: OnMoreOptionClosed
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnMoreOptionClosed_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionClosed
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionClosed
+  nameWithType: BezelInteractionPageRenderer.OnMoreOptionClosed
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionOpened
+  name: OnMoreOptionOpened()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnMoreOptionOpened
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionOpened
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionOpened()
+  nameWithType: BezelInteractionPageRenderer.OnMoreOptionOpened()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionOpened*
+  name: OnMoreOptionOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_OnMoreOptionOpened_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionOpened
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.OnMoreOptionOpened
+  nameWithType: BezelInteractionPageRenderer.OnMoreOptionOpened
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
   name: IBezelInteractionController.Activate()
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_BezelInteractionPageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate
@@ -3943,6 +4001,25 @@ references:
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
   nameWithType: BezelInteractionPageRenderer.IBezelInteractionController.RotaryFocusObject
   nameWithType.vb: BezelInteractionPageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer
+  name: CarouselViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer
+  nameWithType: CarouselViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  name: UpdateRotaryInteraction(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CarouselViewRenderer_UpdateRotaryInteraction_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  nameWithType: CarouselViewRenderer.UpdateRotaryInteraction(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.UpdateRotaryInteraction*
+  name: UpdateRotaryInteraction
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CarouselViewRenderer_UpdateRotaryInteraction_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.UpdateRotaryInteraction
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CarouselViewRenderer.UpdateRotaryInteraction
+  nameWithType: CarouselViewRenderer.UpdateRotaryInteraction
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer
   name: CheckRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CheckRenderer.html
@@ -4052,268 +4129,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.OnElementChanged
   nameWithType: CircleDateTimeSelectorRenderer.OnElementChanged
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView
-  name: CircleListView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView
-  nameWithType: CircleListView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor(EvasObject,CircleSurface)
-  name: CircleListView(EvasObject, CircleSurface)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView__ctor_EvasObject_CircleSurface_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor(EvasObject,CircleSurface)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.CircleListView(EvasObject, CircleSurface)
-  nameWithType: CircleListView.CircleListView(EvasObject, CircleSurface)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor*
-  name: CircleListView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.#ctor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.UpdateRotaryInteraction(System.Boolean)
+  name: UpdateRotaryInteraction(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleDateTimeSelectorRenderer_UpdateRotaryInteraction_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.UpdateRotaryInteraction(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.UpdateRotaryInteraction(System.Boolean)
+  nameWithType: CircleDateTimeSelectorRenderer.UpdateRotaryInteraction(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.UpdateRotaryInteraction*
+  name: UpdateRotaryInteraction
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleDateTimeSelectorRenderer_UpdateRotaryInteraction_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.UpdateRotaryInteraction
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.CircleListView
-  nameWithType: CircleListView.CircleListView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList{ItemsView{Cell},Cell})
-  name: AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddGroup_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: CircleListView.AddGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: CircleListView.AddGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup*
-  name: AddGroup
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddGroup_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddGroup
-  nameWithType: CircleListView.AddGroup
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
-  name: AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddItem_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: CircleListView.AddItem(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: CircleListView.AddItem(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem*
-  name: AddItem
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddItem_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddItem
-  nameWithType: CircleListView.AddItem
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable)
-  name: AddSource(IEnumerable)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable)
-  nameWithType: CircleListView.AddSource(IEnumerable)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Cell)
-  name: AddSource(IEnumerable, Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, Cell)
-  nameWithType: CircleListView.AddSource(IEnumerable, Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell})
-  name: AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell},Cell)
-  name: AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_System_Collections_IEnumerable_TemplatedItemsList_ItemsView_Cell__Cell__Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable,TemplatedItemsList{ItemsView{Cell},Cell},Cell)
-  name.vb: AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource(System.Collections.IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  nameWithType: CircleListView.AddSource(IEnumerable, TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  nameWithType.vb: CircleListView.AddSource(IEnumerable, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource*
-  name: AddSource
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_AddSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.AddSource
-  nameWithType: CircleListView.AddSource
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
-  name: ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplyScrollTo_Cell_Xamarin_Forms_ScrollToPosition_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Cell,Xamarin.Forms.ScrollToPosition,System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, System.Boolean)
-  nameWithType: CircleListView.ApplyScrollTo(Cell, Xamarin.Forms.ScrollToPosition, Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo*
-  name: ApplyScrollTo
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplyScrollTo_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplyScrollTo
-  nameWithType: CircleListView.ApplyScrollTo
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Cell)
-  name: ApplySelectedItem(Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplySelectedItem_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem(Cell)
-  nameWithType: CircleListView.ApplySelectedItem(Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem*
-  name: ApplySelectedItem
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ApplySelectedItem_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ApplySelectedItem
-  nameWithType: CircleListView.ApplySelectedItem
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Clear
-  name: Clear()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Clear
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Clear
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Clear()
-  nameWithType: CircleListView.Clear()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Clear*
-  name: Clear
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Clear_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Clear
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Clear
-  nameWithType: CircleListView.Clear
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Footer
-  name: Footer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Footer
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Footer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Footer
-  nameWithType: CircleListView.Footer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Footer*
-  name: Footer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Footer_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Footer
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Footer
-  nameWithType: CircleListView.Footer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header
-  name: Header
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Header
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header
-  nameWithType: CircleListView.Header
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header*
-  name: Header
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Header_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Header
-  nameWithType: CircleListView.Header
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
-  name: HeaderRowHeight
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_HeaderRowHeight
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
-  nameWithType: CircleListView.HeaderRowHeight
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight*
-  name: HeaderRowHeight
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_HeaderRowHeight_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.HeaderRowHeight
-  nameWithType: CircleListView.HeaderRowHeight
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList{ItemsView{Cell},Cell},Cell)
-  name: InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertGroup_TemplatedItemsList_ItemsView_Cell__Cell__Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList{ItemsView{Cell},Cell},Cell)
-  name.vb: InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-  nameWithType: CircleListView.InsertGroup(TemplatedItemsList<ItemsView<Cell>, Cell>, Cell)
-  nameWithType.vb: CircleListView.InsertGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell), Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup*
-  name: InsertGroup
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertGroup_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertGroup
-  nameWithType: CircleListView.InsertGroup
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell,Cell,TemplatedItemsList{ItemsView{Cell},Cell})
-  name: InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertItem_Cell_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell,Cell,TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: CircleListView.InsertItem(Cell, Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: CircleListView.InsertItem(Cell, Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem*
-  name: InsertItem
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_InsertItem_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.InsertItem
-  nameWithType: CircleListView.InsertItem
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized
-  name: OnRealized()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_OnRealized
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized()
-  nameWithType: CircleListView.OnRealized()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized*
-  name: OnRealized
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_OnRealized_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.OnRealized
-  nameWithType: CircleListView.OnRealized
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Cell)
-  name: Remove(Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(Cell)
-  nameWithType: CircleListView.Remove(Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList{ItemsView{Cell},Cell})
-  name: Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: CircleListView.Remove(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: CircleListView.Remove(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove*
-  name: Remove
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_Remove_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.Remove
-  nameWithType: CircleListView.Remove
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource(System.Collections.IEnumerable)
-  name: RemoveSource(IEnumerable)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_RemoveSource_System_Collections_IEnumerable_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource(System.Collections.IEnumerable)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource(System.Collections.IEnumerable)
-  nameWithType: CircleListView.RemoveSource(IEnumerable)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource*
-  name: RemoveSource
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_RemoveSource_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.RemoveSource
-  nameWithType: CircleListView.RemoveSource
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList{ItemsView{Cell},Cell})
-  name: ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ResetGroup_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: CircleListView.ResetGroup(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: CircleListView.ResetGroup(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup*
-  name: ResetGroup
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListView_ResetGroup_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListView.ResetGroup
-  nameWithType: CircleListView.ResetGroup
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleDateTimeSelectorRenderer.UpdateRotaryInteraction
+  nameWithType: CircleDateTimeSelectorRenderer.UpdateRotaryInteraction
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer
   name: CircleListViewRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html
@@ -4333,35 +4161,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CircleListViewRenderer
   nameWithType: CircleListViewRenderer.CircleListViewRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose(System.Boolean)
-  nameWithType: CircleListViewRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl
+  name: CreateNativeControl()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_CreateNativeControl
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl()
+  nameWithType: CircleListViewRenderer.CreateNativeControl()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl*
+  name: CreateNativeControl
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_CreateNativeControl_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose
-  nameWithType: CircleListViewRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleListView})
-  name: OnElementChanged(ElementChangedEventArgs<CircleListView>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleListView__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleListView})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleListView))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleListView>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleListView))
-  nameWithType: CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs<CircleListView>)
-  nameWithType.vb: CircleListViewRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleListView))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged*
-  name: OnElementChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_OnElementChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.OnElementChanged
-  nameWithType: CircleListViewRenderer.OnElementChanged
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl
+  nameWithType: CircleListViewRenderer.CreateNativeControl
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer
   name: CirclePageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html
@@ -4436,6 +4248,83 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnElementReady
   nameWithType: CirclePageRenderer.OnElementReady
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed
+  name: OnMoreOptionClosed()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionClosed
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed()
+  nameWithType: CirclePageRenderer.OnMoreOptionClosed()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed*
+  name: OnMoreOptionClosed
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionClosed_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionClosed
+  nameWithType: CirclePageRenderer.OnMoreOptionClosed
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened
+  name: OnMoreOptionOpened()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionOpened
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened()
+  nameWithType: CirclePageRenderer.OnMoreOptionOpened()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened*
+  name: OnMoreOptionOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_OnMoreOptionOpened_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.OnMoreOptionOpened
+  nameWithType: CirclePageRenderer.OnMoreOptionOpened
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
+  name: IBezelInteractionController.Activate()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+  nameWithType: CirclePageRenderer.IBezelInteractionController.Activate()
+  nameWithType.vb: CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate*
+  name: IBezelInteractionController.Activate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Activate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Activate
+  isSpec: "True"
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+  nameWithType: CirclePageRenderer.IBezelInteractionController.Activate
+  nameWithType.vb: CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Activate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate
+  name: IBezelInteractionController.Deactivate()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+  nameWithType: CirclePageRenderer.IBezelInteractionController.Deactivate()
+  nameWithType.vb: CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate*
+  name: IBezelInteractionController.Deactivate
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_Deactivate_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#Deactivate
+  isSpec: "True"
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+  nameWithType: CirclePageRenderer.IBezelInteractionController.Deactivate
+  nameWithType.vb: CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.Deactivate
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject
+  name: IBezelInteractionController.RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType: CirclePageRenderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType.vb: CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject*
+  name: IBezelInteractionController.RotaryFocusObject
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_Tizen_Wearable_CircularUI_Forms_Renderer_IBezelInteractionController_RotaryFocusObject_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen#Wearable#CircularUI#Forms#Renderer#IBezelInteractionController#RotaryFocusObject
+  isSpec: "True"
+  name.vb: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType: CirclePageRenderer.IBezelInteractionController.RotaryFocusObject
+  nameWithType.vb: CirclePageRenderer.Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.RotaryFocusObject
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.UpdateRotaryFocusObject(System.Boolean)
   name: UpdateRotaryFocusObject(Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CirclePageRenderer_UpdateRotaryFocusObject_System_Boolean_
@@ -4468,61 +4357,32 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleScrollViewRenderer
   nameWithType: CircleScrollViewRenderer.CircleScrollViewRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)
-  nameWithType: CircleScrollViewRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement
+  name: CircleElement
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CircleElement
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement
+  nameWithType: CircleScrollViewRenderer.CircleElement
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement*
+  name: CircleElement
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CircleElement_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose
-  nameWithType: CircleScrollViewRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
-  name: GetNativeContentGeometry()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_GetNativeContentGeometry
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry()
-  nameWithType: CircleScrollViewRenderer.GetNativeContentGeometry()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry*
-  name: GetNativeContentGeometry
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_GetNativeContentGeometry_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement
+  nameWithType: CircleScrollViewRenderer.CircleElement
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl
+  name: CreateNativeControl()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CreateNativeControl
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl()
+  nameWithType: CircleScrollViewRenderer.CreateNativeControl()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl*
+  name: CreateNativeControl
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CreateNativeControl_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry
-  nameWithType: CircleScrollViewRenderer.GetNativeContentGeometry
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleScrollView})
-  name: OnElementChanged(ElementChangedEventArgs<CircleScrollView>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleScrollView__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleScrollView})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleScrollView))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleScrollView>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleScrollView))
-  nameWithType: CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs<CircleScrollView>)
-  nameWithType.vb: CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleScrollView))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged*
-  name: OnElementChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged
-  nameWithType: CircleScrollViewRenderer.OnElementChanged
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
-  name: OnElementPropertyChanged(Object, PropertyChangedEventArgs)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementPropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)
-  nameWithType: CircleScrollViewRenderer.OnElementPropertyChanged(Object, PropertyChangedEventArgs)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged*
-  name: OnElementPropertyChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementPropertyChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged
-  nameWithType: CircleScrollViewRenderer.OnElementPropertyChanged
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl
+  nameWithType: CircleScrollViewRenderer.CreateNativeControl
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements
   name: CircleSliderSurfaceItemImplements
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleSliderSurfaceItemImplements.html
@@ -4561,6 +4421,32 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CircleStepperRenderer
   nameWithType: CircleStepperRenderer.CircleStepperRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Control
+  name: Control
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_Control
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Control
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Control
+  nameWithType: CircleStepperRenderer.Control
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Control*
+  name: Control
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_Control_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Control
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Control
+  nameWithType: CircleStepperRenderer.Control
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CreateNativeControl
+  name: CreateNativeControl()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_CreateNativeControl
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CreateNativeControl
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CreateNativeControl()
+  nameWithType: CircleStepperRenderer.CreateNativeControl()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CreateNativeControl*
+  name: CreateNativeControl
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_CreateNativeControl_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CreateNativeControl
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.CreateNativeControl
+  nameWithType: CircleStepperRenderer.CreateNativeControl
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_Dispose_System_Boolean_
@@ -4574,6 +4460,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Dispose
   nameWithType: CircleStepperRenderer.Dispose
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Element
+  name: Element
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_Element
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Element
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Element
+  nameWithType: CircleStepperRenderer.Element
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Element*
+  name: Element
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_Element_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Element
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Element
+  nameWithType: CircleStepperRenderer.Element
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.Measure(System.Int32,System.Int32)
   name: Measure(Int32, Int32)
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_Measure_System_Int32_System_Int32_
@@ -4600,15 +4499,15 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.MinimumSize
   nameWithType: CircleStepperRenderer.MinimumSize
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleStepper})
-  name: OnElementChanged(ElementChangedEventArgs<CircleStepper>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleStepper__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleStepper})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of CircleStepper))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<Tizen.Wearable.CircularUI.Forms.CircleStepper>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of Tizen.Wearable.CircularUI.Forms.CircleStepper))
-  nameWithType: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<CircleStepper>)
-  nameWithType.vb: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of CircleStepper))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{Stepper})
+  name: OnElementChanged(ElementChangedEventArgs<Stepper>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_OnElementChanged_ElementChangedEventArgs_Stepper__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs{Stepper})
+  name.vb: OnElementChanged(ElementChangedEventArgs(Of Stepper))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<Stepper>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of Stepper))
+  nameWithType: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs<Stepper>)
+  nameWithType.vb: CircleStepperRenderer.OnElementChanged(ElementChangedEventArgs(Of Stepper))
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.OnElementChanged*
   name: OnElementChanged
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleStepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleStepperRenderer_OnElementChanged_
@@ -4688,6 +4587,64 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleSurfaceViewRenderer.OnElementChanged
   nameWithType: CircleSurfaceViewRenderer.OnElementChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer
+  name: CircularShellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer
+  nameWithType: CircularShellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.#ctor
+  name: CircularShellRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CircularShellRenderer()
+  nameWithType: CircularShellRenderer.CircularShellRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.#ctor*
+  name: CircularShellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CircularShellRenderer
+  nameWithType: CircularShellRenderer.CircularShellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationDrawer(EvasObject)
+  name: CreateNavigationDrawer(EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer_CreateNavigationDrawer_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationDrawer(EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationDrawer(EvasObject)
+  nameWithType: CircularShellRenderer.CreateNavigationDrawer(EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationDrawer*
+  name: CreateNavigationDrawer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer_CreateNavigationDrawer_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationDrawer
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationDrawer
+  nameWithType: CircularShellRenderer.CreateNavigationDrawer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationView(EvasObject)
+  name: CreateNavigationView(EvasObject)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer_CreateNavigationView_EvasObject_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationView(EvasObject)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationView(EvasObject)
+  nameWithType: CircularShellRenderer.CreateNavigationView(EvasObject)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationView*
+  name: CreateNavigationView
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer_CreateNavigationView_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationView
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.CreateNavigationView
+  nameWithType: CircularShellRenderer.CreateNavigationView
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.OnNavigationDrawerToggled(System.Object,System.EventArgs)
+  name: OnNavigationDrawerToggled(Object, EventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer_OnNavigationDrawerToggled_System_Object_System_EventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.OnNavigationDrawerToggled(System.Object,System.EventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.OnNavigationDrawerToggled(System.Object, System.EventArgs)
+  nameWithType: CircularShellRenderer.OnNavigationDrawerToggled(Object, EventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.OnNavigationDrawerToggled*
+  name: OnNavigationDrawerToggled
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircularShellRenderer_OnNavigationDrawerToggled_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.OnNavigationDrawerToggled
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircularShellRenderer.OnNavigationDrawerToggled
+  nameWithType: CircularShellRenderer.OnNavigationDrawerToggled
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer
   name: ContentButtonRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.html
@@ -4723,68 +4680,38 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ContentButtonRenderer.UpdateLayout
   nameWithType: ContentButtonRenderer.UpdateLayout
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs
-  name: DraggedEventArgs
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs
-  nameWithType: DraggedEventArgs
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.#ctor(Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState)
-  name: DraggedEventArgs(DraggedState)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedEventArgs__ctor_Tizen_Wearable_CircularUI_Forms_Renderer_DraggedState_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.#ctor(Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.DraggedEventArgs(Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState)
-  nameWithType: DraggedEventArgs.DraggedEventArgs(DraggedState)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.#ctor*
-  name: DraggedEventArgs
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedEventArgs__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.#ctor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer
+  name: DatePickerRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer
+  nameWithType: DatePickerRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed(System.Object,System.EventArgs)
+  name: OnPickerClosed(Object, EventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerClosed_System_Object_System_EventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed(System.Object,System.EventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed(System.Object, System.EventArgs)
+  nameWithType: DatePickerRenderer.OnPickerClosed(Object, EventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed*
+  name: OnPickerClosed
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerClosed_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.DraggedEventArgs
-  nameWithType: DraggedEventArgs.DraggedEventArgs
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.State
-  name: State
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedEventArgs_State
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.State
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.State
-  nameWithType: DraggedEventArgs.State
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.State*
-  name: State
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedEventArgs_State_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.State
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed
+  nameWithType: DatePickerRenderer.OnPickerClosed
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened(System.Object,System.EventArgs)
+  name: OnPickerOpened(Object, EventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerOpened_System_Object_System_EventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened(System.Object,System.EventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened(System.Object, System.EventArgs)
+  nameWithType: DatePickerRenderer.OnPickerOpened(Object, EventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened*
+  name: OnPickerOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerOpened_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedEventArgs.State
-  nameWithType: DraggedEventArgs.State
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState
-  name: DraggedState
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState
-  nameWithType: DraggedState
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Down
-  name: Down
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedState_Down
-  commentId: F:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Down
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Down
-  nameWithType: DraggedState.Down
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.EdgeBottom
-  name: EdgeBottom
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedState_EdgeBottom
-  commentId: F:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.EdgeBottom
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.EdgeBottom
-  nameWithType: DraggedState.EdgeBottom
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.EdgeTop
-  name: EdgeTop
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedState_EdgeTop
-  commentId: F:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.EdgeTop
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.EdgeTop
-  nameWithType: DraggedState.EdgeTop
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Up
-  name: Up
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.html#Tizen_Wearable_CircularUI_Forms_Renderer_DraggedState_Up
-  commentId: F:Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Up
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DraggedState.Up
-  nameWithType: DraggedState.Up
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened
+  nameWithType: DatePickerRenderer.OnPickerOpened
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
   name: EmbeddingControls2
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html
@@ -4914,44 +4841,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.GoogleMapViewRenderer.OnElementChanged
   nameWithType: GoogleMapViewRenderer.OnElementChanged
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass
-  name: HeaderOrFooterItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass
-  nameWithType: HeaderOrFooterItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor
-  name: HeaderOrFooterItemClass()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.HeaderOrFooterItemClass()
-  nameWithType: HeaderOrFooterItemClass.HeaderOrFooterItemClass()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor(System.Boolean)
-  name: HeaderOrFooterItemClass(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass__ctor_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.HeaderOrFooterItemClass(System.Boolean)
-  nameWithType: HeaderOrFooterItemClass.HeaderOrFooterItemClass(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor*
-  name: HeaderOrFooterItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.HeaderOrFooterItemClass
-  nameWithType: HeaderOrFooterItemClass.HeaderOrFooterItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent(System.Object,System.String)
-  name: OnGetContent(Object, String)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass_OnGetContent_System_Object_System_String_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent(System.Object,System.String)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent(System.Object, System.String)
-  nameWithType: HeaderOrFooterItemClass.OnGetContent(Object, String)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent*
-  name: OnGetContent
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_HeaderOrFooterItemClass_OnGetContent_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.HeaderOrFooterItemClass.OnGetContent
-  nameWithType: HeaderOrFooterItemClass.OnGetContent
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController
   name: IBezelInteractionController
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IBezelInteractionController.html
@@ -5231,155 +5120,25 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.InitOptions.GoogleMapsAPIKey
   nameWithType: InitOptions.GoogleMapsAPIKey
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer
-  name: IShellItemRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer
-  nameWithType: IShellItemRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_Item
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item
-  nameWithType: IShellItemRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item*
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_Item_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer
+  name: ListViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer
+  nameWithType: ListViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  name: UpdateRotaryInteraction(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewRenderer_UpdateRotaryInteraction_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  nameWithType: ListViewRenderer.UpdateRotaryInteraction(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction*
+  name: UpdateRotaryInteraction
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewRenderer_UpdateRotaryInteraction_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item
-  nameWithType: IShellItemRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_NativeView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView
-  nameWithType: IShellItemRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView*
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_NativeView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView
-  nameWithType: IShellItemRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
-  name: ListViewCache
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache
-  nameWithType: ListViewCache
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
-  name: Get(Cell)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Cell_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell)
-  nameWithType: ListViewCache.Get(Cell)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell,System.Boolean)
-  name: Get(Cell, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_Cell_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell,System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get(Cell, System.Boolean)
-  nameWithType: ListViewCache.Get(Cell, Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get*
-  name: Get
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_Get_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.Get
-  nameWithType: ListViewCache.Get
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass
-  name: InformalItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_InformalItemClass
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass
-  nameWithType: ListViewCache.InformalItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass*
-  name: InformalItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_InformalItemClass_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClass
-  nameWithType: ListViewCache.InformalItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
-  name: InformalItemClassWithoutFishEye
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_InformalItemClassWithoutFishEye
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
-  nameWithType: ListViewCache.InformalItemClassWithoutFishEye
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye*
-  name: InformalItemClassWithoutFishEye
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_InformalItemClassWithoutFishEye_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.InformalItemClassWithoutFishEye
-  nameWithType: ListViewCache.InformalItemClassWithoutFishEye
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
-  name: PaddingItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_PaddingItemClass
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
-  nameWithType: ListViewCache.PaddingItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass*
-  name: PaddingItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewCache_PaddingItemClass_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewCache.PaddingItemClass
-  nameWithType: ListViewCache.PaddingItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
-  name: ListViewItemContext
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext
-  nameWithType: ListViewItemContext
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
-  name: ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Cell_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell},System.Boolean)
-  name: ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_Cell_TemplatedItemsList_ItemsView_Cell__Cell__System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(Cell,TemplatedItemsList{ItemsView{Cell},Cell},System.Boolean)
-  name.vb: ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, System.Boolean)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), System.Boolean)
-  nameWithType: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList<ItemsView<Cell>, Cell>, Boolean)
-  nameWithType.vb: ListViewItemContext.ListViewItemContext(Cell, TemplatedItemsList(Of ItemsView(Of Cell), Cell), Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(TemplatedItemsList{ItemsView{Cell},Cell})
-  name: ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_TemplatedItemsList_ItemsView_Cell__Cell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor(TemplatedItemsList{ItemsView{Cell},Cell})
-  name.vb: ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-  nameWithType: ListViewItemContext.ListViewItemContext(TemplatedItemsList<ItemsView<Cell>, Cell>)
-  nameWithType.vb: ListViewItemContext.ListViewItemContext(TemplatedItemsList(Of ItemsView(Of Cell), Cell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor*
-  name: ListViewItemContext
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.ListViewItemContext
-  nameWithType: ListViewItemContext.ListViewItemContext
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
-  name: Group
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext_Group
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
-  nameWithType: ListViewItemContext.Group
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group*
-  name: Group
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.html#Tizen_Wearable_CircularUI_Forms_Renderer_ListViewItemContext_Group_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewItemContext.Group
-  nameWithType: ListViewItemContext.Group
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction
+  nameWithType: ListViewRenderer.UpdateRotaryInteraction
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl
   name: MediaPlayerImpl
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html
@@ -5412,279 +5171,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView
   nameWithType: MediaPlayerImpl.GetEmbeddingControlView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer
-  name: NavigationDrawer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer
-  nameWithType: NavigationDrawer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.#ctor(EvasObject)
-  name: NavigationDrawer(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer__ctor_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.#ctor(EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.NavigationDrawer(EvasObject)
-  nameWithType: NavigationDrawer.NavigationDrawer(EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.#ctor*
-  name: NavigationDrawer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.NavigationDrawer
-  nameWithType: NavigationDrawer.NavigationDrawer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Close(System.UInt32)
-  name: Close(UInt32)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_Close_System_UInt32_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Close(System.UInt32)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Close(System.UInt32)
-  nameWithType: NavigationDrawer.Close(UInt32)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Close*
-  name: Close
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_Close_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Close
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Close
-  nameWithType: NavigationDrawer.Close
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle(EvasObject)
-  name: CreateHandle(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_CreateHandle_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle(EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle(EvasObject)
-  nameWithType: NavigationDrawer.CreateHandle(EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle*
-  name: CreateHandle
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_CreateHandle_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.CreateHandle
-  nameWithType: NavigationDrawer.CreateHandle
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
-  name: HandlerBackgroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerBackgroundColor
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
-  nameWithType: NavigationDrawer.HandlerBackgroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor*
-  name: HandlerBackgroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerBackgroundColor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerBackgroundColor
-  nameWithType: NavigationDrawer.HandlerBackgroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
-  name: HandlerHeight
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerHeight
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
-  nameWithType: NavigationDrawer.HandlerHeight
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight*
-  name: HandlerHeight
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_HandlerHeight_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.HandlerHeight
-  nameWithType: NavigationDrawer.HandlerHeight
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen
-  name: IsOpen
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_IsOpen
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen
-  nameWithType: NavigationDrawer.IsOpen
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen*
-  name: IsOpen
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_IsOpen_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.IsOpen
-  nameWithType: NavigationDrawer.IsOpen
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Open(System.UInt32)
-  name: Open(UInt32)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_Open_System_UInt32_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Open(System.UInt32)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Open(System.UInt32)
-  nameWithType: NavigationDrawer.Open(UInt32)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Open*
-  name: Open
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_Open_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Open
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Open
-  nameWithType: NavigationDrawer.Open
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetDrawerContent(EvasObject)
-  name: SetDrawerContent(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_SetDrawerContent_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetDrawerContent(EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetDrawerContent(EvasObject)
-  nameWithType: NavigationDrawer.SetDrawerContent(EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetDrawerContent*
-  name: SetDrawerContent
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_SetDrawerContent_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetDrawerContent
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetDrawerContent
-  nameWithType: NavigationDrawer.SetDrawerContent
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetMainContent(EvasObject)
-  name: SetMainContent(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_SetMainContent_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetMainContent(EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetMainContent(EvasObject)
-  nameWithType: NavigationDrawer.SetMainContent(EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetMainContent*
-  name: SetMainContent
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_SetMainContent_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetMainContent
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.SetMainContent
-  nameWithType: NavigationDrawer.SetMainContent
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Toggled
-  name: Toggled
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_Toggled
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Toggled
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.Toggled
-  nameWithType: NavigationDrawer.Toggled
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.UpdateDrawerIcon(ImageSource)
-  name: UpdateDrawerIcon(ImageSource)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_UpdateDrawerIcon_ImageSource_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.UpdateDrawerIcon(ImageSource)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.UpdateDrawerIcon(ImageSource)
-  nameWithType: NavigationDrawer.UpdateDrawerIcon(ImageSource)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.UpdateDrawerIcon*
-  name: UpdateDrawerIcon
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationDrawer_UpdateDrawerIcon_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.UpdateDrawerIcon
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationDrawer.UpdateDrawerIcon
-  nameWithType: NavigationDrawer.UpdateDrawerIcon
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView
-  name: NavigationView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView
-  nameWithType: NavigationView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.#ctor(EvasObject)
-  name: NavigationView(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView__ctor_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.#ctor(EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.NavigationView(EvasObject)
-  nameWithType: NavigationView.NavigationView(EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.#ctor*
-  name: NavigationView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.NavigationView
-  nameWithType: NavigationView.NavigationView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate
-  name: Activate()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Activate
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate()
-  nameWithType: NavigationView.Activate()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate*
-  name: Activate
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Activate_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Activate
-  nameWithType: NavigationView.Activate
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
-  name: BackgroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_BackgroundColor
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
-  nameWithType: NavigationView.BackgroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor*
-  name: BackgroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_BackgroundColor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.BackgroundColor
-  nameWithType: NavigationView.BackgroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build(System.Collections.Generic.List{System.Collections.Generic.List{Element}})
-  name: Build(List<List<Element>>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Build_System_Collections_Generic_List_System_Collections_Generic_List_Element___
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build(System.Collections.Generic.List{System.Collections.Generic.List{Element}})
-  name.vb: Build(List(Of List(Of Element)))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build(System.Collections.Generic.List<System.Collections.Generic.List<Element>>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build(System.Collections.Generic.List(Of System.Collections.Generic.List(Of Element)))
-  nameWithType: NavigationView.Build(List<List<Element>>)
-  nameWithType.vb: NavigationView.Build(List(Of List(Of Element)))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build*
-  name: Build
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Build_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Build
-  nameWithType: NavigationView.Build
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.CreateHandle(EvasObject)
-  name: CreateHandle(EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_CreateHandle_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.CreateHandle(EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.CreateHandle(EvasObject)
-  nameWithType: NavigationView.CreateHandle(EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.CreateHandle*
-  name: CreateHandle
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_CreateHandle_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.CreateHandle
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.CreateHandle
-  nameWithType: NavigationView.CreateHandle
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Deactivate
-  name: Deactivate()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Deactivate
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Deactivate
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Deactivate()
-  nameWithType: NavigationView.Deactivate()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Deactivate*
-  name: Deactivate
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Deactivate_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Deactivate
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Deactivate
-  nameWithType: NavigationView.Deactivate
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Dragged
-  name: Dragged
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_Dragged
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Dragged
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.Dragged
-  nameWithType: NavigationView.Dragged
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
-  name: ForegroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_ForegroundColor
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
-  nameWithType: NavigationView.ForegroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor*
-  name: ForegroundColor
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_ForegroundColor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ForegroundColor
-  nameWithType: NavigationView.ForegroundColor
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ItemSelected
-  name: ItemSelected
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.html#Tizen_Wearable_CircularUI_Forms_Renderer_NavigationView_ItemSelected
-  commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ItemSelected
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.NavigationView.ItemSelected
-  nameWithType: NavigationView.ItemSelected
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass
-  name: PaddingItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass
-  nameWithType: PaddingItemClass
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.#ctor
-  name: PaddingItemClass()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_PaddingItemClass__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.PaddingItemClass()
-  nameWithType: PaddingItemClass.PaddingItemClass()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.#ctor*
-  name: PaddingItemClass
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.html#Tizen_Wearable_CircularUI_Forms_Renderer_PaddingItemClass__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.PaddingItemClass.PaddingItemClass
-  nameWithType: PaddingItemClass.PaddingItemClass
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer
   name: PageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html
@@ -5825,432 +5311,133 @@ references:
   commentId: E:Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.Rotated
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RotaryService.Rotated
   nameWithType: RotaryService.Rotated
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer
-  name: ShellContentRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer
-  nameWithType: ShellContentRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.#ctor(ShellContent)
-  name: ShellContentRenderer(ShellContent)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer__ctor_ShellContent_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.#ctor(ShellContent)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContentRenderer(ShellContent)
-  nameWithType: ShellContentRenderer.ShellContentRenderer(ShellContent)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.#ctor*
-  name: ShellContentRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.#ctor
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer
+  name: ScrollViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer
+  nameWithType: ScrollViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  name: UpdateRotaryInteraction(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ScrollViewRenderer_UpdateRotaryInteraction_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  nameWithType: ScrollViewRenderer.UpdateRotaryInteraction(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction*
+  name: UpdateRotaryInteraction
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ScrollViewRenderer_UpdateRotaryInteraction_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContentRenderer
-  nameWithType: ShellContentRenderer.ShellContentRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose
-  name: Dispose()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_Dispose
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose()
-  nameWithType: ShellContentRenderer.Dispose()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose(System.Boolean)
-  nameWithType: ShellContentRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction
+  nameWithType: ScrollViewRenderer.UpdateRotaryInteraction
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell
+  name: Tizen.Wearable.CircularUI.Forms.Renderer.Shell
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.html
+  commentId: N:Tizen.Wearable.CircularUI.Forms.Renderer.Shell
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Shell
+  nameWithType: Tizen.Wearable.CircularUI.Forms.Renderer.Shell
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer
+  name: CircularShellSectionItemsRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer
+  nameWithType: CircularShellSectionItemsRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.#ctor(ShellSection)
+  name: CircularShellSectionItemsRenderer(ShellSection)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_Shell_CircularShellSectionItemsRenderer__ctor_ShellSection_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.#ctor(ShellSection)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.CircularShellSectionItemsRenderer(ShellSection)
+  nameWithType: CircularShellSectionItemsRenderer.CircularShellSectionItemsRenderer(ShellSection)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.#ctor*
+  name: CircularShellSectionItemsRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_Shell_CircularShellSectionItemsRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.#ctor
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Dispose
-  nameWithType: ShellContentRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Item
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_Item
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Item
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Item
-  nameWithType: ShellContentRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Item*
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_Item_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Item
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.CircularShellSectionItemsRenderer
+  nameWithType: CircularShellSectionItemsRenderer.CircularShellSectionItemsRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.OnRotated(System.Boolean)
+  name: OnRotated(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_Shell_CircularShellSectionItemsRenderer_OnRotated_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.OnRotated(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.OnRotated(System.Boolean)
+  nameWithType: CircularShellSectionItemsRenderer.OnRotated(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.OnRotated*
+  name: OnRotated
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_Shell_CircularShellSectionItemsRenderer_OnRotated_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.OnRotated
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.Item
-  nameWithType: ShellContentRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.NativeView
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_NativeView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.NativeView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.NativeView
-  nameWithType: ShellContentRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.NativeView*
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_NativeView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.NativeView
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Shell.CircularShellSectionItemsRenderer.OnRotated
+  nameWithType: CircularShellSectionItemsRenderer.OnRotated
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer
+  name: StepperRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer
+  nameWithType: StepperRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.UpdateRotaryInteraction(System.Boolean)
+  name: UpdateRotaryInteraction(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_StepperRenderer_UpdateRotaryInteraction_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.UpdateRotaryInteraction(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.UpdateRotaryInteraction(System.Boolean)
+  nameWithType: StepperRenderer.UpdateRotaryInteraction(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.UpdateRotaryInteraction*
+  name: UpdateRotaryInteraction
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_StepperRenderer_UpdateRotaryInteraction_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.UpdateRotaryInteraction
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.NativeView
-  nameWithType: ShellContentRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContent
-  name: ShellContent
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_ShellContent
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContent
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContent
-  nameWithType: ShellContentRenderer.ShellContent
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContent*
-  name: ShellContent
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellContentRenderer_ShellContent_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContent
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.StepperRenderer.UpdateRotaryInteraction
+  nameWithType: StepperRenderer.UpdateRotaryInteraction
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer
+  name: StructuredItemsViewRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer
+  nameWithType: StructuredItemsViewRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  name: UpdateRotaryInteraction(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_StructuredItemsViewRenderer_UpdateRotaryInteraction_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.UpdateRotaryInteraction(System.Boolean)
+  nameWithType: StructuredItemsViewRenderer.UpdateRotaryInteraction(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.UpdateRotaryInteraction*
+  name: UpdateRotaryInteraction
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_StructuredItemsViewRenderer_UpdateRotaryInteraction_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.UpdateRotaryInteraction
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellContentRenderer.ShellContent
-  nameWithType: ShellContentRenderer.ShellContent
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer
-  name: ShellItemRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer
-  nameWithType: ShellItemRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.#ctor(ShellItem)
-  name: ShellItemRenderer(ShellItem)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer__ctor_ShellItem_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.#ctor(ShellItem)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItemRenderer(ShellItem)
-  nameWithType: ShellItemRenderer.ShellItemRenderer(ShellItem)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.#ctor*
-  name: ShellItemRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.StructuredItemsViewRenderer.UpdateRotaryInteraction
+  nameWithType: StructuredItemsViewRenderer.UpdateRotaryInteraction
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer
+  name: TimePickerRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer
+  nameWithType: TimePickerRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerClosed(System.Object,System.EventArgs)
+  name: OnPickerClosed(Object, EventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_TimePickerRenderer_OnPickerClosed_System_Object_System_EventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerClosed(System.Object,System.EventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerClosed(System.Object, System.EventArgs)
+  nameWithType: TimePickerRenderer.OnPickerClosed(Object, EventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerClosed*
+  name: OnPickerClosed
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_TimePickerRenderer_OnPickerClosed_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerClosed
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItemRenderer
-  nameWithType: ShellItemRenderer.ShellItemRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose
-  name: Dispose()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_Dispose
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose()
-  nameWithType: ShellItemRenderer.Dispose()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose(System.Boolean)
-  nameWithType: ShellItemRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerClosed
+  nameWithType: TimePickerRenderer.OnPickerClosed
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerOpened(System.Object,System.EventArgs)
+  name: OnPickerOpened(Object, EventArgs)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_TimePickerRenderer_OnPickerOpened_System_Object_System_EventArgs_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerOpened(System.Object,System.EventArgs)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerOpened(System.Object, System.EventArgs)
+  nameWithType: TimePickerRenderer.OnPickerOpened(Object, EventArgs)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerOpened*
+  name: OnPickerOpened
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_TimePickerRenderer_OnPickerOpened_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerOpened
   isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Dispose
-  nameWithType: ShellItemRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Item
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_Item
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Item
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Item
-  nameWithType: ShellItemRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Item*
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_Item_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Item
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.Item
-  nameWithType: ShellItemRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.NativeView
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_NativeView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.NativeView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.NativeView
-  nameWithType: ShellItemRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.NativeView*
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_NativeView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.NativeView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.NativeView
-  nameWithType: ShellItemRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItem
-  name: ShellItem
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_ShellItem
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItem
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItem
-  nameWithType: ShellItemRenderer.ShellItem
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItem*
-  name: ShellItem
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellItemRenderer_ShellItem_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItem
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellItemRenderer.ShellItem
-  nameWithType: ShellItemRenderer.ShellItem
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer
-  name: ShellRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer
-  nameWithType: ShellRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.#ctor
-  name: ShellRenderer()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.ShellRenderer()
-  nameWithType: ShellRenderer.ShellRenderer()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.#ctor*
-  name: ShellRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.ShellRenderer
-  nameWithType: ShellRenderer.ShellRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.Dispose(System.Boolean)
-  nameWithType: ShellRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.Dispose
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.Dispose
-  nameWithType: ShellRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Shell})
-  name: OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Shell>)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer_OnElementChanged_ElementChangedEventArgs_Xamarin_Forms_Shell__
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged(ElementChangedEventArgs{Xamarin.Forms.Shell})
-  name.vb: OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Shell))
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Shell>)
-  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Shell))
-  nameWithType: ShellRenderer.OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Shell>)
-  nameWithType.vb: ShellRenderer.OnElementChanged(ElementChangedEventArgs(Of Xamarin.Forms.Shell))
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged*
-  name: OnElementChanged
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer_OnElementChanged_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementChanged
-  nameWithType: ShellRenderer.OnElementChanged
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementReady
-  name: OnElementReady()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer_OnElementReady
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementReady
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementReady()
-  nameWithType: ShellRenderer.OnElementReady()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementReady*
-  name: OnElementReady
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRenderer_OnElementReady_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementReady
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRenderer.OnElementReady
-  nameWithType: ShellRenderer.OnElementReady
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory
-  name: ShellRendererFactory
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory
-  nameWithType: ShellRendererFactory
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellContent)
-  name: CreateItemRenderer(ShellContent)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_CreateItemRenderer_ShellContent_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellContent)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellContent)
-  nameWithType: ShellRendererFactory.CreateItemRenderer(ShellContent)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellItem)
-  name: CreateItemRenderer(ShellItem)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_CreateItemRenderer_ShellItem_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellItem)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellItem)
-  nameWithType: ShellRendererFactory.CreateItemRenderer(ShellItem)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellSection)
-  name: CreateItemRenderer(ShellSection)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_CreateItemRenderer_ShellSection_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellSection)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer(ShellSection)
-  nameWithType: ShellRendererFactory.CreateItemRenderer(ShellSection)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer*
-  name: CreateItemRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_CreateItemRenderer_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateItemRenderer
-  nameWithType: ShellRendererFactory.CreateItemRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateShellNavigationRenderer(ShellSection)
-  name: CreateShellNavigationRenderer(ShellSection)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_CreateShellNavigationRenderer_ShellSection_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateShellNavigationRenderer(ShellSection)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateShellNavigationRenderer(ShellSection)
-  nameWithType: ShellRendererFactory.CreateShellNavigationRenderer(ShellSection)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateShellNavigationRenderer*
-  name: CreateShellNavigationRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_CreateShellNavigationRenderer_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateShellNavigationRenderer
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.CreateShellNavigationRenderer
-  nameWithType: ShellRendererFactory.CreateShellNavigationRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.Default
-  name: Default
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_Default
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.Default
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.Default
-  nameWithType: ShellRendererFactory.Default
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.Default*
-  name: Default
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellRendererFactory_Default_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.Default
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellRendererFactory.Default
-  nameWithType: ShellRendererFactory.Default
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer
-  name: ShellSectionItemsRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer
-  nameWithType: ShellSectionItemsRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.#ctor(ShellSection)
-  name: ShellSectionItemsRenderer(ShellSection)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer__ctor_ShellSection_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.#ctor(ShellSection)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSectionItemsRenderer(ShellSection)
-  nameWithType: ShellSectionItemsRenderer.ShellSectionItemsRenderer(ShellSection)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.#ctor*
-  name: ShellSectionItemsRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSectionItemsRenderer
-  nameWithType: ShellSectionItemsRenderer.ShellSectionItemsRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose
-  name: Dispose()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_Dispose
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose()
-  nameWithType: ShellSectionItemsRenderer.Dispose()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose(System.Boolean)
-  nameWithType: ShellSectionItemsRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Dispose
-  nameWithType: ShellSectionItemsRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Item
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_Item
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Item
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Item
-  nameWithType: ShellSectionItemsRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Item*
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_Item_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Item
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.Item
-  nameWithType: ShellSectionItemsRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.NativeView
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_NativeView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.NativeView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.NativeView
-  nameWithType: ShellSectionItemsRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.NativeView*
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_NativeView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.NativeView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.NativeView
-  nameWithType: ShellSectionItemsRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSection
-  name: ShellSection
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_ShellSection
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSection
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSection
-  nameWithType: ShellSectionItemsRenderer.ShellSection
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSection*
-  name: ShellSection
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionItemsRenderer_ShellSection_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSection
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionItemsRenderer.ShellSection
-  nameWithType: ShellSectionItemsRenderer.ShellSection
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer
-  name: ShellSectionNavigationRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer
-  nameWithType: ShellSectionNavigationRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.#ctor(ShellSection)
-  name: ShellSectionNavigationRenderer(ShellSection)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer__ctor_ShellSection_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.#ctor(ShellSection)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSectionNavigationRenderer(ShellSection)
-  nameWithType: ShellSectionNavigationRenderer.ShellSectionNavigationRenderer(ShellSection)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.#ctor*
-  name: ShellSectionNavigationRenderer
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSectionNavigationRenderer
-  nameWithType: ShellSectionNavigationRenderer.ShellSectionNavigationRenderer
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose
-  name: Dispose()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose()
-  nameWithType: ShellSectionNavigationRenderer.Dispose()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose_System_Boolean_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose(System.Boolean)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose(System.Boolean)
-  nameWithType: ShellSectionNavigationRenderer.Dispose(Boolean)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose*
-  name: Dispose
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Dispose_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Dispose
-  nameWithType: ShellSectionNavigationRenderer.Dispose
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Item
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item
-  nameWithType: ShellSectionNavigationRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item*
-  name: Item
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_Item_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.Item
-  nameWithType: ShellSectionNavigationRenderer.Item
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_NativeView
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView
-  nameWithType: ShellSectionNavigationRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView*
-  name: NativeView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_NativeView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.NativeView
-  nameWithType: ShellSectionNavigationRenderer.NativeView
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection
-  name: ShellSection
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_ShellSection
-  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection
-  nameWithType: ShellSectionNavigationRenderer.ShellSection
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection*
-  name: ShellSection
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ShellSectionNavigationRenderer_ShellSection_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ShellSectionNavigationRenderer.ShellSection
-  nameWithType: ShellSectionNavigationRenderer.ShellSection
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.TimePickerRenderer.OnPickerOpened
+  nameWithType: TimePickerRenderer.OnPickerOpened
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect
   name: TizenCircleSurfaceEffect
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.TizenCircleSurfaceEffect.html
@@ -6844,6 +6031,51 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.Watchface.FormsWatchface.Run
   nameWithType: FormsWatchface.Run
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView
+  name: WatchListView
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView
+  nameWithType: WatchListView
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.#ctor(EvasObject,CircleSurface)
+  name: WatchListView(EvasObject, CircleSurface)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_WatchListView__ctor_EvasObject_CircleSurface_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.#ctor(EvasObject,CircleSurface)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.WatchListView(EvasObject, CircleSurface)
+  nameWithType: WatchListView.WatchListView(EvasObject, CircleSurface)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.#ctor*
+  name: WatchListView
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_WatchListView__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.WatchListView
+  nameWithType: WatchListView.WatchListView
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetFooter(VisualElement)
+  name: SetFooter(VisualElement)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_WatchListView_SetFooter_VisualElement_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetFooter(VisualElement)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetFooter(VisualElement)
+  nameWithType: WatchListView.SetFooter(VisualElement)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetFooter*
+  name: SetFooter
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_WatchListView_SetFooter_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetFooter
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetFooter
+  nameWithType: WatchListView.SetFooter
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetHeader(VisualElement)
+  name: SetHeader(VisualElement)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_WatchListView_SetHeader_VisualElement_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetHeader(VisualElement)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetHeader(VisualElement)
+  nameWithType: WatchListView.SetHeader(VisualElement)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetHeader*
+  name: SetHeader
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.html#Tizen_Wearable_CircularUI_Forms_Renderer_WatchListView_SetHeader_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetHeader
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.WatchListView.SetHeader
+  nameWithType: WatchListView.SetHeader
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Widget
   name: Tizen.Wearable.CircularUI.Forms.Renderer.Widget
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Widget.html

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IShellItemRenderer
+    <title>Class DatePickerRenderer
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IShellItemRenderer
+    <meta name="title" content="Class DatePickerRenderer
    ">
     <meta name="generator" content="docfx 1.0.0.0">
     
@@ -78,69 +78,82 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer" class="text-break">Interface IShellItemRenderer
+  <h1 id="Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer" class="text-break">Class DatePickerRenderer
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.IDisposable.Dispose()</span>
-    </div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DatePickerRenderer</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_syntax">Syntax</h5>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IShellItemRenderer : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class DatePickerRenderer : Xamarin.Forms.Platform.Tizen.DatePickerRenderer</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_Item_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_Item" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.Item">Item</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerClosed_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerClosed_System_Object_System_EventArgs_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerClosed(System.Object,System.EventArgs)">OnPickerClosed(Object, EventArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">BaseShellItem Item { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnPickerClosed(object sender, EventArgs args)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BaseShellItem</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_NativeView_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_IShellItemRenderer_NativeView" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.IShellItemRenderer.NativeView">NativeView</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerOpened_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_DatePickerRenderer_OnPickerOpened_System_Object_System_EventArgs_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened(System.Object,System.EventArgs)">OnPickerOpened(Object, EventArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">EvasObject NativeView { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnPickerOpened(object sender, EventArgs args)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EvasObject</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventArgs</span></td>
+        <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
     </tbody>

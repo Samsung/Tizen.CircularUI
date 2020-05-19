@@ -88,13 +88,20 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CircleScrollViewRenderer</span></div>
+    <div class="level1"><a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.html">ScrollViewRenderer</a></div>
+    <div class="level2"><span class="xref">CircleScrollViewRenderer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_ScrollViewRenderer_UpdateRotaryInteraction_System_Boolean_">ScrollViewRenderer.UpdateRotaryInteraction(Boolean)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.Renderer.html">Tizen.Wearable.CircularUI.Forms.Renderer</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CircleScrollViewRenderer : ViewRenderer&lt;CircleScrollView, ElmSharp.Wearable.CircleScroller&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CircleScrollViewRenderer : ScrollViewRenderer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -106,40 +113,40 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CircleScrollViewRenderer()</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_Dispose_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_Dispose_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CircleElement_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CircleElement" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CircleElement">CircleElement</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+    <pre><code class="lang-csharp hljs">public CircleScrollView CircleElement { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">disposing</span></td>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.CircleScrollView.html">CircleScrollView</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_GetNativeContentGeometry_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_GetNativeContentGeometry" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.GetNativeContentGeometry">GetNativeContentGeometry()</h4>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CreateNativeControl_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_CreateNativeControl" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.CreateNativeControl">CreateNativeControl()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override ElmSharp.Rect GetNativeContentGeometry()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Xamarin.Forms.Platform.Tizen.Native.Scroller CreateNativeControl()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,62 +158,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://developer.tizen.org/dev-guide/csapi/api/ElmSharp.Rect.html">ElmSharp.Rect</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_CircleScrollView__" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.CircleScrollView})">OnElementChanged(ElementChangedEventArgs&lt;CircleScrollView&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;CircleScrollView&gt; e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ElementChangedEventArgs</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.CircleScrollView.html">CircleScrollView</a>&gt;</td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementPropertyChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_CircleScrollViewRenderer_OnElementPropertyChanged_System_Object_System_ComponentModel_PropertyChangedEventArgs_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.CircleScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">OnElementPropertyChanged(Object, PropertyChangedEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ComponentModel.PropertyChangedEventArgs</span></td>
-        <td><span class="parametername">e</span></td>
+        <td><span class="xref">Xamarin.Forms.Platform.Tizen.Native.Scroller</span></td>
         <td></td>
       </tr>
     </tbody>
