@@ -17,18 +17,18 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         public override void SetHeader(VisualElement header)
         {
             base.SetHeader(header);
-            if (HasHeader() && CircleListView.GetCancelEffect(header))
+            if (header != null && CircleListView.GetCancelEffect(header))
             {
-                FirstItem.UpdateItemClass(GetCancelEffectTemplete(), header);
+                FirstItem.UpdateItemClass(GetCancelEffectTemplete(), HeaderItemContext);
             }
         }
 
         public override void SetFooter(VisualElement footer)
         {
             base.SetFooter(footer);
-            if (HasFooter() && CircleListView.GetCancelEffect(footer))
+            if (footer != null && CircleListView.GetCancelEffect(footer))
             {
-                LastItem.UpdateItemClass(GetCancelEffectTemplete(), footer);
+                LastItem.UpdateItemClass(GetCancelEffectTemplete(), FooterItemContext);
             }
         }
 
@@ -40,18 +40,21 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             {
                 GetContentHandler = (data, part) =>
                 {
-                    VisualElement element = data as VisualElement;
-                    var renderer = Platform.GetOrCreateRenderer(element);
+                    var context = data as HeaderFooterItemContext;
+                    if (context == null || context.Element == null)
+                        return null;
 
-                    if (element.MinimumHeightRequest == -1)
+                    var renderer = Platform.GetOrCreateRenderer(context.Element);
+                    if (context.Element.MinimumHeightRequest == -1)
                     {
-                        SizeRequest request = element.Measure(double.PositiveInfinity, double.PositiveInfinity);
+                        SizeRequest request = context.Element.Measure(double.PositiveInfinity, double.PositiveInfinity);
                         renderer.NativeView.MinimumHeight = XForms.ConvertToScaledPixel(request.Request.Height);
                     }
                     else
                     {
-                        renderer.NativeView.MinimumHeight = XForms.ConvertToScaledPixel(element.MinimumHeightRequest);
+                        renderer.NativeView.MinimumHeight = XForms.ConvertToScaledPixel(context.Element.MinimumHeightRequest);
                     }
+
                     (renderer as LayoutRenderer)?.RegisterOnLayoutUpdated();
 
                     return renderer.NativeView;
