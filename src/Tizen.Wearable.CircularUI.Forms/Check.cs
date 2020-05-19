@@ -27,7 +27,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The check widget allows for toggling a value between true and false.
     /// The check is extension of Xamarin.Forms.Switch.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
     /// var check = new Check
@@ -44,19 +43,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// BindableProperty. Identifies the DisplayStyle bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty DisplayStyleProperty = BindableProperty.Create(nameof(DisplayStyle), typeof(CheckDisplayStyle), typeof(Check), defaultValue: CheckDisplayStyle.Default);
 
         /// <summary>
         /// BindableProperty. Identifies the Color bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ColorProperty = BindableProperty.Create(nameof(Color), typeof(Color), typeof(Check), Color.Default);
 
         /// <summary>
         /// Gets or sets display style of Check.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public CheckDisplayStyle DisplayStyle
         {
             get { return (CheckDisplayStyle)GetValue(DisplayStyleProperty); }
@@ -66,7 +62,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a color value of Check.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color Color
         {
             get => (Color)GetValue(ColorProperty);

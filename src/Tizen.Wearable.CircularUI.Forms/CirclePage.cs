@@ -27,14 +27,12 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CirclePage is a ContentPage, which allows you to insert views that require CircleSurface, and you can show ToolbarItems with MoreOption.
     /// It has an ActionButton, and can use the MenuItem type as text, icon, command, and so on.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     [Obsolete("CirclePage is obsolete as of version 1.5.0. Please use Xamarin.Forms.ContentPage, CircleSurfaceView, and BezelInteracationPage instead.")]
     public class CirclePage : ContentPage, ICircleSurfaceProvider, IBezelInteractionRouter
     {
         /// <summary>
         /// BindableProperty. Identifies the ActionButton bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ActionButtonProperty = BindableProperty.Create(nameof(ActionButton), typeof(ActionButtonItem), typeof(CirclePage), null,
             propertyChanged: (b, o, n) =>
             {
@@ -45,23 +43,21 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// BindableProperty. Identifies the RotaryFocusObject bindable property Key.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty RotaryFocusObjectProperty = BindableProperty.Create(nameof(RotaryFocusObject), typeof(IRotaryFocusable), typeof(CirclePage), null);
 
         /// <summary>
         /// Creates and initializes a new instance of the CirclePage class.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public CirclePage()
         {
             var surfaceItems = new ObservableCollection<ICircleSurfaceItem>();
             surfaceItems.CollectionChanged += OnSurfaceItemsChanged;
             CircleSurfaceItems = surfaceItems;
         }
+
         /// <summary>
         /// Gets a list of CircleSurfaceItems represented through CircleSurface.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public IList<ICircleSurfaceItem> CircleSurfaceItems { get; }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -73,7 +69,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets ActionButton that presents a menu item and associates it with a command
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public ActionButtonItem ActionButton
         {
             get => (ActionButtonItem)GetValue(ActionButtonProperty);
@@ -82,7 +77,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets object of RotaryFocusObject to receive bezel action(take a rotary event) from the current page.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public IRotaryFocusable RotaryFocusObject
         {
             get => (IRotaryFocusable)GetValue(RotaryFocusObjectProperty);

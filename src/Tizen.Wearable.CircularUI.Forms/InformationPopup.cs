@@ -27,25 +27,21 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// BindableProperty. Identifies the IsProgressRunning bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty IsProgressRunningProperty = BindableProperty.Create(nameof(IsProgressRunning), typeof(bool), typeof(InformationPopup), false);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty TitleProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(InformationPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the title bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(InformationPopup), null);
 
         /// <summary>
         /// BindableProperty. Identifies the first button bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BottomButtonProperty = BindableProperty.Create(nameof(BottomButton), typeof(MenuItem), typeof(InformationPopup), null);
 
         IInformationPopup _popUp;
@@ -55,7 +51,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Occurs when the device's back button is pressed.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public event EventHandler BackButtonPressed;
 
         public InformationPopup()
@@ -127,7 +122,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Dismisses the InformationPopup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public void Dismiss()
         {
             _popUp.Dismiss();

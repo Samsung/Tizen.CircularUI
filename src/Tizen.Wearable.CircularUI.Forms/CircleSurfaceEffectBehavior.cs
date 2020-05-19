@@ -25,18 +25,32 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The CircleSurfaceEffectBehavior is a behavior which allows you to add views that require CircleSurface.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     /// [Obsolete("CircleSurfaceEffectBehavior is obsolete as of version 1.5.0. Please use BezelInteracationPage instead.")]
     public class CircleSurfaceEffectBehavior : Behavior<Page>
     {
         internal static readonly BindableProperty SurfaceProperty = BindableProperty.CreateAttached("CircleSurface", typeof(object), typeof(CircleSurfaceEffectBehavior), null);
 
+        /// <summary>
+        /// BindableProperty. Identifies the RotaryFocusObject bindable property.
+        /// </summary>
         public static readonly BindableProperty RotaryFocusObjectProperty = BindableProperty.CreateAttached("RotaryFocusObject", typeof(IRotaryFocusable), typeof(CircleSurfaceEffectBehavior), null);
 
         internal static object GetSurface(BindableObject obj) => obj.GetValue(SurfaceProperty);
+
         internal static void SetSurface(BindableObject obj, object surface) => obj.SetValue(SurfaceProperty, surface);
 
+        /// <summary>
+        /// Get a RotaryFocusObject
+        /// </summary>
+        /// <param name="obj"> Effect element </param>
+        /// <returns> Focusable object </returns>
         public static IRotaryFocusable GetRotaryFocusObject(BindableObject obj) => (IRotaryFocusable)obj.GetValue(RotaryFocusObjectProperty);
+
+        /// <summary>
+        /// Set a RotaryFocusObject
+        /// </summary>
+        /// <param name="obj"> Effect element </param>
+        /// <param name="focusable"> Focusable object </param>
         public static void SetRotaryFocusObject(BindableObject obj, IRotaryFocusable focusable) => obj.SetValue(RotaryFocusObjectProperty, focusable);
 
         protected override void OnAttachedTo(Page page)

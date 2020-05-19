@@ -26,7 +26,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// Enumeration for the style of the Check.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public enum CheckDisplayStyle 
     {
         /// <summary>

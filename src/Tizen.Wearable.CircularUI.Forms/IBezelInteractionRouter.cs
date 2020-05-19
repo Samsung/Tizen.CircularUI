@@ -16,6 +16,9 @@
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+    /// <summary>
+    /// An interface to take rotary events.
+    /// </summary>
     public interface IBezelInteractionRouter
     {
         IRotaryFocusable RotaryFocusObject { get; }

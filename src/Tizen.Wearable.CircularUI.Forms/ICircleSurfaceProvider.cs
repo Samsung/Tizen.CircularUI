@@ -21,13 +21,11 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The ICircleSurfaceProvider is an interface providing the CircleSurface.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public interface ICircleSurfaceProvider
     {
         /// <summary>
         /// Gets or sets CircleSurface object. For internal use only
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         [EditorBrowsable(EditorBrowsableState.Never)]
         object CircleSurface { get; set; }
     }

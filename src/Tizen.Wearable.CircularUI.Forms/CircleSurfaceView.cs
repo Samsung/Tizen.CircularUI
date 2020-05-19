@@ -21,8 +21,14 @@ using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+    /// <summary>
+    /// A subclass of Xamarin.Forms.View that can have several CircleSurfaceItem as a View not Page.
+    /// </summary>
     public class CircleSurfaceView : View, ICircleSurfaceProvider
     {
+        /// <summary>
+        /// An IList of the ICircleSurfaceItem on this CircleSurfaceView.
+        /// </summary>
         public IList<ICircleSurfaceItem> CircleSurfaceItems { get; internal set; }
 
         [EditorBrowsable(EditorBrowsableState.Never)]

@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The Toast class provides properties that show simple types of messages
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
     /// Toast.DisplayText("Hello World", 3000)
@@ -36,7 +35,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         /// <param name="text">The body text of the toast.</param>
         /// <param name="duration">How long to display the text in milliseconds.</param>
-        /// <since_tizen> 4 </since_tizen>
         public static void DisplayText(string text, int duration)
         {
             new ToastProxy
@@ -58,7 +56,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <param name="text">The body text of the toast.</param>
         /// <param name="icon">The file path of the toast icon.</param>
         /// <param name="duration">How long to display the text in milliseconds.</param>
-        /// <since_tizen> 4 </since_tizen>
         public static void DisplayIconText(string text, FileImageSource icon, int duration)
         {
             new ToastProxy
@@ -74,7 +71,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         /// <param name="text">The body text of the toast.</param>
         /// <param name="icon">The file path of the toast icon.</param>
-        /// <since_tizen> 4 </since_tizen>
         public static void DisplayIconText(string text, FileImageSource icon) => DisplayIconText(text, icon, 3000);
     }
 }

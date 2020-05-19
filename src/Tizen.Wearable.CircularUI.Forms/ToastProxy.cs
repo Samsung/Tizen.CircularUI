@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// This class is for the internal use by toast.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     internal class ToastProxy : IToast
     {
         IToast _toastProxy;
@@ -38,7 +37,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets duration of the Toast pop-up.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public int Duration
         {
             get
@@ -55,7 +53,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets text of the Toast pop-up.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string Text
         {
             get
@@ -72,7 +69,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets icon of the Toast pop-up.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public FileImageSource Icon
         {
             get
@@ -89,7 +85,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Dismisses the Toast pop-up.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public void Dismiss()
         {
             _toastProxy.Dismiss();
@@ -98,7 +93,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Shows the Toast pop-up.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public void Show()
         {
             _toastProxy.Show();

@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The Radio is a widget that allows one or more options to be displayed and have the user choose only one of them.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
     /// var radio1 = new Radio
@@ -56,26 +55,22 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// BindableProperty. Identifies the Value bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ValueProperty = BindableProperty.Create("Value", typeof(string), typeof(Radio), default(string));
 
         /// <summary>
         /// BindableProperty. Identifies the IsSelected bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty IsSelectedProperty = BindableProperty.Create("IsSelected", typeof(bool), typeof(Radio), false,
              propertyChanged: IsSelectedPropertyChanged);
 
         /// <summary>
         /// BindableProperty. Identifies the GroupName bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty GroupNameProperty = BindableProperty.Create("GroupName", typeof(string), typeof(Radio), default(string));
 
         /// <summary>
         /// BindableProperty. Identifies the Color bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty ColorProperty = BindableProperty.Create(nameof(Color), typeof(Color), typeof(Radio), Color.Default);
 
 
@@ -83,7 +78,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets the value of the Radio.
         /// This is a bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string Value
         {
             get { return (string)GetValue(ValueProperty); }
@@ -94,7 +88,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets the name that specifies which Radio controls are mutually exclusive.
         /// It can be set to null.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string GroupName
         {
             get { return (string)GetValue(GroupNameProperty); }
@@ -104,7 +97,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a boolean value that indicates whether this Radio is selected.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsSelected
         {
             get { return (bool)GetValue(IsSelectedProperty); }
@@ -114,7 +106,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Occurs when the Radio selection was changed.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public event EventHandler<SelectedEventArgs> Selected;
 
 
@@ -127,7 +118,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a color value of Radio.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color Color
         {
             get => (Color)GetValue(ColorProperty);

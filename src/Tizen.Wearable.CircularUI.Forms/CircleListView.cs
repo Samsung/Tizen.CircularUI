@@ -23,38 +23,32 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The CircleListView is a view that represents Xamarin.Forms.ListView on Circular UI.
     /// You can move the list through bezel action.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class CircleListView : ListView, IRotaryFocusable, ICircleSurfaceConsumer
     {
         /// <summary>
         /// BindableProperty. Identifies the Header, Footer cancel the Fish Eye Effect or not.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty CancelEffectProperty = BindableProperty.CreateAttached("CancelEffect", typeof(bool), typeof(CircleListView), false);
 
         /// <summary>
         /// BindableProperty. Identifies color of the scroll bar.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BarColorProperty = BindableProperty.CreateAttached("BarColor", typeof(Color), typeof(CircleListView), Color.Default);
 
         /// <summary>
         /// Gets the Header, Footer cancel the Fish Eye Effect or not.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static bool GetCancelEffect(BindableObject view) => (bool)view.GetValue(CancelEffectProperty);
 
         /// <summary>
         /// Sets the Header, Footer cancel the Fish Eye Effect or not.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static void SetCancelEffect(BindableObject view, bool value) => view.SetValue(CancelEffectProperty, value);
 
 
         /// <summary>
         /// Gets or sets a scroll bar color value.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color BarColor
         {
             get => (Color)GetValue(BarColorProperty);
@@ -64,7 +58,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a CircleSurfaceProvider.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
     }
 }

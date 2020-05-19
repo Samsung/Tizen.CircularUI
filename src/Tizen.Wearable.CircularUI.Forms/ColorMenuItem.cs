@@ -18,18 +18,19 @@ using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+    /// <summary>
+    /// A subclass of Xamarin.Forms.MenuItem that controls the background color of the button used in the popup control.
+    /// </summary>
     public class ColorMenuItem : MenuItem
     {
         /// <summary>
         /// BindableProperty. Identifies the BackgroundColor bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BackgroundColorProperty = BindableProperty.Create(nameof(BackgroundColor), typeof(Color), typeof(ActionButtonItem), Color.Default);
 
         /// <summary>
         /// Gets or sets a background color value of this ActionButtonItem.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color BackgroundColor
         {
             get => (Color)GetValue(BackgroundColorProperty);

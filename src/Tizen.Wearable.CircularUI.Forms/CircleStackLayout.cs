@@ -20,6 +20,9 @@ using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
+    /// <summary>
+    /// A container to layout children linear in the circular area.
+    /// </summary>
     public class CircleStackLayout : StackLayout
     {
         protected override void LayoutChildren(double x, double y, double width, double height)
