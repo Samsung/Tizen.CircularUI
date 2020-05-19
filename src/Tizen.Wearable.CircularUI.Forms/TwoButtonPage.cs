@@ -21,13 +21,11 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The TwoButtonPage is a page that has a rectangular area inside the circle as contents area. It also has two buttons and a Title area.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class TwoButtonPage : ContentPage
     {
         /// <summary>
         /// BindableProperty. Identifies the FirstButton bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty FirstButtonProperty = BindableProperty.Create(nameof(FirstButton), typeof(MenuItem), typeof(TwoButtonPage),
             propertyChanged: (b, o, n) =>
             {
@@ -37,7 +35,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// BindableProperty. Identifies the SecondButton bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty SecondButtonProperty = BindableProperty.Create(nameof(SecondButton), typeof(MenuItem), typeof(TwoButtonPage),
             propertyChanged: (b, o, n) =>
             {
@@ -48,7 +45,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// BindableProperty. Identifies the Overlap bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty OverlapProperty = BindableProperty.Create(nameof(Overlap), typeof(bool), typeof(TwoButtonPage), false);
 
         /// <summary>
@@ -64,7 +60,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets left button of TwoButtonPage.
         /// Text property of MenuItem is ignored since button has no space to display text.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public MenuItem FirstButton
         {
             get => (MenuItem)GetValue(FirstButtonProperty);
@@ -74,7 +69,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets right button of TwoButtonPage.
         /// Text property of MenuItem is ignored since button has no space to display text.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public MenuItem SecondButton
         {
             get => (MenuItem)GetValue(SecondButtonProperty);

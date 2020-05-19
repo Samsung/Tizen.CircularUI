@@ -19,13 +19,11 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The ICircleSurfaceConsumer is an interface represents the CircleSurfaceObject.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public interface ICircleSurfaceConsumer
     {
         /// <summary>
         /// Gets or sets CircleSurfaceProvider
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
     }
 }

@@ -24,27 +24,23 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The ContentButton is a Button, which allows you to customize the View to be displayed.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class ContentButton : ContentView, IButtonController
     {
         /// <summary>
         /// BindableProperty. Identifies the Command bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty CommandProperty = BindableProperty.Create(nameof(Command), typeof(ICommand), typeof(ContentButton), null, 
             propertyChanging: OnCommandChanging, propertyChanged: OnCommandChanged);
 
         /// <summary>
         /// BindableProperty. Identifies the CommandParameter bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(ContentButton), null, 
             propertyChanged: (bindable, oldvalue, newvalue) => CommandCanExcuteChanged(bindable, EventArgs.Empty));
 
         /// <summary>
         /// Gets or sets command that is executed when the button is clicked.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public ICommand Command
         {
             get => (ICommand)GetValue(CommandProperty);
@@ -54,7 +50,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets command paramter that is executed when the button is clicked.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public object CommandParameter
         {
             get => GetValue(CommandParameterProperty);
@@ -64,19 +59,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Occurs when the button is clicked.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public event EventHandler Clicked;
 
         /// <summary>
         /// Occurs when the button is pressed.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public event EventHandler Pressed;
 
         /// <summary>
         /// Occurs when the button is released.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public event EventHandler Released;
 
         bool IsEnabledCore

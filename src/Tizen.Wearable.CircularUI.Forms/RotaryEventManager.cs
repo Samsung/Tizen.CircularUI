@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The RotaryEventManager provides an event for the global rotary event for wearable devices.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     /// <example>
     /// <code>
     /// RotaryEventManager.Rotated += (s, e) =>

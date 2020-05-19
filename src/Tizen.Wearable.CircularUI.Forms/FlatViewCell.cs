@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// FlatViewCell contains a developer-defined Xamarin.Forms.View.
     /// It has no fish-eye effect while ViewCell has fish-eye effect.
     /// </summary>
-    /// <since_tizen> 6 </since_tizen>
     public class FlatViewCell : ViewCell
     {
     }

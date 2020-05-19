@@ -9,57 +9,51 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The ContextPopupEffectBehavior is a behavior which allows you to add a context popup.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class ContextPopupEffectBehavior : Behavior<View>
     {
         /// <summary>
         /// BindableProperty. Identifies the AcceptText bindable property. AcceptText is to use as Accept button
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty AcceptTextProperty = BindableProperty.Create(nameof(AcceptText), typeof(string), typeof(ContextPopupEffectBehavior), null);
 
         /// <summary>
         /// BindableProperty. Identifies the AcceptCommand bindable property. AcceptCommand is executed when the Accept button is pressed.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty AcceptCommandProperty = BindableProperty.Create(nameof(AcceptCommand), typeof(ICommand), typeof(ContextPopupEffectBehavior), null);
+
         /// <summary>
         /// BindableProperty. Identifies the AcceptCommandParameter bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty AcceptCommandParameterProperty = BindableProperty.Create(nameof(AcceptCommandParameter), typeof(object), typeof(ContextPopupEffectBehavior), null);
 
         /// <summary>
         /// BindableProperty. Identifies the CancelText bindable property. CancelText is to use as Cancel button
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty CancelTextProperty = BindableProperty.Create(nameof(CancelText), typeof(string), typeof(ContextPopupEffectBehavior), null);
+
         /// <summary>
         /// BindableProperty. Identifies the CancelCommand bindable property. CancelCommand is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty CancelCommandProperty = BindableProperty.Create(nameof(CancelCommand), typeof(ICommand), typeof(ContextPopupEffectBehavior), null);
+
         /// <summary>
         /// BindableProperty. Identifies the CancelCommandParameter bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty CancelCommandParameterProperty = BindableProperty.Create(nameof(CancelCommandParameter), typeof(object), typeof(ContextPopupEffectBehavior), null);
 
         /// <summary>
         /// BindableProperty. Identifies the ConfirmVisibility bindable property. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty VisibilityProperty = BindableProperty.Create(nameof(Visibility), typeof(bool), typeof(ContextPopupEffectBehavior), false);
 
         /// <summary>
         /// BindableProperty. Identifies the PositionOption bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty PositionOptionProperty = BindableProperty.Create(nameof(PositionOption), typeof(PositionOption), typeof(ContextPopupEffectBehavior), PositionOption.BottomOfView);
+
         /// <summary>
         /// BindableProperty. Identifies the Offset bindable property. Offset is a value of how far to move from the base tap position represented by the PositionOption type. If it isn't set, it returns 0,0.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty OffsetProperty = BindableProperty.Create(nameof(Offset), typeof(Point), typeof(ContextPopupEffectBehavior), default(Point));
 
         internal static readonly BindableProperty ContextPopupEffectBehaviorProperty = BindableProperty.CreateAttached("ContextPopupEffectBehavior", typeof(ContextPopupEffectBehavior), typeof(View), null);
@@ -69,7 +63,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets text of Accept button
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string AcceptText
         {
             get => (string)GetValue(AcceptTextProperty);
@@ -79,7 +72,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets command that is executed when the Accept button is pressed.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public ICommand AcceptCommand
         {
             get => (ICommand)GetValue(AcceptCommandProperty);
@@ -89,7 +81,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets command paramter that is executed when the Accept button is pressed.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public object AcceptCommandParameter
         {
             get => GetValue(AcceptCommandParameterProperty);
@@ -99,7 +90,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets text of Cancel button
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string CancelText
         {
             get => (string)GetValue(CancelTextProperty);
@@ -109,7 +99,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets command that is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public ICommand CancelCommand
         {
             get => (ICommand)GetValue(CancelCommandProperty);
@@ -119,7 +108,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets command that is executed when the Cancel button is pressed, even if the popup disappears by selecting outside the popup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public object CancelCommandParameter
         {
             get => GetValue(CancelCommandParameterProperty);
@@ -129,7 +117,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets visibility of Confirmation popup. Popup appears if ConfirmVisibility is True, and disappears when it becomes False. CancelCommand works even if it disappears to False.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool Visibility
         {
             get => (bool)GetValue(VisibilityProperty);
@@ -139,7 +126,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets position type of popup
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public PositionOption PositionOption
         {
             get => (PositionOption)GetValue(PositionOptionProperty);
@@ -149,7 +135,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets offset. Offset is a value of how far to move from the base tap position represented by the PositionOption type. If it isn't set, it returns 0,0.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Point Offset
         {
             get => (Point)GetValue(OffsetProperty);

@@ -25,25 +25,21 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// The PopupEntry is a class that extends Xamarin.Forms.Entry.
     /// It makes a new layer when editing text on the entry.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class PopupEntry : Entry
     {
         /// <summary>
         /// BindableProperty. Identifies color of Popup background.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty PopupBackgroundColorProperty = BindableProperty.CreateAttached(nameof(PopupBackgroundColor), typeof(Color), typeof(PopupEntry), Color.Default);
 
         /// <summary>
         /// BindableProperty. Identifies whether Popup is opended or not.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty IsPopupOpenedProperty = BindableProperty.CreateAttached(nameof(IsPopupOpened), typeof(bool), typeof(PopupEntry), false);
 
         /// <summary>
         /// Gets or sets a color value of Popup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color PopupBackgroundColor
         {
             get => (Color)GetValue(PopupBackgroundColorProperty);
@@ -53,7 +49,6 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets or sets a status of Popup's open.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsPopupOpened
         {
             get => (bool)GetValue(IsPopupOpenedProperty);

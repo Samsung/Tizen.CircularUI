@@ -21,14 +21,12 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// Event arguments for events of RadioButton.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class SelectedEventArgs : EventArgs
     {
         /// <summary>
         /// Creates a new SelectedEventArgs object that represents a change from RadioButton.
         /// </summary>
         /// <param name="value">The boolean value that checks whether the RadioButton is selected.</param>
-        /// <since_tizen> 4 </since_tizen>
         public SelectedEventArgs(string value, bool isSelected)
         {
             Value = value;
@@ -38,13 +36,11 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// <summary>
         /// Gets the Value for the SelectedEventArgs object.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string Value { get; private set; }
 
         /// <summary>
         /// Gets the IsSelected for the SelectedEventArgs object.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsSelected { get; private set; }
     }
 }
