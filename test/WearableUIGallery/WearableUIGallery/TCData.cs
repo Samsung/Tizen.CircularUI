@@ -26,6 +26,7 @@ namespace WearableUIGallery
         static TCData()
         {
             TCs = new ObservableCollection<TCDescribe>();
+            TCs.Add(new TCDescribe { Title = "ContentPopupTest", Class = typeof(TCContentPopupTest) });
             TCs.Add(new TCDescribe { Title = "ContentButtonTest", Class = typeof(ContentButtonTestPage) });
             TCs.Add(new TCDescribe { Title = "CircleSurfaceView", Class = typeof(TCCircleSurfaceView) });
             TCs.Add(new TCDescribe
