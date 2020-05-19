@@ -75,15 +75,6 @@ namespace Tizen.Wearable.CircularUI.Forms
             set => SetValue(FlyoutForegroundColorProperty, value);
         }
 
-        /// <summary>
-        /// Callback that redefines the action when the device's back button is pressed.
-        /// </summary>
-        /// <returns>
-        /// When this method return true, application will not be terminated, otherwise it will be terminated.
-        /// </returns>
-        /// <remarks>
-        /// The default behavior of CircularShell when Flyout is opened is to close the Flyout without terminating an application.
-        /// </remarks>
         protected override bool OnBackButtonPressed()
         {
             if (FlyoutIsPresented)
