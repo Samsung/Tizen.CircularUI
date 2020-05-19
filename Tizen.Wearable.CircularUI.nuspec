@@ -14,10 +14,10 @@
     <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
-        <dependency id="Xamarin.Forms" version="4.6.0.726" />
+        <dependency id="Xamarin.Forms" version="4.6.0.800" />
       </group>
       <group targetFramework="tizen40">
-        <dependency id="Xamarin.Forms" version="4.6.0.726" />
+        <dependency id="Xamarin.Forms" version="4.6.0.800" />
         <dependency id="Tizen.NET" version="4.0.0" />
       </group>
     </dependencies>
