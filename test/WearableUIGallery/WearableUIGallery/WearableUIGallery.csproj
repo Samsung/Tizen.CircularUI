@@ -18,6 +18,9 @@
     <Compile Update="TC\TCCircleSurfaceView.xaml.cs">
       <DependentUpon>TCCircleSurfaceView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="TC\TCCheckListView.xaml.cs">
+      <DependentUpon>TCCheckListView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="TC\TCRadialProgress.xaml">
