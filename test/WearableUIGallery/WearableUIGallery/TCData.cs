@@ -186,7 +186,15 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "ActionButton", Class = typeof(TCIndexPageActionButton) }
                 }
             });
-            TCs.Add(new TCDescribe { Title = "Check (Deprecated)", Class = typeof(TCCheck) });
+            TCs.Add(new TCDescribe
+            {
+                Title = "Check (Deprecated)",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "StackLayout", Class = typeof(TCCheck) },
+                    new TCDescribe { Title = "ListView", Class = typeof(TCCheckListView) }
+                }
+            });
             TCs.Add(new TCDescribe
             {
                 Title = "Radio (Deprecated)",
