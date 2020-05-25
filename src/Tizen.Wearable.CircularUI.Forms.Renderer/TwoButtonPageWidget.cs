@@ -55,7 +55,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _outbox.Show();
 
             _canvas = new Canvas(_outbox);
-            EcoreMainloop.Post(() => _canvas.Geometry = _outbox.Geometry);
+            EcoreMainloop.Post(OnLayout);
             _outbox.PackEnd(_canvas);
             _canvas.Show();
 
@@ -71,14 +71,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (_overlap != value)
                 {
                     _overlap = value;
-                    if (_overlap)
-                    {
-                        _canvas.Geometry = _outbox.Geometry;
-                    }
-                    else
-                    {
-                        OnLayout();
-                    }
+                    OnLayout();
                 }
             }
         }
@@ -117,17 +110,22 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         void OnLayout()
         {
+            if (_overlap)
+            {
+                _canvas.Geometry = _outbox.Geometry;
+                return;
+            }
             var rect = _outbox.Geometry;
             if (_buttons[0] != null)
             {
                 var rect1 = _buttons[0].Geometry;
                 rect.X = rect1.Right;
-                rect.Width -= rect1.Width;
+                rect.Width -= rect1.Right;
             }
             if (_buttons[1] != null)
             {
                 var rect2 = _buttons[1].Geometry;
-                rect.Width -= rect2.Width;
+                rect.Width -= (_outbox.Geometry.Width - rect2.Left);
             }
             Canvas.Geometry = rect;
         }
