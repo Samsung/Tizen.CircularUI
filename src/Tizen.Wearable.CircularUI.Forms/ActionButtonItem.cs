@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -21,6 +22,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The ActionButtonItem is a class that presents a menu item and associates it with a command
     /// </summary>
+    [Obsolete("ActionButtonItem is obsolete as of version 1.5.0. Please use Xamarin.Forms.Button with with Button.Style(TizenSpecific) or ContentButton instead.")]
     public class ActionButtonItem : MenuItem
     {
         /// <summary>
