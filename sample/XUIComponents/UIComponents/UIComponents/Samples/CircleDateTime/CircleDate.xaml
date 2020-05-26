@@ -1,15 +1,15 @@
-﻿<w:CirclePage
+﻿<ContentPage
     x:Class="UIComponents.Samples.CircleDateTime.CircleDate"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:UIComponents.Samples.CircleDateTime"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference dateSelector}">
-    <w:CirclePage.BindingContext>
+    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core">
+    <ContentPage.BindingContext>
         <local:DateTimeViewModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
         <StackLayout
             BackgroundColor="Black"
             HorizontalOptions="FillAndExpand"
@@ -21,9 +21,7 @@
                 MaximumDate="1/1/2022"
                 MinimumDate="1/12/2010"
                 ValueType="Date" />
+            <Button Command="{Binding ButtonPressedExit}" Text="OK" tizen:VisualElement.Style="{x:Static tizen:ButtonStyle.Bottom}" />
         </StackLayout>
-    </w:CirclePage.Content>
-    <w:CirclePage.ActionButton>
-        <w:ActionButtonItem Command="{Binding ButtonPressedExit}" Text="OK" />
-    </w:CirclePage.ActionButton>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>

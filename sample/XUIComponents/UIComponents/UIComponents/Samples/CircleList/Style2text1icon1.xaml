@@ -1,15 +1,14 @@
-﻿<w:CirclePage
+﻿<ContentPage
     x:Class="UIComponents.Samples.CircleList.Style2text1icon1"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:UIComponents.Samples.CircleList"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference mylist}">
-    <w:CirclePage.BindingContext>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.BindingContext>
         <local:ListViewModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
         <w:CircleListView
             x:Name="mylist"
             HasUnevenRows="True"
@@ -51,5 +50,5 @@
                 </DataTemplate>
             </w:CircleListView.ItemTemplate>
         </w:CircleListView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>

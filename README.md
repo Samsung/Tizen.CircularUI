@@ -35,7 +35,7 @@ The Tizen Wearable CircularUI project provides UI controls that fit on a circula
 - [ContextPopupEffectBehavior](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContextPopupEffectBehavior.html) : A behavior to show a small popup which has one or two buttons. This can be added to any `Xamarin.Forms.View`.
 - [FlatViewCell](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.FlatViewCell.html) : A cell that turns off the default effect(fish-eye effect) applied in wearable profile.
 - [GoogleMapView](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.GoogleMapView.html) : A view to display google javascript map.
-- [InformationPopup](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html) : A popup that has a control to show progress and one button on the bottom side of the circular screen.
+- [InformationPopup](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.InformationPopup.html) : A popup that includes a control showing progress and one button on the bottom of the circular screen.
 - [MediaPlayer](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.MediaPlayer.html) : A class that provides the essential components to play the media contents.
 - [MediaView](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.MediaView.html) : A view to display a video on the screen.
 - [PopupEntry](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.PopupEntry.html) : An entry that opens popup for editing text of the entry.
@@ -48,7 +48,7 @@ The Tizen Wearable CircularUI project provides UI controls that fit on a circula
 Tizen Wearable CircularUI project also provides extended Xamarin.Forms controls.
 These controls basically look same as what it is in Xamarin.Forms, but provide additional features just for Tizen wearables. The developers would want to use the following controls only when they specifically need to use the provided features in each controls.
 
-- [BezelInteractionPage](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html) : A subclass of Xamarin.Forms.ContentPage that allows you to set which view  gets the Bezel rotation event.
+- [BezelInteractionPage](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html) : A subclass of Xamarin.Forms.ContentPage that allows you to set which view gets the bezel rotation event.
 - [CircleListView](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleListView.html) : A subclass of Xamarin.Forms.ListView that allows you to change the bar color of the `ListView`.
 - [CircleScrollView](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html) : A subclass of Xamarin.Forms.ScrollView that allows you to change the bar color of the `ScollView`.
 - [CircleStepper](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html) : A subclass of Xamarin.Forms.Stepper that provides additional properties to set visible elements on Tizen wearable.

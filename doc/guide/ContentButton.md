@@ -1,10 +1,10 @@
 ---
-uid: Tizen.Wearable.CircularUI.doc.CircleStepper
-summary: CircleStepper control guide
+uid: Tizen.Wearable.CircularUI.doc.ContentButton
+summary: ContentButton control guide
 ---
-# CircleStepper
+# ContentButton
 
-`CircleStepper` allows you to select a value from a range of incremental values specified with `Minimum`, `Maximum`, and `Increment` properties.
+`ContentButton` is a type of Xamarin.Forms.ContentView that contains a single child element (called Content) and is typically used for custom, reusable controls. Also, as its name implies, ContentButton is designed to be used like a Button that implements Xamarin.Forms.IButtonController.
 It is an extension of [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/).
 
 ![](data/CircleStepper_property.png)
@@ -13,8 +13,8 @@ It is an extension of [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/
 
 ## Create CircleStepper
 
-Basically `CircleStepper` looks same as [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/), and you can also change the value with [Bezel Interactions](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
-The difference from [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) is to provide some additional properties for Tizen wearable.
+Basically `CircleStepper` looks same as [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/), and you can modify the value with [Bezel interaction](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
+The difference from [Xamarin.Forms.ScrollView](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) is to provide some additional properties for Tizen wearable.
 
 `CircleStepper` has the following properties:
 

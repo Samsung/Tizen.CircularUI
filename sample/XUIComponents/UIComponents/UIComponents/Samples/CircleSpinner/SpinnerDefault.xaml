@@ -1,15 +1,15 @@
-﻿<w:CirclePage
+﻿<ContentPage
     x:Class="UIComponents.Samples.CircleSpinner.SpinnerDefault"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:UIComponents.Samples.CircleSpinner"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference stepper}">
-    <w:CirclePage.BindingContext>
+    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core">
+    <ContentPage.BindingContext>
         <local:SpinnerViewModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
         <StackLayout Padding="0,50,0,0" Orientation="Vertical">
             <Label
                 FontAttributes="Bold"
@@ -31,9 +31,7 @@
                 Maximum="99.0"
                 Minimum="9.0"
                 Value="{Binding Value}" />
+            <Button Command="{Binding ButtonPressedExit}" Text="OK" tizen:VisualElement.Style="{x:Static tizen:ButtonStyle.Bottom}" />
         </StackLayout>
-    </w:CirclePage.Content>
-    <w:CirclePage.ActionButton>
-        <w:ActionButtonItem Command="{Binding ButtonPressedExit}" Text="SET" />
-    </w:CirclePage.ActionButton>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>

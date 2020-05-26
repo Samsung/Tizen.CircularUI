@@ -1,12 +1,11 @@
-﻿<w:CirclePage
+﻿<ContentPage
     x:Class="UIComponents.Samples.CircleScroller.HorizontalScroller"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:UIComponents.Samples.CircleScroller"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference myscroller}">
-    <w:CirclePage.Content>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
         <w:CircleScrollView x:Name="myscroller" Orientation="Horizontal">
             <StackLayout
                 HorizontalOptions="FillAndExpand"
@@ -32,5 +31,5 @@
                 <Image Source="tw_number_controller_icon_ringtone_sound.png" VerticalOptions="CenterAndExpand" />
             </StackLayout>
         </w:CircleScrollView>
-    </w:CirclePage.Content>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>
