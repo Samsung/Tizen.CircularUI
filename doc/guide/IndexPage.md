@@ -4,6 +4,11 @@ summary: IndexPage control guide
 ---
 # IndexPage
 
+> :warning: **IndexPage is obsolete as of version 1.5.0.**
+> 
+> Please use `Xamarin.Forms.CarouselView` with `Xamarin.Forms.IndicatorView` or `Xamarin.Forms.CarouselPage` instead.
+>
+
 The `IndexPage` allows you to know in advance the number of pages you have when you configure the application on multiple pages. It also shows the number of pages you are viewing.
 It is an extension of [Xamarin.Forms.MultiPage](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/). When the [Page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages) is added and removed in the [Xamarin.Forms.MultiPage](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/), the number of dot marks increases or decreases automatically at the top of window.
 It is similar to the [CarouselPage](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages#carouselpage) in the Xamarin.Forms, with the addition of `Index`.
