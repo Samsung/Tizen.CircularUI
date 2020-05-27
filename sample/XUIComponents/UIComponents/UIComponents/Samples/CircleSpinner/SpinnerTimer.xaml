@@ -1,15 +1,15 @@
-﻿<w:CirclePage
+﻿<ContentPage
     x:Class="UIComponents.Samples.CircleSpinner.SpinnerTimer"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:UIComponents.Samples.CircleSpinner"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
     xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference StepperHr3}">
-    <w:CirclePage.BindingContext>
+    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core">
+    <ContentPage.BindingContext>
         <local:SpinnerViewModel />
-    </w:CirclePage.BindingContext>
-    <w:CirclePage.Content>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
         <StackLayout Padding="0,50,0,0" Orientation="Vertical">
             <Label
                 FontAttributes="Bold"
@@ -44,7 +44,6 @@
                 VerticalOptions="Start">
                 <w:CircleStepper
                     x:Name="StepperHr3"
-                    Focused="OnFocusedHr"
                     HorizontalOptions="Center"
                     MarkerColor="Coral"
                     Maximum="23"
@@ -53,7 +52,6 @@
                     Value="{Binding Hour}" />
                 <w:CircleStepper
                     x:Name="StepperMm3"
-                    Focused="OnFocusedMm"
                     HorizontalOptions="Center"
                     MarkerColor="Blue"
                     Maximum="59"
@@ -62,7 +60,6 @@
                     Value="{Binding Minute}" />
                 <w:CircleStepper
                     x:Name="StepperSec3"
-                    Focused="OnFocusedSec"
                     HorizontalOptions="Center"
                     MarkerColor="DarkRed"
                     Maximum="59"
@@ -70,9 +67,7 @@
                     WidthRequest="120"
                     Value="{Binding Second}" />
             </StackLayout>
+            <Button Command="{Binding TimerButtonPressedExit}" Text="SET" tizen:VisualElement.Style="{x:Static tizen:ButtonStyle.Bottom}" />
         </StackLayout>
-    </w:CirclePage.Content>
-    <w:CirclePage.ActionButton>
-        <w:ActionButtonItem Command="{Binding TimerButtonPressedExit}" Text="SET" />
-    </w:CirclePage.ActionButton>
-</w:CirclePage>
+    </ContentPage.Content>
+</ContentPage>

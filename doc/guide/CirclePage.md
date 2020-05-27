@@ -4,6 +4,17 @@ summary: CirclePage control guide
 ---
 
 # CirclePage
+
+> :warning: **CirclePage is obsolete as of version 1.5.0.**
+> 
+> Please use `Xamarin.Forms.ContentPage` instead.
+>
+> - CirclePage → `Xamarin.Forms.ContentPage`
+>    - ActionButton → `Xamarin.Forms.Button` + Xamarin.Forms.Button.Style`(TizenSpecific) or `ContentButton`
+>    - RotaryFocusObject → `BezelInteractionPage` or `Xamarin.Forms.Application.ActiveBezelInteractionElement`(TizenSpecific)
+>    - CircleSurfaceItems → `CircleSurfaceView.CircleSurfaceItems`
+>    - CircleToolbarItems → `Xamarin.Forms.Page.ToolbarItems`
+
 CirclePage, is a visual element, which is derived from [Xamarin.Forms.Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). This occupies entire wearable screen.
 
 ![CirclePage](data/circlepage.png) ![CircleSurfaceItem](data/circlepage_surfaceitem.png)

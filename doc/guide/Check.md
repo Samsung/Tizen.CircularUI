@@ -4,6 +4,15 @@ summary: Check control guide
 ---
 
 # Check
+
+> :warning: **Check is obsolete as of version 1.5.0.**
+> 
+> Please use `Xamarin.Forms.CheckBox` or `Xamarin.Forms.Switch` instead.
+>
+> - Check → `Xamarin.Forms.CheckBox` or `Xamarin.Forms.Switch`
+>    - DisplayStyle → `Xamarin.Forms.Switch.Style` + `Xamarin.Forms.SwitchStyle`(TizenSpecific)
+>    - Color → `Xamarin.Forms.Switch.OnColor`, `Xamarin.Forms.Switch.ThumbColor`, `Xamarin.Forms.Switch.BackgroundColor`
+
 `Check` provides Tizen Wearable specific CheckBox widget. Check accepts user input by the method of toggling.
 `Check` derives from [Xamarin.Forms.Switch](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/).
 

@@ -4,6 +4,19 @@ summary: Radio control guide
 ---
 
 # Radio
+
+> :warning: **Radio is obsolete as of version 1.5.0.**
+> 
+> Please use `Xamarin.Forms.RadioButton` instead.
+>
+> - Radio → `Xamarin.Forms.RadioButton`
+>    - Value → `Xamarin.Forms.RadioButton.Text`
+>    - IsSelected → `Xamarin.Forms.RadioButton.IsChecked`
+>    - GroupName → `Xamarin.Forms.RadioButton.GroupName`
+>    - Color → `Xamarin.Forms.RadioButton.BackgroundColor`
+>    - Selected → `Xamarin.Forms.RadioButton.CheckChanged`
+>    - CircleSurfaceEffectBehavior → `BezelInteractionPage`
+
 `Radio` displays one or more options. You can select only one of the options having same GroupName property.
 `Radio` can select only one item among items having same `GroupName` property.
 

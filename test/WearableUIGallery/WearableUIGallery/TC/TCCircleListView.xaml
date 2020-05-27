@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<w:BezelInteractionPage
+<ContentPage
     x:Class="WearableUIGallery.TC.TCCircleListView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:sys="clr-namespace:System;assembly=netstandard"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    RotaryFocusObject="{x:Reference mylist}">
-    <w:BezelInteractionPage.Content>
+    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms">
+    <ContentPage.Content>
         <w:CircleListView x:Name="mylist" RowHeight="360" ItemTapped="OnItemTapped">
             <w:CircleListView.ItemsSource>
                 <x:Array x:Key="array" Type="{x:Type sys:String}">
@@ -62,5 +61,5 @@
                 </DataTemplate>
             </w:CircleListView.FooterTemplate>
         </w:CircleListView>
-    </w:BezelInteractionPage.Content>
-</w:BezelInteractionPage>
+    </ContentPage.Content>
+</ContentPage>

@@ -15,6 +15,7 @@
  */
 
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace UIComponents.Samples.CircleDateTime
@@ -23,7 +24,7 @@ namespace UIComponents.Samples.CircleDateTime
     /// CircleDate class
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CircleDate : CirclePage
+    public partial class CircleDate : ContentPage
     {
         /// <summary>
         /// Constructor of CircleDate class

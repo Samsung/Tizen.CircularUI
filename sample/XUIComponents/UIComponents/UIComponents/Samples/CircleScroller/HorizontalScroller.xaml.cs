@@ -15,6 +15,7 @@
  */
 
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace UIComponents.Samples.CircleScroller
@@ -23,7 +24,7 @@ namespace UIComponents.Samples.CircleScroller
     /// HorizontalScroller class
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HorizontalScroller : CirclePage
+    public partial class HorizontalScroller : ContentPage
     {
         /// <summary>
         /// Constructor of HorizontalScroller class

@@ -24,7 +24,7 @@ namespace UIComponents.Samples.CircleSpinner
     /// SpinnerTimer class
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SpinnerTimer : CirclePage
+    public partial class SpinnerTimer : ContentPage
     {
         /// <summary>
         /// Constructor of SpinnerTimer class
@@ -32,34 +32,6 @@ namespace UIComponents.Samples.CircleSpinner
         public SpinnerTimer()
         {
             InitializeComponent();
-        }
-
-        /// <summary>
-        /// Called when is focused on Hr spinner
-        /// </summary>
-        /// <param name="sender">Object</param>
-        /// <param name="args">Argument of ValueChangedEventArgs</param>
-        void OnFocusedHr(object sender, ValueChangedEventArgs args)
-        {
-            RotaryFocusObject = StepperHr3;
-        }
-        /// <summary>
-        /// Called when is focused on Mm spinner
-        /// </summary>
-        /// <param name="sender">Object</param>
-        /// <param name="args">Argument of ValueChangedEventArgs</param>
-        void OnFocusedMm(object sender, ValueChangedEventArgs args)
-        {
-            RotaryFocusObject = StepperMm3;
-        }
-        /// <summary>
-        /// Called when is focused on Sec spinner
-        /// </summary>
-        /// <param name="sender">Object</param>
-        /// <param name="args">Argument of ValueChangedEventArgs</param>
-        void OnFocusedSec(object sender, ValueChangedEventArgs args)
-        {
-            RotaryFocusObject = StepperSec3;
         }
     }
 }

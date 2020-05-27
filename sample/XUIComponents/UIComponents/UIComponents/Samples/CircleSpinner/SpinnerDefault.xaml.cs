@@ -15,6 +15,7 @@
  */
 
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace UIComponents.Samples.CircleSpinner
@@ -23,7 +24,7 @@ namespace UIComponents.Samples.CircleSpinner
     /// SpinnerDefault class
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SpinnerDefault : CirclePage
+    public partial class SpinnerDefault : ContentPage
     {
         /// <summary>
         /// Constructor of SpinnerDefault class

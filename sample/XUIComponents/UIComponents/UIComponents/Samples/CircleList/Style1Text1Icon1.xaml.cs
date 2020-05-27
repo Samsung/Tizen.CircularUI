@@ -15,6 +15,7 @@
  */
 
 using Tizen.Wearable.CircularUI.Forms;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace UIComponents.Samples.CircleList
@@ -23,7 +24,7 @@ namespace UIComponents.Samples.CircleList
     /// Style1Text1Icon1 class
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Style1Text1Icon1 : CirclePage
+    public partial class Style1Text1Icon1 : ContentPage
     {
         /// <summary>
         /// Constructor of Style1Text1Icon1 class
