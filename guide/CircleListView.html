@@ -80,9 +80,8 @@
 <h1 id="circlelistview">CircleListView</h1>
 
 <p><code>CircleListView</code> is a view for presenting lists of data, a short list that does not require scrolling, and a long list that requires scrolling.
-This view is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">Xamarin.Forms.ListView</a>. Similar to <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">Xamarin.Forms.ListView</a>, but the Scroller is rendered to <a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface">CircleSurface</a>.
-You can move the list using <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a> and <a href="https://developer.tizen.org/design/wearable/interaction/touch#swipe">Drag</a>.
-To receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code>, property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
+This view is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">Xamarin.Forms.ListView</a>.
+You can move the list using <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel Interactions</a> and <a href="https://developer.tizen.org/design/wearable/interaction/touch#swipe">Drag</a>.</p>
 <table>
 <thead>
 <tr>
@@ -105,13 +104,15 @@ To receive <a href="https://developer.tizen.org/development/training/native-appl
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells">Cells</a> : Data in a <code>CircleListView</code> is presented in cells. Each cell corresponds to a row of data.</li>
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance#Headers_and_Footers">Footer</a> : Text or view that is displayed at end of a list.</li>
 </ul>
-<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
-<h2 id="add-circlelistview-in-circlepage">Add CircleListView in CirclePage</h2>
-<p>You can set <code>CircleListView</code> in the <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information on how to add a <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-<code>RotaryFocusObject</code> property sets the currently focused control using the rotating interaction, and displays the focused control&#39;s circle object.
-If the value is not set properly,  the control will not receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
-<p>You can either set the <code>Header</code> and/or <code>Footer</code> to a simple text, or to a more complex layout. Using <code>HeaderTemplate</code> and <code>FooterTemplate</code> properties you can create more complex layouts for the header and footer that support data binding.</p>
-<p>The following example has cells, header, footer.
+<h2 id="create-circlelistview">Create CircleListView</h2>
+<p>Basically <code>CircleListView</code> looks same as <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">Xamarin.Forms.ListView</a>.
+The difference from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">Xamarin.Forms.ListView</a> is to provide an additional property for Tizen wearable such as <code>BarColor</code></p>
+<p><code>CircleListView</code> has the following property:</p>
+<ul>
+<li>BarColor: This property gets or sets a scroll bar color value.</li>
+</ul>
+<p>You can either set the <code>Header</code> and/or <code>Footer</code> with the simple text or with a more complex layout. Using <code>HeaderTemplate</code> and <code>FooterTemplate</code> properties, you can create more complex layouts for the header and footer including data binding.
+The following example has cells, header, footer.
 And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/">DataTemplate</a> to format a data object for display.</p>
 <p><strong>WARNING: The <code>CircleListView</code>&#39;s backend which is <code>EFL extension</code>, has a limitation not being focused and not being tapped on the top and bottom of the screen in Wearable Circle devices. If each item of a list has too small or too high a height, the first or last item of a list cannot be focused and tapped. To avoid this inherent problem, you should specify a proper height value (120 recommended) by the ViewCell or ListView Header or Footer.</strong></p>
 <p>For more information, see the following links:</p>
@@ -121,19 +122,17 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/">Xamarin.Forms.ListView  Guide</a></li>
 </ul>
 <p><em>The code example of this guide uses TCCircleListView code of WearableUIGallery. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCCircleListView.xaml</em></p>
-<p>The following code shows CirclePage with CircleListView:</p>
+<p>The following code shows how to use CircleListView:</p>
 <p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-&lt;w:CirclePage
+&lt;ContentPage
     x:Class=&quot;WearableUIGallery.TC.TCCircleListView&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
-    xmlns:local=&quot;clr-namespace:WearableUIGallery&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
-    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusObject=&quot;{x:Reference mylist}&quot;&gt;
-    &lt;w:CirclePage.Content&gt;
-        &lt;w:CircleListView x:Name=&quot;mylist&quot;&gt;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    &lt;ContentPage.Content&gt;
+        &lt;w:CircleListView x:Name=&quot;mylist&quot; RowHeight=&quot;360&quot; ItemTapped=&quot;OnItemTapped&quot;&gt;
             &lt;w:CircleListView.ItemsSource&gt;
                 &lt;x:Array x:Key=&quot;array&quot; Type=&quot;{x:Type sys:String}&quot;&gt;
                     &lt;x:String&gt;Item 1&lt;/x:String&gt;
@@ -158,13 +157,18 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
             &lt;/w:CircleListView.Footer&gt;
             &lt;w:CircleListView.ItemTemplate&gt;
                 &lt;DataTemplate&gt;
-                    &lt;TextCell Text=&quot;{Binding .}&quot; /&gt;
+                    &lt;ViewCell&gt;
+                        &lt;Label Text=&quot;{Binding .}&quot;
+                               VerticalOptions=&quot;Center&quot;
+                               HorizontalOptions=&quot;Center&quot;
+                               VerticalTextAlignment=&quot;Center&quot;
+                               HorizontalTextAlignment=&quot;Center&quot;/&gt;
+                    &lt;/ViewCell&gt;
                 &lt;/DataTemplate&gt;
             &lt;/w:CircleListView.ItemTemplate&gt;
             &lt;w:CircleListView.HeaderTemplate&gt;
                 &lt;DataTemplate&gt;
                     &lt;Label
-                        HeightRequest=&quot;120&quot;
                         FontAttributes=&quot;Bold&quot;
                         FontSize=&quot;Large&quot;
                         HorizontalTextAlignment=&quot;Center&quot;
@@ -175,7 +179,6 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
             &lt;w:CircleListView.FooterTemplate&gt;
                 &lt;DataTemplate&gt;
                     &lt;Label
-                        HeightRequest=&quot;120&quot;
                         FontAttributes=&quot;Bold&quot;
                         FontSize=&quot;Large&quot;
                         HorizontalTextAlignment=&quot;Center&quot;
@@ -184,8 +187,8 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
                 &lt;/DataTemplate&gt;
             &lt;/w:CircleListView.FooterTemplate&gt;
         &lt;/w:CircleListView&gt;
-    &lt;/w:CirclePage.Content&gt;
-&lt;/w:CirclePage&gt;
+    &lt;/ContentPage.Content&gt;
+&lt;/ContentPage&gt;
 </code></pre><h2 id="add-group-list-as-list-contents">Add Group List as list contents</h2>
 <p>You can add group list as contents of <code>CircleListView</code>.</p>
 <p>To enable grouping:</p>
@@ -218,16 +221,16 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
     }}
 </code></pre><p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-&lt;w:CirclePage
+&lt;ContentPage
     x:Class=&quot;WearableUIGallery.TC.TCGroupList&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
     xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
-    &lt;w:CirclePage.BindingContext&gt;
+    &lt;ContentPage.BindingContext&gt;
         &lt;local:GroupModel /&gt;
-    &lt;/w:CirclePage.BindingContext&gt;
-    &lt;w:CirclePage.Content&gt;
+    &lt;/ContentPage.BindingContext&gt;
+    &lt;ContentPage.Content&gt;
         &lt;w:CircleListView
             x:Name=&quot;mylist&quot;
             GroupDisplayBinding=&quot;{Binding Name}&quot;
@@ -248,8 +251,8 @@ And use the <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-
                 &lt;/DataTemplate&gt;
             &lt;/w:CircleListView.HeaderTemplate&gt;
         &lt;/w:CircleListView&gt;
-    &lt;/w:CirclePage.Content&gt;
-&lt;/w:CirclePage&gt;
+    &lt;/ContentPage.Content&gt;
+&lt;/ContentPage&gt;
 </code></pre><h2 id="add-a-list-with-2-texts-and-1-icon-as-list-contents">Add a list with 2 texts and 1 icon as list contents</h2>
 <p>You can add a list with two texts and one icon as contents of <code>CircleListView</code>.</p>
 <p>This can easily be done using <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance#custom-cells">ViewCell</a>.
@@ -349,19 +352,21 @@ It is nested inside a <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-
 ...
     }
 </code></pre><p><strong>XAML file</strong></p>
-<pre><code class="lang-xml">&lt;w:CirclePage
+<pre><code class="lang-xml">&lt;ContentPage
     x:Class=&quot;UIComponents.Samples.CircleList.Style2text1icon1&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
     xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleList&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
-    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusObject=&quot;{x:Reference mylist}&quot;&gt;
-    &lt;w:CirclePage.BindingContext&gt;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    &lt;ContentPage.BindingContext&gt;
         &lt;local:ListViewModel /&gt;
-    &lt;/w:CirclePage.BindingContext&gt;
-    &lt;w:CirclePage.Content&gt;
-        &lt;w:CircleListView x:Name=&quot;mylist&quot; ItemsSource=&quot;{Binding Names}&quot;&gt;
+    &lt;/ContentPage.BindingContext&gt;
+    &lt;ContentPage.Content&gt;
+        &lt;w:CircleListView
+            x:Name=&quot;mylist&quot;
+            HasUnevenRows=&quot;True&quot;
+            ItemsSource=&quot;{Binding Names}&quot;&gt;
             &lt;w:CircleListView.ItemTemplate&gt;
                 &lt;DataTemplate&gt;
                     &lt;ViewCell&gt;
@@ -399,8 +404,8 @@ It is nested inside a <a href="https://docs.microsoft.com/en-us/xamarin/xamarin-
                 &lt;/DataTemplate&gt;
             &lt;/w:CircleListView.ItemTemplate&gt;
         &lt;/w:CircleListView&gt;
-    &lt;/w:CirclePage.Content&gt;
-&lt;/w:CirclePage&gt;
+    &lt;/ContentPage.Content&gt;
+&lt;/ContentPage&gt;
 </code></pre></article>
           </div>
           

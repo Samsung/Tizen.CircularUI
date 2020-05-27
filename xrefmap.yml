@@ -72,6 +72,9 @@ references:
 - uid: Tizen.Wearable.CircularUI.doc.CircleSurfaceEffectBehavior
   name: CircleSurfaceEffectBehavior
   href: guide/CircleSurfaceEffectBehavior.html
+- uid: Tizen.Wearable.CircularUI.doc.ContentButton
+  name: ContentButton
+  href: guide/ContentButton.html
 - uid: Tizen.Wearable.CircularUI.doc.ContextPopupEffectBehavior
   name: ContextPopupEffectBehavior
   href: guide/ContextPopupEffectBehavior.html

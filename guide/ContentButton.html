@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>CircleDateTimeSelector </title>
+    <title>ContentButton </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="CircleDateTimeSelector ">
+    <meta name="title" content="ContentButton ">
     <meta name="generator" content="docfx 1.0.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,83 +76,86 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.CircleDateTimeSelector">
-<h1 id="circledatetimeselector">CircleDateTimeSelector</h1>
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.ContentButton">
+<h1 id="contentbutton">ContentButton</h1>
 
-<p><code>CircleDateTimeSelector</code> is a view for Date Picker and Time Picker.
-You can rotate the bezel to explore the screen using the <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel Interactions</a>.
-The view of this selector covers the entire screen.</p>
-<p>The Date display screen is a touch screen. You can set the value of the year: month: day by touch and by rotating the bezel.
-The Time display screen is also a touch screen. You can set the value of the hour: minute: AM / PM by touch and by rotating the bezel.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><img src="data/CircleDateTimeSelector_DatePicker.png" alt="Date"></th>
-<th style="text-align:center"><img src="data/CircleDateTimeSelector_TimePicker.png" alt="Time"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Date</td>
-<td style="text-align:center">Time</td>
-</tr>
-</tbody>
-</table>
-<p><strong>WARNING: The marker is no longer supported from Tizen 4.0 SDK which is applied bezel-less UX in 2019. Therefore, marker related API was deprecated.</strong></p>
-<h2 id="create-circledatetimeselector">Create CircleDateTimeSelector</h2>
-<p><code>CircleDateTimeSelector</code> has the following properties:</p>
+<p><code>ContentButton</code> is a type of Xamarin.Forms.ContentView that contains a single child element (called Content) and is typically used for custom, reusable controls. Also, as its name implies, ContentButton is designed to be used like a Button that implements Xamarin.Forms.IButtonController.
+It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>.</p>
+<p><img src="data/CircleStepper_property.png" alt=""></p>
+<p><strong>WARNING: The marker is no longer supported from Tizen 4.0 SDK which is applied bezel-less UX in 2019. Therefore, the above image is obsolete and marker related API was deprecated.</strong></p>
+<h2 id="create-circlestepper">Create CircleStepper</h2>
+<p>Basically <code>CircleStepper</code> looks same as <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper</a>, and you can modify the value with <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
+The difference from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView</a> is to provide some additional properties for Tizen wearable.</p>
+<p><code>CircleStepper</code> has the following properties:</p>
 <ul>
-<li>ValueType : The value of time is changed in Time, and the value of date is changed in Date.</li>
-<li>DateTime : Sets or gets date/time.</li>
-<li>MaximumDate : Sets or gets maximum date.</li>
-<li>MimimumDate : Sets or gets minimum date.</li>
+<li>Title: This property gets or sets the title on <code>CircleStepper</code></li>
+<li>LabelFormat: This property gets or sets the format in which the value is shown.</li>
+<li>IsWrapEnabled: This property gets or sets a status of <code>Value</code> is wrapped.</li>
+<li>WheelAppeared: This event occurs when the <code>CircleStepper</code>&#39;s wheel is appeared.</li>
+<li>WheelDisappeared: This event occurs when the <code>CircleStepper</code>&#39;s wheel is disappeared.</li>
 </ul>
-<p>You can easily add <code>CircleDateTimeSelector</code> to C# or XAML file.
-The following example explains how to set a timepicker. Assign <code>ValueType</code> value for &quot;Time&quot; and set the current time to the <code>DateTime</code> property.
-When the code is executed, the current time will be displayed on the screen. Since the focussed area on the screen shows the hour item, the hour item is changed when the bezel is turned. To change the minutes, touch the minute item and turn the bezel.</p>
-<p>For more information, see <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html">CircleDateTimeSelector API reference</a>.</p>
-<p><em>The code example of this guide uses CircleDateTime code of XUIComponent. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleDateTime\DateTimeViewModel.cs and CircleTime.xaml</em></p>
-<p>The following code shows how to use CircleDateTimeSelector:</p>
+<p>This example consists of <code>StackLayout</code> with a <code>CircleStepper</code> and two Labels in the <code>CirclePage</code>.
+Since 9 is set to <code>Minimum</code> and <code>LabelFormat</code> is set to &quot;% 1.1f&quot;, &quot;9.0&quot; appears on the screen. Since the <code>Increment</code> is 7.5, it increases by 7.5 when you turn the bezel and increase the <code>Value</code>. The <code>Maximum</code> defined value is 99, hence the marker does not exceed this value.</p>
+<p><img src="data/CircleStepper.png" alt=""></p>
+<p>For more information, see the following links:</p>
+<ul>
+<li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html">CircleStepper API reference</a></li>
+<li><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Xamarin.Forms.Stepper API reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views#stepper">Xamarin.Forms.Stepper Guide</a></li>
+</ul>
+<p><em>The code example of this guide uses XUIComponent&#39;s SpinnerDefault of CircleSpinner code. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml</em></p>
+<p>The following code shows how to use CircleStepper:</p>
 <p><strong>C# file</strong></p>
-<pre><code class="lang-cs">    public class DateTimeViewModel : INotifyPropertyChanged
+<pre><code class="lang-cs">
+    public class SpinnerViewModel : INotifyPropertyChanged
     {
-        static DateTime _dateTime = DateTime.Now;
+        double _value= 9.0;
+        ...
 
-        public DateTime Datetime
+        public double Value
         {
-            get =&gt; _dateTime;
+            get =&gt; _value;
             set
             {
-                //Console.WriteLine($&quot;Set Datetime value : {value.ToString()}&quot;);
-                if (_dateTime == value) return;
-                _dateTime = value;
+                if (_value == value) return;
+                _value = value;
                 OnPropertyChanged();
             }
         }
 </code></pre><p><strong>XAML file</strong></p>
 <pre><code class="lang-xml">&lt;ContentPage
-    x:Class=&quot;UIComponents.Samples.CircleDateTime.CircleTime&quot;
+    x:Class=&quot;UIComponents.Samples.CircleSpinner.SpinnerDefault&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
-    xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleDateTime&quot;
+    xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleSpinner&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
     xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
     xmlns:tizen=&quot;clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core&quot;&gt;
     &lt;ContentPage.BindingContext&gt;
-        &lt;local:DateTimeViewModel /&gt;
+        &lt;local:SpinnerViewModel /&gt;
     &lt;/ContentPage.BindingContext&gt;
     &lt;ContentPage.Content&gt;
-        &lt;StackLayout
-            BackgroundColor=&quot;Black&quot;
-            HorizontalOptions=&quot;FillAndExpand&quot;
-            Orientation=&quot;Vertical&quot;
-            VerticalOptions=&quot;FillAndExpand&quot;&gt;
-            &lt;w:CircleDateTimeSelector
-                x:Name=&quot;timeSelector&quot;
-                DateTime=&quot;{Binding Datetime, Mode=TwoWay}&quot;
-                MaximumDate=&quot;1/1/2022&quot;
-                MinimumDate=&quot;1/12/2010&quot;
-                ValueType=&quot;Time&quot; /&gt;
+        &lt;StackLayout Padding=&quot;0,50,0,0&quot; Orientation=&quot;Vertical&quot;&gt;
+            &lt;Label
+                FontAttributes=&quot;Bold&quot;
+                FontSize=&quot;11&quot;
+                HorizontalTextAlignment=&quot;Center&quot;
+                Text=&quot;Title&quot;
+                TextColor=&quot;#0FB4EF&quot; /&gt;
+            &lt;Label
+                FontSize=&quot;8&quot;
+                HorizontalTextAlignment=&quot;Center&quot;
+                Text=&quot;unit&quot;
+                TextColor=&quot;White&quot; /&gt;
+            &lt;w:CircleStepper
+                x:Name=&quot;stepper&quot;
+                HorizontalOptions=&quot;CenterAndExpand&quot;
+                Increment=&quot;7.5&quot;
+                LabelFormat=&quot;%1.1f&quot;
+                MarkerColor=&quot;Coral&quot;
+                Maximum=&quot;99.0&quot;
+                Minimum=&quot;9.0&quot;
+                Value=&quot;{Binding Value}&quot; /&gt;
             &lt;Button Command=&quot;{Binding ButtonPressedExit}&quot; Text=&quot;OK&quot; tizen:VisualElement.Style=&quot;{x:Static tizen:ButtonStyle.Bottom}&quot; /&gt;
         &lt;/StackLayout&gt;
     &lt;/ContentPage.Content&gt;

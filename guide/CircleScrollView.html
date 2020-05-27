@@ -80,8 +80,7 @@
 <h1 id="circlescrollview">CircleScrollView</h1>
 
 <p><code>CircleScrollView</code> is to ensure that larger views display well on smaller wearable devices.
-It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView</a>. Similar to <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView</a>, but the Scroller is rendered to <a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl/ui-components/wearable-ui-components/circle-surface">CircleSurface</a>. Scrolling is possible with <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel interaction</a>.
-To receive <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary event</a>, it must be registered as <code>RotaryFocusObject</code>, property of <a class="xref" href="CirclePage.html">CirclePage</a>.</p>
+It is an extension of <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView</a>.</p>
 <table>
 <thead>
 <tr>
@@ -96,14 +95,16 @@ To receive <a href="https://developer.tizen.org/development/training/native-appl
 </tr>
 </tbody>
 </table>
-<p><strong>WARNING: <a class="xref" href="CircleListView.html">CircleListView</a>, <a class="xref" href="CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a class="xref" href="CircleScrollView.html">CircleScrollView</a>, <a class="xref" href="CircleStepper.html">CircleStepper</a> must be confined in the <code>CirclePage</code> container or <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">Page</a> with <a class="xref" href="CircleSurfaceEffectBehavior.html">CircleSurfaceEffectBehavior</a>. If you add these controls in any other way,  it may cause an exception or cannot display the controls.</strong></p>
-<h2 id="add-circlescrollview-in-circlepage">Add CircleScrollView in CirclePage</h2>
-<p>You can set <code>CircleScrollView</code> in <a class="xref" href="CirclePage.html">CirclePage.Content</a>. For more information about how to add a <a class="xref" href="CirclePage.html">CirclePage</a>, see <a href="https://samsung.github.io/Tizen.CircularUI/guide/CirclePage.html#create-circlepage">CirclePage guide</a>.
-The following XAML code shows <a class="xref" href="CirclePage.html">CirclePage</a> with <code>CircleScrollView</code>.
-<code>RotaryFocusObject</code> property sets the currently focused control that is handled by rotating and displays the circle object of focused control.
-If the value is not set properly, the control does not receive the <a href="https://developer.tizen.org/development/training/native-application/understanding-tizen-programming/event-handling#rotary">Rotary Event</a>.</p>
-<p>The direction of the scroller depends on the setting of the <code>Orientation</code> value.</p>
-<p>In the following example, the <code>Orientation</code> of the <code>CircleScrollView</code> is set to <code>Horizontal</code> and is placed in the <code>StackLayout</code> to contain many images:</p>
+<h2 id="create-circlescrollview">Create CircleScrollView</h2>
+<p>Basically <code>CircleScrollView</code> looks same as <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView</a>, scrolling is also possible with <a href="https://developer.tizen.org/design/wearable/interaction/bezel-interactions">Bezel Interactions</a>.
+The difference from <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">Xamarin.Forms.ScrollView</a> is to provide some additional property for Tizen wearable such as <code>BarColor</code></p>
+<p><code>CircleScrollView</code> has the following property:</p>
+<ul>
+<li>BarColor: This property gets or sets a scroll bar color value.</li>
+</ul>
+<p>The following XAML code shows how to use <code>CircleScrollView</code>.
+The direction of the scroller depends on the setting of the <code>Orientation</code> value.
+In the following example, the <code>Orientation</code> of the <code>CircleScrollView</code> is set to <code>Vertical</code>. <code>CircleScrollView</code> is placed in the <code>StackLayout</code> to contain many images, and its <code>BarColor</code> is &quot;Red&quot;.</p>
 <p>For more information, see the following links:</p>
 <ul>
 <li><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html">CircleScrollView API reference</a></li>
@@ -111,44 +112,43 @@ If the value is not set properly, the control does not receive the <a href="http
 <li><a href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/scroll-view">Xamarin.Forms.ScrollView Guide</a></li>
 </ul>
 <p><em>The code example of this guide uses HorizontalScroller.xaml code of XUIComponent. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleScroller/HorizontalScroller.xaml</em></p>
-<p>The following code shows CirclePage with CircleScrollView:</p>
+<p>The following code shows how to use CircleScrollView:</p>
 <p><strong>XAML file</strong></p>
-<pre><code class="lang-xml">&lt;w:CirclePage
-    x:Class=&quot;UIComponents.Samples.CircleScroller.HorizontalScroller&quot;
+<pre><code class="lang-xml">&lt;ContentPage
+    x:Class=&quot;UIComponents.Samples.CircleScroller.VerticalScroller&quot;
     xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
     xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
     xmlns:local=&quot;clr-namespace:UIComponents.Samples.CircleScroller&quot;
     xmlns:sys=&quot;clr-namespace:System;assembly=netstandard&quot;
-    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
-    RotaryFocusObject=&quot;{x:Reference myscroller}&quot;&gt;
-    &lt;w:CirclePage.Content&gt;
-        &lt;w:CircleScrollView x:Name=&quot;myscroller&quot; Orientation=&quot;Horizontal&quot;&gt;
+    xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;&gt;
+    &lt;ContentPage.Content&gt;
+        &lt;w:CircleScrollView x:Name=&quot;myscroller&quot; Orientation=&quot;Vertical&quot; BarColor=&quot;Red&quot;&gt;
             &lt;StackLayout
                 HorizontalOptions=&quot;FillAndExpand&quot;
-                Orientation=&quot;Horizontal&quot;
+                Orientation=&quot;Vertical&quot;
                 VerticalOptions=&quot;FillAndExpand&quot;&gt;
-                &lt;Image Source=&quot;tw_btn_delete_holo_dark.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_ringtone_mute.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_ic_popup_btn_check.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_alert.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_bell.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_ringtone_sound.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_btn_delete_holo_dark.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_ringtone_mute.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_ic_popup_btn_check.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_alert.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_bell.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_ringtone_sound.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_btn_delete_holo_dark.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_ringtone_mute.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_ic_popup_btn_check.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_alert.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_bell.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
-                &lt;Image Source=&quot;tw_number_controller_icon_ringtone_sound.png&quot; VerticalOptions=&quot;CenterAndExpand&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_btn_delete_holo_dark.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_ringtone_mute.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_ic_popup_btn_check.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_alert.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_bell.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_ringtone_sound.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_btn_delete_holo_dark.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_ringtone_mute.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_ic_popup_btn_check.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_alert.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_bell.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_ringtone_sound.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_btn_delete_holo_dark.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_ringtone_mute.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_ic_popup_btn_check.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_alert.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_bell.png&quot; /&gt;
+                &lt;Image HorizontalOptions=&quot;CenterAndExpand&quot; Source=&quot;tw_number_controller_icon_ringtone_sound.png&quot; /&gt;
             &lt;/StackLayout&gt;
         &lt;/w:CircleScrollView&gt;
-    &lt;/w:CirclePage.Content&gt;
-&lt;/w:CirclePage&gt;
+    &lt;/ContentPage.Content&gt;
+&lt;/ContentPage&gt;
 </code></pre></article>
           </div>
           
