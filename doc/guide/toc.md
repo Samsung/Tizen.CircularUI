@@ -11,6 +11,7 @@
 ## [How to set the custom font](HowToSetTheCustomFont.md)
 ## [How to creat a UI automation test](CreatingTestAutomation.md)
 # User Interface
+## [BezelInteractionPage](BezelInteractionPage.md)
 ## [Check](Check.md)
 ## [CircleDateTimeSelector](CircleDateTimeSelector.md)
 ## [CircleImage](CircleImage.md)
