@@ -45,6 +45,9 @@ references:
   commentId: F:Tizen.Wearable.CircularUI.Chart.Forms.FormsCircularUIChart.Tag
   fullName: Tizen.Wearable.CircularUI.Chart.Forms.FormsCircularUIChart.Tag
   nameWithType: FormsCircularUIChart.Tag
+- uid: Tizen.Wearable.CircularUI.doc.BezelInteractionPage
+  name: BezelInteractionPage
+  href: guide/BezelInteractionPage.html
 - uid: Tizen.Wearable.CircularUI.doc.Check
   name: Check
   href: guide/Check.html

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BezelInteractionPage </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="BezelInteractionPage ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.doc.BezelInteractionPage">
+<h1 id="bezelinteractionpage">BezelInteractionPage</h1>
+
+<p><a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html"><code>BezelInteractionPage</code></a> is basically a <a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.contentpage?view=xamarin-forms"><code>Xamarin.Forms.ContentPage</code></a> but with an additional property, <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_RotaryFocusObject"><code>RotaryFocusObject</code></a>, that helps developers interact with the bezel rotation.
+Normally, a focused control in an application gets the bezel interaction. However, <code>BezelInteractionPage</code> gives the full control of which control gets the bezel interaction in the current page to developers.</p>
+<h2 id="how-to-set-rotaryfocusobject">How to set <code>RotaryFocusObject</code>?</h2>
+<p>Here is the list of controls that can be directly set to <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html#Tizen_Wearable_CircularUI_Forms_BezelInteractionPage_RotaryFocusObject"><code>RotaryFocusObject</code></a> and that react to bezel rotation.</p>
+<ul>
+<li>Xamarin.Forms controls
+<a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.scrollview?view=xamarin-forms">ScrollView</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.listview?view=xamarin-forms">ListView</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.datepicker?view=xamarin-forms">DatePicker</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.timepicker?view=xamarin-forms">TimePicker</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.stepper?view=xamarin-forms">Stepper</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.collectionview?view=xamarin-forms">CollectionView</a></li>
+<li>Tizen CircularUI controls
+<a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html">CircleScrollView</a>, <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleListView.html">CircleListView</a>, <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleDateTimeSelector.html">CircleDateTimeSelector</a>, <a href="CircleStepper">CircleStepper</a></li>
+</ul>
+<p>Or, developers can customize how the object reacts when it gets bezel interaction by inheriting <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html"><code>IRotaryEventReceiver</code></a>. <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html"><code>IRotaryEventReceiver</code></a> is a receiver interface to take rotary events, and it includes <a href="https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.IRotaryEventReceiver.html#Tizen_Wearable_CircularUI_Forms_IRotaryEventReceiver_Rotate_Tizen_Wearable_CircularUI_Forms_RotaryEventArgs_"><code>Rotate(RotaryEventArgs</code></a> method to implement.</p>
+<h2 id="create-bezelinteractionpage">Create <code>BezelInteractionPage</code></h2>
+<p>You can easily create and use <code>BezelInteractionPage</code> in C# or XAML file.</p>
+<p><em>Refer to TCBezelInteractionPage code at the Tizen.CircularUI\test\WearableUIGallery\WearableUIGallery\TC\TCBezelInteractionPage.xaml</em></p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;w:BezelInteractionPage xmlns=&quot;http://xamarin.com/schemas/2014/forms&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;
+             xmlns:d=&quot;http://xamarin.com/schemas/2014/forms/design&quot;
+             xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+             xmlns:w=&quot;clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms&quot;
+             xmlns:local=&quot;clr-namespace:WearableUIGallery.TC&quot;
+             mc:Ignorable=&quot;d&quot;
+             x:Class=&quot;WearableUIGallery.TC.TCBezelInteractionPage&quot;
+             RotaryFocusObject=&quot;{x:Reference Spaceman}&quot;&gt;
+    &lt;ContentPage.Content&gt;
+        &lt;AbsoluteLayout&gt;
+            &lt;Image x:Name=&quot;Universe&quot; Source=&quot;image/stars_background.png&quot; AbsoluteLayout.LayoutBounds=&quot;0, 0, 1, 1&quot; AbsoluteLayout.LayoutFlags=&quot;All&quot;/&gt;
+            &lt;local:RotaryFocusImage x:Name=&quot;Spaceman&quot; Source=&quot;image/spaceman.png&quot; AbsoluteLayout.LayoutBounds=&quot;0.5, 0.2&quot; AbsoluteLayout.LayoutFlags=&quot;PositionProportional&quot;
+                                    AnchorX=&quot;0.5&quot; AnchorY=&quot;1.5&quot;/&gt;
+            &lt;Image x:Name=&quot;SliderTarget&quot; Source=&quot;image/tw_ic_popup_btn_check.png&quot; AbsoluteLayout.LayoutBounds=&quot;0.5, 0.5&quot; AbsoluteLayout.LayoutFlags=&quot;PositionProportional&quot;
+                                    AutomationId=&quot;check&quot;/&gt;
+            &lt;w:CircleSurfaceView AbsoluteLayout.LayoutBounds=&quot;0, 0, 1, 1&quot; AbsoluteLayout.LayoutFlags=&quot;All&quot; InputTransparent=&quot;True&quot;&gt;
+                &lt;w:CircleSurfaceView.CircleSurfaceItems&gt;
+                    &lt;w:CircleSliderSurfaceItem x:Name=&quot;Slider&quot;
+                                   BackgroundColor=&quot;Blue&quot;
+                                   BackgroundLineWidth=&quot;12&quot;
+                                   BackgroundRadius=&quot;168&quot;
+                                   BarRadius=&quot;168&quot;
+                                   BarColor=&quot;Silver&quot;
+                                   BarLineWidth=&quot;10&quot;
+                                   Increment=&quot;1&quot;
+                                   Minimum=&quot;0&quot;
+                                   Maximum=&quot;11&quot;
+                                   Value=&quot;0&quot;/&gt;
+                &lt;/w:CircleSurfaceView.CircleSurfaceItems&gt;
+            &lt;/w:CircleSurfaceView&gt;
+        &lt;/AbsoluteLayout&gt;
+    &lt;/ContentPage.Content&gt;
+&lt;/w:BezelInteractionPage&gt;
+</code></pre><p><strong>C# file</strong></p>
+<pre><code class="lang-cs">using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using Tizen.Wearable.CircularUI.Forms;
+
+namespace WearableUIGallery.TC
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCBezelInteractionPage : BezelInteractionPage
+    {
+        TapGestureRecognizer _universeClicked;
+        TapGestureRecognizer _spacemanClicked;
+        TapGestureRecognizer _sliderClicked;
+
+        public TCBezelInteractionPage()
+        {
+            InitializeComponent();
+            var universe = new RotaryFocusProxy(Universe);
+
+            _universeClicked = new TapGestureRecognizer();
+            _universeClicked.Command = new Command(() =&gt; RotaryFocusObject = universe);
+
+            _spacemanClicked = new TapGestureRecognizer();
+            _spacemanClicked.Command = new Command(() =&gt; RotaryFocusObject = Spaceman);
+
+            _sliderClicked = new TapGestureRecognizer
+            {
+                Command = new Command(() =&gt; RotaryFocusObject = Slider)
+            };
+
+            Universe.GestureRecognizers.Add(_universeClicked);
+            Spaceman.GestureRecognizers.Add(_spacemanClicked);
+            SliderTarget.GestureRecognizers.Add(_sliderClicked);
+
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; 2018-2019 Samsung <br> Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
