@@ -5,8 +5,8 @@ summary: Check control guide
 
 # Check
 
-> :warning: **Check is obsolete as of version 1.5.0.**
-> 
+> [!WARNING]
+> **Check is obsolete as of version 1.5.0.**
 > Please use `Xamarin.Forms.CheckBox` or `Xamarin.Forms.Switch` instead.
 >
 > - Check → `Xamarin.Forms.CheckBox` or `Xamarin.Forms.Switch`

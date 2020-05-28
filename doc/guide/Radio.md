@@ -5,8 +5,9 @@ summary: Radio control guide
 
 # Radio
 
-> :warning: **Radio is obsolete as of version 1.5.0.**
-> 
+> [!WARNING]
+> **Radio is obsolete as of version 1.5.0.**
+>
 > Please use `Xamarin.Forms.RadioButton` instead.
 >
 > - Radio → `Xamarin.Forms.RadioButton`
