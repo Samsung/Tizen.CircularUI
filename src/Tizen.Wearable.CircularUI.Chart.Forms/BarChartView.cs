@@ -21,43 +21,36 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// The BarChartView is a view that represents vertical/horizontal bar chart.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class BarChartView : ChartView
     {
         /// <summary>
         /// BindableProperty. Identifies the BarChartType bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BarChartTypeProperty = BindableProperty.Create(nameof(BarChartType), typeof(BarChartType), typeof(BarChartView), BarChartType.Vertical);
 
         /// <summary>
         /// BindableProperty. Identifies the BarWidth bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BarWidthProperty = BindableProperty.Create(nameof(BarWidth), typeof(double), typeof(BarChartView), 10d);
 
         /// <summary>
         /// BindableProperty. Identifies the BarTopRadius bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BarTopRadiusProperty = BindableProperty.Create(nameof(BarTopRadius), typeof(double), typeof(BarChartView), 0d);
 
         /// <summary>
         /// BindableProperty. Identifies the BarBottomRadius bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty BarBottomRadiusProperty = BindableProperty.Create(nameof(BarBottomRadius), typeof(double), typeof(BarChartView), 0d);
 
         /// <summary>
         /// BindableProperty. Identifies the AxisOption bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty AxisOptionProperty = BindableProperty.Create(nameof(AxisOption), typeof(AxisOption), typeof(BarChartView), default(AxisOption));
 
         /// <summary>
         /// Gets or sets type of bar chart.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public BarChartType BarChartType
         {
             get { return (BarChartType)GetValue(BarChartTypeProperty); }
@@ -67,7 +60,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a bar width.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double BarWidth
         {
             get { return (double)GetValue(BarWidthProperty); }
@@ -77,7 +69,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets the radius of bar top.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double BarTopRadius
         {
             get { return (double)GetValue(BarTopRadiusProperty); }
@@ -87,7 +78,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets the radius of bar bottom.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double BarBottomRadius
         {
             get { return (double)GetValue(BarBottomRadiusProperty); }
@@ -97,7 +87,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets the AxisOption.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public AxisOption AxisOption
         {
             get { return (AxisOption)GetValue(AxisOptionProperty); }

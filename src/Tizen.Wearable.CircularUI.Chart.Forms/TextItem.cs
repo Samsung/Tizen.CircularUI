@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// The TextItem class represents properties of text used in the ChartView.
     /// This class only has font size and text color and string value.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class TextItem
     {
         public TextItem()
@@ -37,19 +36,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets the size of the font for the text.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double FontSize { get; set; } = 5;
 
         /// <summary>
         /// Gets or sets the text color.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color TextColor { get; set; } = Color.White;
 
         /// <summary>
         /// Gets or sets the text for the TextItem.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public string Text { get; set; }
     }
 }

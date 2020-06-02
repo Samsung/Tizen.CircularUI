@@ -21,21 +21,19 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// BarDataItem is an inheritance type of DataItem for the BarChartView..
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class BarDataItem : DataItem
     {
         public BarDataItem(): base()
         {
         }
 
-        public BarDataItem(int key, double value): base(key, value)
+        public BarDataItem(double value): base(value)
         {
         }
 
         /// <summary>
         /// Gets or sets a color of bar background.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color BarBackgroundColor { get; set; } = Color.Transparent;
     }
 }

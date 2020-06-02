@@ -19,7 +19,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// Enumeration for position of ValueText.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public enum ValueTextPosition
     {
         /// <summary>

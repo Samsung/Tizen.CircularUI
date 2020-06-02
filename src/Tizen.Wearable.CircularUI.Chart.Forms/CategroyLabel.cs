@@ -25,29 +25,27 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         {
         }
 
-        public CategoryLabel(int key, string text)
+        public CategoryLabel(int index, string text)
         {
-            Key = key;
+            ItemIndex = index;
             Label = new TextItem(text);
         }
 
-        public CategoryLabel(int key, TextItem label)
+        public CategoryLabel(int index, TextItem label)
         {
-            Key = key;
+            ItemIndex = index;
             Label = label;
         }
 
         /// <summary>
-        /// Gets or sets a key.
-        /// Key represents the position of a chart. if the key is 3, this label is displayed 3rd position.
+        /// Gets or sets a Index of DataItem.
+        /// ItemIndex represents the position of a chart. if the ItemIndex is 2, this label is displayed 3rd position.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public int Key { get; set; }
+        public int ItemIndex { get; set; } = -1;
 
         /// <summary>
         /// Gets or sets a label of category.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public TextItem Label { get; set; }
     }
 }

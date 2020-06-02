@@ -38,7 +38,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         double[,] _groupBarChartDataTable;
         SKColor[] _barColor;
         SKColor[] _barBackgroundColor;
-        IList<DataItemGroup> _prevDataSetArray;
 
         public GroupBarChartViewRenderer()
         {
@@ -64,7 +63,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
             if (Element.AxisOption != null)
             {
-                base.CaculateAxisSize(canvas);
+                base.CalculateAxisSize(canvas);
             }
             else
             {
@@ -122,9 +121,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected override void GenerateDataTable()
         {
-            if (Element.Data == _prevDataSetArray)
-                return;
-
             _groupBarChartDataTable = new double[_groupDataCount, _categoryCount];
             for (int i = 0; i < _groupDataCount; i++)
             {
@@ -132,13 +128,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 var items = Element.Data.DataItemGroups[i].DataItems;
                 for (int j = 0; j < items.Count; j++)
                 {
-                    var index = items[j].Key == 0 ? j : items[j].Key - 1;
-                    index = index < _categoryCount ? index : _categoryCount - 1;
-                    _groupBarChartDataTable[i, index] = items[j].Value;
+                    _groupBarChartDataTable[i, j] = items[j]?.Value ?? Element.Minimum;
                 }
             }
-
-            _prevDataSetArray = Element.Data.DataItemGroups;
         }
 
         protected override SKSize CalculateBarSize()
@@ -250,7 +242,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 }
             }
 
-            return result.ToArray();
+            return result;
         }
 
         protected override void DrawCategoryLabels(SKCanvas canvas, IEnumerable<SKPoint> points)
@@ -269,7 +261,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     continue;
                 }
 
-                int categoryStartIndex = (categoryLabel.Key - 1) * _groupDataCount;
+                var index = categoryLabel.ItemIndex != -1 ? categoryLabel.ItemIndex : i;
+                int categoryStartIndex = index * _groupDataCount;
                 if (IsVertical)
                 {
                     x = (points.ElementAt(categoryStartIndex).X + points.ElementAt(categoryStartIndex + _groupDataCount - 1).X) / 2;
@@ -337,19 +330,12 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             var bottomRadius = (float)Element.BarBottomRadius > halfWidth ? halfWidth : (float)Element.BarBottomRadius;
             var totalBarCount = _categoryCount * _groupDataCount;
             bool IsVertical = Element.BarChartType == BarChartType.Vertical;
-            float x = 0;
-            float y = 0;
-            float w = 0;
-            float h = 0;
-            SKRect rect;
-            bool isValueOverRadius = false;
 
             if (points.Count() > 0)
             {
                 GetBarColor();
                 for (int i = 0; i < totalBarCount; i++)
                 {
-                    isValueOverRadius = false;
                     var point = points.ElementAt(i);
                     if ((IsVertical && point.Y == _canvasSize.Height - _majorAxisSize.Height) ||
                         (!IsVertical && point.X == _majorAxisSize.Width))
@@ -365,65 +351,11 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     {
                         if (IsVertical)
                         {
-                            x = point.X - (barSize.Width / 2);
-                            y = topRadius > 0 ? point.Y + topRadius : point.Y;
-                            var yOrigin = _canvasSize.Height - _majorAxisSize.Height;
-                            if (y > yOrigin && topRadius > 0)
-                                isValueOverRadius = true;
-                            yOrigin = bottomRadius > 0 ? yOrigin - bottomRadius : yOrigin;
-                            h = Math.Abs(yOrigin - y);
-                            rect = SKRect.Create(x, y, barSize.Width, h);
+                            DrawVerticalBar(canvas, paint, point, barSize.Width, topRadius, bottomRadius);
                         }
                         else
                         {
-                            x = topRadius > 0 ? point.X - topRadius : point.X;
-                            y = point.Y - (barSize.Width / 2);
-                            var xOrigin = _majorAxisSize.Width;
-                            if (x <= xOrigin && topRadius > 0)
-                                isValueOverRadius = true;
-                            xOrigin = bottomRadius > 0 ? xOrigin + bottomRadius : xOrigin;
-                            w = Math.Abs(x - xOrigin);
-                            h = barSize.Width;
-                            rect = SKRect.Create(xOrigin, y, w, h);
-                        }
-
-                        if (!isValueOverRadius)
-                            canvas.DrawRect(rect, paint);
-
-                        if (topRadius > 0 && !isValueOverRadius)
-                        {
-                            if (IsVertical)
-                            {
-                                y = point.Y;
-                                h = topRadius * 2;
-                                rect = SKRect.Create(x, y, barSize.Width, h);
-                            }
-                            else
-                            {
-                                x = point.X - topRadius * 2;
-                                w = topRadius * 2;
-                                rect = SKRect.Create(x, y, w, h);
-                            }
-
-                            canvas.DrawRoundRect(rect, topRadius, topRadius, paint);
-                        }
-
-                        if (bottomRadius > 0)
-                        {
-                            if (IsVertical)
-                            {
-                                y = _canvasSize.Height - _majorAxisSize.Height - bottomRadius * 2;
-                                h = bottomRadius * 2;
-                                rect = SKRect.Create(x, y, barSize.Width, h);
-                            }
-                            else
-                            {
-                                x = _majorAxisSize.Width;
-                                w = +bottomRadius * 2;
-                                rect = SKRect.Create(x, y, w, h);
-                            }
-
-                            canvas.DrawRoundRect(rect, bottomRadius, bottomRadius, paint);
+                            DrawHorizontalBar(canvas, paint, point, barSize.Width, topRadius, bottomRadius);
                         }
                     }
                 }

@@ -24,19 +24,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// ChartView is the parent and an abstract class of all chart view.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public abstract class ChartView : View
     {
         /// <summary>
         /// BindableProperty. Identifies the Data bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty DataProperty = BindableProperty.Create(nameof(Data), typeof(Data), typeof(ChartView), defaultValue: null);
 
         /// <summary>
         /// BindableProperty. Identifies the Maximum bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty MaximumProperty = BindableProperty.Create(nameof(Maximum), typeof(double), typeof(ChartView), 100.0, validateValue: (bindable, value) =>
         {
             var chart = (ChartView)bindable;
@@ -46,7 +43,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// BindableProperty. Identifies the Minimum bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty MinimumProperty = BindableProperty.Create(nameof(Minimum), typeof(double), typeof(ChartView), 0.0, validateValue: (bindable, value) =>
         {
             var chart = (ChartView)bindable;
@@ -56,7 +52,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a maximum value of data set.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double Maximum
         {
             get { return (double)GetValue(MaximumProperty); }
@@ -66,7 +61,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a minimum value of data set.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double Minimum
         {
             get { return (double)GetValue(MinimumProperty); }
@@ -76,7 +70,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets a value range of data set.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double ValueRange
         {
             get { return (double)(this.Maximum - this.Minimum); }
@@ -86,7 +79,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a list of data set.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Data Data
         {
             get { return (Data)GetValue(DataProperty); }
@@ -99,7 +91,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Request to update a chart.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public void UpdateChart()
         {
             DrawChartRequested?.Invoke(this, EventArgs.Empty);

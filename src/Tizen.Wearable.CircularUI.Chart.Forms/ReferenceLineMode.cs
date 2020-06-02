@@ -19,7 +19,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// Enumeration for line type of reference line.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public enum ReferenceLineMode
     {
         /// <summary>

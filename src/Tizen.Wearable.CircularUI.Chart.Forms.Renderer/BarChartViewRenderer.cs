@@ -52,7 +52,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         SKCanvas _canvas;
         IDataItem[] _barChartDataTable;
-        IList<DataItemGroup> _prevDataSetArray;
 
         public BarChartViewRenderer()
         {
@@ -132,15 +131,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 return;
             }
 
-            if (Element.AxisOption != null)
-            {
-                CaculateAxisSize(canvas);
-            }
-            else
+            if (Element.AxisOption.IsVisibleOfMajorAxisLine == false &&
+                Element.AxisOption.IsVisibleOfMinorAxisLine == false &&
+                Element.AxisOption.IsVisibleOfReferenceLabel == false &&
+                Element.AxisOption.CategoryLabels == null)
             {
                 _majorAxisSize = new SKSize(0, 0);
                 _minorAxisSize = new SKSize(0, 0);
                 _referenceItemSize = new SKSize(0, 0);
+            }
+            else
+            {
+                CalculateAxisSize(canvas);
             }
 
             var barSize = CalculateBarSize();
@@ -179,22 +181,15 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected virtual void GenerateDataTable()
         {
-            if (Element.Data == _prevDataSetArray)
-                return;
-
             _barChartDataTable = new IDataItem[_categoryCount];
             var items = Element.Data.DataItemGroups[0].DataItems;
             for (int i = 0; i < items.Count; i++)
             {
-                var index = items[i].Key <= 0 ? i : items[i].Key - 1;
-                index =  Math.Min(index, _categoryCount - 1);
-                _barChartDataTable[index] = items[i];
+                _barChartDataTable[i] = items[i];
             }
-
-            _prevDataSetArray = Element.Data.DataItemGroups;
         }
 
-        protected void CaculateAxisSize(SKCanvas canvas)
+        protected void CalculateAxisSize(SKCanvas canvas)
         {
             if (Element.AxisOption.IsVisibleOfMajorAxisLine)
             {
@@ -219,9 +214,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         private IEnumerable<SKRect> MeasureCategoryLabels()
         {
-            using (var paint = new SKPaint())
+            return Element.AxisOption.CategoryLabels.Select(e =>
             {
-                return Element.AxisOption.CategoryLabels.Select(e =>
+                using (var paint = new SKPaint())
                 {
                     if (string.IsNullOrEmpty(e.Label.Text))
                     {
@@ -233,8 +228,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.Label.FontSize));
                     paint.MeasureText(text, ref bounds);
                     return bounds;
-                }).ToArray();
-            }
+                }
+            });
         }
 
         private void CalculateCategoryItemSize()
@@ -265,9 +260,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         private IEnumerable<SKRect> MeasureReferenceLabels()
         {
-            using (var paint = new SKPaint())
+            return Element.AxisOption.ReferenceDataItems.Select(e =>
             {
-                return Element.AxisOption.ReferenceDataItems.Select(e =>
+                using (var paint = new SKPaint())
                 {
                     if (string.IsNullOrEmpty(e.ValueText.Text))
                     {
@@ -279,8 +274,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.ValueText.FontSize));
                     paint.MeasureText(text, ref bounds);
                     return bounds;
-                }).ToArray();
-            }
+                }
+            });
         }
 
         private void CalculateReferenceItemSize()
@@ -383,7 +378,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 }
             }
 
-            return result.ToArray();
+            return result;
         }
 
         protected void DrawMajorAxisLine(SKCanvas canvas)
@@ -406,19 +401,19 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 var categoryLabel = Element.AxisOption.CategoryLabels.ElementAt(i);
                 var label = categoryLabel.Label;
-                var key = categoryLabel.Key;
+                var index = categoryLabel.ItemIndex != -1 ? categoryLabel.ItemIndex : i ;
                 if (string.IsNullOrEmpty(label.Text))
                     continue;
 
                 if (IsVertical)
                 {
-                    x = points.ElementAt(key - 1).X;
+                    x = points.ElementAt(index).X;
                     y = _canvasSize.Height - (_majorAxisSize.Height / 2);
                 }
                 else
                 {
                     x = _majorAxisSize.Width / 2;
-                    y = points.ElementAt(key - 1).Y;
+                    y = points.ElementAt(index).Y;
                 }
 
                 canvas.DrawText(x, y, label);
@@ -579,109 +574,151 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             var halfWidth = barSize.Width / 2;
             var topRadius = (float)Element.BarTopRadius > halfWidth ? halfWidth : (float)Element.BarTopRadius;
             var bottomRadius = (float)Element.BarBottomRadius > halfWidth ? halfWidth : (float)Element.BarBottomRadius;
-            bool isValueOverRadius = false;
+            bool IsVertical = Element.BarChartType == BarChartType.Vertical;
 
             if (points.Count() > 0)
             {
-                if (Element.BarChartType == BarChartType.Vertical)
+                var dataSet = Element.Data.DataItemGroups[0];
+                for (int i = 0; i < _categoryCount; i++)
                 {
-                    var dataSet = Element.Data.DataItemGroups[0];
-                    for (int i = 0; i < _categoryCount; i++)
+                    if (_barChartDataTable[i] == null)
+                        continue;
+
+                    var point = points.ElementAt(i);
+                    var entry = _barChartDataTable[i];
+                    Color barColor = entry.Color != Color.Default ? entry.Color : dataSet.Color != Color.Default ? dataSet.Color : BarDefaultColor;
+                    using (var paint = new SKPaint
                     {
-                        if (_barChartDataTable[i] == null)
-                            continue;
-
-                        var point = points.ElementAt(i);
-                        var entry = _barChartDataTable[i];
-                        Color barColor = entry.Color != Color.Default ? entry.Color : dataSet.Color != Color.Default ? dataSet.Color : BarDefaultColor;
-                        using (var paint = new SKPaint
+                        Style = SKPaintStyle.Fill,
+                        Color = barColor.ToSKColor(),
+                    })
+                    {
+                        if (IsVertical)
                         {
-                            Style = SKPaintStyle.Fill,
-                            Color = barColor.ToSKColor(),
-                        })
+                            DrawVerticalBar(canvas, paint, point, barSize.Width, topRadius, bottomRadius);
+                        }
+                        else
                         {
-                            //draw rect
-                            var x = point.X - (barSize.Width / 2);
-                            var y = topRadius > 0 ? point.Y + topRadius : point.Y;
-                            var yOrigin = _canvasSize.Height - _majorAxisSize.Height;
-                            if (y > yOrigin && topRadius > 0)
-                                isValueOverRadius = true;
-                            yOrigin = bottomRadius > 0 ? yOrigin - bottomRadius : yOrigin;
-                            var h = Math.Abs(yOrigin - y);
-                            var rect = SKRect.Create(x, y, barSize.Width, h);
-                            if (!isValueOverRadius)
-                                canvas.DrawRect(rect, paint);
-
-                            //draw top round rect
-                            if (topRadius > 0 && !isValueOverRadius)
-                            {
-                                y = point.Y;
-                                h = topRadius * 2;
-                                rect = SKRect.Create(x, y, barSize.Width, h);
-                                canvas.DrawRoundRect(rect, topRadius, topRadius, paint);
-                            }
-
-                            //draw bottom round rect
-                            if (bottomRadius > 0)
-                            {
-                                y = _canvasSize.Height - _majorAxisSize.Height - bottomRadius * 2;
-                                h = bottomRadius * 2;
-                                rect = SKRect.Create(x, y, barSize.Width, h);
-                                canvas.DrawRoundRect(rect, bottomRadius, bottomRadius, paint);
-                            }
-
+                            DrawHorizontalBar(canvas, paint, point, barSize.Width, topRadius, bottomRadius);
                         }
                     }
                 }
-                else
+            }
+        }
+
+        protected void DrawVerticalBar(SKCanvas canvas, SKPaint paint, SKPoint point, float barWidth, float topRadius, float bottomRadius)
+        {
+            bool isRadiusOverAxisLine = false;
+            var yOrigin = _canvasSize.Height - _majorAxisSize.Height;
+            if (topRadius > 0 && (point.Y + topRadius * 2 > yOrigin))
+            {
+                isRadiusOverAxisLine = true;
+            }
+            else if (bottomRadius > 0 && (point.Y + bottomRadius * 2 > yOrigin))
+            {
+                isRadiusOverAxisLine = true;
+            }
+            else if (topRadius > 0 &&  bottomRadius > 0 && (point.Y + topRadius + bottomRadius > yOrigin))
+            {
+                isRadiusOverAxisLine = true;
+            }
+
+            if ((topRadius == 0 && bottomRadius == 0) || isRadiusOverAxisLine)
+            {
+                var x = point.X - (barWidth / 2);
+                var y = point.Y;
+                var h = Math.Abs(yOrigin - y);
+                var rect = SKRect.Create(x, y, barWidth, h);
+                canvas.DrawRect(rect, paint);
+            }
+            else
+            {
+                var x = point.X - (barWidth / 2);
+                var y = topRadius > 0 ? point.Y + topRadius : point.Y;
+                yOrigin = bottomRadius > 0 ? yOrigin - bottomRadius : yOrigin;
+                var h = Math.Abs(yOrigin - y); ;
+                var rect = SKRect.Create(x, y, barWidth, h);
+                if (yOrigin > y)
                 {
-                    var dataSet = Element.Data.DataItemGroups[0];
-                    for (int i = 0; i < _categoryCount; i++)
-                    {
-                        if (_barChartDataTable[i] == null)
-                            continue;
+                    canvas.DrawRect(rect, paint);
+                }
 
-                        var point = points.ElementAt(i);
-                        var entry = _barChartDataTable[i];
-                        Color barColor = entry.Color != Color.Default ? entry.Color : dataSet.Color != Color.Default ? dataSet.Color : BarDefaultColor;
-                        using (var paint = new SKPaint
-                        {
-                            Style = SKPaintStyle.Fill,
-                            Color = barColor.ToSKColor(),
-                        })
-                        {
-                            //draw rect
-                            var x = topRadius > 0 ?  point.X - topRadius : point.X;
-                            var y = point.Y - (barSize.Width / 2);
-                            var xOrigin = _majorAxisSize.Width;
-                            if (x <= xOrigin && topRadius > 0)
-                                isValueOverRadius = true;
-                            xOrigin = bottomRadius > 0 ? xOrigin + bottomRadius : xOrigin;
-                            var w = Math.Abs(x - xOrigin);
-                            var h = barSize.Width;
-                            var rect = SKRect.Create(xOrigin, y, w, h);
-                            if (!isValueOverRadius)
-                                canvas.DrawRect(rect, paint);
+                //draw top round rect
+                if (topRadius > 0)
+                {
+                    y = point.Y;
+                    h = topRadius * 2;
+                    rect = SKRect.Create(x, y, barWidth, h);
+                    canvas.DrawRoundRect(rect, topRadius, topRadius, paint);
+                }
 
-                            //draw top round rect
-                            if (topRadius > 0 && !isValueOverRadius)
-                            {
-                                x = point.X - topRadius * 2;
-                                w = topRadius * 2;
-                                rect = SKRect.Create(x, y, w, h);
-                                canvas.DrawRoundRect(rect, topRadius, topRadius, paint);
-                            }
+                //draw bottom round rect
+                if (bottomRadius > 0)
+                {
+                    y = _canvasSize.Height - _majorAxisSize.Height - bottomRadius * 2;
+                    h = bottomRadius * 2;
+                    rect = SKRect.Create(x, y, barWidth, h);
+                    canvas.DrawRoundRect(rect, bottomRadius, bottomRadius, paint);
+                }
+            }
+        }
 
-                            //draw bottom round rect
-                            if (bottomRadius > 0)
-                            {
-                                x = _majorAxisSize.Width;
-                                w = bottomRadius * 2;
-                                rect = SKRect.Create(x, y, w, h);
-                                canvas.DrawRoundRect(rect, bottomRadius, bottomRadius, paint);
-                            }
-                        }
-                    }
+        protected void DrawHorizontalBar(SKCanvas canvas, SKPaint paint, SKPoint point, float barWidth, float topRadius, float bottomRadius)
+        {
+            bool isRadiusOverAxisLine = false;
+            var xOrigin = _majorAxisSize.Width;
+            if (topRadius > 0 && (point.X - topRadius * 2 < xOrigin))
+            {
+                isRadiusOverAxisLine = true;
+            }
+            else if (bottomRadius > 0 && (point.X - bottomRadius * 2 < xOrigin))
+            {
+                isRadiusOverAxisLine = true;
+            }
+            else if (topRadius > 0 && bottomRadius > 0 && (point.X - topRadius - bottomRadius < xOrigin))
+            {
+                isRadiusOverAxisLine = true;
+            }
+
+            if ((topRadius == 0 && bottomRadius == 0) || isRadiusOverAxisLine)
+            {
+                var x = point.X;
+                var y = point.Y - (barWidth / 2);
+                var w = Math.Abs(x - xOrigin);
+                var h = barWidth;
+                var rect = SKRect.Create(xOrigin, y, w, h);
+                canvas.DrawRect(rect, paint);
+            }
+            else
+            {
+                var x = topRadius > 0 ? point.X - topRadius : point.X;
+                var y = point.Y - (barWidth / 2);
+
+                xOrigin = bottomRadius > 0 ? xOrigin + bottomRadius : xOrigin;
+                var w = Math.Abs(x - xOrigin);
+                var h = barWidth;
+                var rect = SKRect.Create(xOrigin, y, w, h);
+                if (xOrigin < x)
+                {
+                    canvas.DrawRect(rect, paint);
+                }
+
+                //draw right round rect
+                if (topRadius > 0)
+                {
+                    x = point.X - topRadius * 2;
+                    w = topRadius * 2;
+                    rect = SKRect.Create(x, y, w, h);
+                    canvas.DrawRoundRect(rect, topRadius, topRadius, paint);
+                }
+
+                //draw left round rect
+                if (bottomRadius > 0)
+                {
+                    x = _majorAxisSize.Width;
+                    w = bottomRadius * 2;
+                    rect = SKRect.Create(x, y, w, h);
+                    canvas.DrawRoundRect(rect, bottomRadius, bottomRadius, paint);
                 }
             }
         }
@@ -704,7 +741,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     if (IsVertical)
                     {
                         x = points.ElementAt(i).X;
-                        if (entry.ValueTextPosition == ValueTextPosition.End)
+                        if ((entry as DataItem)?.ValueTextPosition == ValueTextPosition.End)
                         {
                             y = points.ElementAt(i).Y + TextVerticalMargin;
                             endOfBoundY = true;
@@ -717,7 +754,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     else
                     {
                         y = points.ElementAt(i).Y;
-                        if (entry.ValueTextPosition == ValueTextPosition.End)
+                        if ((entry as DataItem)?.ValueTextPosition == ValueTextPosition.End)
                         {
                             x = points.ElementAt(i).X - TextHorizontalMargin;
                             endOfBoundX = true;

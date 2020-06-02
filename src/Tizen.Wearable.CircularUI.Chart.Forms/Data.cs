@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -25,18 +24,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// The Data class is a set of DataItemGroup.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class Data : INotifyPropertyChanged
     {
         IList<DataItemGroup> _dataItemGroups;
 
         public Data() 
         {
+            _dataItemGroups = new List<DataItemGroup>();
         }
 
         public Data(DataItemGroup dataItemGroup)
         {
-            DataItemGroups = new List<DataItemGroup>();
+            _dataItemGroups = new List<DataItemGroup>();
             DataItemGroups.Add(dataItemGroup);
         }
 
@@ -49,7 +48,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a list of DataItemGroup.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public IList<DataItemGroup> DataItemGroups
         {
             get
@@ -60,7 +58,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             {
                 if (_dataItemGroups == value) return;
                 _dataItemGroups = value;
-                Console.WriteLine("Data.DataItemGroups set value");
                 OnPropertyChanged();
             }
         }

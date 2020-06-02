@@ -25,14 +25,15 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// DataItemGroup is a set of DataItem to be displayed in a chart.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class DataItemGroup : INotifyPropertyChanged
     {
         IList<IDataItem> _dataItems;
         Color _color;
+        string _label;
 
         public DataItemGroup() 
         {
+            _dataItems = new List<IDataItem>();
             _color = Color.Default;
         }
 
@@ -49,7 +50,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             Label = label;
             for (int i = 0; i < values.Count; i++)
             {
-                var item = new DataItem(i, values[i]);
+                var item = new DataItem(values[i]);
                 DataItems.Add(item);
             }
         }
@@ -57,7 +58,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a list of DataItem.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public IList<IDataItem> DataItems
         {
             get
@@ -68,7 +68,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             {
                 if (_dataItems == value) return;
                 _dataItems = value;
-                Console.WriteLine("DataItemGroup.DataItems set value");
                 OnPropertyChanged();
             }
         }
@@ -77,7 +76,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Gets or sets a color of data set.
         /// If a chart is BarChartView, it set a whole bar color. If a chart is LineChartView, It set a line color.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color Color
         {
             get
@@ -95,8 +93,20 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a string value of data set.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public string Label { get; set; }
+        public string Label
+        {
+            get
+            {
+                return _label;
+            }
+            set
+            {
+                if (_label == value) return;
+                _label = value;
+                OnPropertyChanged();
+            }
+        }
+
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {

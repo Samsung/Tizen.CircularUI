@@ -77,10 +77,10 @@ namespace CircularUIChartGallery.ViewModel
         {
             var dummyDataItems = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 5, ValueText = new TextItem { Text = "5", FontSize = 4, TextColor = Color.Red } },
-                new DataItem { Key = 2, Value = 8, ValueText = new TextItem { Text = "8", FontSize = 4, TextColor = Color.Red } },
-                new DataItem { Key = 4, Value = 4, ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.Red } },
-                new DataItem { Key = 6, Value = 10, ValueText = new TextItem { Text = "10", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 5, ValueText = new TextItem { Text = "5", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 8, ValueText = new TextItem { Text = "8", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 4, ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 10, ValueText = new TextItem { Text = "10", FontSize = 4, TextColor = Color.Red } },
             };
 
             var colorDummyDataItems = new List<IDataItem>
@@ -103,11 +103,12 @@ namespace CircularUIChartGallery.ViewModel
             var barBGDummyDataItems = new List<IDataItem>
             {
                 new BarDataItem { Value = 5, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
-                new BarDataItem { Key = 3, Value = 8, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
+                null,
+                new BarDataItem { Value = 8, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
                 new BarDataItem { Value = 4, Color = Color.FromHex("#FF4AC0"), BarBackgroundColor = Color.FromHex("#401A34"), ValueText = new TextItem { Text = "4", FontSize = 5, TextColor = Color.White } },
                 new BarDataItem { Value = 9, Color = Color.FromHex("#7EFA55"), BarBackgroundColor = Color.FromHex("#152E00"), ValueText = new TextItem { Text = "9", FontSize = 5, TextColor = Color.White } },
                 new BarDataItem { Value = 7, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
-                new BarDataItem { Key = 7, Value = 7, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") }
+                new BarDataItem { Value = 7, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") }
             };
 
             var monthlyDummyData = new double[12] {2340, 2650, 2000, 2810, 2760, 2100, 1850, 1710, 1300, 1460, 1300, 2100};
@@ -115,20 +116,20 @@ namespace CircularUIChartGallery.ViewModel
 
             WeeklyLabel = new List<CategoryLabel>
             {
-                new CategoryLabel{Key = 1,  Label = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FF3A3D") } },
-                new CategoryLabel{Key = 2,  Label = new TextItem { Text = "M", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{Key = 3,  Label = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{Key = 4,  Label = new TextItem { Text = "W", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{Key = 5,  Label = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{Key = 6,  Label = new TextItem { Text = "F", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{Key = 7,  Label = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } }
+                new CategoryLabel{ Label = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FF3A3D") } },
+                new CategoryLabel{ Label = new TextItem { Text = "M", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
+                new CategoryLabel{ Label = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
+                new CategoryLabel{ Label = new TextItem { Text = "W", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
+                new CategoryLabel{ Label = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
+                new CategoryLabel{ Label = new TextItem { Text = "F", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
+                new CategoryLabel{ Label = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } }
             };
 
             MonthlyLabel = new List<CategoryLabel>
             {
-                new CategoryLabel{Key = 1,  Label = new TextItem { Text = "JAN", FontSize = 5 } },
-                new CategoryLabel{Key = 6,  Label = new TextItem { Text = "JUN", FontSize = 5 } },
-                new CategoryLabel{Key = 12,  Label = new TextItem { Text = "DEC", FontSize = 5, TextColor = Color.White } }
+                new CategoryLabel{ItemIndex = 0,  Label = new TextItem { Text = "JAN", FontSize = 5 } },
+                new CategoryLabel{ItemIndex = 5,  Label = new TextItem { Text = "JUN", FontSize = 5 } },
+                new CategoryLabel{ItemIndex = 11,  Label = new TextItem { Text = "DEC", FontSize = 5, TextColor = Color.Red } }
             };
 
             ReferenceData1 = new List<IDataItem>
@@ -162,43 +163,46 @@ namespace CircularUIChartGallery.ViewModel
 
             var groupDummyDataItems2 = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 8 },
-                new DataItem { Key = 2, Value = 7 },
-                new DataItem { Key = 3, Value = 9 },
-                new DataItem { Key = 5, Value = 8 },
+                new DataItem { Value = 8 },
+                new DataItem { Value = 7 },
+                new DataItem { Value = 9 },
+                null,
+                new DataItem { Value = 8 },
             };
 
             var groupDummyDataItems3 = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 4 },
-                new DataItem { Key = 2, Value = 5 },
-                new DataItem { Key = 4, Value = 6 },
-                new DataItem { Key = 6, Value = 6 },
-                new DataItem { Key = 7, Value = 7, ValueText = new TextItem { Text = "7", FontSize = 4 } },
+                new DataItem { Value = 4 },
+                new DataItem { Value = 5 },
+                null,
+                new DataItem { Value = 6 },
+                null,
+                new DataItem { Value = 6 },
+                new DataItem { Value = 7, ValueText = new TextItem { Text = "7", FontSize = 4 } },
             };
 
             var groupDummyDataItems4 = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 6 },
-                new DataItem { Key = 2, Value = 2 },
-                new DataItem { Key = 3, Value = 2 },
-                new DataItem { Key = 4, Value = 3 },
-                new DataItem { Key = 5, Value = 4 },
+                new DataItem { Value = 6 },
+                new DataItem { Value = 2 },
+                new DataItem { Value = 2 },
+                new DataItem { Value = 3 },
+                new DataItem { Value = 4 },
             };
 
             var groupDummyDataItems5 = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 3 },
-                new DataItem { Key = 2, Value = 3 },
+                new DataItem() { Value = 3 },
+                new DataItem() { Value = 3 },
             };
 
             var groupDummyDataItems6 = new List<IDataItem>
             {
-                new DataItem { Key = 1, Value = 3 },
-                new DataItem { Key = 2, Value = 3 },
-                new DataItem { Key = 3, Value = 2 },
-                new DataItem { Key = 4, Value = 3 },
-                new DataItem { Key = 5, Value = 5 },
+                new DataItem(3),
+                new DataItem(6),
+                new DataItem(2),
+                new DataItem(3),
+                new DataItem(5),
             };
 
             //Single Bar Chart dataset

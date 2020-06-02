@@ -22,7 +22,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// A struct that has a Axis properties.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public struct AxisOption
     {
         /// <summary>
@@ -48,7 +47,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Major axis can be changed to chart orientation. 
         /// If chart is vertical bar chart, major axis is X axis. otherwise(horizontal bar chart), major axis is Y axis.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsVisibleOfMajorAxisLine { get; set; }
 
         /// <summary>
@@ -56,26 +54,22 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Minor axis can be changed to chart orientation. 
         /// If chart is vertical bar chart, minor axis is Y axis. otherwise(horizontal bar chart), minor axis is X axis.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsVisibleOfMinorAxisLine { get; set; }
 
         /// <summary>
         /// Gets or sets the visibility of reference label.
         /// Reference label display reference value in minor axis
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsVisibleOfReferenceLabel { get; set; }
 
         /// <summary>
         /// Gets or sets the visibility of reference line.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public bool IsVisibleOfReferenceLine { get; set; }
 
         /// <summary>
         /// Gets or sets a color of major & minor axis line.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color AxisLineColor { get; set; }
 
         /// <summary>
@@ -83,13 +77,11 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Category label display data's category in major axis.
         /// For example, If the chart represents a change in the value of a week, each category becomes the day of the week.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public IList<CategoryLabel> CategoryLabels { get; set; }
 
         /// <summary>
         /// Gets or sets a list of reference DataItem.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public IList<IDataItem> ReferenceDataItems { get; set; }
 
         public static implicit operator AxisOption(bool uniformValue)

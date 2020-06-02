@@ -21,39 +21,22 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// IDataItem is an interface to describe DataItem.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public interface IDataItem
     {
         /// <summary>
-        /// Gets or sets a key.
-        /// Key represents the position of a chart. if the key is 3, this value set 3rd data in a chart.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        int Key { get; set; }
-
-        /// <summary>
         /// Gets or sets a value.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         double Value { get; set; }
 
         /// <summary>
         /// Gets or sets a color of each DataItem.
         /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         Color Color { get; set; }
 
         /// <summary>
         /// Gets or sets a value text of DataItem.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         TextItem ValueText { get; set; }
-
-        /// <summary>
-        /// Gets or sets a position of data ValueText.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        ValueTextPosition ValueTextPosition { get; set; }
     }
 }

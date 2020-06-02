@@ -22,15 +22,17 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// BarDataItemGroup is an inheritance type of DataItemGroup for the BarChartView.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class BarDataItemGroup : DataItemGroup
     {
+        Color _bgColor;
         public BarDataItemGroup() : base()
         {
+            _bgColor = Color.Transparent;
         }
 
         public BarDataItemGroup(IList<IDataItem> items, string label) : base(items, label)
         {
+            _bgColor = Color.Transparent;
         }
 
         public BarDataItemGroup(IList<double> values, string label = null) : base(values, label)
@@ -40,7 +42,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// Gets or sets a color of bar background.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public Color BarBackgroundColor { get; set; } = Color.Transparent;
+        public Color BarBackgroundColor
+        {
+            get
+            {
+                return _bgColor;
+            }
+            set
+            {
+                if (_bgColor == value) return;
+                _bgColor = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }

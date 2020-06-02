@@ -21,49 +21,36 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// The DataItem class represents a single data in the chart.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class DataItem : IDataItem
     {
         public DataItem()
         {
         }
 
-        public DataItem(int key, double value)
+        public DataItem(double value)
         {
-            Key = key;
             Value = value;
         }
 
         /// <summary>
-        /// Gets or sets a key.
-        /// Key represents the position of a chart. if the key is 3, this value set 3rd data in a chart.
-        /// </summary>
-        /// <since_tizen> 4 </since_tizen>
-        public int Key { get; set; } = 0;
-
-        /// <summary>
         /// Gets or sets a value.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double Value { get; set; }
 
         /// <summary>
         /// Gets or sets a color of each DataItem.
         /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public Color Color { get; set; } = Color.Default;
 
         /// <summary>
         /// Gets or sets a value text of DataItem.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public TextItem ValueText { get; set; }
 
         /// <summary>
         /// Gets or sets a position of data ValueText.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public ValueTextPosition ValueTextPosition { get; set; } = ValueTextPosition.End;
     }
 }

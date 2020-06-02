@@ -22,19 +22,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// <summary>
     /// The GroupBarChartView is a view that represents vertical/horizontal grouped bar chart.
     /// </summary>
-    /// <since_tizen> 4 </since_tizen>
     public class GroupBarChartView : BarChartView
     {
         /// <summary>
         /// BindableProperty. Identifies the GroupBarMargin bindable property.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public static readonly BindableProperty GroupBarMarginProperty = BindableProperty.Create(nameof(GroupBarMargin), typeof(double), typeof(GroupBarChartView), 5d);
 
         /// <summary>
         /// Gets or sets the horizontal margin between each bar in the grouped bar.
         /// </summary>
-        /// <since_tizen> 4 </since_tizen>
         public double GroupBarMargin
         {
             get { return (double)GetValue(GroupBarMarginProperty); }
