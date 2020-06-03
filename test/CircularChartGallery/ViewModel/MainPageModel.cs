@@ -95,9 +95,9 @@ namespace CircularUIChartGallery.ViewModel
 
             var HRMDataItems = new List<IDataItem>
             {
-                new DataItem { Value = 3, Color = Color.DarkRed, ValueText = new TextItem { Text = "12m", FontSize = 9, TextColor = Color.White } },
-                new DataItem { Value = 9, Color = Color.OrangeRed, ValueText = new TextItem { Text = "1h 3m", FontSize = 9, TextColor = Color.White } },
-                new DataItem { Value = 4, Color = Color.Orange, ValueText = new TextItem { Text = "17m", FontSize = 9, TextColor = Color.White } }
+                new DataItem { Value = 3, Color = Color.DarkRed, ValueText = new TextItem { Text = "12m", FontSize = 6, TextColor = Color.White } },
+                new DataItem { Value = 9, Color = Color.OrangeRed, ValueText = new TextItem { Text = "1h 3m", FontSize = 6, TextColor = Color.White } },
+                new DataItem { Value = 4, Color = Color.Orange, ValueText = new TextItem { Text = "17m", FontSize = 6, TextColor = Color.White } }
             };
 
             var barBGDummyDataItems = new List<IDataItem>

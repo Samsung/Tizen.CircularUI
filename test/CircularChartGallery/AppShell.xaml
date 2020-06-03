@@ -15,6 +15,7 @@
             <ShellContent ContentTemplate="{DataTemplate pages:BarChartAxisTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:BarChartRadiusTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:BarChartBarBackgroundColorTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:BarChartDataTest}"/>
         </ShellSection>
     </FlyoutItem>
     <FlyoutItem Route="HorizontalBarChartTest" Title="Horizontal Bar Chart TC">

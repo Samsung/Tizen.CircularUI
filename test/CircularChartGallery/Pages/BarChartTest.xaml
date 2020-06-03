@@ -18,7 +18,7 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <Label
-                    Text="BarWidth = 20, Maximum = 10"
+                    Text="BarWidth = default(-1), Maximum = 10"
                     FontSize="Micro"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
@@ -26,10 +26,9 @@
                     x:Name="defaultBar"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    BarWidth="20"
                     Maximum="10"
                     Data="{Binding DummyData}"
-                    WidthRequest="300"
+                    WidthRequest="200"
                     HeightRequest="150"/>
                 <Label
                     Text="BarWidth = 10, Maximum = 20"
@@ -44,10 +43,10 @@
                     BarWidth="10"
                     Maximum="20"
                     Data="{Binding ColorDummyData}"
-                    WidthRequest="300"
+                    WidthRequest="200"
                     HeightRequest="150"/>
                 <Label
-                    Text="BarWidth = 30, Maximum = 10, BG Color white"
+                    Text="BarWidth = 40, Maximum = 10, BG Color white"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -57,10 +56,10 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BackgroundColor="White"
-                    BarWidth="30"
+                    BarWidth="40"
                     Maximum="10"
                     Data="{Binding ColorDummyData}"
-                    WidthRequest="300"
+                    WidthRequest="200"
                     HeightRequest="150"/>
             </StackLayout>
         </c:CircleScrollView>

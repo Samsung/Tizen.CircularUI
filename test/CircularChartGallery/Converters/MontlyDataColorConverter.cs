@@ -30,24 +30,29 @@ namespace CircularUIChartGallery.Converters
             if (data == null)
                 return value;
 
-            var dataItemGroup = data.DataItemGroups[0];
-            foreach (var item in dataItemGroup.DataItems)
+            var count =  data.DataItemGroups.Count;
+            count = Math.Min(count, 3);
+            for (int i = 0; i < count; i++)
             {
-                if (item.Value <= 1500)
+                var dataItemGroup = data.DataItemGroups[i];
+                foreach (var item in dataItemGroup.DataItems)
                 {
-                    (item as DataItem).Color = Color.FromHex("#EF751D");
-                }
-                else if (item.Value <= 2000)
-                {
-                    (item as DataItem).Color = Color.FromHex("#EBF51D");
-                }
-                else if (item.Value <= 2500)
-                {
-                    (item as DataItem).Color = Color.FromHex("#72E61D");
-                }
-                else
-                {
-                    (item as DataItem).Color = Color.FromHex("#41C7D1");
+                    if (item.Value <= 1500)
+                    {
+                        (item as DataItem).Color = Color.FromHex("#EF751D");
+                    }
+                    else if (item.Value <= 2000)
+                    {
+                        (item as DataItem).Color = Color.FromHex("#EBF51D");
+                    }
+                    else if (item.Value <= 2500)
+                    {
+                        (item as DataItem).Color = Color.FromHex("#72E61D");
+                    }
+                    else
+                    {
+                        (item as DataItem).Color = Color.FromHex("#41C7D1");
+                    }
                 }
             }
 

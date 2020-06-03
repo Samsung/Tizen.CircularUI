@@ -28,7 +28,6 @@
                     x:Name="verticalMajorMinorAxis"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    BarWidth="15"
                     Maximum="10"
                     Data="{Binding DummyData}"
                     AxisOption="{Binding MajorMinorAxisOption}"

@@ -24,28 +24,41 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <chart:GroupBarChartView
-                    x:Name="GroupBarTest"
+                    x:Name="GroupBarTest1"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    BarWidth="7"
-                    GroupBarMargin ="4"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"
                     WidthRequest="340"
                     HeightRequest="150"/>
                 <Label
-                    Text="GroupDataCount = 6, Maximum = 10"
+                    Text="GroupDataCount = 6, Maximum = 10, BarWidth=7"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <chart:GroupBarChartView
-                    x:Name="GroupBarTest1"
+                    x:Name="GroupBarTest2"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarWidth="7"
-                    GroupBarMargin ="4"
+                    Maximum="10"
+                    Data="{Binding GroupDummyData2}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    WidthRequest="340"
+                    HeightRequest="150"/>
+                <Label
+                    Text="GroupDataCount = 6, Maximum = 10, BarWidth=15"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="GroupBarTest3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="15"
                     Maximum="10"
                     Data="{Binding GroupDummyData2}"
                     AxisOption="{Binding CategoryOnlyAxisOption}"

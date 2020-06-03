@@ -44,7 +44,7 @@
                     x:Name="axisBar2"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    BarWidth="15"
+                    BarWidth="50"
                     Maximum ="10"
                     Minimum="0"
                     Data="{Binding ColorDummyData}"

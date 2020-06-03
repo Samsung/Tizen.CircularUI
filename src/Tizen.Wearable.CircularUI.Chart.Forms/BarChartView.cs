@@ -31,7 +31,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// BindableProperty. Identifies the BarWidth bindable property.
         /// </summary>
-        public static readonly BindableProperty BarWidthProperty = BindableProperty.Create(nameof(BarWidth), typeof(double), typeof(BarChartView), 10d);
+        public static readonly BindableProperty BarWidthProperty = BindableProperty.Create(nameof(BarWidth), typeof(double), typeof(BarChartView), -1d);
 
         /// <summary>
         /// BindableProperty. Identifies the BarTopRadius bindable property.

@@ -61,15 +61,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 return;
             }
 
-            if (Element.AxisOption != null)
-            {
-                base.CalculateAxisSize(canvas);
-            }
-            else
+            if (Element.AxisOption.IsVisibleOfMajorAxisLine == false &&
+                Element.AxisOption.IsVisibleOfMinorAxisLine == false &&
+                Element.AxisOption.IsVisibleOfReferenceLabel == false &&
+                Element.AxisOption.CategoryLabels == null)
             {
                 _majorAxisSize = new SKSize(0, 0);
                 _minorAxisSize = new SKSize(0, 0);
                 _referenceItemSize = new SKSize(0, 0);
+            }
+            else
+            {
+                base.CalculateAxisSize();
             }
 
             var barSize = this.CalculateBarSize();
@@ -111,7 +114,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             for (int i = 0; i < _dataSetArrayCount; i++)
             {
                 var dataSet = Element.Data.DataItemGroups[i];
-                int entryCount = dataSet.DataItems.Count();
+                int entryCount = dataSet.DataItems.Count;
                 if (entriesMaxCount < entryCount)
                     entriesMaxCount = entryCount;
             }
@@ -126,9 +129,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 if (Element.Data.DataItemGroups.Count <= i) break;
                 var items = Element.Data.DataItemGroups[i].DataItems;
-                for (int j = 0; j < items.Count; j++)
+                for (int j = 0; j < _categoryCount; j++)
                 {
-                    _groupBarChartDataTable[i, j] = items[j]?.Value ?? Element.Minimum;
+                    if (items.Count <= j)
+                    {
+                        _groupBarChartDataTable[i, j] = Element.Minimum;
+                    }
+                    else
+                    {
+                        _groupBarChartDataTable[i, j] = items[j]?.Value ?? Element.Minimum;
+                    }
                 }
             }
         }
@@ -138,79 +148,93 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             var groupChart = Element as GroupBarChartView;
             _dataSetArrayCount = groupChart.Data.DataItemGroups.Count();
             _groupDataCount = Math.Min(_dataSetArrayCount, 5); // Maximum group data count is 5
+            _groupBarMargin = groupChart != null ? (float)XForms.ConvertToScaledPixel(groupChart.GroupBarMargin) : -1;
             float barWidth = (float)XForms.ConvertToScaledPixel(Element.BarWidth);
-            _groupBarMargin = groupChart != null ? (float)XForms.ConvertToScaledPixel(groupChart.GroupBarMargin) : 0;
             float barHeight = 0;
-            int totalDataCount = 0;
 
             _maxEntriesCount = GetMaxEntriesCount();
             _categoryLabelCount = Element.AxisOption.CategoryLabels?.Count() ?? 0;
             _categoryCount = Math.Max(_categoryLabelCount, _maxEntriesCount);
-            totalDataCount = _categoryCount * _groupDataCount;
+            var totalDataCount = _categoryCount * _groupDataCount;
             if (Element.BarChartType == BarChartType.Vertical)
             {
-                var spareHSize = _canvasSize.Width - _minorAxisSize.Width - (barWidth * totalDataCount) - (_groupBarMargin * _categoryCount * (_groupDataCount - 1));
-                if (spareHSize < 0)
+                //If user don't set BarWidth, Calculate barwidth using canvas size.
+                if (barWidth <= 0)
                 {
-                    var tmpbarWidth = (int)(_canvasSize.Width - _minorAxisSize.Width) / totalDataCount;
-                    _groupBarMargin = 0;
-                    if (tmpbarWidth < barWidth)
+                    var chartWidth = _canvasSize.Width - _minorAxisSize.Width;
+                    if (_groupBarMargin == -1)
                     {
-                        barWidth = tmpbarWidth;
-                        _barHmargin = 0;
+                        //If user don't set GroupBarMargin,temporary set barWidth = _barHmargin = _groupBarMargin * (groupcnt -1).
+                        barWidth = chartWidth / (totalDataCount + _categoryCount * 2 + 1);
+                        _groupBarMargin = barWidth / (_groupDataCount - 1);
+                        _barHmargin = barWidth;
                     }
                     else
                     {
-                        spareHSize = _canvasSize.Width - _minorAxisSize.Width - (barWidth * totalDataCount);
-                        _barHmargin = (int)(spareHSize / (_categoryCount + 1));
+                        var totalGroupBarMargin = _groupBarMargin * _categoryCount * (_groupDataCount - 1); //Total space in bar group.
+                        var totalMargin = _groupBarMargin * (_groupDataCount - 1) * (_categoryCount + 1); //Total space between groups.
+                        barWidth = (chartWidth - totalGroupBarMargin - totalMargin) / totalDataCount;
+                        _barHmargin = _groupBarMargin * (_groupDataCount - 1); //set margin between groups using _groupBarMargin.
                     }
                 }
                 else
                 {
-                    _barHmargin = (int)(spareHSize / (_categoryCount + 1));
+                    if (_groupBarMargin == -1)
+                    {
+                        _groupBarMargin = barWidth / (_groupDataCount - 1);
+                    }
+
+                    var spareHSize = _canvasSize.Width - _minorAxisSize.Width - (barWidth * totalDataCount) - (_groupBarMargin * _categoryCount * (_groupDataCount - 1));
+                    _barHmargin = spareHSize / (_categoryCount + 1);
                 }
 
                 barHeight = _canvasSize.Height - _majorAxisSize.Height;
             }
             else
             {
-                var spareVSize = _canvasSize.Height - _minorAxisSize.Height - (barWidth * totalDataCount) - (_groupBarMargin * _categoryCount * (_groupDataCount - 1));
-                if (spareVSize < 0)
+                if (barWidth <= 0)
                 {
-                    var tmpbarWidth = (int)(_canvasSize.Height - _minorAxisSize.Height) / totalDataCount;
-                    _groupBarMargin = 0;
-                    if (tmpbarWidth < barWidth)
+                    var chartHeight = _canvasSize.Height - _minorAxisSize.Height;
+                    if (_groupBarMargin == -1)
                     {
-                        barWidth = tmpbarWidth;
-                        _barVmargin = 0;
+                        //If user don't set GroupBarMargin,temporary set barWidth = _barVmargin = _groupBarMargin * (groupcnt -1).
+                        barWidth = chartHeight / (totalDataCount + _categoryCount * 2 + 1);
+                        _groupBarMargin = barWidth / (_groupDataCount - 1);
+                        _barVmargin = barWidth;
                     }
                     else
                     {
-                        spareVSize = _canvasSize.Height - _minorAxisSize.Height - (barWidth * totalDataCount);
-                        _barVmargin = (int)(spareVSize / (_categoryCount + 1));
+                        var totalGroupBarMargin = _groupBarMargin * _categoryCount * (_groupDataCount - 1); //Total space in bar group.
+                        var totalMargin = _groupBarMargin * (_groupDataCount - 1) * (_categoryCount + 1); //Total space between groups.
+                        barWidth = (chartHeight - totalGroupBarMargin - totalMargin) / totalDataCount;
+                        _barVmargin = _groupBarMargin * (_groupDataCount - 1); //set margin between groups using _groupBarMargin.
                     }
                 }
                 else
                 {
-                    _barVmargin = (int)(spareVSize / (_categoryCount + 1));
+                    if (_groupBarMargin == -1)
+                    {
+                        _groupBarMargin = barWidth / (_groupDataCount - 1);
+                    }
+
+                    var spareVSize = _canvasSize.Height - _minorAxisSize.Height - (barWidth * totalDataCount) - (_groupBarMargin * _categoryCount * (_groupDataCount - 1));
+                    _barVmargin = spareVSize / (_categoryCount + 1);
                 }
 
                 barHeight = _canvasSize.Width - _majorAxisSize.Width;
             }
 
-            if (barWidth != (float)XForms.ConvertToScaledPixel(Element.BarWidth))
-            {
-                Element.BarWidth = XForms.ConvertToScaledDP(barWidth);
-            }
-
             return new SKSize(barWidth, barHeight);
         }
 
-        protected override IEnumerable<SKPoint> CalculatePoints(SKSize barSize)
+        protected override IList<SKPoint> CalculatePoints(SKSize barSize)
         {
             var result = new List<SKPoint>();
             float yAxisWidth = Element.BarChartType == BarChartType.Vertical ? _minorAxisSize.Width : _majorAxisSize.Width;
             var groupOffset = barSize.Width * _groupDataCount + _groupBarMargin * (_groupDataCount - 1);
+            float x;
+            float y;
+
             if (Element.BarChartType == BarChartType.Vertical)
             {
                 for (int i = 0; i < _categoryCount; i++)
@@ -219,8 +243,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     {
                         var value = _groupBarChartDataTable[j, i];
                         value = Math.Min(Math.Max(value, Element.Minimum), Element.Maximum);
-                        var x = yAxisWidth + _barHmargin * (i + 1) + (barSize.Width / 2) + groupOffset * i + (barSize.Width + _groupBarMargin) * j;
-                        var y = (float)(((Element.Maximum - value) / Element.ValueRange) * barSize.Height);
+                        if (_barHmargin < 0)
+                        {
+                            var groupPoint = (_canvasSize.Width - _minorAxisSize.Width) / _categoryCount;
+                            var barPoint = groupPoint / _groupDataCount;
+                            x = yAxisWidth + groupPoint * i + barPoint *(j + 1);
+                        }
+                        else
+                        {
+                            x = yAxisWidth + _barHmargin * (i + 1) + (barSize.Width / 2) + groupOffset * i + (barSize.Width + _groupBarMargin) * j;
+                        }
+
+                        y = (float)(((Element.Maximum - value) / Element.ValueRange) * barSize.Height);
                         var point = new SKPoint(x, y);
                         result.Add(point);
                     }
@@ -234,8 +268,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     {
                         var value = _groupBarChartDataTable[j, i];
                         value = Math.Min(Math.Max(value, Element.Minimum), Element.Maximum);
-                        var y = _barVmargin * (i + 1) + (barSize.Width / 2) + groupOffset * i + (barSize.Width + _groupBarMargin) * j;
-                        var x = yAxisWidth + (float)(((value - Element.Minimum) / Element.ValueRange) * barSize.Height);
+                        if (_barVmargin < 0)
+                        {
+                            var groupPoint = (_canvasSize.Height - _minorAxisSize.Height) / _categoryCount;
+                            var barPoint = groupPoint / _groupDataCount;
+                            y = groupPoint * i + barPoint * (j + 1);
+                        }
+                        else
+                        {
+                            y = _barVmargin * (i + 1) + (barSize.Width / 2) + groupOffset * i + (barSize.Width + _groupBarMargin) * j;
+                        }
+
+                        x = yAxisWidth + (float)(((value - Element.Minimum) / Element.ValueRange) * barSize.Height);
                         var point = new SKPoint(x, y);
                         result.Add(point);
                     }
@@ -245,7 +289,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             return result;
         }
 
-        protected override void DrawCategoryLabels(SKCanvas canvas, IEnumerable<SKPoint> points)
+        protected override void DrawCategoryLabels(SKCanvas canvas, IList<SKPoint> points)
         {
             bool IsVertical = Element.BarChartType == BarChartType.Vertical;
             float x = 0;
@@ -254,7 +298,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
             for (int i = 0; i < _categoryLabelCount; i++)
             {
-                var categoryLabel = Element.AxisOption.CategoryLabels.ElementAt(i);
+                var categoryLabel = Element.AxisOption.CategoryLabels[i];
                 label = categoryLabel.Label;
                 if (string.IsNullOrEmpty(label.Text))
                 {
@@ -265,20 +309,20 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 int categoryStartIndex = index * _groupDataCount;
                 if (IsVertical)
                 {
-                    x = (points.ElementAt(categoryStartIndex).X + points.ElementAt(categoryStartIndex + _groupDataCount - 1).X) / 2;
+                    x = (points[categoryStartIndex].X + points[categoryStartIndex + _groupDataCount - 1].X) / 2;
                     y = _canvasSize.Height - (_majorAxisSize.Height / 2);
                 }
                 else
                 {
                     x = _majorAxisSize.Width / 2;
-                    y = (points.ElementAt(categoryStartIndex).Y + points.ElementAt(categoryStartIndex + _groupDataCount - 1).Y) / 2;
+                    y = (points[categoryStartIndex].Y + points[categoryStartIndex + _groupDataCount - 1].Y) / 2;
                 }
 
                 canvas.DrawText(x, y, label);
             }
         }
 
-        private void DrawGroupBarBackground(SKCanvas canvas, IEnumerable<SKPoint> points, SKSize barSize)
+        private void DrawGroupBarBackground(SKCanvas canvas, IList<SKPoint> points, SKSize barSize)
         {
             var halfWidth = barSize.Width / 2;
             var topRadius = (float)Element.BarTopRadius > halfWidth ? halfWidth : (float)Element.BarTopRadius;
@@ -287,12 +331,12 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             SKColor bgColor;
             SKRect rect;
 
-            if (points.Count() > 0)
+            if (points.Count > 0)
             {
                 GetBarBackgroundColor();
                 for (int i = 0; i < totalBarCount; i++)
                 {
-                    var point = points.ElementAt(i);
+                    var point = points[i];
                     var r = i % _groupDataCount;
                     bgColor = _barBackgroundColor[r];
 
@@ -323,7 +367,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             }
         }
 
-        protected void DrawGroupBars(SKCanvas canvas, IEnumerable<SKPoint> points, SKSize barSize)
+        protected void DrawGroupBars(SKCanvas canvas, IList<SKPoint> points, SKSize barSize)
         {
             var halfWidth = barSize.Width / 2;
             var topRadius = (float)Element.BarTopRadius > halfWidth ? halfWidth : (float)Element.BarTopRadius;
@@ -331,12 +375,12 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             var totalBarCount = _categoryCount * _groupDataCount;
             bool IsVertical = Element.BarChartType == BarChartType.Vertical;
 
-            if (points.Count() > 0)
+            if (points.Count > 0)
             {
                 GetBarColor();
                 for (int i = 0; i < totalBarCount; i++)
                 {
-                    var point = points.ElementAt(i);
+                    var point = points[i];
                     if ((IsVertical && point.Y == _canvasSize.Height - _majorAxisSize.Height) ||
                         (!IsVertical && point.X == _majorAxisSize.Width))
                         continue;

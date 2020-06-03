@@ -28,11 +28,10 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    BarWidth="20"
                     Maximum="10"
                     Data="{Binding DummyData}"
                     WidthRequest="300"
-                    HeightRequest="300"/>
+                    HeightRequest="200"/>
                 <Label
                     Text="BarWidth = 10, Maximum = 20"
                     FontSize="Micro"
@@ -44,11 +43,11 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    BarWidth="10"
+                    BarWidth="50"
                     Maximum="20"
                     Data="{Binding ColorDummyData}"
                     WidthRequest="300"
-                    HeightRequest="300"/>
+                    HeightRequest="200"/>
                 <Label
                     Text="BarWidth = 30, Maximum = 10, BG Color white"
                     FontSize="Micro"

@@ -27,7 +27,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// <summary>
         /// BindableProperty. Identifies the GroupBarMargin bindable property.
         /// </summary>
-        public static readonly BindableProperty GroupBarMarginProperty = BindableProperty.Create(nameof(GroupBarMargin), typeof(double), typeof(GroupBarChartView), 5d);
+        public static readonly BindableProperty GroupBarMarginProperty = BindableProperty.Create(nameof(GroupBarMargin), typeof(double), typeof(GroupBarChartView), -1d);
 
         /// <summary>
         /// Gets or sets the horizontal margin between each bar in the grouped bar.

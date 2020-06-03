@@ -18,7 +18,7 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
                 <Label
-                    Text="GroupDataCount = 3, Maximum = 10"
+                    Text="GroupDataCount = 3, Maximum = 10, BarWidth=default"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -28,8 +28,6 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    BarWidth="7"
-                    GroupBarMargin ="4"
                     BarTopRadius="3.5"
                     BarBottomRadius="3.5"
                     Maximum="10"
@@ -38,7 +36,7 @@
                     WidthRequest="200"
                     HeightRequest="300"/>
                 <Label
-                    Text="GroupDataCount = 6, Maximum = 10"
+                    Text="GroupDataCount = 6, Maximum = 10, BarWidth=15"
                     FontSize="Micro"
                     Margin="0, 50, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -48,8 +46,7 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BarChartType="Horizontal"
-                    BarWidth="7"
-                    GroupBarMargin ="4"
+                    BarWidth="15"
                     BarTopRadius="3.5"
                     BarBottomRadius="3.5"
                     Maximum="10"
