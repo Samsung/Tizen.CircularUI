@@ -15,6 +15,24 @@
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="TC\TCSingleTextCell.xaml.cs">
+      <DependentUpon>TCSingleTextCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCSwitch2TextCell.xaml.cs">
+      <DependentUpon>TCSwitch2TextCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCCheck2TextCell.xaml.cs">
+      <DependentUpon>TCCheck2TextCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCRadio2TextCell.xaml.cs">
+      <DependentUpon>TCRadio2TextCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCRadioCell.xaml.cs">
+      <DependentUpon>TCRadioCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCCheckCell.xaml.cs">
+      <DependentUpon>TCCheckCell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="TC\TCCircleSurfaceView.xaml.cs">
       <DependentUpon>TCCircleSurfaceView.xaml</DependentUpon>
     </Compile>
