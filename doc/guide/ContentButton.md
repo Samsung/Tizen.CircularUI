@@ -1,102 +1,94 @@
 ---
 uid: Tizen.Wearable.CircularUI.doc.ContentButton
-summary: ContentButton control guide
+summary: ContentButton guide
 ---
 # ContentButton
 
-`ContentButton` is a type of Xamarin.Forms.ContentView that contains a single child element (called Content) and is typically used for custom, reusable controls. Also, as its name implies, ContentButton is designed to be used like a Button that implements Xamarin.Forms.IButtonController.
-It is an extension of [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/).
+`ContentButton` is a type of Xamarin.Forms.ContentView that contains a single child element (called Content) and is typically used for custom, reusable controls. Also, as its name implies, ContentButton is designed to be used like a Button that implements `Xamarin.Forms.IButtonController`.
 
-![](data/CircleStepper_property.png)
+![](data/ContentButton.png)
 
-**WARNING: The marker is no longer supported from Tizen 4.0 SDK which is applied bezel-less UX in 2019. Therefore, the above image is obsolete and marker related API was deprecated.**
+## How to customize the button using `ContentButton`?
 
-## Create CircleStepper
-
-Basically `CircleStepper` looks same as [Xamarin.Forms.Stepper](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/), and you can modify the value with [Bezel interaction](https://developer.tizen.org/design/wearable/interaction/bezel-interactions).
-The difference from [Xamarin.Forms.ScrollView](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) is to provide some additional properties for Tizen wearable.
-
-`CircleStepper` has the following properties:
-
-- Title: This property gets or sets the title on `CircleStepper`
-- LabelFormat: This property gets or sets the format in which the value is shown.
-- IsWrapEnabled: This property gets or sets a status of `Value` is wrapped.
-- WheelAppeared: This event occurs when the `CircleStepper`'s wheel is appeared.
-- WheelDisappeared: This event occurs when the `CircleStepper`'s wheel is disappeared.
-
-This example consists of `StackLayout` with a `CircleStepper` and two Labels in the `CirclePage`.
-Since 9 is set to `Minimum` and `LabelFormat` is set to "% 1.1f", "9.0" appears on the screen. Since the `Increment` is 7.5, it increases by 7.5 when you turn the bezel and increase the `Value`. The `Maximum` defined value is 99, hence the marker does not exceed this value.
-
-![](data/CircleStepper.png)
+`ContentButton` provides the view to show and the states(Clicked, Pressed and Released) of the button. You can customize the button through changing the view according to the state.
+The following example shows the CustomButton composed of a combination of Images that define the icon, background, and border of a button.
+To show a border, this example has set an outlined image with blending color as a Content, and the background color of the button will change to gray when the button is pressed for click-effect.
 
 For more information, see the following links:
 
-- [CircleStepper API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleStepper.html)
-- [Xamarin.Forms.Stepper API reference](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/)
-- [Xamarin.Forms.Stepper Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views#stepper)
+- [ContentButton API reference](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.ContentButton.html)
+- [Style your Buttons using Tizen .NET Guide](https://developer.samsung.com/tizen/blog/en-us/2020/04/06/style-your-buttons-using-tizen-net)
 
-_The code example of this guide uses XUIComponent's SpinnerDefault of CircleSpinner code. The code is available in sample\XUIComponents\UIComponents\UIComponents\Samples\CircleSpinner\SpinnerViewModel.cs and SpinnerDefault.xaml_
 
-The following code shows how to use CircleStepper:
+## Create CircleStepper
+
+You can easily add Check control with C# or XAML file. 
+
+_The code example of this guide uses WearableUIGallery's TCContentButton code. The code is available in test\WearableUIGallery\WearableUIGallery\TC\TCContentButton.xaml_
 
 **C# file**
 
 ```cs
-
-    public class SpinnerViewModel : INotifyPropertyChanged
+public partial class ContentButtonTestPage : ContentPage
+{
+    public ContentButtonTestPage()
     {
-        double _value= 9.0;
-        ...
+        InitializeComponent();
 
-        public double Value
+        ClickCommand = new Command(execute: () =>
         {
-            get => _value;
-            set
-            {
-                if (_value == value) return;
-                _value = value;
-                OnPropertyChanged();
-            }
-        }
+            label.Text = "clicked";
+        });
+    }
+
+    public ICommand ClickCommand { get; private set; }
+
+    private void OnButtonClicked(object sender, EventArgs e)
+    {
+        Console.WriteLine($"ContentButton clicked event is invoked!!");
+    }
+
+    private void OnButtonPressed(object sender, EventArgs e)
+    {
+        Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image.SetBlendColor(buttonBg, Color.Gray);
+    }
+
+    private void OnButtonReleased(object sender, EventArgs e)
+    {
+        Xamarin.Forms.PlatformConfiguration.TizenSpecific.Image.SetBlendColor(buttonBg, Color.Transparent);
+    }
+}
 ```
 
 **XAML file**
 
 ```xml
-<ContentPage
-    x:Class="UIComponents.Samples.CircleSpinner.SpinnerDefault"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:UIComponents.Samples.CircleSpinner"
-    xmlns:sys="clr-namespace:System;assembly=netstandard"
-    xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-    xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core">
-    <ContentPage.BindingContext>
-        <local:SpinnerViewModel />
-    </ContentPage.BindingContext>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:tizen="clr-namespace:Xamarin.Forms.PlatformConfiguration.TizenSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="WearableUIGallery.TC.ContentButtonTestPage">
     <ContentPage.Content>
-        <StackLayout Padding="0,50,0,0" Orientation="Vertical">
-            <Label
-                FontAttributes="Bold"
-                FontSize="11"
-                HorizontalTextAlignment="Center"
-                Text="Title"
-                TextColor="#0FB4EF" />
-            <Label
-                FontSize="8"
-                HorizontalTextAlignment="Center"
-                Text="unit"
-                TextColor="White" />
-            <w:CircleStepper
-                x:Name="stepper"
-                HorizontalOptions="CenterAndExpand"
-                Increment="7.5"
-                LabelFormat="%1.1f"
-                MarkerColor="Coral"
-                Maximum="99.0"
-                Minimum="9.0"
-                Value="{Binding Value}" />
-            <Button Command="{Binding ButtonPressedExit}" Text="OK" tizen:VisualElement.Style="{x:Static tizen:ButtonStyle.Bottom}" />
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <Label x:Name="label"
+                   HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                   Text="Test"/>
+            <w:ContentButton x:Name="button"
+                             Clicked="OnButtonClicked"
+                             Pressed="OnButtonPressed"
+                             Released="OnButtonReleased"
+                             Command="{Binding ClickCommand}">
+                <w:ContentButton.Content>
+                    <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Image x:Name="buttonBg" Source="button_bg.png" Opacity="0.25" Aspect="AspectFill" tizen:Image.BlendColor="Transparent" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        <Image x:Name="buttonBorder" Source="button_border.png" Aspect="AspectFill" tizen:Image.BlendColor="DarkGreen" AbsoluteLayout.LayoutBounds=".5,.5,89,66" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        <Image x:Name="buttonIcon" Source="home.png" tizen:Image.BlendColor="DarkGreen" AbsoluteLayout.LayoutBounds=".5,.5,36,36" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    </AbsoluteLayout>
+                </w:ContentButton.Content>
+            </w:ContentButton>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

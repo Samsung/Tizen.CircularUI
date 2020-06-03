@@ -4,8 +4,9 @@ summary: IndexPage control guide
 ---
 # IndexPage
 
-> :warning: **IndexPage is obsolete as of version 1.5.0.**
-> 
+> [!WARNING]
+> **IndexPage is obsolete as of version 1.5.0.**
+>
 > Please use `Xamarin.Forms.CarouselView` with `Xamarin.Forms.IndicatorView` or `Xamarin.Forms.CarouselPage` instead.
 >
 
