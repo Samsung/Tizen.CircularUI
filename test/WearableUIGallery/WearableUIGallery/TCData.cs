@@ -26,6 +26,19 @@ namespace WearableUIGallery
         static TCData()
         {
             TCs = new ObservableCollection<TCDescribe>();
+            TCs.Add(new TCDescribe
+            {
+                Title = "CellTest",
+                Class = new TCTypes
+                {
+                    new TCDescribe { Title = "CheckCell", Class = typeof(TCCheckCell) },
+                    new TCDescribe { Title = "Check2TextCell", Class = typeof(TCCheck2TextCell) },
+                    new TCDescribe { Title = "RadioCell", Class = typeof(TCRadioCell) },
+                    new TCDescribe { Title = "Radio2TextCell", Class = typeof(TCRadio2TextCell) },
+                    new TCDescribe { Title = "Switch2TextCell", Class = typeof(TCSwitch2TextCell) },
+                    new TCDescribe { Title = "SingleTextCell", Class = typeof(TCSingleTextCell) },
+                }
+            });
             TCs.Add(new TCDescribe { Title = "ContentButtonTest", Class = typeof(ContentButtonTestPage) });
             TCs.Add(new TCDescribe { Title = "CircleSurfaceView", Class = typeof(TCCircleSurfaceView) });
             TCs.Add(new TCDescribe
