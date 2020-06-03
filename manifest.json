@@ -44,7 +44,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Check.html",
-          "hash": "V9gZj1k9cTAfbAJ+lvUJhw=="
+          "hash": "Mu+sPk0xa8DecwCRmQOsZA=="
         }
       },
       "is_incremental": false,
@@ -92,7 +92,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/CirclePage.html",
-          "hash": "1oEVvIeEa7LrY7s4Iakrew=="
+          "hash": "6K2Iugs9LZCM/720zVt8yQ=="
         }
       },
       "is_incremental": false,
@@ -147,12 +147,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "../guide/ContentButton.md",
       "output": {
         ".html": {
           "relative_path": "guide/ContentButton.html",
-          "hash": "dMqDjs3Dyjd/P0R5QYMnIg=="
+          "hash": "AmwxONXb54nHSbHXA194pg=="
         }
       },
       "is_incremental": false,
@@ -251,7 +254,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/IndexPage.html",
-          "hash": "SCcTbNj0VShs8siW7vND5Q=="
+          "hash": "3R9yO7h0Bun4l9EGUfAZqw=="
         }
       },
       "is_incremental": false,
@@ -395,7 +398,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/Radio.html",
-          "hash": "GsyAjeq/nsm9nQzHfJhstA=="
+          "hash": "OuNBi/er2S01W7ZXy8oEKA=="
         }
       },
       "is_incremental": false,
@@ -1819,7 +1822,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "06HqRzwQ7MBHracmvXFbfA=="
+          "hash": "vasPndhmyId1VW1L7Ee73g=="
         }
       },
       "is_incremental": false,
@@ -1857,7 +1860,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "GeUlir0c7wFUqg3H2GEzSg=="
+          "hash": "lNEj0MsMZyNZ5p12UivKTQ=="
         }
       },
       "is_incremental": false,
