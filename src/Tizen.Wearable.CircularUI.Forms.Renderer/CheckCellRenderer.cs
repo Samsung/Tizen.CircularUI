@@ -68,6 +68,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 				check.SetBinding(CheckBox.ColorProperty, new Binding(CheckCell.OnColorProperty.PropertyName));
 				var nativeView = Platform.GetOrCreateRenderer(check).NativeView;
 				nativeView.PropagateEvents = false;
+
+				_cacheCandidate[nativeView] = check;
+				nativeView.Deleted += (sender, e) =>
+				{
+					_cacheCandidate.Remove(sender as EvasObject);
+				};
 				return nativeView;
 			}
 			return null;
