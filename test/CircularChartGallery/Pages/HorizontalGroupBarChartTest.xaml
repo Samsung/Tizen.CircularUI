@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.HorizontalGroupBarChartTest">
+    <c:CirclePage.BindingContext>
+        <local:MainPageModel/>
+    </c:CirclePage.BindingContext>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="GroupBarChartTest Default"
+                    FontSize="Micro"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="GroupDataCount = 3, Maximum = 10, BarWidth=default"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="horizontalGroupBarTest1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarChartType="Horizontal"
+                    BarTopRadius="3.5"
+                    BarBottomRadius="3.5"
+                    Maximum="10"
+                    Data="{Binding GroupDummyData}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    WidthRequest="200"
+                    HeightRequest="300"/>
+                <Label
+                    Text="GroupDataCount = 6, Maximum = 10, BarWidth=15"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:GroupBarChartView
+                    x:Name="horizontalGroupBarTest2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarChartType="Horizontal"
+                    BarWidth="15"
+                    BarTopRadius="3.5"
+                    BarBottomRadius="3.5"
+                    Maximum="10"
+                    Data="{Binding GroupDummyData2}"
+                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    WidthRequest="200"
+                    HeightRequest="300"/>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>

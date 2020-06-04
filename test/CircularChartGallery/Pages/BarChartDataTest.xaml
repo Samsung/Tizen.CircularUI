@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             xmlns:converters="clr-namespace:CircularUIChartGallery.Converters"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.BarChartDataTest">
+    <c:CirclePage.BindingContext>
+        <local:ChartDataTestModel/>
+    </c:CirclePage.BindingContext>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="Data add remove test"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:BarChartView
+                    x:Name="lineChart"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    Data="{Binding WeeklyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    HorizontalOptions ="CenterAndExpand">
+                    <Button Text="Add"
+                        AutomationId="add"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="130"
+                        HeightRequest="30"
+                        CommandParameter="{x:Reference lineChart}"
+                        Command="{Binding AddDataItemCommand}" />
+                    <Button Text="Remove"
+                        AutomationId="remove"
+                        FontSize="Micro"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="130"
+                        HeightRequest="30"
+                        CommandParameter="{x:Reference lineChart}"
+                        Command="{Binding RemoveDataItemCommand}" />
+                </StackLayout>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>

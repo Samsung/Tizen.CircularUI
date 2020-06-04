@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             xmlns:converters="clr-namespace:CircularUIChartGallery.Converters"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.BarChartAxisTest">
+    <c:CirclePage.BindingContext>
+        <local:MainPageModel/>
+    </c:CirclePage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:MontlyDataColorConverter x:Key="MontlyDataColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="Major Axis Line and Category lable"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:BarChartView
+                    x:Name="axisBar1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="20"
+                    Maximum="10"
+                    Data="{Binding ColorDummyData}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="Major/Mior Axis and Reference line"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:BarChartView
+                    x:Name="axisBar2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="50"
+                    Maximum ="10"
+                    Minimum="0"
+                    Data="{Binding ColorDummyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="Category label empty, bar color converter"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:BarChartView
+                    x:Name="axisBar3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BarWidth="8"
+                    Maximum ="3000"
+                    Minimum="500"
+                    Data="{Binding MonthlyDummyData, Converter={StaticResource MontlyDataColorConverter}}"
+                    AxisOption="{Binding MontlyMajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Button
+                    Text="change data"
+                    FontSize="Micro"
+                    Margin="0, 20, 0, 50"
+                    Command="{Binding MontlyDataChangeCommand}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>
