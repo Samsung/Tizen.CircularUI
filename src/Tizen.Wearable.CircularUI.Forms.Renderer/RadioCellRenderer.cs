@@ -59,32 +59,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 		{
 			if (part == RadioPart)
 			{
-				var radioButton = new RadioButton()
-				{
-					BindingContext = cell,
-					Parent = cell.Parent
-				};
-				radioButton.SetBinding(RadioButton.IsCheckedProperty, new Binding(RadioCell.OnProperty.PropertyName, BindingMode.OneTime));
-				radioButton.SetBinding(RadioButton.GroupNameProperty, new Binding(RadioCell.GroupNameProperty.PropertyName));
-				radioButton.CheckedChanged += (s, e) =>
-				{
-					cell.SetValueFromRenderer(RadioCell.OnProperty, e.Value);
-				};
-				var nativeView = Platform.GetOrCreateRenderer(radioButton).NativeView;
+				var nativeView = Platform.GetOrCreateRenderer(((RadioCell)cell).RadioButton).NativeView;
 				nativeView.PropagateEvents = false;
 				return nativeView;
 			}
 			return null;
-		}
-
-		protected override EvasObject OnReusableContent(Cell cell, string part, EvasObject old)
-		{
-			if (!_cacheCandidate.ContainsKey(old))
-			{
-				return null;
-			}
-			_cacheCandidate[old].BindingContext = cell;
-			return old;
 		}
 
 		protected override bool OnCellPropertyChanged(Cell cell, string property, Dictionary<string, EvasObject> realizedView)
