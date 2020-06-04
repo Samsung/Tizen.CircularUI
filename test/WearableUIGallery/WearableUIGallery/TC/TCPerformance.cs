@@ -18,7 +18,8 @@ using System;
 using System.Collections.Generic;
 using WearableUIGallery.Extensions;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Forms;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace WearableUIGallery.TC
 {
@@ -29,7 +30,6 @@ namespace WearableUIGallery.TC
     public class TCPerformance : ContentPage
     {
         const int TestItemMax = 2000;
-        const double TimeSet = 5.0;
 
         class Data
         {
@@ -40,24 +40,130 @@ namespace WearableUIGallery.TC
             }
         }
 
-        InformationPopup _popUp;
-
         IList<Data> _testData = new List<Data>();
         RenderCircleListView _listView;
-        IGlobalScrollConfig GlobalScrollConfig;
-        IEcoreAnimator EcoreAnimator;
+        Button _startButton;
+        bool _started;
 
-        double _enteringSpeed;
-        double _startTime;
+        Stopwatch _stopWatch = new Stopwatch();
+        Stopwatch _animationStopWatch = new Stopwatch();
         int _frameCount;
-        int _ecoreCount;
-        double _frameSet;
+        int _animationCount;
 
-        bool _startCal;
+        public TCPerformance()
+        {
+            InitializeListItem();
 
-        Data ItemTarget => _testData[999];
+            int index = 0;
+            _listView = new RenderCircleListView
+            {
+                ItemsSource = _testData,
+                ItemTemplate = new DataTemplate(() =>
+                {
+                    var cell = new MyViewCell
+                    {
+                        Text = _testData[index++ % _testData.Count].Label
+                    };
+                    return cell;
+                }),
+            };
+            _listView.RenderPost += OnRenderPost;
 
-        private void InitializeListItem()
+
+            _startButton = new Button
+            {
+                Text = "Start",
+            };
+
+            _startButton.Clicked += OnStarted;
+
+            Content = new StackLayout
+            {
+                Children =
+                {
+                    _startButton,
+                    _listView,
+                }
+            };
+        }
+
+        void OnRenderPost(object sender, EventArgs e)
+        {
+            if (_started)
+            {
+                if (_frameCount == 0)
+                {
+                    _stopWatch.Start();
+                }
+                _frameCount++;
+            }
+        }
+
+        private void OnAnimation(object sender, EcoreAnimatorEventArgs e)
+        {
+            if (_started)
+            {
+                if (_animationCount == 0)
+                {
+                    _animationStopWatch.Start();
+                }
+                _animationCount++;
+            }
+        }
+
+        async void OnStarted(object sender, EventArgs e)
+        {
+            TaskCompletionSource<bool> tcs = null;
+            _startButton.IsEnabled = false;
+            _listView.ScrollTo(_testData[0], ScrollToPosition.MakeVisible, false);
+            await Task.Delay(100);
+
+            var animator = DependencyService.Get<IEcoreAnimator>(DependencyFetchTarget.GlobalInstance);
+
+            _started = true;
+            _frameCount = 0;
+            _animationCount = 0;
+            object target = null;
+
+            _stopWatch.Reset();
+            _animationStopWatch.Reset();
+            _listView.ItemAppearing += itemAppearing;
+            animator.Animation += OnAnimation;
+
+            for (int i = 10; i < 300; i += 20)
+            {
+                tcs = new TaskCompletionSource<bool>();
+                target = _testData[i];
+                _listView.ScrollTo(target, ScrollToPosition.MakeVisible, true);
+                await tcs.Task;
+            }
+
+            _listView.ItemAppearing -= itemAppearing;
+            animator.Animation -= OnAnimation;
+
+            _stopWatch.Stop();
+            _animationStopWatch.Stop();
+
+            if (_stopWatch.ElapsedMilliseconds > 0)
+            {
+                double fps = (_frameCount * 1000.0) / _stopWatch.ElapsedMilliseconds;
+                double aniFps = (_animationCount * 1000.0) / _animationStopWatch.ElapsedMilliseconds;
+                _ = DisplayAlert("FPS", $"EvasFPS {fps:f2} fps \nAnimator FPS :  {aniFps:f2} fps", "OK");
+            }
+
+            _started = false;
+            _startButton.IsEnabled = true;
+
+            void itemAppearing(object s, ItemVisibilityEventArgs evt)
+            {
+                if (evt.Item == target)
+                {
+                    tcs.TrySetResult(true);
+                }
+            }
+        }
+
+        void InitializeListItem()
         {
             string[] arrLabel = {
                 "Time Warner Cable(Cable)",
@@ -77,107 +183,6 @@ namespace WearableUIGallery.TC
             {
                 _testData.Add(new Data(arrLabel[i % 10]));
             }
-        }
-
-        public TCPerformance()
-        {
-            Console.WriteLine($"TCPerformance");
-            EcoreAnimator = DependencyService.Get<IEcoreAnimator>(DependencyFetchTarget.NewInstance);
-            GlobalScrollConfig = DependencyService.Get<IGlobalScrollConfig>(DependencyFetchTarget.NewInstance);
-
-            InitializeListItem();
-
-            int index = 0;
-            _listView = new RenderCircleListView
-            {
-                ItemsSource = _testData,
-                ItemTemplate = new DataTemplate(() =>
-                {
-                    var cell = new MyViewCell
-                    {
-                        Text = _testData[index++].Label
-                    };
-                    return cell;
-                }),
-            };
-
-            _popUp = new InformationPopup();
-            _popUp.BackButtonPressed += (s, e) =>
-            {
-                _popUp.Dismiss();
-            };
-
-            // start performance check
-            _listView.Changed += OnStartCalculator;
-            _listView.ScrollStarted += OnStartCheckFps;
-            _listView.ScrollStopped += StopCheckFps;
-
-
-            Content = _listView;
-        }
-
-        private void StopCheckFps(object sender, EventArgs e)
-        {
-            Console.WriteLine($"StopCheckFps _enteringSpeed:{_enteringSpeed} ms");
-            double endTime = EcoreAnimator.CurrentTime;
-            double span = endTime - _startTime;
-            double frameFPS = _frameCount / span;
-            double animatorFPS = _ecoreCount / span;
-            Console.WriteLine($"_startTime:{_startTime}, endTime:{endTime} , , AnimatorFPS:{animatorFPS} fps, FrameFPS:{frameFPS} fps");
-            _listView.RenderPost -= OnRenderPost;
-            EcoreAnimator.Animation -= OnEcoreAnimationCheck;
-            _listView.ScrollStarted -= OnStartCheckFps;
-            _listView.ScrollStopped -= StopCheckFps;
-
-            GlobalScrollConfig.BringInScrollFriction = _frameSet;
-
-            _popUp.Text = string.Format("<span color=#FFFFFF , font_size=27> Entering Speed : {0:f1} msec<br>Animator FPS : {1:f1} fps<br>Evas FPS : {2:f1} fps</span>", _enteringSpeed, animatorFPS, frameFPS);
-            _popUp.Show();
-        }
-
-        private void OnStartCheckFps(object sender, EventArgs e)
-        {
-            _ecoreCount = 0;
-            _startTime = EcoreAnimator.CurrentTime;
-            EcoreAnimator.Animation += OnEcoreAnimationCheck;
-            _listView.RenderPost += OnRenderPost;
-            Console.WriteLine($"OnStartCheckFps  _frameCount:{_frameCount}, _ecoreCount:{_ecoreCount}");
-        }
-
-        private void OnRenderPost(object sender, EventArgs e)
-        {
-            _frameCount++;
-            Console.WriteLine($"OnRenderPost  _frameCount:{_frameCount}");
-        }
-
-        private void OnEcoreAnimationCheck(object sender, EcoreAnimatorEventArgs e)
-        {
-            _ecoreCount++;
-            Console.WriteLine($"OnEcoreAnimationCheck  _ecoreCount:{_ecoreCount}");
-        }
-
-        private void OnStartCalculator(object sender, EventArgs e)
-        {
-            if (_startCal) return;
-            _startCal = true;
-            Console.WriteLine($"OnStartCalculator");
-            _enteringSpeed = EcoreAnimator.CurrentTime;
-            Console.WriteLine($" _enteringSpeed:{_enteringSpeed}");
-            _listView.Changed -= OnStartCalculator;
-            _listView.RenderPost += OnCheckEnteringSpeed;
-        }
-
-        private void OnCheckEnteringSpeed(object sender, EventArgs e)
-        {
-            _listView.RenderPost -= OnCheckEnteringSpeed;
-            double currentTime = EcoreAnimator.CurrentTime;
-            _enteringSpeed = (currentTime - _enteringSpeed) * 1000.0;
-            Console.WriteLine($"OnCheckEnteringSpeed  currentTime:{currentTime}, _enteringSpeed:{_enteringSpeed}");
-
-            _frameSet = GlobalScrollConfig.BringInScrollFriction;
-            GlobalScrollConfig.BringInScrollFriction = TimeSet;
-            Console.WriteLine($"OnCheckEnteringSpeed  _frameSet:{_frameSet}, TimeSet:{TimeSet}");
-            _listView.ScrollTo(ItemTarget, ScrollToPosition.MakeVisible, true);
         }
     }
 }
