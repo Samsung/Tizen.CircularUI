@@ -3956,6 +3956,19 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.RadioCell
   fullName: Tizen.Wearable.CircularUI.Forms.RadioCell
   nameWithType: RadioCell
+- uid: Tizen.Wearable.CircularUI.Forms.RadioCell.#ctor
+  name: RadioCell()
+  href: api/Tizen.Wearable.CircularUI.Forms.RadioCell.html#Tizen_Wearable_CircularUI_Forms_RadioCell__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.RadioCell.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.RadioCell.RadioCell()
+  nameWithType: RadioCell.RadioCell()
+- uid: Tizen.Wearable.CircularUI.Forms.RadioCell.#ctor*
+  name: RadioCell
+  href: api/Tizen.Wearable.CircularUI.Forms.RadioCell.html#Tizen_Wearable_CircularUI_Forms_RadioCell__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.RadioCell.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.RadioCell.RadioCell
+  nameWithType: RadioCell.RadioCell
 - uid: Tizen.Wearable.CircularUI.Forms.RadioCell.GroupName
   name: GroupName
   href: api/Tizen.Wearable.CircularUI.Forms.RadioCell.html#Tizen_Wearable_CircularUI_Forms_RadioCell_GroupName
@@ -5765,19 +5778,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnGetText
   nameWithType: RadioCellRenderer.OnGetText
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnReusableContent(Cell,System.String,EvasObject)
-  name: OnReusableContent(Cell, String, EvasObject)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_RadioCellRenderer_OnReusableContent_Cell_System_String_EvasObject_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnReusableContent(Cell,System.String,EvasObject)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnReusableContent(Cell, System.String, EvasObject)
-  nameWithType: RadioCellRenderer.OnReusableContent(Cell, String, EvasObject)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnReusableContent*
-  name: OnReusableContent
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_RadioCellRenderer_OnReusableContent_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnReusableContent
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.OnReusableContent
-  nameWithType: RadioCellRenderer.OnReusableContent
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.RadioPart
   name: RadioPart
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.RadioCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_RadioCellRenderer_RadioPart
