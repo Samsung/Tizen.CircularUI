@@ -199,6 +199,57 @@
                     AxisOption="{Binding CategoryOnlyAxisOption}"
                     WidthRequest="100"
                     HeightRequest="300"/>
+                <Label
+                    Text="Line Chart"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="LineTest1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LineMode="Straight"
+                    PointIsVisible="True"
+                    PointRadius="5"
+                    Data="{Binding DummyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+                <chart:LineChartView
+                    x:Name="LineTest2"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LineMode="Spline"
+                    LineWidth="5"
+                    PointIsVisible="True"
+                    PointRadius="5"
+                    Data="{Binding LineDummyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+                <Label
+                    Text="Multi-Line Chart"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="MultiLineTest1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    LineMode="Straight"
+                    PointIsVisible="True"
+                    PointRadius="5"
+                    Maximum="3000"
+                    Minimum="500"
+                    Data="{Binding LineMultiDummyData, Converter={StaticResource MontlyDataColorConverter}}"
+                    AxisOption="{Binding MontlyMajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
             </StackLayout>
         </c:CircleScrollView>
     </c:CirclePage.Content>

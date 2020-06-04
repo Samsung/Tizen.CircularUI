@@ -28,20 +28,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     public class DataItemGroup : INotifyPropertyChanged
     {
         IList<IDataItem> _dataItems;
-        Color _color;
+        Color _color = Color.Default;
         string _label;
 
         public DataItemGroup() 
         {
             _dataItems = new List<IDataItem>();
-            _color = Color.Default;
         }
 
         public DataItemGroup(IList<IDataItem> items, string label = null)
         {
             DataItems = items;
             Label = label;
-            _color = Color.Default;
         }
 
         public DataItemGroup(IList<double> values, string label = null)
