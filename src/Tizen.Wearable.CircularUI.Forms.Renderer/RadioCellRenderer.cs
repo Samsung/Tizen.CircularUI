@@ -27,8 +27,6 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 {
     public class RadioCellRenderer : CellRenderer
     {
-		readonly Dictionary<EvasObject, VisualElement> _cacheCandidate = new Dictionary<EvasObject, VisualElement>();
-
 		protected RadioCellRenderer(string style) : base(style)
 		{
 
