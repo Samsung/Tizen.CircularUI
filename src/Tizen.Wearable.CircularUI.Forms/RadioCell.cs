@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -74,5 +75,23 @@ namespace Tizen.Wearable.CircularUI.Forms
 		/// Triggered when the radio button has changed value.
 		/// </summary>
 		public event EventHandler<CheckedChangedEventArgs> OnChanged;
+
+
+		/// <summary>
+		/// Internal use only.
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public RadioButton RadioButton { get; }
+
+		public RadioCell()
+		{
+			RadioButton = new RadioButton()
+			{
+				Parent = this,
+				BindingContext = this,
+			};
+			RadioButton.SetBinding(RadioButton.IsCheckedProperty, new Binding(OnProperty.PropertyName));
+			RadioButton.SetBinding(RadioButton.GroupNameProperty, new Binding(GroupNameProperty.PropertyName));
+		}
 	}
 }
