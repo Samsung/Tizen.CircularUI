@@ -14,43 +14,29 @@
  * limitations under the License.
  */
 
-using Xamarin.Forms;
-
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
+
     /// <summary>
-    /// The DataItem class represents a single data in the chart.
+    /// Enumeration for legend position of PieChartView and DonutChartView
     /// </summary>
-    public class DataItem : IDataItem
+    public enum LegendPosition
     {
-        public DataItem()
-        {
-        }
-
-        public DataItem(double value)
-        {
-            Value = value;
-        }
-
         /// <summary>
-        /// Gets or sets a value.
+        /// The left position.
         /// </summary>
-        public double Value { get; set; }
-
+        Left,
         /// <summary>
-        /// Gets or sets a color of each DataItem.
-        /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
+        /// The right position.
         /// </summary>
-        public Color Color { get; set; } = Color.Default;
-
+        Right,
         /// <summary>
-        /// Gets or sets a value label of DataItem.
+        /// The top position.
         /// </summary>
-        public TextItem ValueLabel { get; set; }
-
+        Top,
         /// <summary>
-        /// Gets or sets a position of ValueLabel.
+        /// The bottom position.
         /// </summary>
-        public ValueLabelPosition ValueLabelPosition { get; set; } = ValueLabelPosition.End;
+        Bottom,
     }
 }

@@ -15,42 +15,27 @@
  */
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// The DataItem class represents a single data in the chart.
+    /// The DonutChartView is a circular chart that shows information as a donut divided into slices. 
     /// </summary>
-    public class DataItem : IDataItem
+    public class DonutChartView : PieChartView
     {
-        public DataItem()
+        /// <summary>
+        /// BindableProperty. Identifies the ThicknessRatio bindable property.
+        /// </summary>
+        public static readonly BindableProperty ThicknessRatioProperty = BindableProperty.Create(nameof(ThicknessRatio), typeof(double), typeof(DonutChartView), defaultValue: 0.5, coerceValue: (bo, v) => ((double)v).Clamp(0.2, 1));
+
+        /// <summary>
+        /// Gets or sets ratio of thickness.
+        /// </summary>
+        public double ThicknessRatio
         {
+            get { return (double)GetValue(ThicknessRatioProperty); }
+            set { SetValue(ThicknessRatioProperty, value); }
         }
-
-        public DataItem(double value)
-        {
-            Value = value;
-        }
-
-        /// <summary>
-        /// Gets or sets a value.
-        /// </summary>
-        public double Value { get; set; }
-
-        /// <summary>
-        /// Gets or sets a color of each DataItem.
-        /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
-        /// </summary>
-        public Color Color { get; set; } = Color.Default;
-
-        /// <summary>
-        /// Gets or sets a value label of DataItem.
-        /// </summary>
-        public TextItem ValueLabel { get; set; }
-
-        /// <summary>
-        /// Gets or sets a position of ValueLabel.
-        /// </summary>
-        public ValueLabelPosition ValueLabelPosition { get; set; } = ValueLabelPosition.End;
     }
 }

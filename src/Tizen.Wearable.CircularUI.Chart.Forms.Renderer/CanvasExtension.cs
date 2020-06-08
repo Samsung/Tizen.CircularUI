@@ -90,5 +90,19 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 canvas.DrawCircle(point.X, point.Y, size, paint);
             }
         }
+
+        internal static void DrawLegendText(this SKCanvas canvas, float x, float y, TextItem textItem)
+        {
+            using (var paint = new SKPaint())
+            {
+                paint.TextSize = (float)(XForms.ConvertToEflFontPoint(textItem.FontSize));
+                paint.IsAntialias = true;
+                var color = textItem.TextColor == Color.Default ? Color.White : textItem.TextColor;
+                paint.Color = color.ToSKColor();
+                paint.IsStroke = false;
+                var text = textItem.Text;
+                canvas.DrawText(text, x, y, paint);
+            }
+        }
     }
 }

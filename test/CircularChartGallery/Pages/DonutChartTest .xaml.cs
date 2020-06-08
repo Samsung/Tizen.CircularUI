@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 
-namespace Tizen.Wearable.CircularUI.Chart.Forms
+using Xamarin.Forms.Xaml;
+using Tizen.Wearable.CircularUI.Forms;
+
+namespace CircularUIChartGallery.Pages
 {
-    /// <summary>
-    /// Enumeration for position of ValueText.
-    /// </summary>
-    public enum ValueTextPosition
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DonutChartTest : CirclePage
     {
-        /// <summary>
-        /// The Start position. 
-        /// If a chart is BarChartView, Start position is bottom of bar.
-        /// </summary>
-        Start,
-        /// <summary>
-        /// The End position
-        /// If a chart is BarChartView, End position is top of bar.
-        /// </summary>
-        End,
+        public DonutChartTest()
+        {
+            InitializeComponent();
+        }
+
     }
 }

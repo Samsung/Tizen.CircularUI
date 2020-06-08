@@ -265,14 +265,14 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 using (var paint = new SKPaint())
                 {
-                    if (string.IsNullOrEmpty(e.ValueText.Text))
+                    if (string.IsNullOrEmpty(e.ValueLabel.Text))
                     {
                         return SKRect.Empty;
                     }
 
                     var bounds = new SKRect();
-                    var text = e.ValueText.Text;
-                    paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.ValueText.FontSize));
+                    var text = e.ValueLabel.Text;
+                    paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.ValueLabel.FontSize));
                     paint.MeasureText(text, ref bounds);
                     return bounds;
                 }
@@ -385,7 +385,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 }
 
                 x = _minorAxisSize.Width / 2;
-                canvas.DrawText(x, y, data.ValueText, isEndOfBoundX, isEndOfBoundY);
+                canvas.DrawText(x, y, data.ValueLabel, isEndOfBoundX, isEndOfBoundY);
             }
         }
 
@@ -567,17 +567,17 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 if (dataItem == null)
                     continue;
 
-                if (dataItem.ValueText != null && !string.IsNullOrEmpty(dataItem.ValueText.Text))
+                if (dataItem.ValueLabel != null && !string.IsNullOrEmpty(dataItem.ValueLabel.Text))
                 {
                     var x = points[i].X;
                     var y = points[i].Y - TextVerticalMargin - (float)(Element.PointIsVisible? Element.PointRadius : 0);
-                    if (y <= _topMargin + (float)XForms.ConvertToScaledPixel(dataItem.ValueText.FontSize))
+                    if (y <= _topMargin + (float)XForms.ConvertToScaledPixel(dataItem.ValueLabel.FontSize))
                     {
                         endOfBoundY = true;
                         y = points[i].Y + TextVerticalMargin + (float)(Element.PointIsVisible ? Element.PointRadius : 0);
                     }
 
-                    canvas.DrawText(x, y, dataItem.ValueText, false, endOfBoundY);
+                    canvas.DrawText(x, y, dataItem.ValueLabel, false, endOfBoundY);
                 }
             }
         }

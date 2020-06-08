@@ -250,6 +250,40 @@
                     AxisOption="{Binding MontlyMajorMinorAxisOption}"
                     WidthRequest="300"
                     HeightRequest="250"/>
+                <Label
+                    Text="Pie Chart test"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Left"
+                    ValueLabelFontSize="4"
+                    Data="{Binding PieDummyData}"
+                    CategoryLabels="{Binding WeeklyLabel}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="Donut Chart test"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:DonutChartView
+                    x:Name="donutChart1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Left"
+                    ValueLabelFontSize="4"
+                    Data="{Binding PieDummyData}"
+                    CategoryLabels="{Binding WeeklyLabel}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
             </StackLayout>
         </c:CircleScrollView>
     </c:CirclePage.Content>
