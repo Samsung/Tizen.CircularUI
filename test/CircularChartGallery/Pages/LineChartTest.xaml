@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             xmlns:converters="clr-namespace:CircularUIChartGallery.Converters"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.LineChartTest">
+    <c:CirclePage.BindingContext>
+        <local:MainPageModel/>
+    </c:CirclePage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:MontlyDataColorConverter x:Key="MontlyDataColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="LineMode = Straight Color = DataItemGroup.Color"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="LineTest1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LineMode="Straight"
+                    PointIsVisible="False"
+                    Data="{Binding DummyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+                <Label
+                    Text="Point visible, PointRadius = 5 "
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="LineTest2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LineMode="Straight"
+                    PointIsVisible="True"
+                    PointRadius="5"
+                    Data="{Binding DummyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+                <Label
+                    Text="LineMode = Spline, LineWidth = 5, Color = DataItem.Color"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="LineTest3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LineMode="Spline"
+                    LineWidth="5"
+                    PointIsVisible="True"
+                    PointRadius="5"
+                    Data="{Binding LineDummyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+                <Label
+                    Text="LineMode = Spline Color = DataItem.Color, Point Invisible"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="LineTest4"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    LineMode="Spline"
+                    LineWidth="3"
+                    Maximum ="3000"
+                    Minimum="500"
+                    PointIsVisible="false"
+                    Data="{Binding LineMonthlyDummyData1, Converter={StaticResource MontlyDataColorConverter}}"
+                    AxisOption="{Binding MontlyMajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+                <Label
+                    Text="LineMode = Straight Color = DataItem.Color"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="LineTest5"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    LineMode="Straight"
+                    LineWidth="3"
+                    PointRadius="5"
+                    Maximum ="3000"
+                    Minimum="500"
+                    Data="{Binding LineMonthlyDummyData1, Converter={StaticResource MontlyDataColorConverter}}"
+                    AxisOption="{Binding MontlyMajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="250"/>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>

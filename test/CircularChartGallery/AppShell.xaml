@@ -33,4 +33,11 @@
             <ShellContent ContentTemplate="{DataTemplate pages:HorizontalGroupBarChartTest}"/>
         </ShellSection>
     </FlyoutItem>
+    <FlyoutItem Route="LineChartTest" Title="Line Chart TC">
+        <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:LineChartTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:MultiLineChartTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:LineChartDataTest}"/>
+        </ShellSection>
+    </FlyoutItem>
 </Shell>

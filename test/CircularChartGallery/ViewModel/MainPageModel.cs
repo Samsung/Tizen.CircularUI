@@ -51,6 +51,14 @@ namespace CircularUIChartGallery.ViewModel
 
         public Data GroupDummyData2 { get; set; }
 
+        public Data LineDummyData { get; set; }
+
+        public Data LineMonthlyDummyData1 { get; set; }
+
+        public Data LineMonthlyDummyData2 { get; set; }
+
+        public Data LineMultiDummyData { get; set; }
+
         public IList<IDataItem> ReferenceData1 { get; set; }
 
         public IList<IDataItem> ReferenceData2 { get; set; }
@@ -87,9 +95,10 @@ namespace CircularUIChartGallery.ViewModel
             {
                 new DataItem { Value = 5, Color = Color.FromHex("#00C7FF") },
                 new DataItem { Value = 8, Color = Color.FromHex("#00C7FF") },
+                null,
                 new DataItem { Value = 4, Color = Color.FromHex("#A3B3BA"), ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.White }, ValueTextPosition = ValueTextPosition.Start },
                 new DataItem { Value = 9, Color = Color.FromHex("#4CBA2A"), ValueText = new TextItem { Text = "9", FontSize = 4, TextColor = Color.White }, ValueTextPosition = ValueTextPosition.Start },
-                new DataItem() { Value = 7, Color = Color.FromHex("#00C7FF") },
+                null,
                 new DataItem() { Value = 8, Color = Color.FromHex("#00C7FF") }
             };
 
@@ -248,6 +257,16 @@ namespace CircularUIChartGallery.ViewModel
             groupDataItemGroup6.Color = Color.Yellow;
             dataItemGroupList2.Add(groupDataItemGroup6);
 
+            //Single Line Chart dataset
+            var lineDataItemGroup = new LineDataItemGroup(colorDummyDataItems, "Weekly data with each color and forground color");
+            lineDataItemGroup.ForegroundColor = Color.LightSkyBlue.MultiplyAlpha(0.4);
+
+            var lineMonthlyDataItemGroup1 = new LineDataItemGroup(monthlyDummyData, "Montly data with each color and forground color");
+            lineMonthlyDataItemGroup1.ForegroundColor = Color.LightPink.MultiplyAlpha(0.4);
+
+            var lineMonthlyDataItemGroup2 = new LineDataItemGroup(monthlyDummyData2, "Montly data with each color and forground color");
+            lineMonthlyDataItemGroup2.ForegroundColor = Color.LightYellow.MultiplyAlpha(0.4);
+
             DummyData = new Data(dummyDataItemGroup);
             HRMDummyData = new Data(HRMDataItemGroup);
             ColorDummyData = new Data(colorDataItemGroup);
@@ -258,6 +277,15 @@ namespace CircularUIChartGallery.ViewModel
             var MontlyData1 = new Data(montlyDataItemGroup);
             var MontlyData2 = new Data(montlyDataItemGroup2);
             MonthlyDummyData = MontlyData1;
+
+            LineDummyData = new Data(lineDataItemGroup);
+            LineMonthlyDummyData1 = new Data(lineMonthlyDataItemGroup1);
+            LineMonthlyDummyData2 = new Data(lineMonthlyDataItemGroup2);
+
+            LineMultiDummyData = new Data();
+            LineMultiDummyData.DataItemGroups.Add(lineMonthlyDataItemGroup1);
+            LineMultiDummyData.DataItemGroups.Add(lineMonthlyDataItemGroup2);
+
 
             var option1 = new AxisOption(true, false);
             option1.CategoryLabels = WeeklyLabel;
