@@ -29,7 +29,7 @@
                     HorizontalOptions="CenterAndExpand"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="340"
                     HeightRequest="150"/>
                 <Label
@@ -45,7 +45,7 @@
                     BarWidth="7"
                     Maximum="10"
                     Data="{Binding GroupDummyData2}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="340"
                     HeightRequest="150"/>
                 <Label
@@ -61,7 +61,7 @@
                     BarWidth="15"
                     Maximum="10"
                     Data="{Binding GroupDummyData2}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="340"
                     HeightRequest="150"/>
             </StackLayout>

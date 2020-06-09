@@ -32,6 +32,12 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
             Value = value;
         }
 
+        public DataItem(double value, TextItem label)
+        {
+            Value = value;
+            Label = label;
+        }
+
         /// <summary>
         /// Gets or sets a value.
         /// </summary>
@@ -39,18 +45,23 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
 
         /// <summary>
         /// Gets or sets a color of each DataItem.
+        /// This property specifies color of each DataItem.
         /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
         /// </summary>
         public Color Color { get; set; } = Color.Default;
 
         /// <summary>
         /// Gets or sets a value label of DataItem.
+        /// This property specifies the label for displaying the value of DataItem.
         /// </summary>
         public TextItem ValueLabel { get; set; }
 
         /// <summary>
-        /// Gets or sets a position of ValueLabel.
+        /// Gets or sets a label of each DataItem.
+        /// This property specifies the label of category in BarCharView and LineChartView. 
+        /// Category label displays data's category in major axis.
+        /// This property specifies the label of Legend in PieChartView and DonutChartView.
         /// </summary>
-        public ValueLabelPosition ValueLabelPosition { get; set; } = ValueLabelPosition.End;
+        public TextItem Label { get; set; }
     }
 }

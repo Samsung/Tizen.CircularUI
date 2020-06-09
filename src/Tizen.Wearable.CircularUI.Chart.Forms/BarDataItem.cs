@@ -31,9 +31,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         {
         }
 
+        public BarDataItem(double value, TextItem label) : base(value, label)
+        {
+        }
+
         /// <summary>
         /// Gets or sets a color of bar background.
         /// </summary>
         public Color BarBackgroundColor { get; set; } = Color.Transparent;
+
+        /// <summary>
+        /// Gets or sets a position of ValueLabel.
+        /// </summary>
+        public ValueLabelPosition ValueLabelPosition { get; set; } = ValueLabelPosition.End;
     }
 }

@@ -39,9 +39,8 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         SKCanvas _canvas;
         SKSize _canvasSize;
-        int _categoryCount;
         int _categoryLabelCount;
-        int _maxDataItemCount;
+        int _dataCount;
         int _lineCount;
         float _topMargin;
 
@@ -128,19 +127,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 return;
             }
 
-            if (Element.AxisOption.IsVisibleOfMajorAxisLine == false &&
-                Element.AxisOption.IsVisibleOfMinorAxisLine == false &&
-                Element.AxisOption.IsVisibleOfReferenceLabel == false &&
-                Element.AxisOption.CategoryLabels == null)
-            {
-                _majorAxisSize = new SKSize(0, 0);
-                _minorAxisSize = new SKSize(0, 0);
-                _referenceItemSize = new SKSize(0, 0);
-            }
-            else
-            {
-                CalculateAxisSize();
-            }
+            CalculateAxisSize();
 
             var itemSize = CalculateItemSize();
             if (Element.AxisOption.IsVisibleOfMajorAxisLine)
@@ -184,11 +171,11 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected virtual void GenerateDataTable()
         {
-            _dataTable = new IDataItem[_lineCount, _categoryCount];
+            _dataTable = new IDataItem[_lineCount, _dataCount];
             for (int i = 0; i < _lineCount; i++)
             {
                 var items = Element.Data.DataItemGroups[i].DataItems;
-                for (int j = 0; j < _categoryCount; j++)
+                for (int j = 0; j < _dataCount; j++)
                 {
                     if( j >= items.Count)
                     {
@@ -214,10 +201,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 _minorAxisSize.Width = AxisLineSize;
             }
 
-            if (Element.AxisOption.CategoryLabels != null && Element.AxisOption.CategoryLabels.Count > 0)
-            {
-                CalculateCategoryItemSize();
-            }
+            CalculateCategoryItemSize();
 
             if (Element.AxisOption.IsVisibleOfReferenceLabel)
             {
@@ -227,15 +211,17 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         private IEnumerable<SKRect> MeasureCategoryLabels()
         {
-            return Element.AxisOption.CategoryLabels.Select(e =>
+            _categoryLabelCount = 0;
+            return Element.Data.DataItemGroups[0].DataItems.Select(e =>
             {
                 using (var paint = new SKPaint())
                 {
-                    if (string.IsNullOrEmpty(e.Label.Text))
+                    if (e == null || e.Label == null || string.IsNullOrEmpty(e.Label.Text))
                     {
                         return SKRect.Empty;
                     }
 
+                    _categoryLabelCount++;
                     var bounds = new SKRect();
                     var text = e.Label.Text;
                     paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.Label.FontSize));
@@ -247,12 +233,18 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         private void CalculateCategoryItemSize()
         {
+            float maxLabelWidth = 0;
+            float maxLabelHeight = 0;
             var categoryLabelSizes = MeasureCategoryLabels();
-            var maxLabelWidth = categoryLabelSizes.Max(x => x.Width);
-            var maxLabelHeight = categoryLabelSizes.Max(x => x.Height);
+            if (categoryLabelSizes.Count() > 0)
+            {
+                maxLabelWidth = categoryLabelSizes.Max(x => x.Width);
+                maxLabelHeight = categoryLabelSizes.Max(x => x.Height);
+            }
+
             var lineSize = Element.AxisOption.IsVisibleOfMajorAxisLine ? AxisLineSize : 0;
             _majorAxisSize.Width = _canvasSize.Width - _minorAxisSize.Width;
-            _majorAxisSize.Height = maxLabelHeight + TextVerticalMargin * 2 + lineSize;
+            _majorAxisSize.Height = maxLabelHeight == 0 ? maxLabelHeight + lineSize : maxLabelHeight + TextVerticalMargin * 2 + lineSize;
             if (Element.AxisOption.IsVisibleOfReferenceLabel)
             {
                 _minorAxisSize.Height = _canvasSize.Height - _majorAxisSize.Height;
@@ -294,18 +286,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         {
             var dataSetCount = Element.Data.DataItemGroups.Count;
             _lineCount = Math.Min(dataSetCount, 3);
+            _dataCount = 0;
 
             for (int i = 0; i < _lineCount; i++)
             {
                 var itemCount = Element.Data.DataItemGroups[i].DataItems?.Count ?? 0;
-                _maxDataItemCount = Math.Max(_maxDataItemCount, itemCount);
+                _dataCount = Math.Max(_dataCount, itemCount);
             }
 
-            _categoryLabelCount = Element.AxisOption.CategoryLabels?.Count ?? 0;
-            _categoryCount = Math.Max(_categoryLabelCount, _maxDataItemCount);
-
             _topMargin = Element.PointIsVisible ? (float)Element.PointRadius : 0;
-            var w = (int)(_canvasSize.Width - _minorAxisSize.Width) / _categoryCount;
+            var w = _dataCount != 0 ? (int)(_canvasSize.Width - _minorAxisSize.Width) / _dataCount : _canvasSize.Width - _minorAxisSize.Width;
             var h = _canvasSize.Height - _majorAxisSize.Height - _topMargin;
             return new SKSize(w, h);
         }
@@ -314,7 +304,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         {
             var result = new List<SKPoint>();
             float yAxisWidth = _minorAxisSize.Width;
-            for (int i = 0; i < _categoryCount; i++)
+            for (int i = 0; i < _dataCount; i++)
             {
                 var x = yAxisWidth + (itemSize.Width / 2) + itemSize.Width * i;
                 double value = _dataTable[lineIndex, i] != null ? Math.Abs(_dataTable[lineIndex, i].Value) : 0;
@@ -346,18 +336,14 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected virtual void DrawCategoryLabels(SKCanvas canvas, SKSize itemSize)
         {
-            TextItem label;
-            int index;
-
-            for (int i = 0; i < _categoryLabelCount; i++)
+            for (int i = 0; i < _dataCount; i++)
             {
-                var categoryLabel = Element.AxisOption.CategoryLabels[i];
-                label = categoryLabel.Label;
-                index = categoryLabel.ItemIndex != -1 && categoryLabel.ItemIndex < _categoryCount ? categoryLabel.ItemIndex : i;
-                if (string.IsNullOrEmpty(label.Text))
+                var dataItem = Element.Data.DataItemGroups[0].DataItems[i];
+                var label = dataItem?.Label;
+                if (label == null || string.IsNullOrEmpty(label.Text))
                     continue;
 
-                var x = _minorAxisSize.Width + (itemSize.Width / 2) + itemSize.Width * index;
+                var x = _minorAxisSize.Width + (itemSize.Width / 2) + itemSize.Width * i;
                 var y = _canvasSize.Height - (_majorAxisSize.Height / 2);
                 canvas.DrawText(x, y, label);
             }
@@ -472,6 +458,9 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
 
         protected void DrawLines(int lineIndex, SKCanvas canvas, IList<SKPoint> points, SKSize itemSize)
         {
+            if (points.Count == 0) 
+                return;
+
             bool hasEntryColor = false;
             int prevIndex = -1;
             SKPoint first = new SKPoint(0, 0);
@@ -561,7 +550,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         protected void DrawValueLabels(int lineIndex, SKCanvas canvas, IList<SKPoint> points)
         {
             bool endOfBoundY = false;
-            for (int i = 0; i < _categoryCount; i++)
+            for (int i = 0; i < _dataCount; i++)
             {
                 var dataItem = _dataTable[lineIndex, i];
                 if (dataItem == null)

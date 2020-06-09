@@ -28,6 +28,17 @@ namespace CircularUIChartGallery.ViewModel
     {
         int _index;
         double[] value = new double[7] {5, 3, 6, 9, 8, 10, 2};
+        TextItem[] labels = new TextItem[]
+        {
+            new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FF3A3D") },
+            new TextItem { Text = "M", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") },
+            new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") },
+            new TextItem { Text = "W", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") },
+            new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") },
+            new TextItem { Text = "F", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") },
+            new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#2176FF") }
+        };
+
         Data _weeklyData;
         DataItemGroup _weeklyDataItemGroup;
 
@@ -57,8 +68,6 @@ namespace CircularUIChartGallery.ViewModel
 
         public IList<IDataItem> ReferenceData { get; set; }
 
-        public IList<CategoryLabel> WeeklyLabel { get; set; }
-
         public AxisOption MajorMinorAxisOption { get; set; }
 
         public ICommand AddDataItemCommand { get; }
@@ -70,19 +79,13 @@ namespace CircularUIChartGallery.ViewModel
             _index = 0;
             WeeklyDataItemGroup = new DataItemGroup();
             WeeklyDataItemGroup.Color = Color.SkyBlue;
+            for(int i = 0; i < 7; i++)
+            {
+                WeeklyDataItemGroup.DataItems.Add(new DataItem(0, labels[i])); // initialize data
+            }
+
             WeeklyData = new Data();
             WeeklyData.DataItemGroups.Add(WeeklyDataItemGroup);
-
-            WeeklyLabel = new List<CategoryLabel>
-            {
-                new CategoryLabel{ItemIndex = 1,  Label = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FF3A3D") } },
-                new CategoryLabel{ItemIndex = 2,  Label = new TextItem { Text = "M", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{ItemIndex = 3,  Label = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{ItemIndex = 4,  Label = new TextItem { Text = "W", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{ItemIndex = 5,  Label = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{ItemIndex = 6,  Label = new TextItem { Text = "F", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } },
-                new CategoryLabel{ItemIndex = 7,  Label = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") } }
-            };
 
             ReferenceData = new List<IDataItem>
             {
@@ -92,7 +95,6 @@ namespace CircularUIChartGallery.ViewModel
             };
 
             var option = new AxisOption(true, true, true, true);
-            option.CategoryLabels = WeeklyLabel;
             option.ReferenceDataItems = ReferenceData;
             option.AxisLineColor = Color.White;
             MajorMinorAxisOption = option;
@@ -106,7 +108,15 @@ namespace CircularUIChartGallery.ViewModel
         {
             if (_index > 6) return;
 
-            WeeklyDataItemGroup.DataItems.Add(new DataItem(value[_index]));
+            if (WeeklyDataItemGroup.DataItems.Count == 7)
+            {
+                WeeklyDataItemGroup.DataItems[_index].Value = value[_index];
+            }
+            else
+            {
+                WeeklyDataItemGroup.DataItems.Add(new DataItem(value[_index], labels[_index]));
+            }
+
             Console.WriteLine($"AddDataItem index:{_index}, value:{value[_index]}");
             _index++;
             var chart = sender as ChartView;

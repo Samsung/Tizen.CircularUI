@@ -31,8 +31,7 @@
                     Maximum="10"
                     LegendPosition="Left"
                     ThicknessRatio="0.2"
-                    Data="{Binding PieDummyData}"
-                    CategoryLabels="{Binding WeeklyLabel}"
+                    Data="{Binding WeeklyDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
@@ -48,7 +47,7 @@
                     Maximum="10"
                     LegendPosition="Left"
                     ThicknessRatio="0.4"
-                    Data="{Binding PieDummyData}"
+                    Data="{Binding WeeklyDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
@@ -64,7 +63,7 @@
                     Maximum="10"
                     LegendPosition="Left"
                     ThicknessRatio="0.5"
-                    Data="{Binding PieDummyData}"
+                    Data="{Binding WeeklyDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
@@ -80,7 +79,7 @@
                     Maximum="10"
                     LegendPosition="Left"
                     ThicknessRatio="0.9"
-                    Data="{Binding PieDummyData}"
+                    Data="{Binding WeeklyDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
@@ -96,7 +95,7 @@
                     Maximum="10"
                     LegendPosition="Left"
                     ThicknessRatio="1.0"
-                    Data="{Binding PieDummyData}"
+                    Data="{Binding WeeklyDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
             </StackLayout>

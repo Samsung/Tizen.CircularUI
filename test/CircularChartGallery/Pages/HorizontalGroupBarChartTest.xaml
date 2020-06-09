@@ -32,7 +32,7 @@
                     BarBottomRadius="3.5"
                     Maximum="10"
                     Data="{Binding GroupDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="200"
                     HeightRequest="300"/>
                 <Label
@@ -51,7 +51,7 @@
                     BarBottomRadius="3.5"
                     Maximum="10"
                     Data="{Binding GroupDummyData2}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="200"
                     HeightRequest="300"/>
             </StackLayout>
