@@ -40,4 +40,10 @@
             <ShellContent ContentTemplate="{DataTemplate pages:LineChartDataTest}"/>
         </ShellSection>
     </FlyoutItem>
+    <FlyoutItem Route="PieChartTest" Title="Pie Donut Chart TC">
+        <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:PieChartTest}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:DonutChartTest}"/>
+        </ShellSection>
+    </FlyoutItem>
 </Shell>

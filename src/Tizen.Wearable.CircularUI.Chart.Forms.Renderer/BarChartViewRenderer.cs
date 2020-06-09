@@ -264,14 +264,14 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 using (var paint = new SKPaint())
                 {
-                    if (string.IsNullOrEmpty(e.ValueText.Text))
+                    if (string.IsNullOrEmpty(e.ValueLabel.Text))
                     {
                         return SKRect.Empty;
                     }
 
                     var bounds = new SKRect();
-                    var text = e.ValueText.Text;
-                    paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.ValueText.FontSize));
+                    var text = e.ValueLabel.Text;
+                    paint.TextSize = (float)(XForms.ConvertToEflFontPoint(e.ValueLabel.FontSize));
                     paint.MeasureText(text, ref bounds);
                     return bounds;
                 }
@@ -483,7 +483,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     y = _canvasSize.Height - (_minorAxisSize.Height / 2);
                 }
 
-                canvas.DrawText(x, y, data.ValueText, isEndOfBoundX, isEndOfBoundY);
+                canvas.DrawText(x, y, data.ValueLabel, isEndOfBoundX, isEndOfBoundY);
             }
         }
 
@@ -752,12 +752,12 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     continue;
 
                 var entry = _barChartDataTable[i];
-                if (entry.ValueText != null && !string.IsNullOrEmpty(entry.ValueText.Text))
+                if (entry.ValueLabel != null && !string.IsNullOrEmpty(entry.ValueLabel.Text))
                 {
                     if (IsVertical)
                     {
                         x = points[i].X;
-                        if ((entry as DataItem)?.ValueTextPosition == ValueTextPosition.End)
+                        if ((entry as DataItem)?.ValueLabelPosition == ValueLabelPosition.End)
                         {
                             y = points[i].Y + TextVerticalMargin;
                             endOfBoundY = true;
@@ -770,7 +770,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     else
                     {
                         y = points[i].Y;
-                        if ((entry as DataItem)?.ValueTextPosition == ValueTextPosition.End)
+                        if ((entry as DataItem)?.ValueLabelPosition == ValueLabelPosition.End)
                         {
                             x = points[i].X - TextHorizontalMargin;
                             endOfBoundX = true;
@@ -781,7 +781,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                         }
                     }
 
-                    canvas.DrawText(x, y, entry.ValueText, endOfBoundX, endOfBoundY);
+                    canvas.DrawText(x, y, entry.ValueLabel, endOfBoundX, endOfBoundY);
                 }
             }
         }

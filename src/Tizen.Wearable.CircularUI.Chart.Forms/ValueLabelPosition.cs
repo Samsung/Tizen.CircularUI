@@ -14,29 +14,22 @@
  * limitations under the License.
  */
 
-using Xamarin.Forms;
-
 namespace Tizen.Wearable.CircularUI.Chart.Forms
 {
     /// <summary>
-    /// IDataItem is an interface to describe DataItem.
+    /// Enumeration for position of ValueLabel.
     /// </summary>
-    public interface IDataItem
+    public enum ValueLabelPosition
     {
         /// <summary>
-        /// Gets or sets a value.
+        /// The Start position. 
+        /// If a chart is BarChartView, Start position is bottom of bar.
         /// </summary>
-        double Value { get; set; }
-
+        Start,
         /// <summary>
-        /// Gets or sets a color of each DataItem.
-        /// If DataItem.Color is not set, the color is set DataItemGroup.Color.
+        /// The End position
+        /// If a chart is BarChartView, End position is top of bar.
         /// </summary>
-        Color Color { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value label of DataItem.
-        /// </summary>
-        TextItem ValueLabel { get; set; }
+        End,
     }
 }

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.PieChartTest">
+    <c:CirclePage.BindingContext>
+        <local:MainPageModel/>
+    </c:CirclePage.BindingContext>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="Pie Chart test "
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="LegendIsVisible = False, ValueLabelTextFormat = Percent "
+                    FontSize="Micro"
+                    Margin="0, 30, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Left"
+                    LegendIsVisible="false"
+                    CategoryLabels="{Binding WeeklyLabel}"
+                    Data="{Binding PieDummyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="LegendPosition = Right, ValueLabelTextFormat = Value"
+                    FontSize="Micro"
+                    Margin="0, 30, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendIsVisible="true"
+                    ValueLabelFontSize="4"
+                    ValueLabelColor="LightGray"
+                    ValueLabelTextFormat="{Binding ValueFormat1}"
+                    CategoryLabels="{Binding WeeklyLabel}"
+                    Data="{Binding ColorDummyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="LegendPosition = Top"
+                    FontSize="Micro"
+                    Margin="0, 30, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Top"
+                    CategoryLabels="{Binding WeeklyLabel}"
+                    Data="{Binding DummyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="LegendPosition = Bottom, ValueLabelType = Value(float) "
+                    FontSize="Micro"
+                    Margin="0, 30, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart4"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Bottom"
+                    ValueLabelFontSize="3"
+                    ValueLabelTextFormat="{Binding ValueFormat2}"
+                    CategoryLabels="{Binding WeeklyLabel}"
+                    Data="{Binding DummyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>

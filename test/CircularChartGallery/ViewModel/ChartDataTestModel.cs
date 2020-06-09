@@ -86,9 +86,9 @@ namespace CircularUIChartGallery.ViewModel
 
             ReferenceData = new List<IDataItem>
             {
-                new DataItem { Value = 0, ValueText = new TextItem{ Text = "0", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Value = 5, ValueText = new TextItem{ Text = "5", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Value = 10, ValueText = new TextItem{ Text = "10", FontSize = 5,  TextColor = Color.White } }
+                new DataItem { Value = 0, ValueLabel = new TextItem{ Text = "0", FontSize = 5, TextColor = Color.White } },
+                new DataItem { Value = 5, ValueLabel = new TextItem{ Text = "5", FontSize = 5, TextColor = Color.White } },
+                new DataItem { Value = 10, ValueLabel = new TextItem{ Text = "10", FontSize = 5,  TextColor = Color.White } }
             };
 
             var option = new AxisOption(true, true, true, true);

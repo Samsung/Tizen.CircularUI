@@ -28,6 +28,10 @@ namespace CircularUIChartGallery.ViewModel
     {
         Data _monthlyData;
 
+        public string ValueFormat1 { get; set; }
+
+        public string ValueFormat2 { get; set; }
+
         public Data DummyData { get; set; }
 
         public Data HRMDummyData { get; set; }
@@ -59,6 +63,8 @@ namespace CircularUIChartGallery.ViewModel
 
         public Data LineMultiDummyData { get; set; }
 
+        public Data PieDummyData { get; set; }
+
         public IList<IDataItem> ReferenceData1 { get; set; }
 
         public IList<IDataItem> ReferenceData2 { get; set; }
@@ -85,28 +91,28 @@ namespace CircularUIChartGallery.ViewModel
         {
             var dummyDataItems = new List<IDataItem>
             {
-                new DataItem { Value = 5, ValueText = new TextItem { Text = "5", FontSize = 4, TextColor = Color.Red } },
-                new DataItem { Value = 8, ValueText = new TextItem { Text = "8", FontSize = 4, TextColor = Color.Red } },
-                new DataItem { Value = 4, ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.Red } },
-                new DataItem { Value = 10, ValueText = new TextItem { Text = "10", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 5, ValueLabel = new TextItem { Text = "5", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 8, ValueLabel = new TextItem { Text = "8", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 4, ValueLabel = new TextItem { Text = "4", FontSize = 4, TextColor = Color.Red } },
+                new DataItem { Value = 10, ValueLabel = new TextItem { Text = "10", FontSize = 4, TextColor = Color.Red } },
             };
 
             var colorDummyDataItems = new List<IDataItem>
             {
-                new DataItem { Value = 5, Color = Color.FromHex("#00C7FF") },
+                new DataItem { Value = 5, Color = Color.FromHex("#2176FF") },
                 new DataItem { Value = 8, Color = Color.FromHex("#00C7FF") },
                 null,
-                new DataItem { Value = 4, Color = Color.FromHex("#A3B3BA"), ValueText = new TextItem { Text = "4", FontSize = 4, TextColor = Color.White }, ValueTextPosition = ValueTextPosition.Start },
-                new DataItem { Value = 9, Color = Color.FromHex("#4CBA2A"), ValueText = new TextItem { Text = "9", FontSize = 4, TextColor = Color.White }, ValueTextPosition = ValueTextPosition.Start },
+                new DataItem { Value = 4, Color = Color.FromHex("#A3B3BA"), ValueLabel = new TextItem { Text = "4", FontSize = 4, TextColor = Color.White }, ValueLabelPosition = ValueLabelPosition.Start },
+                new DataItem { Value = 9, Color = Color.FromHex("#4CBA2A"), ValueLabel = new TextItem { Text = "9", FontSize = 4, TextColor = Color.White }, ValueLabelPosition = ValueLabelPosition.Start },
                 null,
-                new DataItem() { Value = 8, Color = Color.FromHex("#00C7FF") }
+                new DataItem { Value = 8, Color = Color.FromHex("#00C7FF") }
             };
 
             var HRMDataItems = new List<IDataItem>
             {
-                new DataItem { Value = 3, Color = Color.DarkRed, ValueText = new TextItem { Text = "12m", FontSize = 6, TextColor = Color.White } },
-                new DataItem { Value = 9, Color = Color.OrangeRed, ValueText = new TextItem { Text = "1h 3m", FontSize = 6, TextColor = Color.White } },
-                new DataItem { Value = 4, Color = Color.Orange, ValueText = new TextItem { Text = "17m", FontSize = 6, TextColor = Color.White } }
+                new DataItem { Value = 3, Color = Color.DarkRed, ValueLabel = new TextItem { Text = "12m", FontSize = 6, TextColor = Color.White } },
+                new DataItem { Value = 9, Color = Color.OrangeRed, ValueLabel = new TextItem { Text = "1h 3m", FontSize = 6, TextColor = Color.White } },
+                new DataItem { Value = 4, Color = Color.Orange, ValueLabel = new TextItem { Text = "17m", FontSize = 6, TextColor = Color.White } }
             };
 
             var barBGDummyDataItems = new List<IDataItem>
@@ -114,10 +120,43 @@ namespace CircularUIChartGallery.ViewModel
                 new BarDataItem { Value = 5, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
                 null,
                 new BarDataItem { Value = 8, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
-                new BarDataItem { Value = 4, Color = Color.FromHex("#FF4AC0"), BarBackgroundColor = Color.FromHex("#401A34"), ValueText = new TextItem { Text = "4", FontSize = 5, TextColor = Color.White } },
-                new BarDataItem { Value = 9, Color = Color.FromHex("#7EFA55"), BarBackgroundColor = Color.FromHex("#152E00"), ValueText = new TextItem { Text = "9", FontSize = 5, TextColor = Color.White } },
+                new BarDataItem { Value = 4, Color = Color.FromHex("#FF4AC0"), BarBackgroundColor = Color.FromHex("#401A34"), ValueLabel = new TextItem { Text = "4", FontSize = 5, TextColor = Color.White } },
+                new BarDataItem { Value = 9, Color = Color.FromHex("#7EFA55"), BarBackgroundColor = Color.FromHex("#152E00"), ValueLabel = new TextItem { Text = "9", FontSize = 5, TextColor = Color.White } },
                 new BarDataItem { Value = 7, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") },
                 new BarDataItem { Value = 7, Color = Color.FromHex("#2176FF"), BarBackgroundColor = Color.FromHex("#0F2752") }
+            };
+
+            var pieDataItems = new List<IDataItem>
+            {
+                new DataItem {
+                    Value = 3, 
+                    Color = Color.Red
+                },
+                new DataItem {
+                    Value = 1,
+                    Color = Color.Orange
+                },
+                new DataItem {
+                    Value = 1,
+                    Color = Color.Yellow
+                },
+                new DataItem {
+                    Value = 9,
+                    Color = Color.Green,
+                },
+                new DataItem {
+                    Value = 7,
+                    Color = Color.Blue
+                },
+                new DataItem {
+                    Value = 8,
+                    Color = Color.Indigo
+                },
+                new DataItem {
+                    Value = 10,
+                    Color = Color.Purple,
+                    ValueLabel = new TextItem { Text = "Max 10", FontSize = 5, TextColor = Color.LightGray }
+                },
             };
 
             var monthlyDummyData = new double[12] {2340, 2650, 2000, 2810, 2760, 2100, 1850, 1710, 1300, 1460, 1300, 2100};
@@ -143,9 +182,9 @@ namespace CircularUIChartGallery.ViewModel
 
             ReferenceData1 = new List<IDataItem>
             {
-                new DataItem { Value = 0, ValueText = new TextItem{ Text = "0", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Value = 5, ValueText = new TextItem{ Text = "5", FontSize = 5, TextColor = Color.White } },
-                new DataItem { Value = 10, ValueText = new TextItem{ Text = "10", FontSize = 5,  TextColor = Color.White } }
+                new DataItem { Value = 0, ValueLabel = new TextItem{ Text = "0", FontSize = 5, TextColor = Color.White } },
+                new DataItem { Value = 5, ValueLabel = new TextItem{ Text = "5", FontSize = 5, TextColor = Color.White } },
+                new DataItem { Value = 10, ValueLabel = new TextItem{ Text = "10", FontSize = 5,  TextColor = Color.White } }
             };
 
             ReferenceData2 = new List<IDataItem>
@@ -155,10 +194,10 @@ namespace CircularUIChartGallery.ViewModel
 
             MontlyReferenceData = new List<IDataItem>
             {
-                new DataItem { Value = 1500, ValueText = new TextItem{ Text = "1.5K", FontSize = 5, TextColor = Color.FromHex("#EF751D") } },
-                new DataItem { Value = 2000, ValueText = new TextItem{ Text = "2.0K", FontSize = 5, TextColor = Color.FromHex("#EBF51D") } },
-                new DataItem { Value = 2500, ValueText = new TextItem{ Text = "2.5K", FontSize = 5, TextColor = Color.FromHex("#72E61D") } },
-                new DataItem { Value = 3000, ValueText = new TextItem{ Text = "3.0K", FontSize = 5,  TextColor = Color.FromHex("#41C7D1") } }
+                new DataItem { Value = 1500, ValueLabel = new TextItem{ Text = "1.5K", FontSize = 5, TextColor = Color.FromHex("#EF751D") } },
+                new DataItem { Value = 2000, ValueLabel = new TextItem{ Text = "2.0K", FontSize = 5, TextColor = Color.FromHex("#EBF51D") } },
+                new DataItem { Value = 2500, ValueLabel = new TextItem{ Text = "2.5K", FontSize = 5, TextColor = Color.FromHex("#72E61D") } },
+                new DataItem { Value = 3000, ValueLabel = new TextItem{ Text = "3.0K", FontSize = 5,  TextColor = Color.FromHex("#41C7D1") } }
             };
 
             var groupDummyDataItems1 = new List<IDataItem>
@@ -167,7 +206,7 @@ namespace CircularUIChartGallery.ViewModel
                 new DataItem { Value = 8 },
                 new DataItem { Value = 7 },
                 new DataItem { Value = 8 },
-                new DataItem { Value = 9, ValueText = new TextItem { Text = "9", FontSize = 4 } },
+                new DataItem { Value = 9, ValueLabel = new TextItem { Text = "9", FontSize = 4 } },
             };
 
             var groupDummyDataItems2 = new List<IDataItem>
@@ -187,7 +226,7 @@ namespace CircularUIChartGallery.ViewModel
                 new DataItem { Value = 6 },
                 null,
                 new DataItem { Value = 6 },
-                new DataItem { Value = 7, ValueText = new TextItem { Text = "7", FontSize = 4 } },
+                new DataItem { Value = 7, ValueLabel = new TextItem { Text = "7", FontSize = 4 } },
             };
 
             var groupDummyDataItems4 = new List<IDataItem>
@@ -286,6 +325,9 @@ namespace CircularUIChartGallery.ViewModel
             LineMultiDummyData.DataItemGroups.Add(lineMonthlyDataItemGroup1);
             LineMultiDummyData.DataItemGroups.Add(lineMonthlyDataItemGroup2);
 
+            //Pie dataset
+            var pieDataItemGroup6 = new DataItemGroup(pieDataItems, "Pie dataitems");
+            PieDummyData = new Data(pieDataItemGroup6);
 
             var option1 = new AxisOption(true, false);
             option1.CategoryLabels = WeeklyLabel;
@@ -318,6 +360,9 @@ namespace CircularUIChartGallery.ViewModel
                 else
                     MonthlyDummyData = MontlyData1;
             });
+
+            ValueFormat1 = "{0:0} $";
+            ValueFormat2 = "{0:0.#} min";
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
