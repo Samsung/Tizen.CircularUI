@@ -42,7 +42,7 @@
                     Maximum ="10"
                     Minimum="0"
                     Data="{Binding ColorDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
@@ -62,7 +62,7 @@
                     Maximum ="10"
                     Minimum="0"
                     Data="{Binding BarBGColorDummyData}"
-                    AxisOption="{Binding CategoryOnlyAxisOption}"
+                    AxisOption="{Binding MajorOnlyAxisOption}"
                     WidthRequest="300"
                     HeightRequest="200"/>
             </StackLayout>

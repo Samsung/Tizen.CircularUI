@@ -24,8 +24,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
     /// </summary>
     public class PieChartView : ChartView
     {
-
-
         /// <summary>
         /// BindableProperty. Identifies the ValueLabelIsVisible bindable property.
         /// </summary>
@@ -55,11 +53,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// BindableProperty. Identifies the LegendPosition bindable property.
         /// </summary>
         public static readonly BindableProperty LegendPositionProperty = BindableProperty.Create(nameof(LegendPosition), typeof(LegendPosition), typeof(PieChartView), defaultValue: LegendPosition.Bottom);
-
-        /// <summary>
-        /// BindableProperty. Identifies the CategoryLabels bindable property.
-        /// </summary>
-        public static readonly BindableProperty CategoryLabelsProperty = BindableProperty.Create(nameof(CategoryLabels), typeof(IList<CategoryLabel>), typeof(PieChartView), defaultValue: null);
 
         /// <summary>
         /// Gets or sets visibility of each slice value.
@@ -113,15 +106,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         {
             get { return (LegendPosition)GetValue(LegendPositionProperty); }
             set { SetValue(LegendPositionProperty, value); }
-        }
-
-        /// <summary>
-        /// Gets or sets a list of category labels.
-        /// </summary>
-        public IList<CategoryLabel> CategoryLabels
-        {
-            get { return (IList<CategoryLabel>)GetValue(CategoryLabelsProperty); }
-            set { SetValue(CategoryLabelsProperty, value); }
         }
     }
 }

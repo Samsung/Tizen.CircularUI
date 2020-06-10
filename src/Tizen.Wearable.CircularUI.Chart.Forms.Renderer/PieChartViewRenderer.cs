@@ -156,7 +156,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             int colorIndex = 0;
             foreach (IDataItem item in dataItems)
             {
-                if (item == null) continue;
+                if (item == null || item.Value == 0) continue;
 
                 float sweepAngle = 360f * (float)item.Value / totalValue;
 
@@ -193,8 +193,17 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             string formattedText;
             float x, y;
 
+            if(item.ValueLabel != null)
+            {
+                //if ValueLabe is null or Empty , do not display value text in Chart.
+                if (string.IsNullOrEmpty(item.ValueLabel.Text))
+                    return;
 
-            if(format.Contains("P") || format.Contains("p"))
+                textColor = item.ValueLabel.TextColor.ToSKColor();
+                textSize = item.ValueLabel.FontSize;
+                formattedText = item.ValueLabel.Text;
+            }
+            else if(format.Contains("P") || format.Contains("p"))
             {
                 var percent = item.Value / totalSum;
                 formattedText = String.Format(format, percent);
@@ -203,7 +212,6 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             {
                 formattedText = String.Format(format, item.Value);
             }
-            Console.WriteLine($"Format:{format}, formattedText:{formattedText}");
 
             if (String.IsNullOrEmpty(formattedText))
                 return;
@@ -232,16 +240,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
         {
             var dataItems = Element.Data.DataItemGroups[0].DataItems;
             var dataItemCount = dataItems.Count;
-            var categoryItems = Element.CategoryLabels;
-            var categoryCount = categoryItems?.Count?? 0;
-            if (categoryItems == null)
-            {
-                _legendWidth = 0;
-                _legendHeight = 0;
-                return;
-            }
-
-            var legendItemSizes = MeasureLegendItemSize(categoryItems);
+            var legendItemSizes = MeasureLegendItemSize(dataItems);
             var maxHeight = legendItemSizes.Max(i => i.Height);
             var maxWidth = legendItemSizes.Max(i => i.Width);
             bool multiLine = false;
@@ -295,11 +294,12 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 }
             }
 
-            for (int i = 0; i < categoryCount; i++)
+            for (int i = 0; i < dataItemCount; i++)
             {
-                var labelItem = categoryItems[i];
-                var item = i < dataItemCount? dataItems[i]: null;
-                if (item == null) continue;
+                var item = dataItems[i];
+                var labelItem = item?.Label;
+                if (item ==  null || labelItem == null || string.IsNullOrEmpty(labelItem.Text))
+                    continue;
 
                 var itemSize = legendItemSizes.ElementAt(i);
                 if (multiLine)
@@ -326,42 +326,37 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                     }
                 }
 
-                var hasLabel = !string.IsNullOrEmpty(labelItem.Label.Text);
-                if (hasLabel)
+                //draw color box
+                var boxColor = item.Color != default ? item.Color.ToSKColor() : Colors[colorIndex++ % 12];
+                var boxSize = (float)(XForms.ConvertToEflFontPoint(labelItem.FontSize)) * BoxScaleMultiple;
+                using (var paint = new SKPaint
                 {
-                    //draw color box
-                    var boxColor = item.Color != default ? item.Color.ToSKColor() : Colors[colorIndex++ % 12];
-                    var boxSize = (float)(XForms.ConvertToEflFontPoint(labelItem.Label.FontSize)) * BoxScaleMultiple;
-                    using (var paint = new SKPaint
-                    {
-                        Style = SKPaintStyle.Fill,
-                        Color = boxColor,
-                        IsAntialias = true
-                    })
-                    {
-                        var rect = SKRect.Create(x, y + maxHeight - boxSize, boxSize, boxSize);
-                        canvas.DrawRect(rect, paint);
-                    }
+                    Style = SKPaintStyle.Fill,
+                    Color = boxColor,
+                    IsAntialias = true
+                })
+                {
+                    var rect = SKRect.Create(x, y + maxHeight - boxSize, boxSize, boxSize);
+                    canvas.DrawRect(rect, paint);
+                }
 
-                    //draw category label
-                    canvas.DrawLegendText(x + boxSize + LegendBoxTextMargin, y + maxHeight, labelItem.Label);
+                //draw category label
+                canvas.DrawLegendText(x + boxSize + LegendBoxTextMargin, y + maxHeight, labelItem);
 
-                    if (Element.LegendPosition == LegendPosition.Left || Element.LegendPosition == LegendPosition.Right)
-                    {
-                        y = y + itemSize.Height;
-                    }
-                    else  //LegendPosition.Bottom || LegendPosition.Top
-                    {
-                        x = x + itemSize.Width;
-                    }
+                if (Element.LegendPosition == LegendPosition.Left || Element.LegendPosition == LegendPosition.Right)
+                {
+                    y = y + itemSize.Height;
+                }
+                else  //LegendPosition.Bottom || LegendPosition.Top
+                {
+                    x = x + itemSize.Width;
                 }
             }
-
         }
 
-        IEnumerable<SKRect> MeasureLegendItemSize(IList<CategoryLabel> categoryItems)
+        IEnumerable<SKRect> MeasureLegendItemSize(IList<IDataItem> dataItems)
         {
-            return categoryItems.Select(item =>
+            return dataItems.Select(item =>
             {
                 using (var paint = new SKPaint())
                 {
@@ -370,7 +365,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                         return SKRect.Empty;
                     }
 
-                    if (string.IsNullOrEmpty(item.Label.Text))
+                    if (item.Label == null || string.IsNullOrEmpty(item.Label.Text))
                     {
                         return SKRect.Empty;
                     }

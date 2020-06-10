@@ -31,12 +31,26 @@
                     Maximum="10"
                     LegendPosition="Left"
                     LegendIsVisible="false"
-                    CategoryLabels="{Binding WeeklyLabel}"
-                    Data="{Binding PieDummyData}"
+                    Data="{Binding WeeklyDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
-                    Text="LegendPosition = Right, ValueLabelTextFormat = Value"
+                    Text="LegendPosition = Top, No Label"
+                    FontSize="Micro"
+                    Margin="0, 30, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Top"
+                    Data="{Binding DummyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="LegendPosition = Bottom, ValueLabelTextFormat = {0:0} $"
                     FontSize="Micro"
                     Margin="0, 30, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -50,28 +64,11 @@
                     ValueLabelFontSize="4"
                     ValueLabelColor="LightGray"
                     ValueLabelTextFormat="{Binding ValueFormat1}"
-                    CategoryLabels="{Binding WeeklyLabel}"
                     Data="{Binding ColorDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
                 <Label
-                    Text="LegendPosition = Top"
-                    FontSize="Micro"
-                    Margin="0, 30, 0, 10"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand" />
-                <chart:PieChartView
-                    x:Name="pieChart3"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    Maximum="10"
-                    LegendPosition="Top"
-                    CategoryLabels="{Binding WeeklyLabel}"
-                    Data="{Binding DummyData}"
-                    WidthRequest="300"
-                    HeightRequest="200"/>
-                <Label
-                    Text="LegendPosition = Bottom, ValueLabelType = Value(float) "
+                    Text="LegendPosition = Bottom, ValueLabelType = {0:0.#} min "
                     FontSize="Micro"
                     Margin="0, 30, 0, 10"
                     VerticalOptions="CenterAndExpand"
@@ -84,8 +81,7 @@
                     LegendPosition="Bottom"
                     ValueLabelFontSize="3"
                     ValueLabelTextFormat="{Binding ValueFormat2}"
-                    CategoryLabels="{Binding WeeklyLabel}"
-                    Data="{Binding DummyData}"
+                    Data="{Binding ColorDummyData}"
                     WidthRequest="300"
                     HeightRequest="200"/>
             </StackLayout>

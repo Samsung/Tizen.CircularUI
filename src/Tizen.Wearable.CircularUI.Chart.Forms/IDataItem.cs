@@ -38,5 +38,10 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms
         /// Gets or sets a value label of DataItem.
         /// </summary>
         TextItem ValueLabel { get; set; }
+
+        /// <summary>
+        /// Gets or sets a label of DataItem.
+        /// </summary>
+        TextItem Label { get; set; }
     }
 }
