@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WearableUIGallery.TC.TCCircleToolbarItem"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout
+            BackgroundColor="Black"
+            HorizontalOptions="CenterAndExpand"
+            Orientation="Vertical"
+            VerticalOptions="CenterAndExpand">
+            <Button x:Name="addButton"
+                    Text="Add ToolbarItem"
+                    AutomationId="add"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnItemAddClicked"/>
+            <Button x:Name="removeButton"
+                    Text="Remove ToolbarItem"
+                    AutomationId="remove"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnItemRemoveClicked"/>
+            <Label x:Name="cntLabel"
+                   AutomationId="label"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
