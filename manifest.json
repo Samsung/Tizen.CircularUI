@@ -2543,7 +2543,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html",
-          "hash": "NmzGVp1QIoQv+EnsEjhRJw=="
+          "hash": "jU0LCKHE3G0Qc5k1vG9TLA=="
         }
       },
       "is_incremental": false,
@@ -2627,7 +2627,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html",
-          "hash": "UWCjs6r6wKV26QkMZ0Gd9g=="
+          "hash": "jZAkKRMsBQCJxTQGGBMvyg=="
         }
       },
       "is_incremental": false,
@@ -2855,7 +2855,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html",
-          "hash": "svGi3lZLvtv/iBRW/j7MVA=="
+          "hash": "8EkB39JtiJAbyDIcW9be2g=="
         }
       },
       "is_incremental": false,
@@ -3377,6 +3377,20 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -3387,20 +3401,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 122,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
