@@ -15,6 +15,9 @@
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="TC\TCCircleToolbarItem.xaml.cs">
+      <DependentUpon>TCCircleToolbarItem.xaml</DependentUpon>
+    </Compile>
     <Compile Update="TC\TCSingleTextCell.xaml.cs">
       <DependentUpon>TCSingleTextCell.xaml</DependentUpon>
     </Compile>
