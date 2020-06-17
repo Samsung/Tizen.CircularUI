@@ -4,8 +4,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>tizen40</TargetFramework>
-    <!--<RuntimeIdentifier>tizen-armel</RuntimeIdentifier>-->
-    <CopyLocalRuntimeTargetAssets>true</CopyLocalRuntimeTargetAssets>
+ 
   </PropertyGroup>
 
 
@@ -22,9 +21,7 @@
     <Folder Include="res\" />
   </ItemGroup>
   
-  <!-- If solution already has PCL project, will reference -->
   
-
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
     <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.5.0-pre7" />
