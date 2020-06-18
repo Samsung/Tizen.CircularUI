@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
+using System.Collections;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.TC
 {
@@ -25,6 +27,16 @@ namespace WearableUIGallery.TC
         public TCSingleTextCell()
         {
             InitializeComponent();
+        }
+
+        private void OnItemLongPressed(object sender, ItemLongPressedEventArgs e)
+        {
+            MyCustomData data = (MyCustomData)e.Item;
+            if (data != null)
+            {
+                data.UseSelectMode = true;
+                data.IsSelected = true;
+            }
         }
     }
 }

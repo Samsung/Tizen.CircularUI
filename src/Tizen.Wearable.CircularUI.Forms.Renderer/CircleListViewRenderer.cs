@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
+using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
-
+using NListView = Xamarin.Forms.Platform.Tizen.Native.ListView;
 using CircleListView = Tizen.Wearable.CircularUI.Forms.CircleListView;
 
 [assembly: ExportRenderer(typeof(CircleListView), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer))]
@@ -36,7 +37,31 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override Xamarin.Forms.Platform.Tizen.Native.ListView CreateNativeControl()
         {
-            return _listView = new WatchListView(XForms.NativeParent, this.GetSurface());
+            _listView = new WatchListView(XForms.NativeParent, this.GetSurface());
+            _listView.ItemLongPressed += OnItemLongPressed;
+            return _listView;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (_listView != null)
+                {
+                    _listView.ItemLongPressed -= OnItemLongPressed;
+                }
+            }
+            base.Dispose(disposing);
+        }
+
+        void OnItemLongPressed(object sender, GenListItemEventArgs args)
+        {
+            if (args.Item.Data is NListView.ItemContext itemContext)
+            {
+                var obj = itemContext.Cell.BindingContext;
+                var index = Element.TemplatedItems.GetGlobalIndexOfItem(obj);
+                Element.NotifyItemLongPressed(obj, index);
+            }
         }
 
         void UpdateBarColor()

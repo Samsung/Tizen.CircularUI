@@ -24,10 +24,23 @@ namespace WearableUIGallery.TC
     public class MyCustomData : INotifyPropertyChanged
     {
         bool _checked;
+        bool _useSelectMode;
 
         public string Text { get; set; }
         public string Value { get; set; }
         public string GroupName { get; set; }
+        public bool UseSelectMode
+        {
+            get => _useSelectMode;
+            set
+            {
+                if (_useSelectMode != value)
+                {
+                    _useSelectMode = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         public bool IsSelected
         {
@@ -93,8 +106,8 @@ namespace WearableUIGallery.TC
             SampleData.Add(new MyCustomData { Text = "15 seconds", Value = "15s", GroupName = "timeout", IsSelected = false });
             SampleData.Add(new MyCustomData { Text = "30 seconds", Value = "30s", GroupName = "timeout", IsSelected = true });
             SampleData.Add(new MyCustomData { Text = "1 minute", Value = "1m", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData { Text = "5 minute", Value = "5m", GroupName = "timeout", IsSelected = false });
-            SampleData.Add(new MyCustomData { Text = "10 minute", Value = "10m", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "Long long long long long long 5 minute", Value = "5m", GroupName = "timeout", IsSelected = false });
+            SampleData.Add(new MyCustomData { Text = "10 minute", Value = "10m", GroupName = "timeout long long long long long long long long ", IsSelected = false });
             SampleData.Add(new MyCustomData { Text = "15 minute", Value = "15m", GroupName = "timeout", IsSelected = false });
 
             //SoundMode
