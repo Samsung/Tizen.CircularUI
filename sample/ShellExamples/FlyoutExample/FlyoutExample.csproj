@@ -15,7 +15,7 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
   </ItemGroup>
 
   <ItemGroup>
