@@ -711,6 +711,12 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.GetCancelEffect
   nameWithType: CircleListView.GetCancelEffect
+- uid: Tizen.Wearable.CircularUI.Forms.CircleListView.ItemLongPressed
+  name: ItemLongPressed
+  href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_ItemLongPressed
+  commentId: E:Tizen.Wearable.CircularUI.Forms.CircleListView.ItemLongPressed
+  fullName: Tizen.Wearable.CircularUI.Forms.CircleListView.ItemLongPressed
+  nameWithType: CircleListView.ItemLongPressed
 - uid: Tizen.Wearable.CircularUI.Forms.CircleListView.SetCancelEffect(BindableObject,System.Boolean)
   name: SetCancelEffect(BindableObject, Boolean)
   href: api/Tizen.Wearable.CircularUI.Forms.CircleListView.html#Tizen_Wearable_CircularUI_Forms_CircleListView_SetCancelEffect_BindableObject_System_Boolean_
@@ -2638,6 +2644,51 @@ references:
   commentId: T:Tizen.Wearable.CircularUI.Forms.IRotaryFocusable
   fullName: Tizen.Wearable.CircularUI.Forms.IRotaryFocusable
   nameWithType: IRotaryFocusable
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs
+  name: ItemLongPressedEventArgs
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs
+  nameWithType: ItemLongPressedEventArgs
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.#ctor(System.Object,System.Int32)
+  name: ItemLongPressedEventArgs(Object, Int32)
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html#Tizen_Wearable_CircularUI_Forms_ItemLongPressedEventArgs__ctor_System_Object_System_Int32_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.#ctor(System.Object,System.Int32)
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemLongPressedEventArgs(System.Object, System.Int32)
+  nameWithType: ItemLongPressedEventArgs.ItemLongPressedEventArgs(Object, Int32)
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.#ctor*
+  name: ItemLongPressedEventArgs
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html#Tizen_Wearable_CircularUI_Forms_ItemLongPressedEventArgs__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemLongPressedEventArgs
+  nameWithType: ItemLongPressedEventArgs.ItemLongPressedEventArgs
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.Item
+  name: Item
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html#Tizen_Wearable_CircularUI_Forms_ItemLongPressedEventArgs_Item
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.Item
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.Item
+  nameWithType: ItemLongPressedEventArgs.Item
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.Item*
+  name: Item
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html#Tizen_Wearable_CircularUI_Forms_ItemLongPressedEventArgs_Item_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.Item
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.Item
+  nameWithType: ItemLongPressedEventArgs.Item
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemIndex
+  name: ItemIndex
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html#Tizen_Wearable_CircularUI_Forms_ItemLongPressedEventArgs_ItemIndex
+  commentId: P:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemIndex
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemIndex
+  nameWithType: ItemLongPressedEventArgs.ItemIndex
+- uid: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemIndex*
+  name: ItemIndex
+  href: api/Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.html#Tizen_Wearable_CircularUI_Forms_ItemLongPressedEventArgs_ItemIndex_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemIndex
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.ItemLongPressedEventArgs.ItemIndex
+  nameWithType: ItemLongPressedEventArgs.ItemIndex
 - uid: Tizen.Wearable.CircularUI.Forms.LatLng
   name: LatLng
   href: api/Tizen.Wearable.CircularUI.Forms.LatLng.html
@@ -4554,6 +4605,19 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.CreateNativeControl
   nameWithType: CircleListViewRenderer.CreateNativeControl
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_Dispose_System_Boolean_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose(System.Boolean)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose(System.Boolean)
+  nameWithType: CircleListViewRenderer.Dispose(Boolean)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose*
+  name: Dispose
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_CircleListViewRenderer_Dispose_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.CircleListViewRenderer.Dispose
+  nameWithType: CircleListViewRenderer.Dispose
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer
   name: CirclePageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html
@@ -5870,6 +5934,140 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ScrollViewRenderer.UpdateRotaryInteraction
   nameWithType: ScrollViewRenderer.UpdateRotaryInteraction
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer
+  name: SelectModeImageCellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer
+  nameWithType: SelectModeImageCellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.#ctor
+  name: SelectModeImageCellRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectModeImageCellRenderer()
+  nameWithType: SelectModeImageCellRenderer.SelectModeImageCellRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.#ctor(System.String)
+  name: SelectModeImageCellRenderer(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer__ctor_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.#ctor(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectModeImageCellRenderer(System.String)
+  nameWithType: SelectModeImageCellRenderer.SelectModeImageCellRenderer(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.#ctor*
+  name: SelectModeImageCellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectModeImageCellRenderer
+  nameWithType: SelectModeImageCellRenderer.SelectModeImageCellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged(Cell,System.String,System.Collections.Generic.Dictionary{System.String,EvasObject})
+  name: OnCellPropertyChanged(Cell, String, Dictionary<String, EvasObject>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer_OnCellPropertyChanged_Cell_System_String_System_Collections_Generic_Dictionary_System_String_EvasObject__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged(Cell,System.String,System.Collections.Generic.Dictionary{System.String,EvasObject})
+  name.vb: OnCellPropertyChanged(Cell, String, Dictionary(Of String, EvasObject))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged(Cell, System.String, System.Collections.Generic.Dictionary<System.String, EvasObject>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged(Cell, System.String, System.Collections.Generic.Dictionary(Of System.String, EvasObject))
+  nameWithType: SelectModeImageCellRenderer.OnCellPropertyChanged(Cell, String, Dictionary<String, EvasObject>)
+  nameWithType.vb: SelectModeImageCellRenderer.OnCellPropertyChanged(Cell, String, Dictionary(Of String, EvasObject))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged*
+  name: OnCellPropertyChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer_OnCellPropertyChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnCellPropertyChanged
+  nameWithType: SelectModeImageCellRenderer.OnCellPropertyChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnGetContent(Cell,System.String)
+  name: OnGetContent(Cell, String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer_OnGetContent_Cell_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnGetContent(Cell,System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnGetContent(Cell, System.String)
+  nameWithType: SelectModeImageCellRenderer.OnGetContent(Cell, String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnGetContent*
+  name: OnGetContent
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer_OnGetContent_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnGetContent
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.OnGetContent
+  nameWithType: SelectModeImageCellRenderer.OnGetContent
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectionPart
+  name: SelectionPart
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer_SelectionPart
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectionPart
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectionPart
+  nameWithType: SelectModeImageCellRenderer.SelectionPart
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectionPart*
+  name: SelectionPart
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeImageCellRenderer_SelectionPart_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectionPart
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeImageCellRenderer.SelectionPart
+  nameWithType: SelectModeImageCellRenderer.SelectionPart
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer
+  name: SelectModeTextCellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer
+  nameWithType: SelectModeTextCellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.#ctor
+  name: SelectModeTextCellRenderer()
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer__ctor
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.#ctor
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectModeTextCellRenderer()
+  nameWithType: SelectModeTextCellRenderer.SelectModeTextCellRenderer()
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.#ctor(System.String)
+  name: SelectModeTextCellRenderer(String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer__ctor_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.#ctor(System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectModeTextCellRenderer(System.String)
+  nameWithType: SelectModeTextCellRenderer.SelectModeTextCellRenderer(String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.#ctor*
+  name: SelectModeTextCellRenderer
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer__ctor_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.#ctor
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectModeTextCellRenderer
+  nameWithType: SelectModeTextCellRenderer.SelectModeTextCellRenderer
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged(Cell,System.String,System.Collections.Generic.Dictionary{System.String,EvasObject})
+  name: OnCellPropertyChanged(Cell, String, Dictionary<String, EvasObject>)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer_OnCellPropertyChanged_Cell_System_String_System_Collections_Generic_Dictionary_System_String_EvasObject__
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged(Cell,System.String,System.Collections.Generic.Dictionary{System.String,EvasObject})
+  name.vb: OnCellPropertyChanged(Cell, String, Dictionary(Of String, EvasObject))
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged(Cell, System.String, System.Collections.Generic.Dictionary<System.String, EvasObject>)
+  fullName.vb: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged(Cell, System.String, System.Collections.Generic.Dictionary(Of System.String, EvasObject))
+  nameWithType: SelectModeTextCellRenderer.OnCellPropertyChanged(Cell, String, Dictionary<String, EvasObject>)
+  nameWithType.vb: SelectModeTextCellRenderer.OnCellPropertyChanged(Cell, String, Dictionary(Of String, EvasObject))
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged*
+  name: OnCellPropertyChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer_OnCellPropertyChanged_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnCellPropertyChanged
+  nameWithType: SelectModeTextCellRenderer.OnCellPropertyChanged
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnGetContent(Cell,System.String)
+  name: OnGetContent(Cell, String)
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer_OnGetContent_Cell_System_String_
+  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnGetContent(Cell,System.String)
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnGetContent(Cell, System.String)
+  nameWithType: SelectModeTextCellRenderer.OnGetContent(Cell, String)
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnGetContent*
+  name: OnGetContent
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer_OnGetContent_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnGetContent
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.OnGetContent
+  nameWithType: SelectModeTextCellRenderer.OnGetContent
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectionPart
+  name: SelectionPart
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer_SelectionPart
+  commentId: P:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectionPart
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectionPart
+  nameWithType: SelectModeTextCellRenderer.SelectionPart
+- uid: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectionPart*
+  name: SelectionPart
+  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.html#Tizen_Wearable_CircularUI_Forms_Renderer_SelectModeTextCellRenderer_SelectionPart_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectionPart
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.SelectModeTextCellRenderer.SelectionPart
+  nameWithType: SelectModeTextCellRenderer.SelectionPart
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.Shell
   name: Tizen.Wearable.CircularUI.Forms.Renderer.Shell
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.Shell.html
@@ -6934,6 +7132,106 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.SelectedEventArgs.Value
   nameWithType: SelectedEventArgs.Value
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell
+  name: SelectModeImageCell
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell
+  nameWithType: SelectModeImageCell
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelected
+  name: IsSelected
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_IsSelected
+  commentId: P:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelected
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelected
+  nameWithType: SelectModeImageCell.IsSelected
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelected*
+  name: IsSelected
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_IsSelected_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelected
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelected
+  nameWithType: SelectModeImageCell.IsSelected
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectedProperty
+  name: IsSelectedProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_IsSelectedProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectedProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectedProperty
+  nameWithType: SelectModeImageCell.IsSelectedProperty
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabled
+  name: IsSelectionModeEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_IsSelectionModeEnabled
+  commentId: P:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabled
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabled
+  nameWithType: SelectModeImageCell.IsSelectionModeEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabled*
+  name: IsSelectionModeEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_IsSelectionModeEnabled_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabled
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabled
+  nameWithType: SelectModeImageCell.IsSelectionModeEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabledProperty
+  name: IsSelectionModeEnabledProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_IsSelectionModeEnabledProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabledProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.IsSelectionModeEnabledProperty
+  nameWithType: SelectModeImageCell.IsSelectionModeEnabledProperty
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.SelectionChanged
+  name: SelectionChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeImageCell_SelectionChanged
+  commentId: E:Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.SelectionChanged
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeImageCell.SelectionChanged
+  nameWithType: SelectModeImageCell.SelectionChanged
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell
+  name: SelectModeTextCell
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html
+  commentId: T:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell
+  nameWithType: SelectModeTextCell
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelected
+  name: IsSelected
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_IsSelected
+  commentId: P:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelected
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelected
+  nameWithType: SelectModeTextCell.IsSelected
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelected*
+  name: IsSelected
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_IsSelected_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelected
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelected
+  nameWithType: SelectModeTextCell.IsSelected
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectedProperty
+  name: IsSelectedProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_IsSelectedProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectedProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectedProperty
+  nameWithType: SelectModeTextCell.IsSelectedProperty
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabled
+  name: IsSelectionModeEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_IsSelectionModeEnabled
+  commentId: P:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabled
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabled
+  nameWithType: SelectModeTextCell.IsSelectionModeEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabled*
+  name: IsSelectionModeEnabled
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_IsSelectionModeEnabled_
+  commentId: Overload:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabled
+  isSpec: "True"
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabled
+  nameWithType: SelectModeTextCell.IsSelectionModeEnabled
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabledProperty
+  name: IsSelectionModeEnabledProperty
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_IsSelectionModeEnabledProperty
+  commentId: F:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabledProperty
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.IsSelectionModeEnabledProperty
+  nameWithType: SelectModeTextCell.IsSelectionModeEnabledProperty
+- uid: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.SelectionChanged
+  name: SelectionChanged
+  href: api/Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.html#Tizen_Wearable_CircularUI_Forms_SelectModeTextCell_SelectionChanged
+  commentId: E:Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.SelectionChanged
+  fullName: Tizen.Wearable.CircularUI.Forms.SelectModeTextCell.SelectionChanged
+  nameWithType: SelectModeTextCell.SelectionChanged
 - uid: Tizen.Wearable.CircularUI.Forms.SingleTextCell
   name: SingleTextCell
   href: api/Tizen.Wearable.CircularUI.Forms.SingleTextCell.html
