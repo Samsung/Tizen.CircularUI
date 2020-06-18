@@ -96,17 +96,7 @@
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
   <h5 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PageRenderer : VisualElementRenderer&lt;Page&gt;</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer__ctor_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.#ctor*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer__ctor" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.#ctor">PageRenderer()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PageRenderer()</code></pre>
+    <pre><code class="lang-csharp hljs">public class PageRenderer : Xamarin.Forms.Platform.Tizen.PageRenderer</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -116,7 +106,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual FormsMoreOptionItem CreateMoreOptionItem(ToolbarItem item)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override FormsMoreOptionItem CreateMoreOptionItem(ToolbarItem item)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,113 +140,6 @@
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_Dispose_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.Dispose*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_Dispose_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">disposing</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnElementChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnElementChanged_ElementChangedEventArgs_Page__" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnElementChanged(ElementChangedEventArgs{Page})">OnElementChanged(ElementChangedEventArgs&lt;Page&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;Page&gt; e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ElementChangedEventArgs</span>&lt;<span class="xref">Page</span>&gt;</td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnElementReady_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnElementReady*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnElementReady" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnElementReady">OnElementReady()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementReady()</code></pre>
-  </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnMoreOptionClosed_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnMoreOptionClosed*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnMoreOptionClosed" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnMoreOptionClosed">OnMoreOptionClosed()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnMoreOptionClosed()</code></pre>
-  </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnMoreOptionOpened_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnMoreOptionOpened*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_OnMoreOptionOpened" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.OnMoreOptionOpened">OnMoreOptionOpened()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnMoreOptionOpened()</code></pre>
-  </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_UpdateBackgroundColor_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.UpdateBackgroundColor*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_UpdateBackgroundColor_System_Boolean_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.UpdateBackgroundColor(System.Boolean)">UpdateBackgroundColor(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void UpdateBackgroundColor(bool initialize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">initialize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_UpdateLayout_" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.UpdateLayout*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_Renderer_PageRenderer_UpdateLayout" data-uid="Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.UpdateLayout">UpdateLayout()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void UpdateLayout()</code></pre>
-  </div>
 </article>
           </div>
           

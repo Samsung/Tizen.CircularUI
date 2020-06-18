@@ -2543,7 +2543,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.BezelInteractionPageRenderer.html",
-          "hash": "jU0LCKHE3G0Qc5k1vG9TLA=="
+          "hash": "NmzGVp1QIoQv+EnsEjhRJw=="
         }
       },
       "is_incremental": false,
@@ -2627,7 +2627,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.CirclePageRenderer.html",
-          "hash": "jZAkKRMsBQCJxTQGGBMvyg=="
+          "hash": "UWCjs6r6wKV26QkMZ0Gd9g=="
         }
       },
       "is_incremental": false,
@@ -2855,7 +2855,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html",
-          "hash": "8EkB39JtiJAbyDIcW9be2g=="
+          "hash": "svGi3lZLvtv/iBRW/j7MVA=="
         }
       },
       "is_incremental": false,
@@ -3384,10 +3384,11 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 122,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -3396,11 +3397,10 @@
           "total_file_count": 37,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 122,
           "skipped_file_count": 0
         }
       }
