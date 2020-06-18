@@ -14,12 +14,18 @@
  * limitations under the License.
  */
 
+using Xamarin.Forms;
+
 namespace Tizen.Wearable.CircularUI.Forms
 {
-	/// <summary>
-	/// A Cell with a signle text. The Detail property is always ignored.
-	/// </summary>
-	public class SingleTextCell : SelectModeTextCell
+	static class SelectModeCell
 	{
+		public static readonly BindableProperty IsSelectedProperty = BindableProperty.Create(nameof(ISelectModeCell.IsSelected), typeof(bool), typeof(ISelectModeCell), false, propertyChanged: (obj, oldValue, newValue) =>
+		{
+			ISelectModeCell selectModetCell = (ISelectModeCell)obj;
+			selectModetCell.OnIsSelectedChanged(obj, new ToggledEventArgs((bool)newValue));
+		}, defaultBindingMode: BindingMode.TwoWay);
+
+		public static readonly BindableProperty IsSelectionModeEnabledProperty = BindableProperty.Create(nameof(ISelectModeCell.IsSelectionModeEnabled), typeof(bool), typeof(ISelectModeCell), default(bool));
 	}
 }

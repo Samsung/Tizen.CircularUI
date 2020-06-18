@@ -37,6 +37,8 @@ namespace WearableUIGallery
                     new TCDescribe { Title = "Radio2TextCell", Class = typeof(TCRadio2TextCell) },
                     new TCDescribe { Title = "Switch2TextCell", Class = typeof(TCSwitch2TextCell) },
                     new TCDescribe { Title = "SingleTextCell", Class = typeof(TCSingleTextCell) },
+                    new TCDescribe { Title = "SelectModeTextCell", Class = typeof(TCSelectModeTextCell) },
+                    new TCDescribe { Title = "SelectModeImageCell", Class = typeof(TCSelectModeImageCell) },
                 }
             });
             TCs.Add(new TCDescribe { Title = "ContentButtonTest", Class = typeof(ContentButtonTestPage) });

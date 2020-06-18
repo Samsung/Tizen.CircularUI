@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Tizen.Wearable.CircularUI.Forms
@@ -59,5 +60,16 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// Gets or sets a CircleSurfaceProvider.
         /// </summary>
         public ICircleSurfaceProvider CircleSurfaceProvider { get; set; }
+
+        /// <summary>
+        /// Event that is raised when a new item is long pressed.
+        /// </summary>
+        public event EventHandler<ItemLongPressedEventArgs> ItemLongPressed;
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void NotifyItemLongPressed(object item, int index)
+        {
+            ItemLongPressed?.Invoke(this, new ItemLongPressedEventArgs(item, index));
+        }
     }
 }

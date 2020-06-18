@@ -14,31 +14,29 @@
  * limitations under the License.
  */
 
+using System.Collections;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
+using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
 
-[assembly: ExportRenderer(typeof(SingleTextCell), typeof(SingleTextCellRenderer))]
-namespace Tizen.Wearable.CircularUI.Forms.Renderer
+namespace WearableUIGallery.TC
 {
-    public class SingleTextCellRenderer : SelectModeTextCellRenderer
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TCSelectModeImageCell : ContentPage
     {
-		protected SingleTextCellRenderer(string style) : base(style)
-		{
-		}
+        public TCSelectModeImageCell()
+        {
+            InitializeComponent();
+        }
 
-		public SingleTextCellRenderer() : this("1text")
-		{
-			MainPart = "elm.text";
-		}
-
-		protected override Span OnGetText(Cell cell, string part)
-		{
-			if (part == MainPart)
-			{
-				return OnMainText((SingleTextCell)cell);
-			}
-			return null;
-		}
-	}
+        private void OnItemLongPressed(object sender, ItemLongPressedEventArgs e)
+        {
+            MyCustomData data = (MyCustomData)e.Item;
+            if (data != null)
+            {
+                data.UseSelectMode = true;
+                data.IsSelected = true;
+            }
+        }
+    }
 }

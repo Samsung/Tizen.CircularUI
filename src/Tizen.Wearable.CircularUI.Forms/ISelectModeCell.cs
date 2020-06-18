@@ -14,31 +14,21 @@
  * limitations under the License.
  */
 
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using Xamarin.Forms;
-using Tizen.Wearable.CircularUI.Forms.Renderer;
-using Tizen.Wearable.CircularUI.Forms;
 
-[assembly: ExportRenderer(typeof(SingleTextCell), typeof(SingleTextCellRenderer))]
-namespace Tizen.Wearable.CircularUI.Forms.Renderer
+namespace Tizen.Wearable.CircularUI.Forms
 {
-    public class SingleTextCellRenderer : SelectModeTextCellRenderer
-    {
-		protected SingleTextCellRenderer(string style) : base(style)
-		{
-		}
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	interface ISelectModeCell
+	{
+		bool IsSelected { get; set; }
+		bool IsSelectionModeEnabled { get; set; }
 
-		public SingleTextCellRenderer() : this("1text")
-		{
-			MainPart = "elm.text";
-		}
+		void OnIsSelectedChanged(object sender, ToggledEventArgs e);
 
-		protected override Span OnGetText(Cell cell, string part)
-		{
-			if (part == MainPart)
-			{
-				return OnMainText((SingleTextCell)cell);
-			}
-			return null;
-		}
+		event EventHandler<ToggledEventArgs> SelectionChanged;
 	}
 }

@@ -38,6 +38,7 @@
             <Button x:Name="ActionButton"
                     Text="Action"
                     AbsoluteLayout.LayoutBounds="75, 268, 210, 92"
+                    BackgroundColor="#AAFFCC"
                     tizen:VisualElement.Style="bottom" />
         </AbsoluteLayout>
     </ContentPage.Content>

@@ -18,6 +18,12 @@
     <Compile Update="TC\TCCircleToolbarItem.xaml.cs">
       <DependentUpon>TCCircleToolbarItem.xaml</DependentUpon>
     </Compile>
+    <Compile Update="TC\TCSelectModeImageCell.xaml.cs">
+      <DependentUpon>TCSelectModeImageCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TC\TCSelectModeTextCell.xaml.cs">
+      <DependentUpon>TCSelectModeTextCell.xaml</DependentUpon>
+    </Compile>
     <Compile Update="TC\TCSingleTextCell.xaml.cs">
       <DependentUpon>TCSingleTextCell.xaml</DependentUpon>
     </Compile>
