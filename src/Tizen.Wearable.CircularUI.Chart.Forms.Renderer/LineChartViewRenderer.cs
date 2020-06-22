@@ -466,7 +466,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             SKPoint first = new SKPoint(0, 0);
             SKPoint last = new SKPoint(0, 0);
             DataItemGroup dataSet = Element.Data.DataItemGroups[lineIndex];
-            Color dataSetColor = dataSet.Color != Color.Default ? dataSet.Color : Color.White;
+            Color dataSetColor = dataSet?.Color != Color.Default ? dataSet?.Color ?? Color.White : Color.White;
 
             using (var paint = new SKPaint
             {
@@ -520,7 +520,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                             continue;
                         }
 
-                        var LineColor = DataItem.Color != Color.Default ? DataItem.Color : Color.White;
+                        var LineColor = DataItem.Color != Color.Default ? DataItem.Color : dataSetColor;
                         colors.Add(LineColor.ToSKColor());
                     }
 

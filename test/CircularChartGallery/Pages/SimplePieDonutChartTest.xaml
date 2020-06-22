@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.SimplePieDonutChartTest">
+    <c:CirclePage.BindingContext>
+        <local:SimpleChartModel/>
+    </c:CirclePage.BindingContext>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="Pie Chart"
+                    FontSize="Micro"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    ValueLabelFontSize="4"
+                    Data="{Binding WeeklyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="Pie Chart Legend"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:PieChartView
+                    x:Name="pieChart2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Left"
+                    ValueLabelFontSize="4"
+                    Data="{Binding WeeklyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="Donut Chart"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:DonutChartView
+                    x:Name="donutChart"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Left"
+                    ValueLabelFontSize="4"
+                    Data="{Binding WeeklyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="Donut Chart ThicknessRatio"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:DonutChartView
+                    x:Name="donutChart2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LegendPosition="Left"
+                    ValueLabelFontSize="4"
+                    ThicknessRatio ="0.8"
+                    Data="{Binding WeeklyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>

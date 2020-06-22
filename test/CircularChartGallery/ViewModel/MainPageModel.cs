@@ -88,7 +88,7 @@ namespace CircularUIChartGallery.ViewModel
             var TueTextItem = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") };
             var WedTextItem = new TextItem { Text = "W", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") };
             var ThuTextItem = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") };
-            var FriTextItem = new TextItem { Text = "T", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") };
+            var FriTextItem = new TextItem { Text = "F", FontSize = 7, TextColor = Color.FromHex("#FCFCFC") };
             var SatTextItem = new TextItem { Text = "S", FontSize = 7, TextColor = Color.FromHex("#2176FF") };
 
             var dummyDataItems = new List<IDataItem>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:chart="clr-namespace:Tizen.Wearable.CircularUI.Chart.Forms;assembly=Tizen.Wearable.CircularUI.Chart.Forms"
+             xmlns:local="clr-namespace:CircularUIChartGallery.ViewModel"
+             RotaryFocusObject="{x:Reference Scroller}"
+             x:Class="CircularUIChartGallery.Pages.SimpleLineChartTest">
+    <c:CirclePage.BindingContext>
+        <local:SimpleChartModel/>
+    </c:CirclePage.BindingContext>
+    <c:CirclePage.Content>
+        <c:CircleScrollView x:Name="Scroller" Margin="0, 50, 0, 50">
+            <StackLayout>
+                <Label
+                    Text="LineChart straight"
+                    FontSize="Micro"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="lineChart1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    Data="{Binding WeeklyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="LineChart spline"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="lineChart2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    LineMode="Spline"
+                    LineWidth="4"
+                    PointIsVisible="False"
+                    Data="{Binding WeeklyData}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="LineChart Axis"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="lineChart3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    Data="{Binding WeeklyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+                <Label
+                    Text="multi-line chart"
+                    FontSize="Micro"
+                    Margin="0, 50, 0, 10"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <chart:LineChartView
+                    x:Name="multiLineChart"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Maximum="10"
+                    Data="{Binding GroupWeeklyData}"
+                    AxisOption="{Binding MajorMinorAxisOption}"
+                    WidthRequest="300"
+                    HeightRequest="200"/>
+            </StackLayout>
+        </c:CircleScrollView>
+    </c:CirclePage.Content>
+</c:CirclePage>
