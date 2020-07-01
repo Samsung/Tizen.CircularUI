@@ -11,6 +11,7 @@
     </FlyoutItem>
     <FlyoutItem Route="VerticalBarChartTest" Title="Vertical Bar Chart TC">
         <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:SimpleBarChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:BarChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:BarChartAxisTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:BarChartRadiusTest}"/>
@@ -35,6 +36,7 @@
     </FlyoutItem>
     <FlyoutItem Route="LineChartTest" Title="Line Chart TC">
         <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:SimpleLineChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:LineChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:MultiLineChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:LineChartDataTest}"/>
@@ -42,6 +44,7 @@
     </FlyoutItem>
     <FlyoutItem Route="PieChartTest" Title="Pie Donut Chart TC">
         <ShellSection>
+            <ShellContent ContentTemplate="{DataTemplate pages:SimplePieDonutChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:PieChartTest}"/>
             <ShellContent ContentTemplate="{DataTemplate pages:DonutChartTest}"/>
         </ShellSection>

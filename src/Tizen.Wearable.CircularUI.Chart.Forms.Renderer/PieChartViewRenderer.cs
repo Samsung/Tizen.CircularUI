@@ -156,7 +156,16 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
             int colorIndex = 0;
             foreach (IDataItem item in dataItems)
             {
-                if (item == null || item.Value == 0) continue;
+                if (item == null ) continue;
+
+                if (item.Value == 0)
+                {
+                    if(item.Label != null &&  !string.IsNullOrEmpty(item.Label.Text))
+                    {
+                        colorIndex++;
+                    }
+                    continue;
+                }
 
                 float sweepAngle = 360f * (float)item.Value / totalValue;
 

@@ -60,18 +60,7 @@ namespace Tizen.Wearable.CircularUI.Chart.Forms.Renderer
                 return;
             }
 
-            if (Element.AxisOption.IsVisibleOfMajorAxisLine == false &&
-                Element.AxisOption.IsVisibleOfMinorAxisLine == false &&
-                Element.AxisOption.IsVisibleOfReferenceLabel == false)
-            {
-                _majorAxisSize = new SKSize(0, 0);
-                _minorAxisSize = new SKSize(0, 0);
-                _referenceItemSize = new SKSize(0, 0);
-            }
-            else
-            {
-                base.CalculateAxisSize();
-            }
+            base.CalculateAxisSize();
 
             var barSize = this.CalculateBarSize();
             GenerateDataTable();
