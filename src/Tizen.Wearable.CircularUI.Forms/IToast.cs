@@ -21,7 +21,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// This interface, which defines the ability to display simple text, is used internally.
     /// </summary>
-    internal interface IToast
+    public interface IToast
     {
         /// <summary>
         /// Gets or sets the duration.

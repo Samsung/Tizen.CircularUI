@@ -23,7 +23,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The ITwoButtonPopup is an interface to describe confirmation pop-up which has circular two button, title, text, and content area
     /// </summary>
-    internal interface ITwoButtonPopup
+    public interface ITwoButtonPopup
     {
         /// <summary>
         /// Occurs when the Back button is pressed.
