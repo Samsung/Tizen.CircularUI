@@ -22,7 +22,7 @@ namespace Tizen.Wearable.CircularUI.Forms
     /// <summary>
     /// The IInformationPopup is an interface to describe information pop-up which has circular bottom button, title, text, and content area
     /// </summary>
-    internal interface IInformationPopup
+    public interface IInformationPopup
     {
         /// <summary>
         /// Occurs when the Back button is pressed.

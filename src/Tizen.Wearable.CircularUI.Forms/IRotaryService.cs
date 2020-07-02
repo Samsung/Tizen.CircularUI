@@ -2,7 +2,7 @@
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
-    interface IRotaryService
+    public interface IRotaryService
     {
         event EventHandler<RotaryEventArgs> Rotated;
     }
