@@ -5432,25 +5432,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.DatePickerRenderer.OnPickerOpened
   nameWithType: DatePickerRenderer.OnPickerOpened
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
-  name: EmbeddingControls2
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2
-  nameWithType: EmbeddingControls2
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor
-  name: EmbeddingControls2()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html#Tizen_Wearable_CircularUI_Forms_Renderer_EmbeddingControls2__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.EmbeddingControls2()
-  nameWithType: EmbeddingControls2.EmbeddingControls2()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor*
-  name: EmbeddingControls2
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html#Tizen_Wearable_CircularUI_Forms_Renderer_EmbeddingControls2__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.EmbeddingControls2
-  nameWithType: EmbeddingControls2.EmbeddingControls2
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer
   name: FlatViewCellRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.html
@@ -5859,38 +5840,6 @@ references:
   isSpec: "True"
   fullName: Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.UpdateRotaryInteraction
   nameWithType: ListViewRenderer.UpdateRotaryInteraction
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl
-  name: MediaPlayerImpl
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html
-  commentId: T:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl
-  nameWithType: MediaPlayerImpl
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.#ctor
-  name: MediaPlayerImpl()
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl__ctor
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.#ctor
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.MediaPlayerImpl()
-  nameWithType: MediaPlayerImpl.MediaPlayerImpl()
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.#ctor*
-  name: MediaPlayerImpl
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl__ctor_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.#ctor
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.MediaPlayerImpl
-  nameWithType: MediaPlayerImpl.MediaPlayerImpl
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
-  name: GetEmbeddingControlView(IMediaPlayer)
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetEmbeddingControlView_IMediaPlayer_
-  commentId: M:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
-  nameWithType: MediaPlayerImpl.GetEmbeddingControlView(IMediaPlayer)
-- uid: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView*
-  name: GetEmbeddingControlView
-  href: api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html#Tizen_Wearable_CircularUI_Forms_Renderer_MediaPlayerImpl_GetEmbeddingControlView_
-  commentId: Overload:Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView
-  isSpec: "True"
-  fullName: Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.GetEmbeddingControlView
-  nameWithType: MediaPlayerImpl.GetEmbeddingControlView
 - uid: Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer
   name: PageRenderer
   href: api/Tizen.Wearable.CircularUI.Forms.Renderer.PageRenderer.html

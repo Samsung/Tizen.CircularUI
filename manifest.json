@@ -2791,18 +2791,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.EmbeddingControls2.html",
-          "hash": "vLTtHj8uBOcktTAQ3XY2PQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.FlatViewCellRenderer.yml",
       "output": {
         ".html": {
@@ -2892,18 +2880,6 @@
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.ListViewRenderer.html",
           "hash": "Nzuf2rCjjE0VyCqficIZbw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.MediaPlayerImpl.html",
-          "hash": "8DZdPMAGMlHuLXXAF0zkzQ=="
         }
       },
       "is_incremental": false,
@@ -3239,7 +3215,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Tizen.Wearable.CircularUI.Forms.Renderer.html",
-          "hash": "PgU9bfNmVrbSYBgIIlNZIQ=="
+          "hash": "JsUdaA3UWxSXe16FqS5DhQ=="
         }
       },
       "is_incremental": false,
@@ -3455,7 +3431,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "VYXwJpNEFKo7ZnIG5RtMKA=="
+          "hash": "Gu5wTpR+0lyoiEg+HAMpkg=="
         }
       },
       "is_incremental": false,
@@ -3485,17 +3461,18 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 131,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -3504,11 +3481,10 @@
           "total_file_count": 37,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 129,
           "skipped_file_count": 0
         }
       }
