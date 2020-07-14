@@ -26,13 +26,6 @@ using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 
 namespace Tizen.Wearable.CircularUI.Forms
 {
-
-    //TODO : This interface sholud be removed when the related bug in Xamarin.Forms is fixed.
-    [EditorBrowsable(EditorBrowsableState.Never)]
-    public interface IPlatformMediaPlayer2 : IPlatformMediaPlayer
-    {
-
-    }
     /// <summary>
     /// MediaPlayer provieds the essential components to play the media contents.
     /// </summary>
@@ -101,7 +94,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         public static readonly BindableProperty IsBufferingProperty = IsBufferingPropertyKey.BindableProperty;
 
         bool _disposed = false;
-        IPlatformMediaPlayer2 _impl;
+        IPlatformMediaPlayer _impl;
         bool _isPlaying;
         bool _controlsAlwaysVisible;
         CancellationTokenSource _hideTimerCTS = new CancellationTokenSource();
@@ -112,8 +105,7 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         public MediaPlayer()
         {
-            //TODO: IPlatformMediaPlayer2 should be replaced to IPlatformMediaPlayer if Xamarin.Forms ready
-            _impl = DependencyService.Get<IPlatformMediaPlayer2>(fetchTarget: DependencyFetchTarget.NewInstance);
+            _impl = DependencyService.Get<IPlatformMediaPlayer>(fetchTarget: DependencyFetchTarget.NewInstance);
             if (_impl != null)
             {
                 _impl.UpdateStreamInfo += OnUpdateStreamInfo;
