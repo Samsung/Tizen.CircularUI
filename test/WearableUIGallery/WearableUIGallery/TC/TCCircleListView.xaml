@@ -43,6 +43,7 @@
             <w:CircleListView.HeaderTemplate>
                 <DataTemplate>
                     <Label
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -53,6 +54,7 @@
             <w:CircleListView.FooterTemplate>
                 <DataTemplate>
                     <Label
+                        HeightRequest="120"
                         FontAttributes="Bold"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"

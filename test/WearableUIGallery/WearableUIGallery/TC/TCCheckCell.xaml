@@ -17,7 +17,7 @@
                 AbsoluteLayout.LayoutFlags="PositionProportional">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <w:CheckCell Text="{Binding Text}" On="{Binding IsSelected}" OnColor="Violet" />
+                        <w:CheckCell Text="{Binding Text}" On="{Binding IsSelected}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
                 <ListView.Header>
