@@ -131,3 +131,7 @@ However, they can be substituted with Xamarin.Forms controls. Below shows how th
 ## Tip and Tech
 
 - [Localization](doc/guide/Localization.md) : This guide describes how to support multiple languages. 
+- Recommendations for `ItemHeight` of `ListView` or `CircleListView`
+  - According to the [Galaxy Watch's UI Component guideline](https://developer.samsung.com/galaxy-watch-design/ui-components/list.html), we recommend that the height of each item (including headers or footers) can be used to occupy at least one third of the screen (at least 115~120). The default height for a list item is 130 pixel.
+<img src="https://developer.samsung.com/sd2_images/gear/design/UI_11.3.3.png" width=800/>
+
