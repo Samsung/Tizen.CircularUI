@@ -48,6 +48,9 @@ The Tizen Wearable CircularUI project provides UI controls that fit on a circula
 Tizen Wearable CircularUI project also provides extended Xamarin.Forms controls.
 These controls basically look same as what it is in Xamarin.Forms, but provide additional features just for Tizen wearables. The developers would want to use the following controls only when they specifically need to use the provided features in each controls.
 
+> :information_source:
+> In the case of `WatchApplication`(Watchface App), to use the controls below, you must use it with a class that implements `ICircleSurfaceProvider` (e.g., `CircleSurfaceView`) or `CircleSurfaceEffectBehavior`.
+
 - [BezelInteractionPage](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.BezelInteractionPage.html) : A subclass of Xamarin.Forms.ContentPage that allows you to set which view gets the bezel rotation event.
 - [CircleListView](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleListView.html) : A subclass of Xamarin.Forms.ListView that allows you to change the bar color of the `ListView`.
 - [CircleScrollView](https://samsung.github.io/Tizen.CircularUI/api/Tizen.Wearable.CircularUI.Forms.CircleScrollView.html) : A subclass of Xamarin.Forms.ScrollView that allows you to change the bar color of the `ScollView`.
@@ -135,3 +138,6 @@ However, they can be substituted with Xamarin.Forms controls. Below shows how th
   - According to the [Galaxy Watch's UI Component guideline](https://developer.samsung.com/galaxy-watch-design/ui-components/list.html), we recommend that the height of each item (including headers or footers) can be used to occupy at least one third of the screen (at least 115~120). The default height for a list item is 130 pixel.
 <img src="https://developer.samsung.com/sd2_images/gear/design/UI_11.3.3.png" width=800/>
 
+- Known issues of `WatchApplication` (Watchface App)
+  - Since WatchFace app is a `WatchAppication`, not Xamarin.Form's `FormsAppliaction`, it is not guaranteed to create a `CircleSuface`, which is necessary to render cicle objects (such as `CircleListView`, `CircleSlider`, and so on) during initialization.
+  - Therefore, it is recommended to use `ICircleSurfaceProvider` (e.g., `CircleSurfaceView`) or `CircleSurfaceEffectBehavior` together to render these circle objects properly in WatchFace app.
