@@ -122,13 +122,13 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override void OnMoreOptionClosed()
         {
-            DeactivateRotaryWidget();
+            ActivateRotaryWidget();
         }
 
 
         protected override void OnMoreOptionOpened()
         {
-            ActivateRotaryWidget();
+            DeactivateRotaryWidget();
         }
 
         protected override void Dispose(bool disposing)

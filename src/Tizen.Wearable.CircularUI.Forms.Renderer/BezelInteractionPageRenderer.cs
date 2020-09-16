@@ -79,12 +79,12 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
 
         protected override void OnMoreOptionClosed()
         {
-            DeactivateRotaryWidget();
+            ActivateRotaryWidget();
         }
 
         protected override void OnMoreOptionOpened()
         {
-            ActivateRotaryWidget();
+            DeactivateRotaryWidget();
         }
 
         void UpdateRotaryFocusObject(bool initialize)
