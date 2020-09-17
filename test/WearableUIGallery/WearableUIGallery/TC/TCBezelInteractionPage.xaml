@@ -32,4 +32,8 @@
             </w:CircleSurfaceView>
         </AbsoluteLayout>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Item1" IconImageSource="home.png"/>
+        <ToolbarItem Text="Item2" IconImageSource="play.png"/>
+    </ContentPage.ToolbarItems>
 </w:BezelInteractionPage>
