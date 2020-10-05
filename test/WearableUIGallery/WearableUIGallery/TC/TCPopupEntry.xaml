@@ -15,10 +15,11 @@
                     BackgroundColor="Gray"
                     HorizontalOptions="FillAndExpand"
                     TextColor="Blue"
-                    Placeholder="Foobar"
+                    Placeholder="Max Lenth=4"
                     PlaceholderColor="Blue"
                     VerticalOptions="CenterAndExpand"
                     ReturnType="Search"
+                    MaxLength="4"
                     x:Name="PopupEntry1"/>
                 <w:PopupEntry
                     AutomationId="popupEntry2"

@@ -22,6 +22,7 @@ using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
 using EColor = ElmSharp.Color;
 using ELayout = ElmSharp.Layout;
+using EEntry = ElmSharp.Entry;
 using XForms = Xamarin.Forms.Forms;
 using XEntry = Xamarin.Forms.Entry;
 
@@ -128,6 +129,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _editor.Scrollable = true;
             _editor.SetInputPanelEnabled(false);
             _editor.AllowFocus(true);
+            _editor.PrependMarkUpFilter(PopupEntryMaxLengthFilter);
             _editor.Show();
 
             _editor.SetInputPanelReturnKeyType(Element.ReturnType.ToInputPanelReturnKeyType());
@@ -154,6 +156,14 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void PopupEntryActivated(object sender, EventArgs e)
         {
             ((IEntryController)Element).SendCompleted();
+        }
+
+        string PopupEntryMaxLengthFilter(EEntry entry, string s)
+        {
+            if (entry.Text.Length < Element.MaxLength)
+                return s;
+
+            return null;
         }
 
         void HidePopup()
