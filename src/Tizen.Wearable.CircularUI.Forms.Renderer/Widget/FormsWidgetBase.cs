@@ -23,6 +23,7 @@ using ElmSharp;
 using XApplication = Xamarin.Forms.Application;
 using XPropertyChangingEventArgs = Xamarin.Forms.PropertyChangingEventArgs;
 using XPropertyChangingEventHandler = Xamarin.Forms.PropertyChangingEventHandler;
+using ERect = ElmSharp.Rect;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer.Widget
 {
@@ -84,7 +85,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Widget
 
         protected virtual void OnRootViewUpdated(EvasObject rootView)
         {
-            rootView.Geometry = new Rect(0, 0, Window.ScreenSize.Width, Window.ScreenSize.Height);
+            rootView.Geometry = new ERect(0, 0, Window.ScreenSize.Width, Window.ScreenSize.Height);
         }
 
         void AppOnPropertyChanging(object sender, XPropertyChangingEventArgs args)

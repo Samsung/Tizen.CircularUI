@@ -6,12 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Tizen.NET" Version="4.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
   </ItemGroup>
 
   <!-- Include Nuget Package for Xamarin building -->
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Chart.Forms\Tizen.Wearable.CircularUI.Chart.Forms.csproj" />
     <ProjectReference Include="..\..\..\src\Tizen.Wearable.CircularUI.Forms\Tizen.Wearable.CircularUI.Forms.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -14,18 +14,19 @@
  * limitations under the License.
  */
 
-using ElmSharp;
-using ElmSharp.Wearable;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
-using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using Xamarin.Forms.Platform.Tizen.Native;
+using ElmSharp;
+using ElmSharp.Wearable;
+using Tizen.Wearable.CircularUI.Forms;
 using ERotaryEventManager = ElmSharp.Wearable.RotaryEventManager;
+using ERect = ElmSharp.Rect;
 using NPage = Xamarin.Forms.Platform.Tizen.Native.Page;
 using XForms = Xamarin.Forms.Forms;
 using AppSpecific = Xamarin.Forms.PlatformConfiguration.TizenSpecific.Application;
@@ -287,7 +288,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var btnH = Math.Max(_actionButton.MinimumHeight, btnRect.Height);
                 var btnX = bound.X + (bound.Width - btnW) / 2;
                 var btnY = bound.Y + bound.Height - btnH;
-                _actionButton.Geometry = new Rect(btnX, btnY, btnW, btnH);
+                _actionButton.Geometry = new ERect(btnX, btnY, btnW, btnH);
                 _actionButton.StackAbove(topmostView);
                 topmostView = _actionButton;
             }

@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 
-using ElmSharp;
 using System;
-using NSystem = System;
+using ElmSharp;
 using Tizen.Applications;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Tizen;
+using NSystem = System;
 using XApplication = Xamarin.Forms.Application;
 using XForms = Xamarin.Forms.Forms;
+using ERect = ElmSharp.Rect;
 
 namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
 {
@@ -70,7 +71,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer.Watchface
 
         protected virtual void OnRootViewUpdated(EvasObject rootView)
         {
-            rootView.Geometry = new Rect(0, 0, Window.ScreenSize.Width, Window.ScreenSize.Height);
+            rootView.Geometry = new ERect(0, 0, Window.ScreenSize.Width, Window.ScreenSize.Height);
         }
 
         protected override void OnCreate()

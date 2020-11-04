@@ -20,6 +20,7 @@ using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using ERect = ElmSharp.Rect;
 
 [assembly: ResolutionGroupName("CircleUI")]
 [assembly: ExportEffect(typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TizenConfirmPopupEffect), "ContextPopupEffectBehavior")]
@@ -114,8 +115,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             var option = _behavior.PositionOption;
             var offset = _behavior.Offset;
             int x, y;
-            Rect rect;
-            Rect ctxRect = _popup.Geometry;
+            ERect rect;
+            ERect ctxRect = _popup.Geometry;
             switch (option)
             {
                 case PositionOption.Absolute:

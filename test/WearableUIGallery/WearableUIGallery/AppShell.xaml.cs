@@ -22,10 +22,10 @@ namespace WearableUIGallery
                 }
                 else
                 {
-                    foreach(var subTC in tc.Class)
+                    foreach (var subTC in tc.Class)
                     {
                         var desc = subTC as TCDescribe;
-                        var route = tc.Title + "/" + desc.Title;
+                        var route = tc.Title + "_" + desc.Title;
                         Routing.RegisterRoute(route, desc.Class);
                     }
                 }
