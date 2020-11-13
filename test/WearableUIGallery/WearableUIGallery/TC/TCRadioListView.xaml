@@ -29,7 +29,7 @@
                                 IsChecked="{Binding IsSelected, Mode=TwoWay}"
                                 CheckedChanged="OnSelected"
                                 VerticalOptions="Center"
-                                Text="{Binding Value}"
+                                Content="{Binding Value}"
                                 WidthRequest="80"
                                 HeightRequest="80" />
                         </StackLayout>

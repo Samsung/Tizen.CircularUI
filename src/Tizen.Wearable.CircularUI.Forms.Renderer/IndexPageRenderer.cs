@@ -24,6 +24,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
 using Circular = Tizen.Wearable.CircularUI.Forms.FormsCircularUI;
+using ERect = ElmSharp.Rect;
 
 [assembly: ExportRenderer(typeof(IndexPage), typeof(IndexPageRenderer))]
 
@@ -138,7 +139,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             _layoutBound = _innerContainer.Geometry.Size;
             _childCount = Element.Children.Count;
             int baseX = _innerContainer.Geometry.X;
-            Rect bound = _scroller.Geometry;
+            ERect bound = _scroller.Geometry;
             int index = 0;
             foreach (var page in Element.Children)
             {

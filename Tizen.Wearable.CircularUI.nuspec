@@ -5,19 +5,19 @@
     <version>$version$</version>
     <authors>Samsung Electronics</authors>
     <owners>Samsung Electronics</owners>
-    <tags>xamarin forms xamarinforms xamarin.forms circular circularui wearable gear tizen</tags>
+    <tags>xamarin forms xamarinforms xamarin.forms circular circularui wearable galaxy watch tizen</tags>
     <licenseUrl>http://floralicense.org/license/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/Samsung/Tizen.CircularUI/master/assets/circularui_rgb_64_64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description> Xamarin forms UI components optimized for round screen and bezel like Samsung gear products </description>
+    <description> Xamarin forms UI components optimized for round screen and bezel like Samsung Galaxy Watch series</description>
     <projectUrl>https://github.com/Samsung/Tizen.CircularUI</projectUrl>
     <copyright>© Samsung Electronics Co., Ltd All Rights Reserved</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
-        <dependency id="Xamarin.Forms" version="4.6.0.967" />
+        <dependency id="Xamarin.Forms" version="5.0.0.1558-pre3" />
       </group>
       <group targetFramework="tizen40">
-        <dependency id="Xamarin.Forms" version="4.6.0.967" />
+        <dependency id="Xamarin.Forms" version="5.0.0.1558-pre3" />
         <dependency id="Tizen.NET" version="4.0.0" />
       </group>
     </dependencies>

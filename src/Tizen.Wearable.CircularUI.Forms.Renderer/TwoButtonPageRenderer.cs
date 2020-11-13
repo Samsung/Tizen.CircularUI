@@ -15,11 +15,11 @@
  */
 
 using ElmSharp;
-using System;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
 using XForms = Xamarin.Forms.Forms;
+using ERect = ElmSharp.Rect;
 
 [assembly: ExportRenderer(typeof(TwoButtonPage), typeof(Tizen.Wearable.CircularUI.Forms.Renderer.TwoButtonPageRenderer))]
 
@@ -81,7 +81,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             // Do Nothing because ignore base UpdateLayout
         }
 
-        public override Rect GetNativeContentGeometry()
+        public override ERect GetNativeContentGeometry()
         {
             return _widget.Canvas.Geometry;
         }

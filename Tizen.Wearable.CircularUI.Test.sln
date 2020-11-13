@@ -31,13 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xaminals", "sample\ShellExa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xaminals.Tizen", "sample\ShellExamples\Xaminals\Xaminals.Tizen\Xaminals.Tizen.csproj", "{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Chart.Forms", "src\Tizen.Wearable.CircularUI.Chart.Forms\Tizen.Wearable.CircularUI.Chart.Forms.csproj", "{E385964C-42B7-4926-A97D-92E97960CDE6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Chart.Forms.Renderer", "src\Tizen.Wearable.CircularUI.Chart.Forms.Renderer\Tizen.Wearable.CircularUI.Chart.Forms.Renderer.csproj", "{D7E02E52-A51E-4CD7-9D97-D24D9A3FC16A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CircularUI", "CircularUI", "{803EA8B9-E568-44D9-BE24-6BB815D6849B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CircularUI.Chart", "CircularUI.Chart", "{71BD60A9-7086-438D-A7BE-C46D1212237B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,14 +79,6 @@ Global
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E385964C-42B7-4926-A97D-92E97960CDE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E385964C-42B7-4926-A97D-92E97960CDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E385964C-42B7-4926-A97D-92E97960CDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E385964C-42B7-4926-A97D-92E97960CDE6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7E02E52-A51E-4CD7-9D97-D24D9A3FC16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7E02E52-A51E-4CD7-9D97-D24D9A3FC16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7E02E52-A51E-4CD7-9D97-D24D9A3FC16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7E02E52-A51E-4CD7-9D97-D24D9A3FC16A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,8 +96,6 @@ Global
 		{C65D5BE2-4E42-44B9-B0F7-3F736F2EF1D7} = {36C35271-6B8F-412E-B87F-5C7F41D60A60}
 		{BC74C370-A520-4116-B57E-18B44BE04F1E} = {318DE803-3D8C-44F9-8C27-4DED4504DC94}
 		{4FE516ED-8A4C-4AA4-AC7F-D7F48FFE4BAD} = {318DE803-3D8C-44F9-8C27-4DED4504DC94}
-		{E385964C-42B7-4926-A97D-92E97960CDE6} = {71BD60A9-7086-438D-A7BE-C46D1212237B}
-		{D7E02E52-A51E-4CD7-9D97-D24D9A3FC16A} = {71BD60A9-7086-438D-A7BE-C46D1212237B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3736C77A-08ED-442D-ADE1-5779254463ED}

@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-using System;
-using Tizen.Wearable.CircularUI.Chart.Forms;
-using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
+using Tizen.Wearable.CircularUI.Forms;
 
 namespace WearableUIGallery.Tizen.Wearable
 {
@@ -43,10 +41,8 @@ namespace WearableUIGallery.Tizen.Wearable
         {
             var app = new Program();
 
-            Forms.SetFlags("IndicatorView_Experimental", "RadioButton_Experimental");
             Forms.Init(app);
             FormsCircularUI.Init(new InitOptions(app, APIKEY));
-            FormsCircularUIChart.Init();
 #if UITEST
             global::Tizen.Appium.TizenAppium.StartService();
 #endif

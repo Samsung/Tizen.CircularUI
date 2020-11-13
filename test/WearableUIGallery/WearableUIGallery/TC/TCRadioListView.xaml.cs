@@ -35,7 +35,7 @@ namespace WearableUIGallery.TC
             if (radio != null)
             {
                 Console.WriteLine($"<<OnSelected>>  args.Value:{args.Value}");
-                Console.WriteLine($"<<OnSelected>>  Radio Text:{radio.Text}, IsChecked:{radio.IsChecked}, GroupName:{radio.GroupName}");
+                Console.WriteLine($"<<OnSelected>>  Radio Text:{radio.Content}, IsChecked:{radio.IsChecked}, GroupName:{radio.GroupName}");
             }
         }
     }

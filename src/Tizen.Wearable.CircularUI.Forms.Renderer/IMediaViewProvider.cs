@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (c) 2018 Samsung Electronics Co., Ltd All Rights Reserved
  *
  * Licensed under the Flora License, Version 1.1 (the "License");
@@ -14,18 +14,12 @@
  * limitations under the License.
  */
 
-namespace Tizen.Wearable.CircularUI.Chart.Forms
+using MMView = Tizen.Multimedia.MediaView;
+
+namespace Tizen.Wearable.CircularUI.Forms
 {
-    public static class FormsCircularUIChart
+    public interface IMediaViewProvider
     {
-        public static readonly string Tag = "CircularUI.Chart";
-
-        public static bool IsInitialized { get; private set; }
-
-        public static void Init()
-        {
-            if (IsInitialized) return;
-            IsInitialized = true;
-        }
+        MMView GetMediaView();
     }
 }

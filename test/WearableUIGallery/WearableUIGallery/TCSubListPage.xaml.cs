@@ -51,7 +51,7 @@ namespace WearableUIGallery
             if (args.Item == null) return;
 
             var desc = args.Item as TCDescribe;
-            Shell.Current.GoToAsync(_tcName + "/" + desc.Title);
+            Shell.Current.GoToAsync(_tcName + "_" + desc.Title);
         }
     }
 
