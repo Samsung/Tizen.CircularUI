@@ -13,17 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-using Xamarin.Forms;
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WearableUIGallery.TC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TCMediaViewStackLayout : ContentPage
+    public partial class TCMediaViewStackLayout : BezelInteractionPage, IRotaryEventReceiver
     {
         public TCMediaViewStackLayout()
         {
             InitializeComponent ();
+            RotaryFocusObject = this;
+        }
+
+        public void Rotate(RotaryEventArgs args)
+        {
+            if (args.IsClockwise)
+            {
+                VideoPlayer.Seek(VideoPlayer.Position + 2000);
+            }
+            else
+            {
+                VideoPlayer.Seek(VideoPlayer.Position - 2000);
+            }
         }
     }
 }

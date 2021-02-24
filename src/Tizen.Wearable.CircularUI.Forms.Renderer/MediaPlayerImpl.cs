@@ -184,7 +184,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             try
             {
-                await _player.SetPlayPositionAsync(ms, false);
+                await _player.SetPlayPositionAsync(ms, true);
             }
             catch (Exception e)
             {
@@ -275,13 +275,16 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
             await handler.SetSource(_player, _source);
         }
 
-        async void OnTargetViewPropertyChanged(object sender, global::System.ComponentModel.PropertyChangedEventArgs e)
+        void OnTargetViewPropertyChanged(object sender, global::System.ComponentModel.PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Renderer")
             {
                 if (Platform.GetRenderer(sender as BindableObject) != null && HasSource && AutoPlay)
                 {
-                    await Start();
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        _ = Start();
+                    });
                 }
                 else if (Platform.GetRenderer(sender as BindableObject) == null && AutoStop)
                 {
