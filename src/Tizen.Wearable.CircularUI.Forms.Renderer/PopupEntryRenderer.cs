@@ -64,6 +64,11 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 // Set Text again for apply text style because IsEditable reset the style of text
                 Control.Text = string.Empty;
                 Control.Text = Element.Text;
+                if (Control is IEntry ie)
+                {
+                    ie.Placeholder = string.Empty;
+                    ie.Placeholder = Element.Placeholder;
+                }
             }
         }
 
