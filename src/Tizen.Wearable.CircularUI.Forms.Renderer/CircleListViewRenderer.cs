@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using ElmSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Tizen;
@@ -39,6 +40,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         {
             _listView = new WatchListView(XForms.NativeParent, this.GetSurface());
             _listView.ItemLongPressed += OnItemLongPressed;
+            _listView.ScrollAnimationStopped += OnScrollAnimationStopped;
             return _listView;
         }
 
@@ -49,6 +51,7 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 if (_listView != null)
                 {
                     _listView.ItemLongPressed -= OnItemLongPressed;
+                    _listView.ScrollAnimationStopped -= OnScrollAnimationStopped;
                 }
             }
             base.Dispose(disposing);
@@ -61,6 +64,17 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
                 var obj = itemContext.Cell.BindingContext;
                 var index = Element.TemplatedItems.GetGlobalIndexOfItem(obj);
                 Element.NotifyItemLongPressed(obj, index);
+            }
+        }
+
+        void OnScrollAnimationStopped(object sender, EventArgs args)
+        {
+            GenListItem item = Control.GetItemByPosition(180, 180, out int pos);
+            if (item.Data is NListView.ItemContext itemContext && pos == 0)
+            {
+                var obj = itemContext.Cell.BindingContext;
+                var index = Element.TemplatedItems.GetGlobalIndexOfItem(obj);
+                Element.NotifyIteFocused(obj, index);
             }
         }
 

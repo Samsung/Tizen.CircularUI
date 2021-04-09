@@ -66,10 +66,21 @@ namespace Tizen.Wearable.CircularUI.Forms
         /// </summary>
         public event EventHandler<ItemLongPressedEventArgs> ItemLongPressed;
 
+        /// <summary>
+        /// Event that is raised when a new item is long pressed.
+        /// </summary>
+        public event EventHandler<ItemFocusedEventArgs> ItemFocused;
+
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void NotifyItemLongPressed(object item, int index)
         {
             ItemLongPressed?.Invoke(this, new ItemLongPressedEventArgs(item, index));
+        }
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public void NotifyIteFocused(object item, int index)
+        {
+            ItemFocused?.Invoke(this, new ItemFocusedEventArgs(item, index));
         }
     }
 }
