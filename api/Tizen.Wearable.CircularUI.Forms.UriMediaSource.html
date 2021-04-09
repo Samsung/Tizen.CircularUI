@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MediaView
+    <title>Class UriMediaSource
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MediaView
+    <meta name="title" content="Class UriMediaSource
    ">
     <meta name="generator" content="docfx 1.0.0.0">
     
@@ -78,38 +78,47 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Forms_MediaView" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView" class="text-break">Class MediaView
+  <h1 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource" class="text-break">Class UriMediaSource
   </h1>
-  <div class="markdown level0 summary"><p>The MediaView class is used to display the video output on the screen.</p>
+  <div class="markdown level0 summary"><p>A MediaSource that loads a media from a URI</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MediaView</span></div>
+    <div class="level1"><a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaSource.html">MediaSource</a></div>
+    <div class="level2"><span class="xref">UriMediaSource</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IVideoOutput.html">IVideoOutput</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_FromFile_System_String_">MediaSource.FromFile(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_FromUri_System_Uri_">MediaSource.FromUri(Uri)</a>
+    </div>
+    <div>
+      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaSource.html#Tizen_Wearable_CircularUI_Forms_MediaSource_OnSourceChanged">MediaSource.OnSourceChanged()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
   <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Forms_MediaView_syntax">Syntax</h5>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MediaView : Layout&lt;View&gt;, IVideoOutput</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UriMediaSource : MediaSource</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_PlayerProperty" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.PlayerProperty">PlayerProperty</h4>
-  <div class="markdown level1 summary"><p>Identifies the Player bindable property.</p>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_UriProperty" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.UriProperty">UriProperty</h4>
+  <div class="markdown level1 summary"><p>Identifies the File bindable property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly BindableProperty PlayerProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly BindableProperty UriProperty</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,14 +137,14 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_OuputType_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OuputType*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_OuputType" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OuputType">OuputType</h4>
-  <div class="markdown level1 summary"><p>Gets the video output type.</p>
+  <a id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_Uri_" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_Uri" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.Uri">Uri</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the URI for the media to get.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual VideoOuputType OuputType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Uri Uri { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,44 +156,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.VideoOuputType.html">VideoOuputType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_Player_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Player*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_Player" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Player">Player</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the media player.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaPlayer Player { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaPlayer.html">MediaPlayer</a></td>
+        <td><span class="xref">System.Uri</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_LayoutChildren_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.LayoutChildren*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_LayoutChildren_System_Double_System_Double_System_Double_System_Double_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.LayoutChildren(System.Double,System.Double,System.Double,System.Double)">LayoutChildren(Double, Double, Double, Double)</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_OnPropertyChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_OnPropertyChanged_System_String_" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.OnPropertyChanged(System.String)">OnPropertyChanged(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void LayoutChildren(double x, double y, double width, double height)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnPropertyChanged(string propertyName = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,65 +182,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">x</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">y</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">width</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">height</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_OnBindingContextChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnBindingContextChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_OnBindingContextChanged" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnBindingContextChanged">OnBindingContextChanged()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_ToString_" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_ToString" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the path to the file for the media, prefixed with the string, &quot;Uri: &quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnBindingContextChanged()</code></pre>
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_OnMeasure_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnMeasure*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_OnMeasure_System_Double_System_Double_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.OnMeasure(System.Double,System.Double)">OnMeasure(Double, Double)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">widthConstraint</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">heightConstraint</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -266,21 +207,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SizeRequest</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="eii">Explicit Interface Implementations
+  <h3 id="operators">Operators
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_Controller" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#Controller">IVideoOutput.Controller</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_System_Uri__Tizen_Wearable_CircularUI_Forms_UriMediaSource" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit(System.Uri)~Tizen.Wearable.CircularUI.Forms.UriMediaSource">Implicit(Uri to UriMediaSource)</h4>
+  <div class="markdown level1 summary"><p>Allows implicit casting from a Uri.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">View IVideoOutput.Controller { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator UriMediaSource(Uri uri)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -291,19 +250,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">View</span></td>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.UriMediaSource.html">UriMediaSource</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView_" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Forms_MediaView_Tizen_Wearable_CircularUI_Forms_IVideoOutput_MediaView" data-uid="Tizen.Wearable.CircularUI.Forms.MediaView.Tizen#Wearable#CircularUI#Forms#IVideoOutput#MediaView">IVideoOutput.MediaView</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_UriMediaSource_op_Implicit_Tizen_Wearable_CircularUI_Forms_UriMediaSource__System_String" data-uid="Tizen.Wearable.CircularUI.Forms.UriMediaSource.op_Implicit(Tizen.Wearable.CircularUI.Forms.UriMediaSource)~System.String">Implicit(UriMediaSource to String)</h4>
+  <div class="markdown level1 summary"><p>Allows implicit casting to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">VisualElement IVideoOutput.MediaView { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator string (UriMediaSource uri)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Tizen.Wearable.CircularUI.Forms.UriMediaSource.html">UriMediaSource</a></td>
+        <td><span class="parametername">uri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -314,15 +291,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">VisualElement</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.IVideoOutput.html">IVideoOutput</a>
-  </div>
 </article>
           </div>
           

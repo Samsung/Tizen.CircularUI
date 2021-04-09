@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MediaViewRenderer
+    <title>Class EmbeddingControls
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MediaViewRenderer
+    <meta name="title" content="Class EmbeddingControls
    ">
     <meta name="generator" content="docfx 1.0.0.0">
     
@@ -78,83 +78,95 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer">
+            <article class="content wrap" id="_content" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls">
   
   
-  <h1 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer" class="text-break">Class MediaViewRenderer
+  <h1 id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls" class="text-break">Class EmbeddingControls
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The default embedding controller of MediaPlayer</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MediaViewRenderer</span></div>
+    <div class="level1"><span class="xref">EmbeddingControls</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html">IMediaViewProvider</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Renderer.html">Tizen.Wearable.CircularUI.Renderer</a></h6>
-  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.Renderer.dll</h6>
-  <h5 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Tizen.Wearable.CircularUI.Forms.html">Tizen.Wearable.CircularUI.Forms</a></h6>
+  <h6><strong>Assembly</strong>: Tizen.Wearable.CircularUI.Forms.dll</h6>
+  <h5 id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MediaViewRenderer : ViewRenderer&lt;MediaView, LayoutCanvas&gt;, IMediaViewProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public class EmbeddingControls : ContentView</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls__ctor_" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.#ctor*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls__ctor" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.#ctor">EmbeddingControls()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the EmbeddingControls class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EmbeddingControls()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_PauseImage_" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.PauseImage*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_PauseImage" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.PauseImage">PauseImage</h4>
+  <div class="markdown level1 summary"><p>Gets the Pause image button</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageButton PauseImage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImageButton</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_PlayImage_" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.PlayImage*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_PlayImage" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.PlayImage">PlayImage</h4>
+  <div class="markdown level1 summary"><p>Gets the Play image button</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageButton PlayImage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImageButton</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_OnElementChanged_" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_OnElementChanged_ElementChangedEventArgs_Tizen_Wearable_CircularUI_Forms_MediaView__" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.OnElementChanged(ElementChangedEventArgs{Tizen.Wearable.CircularUI.Forms.MediaView})">OnElementChanged(ElementChangedEventArgs&lt;MediaView&gt;)</h4>
+  <a id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_OnBindingContextChanged_" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged*"></a>
+  <h4 id="Tizen_Wearable_CircularUI_Forms_EmbeddingControls_OnBindingContextChanged" data-uid="Tizen.Wearable.CircularUI.Forms.EmbeddingControls.OnBindingContextChanged">OnBindingContextChanged()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnElementChanged(ElementChangedEventArgs&lt;MediaView&gt; e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ElementChangedEventArgs</span>&lt;<a class="xref" href="Tizen.Wearable.CircularUI.Forms.MediaView.html">MediaView</a>&gt;</td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  <a id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView_" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView*"></a>
-  <h4 id="Tizen_Wearable_CircularUI_Renderer_MediaViewRenderer_Tizen_Wearable_CircularUI_Forms_IMediaViewProvider_GetMediaView" data-uid="Tizen.Wearable.CircularUI.Renderer.MediaViewRenderer.Tizen#Wearable#CircularUI#Forms#IMediaViewProvider#GetMediaView">IMediaViewProvider.GetMediaView()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Multimedia.MediaView IMediaViewProvider.GetMediaView()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://developer.tizen.org/dev-guide/csapi/api/Tizen.Multimedia.MediaView.html">Multimedia.MediaView</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Tizen.Wearable.CircularUI.Forms.IMediaViewProvider.html">IMediaViewProvider</a>
+    <pre><code class="lang-csharp hljs">protected override void OnBindingContextChanged()</code></pre>
   </div>
 </article>
           </div>
