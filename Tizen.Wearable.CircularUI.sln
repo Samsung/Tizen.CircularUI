@@ -7,13 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Forms.Renderer", "src\Tizen.Wearable.CircularUI.Forms.Renderer\Tizen.Wearable.CircularUI.Forms.Renderer.csproj", "{E9AB8D47-DC00-4B06-A00B-A9855DD885A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Chart.Forms", "src\Tizen.Wearable.CircularUI.Chart.Forms\Tizen.Wearable.CircularUI.Chart.Forms.csproj", "{7DA134B9-1705-4D2E-AF51-08DAE82C4B62}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Wearable.CircularUI.Chart.Forms.Renderer", "src\Tizen.Wearable.CircularUI.Chart.Forms.Renderer\Tizen.Wearable.CircularUI.Chart.Forms.Renderer.csproj", "{B698193A-AC75-4F67-877A-50EA2DF61C01}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CircularUI", "CircularUI", "{ED00D792-6CFD-48DC-81AA-C35596DA4938}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CircularUI.Chart", "CircularUI.Chart", "{6D1FF9E1-F898-4F36-852A-8051D6F4A9D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +23,6 @@ Global
 		{E9AB8D47-DC00-4B06-A00B-A9855DD885A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9AB8D47-DC00-4B06-A00B-A9855DD885A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9AB8D47-DC00-4B06-A00B-A9855DD885A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DA134B9-1705-4D2E-AF51-08DAE82C4B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DA134B9-1705-4D2E-AF51-08DAE82C4B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DA134B9-1705-4D2E-AF51-08DAE82C4B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DA134B9-1705-4D2E-AF51-08DAE82C4B62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B698193A-AC75-4F67-877A-50EA2DF61C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B698193A-AC75-4F67-877A-50EA2DF61C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B698193A-AC75-4F67-877A-50EA2DF61C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B698193A-AC75-4F67-877A-50EA2DF61C01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,8 +30,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9EB9A8C8-87DB-42E1-A0E2-295994867B2D} = {ED00D792-6CFD-48DC-81AA-C35596DA4938}
 		{E9AB8D47-DC00-4B06-A00B-A9855DD885A8} = {ED00D792-6CFD-48DC-81AA-C35596DA4938}
-		{7DA134B9-1705-4D2E-AF51-08DAE82C4B62} = {6D1FF9E1-F898-4F36-852A-8051D6F4A9D6}
-		{B698193A-AC75-4F67-877A-50EA2DF61C01} = {6D1FF9E1-F898-4F36-852A-8051D6F4A9D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8842E691-A0E2-4EEC-8FDA-51F86B861EA9}
