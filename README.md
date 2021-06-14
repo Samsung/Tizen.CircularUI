@@ -141,3 +141,4 @@ However, they can be substituted with Xamarin.Forms controls. Below shows how th
 - Known issues of `WatchApplication` (Watchface App)
   - Since WatchFace app is a `WatchAppication`, not Xamarin.Form's `FormsAppliaction`, it is not guaranteed to create a `CircleSuface`, which is necessary to render cicle objects (such as `CircleListView`, `CircleSlider`, and so on) during initialization.
   - Therefore, it is recommended to use `ICircleSurfaceProvider` (e.g., `CircleSurfaceView`) or `CircleSurfaceEffectBehavior` together to render these circle objects properly in WatchFace app.
+  - For the same reason, Watchface apps can't use Xamarin.Forms's `ListView`,`ScrollView`, and `Stepper` - which are internally require `CircleSuface` - directly. Please use `CircleListView`, `CircleScrollView` and `CircleStepper` with `ICircleSurfaceProvider` instead.
