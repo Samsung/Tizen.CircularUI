@@ -70,7 +70,8 @@ namespace Tizen.Wearable.CircularUI.Forms.Renderer
         void OnScrollAnimationStopped(object sender, EventArgs args)
         {
             GenListItem item = Control.GetItemByPosition(180, 180, out int pos);
-            if (item.Data is NListView.ItemContext itemContext && pos == 0)
+
+            if (item != null && item.Data is NListView.ItemContext itemContext && pos == 0)
             {
                 var obj = itemContext.Cell.BindingContext;
                 var index = Element.TemplatedItems.GetGlobalIndexOfItem(obj);
